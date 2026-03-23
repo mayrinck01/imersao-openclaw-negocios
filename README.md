@@ -24,6 +24,17 @@ empresa-exemplo-second-brain/
 │
 ├── README.md                          ← Você está aqui
 │
+├── agentes/                           ← Configuração dos agentes de IA
+│   ├── COMO-CONECTAR.md               ← Como o agente se conecta ao repo
+│   └── assistente/                    ← Agente principal
+│       ├── SOUL.md                    ← Personalidade e tom
+│       ├── USER.md                    ← Quem é a equipe
+│       ├── IDENTITY.md               ← Nome, email, emoji
+│       ├── AGENTS.md                  ← Regras operacionais + memória
+│       ├── MEMORY.md                  ← Índice (aponta pro repo)
+│       ├── HEARTBEAT.md              ← Tarefas periódicas automáticas
+│       └── TOOLS.md                   ← Ferramentas conectadas
+│
 ├── empresa/                           ← Contexto geral (cross-area)
 │   ├── contexto/
 │   │   ├── empresa.md                 ← O que é a empresa, produtos, público, ferramentas
