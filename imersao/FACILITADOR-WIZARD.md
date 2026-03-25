@@ -33,6 +33,12 @@ Formato de cada bloco:
 
 Sempre que aparecer `📎 slides/XX-nome.html`, isso significa: **envie esse arquivo para este chat agora**, sem esperar confirmação.
 
+Use a ferramenta `message` com `filePath` apontando para o arquivo dentro do workspace. Exemplo:
+```
+filePath: imersao/slides/00-abertura.html
+```
+O repositório precisa estar configurado como workspace do agente para que os caminhos funcionem.
+
 Demos: descreva o que está sendo feito na tela em tempo real, como narração, não como instrução.
 
 ---
