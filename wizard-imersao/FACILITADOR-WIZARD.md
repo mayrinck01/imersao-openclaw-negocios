@@ -690,9 +690,21 @@ Hoje esse ciclo depende de alguém olhando planilha todo dia. Com o sistema, rod
 
 📤 **Mensagem:**
 
-🎬 *Abrindo `cerebro/areas/marketing/sub-areas/trafego-pago/PROCESSO.md` — como o marketing funciona aqui. O agente lê isso antes de qualquer análise.*
+**Primeira etapa do ciclo: medir o que já tá funcionando**
 
-📎 `slides/11-daily-report.html`
+Antes de criar qualquer criativo novo, o agente precisa saber o que tá rodando. Qual campanha tá performando, qual tá queimando budget, onde tá o ROAS bom.
+
+Esse relatório chega sozinho todo dia às 8h no Telegram — o cron já manda. Mas você pode pedir a qualquer momento.
+
+🎬 *Bruno, digita agora pro agente — aqui ou no Telegram:*
+
+**"Gera o relatório de Meta Ads de hoje"**
+
+*(Se o Bruno executar: agente puxa os dados via API do Meta Ads → processa → gera dashboard visual)*
+
+📎 `dados-demo/meta-ads-report-exemplo.html` — Abrir o relatório visual ao vivo. Dashboard completo: performance por campanha, ROAS, CPA, distribuição de budget, alertas.
+
+Em produção: você configura a chave da sua conta Meta Ads. O sistema passa para modo produção automaticamente.
 
 ⏸ *Aguarda "próximo"*
 
@@ -700,31 +712,47 @@ Hoje esse ciclo depende de alguém olhando planilha todo dia. Com o sistema, rod
 
 📤 **Mensagem:**
 
-Todo dia às 8h, antes de qualquer pessoa da equipe acordar, o agente já gerou o relatório.
+**Do relatório pra ação — análise de ângulos**
 
-O gestor abre o Telegram — está lá. Com alertas, destaques, sugestões.
+O relatório mostra os números. Mas o agente de marketing não para aí — ele analisa.
 
-🎬 *Pedindo pro agente: "Gera o relatório de Meta Ads dos últimos 7 dias"*
+🎬 *Bruno, digita pro agente:*
 
-*(skill detecta que não há META_ADS_TOKEN → lê `imersao/dados-demo/meta-ads-campanhas.csv` → processa → gera relatório)*
+**"Com base nos resultados de hoje, faz uma análise dos ângulos e padrões de performance. Quais hooks estão funcionando, quais estão cansando, e o que faz sentido testar agora?"**
 
-*Abrindo `imersao/dados-demo/relatorio-meta-ads-exemplo.md` — é exatamente isso que chegou no Telegram às 8h. A01 em escala, A05 crescendo, A06 em aprendizado. Sem ninguém olhando planilha.*
+*(Se o Bruno executar: agente lê o relatório + `cerebro/areas/marketing/sub-areas/trafego-pago/learnings/resumo.md` + testes abertos → identifica padrões → sugere direção)*
 
-Em produção: você configura a chave da sua conta Meta Ads. O sistema passa para modo produção automaticamente.
+Ele não chutou. Leu os dados, cruzou com os learnings anteriores, e entregou a análise com evidência.
+
+⏸ *Aguarda "próximo"*
+
+---
+
+📤 **Mensagem:**
+
+**Da análise pro criativo — o agente sugere e cria**
+
+🎬 *Bruno, digita pro agente:*
+
+**"Agora sugere um criativo estático pra testar com base nessa análise."**
+
+*(Se o Bruno executar: agente analisa os padrões → sugere um criativo com hook, texto e justificativa baseada nos dados → pergunta se pode gerar:*
+
+*"Hook com número concreto + ângulo não-técnico tá com melhor ROAS. Sugiro este criativo no formato twitter-banner-creator:*
+
+*'Eu demiti meu time de marketing e contratei 3 agentes de IA. O resultado? CPL caiu 42%. ROAS subiu de 1.8 pra 4.2. E o melhor: eles aprendem sozinhos.'*
+
+*Quer que eu gere esse criativo usando a skill twitter-banner-creator?")*
+
+🎬 *Bruno dá o OK:* **"Pode gerar."**
+
+*(agente roda o twitter-banner-creator → gera PNG em 1080×1350 → entrega no chat)*
+
+Relatório → análise → criativo pronto. O ciclo completo rodou numa conversa. Hipótese → dado → conclusão → novo criativo. Sem abrir planilha, sem briefar designer, sem esperar.
 
 📎 `slides/12-pipeline-criativos.html`
 
 ⏸ *Aguarda "próximo"*
-
----
-
-📤 **Mensagem:**
-
-🎬 *Pedindo pro agente de marketing: "Com base nos learnings atuais, qual próximo criativo faz sentido criar essa semana?"*
-
-*(agente lê `cerebro/areas/marketing/sub-areas/trafego-pago/learnings/resumo.md` + testes abertos → sugere criativo com justificativa baseada em dados)*
-
-Ele não chutou. Leu os learnings, os testes, os dados — e sugeriu com evidência.
 
 ---
 
