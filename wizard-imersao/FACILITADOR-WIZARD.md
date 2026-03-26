@@ -249,7 +249,7 @@ Não precisa ter tudo desde o início. Começa com o `SKILL.md`. Conforme a skil
 
 📎 `cerebro/areas/vendas/skills/relatorio-vendas/SKILL.md` — skill simples, só a receita, já funciona.
 
-📎 `cerebro/empresa/skills/twitter-banner-creator/SKILL.md` — skill avançada, com script Python que gera banners de Meta Ads automaticamente via Playwright.
+📎 `cerebro/empresa/skills/stack-ad-creator-pixel/SKILL.md` — skill avançada, com script Python que gera banners de Meta Ads automaticamente via Playwright.
 
 ⏸ *Aguarda "próximo"*
 
@@ -267,7 +267,7 @@ Cada pasta de skills tem o seu. O agente lê esse arquivo primeiro e já sabe qu
 
 📎 `cerebro/empresa/skills/_index.md`
 
-Olha: as duas skills que acabamos de ver estão mapeadas aqui — `relatorio-rotinas` e `twitter-banner-creator`. O agente bate o olho nesse arquivo e sabe exatamente o que tem disponível. Sem ele, fica perdido procurando pasta por pasta.
+Olha: as duas skills que acabamos de ver estão mapeadas aqui — `relatorio-rotinas` e `stack-ad-creator-pixel`. O agente bate o olho nesse arquivo e sabe exatamente o que tem disponível. Sem ele, fica perdido procurando pasta por pasta.
 
 ⏸ *Aguarda "próximo"*
 
@@ -281,7 +281,7 @@ Você não precisa de comando especial. Fala em linguagem natural — o agente i
 
 Exemplos:
 - *"Gera o relatório de vendas da semana"* → aciona `relatorio-vendas`
-- *"Cria um banner de Meta Ads com o seguinte texto: 'Eu demiti meu time de marketing e contratei 3 agentes de IA...'"* → aciona `twitter-banner-creator`
+- *"Cria um banner de Meta Ads com o seguinte texto: 'Eu demiti meu time de marketing e contratei 3 agentes de IA...'"* → aciona `stack-ad-creator-pixel`
 - *"Quais leads estão esfriando?"* → aciona `follow-up-leads`
 
 O agente lê o `_index.md` da área, encontra a skill certa, lê o `SKILL.md`, e executa.
@@ -724,31 +724,9 @@ O relatório mostra os números. Mas o agente de marketing não para aí — ele
 
 Ele não chutou. Leu os dados, cruzou com os learnings anteriores, e entregou a análise com evidência.
 
-⏸ *Aguarda "próximo"*
+E a partir dessa análise, você pode pedir pro agente sugerir um criativo. Ele sugere, pergunta se pode gerar, e com o OK ele roda a skill `stack-ad-creator-pixel` e entrega o PNG pronto.
 
----
-
-📤 **Mensagem:**
-
-**Da análise pro criativo — o agente sugere e cria**
-
-🎬 *Bruno, digita pro agente:*
-
-**"Agora sugere um criativo estático pra testar com base nessa análise."**
-
-*(Se o Bruno executar: agente analisa os padrões → sugere um criativo com hook, texto e justificativa baseada nos dados → pergunta se pode gerar:*
-
-*"Hook com número concreto + ângulo não-técnico tá com melhor ROAS. Sugiro este criativo no formato twitter-banner-creator:*
-
-*'Eu demiti meu time de marketing e contratei 3 agentes de IA. O resultado? CPL caiu 42%. ROAS subiu de 1.8 pra 4.2. E o melhor: eles aprendem sozinhos.'*
-
-*Quer que eu gere esse criativo usando a skill twitter-banner-creator?")*
-
-🎬 *Bruno dá o OK:* **"Pode gerar."**
-
-*(agente roda o twitter-banner-creator → gera PNG em 1080×1350 → entrega no chat)*
-
-Relatório → análise → criativo pronto. O ciclo completo rodou numa conversa. Hipótese → dado → conclusão → novo criativo. Sem abrir planilha, sem briefar designer, sem esperar.
+Relatório → análise → criativo pronto. O ciclo completo rodou numa conversa. Sem abrir planilha, sem briefar designer, sem esperar.
 
 📎 `slides/12-pipeline-criativos.html`
 
@@ -762,32 +740,30 @@ Relatório → análise → criativo pronto. O ciclo completo rodou numa convers
 
 📤 **Mensagem:**
 
-Última pausa — voltamos às 10h50 com o maior AHA moment da imersão.
+Última pausa — voltamos às 10h50.
 
 ---
 
-### Bloco 10: Bot de Suporte — 10h50 (35 min)
+### Bloco 10: Bot de Suporte que Aprende Sozinho — 10h50 (45 min)
 
 ---
 
 📤 **Mensagem:**
 
-**Bot de suporte que aprende sozinho**
+**Bot de suporte — o caso real do OpenClawzinho**
 
-Bot comum: você treina uma vez, fica desatualizado, vira problema.
+Curso lançado. 2.000 vendas em dias. Mas junto vieram centenas de perguntas — todo dia, o dia todo. Instalação, configuração, erros, dúvidas de conceito.
 
-Esse bot aprende com a operação. Cada dúvida respondida vira conhecimento permanente.
+3 problemas reais:
+- Perguntas repetidas chegando 24h/dia
+- Responder manualmente escala com o número de alunos — sem fim
+- Alunos precisam de orientação contextualizada, não de links
 
-O loop:
-1. Cliente pergunta
-2. Se está no FAQ → responde
-3. Se não está → marca como pendente → notifica equipe
-4. Humano responde → cron consolida no FAQ
-5. FAQ evolui
+A solução: não é chatbot genérico. É um agente que funciona como aluno avançado — conhece o material, entende contexto, responde com exemplos e aprende com cada conversa.
 
-O bot de amanhã sabe mais do que o de hoje. Sem código. Sem retreinar.
+Resultado: **@OpenClawzinho** — agente no WhatsApp e Telegram. Montado em 2 horas.
 
-📎 `slides/13-bot-suporte-loop.html`
+📎 `slides/13-bot-problema-ideia.html`
 
 ⏸ *Aguarda "próximo"*
 
@@ -795,31 +771,144 @@ O bot de amanhã sabe mais do que o de hoje. Sem código. Sem retreinar.
 
 📤 **Mensagem:**
 
-🎬 *Abrindo `cerebro/agentes/bot-suporte/SOUL.md` — tom de atendimento.*
+**Workspace separado + cérebro — o bot é desacoplado**
 
-*Abrindo `cerebro/areas/atendimento/bot/faq.md` — tudo que o bot sabe hoje.*
+Antes de qualquer coisa: o bot de suporte precisa do próprio workspace. Não compartilhado. Separado.
 
-Mandando pro bot: *"Qual o prazo de entrega do curso?"*
+4 razões: contexto limpo, privacidade, performance e especialização.
 
-*(responde imediatamente com base no faq.md)*
+Mas repara no detalhe: o bot é desacoplado — ele vive no próprio workspace (SOUL.md, AGENTS.md, USER.md), mas o conhecimento dele vive no **cérebro**. A base de conhecimento e as dúvidas pendentes ficam em `cerebro/areas/atendimento/bot/`. O bot consulta — não possui.
 
-Agora: *"Vocês têm desconto para grupos de empresa?"*
+📎 `slides/14-bot-workspace-separado.html`
 
-*(não encontra → responde que vai verificar → registra em `duvidas.md` → notifica no Telegram)*
-
-*Abrindo `cerebro/areas/atendimento/bot/duvidas.md` ao vivo — apareceu aqui. Status: pendente.*
-
-Respondendo a dúvida direto no arquivo — status pra `respondido`, adiciona a resposta. 20 segundos.
-
-*Mostrando `cerebro/areas/atendimento/rotinas/consolidar-faq.md` — todo dia às 18h esse cron roda. Pega todas as dúvidas respondidas e adiciona ao faq.md.*
-
-Amanhã, quando o próximo cliente perguntar sobre desconto — o bot já vai saber.
-
-Cada dúvida respondida pelo humano vira conhecimento permanente do bot. Em 30 dias, 80% das dúvidas respondidas sozinho. Em 90 dias, 95%.
+⏸ *Aguarda "próximo"*
 
 ---
 
-### Bloco 11: Por Onde Começar — 11h25 (25 min)
+📤 **Mensagem:**
+
+**Identidade — quem é o OpenClawzinho**
+
+Agente bom tem personalidade definida. Não é "responda dúvidas do curso" — é um personagem com voz, tom e missão específica.
+
+🎬 *Abrindo `cerebro/agentes/bot-suporte/SOUL.md` ao vivo — a personalidade do bot.*
+
+Repara: missão clara, tom definido, limites explícitos. E o mais importante — o padrão de resposta: contexto → resposta → fonte → próximo passo. Toda resposta segue esse formato.
+
+🎬 *Abrindo `cerebro/agentes/bot-suporte/USER.md` — quem é o aluno típico.*
+
+O bot sabe com quem tá falando: nível técnico, dúvidas mais comuns, horários de pico. Isso muda completamente a qualidade da resposta.
+
+⏸ *Aguarda "próximo"*
+
+---
+
+📤 **Mensagem:**
+
+**Autonomia — o que faz sozinho e o que escala pro Bruno**
+
+O AGENTS.md define com precisão: o que o bot pode fazer sozinho, o que escala. Sem isso, o bot pode prometer coisas que você não entrega ou dar resposta errada com confiança.
+
+🎬 *Abrindo `cerebro/agentes/bot-suporte/AGENTS.md` ao vivo.*
+
+Regra de ouro: na dúvida, responde o que sabe e indica o canal oficial. Nunca inventa, nunca finge saber.
+
+📎 `slides/15-bot-autonomia.html`
+
+⏸ *Aguarda "próximo"*
+
+---
+
+📤 **Mensagem:**
+
+**O loop de consulta — por que esse bot fica mais inteligente com o tempo**
+
+Aqui tá o segredo. Antes de responder qualquer aluno, o bot consulta 2 fontes:
+
+1. **Base de conhecimento** (`cerebro/areas/atendimento/bot/base-conhecimento.md`) — tudo que o bot já sabe: FAQ + respostas validadas pelo Bruno. Cresce automaticamente via cron.
+2. **Workspace de referência (Amora)** — a configuração real em produção. Aluno pergunta "como você configurou X?" → bot acessa o setup real, não inventa.
+
+Se nenhuma fonte resolve → responde o que sabe, marca @Bruno, registra em `duvidas-pendentes.md`. Quando o Bruno responder, o cron consolida na base.
+
+📎 `slides/16-bot-loop-3-camadas.html`
+
+⏸ *Aguarda "próximo"*
+
+---
+
+📤 **Mensagem:**
+
+**O cron que alimenta a base de conhecimento**
+
+A base não é manual — ela cresce automaticamente. Todo dia às 18h, o cron lê `duvidas-pendentes.md`, pega as que o Bruno já respondeu, formata no padrão P/R e adiciona em `base-conhecimento.md`. Tudo dentro do cérebro — sem depender de nenhuma ferramenta externa.
+
+Dois arquivos. Um cron. A base cresce sozinha.
+
+O efeito composto: no lançamento, o bot sabia ~20 respostas. Depois de 30 dias, 80% das perguntas respondidas sozinho. Em 90 dias, 95%.
+
+📎 `slides/17-bot-cron-kb.html`
+
+⏸ *Aguarda "próximo"*
+
+---
+
+📤 **Mensagem:**
+
+**Demo ao vivo — grupo no Telegram**
+
+Agora a gente testa. Criamos um grupo com 3: eu, o Bruno e o OpenClawzinho.
+
+🎬 *No Telegram — criando grupo e adicionando o bot.*
+
+**Bruno, manda uma pergunta que ele sabe responder:**
+
+*"Como configuro o binding de canal no Telegram?"*
+
+*(bot responde seguindo o padrão: contexto → resposta → fonte → próximo passo)*
+
+Repara: ele não jogou um link. Contextualizou, respondeu direto, apontou o módulo e deu o próximo passo.
+
+⏸ *Aguarda "próximo"*
+
+---
+
+📤 **Mensagem:**
+
+**Agora manda uma que ele não sabe:**
+
+🎬 *Bruno manda:*
+
+*"Vocês vão ter desconto pra grupos de empresa?"*
+
+*(bot responde que vai verificar → marca @Bruno no grupo → registra em `duvidas-pendentes.md`)*
+
+Olha o que aconteceu: ele não inventou. Respondeu o que sabia, marcou o Bruno pra responder, e registrou a dúvida no cérebro.
+
+🎬 *Abrindo `cerebro/areas/atendimento/bot/duvidas-pendentes.md` ao vivo — tá aqui a dúvida que acabou de chegar. Status: pendente.*
+
+Quando o Bruno responder, o cron das 18h consolida na `base-conhecimento.md`. Próxima vez que alguém perguntar sobre desconto — o bot já vai saber.
+
+⏸ *Aguarda "próximo"*
+
+---
+
+📤 **Mensagem:**
+
+**Custo real e checklist de implementação**
+
+1 assinatura do Claude. 1.500 a 2.000 mensagens por dia. 24/7. Custo incremental: zero.
+
+Comparativo: freelancer de suporte custa R$ 2.000–4.000/mês, trabalha em horário comercial, é inconsistente entre turnos. O bot? Mesma resposta sempre, aprende sozinho, escala pra zero custo marginal.
+
+2 a 3 horas pra montar do zero. Mais 2 horas de ajuste depois do primeiro dia real.
+
+📎 `slides/18-bot-custo-checklist.html`
+
+⏸ *Aguarda "próximo"*
+
+---
+
+### Bloco 11: Por Onde Começar — 11h35 (15 min)
 
 ---
 
@@ -843,7 +932,7 @@ O wizard percorre 6 steps:
 
 Você conversa. O agente preenche. Sem arquivo pra criar na mão.
 
-📎 `slides/14-roadmap-30dias.html`
+📎 `slides/19-roadmap-30dias.html`
 
 ⏸ *Aguarda "próximo"*
 
@@ -876,7 +965,7 @@ Você conversa. O agente preenche. Sem arquivo pra criar na mão.
 
 Tudo isso funciona. Vocês viram ao vivo.
 
-📎 `slides/15-fechamento.html`
+📎 `slides/20-fechamento.html`
 
 ⏸ *Aguarda "próximo"*
 

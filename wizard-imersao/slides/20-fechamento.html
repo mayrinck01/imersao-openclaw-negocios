@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fechamento</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap');
+  :root {
+    --bg: #0A0E2A; --bg2: #111630; --bg3: #181e3a;
+    --border: #2a3260; --accent: #FE5000; --accent2: #ff7a35;
+    --green: #22c55e; --blue: #60a5fa; --yellow: #eab308;
+    --text: #e2e8f0; --text2: #94a3b8;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body {
+    width: 100%; height: 100%;
+    background: var(--bg);
+    font-family: 'Inter', system-ui, sans-serif;
+    color: var(--text);
+    overflow: hidden;
+  }
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 24px 32px;
+    position: relative;
+    gap: 0;
+  }
+  .bg-glow {
+    position: absolute;
+    width: 700px; height: 700px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(254,80,0,0.1) 0%, transparent 70%);
+    top: 50%; left: 50%; transform: translate(-50%, -50%);
+    pointer-events: none;
+  }
+
+  .layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+    width: 100%;
+    max-width: 1040px;
+    z-index: 1;
+  }
+
+  /* ── Recap col ── */
+  .recap-col { display: flex; flex-direction: column; gap: 10px; }
+  .col-label {
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--text2);
+    margin-bottom: 4px;
+  }
+  .recap-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 12px 16px;
+    font-size: 15px;
+    font-weight: 600;
+    transition: transform 0.2s, border-color 0.2s;
+  }
+  .recap-item:hover { transform: translateX(4px); border-color: var(--green); }
+  .recap-item .check { color: var(--green); font-size: 18px; flex-shrink: 0; }
+
+  /* ── Pitch col ── */
+  .pitch-col { display: flex; flex-direction: column; gap: 0; }
+  .pitch-card {
+    background: linear-gradient(145deg, rgba(254,80,0,0.12), rgba(254,80,0,0.04));
+    border: 2px solid var(--accent);
+    border-radius: 20px;
+    padding: 24px 26px;
+    box-shadow: 0 0 60px rgba(254,80,0,0.18);
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  /* Product header */
+  .product-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .product-icon { font-size: 42px; flex-shrink: 0; }
+  .product-name {
+    font-size: clamp(22px, 2.8vw, 34px);
+    font-weight: 900;
+    background: linear-gradient(135deg, #fff 20%, var(--accent2));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1.1;
+  }
+  .product-tagline {
+    font-size: 13px;
+    color: var(--text2);
+    line-height: 1.4;
+  }
+
+  /* Benefits */
+  .benefits { display: flex; flex-direction: column; gap: 8px; }
+  .benefit {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 10px 14px;
+  }
+  .benefit-icon { font-size: 20px; flex-shrink: 0; }
+  .benefit-text {}
+  .benefit-title { font-size: 14px; font-weight: 700; margin-bottom: 1px; }
+  .benefit-desc { font-size: 12px; color: var(--text2); line-height: 1.3; }
+
+  /* Price + CTA */
+  .price-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding-top: 4px;
+  }
+  .price {
+    font-size: clamp(24px, 3vw, 38px);
+    font-weight: 900;
+    color: var(--accent2);
+  }
+  .price-sub { font-size: 12px; color: var(--text2); margin-top: 2px; }
+  .cta-btn {
+    background: linear-gradient(135deg, var(--accent), var(--accent2));
+    color: white;
+    font-size: 16px;
+    font-weight: 800;
+    padding: 12px 28px;
+    border-radius: 100px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 6px 28px rgba(254,80,0,0.4);
+    animation: pulse-btn 2s ease-in-out infinite;
+    white-space: nowrap;
+  }
+  @keyframes pulse-btn {
+    0%, 100% { box-shadow: 0 6px 28px rgba(254,80,0,0.4); transform: scale(1); }
+    50%       { box-shadow: 0 6px 44px rgba(254,80,0,0.65); transform: scale(1.03); }
+  }
+  .urgency {
+    font-size: 12px;
+    color: var(--text2);
+    text-align: center;
+  }
+  .urgency strong { color: var(--yellow); }
+</style>
+</head>
+<body>
+  <div class="bg-glow"></div>
+
+  <div class="layout">
+
+    <!-- Recap -->
+    <div class="recap-col">
+      <div class="col-label">📋 O que você aprendeu nessa imersão</div>
+      <div class="recap-item"><span class="check">✅</span> Cérebro que não esquece — GitHub como fonte de verdade</div>
+      <div class="recap-item"><span class="check">✅</span> Skills que executam qualquer processo da empresa</div>
+      <div class="recap-item"><span class="check">✅</span> Crons que rodam sozinhos 24h por dia, 7 dias por semana</div>
+      <div class="recap-item"><span class="check">✅</span> Multi-agente com escopo e segurança por área</div>
+      <div class="recap-item"><span class="check">✅</span> Bot de suporte que aprende sozinho com a operação</div>
+      <div class="recap-item"><span class="check">✅</span> Ciclo de marketing automatizado do ângulo ao relatório</div>
+    </div>
+
+    <!-- Pitch -->
+    <div class="pitch-col">
+      <div class="pitch-card">
+
+        <div class="product-header">
+          <div class="product-icon">🧠</div>
+          <div>
+            <div class="product-name">Pixel IA</div>
+            <div class="product-tagline">Sua empresa e você sempre atualizados em<br>como implementar IA da melhor forma</div>
+          </div>
+        </div>
+
+        <div class="benefits">
+          <div class="benefit">
+            <div class="benefit-icon">🎓</div>
+            <div class="benefit-text">
+              <div class="benefit-title">Mentorias em grupo semanais</div>
+              <div class="benefit-desc">Tire dúvidas e avance com quem já implementou</div>
+            </div>
+          </div>
+          <div class="benefit">
+            <div class="benefit-icon">📚</div>
+            <div class="benefit-text">
+              <div class="benefit-title">Acesso às formações</div>
+              <div class="benefit-desc">Todo o conteúdo disponível para estudar no seu ritmo</div>
+            </div>
+          </div>
+          <div class="benefit">
+            <div class="benefit-icon">🤝</div>
+            <div class="benefit-text">
+              <div class="benefit-title">Comunidade com trocas</div>
+              <div class="benefit-desc">Aprenda com outros empresários implementando IA</div>
+            </div>
+          </div>
+          <div class="benefit">
+            <div class="benefit-icon">📬</div>
+            <div class="benefit-text">
+              <div class="benefit-title">Newsletter semanal</div>
+              <div class="benefit-desc">O que há de melhor na comunidade e no mundo de IA — resumido e direto</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="price-row">
+          <div>
+            <div class="price">[PREÇO]</div>
+            <div class="price-sub">⏳ Condição especial para <strong style="color:var(--yellow)">participantes ao vivo</strong></div>
+          </div>
+          <button class="cta-btn">🚀 Quero entrar</button>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>

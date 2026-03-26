@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bot de Suporte — O Problema e A Ideia</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap');
+  :root {
+    --bg: #0A0E2A; --bg2: #111630; --bg3: #181e3a;
+    --border: #2a3260; --accent: #7c3aed; --accent2: #a78bfa;
+    --green: #22c55e; --blue: #60a5fa; --yellow: #eab308;
+    --red: #ef4444; --text: #e2e8f0; --text2: #94a3b8;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 100%; height: 100%; background: var(--bg); font-family: 'Inter', system-ui, sans-serif; color: var(--text); overflow: hidden; }
+  body { display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh; padding: 24px 28px; gap: 18px; }
+
+  h2 { font-size: clamp(20px, 2.2vw, 32px); font-weight: 800; text-align: center; }
+  h2 span { color: var(--accent2); }
+  .sub { color: var(--text2); font-size: 14px; text-align: center; max-width: 700px; }
+
+  .problems { display: flex; gap: 14px; width: 100%; max-width: 960px; }
+  .problem-card {
+    flex: 1;
+    background: var(--bg2);
+    border: 1.5px solid rgba(239,68,68,0.3);
+    border-radius: 14px;
+    padding: 18px 16px;
+    text-align: center;
+  }
+  .problem-icon { font-size: 28px; margin-bottom: 8px; }
+  .problem-title { font-size: 13px; font-weight: 800; color: var(--red); margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.5px; }
+  .problem-desc { font-size: 12px; color: var(--text2); line-height: 1.5; }
+
+  .arrow-down { font-size: 24px; color: var(--accent2); }
+
+  .solution {
+    background: var(--bg2);
+    border: 2px solid rgba(124,58,237,0.4);
+    border-radius: 16px;
+    padding: 20px 28px;
+    text-align: center;
+    max-width: 700px;
+    width: 100%;
+    position: relative;
+  }
+  .solution-badge {
+    position: absolute;
+    top: -14px; left: 50%; transform: translateX(-50%);
+    background: rgba(124,58,237,0.25);
+    border: 1px solid rgba(124,58,237,0.5);
+    color: var(--accent2);
+    font-size: 11px; font-weight: 700;
+    padding: 3px 14px; border-radius: 100px;
+    letter-spacing: 1px; text-transform: uppercase;
+  }
+  .solution-title { font-size: 18px; font-weight: 800; margin-bottom: 6px; margin-top: 4px; }
+  .solution-title span { color: var(--accent2); }
+  .solution-desc { font-size: 13px; color: var(--text2); line-height: 1.5; }
+
+  .traits { display: flex; gap: 12px; width: 100%; max-width: 960px; }
+  .trait {
+    flex: 1;
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 14px 12px;
+    text-align: center;
+  }
+  .trait-icon { font-size: 22px; margin-bottom: 6px; }
+  .trait-label { font-size: 12px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+  .trait-desc { font-size: 11px; color: var(--text2); line-height: 1.4; }
+
+  .result {
+    display: flex; align-items: center; gap: 14px;
+    background: rgba(34,197,94,0.06);
+    border: 1px solid rgba(34,197,94,0.3);
+    border-radius: 12px;
+    padding: 14px 22px;
+    max-width: 700px; width: 100%;
+  }
+  .result-icon { font-size: 28px; flex-shrink: 0; }
+  .result-text { font-size: 13px; color: var(--text2); line-height: 1.5; }
+  .result-text strong { color: var(--green); }
+</style>
+</head>
+<body>
+
+  <h2>🤖 Bot de Suporte que <span>Aprende Sozinho</span></h2>
+  <p class="sub">Caso real: de 2.000 alunos sem suporte a um agente 24/7 em 2 horas</p>
+
+  <div class="problems">
+    <div class="problem-card">
+      <div class="problem-icon">😤</div>
+      <div class="problem-title">Problema 1</div>
+      <div class="problem-desc">Perguntas repetidas chegando 24h por dia — instalação, configuração, erros comuns</div>
+    </div>
+    <div class="problem-card">
+      <div class="problem-icon">⏰</div>
+      <div class="problem-title">Problema 2</div>
+      <div class="problem-desc">Responder manualmente escala com o número de alunos — sem fim à vista</div>
+    </div>
+    <div class="problem-card">
+      <div class="problem-icon">📚</div>
+      <div class="problem-title">Problema 3</div>
+      <div class="problem-desc">Alunos precisam de orientação contextualizada, não de links pra documentação</div>
+    </div>
+  </div>
+
+  <div class="arrow-down">↓</div>
+
+  <div class="solution">
+    <div class="solution-badge">A Solução</div>
+    <div class="solution-title">Um agente que funciona como <span>aluno avançado</span></div>
+    <div class="solution-desc">Não é chatbot genérico. É um agente que conhece o material, entende contexto, responde com exemplos práticos e aprende com cada conversa.</div>
+  </div>
+
+  <div class="traits">
+    <div class="trait">
+      <div class="trait-icon">🧠</div>
+      <div class="trait-label">Conhece o material</div>
+      <div class="trait-desc">Leu todo o curso, sabe cada módulo</div>
+    </div>
+    <div class="trait">
+      <div class="trait-icon">🎯</div>
+      <div class="trait-label">Entende contexto</div>
+      <div class="trait-desc">Não dá resposta genérica — contextualiza</div>
+    </div>
+    <div class="trait">
+      <div class="trait-icon">💬</div>
+      <div class="trait-label">24/7 disponível</div>
+      <div class="trait-desc">Sem cansar, sem mal-humor, sem turno</div>
+    </div>
+    <div class="trait">
+      <div class="trait-icon">📈</div>
+      <div class="trait-label">Aprende sozinho</div>
+      <div class="trait-desc">Cada conversa torna o bot melhor</div>
+    </div>
+    <div class="trait">
+      <div class="trait-icon">🔒</div>
+      <div class="trait-label">Sabe seu limite</div>
+      <div class="trait-desc">Quando não sabe, escala — nunca inventa</div>
+    </div>
+  </div>
+
+  <div class="result">
+    <div class="result-icon">🚀</div>
+    <div class="result-text">Resultado: <strong>@OpenClawzinho</strong> — agente no WhatsApp e Telegram atendendo alunos em tempo real. Montado em 2 horas.</div>
+  </div>
+
+</body>
+</html>

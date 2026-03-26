@@ -1,7 +1,7 @@
-# FAQ — Base de Conhecimento OpenClaw
+# Base de Conhecimento — OpenClawzinho
 
-> Base de respostas para o bot de suporte. Atualizada semanalmente.
-> Última atualização: 2026-03-24
+> Tudo que o bot sabe responder. Cresce automaticamente via cron.
+> Última atualização: 2026-03-26
 
 ---
 
@@ -82,3 +82,9 @@ R: No Pixel IA, as mentorias em grupo acontecem toda semana, às quartas 20h BRT
 
 **P: Posso pedir suporte para configurar meu Cérebro?**
 R: Sim. No OpenClaw Pro tem suporte via Telegram em horário comercial. No Pixel IA tem suporte prioritário + as mentorias semanais para tirar dúvidas de implementação.
+
+---
+
+## 🔄 RESPOSTAS ADICIONADAS VIA CRON
+
+*(novas entradas são adicionadas aqui automaticamente pelo cron consolidar-kb)*

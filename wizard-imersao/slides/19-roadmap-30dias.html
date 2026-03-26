@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Por onde começar</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap');
+  :root {
+    --bg: #0A0E2A; --bg2: #111630; --bg3: #181e3a;
+    --border: #2a3260; --accent: #FE5000; --accent2: #ff7a35;
+    --green: #22c55e; --blue: #60a5fa; --yellow: #eab308;
+    --text: #e2e8f0; --text2: #94a3b8;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body {
+    width: 100%; height: 100%;
+    background: var(--bg);
+    font-family: 'Inter', system-ui, sans-serif;
+    color: var(--text);
+    overflow: hidden;
+  }
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 28px 32px;
+    gap: 22px;
+  }
+
+  h2 { font-size: clamp(22px, 2.5vw, 36px); font-weight: 800; text-align: center; }
+  .sub { color: var(--text2); font-size: 15px; text-align: center; margin-top: -14px; }
+
+  /* ── Main layout ── */
+  .main {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 24px;
+    width: 100%;
+    max-width: 1060px;
+    align-items: start;
+  }
+
+  /* Wizard box */
+  .wizard-box {
+    background: rgba(254,80,0,0.07);
+    border: 2px solid rgba(254,80,0,0.4);
+    border-radius: 18px;
+    padding: 22px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    align-self: center;
+  }
+  .wizard-icon { font-size: 44px; text-align: center; }
+  .wizard-label {
+    font-size: 18px;
+    font-weight: 900;
+    color: var(--text);
+    text-align: center;
+  }
+  .wizard-sub {
+    font-size: 13px;
+    color: var(--text2);
+    text-align: center;
+    line-height: 1.5;
+  }
+  .wizard-cmd {
+    background: var(--bg3);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 10px 12px;
+    font-family: 'Courier New', monospace;
+    font-size: 12px;
+    color: var(--accent2);
+    line-height: 1.5;
+    text-align: center;
+  }
+  .wizard-note {
+    font-size: 12px;
+    color: var(--text2);
+    text-align: center;
+    line-height: 1.4;
+  }
+  .wizard-note strong { color: var(--green); }
+
+  /* Steps */
+  .steps-col { display: flex; flex-direction: column; gap: 10px; }
+
+  .step {
+    display: grid;
+    grid-template-columns: 36px 1fr;
+    gap: 14px;
+    align-items: start;
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 14px 16px;
+    transition: border-color 0.2s, transform 0.15s;
+  }
+  .step:hover { border-color: rgba(255,255,255,0.15); transform: translateX(4px); }
+
+  .step-num {
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 900;
+    flex-shrink: 0;
+  }
+  .step:nth-child(1) .step-num { background: rgba(96,165,250,0.15);  color: var(--blue); }
+  .step:nth-child(2) .step-num { background: rgba(254,80,0,0.15);    color: var(--accent2); }
+  .step:nth-child(3) .step-num { background: rgba(34,197,94,0.15);   color: var(--green); }
+  .step:nth-child(4) .step-num { background: rgba(234,179,8,0.15);   color: var(--yellow); }
+  .step:nth-child(5) .step-num { background: rgba(167,139,250,0.15); color: #a78bfa; }
+  .step:nth-child(6) .step-num { background: rgba(254,80,0,0.15);    color: var(--accent2); }
+
+  .step-content {}
+  .step-title { font-size: 15px; font-weight: 700; margin-bottom: 3px; }
+  .step-desc { font-size: 13px; color: var(--text2); line-height: 1.4; }
+  .step-detail {
+    font-size: 11px;
+    color: var(--text2);
+    margin-top: 6px;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .tag {
+    background: var(--bg3);
+    border: 1px solid var(--border);
+    border-radius: 100px;
+    padding: 2px 8px;
+    font-size: 11px;
+    color: var(--text2);
+  }
+</style>
+</head>
+<body>
+
+  <h2>🧙 Por onde começar</h2>
+  <p class="sub">O Wizard conduz você — da conversa aos arquivos prontos no GitHub</p>
+
+  <div class="main">
+
+    <!-- Left: Wizard box -->
+    <div class="wizard-box">
+      <div class="wizard-icon">🧙</div>
+      <div class="wizard-label">Use o Wizard</div>
+      <div class="wizard-sub">Cole esse comando no seu agente e ele te guia por cada etapa</div>
+      <div class="wizard-cmd">"Leia wizard/README.md<br>e me guie pelo setup"</div>
+      <div class="wizard-note">
+        <strong>Você conversa. O agente preenche.</strong><br>
+        Nenhum arquivo criado na mão. Nenhuma configuração no escuro.
+      </div>
+    </div>
+
+    <!-- Right: Steps -->
+    <div class="steps-col">
+
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-content">
+          <div class="step-title">Contexto da empresa</div>
+          <div class="step-desc">Agente coleta: nome, segmento, produto, missão, equipe, métricas que importam.</div>
+          <div class="step-detail">
+            <div class="tag">empresa.md</div>
+            <div class="tag">equipe.md</div>
+            <div class="tag">metricas.md</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-content">
+          <div class="step-title">Contexto das áreas</div>
+          <div class="step-desc">Mapear quais áreas fazem sentido e preencher o contexto de cada uma.</div>
+          <div class="step-detail">
+            <div class="tag">areas/vendas/</div>
+            <div class="tag">areas/marketing/</div>
+            <div class="tag">areas/atendimento/</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-content">
+          <div class="step-title">Skills por área</div>
+          <div class="step-desc">Criar as primeiras skills com o skill-creator — descreve o processo, o agente gera a receita.</div>
+          <div class="step-detail">
+            <div class="tag">skill-creator</div>
+            <div class="tag">2–3 skills por área</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-content">
+          <div class="step-title">Primeiros crons</div>
+          <div class="step-desc">Agendar as skills que devem rodar sozinhas — relatórios diários, follow-ups, heartbeat.</div>
+          <div class="step-detail">
+            <div class="tag">relatorio diário</div>
+            <div class="tag">heartbeat</div>
+            <div class="tag">follow-up</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-num">5</div>
+        <div class="step-content">
+          <div class="step-title">Segundo agente (se necessário)</div>
+          <div class="step-desc">Configurar agente especialista para a área mais crítica — com SOUL e escopo próprios.</div>
+          <div class="step-detail">
+            <div class="tag">SOUL.md</div>
+            <div class="tag">AGENTS.md</div>
+            <div class="tag">permissionamento</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-num">6</div>
+        <div class="step-content">
+          <div class="step-title">Validar e publicar no GitHub</div>
+          <div class="step-desc">Testar o sistema completo e fazer o primeiro commit — o cérebro agora existe de verdade.</div>
+          <div class="step-detail">
+            <div class="tag">git commit</div>
+            <div class="tag">git push</div>
+            <div class="tag">sistema no ar</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>

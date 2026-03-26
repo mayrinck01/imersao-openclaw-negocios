@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Workspace Separado</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap');
+  :root {
+    --bg: #0A0E2A; --bg2: #111630; --bg3: #181e3a;
+    --border: #2a3260; --accent: #7c3aed; --accent2: #a78bfa;
+    --green: #22c55e; --blue: #60a5fa; --yellow: #eab308;
+    --red: #ef4444; --text: #e2e8f0; --text2: #94a3b8;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 100%; height: 100%; background: var(--bg); font-family: 'Inter', system-ui, sans-serif; color: var(--text); overflow: hidden; }
+  body { display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh; padding: 24px 28px; gap: 16px; }
+
+  h2 { font-size: clamp(18px, 2vw, 28px); font-weight: 800; text-align: center; }
+  h2 span { color: var(--accent2); }
+  .sub { color: var(--text2); font-size: 13px; text-align: center; max-width: 660px; }
+
+  .reasons { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; width: 100%; max-width: 960px; }
+  .reason {
+    background: var(--bg2);
+    border: 1.5px solid var(--border);
+    border-radius: 12px;
+    padding: 16px 14px;
+    text-align: center;
+  }
+  .reason-icon { font-size: 26px; margin-bottom: 8px; }
+  .reason-title { font-size: 13px; font-weight: 800; color: var(--accent2); margin-bottom: 4px; }
+  .reason-desc { font-size: 11px; color: var(--text2); line-height: 1.4; }
+
+  .workspace-compare {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 16px;
+    align-items: start;
+    width: 100%; max-width: 960px;
+  }
+  .ws-box {
+    background: var(--bg2);
+    border-radius: 14px;
+    padding: 16px 18px;
+  }
+  .ws-box.principal { border: 1.5px solid rgba(239,68,68,0.3); }
+  .ws-box.suporte { border: 1.5px solid rgba(124,58,237,0.4); }
+  .ws-label {
+    font-size: 11px; font-weight: 700; letter-spacing: 1px;
+    text-transform: uppercase; margin-bottom: 10px;
+    padding-bottom: 6px; border-bottom: 1px solid var(--border);
+  }
+  .ws-box.principal .ws-label { color: var(--red); }
+  .ws-box.suporte .ws-label { color: var(--accent2); }
+
+  .ws-tree { font-family: 'Courier New', monospace; font-size: 11px; color: var(--text2); line-height: 1.8; }
+  .ws-tree .folder { color: var(--text); font-weight: 600; }
+  .ws-tree .file { color: var(--accent2); }
+  .ws-tree .comment { color: #4a5280; font-style: italic; }
+
+  .ws-divider {
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    gap: 8px; padding-top: 30px;
+  }
+  .ws-divider .line { width: 2px; height: 40px; background: var(--border); }
+  .ws-divider .icon { font-size: 24px; }
+  .ws-divider .label {
+    font-size: 10px; font-weight: 700; color: var(--red);
+    text-transform: uppercase; letter-spacing: 1px;
+    writing-mode: vertical-rl; text-orientation: mixed;
+  }
+
+  .warning {
+    display: flex; align-items: center; gap: 12px;
+    background: rgba(239,68,68,0.06);
+    border: 1px solid rgba(239,68,68,0.25);
+    border-radius: 10px;
+    padding: 12px 18px;
+    max-width: 960px; width: 100%;
+  }
+  .warning-icon { font-size: 20px; flex-shrink: 0; }
+  .warning-text { font-size: 12px; color: var(--text2); line-height: 1.4; }
+  .warning-text strong { color: var(--red); }
+</style>
+</head>
+<body>
+
+  <h2>🔒 Por que um <span>workspace separado</span> é obrigatório</h2>
+  <p class="sub">O bot de suporte não pode compartilhar contexto com o workspace principal. Separar é a primeira decisão.</p>
+
+  <div class="reasons">
+    <div class="reason">
+      <div class="reason-icon">🧠</div>
+      <div class="reason-title">Contexto limpo</div>
+      <div class="reason-desc">Bot só "vê" o material do curso — não seus projetos pessoais</div>
+    </div>
+    <div class="reason">
+      <div class="reason-icon">🔒</div>
+      <div class="reason-title">Privacidade</div>
+      <div class="reason-desc">Dados do negócio ficam no principal, inacessíveis pra alunos</div>
+    </div>
+    <div class="reason">
+      <div class="reason-icon">⚡</div>
+      <div class="reason-title">Performance</div>
+      <div class="reason-desc">Contexto menor = respostas mais rápidas e focadas</div>
+    </div>
+    <div class="reason">
+      <div class="reason-icon">🎯</div>
+      <div class="reason-title">Especialização</div>
+      <div class="reason-desc">SOUL.md e AGENTS.md 100% otimizados pra suporte</div>
+    </div>
+  </div>
+
+  <div class="workspace-compare">
+    <div class="ws-box suporte">
+      <div class="ws-label">🤖 Workspace do Bot (desacoplado)</div>
+      <div class="ws-tree">
+        <span class="folder">workspace-openclawzinho/</span><br>
+        ├── <span class="file">SOUL.md</span> <span class="comment"># personalidade</span><br>
+        ├── <span class="file">AGENTS.md</span> <span class="comment"># regras de autonomia</span><br>
+        └── <span class="file">USER.md</span> <span class="comment"># perfil do aluno típico</span>
+      </div>
+    </div>
+
+    <div class="ws-divider">
+      <div class="line"></div>
+      <div class="icon">🔗</div>
+      <div class="label">CONSULTA</div>
+      <div class="line"></div>
+    </div>
+
+    <div class="ws-box principal">
+      <div class="ws-label">🧠 Cérebro (fonte de verdade)</div>
+      <div class="ws-tree">
+        <span class="folder">cerebro/areas/atendimento/bot/</span><br>
+        ├── <span class="file">base-conhecimento.md</span> <span class="comment"># tudo que o bot sabe</span><br>
+        └── <span class="file">duvidas-pendentes.md</span> <span class="comment"># o que não sabe ainda</span><br>
+        <br>
+        <span class="folder">workspace-amora/</span> <span class="comment">(referência)</span><br>
+        └── <span class="comment"># configurações reais em produção</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="warning">
+    <div class="warning-icon">⚠️</div>
+    <div class="warning-text"><strong>Nunca</strong> use o workspace principal como agente de suporte. Você mistura contexto pessoal com contexto público — e cria uma bagunça que vai te custar caro.</div>
+  </div>
+
+</body>
+</html>
