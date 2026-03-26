@@ -16,16 +16,7 @@ imersao-openclaw-negocios/
 │   ├── agentes/      ← Configuração de cada agente (SOUL, AGENTS, TOOLS)
 │   └── seguranca/    ← Permissões e políticas de acesso
 │
-├── wizard/           ← Guia passo a passo para implementação (agente conduz)
-│   ├── README.md     ← Ponto de entrada — leia aqui primeiro
-│   ├── 01-fundacao.md
-│   ├── 02-areas.md
-│   ├── 03-skills.md
-│   ├── 04-rotinas.md
-│   ├── 05-multi-agente.md
-│   └── 06-validacao.md
-│
-└── imersao/          ← Material do facilitador e dados de demo
+└── wizard-imersao/   ← Material do facilitador e dados de demo
     ├── FACILITADOR-WIZARD.md  ← Roteiro principal do facilitador (agente conduz)
     ├── RUN-OF-SHOW.md         ← Agenda simplificada com horários
     ├── SETUP-PRE-EVENTO.md    ← Checklist técnico pré-evento
@@ -41,7 +32,7 @@ imersao-openclaw-negocios/
 
 ---
 
-## As 3 Pastas
+## As 2 Pastas
 
 ### 🧠 `cerebro/`
 Template completo de um Cérebro empresarial. Baseado na empresa fictícia **OpenClaw** — uma EdTech de agentes de IA com áreas de marketing, vendas e atendimento.
@@ -50,38 +41,23 @@ Todos os dados de demo são mockados e pré-configurados. Skills detectam automa
 
 Serve como ponto de partida para o participante adaptar à sua própria empresa.
 
-### 🧙 `wizard/`
-6 steps guiados que o **agente conduz** com o participante para construir o Cérebro personalizado. O agente lê `wizard/README.md` e passa por cada etapa com perguntas e ações concretas.
-
-Sequência: Fundação → Áreas → Skills → Rotinas → Multi-agente → Validação
-
-Comando para o participante usar:
-```
-"Leia wizard/README.md e me guie pelo setup completo"
-```
-
-### 📋 `imersao/`
+### 📋 `wizard-imersao/`
 Material para o **facilitador** conduzir os 2 dias ao vivo. O `FACILITADOR-WIZARD.md` é o documento principal — o agente do facilitador o lê e co-apresenta em tempo real, enviando slides inline e conduzindo as demos.
 
 Comando para o facilitador usar:
 ```
-"Leia imersao/FACILITADOR-WIZARD.md e me guie pela imersão"
+"Leia wizard-imersao/FACILITADOR-WIZARD.md e me guie pela imersão"
 ```
 
 ---
 
 ## Como Começar
 
-### Para participantes
-1. Clone o repositório: `git clone https://github.com/pixel-educacao/imersao-openclaw-negocios`
-2. Conecte seu agente OpenClaw ao repositório clonado
-3. Peça pro seu agente: **"Leia wizard/README.md e me guie pelo setup completo"**
-4. Para configurar suas integrações (Meta Ads, etc.), siga as instruções do wizard — ele vai te pedir as chaves no momento certo
-
 ### Para o facilitador (Bruno)
-1. Abra o OpenClaw apontado para este repositório
-2. Peça pro agente: **"Leia imersao/FACILITADOR-WIZARD.md e me guie pela imersão"**
-3. O agente vai co-apresentar em tempo real, enviar slides e conduzir os demos
+1. Clone o repositório: `git clone https://github.com/pixel-educacao/imersao-openclaw-negocios`
+2. Abra o OpenClaw apontado para este repositório
+3. Peça pro agente: **"Leia wizard-imersao/FACILITADOR-WIZARD.md e me guie pela imersão"**
+4. O agente vai co-apresentar em tempo real, enviar slides e conduzir as demos
 
 ---
 
