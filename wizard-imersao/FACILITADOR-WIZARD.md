@@ -375,34 +375,6 @@ Pausa de 10 minutos — voltamos às 10h40.
 
 📤 **Mensagem:**
 
-**O problema: conhecimento que evapora**
-
-Toda empresa tem processos que vivem na cabeça de alguém. Um prompt que funcionou ontem — mas que ninguém salvou. Um relatório que só o fulano sabe montar. Uma resposta padrão que muda a cada vez que alguém manda.
-
-Prompt é temporário. Morre quando a sessão fecha. Skill é permanente — fica salva no Cérebro, qualquer agente acessa, roda quando quiser.
-
-📂 `slides/05-skill-creator.html` *(abrir arquivo ao vivo — slide conceito Prompt vs Skill)*
-
-⏸ *Aguarda "próximo"*
-
----
-
-📤 **Mensagem:**
-
-**Como o skill-creator funciona por dentro**
-
-O skill-creator é uma skill que cria outras skills. Ele tem 3 modos de detectar o que você quer — e escolhe sozinho qual usar.
-
-Vamos abrir o arquivo real e ver como ele funciona:
-
-📂 `cerebro/empresa/skills/criar-skill/SKILL.md` *(abrir arquivo ao vivo — mostrar Detecção de Modo, QA automático, estrutura gerada)*
-
-⏸ *Aguarda "próximo"*
-
----
-
-📤 **Mensagem:**
-
 🎬 **Demo ao vivo — gerando um relatório**
 
 Pedindo pro agente:
@@ -423,11 +395,27 @@ Após mostrar o relatório, o agente sugere ao Bruno:
 
 📤 **Mensagem:**
 
+**O problema: conhecimento que evapora**
+
+Toda empresa tem processos que vivem na cabeça de alguém. Um prompt que funcionou ontem — mas que ninguém salvou. Um relatório que só o fulano sabe montar. Uma resposta padrão que muda a cada vez que alguém manda.
+
+Prompt é temporário. Morre quando a sessão fecha. Skill é permanente — fica salva no Cérebro, qualquer agente acessa, roda quando quiser.
+
+📂 `slides/05-skill-creator.html` *(abrir arquivo ao vivo — slide conceito Prompt vs Skill)*
+
+**Como o skill-creator funciona por dentro**
+
+O skill-creator é uma skill que cria outras skills. Ele tem 3 modos de detectar o que você quer — e escolhe sozinho qual usar.
+
+📂 `cerebro/empresa/skills/criar-skill/SKILL.md` *(abrir arquivo ao vivo — mostrar Detecção de Modo, QA automático, estrutura gerada)*
+
+⏸ *Aguarda "próximo"*
+
+---
+
+📤 **Mensagem:**
+
 🎬 **Transformando em skill — Modo 1: Captura de sessão**
-
-O pulo do gato:
-
-*"Transforma isso que a gente fez em skill"*
 
 *(agente lê o que acabou de fazer → gera SKILL.md + evals/evals.json → QA automático roda)*
 
