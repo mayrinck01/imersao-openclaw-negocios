@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Suporte vs Vendas — 21 a 27/03/2026</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+  :root {
+    --bg: #0A0E2A; --bg2: #111630; --bg3: #181e3a;
+    --border: #2a3260; --accent: #FE5000; --accent2: #ff7a35;
+    --green: #22c55e; --red: #ef4444; --yellow: #eab308;
+    --blue: #60a5fa; --purple: #a78bfa; --teal: #14b8a6;
+    --text: #e2e8f0; --text2: #94a3b8;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--bg); font-family: 'Inter', sans-serif; color: var(--text); padding: 32px 40px; }
+
+  .header { margin-bottom: 28px; }
+  .header h1 { font-size: 28px; font-weight: 800; margin-bottom: 4px; }
+  .header p { color: var(--text2); font-size: 14px; }
+
+  /* KPIs */
+  .kpis { display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; margin-bottom: 28px; }
+  .kpi {
+    background: var(--bg2); border: 1px solid var(--border); border-radius: 14px;
+    padding: 18px 20px; position: relative; overflow: hidden;
+  }
+  .kpi::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 3px; }
+  .kpi-1::before { background: var(--blue); }
+  .kpi-2::before { background: var(--red); }
+  .kpi-3::before { background: var(--yellow); }
+  .kpi-4::before { background: var(--green); }
+  .kpi-5::before { background: var(--purple); }
+  .kpi-val { font-size: 28px; font-weight: 800; line-height: 1.1; margin-bottom: 4px; }
+  .kpi-label { font-size: 11px; color: var(--text2); font-weight: 500; }
+  .c-blue { color: var(--blue); }
+  .c-red { color: var(--red); }
+  .c-yellow { color: var(--yellow); }
+  .c-green { color: var(--green); }
+  .c-purple { color: var(--purple); }
+
+  /* Grid 2 cols */
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 28px; }
+
+  /* Panels */
+  .panel {
+    background: var(--bg2); border: 1px solid var(--border); border-radius: 14px;
+    padding: 20px 24px;
+  }
+  .panel-title { font-size: 14px; font-weight: 700; margin-bottom: 16px; color: var(--text2); letter-spacing: 1px; text-transform: uppercase; }
+
+  /* Category bars */
+  .cat-row { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; }
+  .cat-label { font-size: 13px; width: 100px; flex-shrink: 0; }
+  .cat-bar-wrap { flex: 1; height: 24px; background: rgba(255,255,255,0.03); border-radius: 6px; overflow: hidden; }
+  .cat-bar { height: 100%; border-radius: 6px; display: flex; align-items: center; padding-left: 8px; font-size: 11px; font-weight: 700; }
+  .cat-count { font-size: 13px; font-weight: 700; width: 24px; text-align: right; flex-shrink: 0; }
+
+  /* Product breakdown */
+  .prod-row { display: flex; align-items: center; gap: 12px; padding: 10px 0; border-bottom: 1px solid rgba(42,50,96,0.5); }
+  .prod-row:last-child { border-bottom: none; }
+  .prod-name { flex: 1; font-size: 13px; font-weight: 600; }
+  .prod-stat { text-align: center; width: 70px; }
+  .prod-stat-val { font-size: 16px; font-weight: 700; }
+  .prod-stat-lbl { font-size: 9px; color: var(--text2); text-transform: uppercase; letter-spacing: 0.5px; }
+
+  /* Insights */
+  .insights { margin-bottom: 28px; }
+  .insights-title { font-size: 18px; font-weight: 800; margin-bottom: 16px; }
+  .insight {
+    background: var(--bg2); border-radius: 14px; padding: 20px 24px; margin-bottom: 12px;
+    display: flex; gap: 16px; align-items: flex-start;
+  }
+  .insight-critical { border: 1px solid rgba(239,68,68,0.3); }
+  .insight-warning { border: 1px solid rgba(234,179,8,0.3); }
+  .insight-info { border: 1px solid rgba(96,165,250,0.3); }
+  .insight-icon { font-size: 24px; flex-shrink: 0; padding-top: 2px; }
+  .insight-body { flex: 1; }
+  .insight-title { font-size: 15px; font-weight: 700; margin-bottom: 4px; }
+  .insight-desc { font-size: 13px; color: var(--text2); line-height: 1.6; }
+  .insight-metric { display: inline-block; font-weight: 700; padding: 2px 8px; border-radius: 4px; font-size: 12px; margin-top: 6px; }
+  .metric-red { background: rgba(239,68,68,0.15); color: var(--red); }
+  .metric-yellow { background: rgba(234,179,8,0.15); color: var(--yellow); }
+  .metric-blue { background: rgba(96,165,250,0.15); color: var(--blue); }
+
+  /* Timeline */
+  .timeline-row { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; }
+  .tl-day { font-size: 12px; width: 50px; color: var(--text2); flex-shrink: 0; }
+  .tl-bar-wrap { flex: 1; display: flex; gap: 3px; align-items: center; }
+  .tl-bar { height: 20px; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 700; }
+  .tl-tickets { background: rgba(239,68,68,0.2); color: var(--red); }
+  .tl-vendas { background: rgba(34,197,94,0.2); color: var(--green); }
+  .tl-legend { display: flex; gap: 16px; margin-top: 8px; }
+  .tl-legend-item { display: flex; align-items: center; gap: 6px; font-size: 11px; color: var(--text2); }
+  .tl-dot { width: 10px; height: 10px; border-radius: 3px; }
+
+  .footer { margin-top: 24px; padding-top: 16px; border-top: 1px solid var(--border); color: var(--text2); font-size: 12px; }
+</style>
+</head>
+<body>
+
+  <div class="header">
+    <h1>Suporte vs Vendas</h1>
+    <p>Cruzamento de dados — 21 a 27/03/2026 — Como os tickets de suporte estão afetando as vendas</p>
+  </div>
+
+  <div class="kpis">
+    <div class="kpi kpi-1">
+      <div class="kpi-val c-blue">26</div>
+      <div class="kpi-label">Tickets na semana</div>
+    </div>
+    <div class="kpi kpi-2">
+      <div class="kpi-val c-red">R$ 9.679</div>
+      <div class="kpi-label">Valor em risco (reembolso + cancelamento)</div>
+    </div>
+    <div class="kpi kpi-3">
+      <div class="kpi-val c-yellow">7</div>
+      <div class="kpi-label">Tickets abertos agora</div>
+    </div>
+    <div class="kpi kpi-4">
+      <div class="kpi-val c-green">3.8h</div>
+      <div class="kpi-label">Tempo médio resolução</div>
+    </div>
+    <div class="kpi kpi-5">
+      <div class="kpi-val c-purple">27%</div>
+      <div class="kpi-label">Taxa reembolso + cancelamento</div>
+    </div>
+  </div>
+
+  <div class="grid-2">
+    <!-- Tickets por categoria -->
+    <div class="panel">
+      <div class="panel-title">Tickets por categoria</div>
+      <div class="cat-row">
+        <div class="cat-label">Acesso</div>
+        <div class="cat-bar-wrap"><div class="cat-bar" style="width:70%;background:rgba(239,68,68,0.3);color:var(--red);">7</div></div>
+        <div class="cat-count" style="color:var(--red)">7</div>
+      </div>
+      <div class="cat-row">
+        <div class="cat-label">Reembolso</div>
+        <div class="cat-bar-wrap"><div class="cat-bar" style="width:50%;background:rgba(254,80,0,0.3);color:var(--accent2);">5</div></div>
+        <div class="cat-count" style="color:var(--accent2)">5</div>
+      </div>
+      <div class="cat-row">
+        <div class="cat-label">Dúvida</div>
+        <div class="cat-bar-wrap"><div class="cat-bar" style="width:50%;background:rgba(96,165,250,0.3);color:var(--blue);">5</div></div>
+        <div class="cat-count" style="color:var(--blue)">5</div>
+      </div>
+      <div class="cat-row">
+        <div class="cat-label">Cobrança</div>
+        <div class="cat-bar-wrap"><div class="cat-bar" style="width:40%;background:rgba(234,179,8,0.3);color:var(--yellow);">4</div></div>
+        <div class="cat-count" style="color:var(--yellow)">4</div>
+      </div>
+      <div class="cat-row">
+        <div class="cat-label">Bug</div>
+        <div class="cat-bar-wrap"><div class="cat-bar" style="width:30%;background:rgba(167,139,250,0.3);color:var(--purple);">3</div></div>
+        <div class="cat-count" style="color:var(--purple)">3</div>
+      </div>
+      <div class="cat-row">
+        <div class="cat-label">Cancelamento</div>
+        <div class="cat-bar-wrap"><div class="cat-bar" style="width:20%;background:rgba(239,68,68,0.3);color:var(--red);">2</div></div>
+        <div class="cat-count" style="color:var(--red)">2</div>
+      </div>
+    </div>
+
+    <!-- Tickets por produto -->
+    <div class="panel">
+      <div class="panel-title">Impacto por produto</div>
+      <div class="prod-row">
+        <div class="prod-name">Comunidade Marketing PRO</div>
+        <div class="prod-stat"><div class="prod-stat-val c-red">8</div><div class="prod-stat-lbl">Tickets</div></div>
+        <div class="prod-stat"><div class="prod-stat-val c-yellow">0</div><div class="prod-stat-lbl">Reembolso</div></div>
+        <div class="prod-stat"><div class="prod-stat-val c-blue">R$ 0</div><div class="prod-stat-lbl">Risco</div></div>
+      </div>
+      <div class="prod-row">
+        <div class="prod-name">Minicurso Tráfego Pago</div>
+        <div class="prod-stat"><div class="prod-stat-val c-red">7</div><div class="prod-stat-lbl">Tickets</div></div>
+        <div class="prod-stat"><div class="prod-stat-val c-yellow">3</div><div class="prod-stat-lbl">Reembolso</div></div>
+        <div class="prod-stat"><div class="prod-stat-val c-blue">R$ 591</div><div class="prod-stat-lbl">Risco</div></div>
+      </div>
+      <div class="prod-row">
+        <div class="prod-name">Mentoria Individual</div>
+        <div class="prod-stat"><div class="prod-stat-val c-red">7</div><div class="prod-stat-lbl">Tickets</div></div>
+        <div class="prod-stat"><div class="prod-stat-val c-yellow">3</div><div class="prod-stat-lbl">Reemb+Cancel</div></div>
+        <div class="prod-stat"><div class="prod-stat-val c-blue">R$ 8.991</div><div class="prod-stat-lbl">Risco</div></div>
+      </div>
+      <div class="prod-row">
+        <div class="prod-name">Workshop Funil de Vendas</div>
+        <div class="prod-stat"><div class="prod-stat-val c-red">4</div><div class="prod-stat-lbl">Tickets</div></div>
+        <div class="prod-stat"><div class="prod-stat-val c-yellow">1</div><div class="prod-stat-lbl">Reembolso</div></div>
+        <div class="prod-stat"><div class="prod-stat-val c-blue">R$ 97</div><div class="prod-stat-lbl">Risco</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Timeline -->
+  <div class="panel" style="margin-bottom:28px;">
+    <div class="panel-title">Tickets vs Vendas — dia a dia</div>
+    <div class="timeline-row">
+      <div class="tl-day">21/03</div>
+      <div class="tl-bar-wrap">
+        <div class="tl-bar tl-tickets" style="width:30%">3 tickets</div>
+        <div class="tl-bar tl-vendas" style="width:20%">2 vendas</div>
+      </div>
+    </div>
+    <div class="timeline-row">
+      <div class="tl-day">22/03</div>
+      <div class="tl-bar-wrap">
+        <div class="tl-bar tl-tickets" style="width:40%">4 tickets</div>
+        <div class="tl-bar tl-vendas" style="width:20%">2 vendas</div>
+      </div>
+    </div>
+    <div class="timeline-row">
+      <div class="tl-day">23/03</div>
+      <div class="tl-bar-wrap">
+        <div class="tl-bar tl-tickets" style="width:40%">4 tickets</div>
+        <div class="tl-bar tl-vendas" style="width:0%"></div>
+      </div>
+    </div>
+    <div class="timeline-row">
+      <div class="tl-day">24/03</div>
+      <div class="tl-bar-wrap">
+        <div class="tl-bar tl-tickets" style="width:40%">4 tickets</div>
+        <div class="tl-bar tl-vendas" style="width:0%"></div>
+      </div>
+    </div>
+    <div class="timeline-row">
+      <div class="tl-day">25/03</div>
+      <div class="tl-bar-wrap">
+        <div class="tl-bar tl-tickets" style="width:40%">4 tickets</div>
+        <div class="tl-bar tl-vendas" style="width:0%"></div>
+      </div>
+    </div>
+    <div class="timeline-row">
+      <div class="tl-day">26/03</div>
+      <div class="tl-bar-wrap">
+        <div class="tl-bar tl-tickets" style="width:40%">4 tickets</div>
+        <div class="tl-bar tl-vendas" style="width:0%"></div>
+      </div>
+    </div>
+    <div class="timeline-row">
+      <div class="tl-day">27/03</div>
+      <div class="tl-bar-wrap">
+        <div class="tl-bar tl-tickets" style="width:30%">3 tickets</div>
+        <div class="tl-bar tl-vendas" style="width:0%"></div>
+      </div>
+    </div>
+    <div class="tl-legend">
+      <div class="tl-legend-item"><div class="tl-dot" style="background:rgba(239,68,68,0.4)"></div>Tickets</div>
+      <div class="tl-legend-item"><div class="tl-dot" style="background:rgba(34,197,94,0.4)"></div>Vendas</div>
+    </div>
+  </div>
+
+  <!-- Insights -->
+  <div class="insights">
+    <div class="insights-title">Insights</div>
+
+    <div class="insight insight-critical">
+      <div class="insight-icon">🚨</div>
+      <div class="insight-body">
+        <div class="insight-title">Mentoria Individual é o maior risco financeiro</div>
+        <div class="insight-desc">7 tickets, 1 pedido de reembolso e 2 cancelamentos. O valor em risco é de R$ 8.991 — 93% do total. Os motivos são operacionais: dificuldade de agendar sessão e demora pra conseguir horário. Não é o produto — é a experiência de agendamento.</div>
+        <div class="insight-metric metric-red">R$ 8.991 em risco</div>
+      </div>
+    </div>
+
+    <div class="insight insight-critical">
+      <div class="insight-icon">🔓</div>
+      <div class="insight-body">
+        <div class="insight-title">Problemas de acesso são a maior causa de atrito</div>
+        <div class="insight-desc">7 dos 26 tickets (27%) são sobre acesso: links expirados, login que não funciona, convites que venceram, erro 404 em gravações. Isso gera frustração imediata — o cliente pagou e não consegue usar. Correlação direta com pedidos de reembolso nas horas seguintes.</div>
+        <div class="insight-metric metric-red">27% dos tickets = acesso</div>
+      </div>
+    </div>
+
+    <div class="insight insight-warning">
+      <div class="insight-icon">💸</div>
+      <div class="insight-body">
+        <div class="insight-title">Minicurso Tráfego Pago: 3 reembolsos com o mesmo motivo</div>
+        <div class="insight-desc">Todos dizem que o conteúdo é "básico demais" ou "raso". Ticket médio baixo (R$ 197) mas o padrão é claro. A expectativa do cliente não bate com o que é entregue — pode ser problema de copy na venda ou falta de segmentação.</div>
+        <div class="insight-metric metric-yellow">3 reembolsos — mesmo feedback</div>
+      </div>
+    </div>
+
+    <div class="insight insight-warning">
+      <div class="insight-icon">💳</div>
+      <div class="insight-body">
+        <div class="insight-title">Erros de cobrança estão criando desconfiança</div>
+        <div class="insight-desc">4 tickets de cobrança na semana: cobrança duplicada, valor errado na parcela, cobrado após pedir pausa. Isso destrói confiança e acelera cancelamentos. Precisa de auditoria no gateway de pagamento.</div>
+        <div class="insight-metric metric-yellow">4 erros de cobrança em 7 dias</div>
+      </div>
+    </div>
+
+    <div class="insight insight-info">
+      <div class="insight-icon">📉</div>
+      <div class="insight-body">
+        <div class="insight-title">Vendas caíram nos dias de pico de tickets</div>
+        <div class="insight-desc">Dias 21 e 22 tiveram vendas (4 no total). De 23 a 27, zero vendas registradas — período que coincide com o aumento de tickets (4/dia constantes). O time pode estar focado em apagar incêndios ao invés de converter leads.</div>
+        <div class="insight-metric metric-blue">0 vendas em 5 dos 7 dias</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    Fontes: vendas.csv + tickets-suporte.csv · Período: 21 a 27/03/2026 · Gerado automaticamente em 27/03/2026
+  </div>
+
+</body>
+</html>

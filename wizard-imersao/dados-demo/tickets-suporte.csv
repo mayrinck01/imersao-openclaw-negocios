@@ -1,0 +1,27 @@
+data_abertura,cliente,email,produto,categoria,prioridade,status,tempo_resolucao_horas,descricao
+2026-03-21,Marina Oliveira,marina.oliveira@gmail.com,Minicurso Tráfego Pago,acesso,alta,resolvido,2,Não consegue acessar a área de membros após pagamento
+2026-03-21,Carlos Eduardo Silva,carlos.edu@outlook.com,Comunidade Marketing PRO,bug,media,resolvido,6,Botão de download dos materiais não funciona no mobile
+2026-03-21,Fernanda Costa,fer.costa@yahoo.com,Comunidade Marketing PRO,cobranca,alta,resolvido,4,Foi cobrada 2x no cartão de crédito
+2026-03-22,Roberto Nunes,rob.nunes@gmail.com,Mentoria Individual,cancelamento,critica,resolvido,1,Quer cancelar mentoria. Diz que não é o que esperava
+2026-03-22,Amanda Pereira,amanda.per@gmail.com,Minicurso Tráfego Pago,acesso,alta,resolvido,3,Link do curso expirou antes de completar as aulas
+2026-03-22,Patricia Almeida,pat.almeida@hotmail.com,Minicurso Tráfego Pago,duvida,baixa,resolvido,1,Pergunta se tem certificado no final do curso
+2026-03-22,Lucas Mendonça,lucas.mend@gmail.com,Minicurso Tráfego Pago,reembolso,critica,aberto,0,Pediu reembolso. Diz que conteúdo é básico demais
+2026-03-23,João Pedro Santos,jp.santos@gmail.com,Mentoria Individual,cobranca,alta,resolvido,8,Parcela veio com valor diferente do combinado
+2026-03-23,Camila Rodrigues,camila.rod@gmail.com,Workshop Funil de Vendas,acesso,media,resolvido,5,Não recebeu email com link da gravação do workshop
+2026-03-23,Ana Carolina Lima,anaclima@hotmail.com,Comunidade Marketing PRO,bug,alta,resolvido,12,Área de membros fora do ar durante a manhã toda
+2026-03-23,Diego Barbosa,diego.barb@hotmail.com,Mentoria Individual,reembolso,critica,resolvido,2,Pede reembolso total. Não conseguiu agendar sessão
+2026-03-24,Pedro Henrique,pedro.h@outlook.com,Comunidade Marketing PRO,acesso,alta,aberto,0,Login não funciona há 3 dias. Já tentou resetar senha
+2026-03-24,Marcos Vinícius,marcos.vin@hotmail.com,Minicurso Tráfego Pago,reembolso,critica,resolvido,1,Pediu reembolso no 6º dia. Achou raso
+2026-03-24,Daniela Machado,dani.mach@gmail.com,Comunidade Marketing PRO,duvida,baixa,resolvido,2,Quer saber diferença entre plano mensal e anual
+2026-03-24,Gustavo Lima,gus.lima@outlook.com,Mentoria Individual,cobranca,alta,aberto,0,Cobrado antes da data combinada
+2026-03-25,Isabella Ramos,isa.ramos@gmail.com,Minicurso Tráfego Pago,reembolso,critica,resolvido,1,Reembolso processado. Disse que achou caro pelo conteúdo
+2026-03-25,Larissa Santos,lari.santos@gmail.com,Mentoria Individual,duvida,media,resolvido,3,Pergunta se pode trocar mentor
+2026-03-25,Rafael Souza,rafa.souza@outlook.com,Comunidade Marketing PRO,bug,alta,resolvido,8,Vídeos da comunidade não carregam no Safari
+2026-03-25,Tatiana Oliveira,tati.oli@gmail.com,Workshop Funil de Vendas,acesso,media,resolvido,4,Não consegue baixar o material complementar
+2026-03-26,Alexandre Costa,alex.costa@outlook.com,Mentoria Individual,cancelamento,critica,aberto,0,Quer cancelar. Diz que demora pra conseguir horário
+2026-03-26,Felipe Cardoso,felipe.card@hotmail.com,Comunidade Marketing PRO,acesso,alta,resolvido,6,Convite do Discord expirou. Não consegue entrar
+2026-03-26,Priscila Duarte,pri.duarte@gmail.com,Minicurso Tráfego Pago,duvida,baixa,resolvido,1,Quer saber se tem suporte ao vivo
+2026-03-26,Gabriel Moreira,gab.moreira@outlook.com,Comunidade Marketing PRO,cobranca,alta,resolvido,3,Cobrado mesmo tendo pedido pausa na assinatura
+2026-03-27,Eduardo Campos,edu.campos@outlook.com,Mentoria Individual,duvida,media,aberto,0,Quer remarcar sessão mas não acha o link
+2026-03-27,Natália Pires,nat.pires@gmail.com,Workshop Funil de Vendas,reembolso,critica,aberto,0,Pede reembolso. Diz que workshop não se aplica a serviços
+2026-03-27,Vinícius Araújo,vini.araujo@hotmail.com,Workshop Funil de Vendas,acesso,media,aberto,0,Link da gravação retorna erro 404

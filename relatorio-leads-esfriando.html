@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Leads Esfriando — Relatório 27/03/2026</title>
+<title>Leads Esfriando — 27/03/2026</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
   :root {
     --bg: #0A0E2A; --bg2: #111630; --bg3: #181e3a;
     --border: #2a3260; --accent: #FE5000; --accent2: #ff7a35;
     --green: #22c55e; --red: #ef4444; --yellow: #eab308;
-    --blue: #60a5fa; --purple: #a78bfa; --teal: #14b8a6;
+    --blue: #60a5fa; --purple: #a78bfa;
     --text: #e2e8f0; --text2: #94a3b8;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -20,7 +20,6 @@
   .header h1 { font-size: 28px; font-weight: 800; margin-bottom: 4px; }
   .header p { color: var(--text2); font-size: 14px; }
 
-  /* KPIs */
   .kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 32px; }
   .kpi {
     background: var(--bg2); border: 1px solid var(--border); border-radius: 14px;
@@ -38,12 +37,9 @@
   .val-blue { color: var(--blue); }
   .val-green { color: var(--green); }
 
-  /* Urgency bar */
   .urgency-section { margin-bottom: 32px; }
   .urgency-title { font-size: 14px; font-weight: 700; margin-bottom: 12px; color: var(--text2); letter-spacing: 1px; text-transform: uppercase; }
-  .urgency-bar {
-    display: flex; border-radius: 10px; overflow: hidden; height: 32px;
-  }
+  .urgency-bar { display: flex; border-radius: 10px; overflow: hidden; height: 32px; }
   .urg-critical { background: var(--red); display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700; }
   .urg-high { background: var(--yellow); color: #000; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700; }
   .urg-medium { background: var(--blue); display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700; }
@@ -51,10 +47,7 @@
   .legend-item { display: flex; align-items: center; gap: 6px; font-size: 12px; color: var(--text2); }
   .legend-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
 
-  /* Table */
-  .table-section { margin-bottom: 24px; }
-  .section-title { font-size: 18px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
-  table { width: 100%; border-collapse: separate; border-spacing: 0; }
+  table { width: 100%; border-collapse: separate; border-spacing: 0; margin-bottom: 24px; }
   thead th {
     background: var(--bg3); padding: 10px 14px; text-align: left;
     font-size: 11px; font-weight: 700; color: var(--text2);
@@ -64,7 +57,6 @@
   thead th:last-child { border-radius: 0 10px 0 0; }
   tbody td {
     padding: 12px 14px; font-size: 13px; border-bottom: 1px solid rgba(42,50,96,0.5);
-    vertical-align: middle;
   }
   tbody tr { background: var(--bg2); }
   tbody tr:hover { background: var(--bg3); }
@@ -82,7 +74,6 @@
   .days-high { color: var(--yellow); }
   .days-medium { color: var(--blue); }
   .valor { font-weight: 600; color: var(--green); }
-  .status-tag { font-size: 11px; color: var(--text2); }
 
   .footer { margin-top: 24px; padding-top: 16px; border-top: 1px solid var(--border); color: var(--text2); font-size: 12px; }
 </style>
@@ -116,9 +107,9 @@
   <div class="urgency-section">
     <div class="urgency-title">Distribuição por urgência</div>
     <div class="urgency-bar">
-      <div class="urg-critical" style="width:36%">Crítico (5)</div>
-      <div class="urg-high" style="width:36%">Alto (5)</div>
-      <div class="urg-medium" style="width:28%">Médio (4)</div>
+      <div class="urg-critical" style="width:36%">Crítico — 5 leads</div>
+      <div class="urg-high" style="width:36%">Alto — 5 leads</div>
+      <div class="urg-medium" style="width:28%">Médio — 4 leads</div>
     </div>
     <div class="urgency-legend">
       <div class="legend-item"><div class="legend-dot" style="background:var(--red)"></div>Crítico: +14 dias</div>
@@ -127,168 +118,165 @@
     </div>
   </div>
 
-  <div class="table-section">
-    <div class="section-title">Detalhamento por lead</div>
-    <table>
-      <thead>
-        <tr>
-          <th>Urgência</th>
-          <th>Dias</th>
-          <th>Lead</th>
-          <th>Produto</th>
-          <th>Status</th>
-          <th>Valor</th>
-          <th>Último contato</th>
-          <th>Observação</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><span class="badge badge-critical">Crítico</span></td>
-          <td><span class="days-cold days-critical">19d</span></td>
-          <td><div class="lead-name">Isabella Ramos</div><div class="lead-email">isa.ramos@gmail.com</div></td>
-          <td>Minicurso Tráfego Pago</td>
-          <td class="status-tag">perdido</td>
-          <td class="valor">R$ 197</td>
-          <td>08/03</td>
-          <td>Disse que achou caro. Não retornou</td>
-        </tr>
-        <tr>
-          <td><span class="badge badge-critical">Crítico</span></td>
-          <td><span class="days-cold days-critical">17d</span></td>
-          <td><div class="lead-name">Diego Barbosa</div><div class="lead-email">diego.barb@hotmail.com</div></td>
-          <td>Mentoria Individual</td>
-          <td class="status-tag">perdido</td>
-          <td class="valor">R$ 2.997</td>
-          <td>10/03</td>
-          <td>Não respondeu após 3 tentativas</td>
-        </tr>
-        <tr>
-          <td><span class="badge badge-critical">Crítico</span></td>
-          <td><span class="days-cold days-critical">16d</span></td>
-          <td><div class="lead-name">Pedro Henrique</div><div class="lead-email">pedro.h@outlook.com</div></td>
-          <td>Comunidade Marketing PRO</td>
-          <td class="status-tag">em_contato</td>
-          <td class="valor">R$ 797</td>
-          <td>11/03</td>
-          <td>Super engajado nos vídeos. Não respondeu última msg</td>
-        </tr>
-        <tr>
-          <td><span class="badge badge-critical">Crítico</span></td>
-          <td><span class="days-cold days-critical">15d</span></td>
-          <td><div class="lead-name">Marcos Vinícius</div><div class="lead-email">marcos.vin@hotmail.com</div></td>
-          <td>Minicurso Tráfego Pago</td>
-          <td class="status-tag">proposta_enviada</td>
-          <td class="valor">R$ 197</td>
-          <td>12/03</td>
-          <td>Recebeu proposta por email. Sem retorno</td>
-        </tr>
-        <tr>
-          <td><span class="badge badge-critical">Crítico</span></td>
-          <td><span class="days-cold days-critical">14d</span></td>
-          <td><div class="lead-name">Amanda Pereira</div><div class="lead-email">amanda.per@gmail.com</div></td>
-          <td>Minicurso Tráfego Pago</td>
-          <td class="status-tag">em_contato</td>
-          <td class="valor">R$ 197</td>
-          <td>13/03</td>
-          <td>Interessada mas disse que vai pensar</td>
-        </tr>
-        <tr>
-          <td><span class="badge badge-high">Alto</span></td>
-          <td><span class="days-cold days-high">13d</span></td>
-          <td><div class="lead-name">Roberto Nunes</div><div class="lead-email">rob.nunes@gmail.com</div></td>
-          <td>Mentoria Individual</td>
-          <td class="status-tag">proposta_enviada</td>
-          <td class="valor">R$ 2.997</td>
-          <td>14/03</td>
-          <td>Dono de agência. Quer mentoria focada em escala</td>
-        </tr>
-        <tr>
-          <td><span class="badge badge-high">Alto</span></td>
-          <td><span class="days-cold days-high">13d</span></td>
-          <td><div class="lead-name">Priscila Duarte</div><div class="lead-email">pri.duarte@gmail.com</div></td>
-          <td>Minicurso Tráfego Pago</td>
-          <td class="status-tag">em_contato</td>
-          <td class="valor">R$ 197</td>
-          <td>14/03</td>
-          <td>Pediu mais informações sobre conteúdo do curso</td>
-        </tr>
-        <tr>
-          <td><span class="badge badge-high">Alto</span></td>
-          <td><span class="days-cold days-high">12d</span></td>
-          <td><div class="lead-name">João Pedro Santos</div><div class="lead-email">jp.santos@gmail.com</div></td>
-          <td>Mentoria Individual</td>
-          <td class="status-tag">negociando</td>
-          <td class="valor">R$ 2.997</td>
-          <td>15/03</td>
-          <td>Indicado pelo Rodrigo. Quer parcelar em 6x</td>
-        </tr>
-        <tr>
-          <td><span class="badge badge-high">Alto</span></td>
-          <td><span class="days-cold days-high">12d</span></td>
-          <td><div class="lead-name">Daniela Machado</div><div class="lead-email">dani.mach@gmail.com</div></td>
-          <td>Comunidade Marketing PRO</td>
-          <td class="status-tag">proposta_enviada</td>
-          <td class="valor">R$ 797</td>
-          <td>15/03</td>
-          <td>Enviamos comparativo comunidade vs mentoria</td>
-        </tr>
-        <tr>
-          <td><span class="badge badge-high">Alto</span></td>
-          <td><span class="days-cold days-high">11d</span></td>
-          <td><div class="lead-name">Camila Rodrigues</div><div class="lead-email">camila.rod@gmail.com</div></td>
-          <td>Workshop Funil de Vendas</td>
-          <td class="status-tag">em_contato</td>
-          <td class="valor">R$ 97</td>
-          <td>16/03</td>
-          <td>Perguntou se workshop ainda está disponível</td>
-        </tr>
-        <tr>
-          <td><span class="badge badge-medium">Médio</span></td>
-          <td><span class="days-cold days-medium">10d</span></td>
-          <td><div class="lead-name">Ana Carolina Lima</div><div class="lead-email">anaclima@hotmail.com</div></td>
-          <td>Comunidade Marketing PRO</td>
-          <td class="status-tag">em_contato</td>
-          <td class="valor">R$ 797</td>
-          <td>17/03</td>
-          <td>Assistiu 3 vídeos seguidos. Mandou DM perguntando</td>
-        </tr>
-        <tr>
-          <td><span class="badge badge-medium">Médio</span></td>
-          <td><span class="days-cold days-medium">10d</span></td>
-          <td><div class="lead-name">Alexandre Costa</div><div class="lead-email">alex.costa@outlook.com</div></td>
-          <td>Mentoria Individual</td>
-          <td class="status-tag">negociando</td>
-          <td class="valor">R$ 2.997</td>
-          <td>17/03</td>
-          <td>Dono de franquia. Quer mentoria pra 3 unidades</td>
-        </tr>
-        <tr>
-          <td><span class="badge badge-medium">Médio</span></td>
-          <td><span class="days-cold days-medium">9d</span></td>
-          <td><div class="lead-name">Patricia Almeida</div><div class="lead-email">pat.almeida@hotmail.com</div></td>
-          <td>Minicurso Tráfego Pago</td>
-          <td class="status-tag">proposta_enviada</td>
-          <td class="valor">R$ 197</td>
-          <td>18/03</td>
-          <td>Pediu desconto. Enviamos cupom de 10%</td>
-        </tr>
-        <tr>
-          <td><span class="badge badge-medium">Médio</span></td>
-          <td><span class="days-cold days-medium">9d</span></td>
-          <td><div class="lead-name">Gustavo Lima</div><div class="lead-email">gus.lima@outlook.com</div></td>
-          <td>Mentoria Individual</td>
-          <td class="status-tag">em_contato</td>
-          <td class="valor">R$ 2.997</td>
-          <td>18/03</td>
-          <td>Tem agência pequena. Quer implementar funis</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
+  <table>
+    <thead>
+      <tr>
+        <th>Urgência</th>
+        <th>Dias</th>
+        <th>Lead</th>
+        <th>Produto</th>
+        <th>Status</th>
+        <th>Valor</th>
+        <th>Último contato</th>
+        <th>Observação</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="badge badge-critical">Crítico</span></td>
+        <td><span class="days-cold days-critical">19d</span></td>
+        <td><div class="lead-name">Isabella Ramos</div><div class="lead-email">isa.ramos@gmail.com</div></td>
+        <td>Minicurso Tráfego Pago</td>
+        <td>perdido</td>
+        <td class="valor">R$ 197</td>
+        <td>08/03</td>
+        <td>Disse que achou caro. Não retornou</td>
+      </tr>
+      <tr>
+        <td><span class="badge badge-critical">Crítico</span></td>
+        <td><span class="days-cold days-critical">17d</span></td>
+        <td><div class="lead-name">Diego Barbosa</div><div class="lead-email">diego.barb@hotmail.com</div></td>
+        <td>Mentoria Individual</td>
+        <td>perdido</td>
+        <td class="valor">R$ 2.997</td>
+        <td>10/03</td>
+        <td>Não respondeu após 3 tentativas</td>
+      </tr>
+      <tr>
+        <td><span class="badge badge-critical">Crítico</span></td>
+        <td><span class="days-cold days-critical">16d</span></td>
+        <td><div class="lead-name">Pedro Henrique</div><div class="lead-email">pedro.h@outlook.com</div></td>
+        <td>Comunidade Marketing PRO</td>
+        <td>em_contato</td>
+        <td class="valor">R$ 797</td>
+        <td>11/03</td>
+        <td>Super engajado nos vídeos. Não respondeu última msg</td>
+      </tr>
+      <tr>
+        <td><span class="badge badge-critical">Crítico</span></td>
+        <td><span class="days-cold days-critical">15d</span></td>
+        <td><div class="lead-name">Marcos Vinícius</div><div class="lead-email">marcos.vin@hotmail.com</div></td>
+        <td>Minicurso Tráfego Pago</td>
+        <td>proposta_enviada</td>
+        <td class="valor">R$ 197</td>
+        <td>12/03</td>
+        <td>Recebeu proposta por email. Sem retorno</td>
+      </tr>
+      <tr>
+        <td><span class="badge badge-critical">Crítico</span></td>
+        <td><span class="days-cold days-critical">14d</span></td>
+        <td><div class="lead-name">Amanda Pereira</div><div class="lead-email">amanda.per@gmail.com</div></td>
+        <td>Minicurso Tráfego Pago</td>
+        <td>em_contato</td>
+        <td class="valor">R$ 197</td>
+        <td>13/03</td>
+        <td>Interessada mas disse que vai pensar</td>
+      </tr>
+      <tr>
+        <td><span class="badge badge-high">Alto</span></td>
+        <td><span class="days-cold days-high">13d</span></td>
+        <td><div class="lead-name">Roberto Nunes</div><div class="lead-email">rob.nunes@gmail.com</div></td>
+        <td>Mentoria Individual</td>
+        <td>proposta_enviada</td>
+        <td class="valor">R$ 2.997</td>
+        <td>14/03</td>
+        <td>Dono de agência. Quer mentoria focada em escala</td>
+      </tr>
+      <tr>
+        <td><span class="badge badge-high">Alto</span></td>
+        <td><span class="days-cold days-high">13d</span></td>
+        <td><div class="lead-name">Priscila Duarte</div><div class="lead-email">pri.duarte@gmail.com</div></td>
+        <td>Minicurso Tráfego Pago</td>
+        <td>em_contato</td>
+        <td class="valor">R$ 197</td>
+        <td>14/03</td>
+        <td>Pediu mais informações sobre conteúdo do curso</td>
+      </tr>
+      <tr>
+        <td><span class="badge badge-high">Alto</span></td>
+        <td><span class="days-cold days-high">12d</span></td>
+        <td><div class="lead-name">João Pedro Santos</div><div class="lead-email">jp.santos@gmail.com</div></td>
+        <td>Mentoria Individual</td>
+        <td>negociando</td>
+        <td class="valor">R$ 2.997</td>
+        <td>15/03</td>
+        <td>Indicado pelo Rodrigo. Quer parcelar em 6x</td>
+      </tr>
+      <tr>
+        <td><span class="badge badge-high">Alto</span></td>
+        <td><span class="days-cold days-high">12d</span></td>
+        <td><div class="lead-name">Daniela Machado</div><div class="lead-email">dani.mach@gmail.com</div></td>
+        <td>Comunidade Marketing PRO</td>
+        <td>proposta_enviada</td>
+        <td class="valor">R$ 797</td>
+        <td>15/03</td>
+        <td>Enviamos comparativo comunidade vs mentoria</td>
+      </tr>
+      <tr>
+        <td><span class="badge badge-high">Alto</span></td>
+        <td><span class="days-cold days-high">11d</span></td>
+        <td><div class="lead-name">Camila Rodrigues</div><div class="lead-email">camila.rod@gmail.com</div></td>
+        <td>Workshop Funil de Vendas</td>
+        <td>em_contato</td>
+        <td class="valor">R$ 97</td>
+        <td>16/03</td>
+        <td>Perguntou se workshop ainda está disponível</td>
+      </tr>
+      <tr>
+        <td><span class="badge badge-medium">Médio</span></td>
+        <td><span class="days-cold days-medium">10d</span></td>
+        <td><div class="lead-name">Ana Carolina Lima</div><div class="lead-email">anaclima@hotmail.com</div></td>
+        <td>Comunidade Marketing PRO</td>
+        <td>em_contato</td>
+        <td class="valor">R$ 797</td>
+        <td>17/03</td>
+        <td>Assistiu 3 vídeos seguidos. Mandou DM perguntando</td>
+      </tr>
+      <tr>
+        <td><span class="badge badge-medium">Médio</span></td>
+        <td><span class="days-cold days-medium">10d</span></td>
+        <td><div class="lead-name">Alexandre Costa</div><div class="lead-email">alex.costa@outlook.com</div></td>
+        <td>Mentoria Individual</td>
+        <td>negociando</td>
+        <td class="valor">R$ 2.997</td>
+        <td>17/03</td>
+        <td>Dono de franquia. Quer mentoria pra 3 unidades</td>
+      </tr>
+      <tr>
+        <td><span class="badge badge-medium">Médio</span></td>
+        <td><span class="days-cold days-medium">9d</span></td>
+        <td><div class="lead-name">Patricia Almeida</div><div class="lead-email">pat.almeida@hotmail.com</div></td>
+        <td>Minicurso Tráfego Pago</td>
+        <td>proposta_enviada</td>
+        <td class="valor">R$ 197</td>
+        <td>18/03</td>
+        <td>Pediu desconto. Enviamos cupom de 10%</td>
+      </tr>
+      <tr>
+        <td><span class="badge badge-medium">Médio</span></td>
+        <td><span class="days-cold days-medium">9d</span></td>
+        <td><div class="lead-name">Gustavo Lima</div><div class="lead-email">gus.lima@outlook.com</div></td>
+        <td>Mentoria Individual</td>
+        <td>em_contato</td>
+        <td class="valor">R$ 2.997</td>
+        <td>18/03</td>
+        <td>Tem agência pequena. Quer implementar funis</td>
+      </tr>
+    </tbody>
+  </table>
 
   <div class="footer">
-    Fonte: leads.csv · Gerado automaticamente em 27/03/2026 · Critério: último contato há mais de 7 dias, excluindo leads já fechados
+    Fonte: leads.csv · 32 leads analisados · 14 sem follow-up há +7 dias · 4 fechados (excluídos) · Gerado em 27/03/2026
   </div>
 
 </body>

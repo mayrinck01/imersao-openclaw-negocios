@@ -462,15 +462,23 @@ Além do chat, tem o wizard visual. Interface com 4 etapas que monta a skill pra
 
 **Agente proativo — ele sugere skills sozinho**
 
-Não precisa ser sempre você pedindo. O agente pode identificar tarefas repetitivas e sugerir: *"Percebi que você pediu esse relatório 3 vezes essa semana. Quer que eu crie uma skill pra isso?"*
+Não precisa ser sempre você pedindo. Vamos testar a proatividade agora com uma tarefa complexa.
 
-Isso fica configurado nas instruções do agente — no `SOUL.md`. Ele monitora o que você pede, identifica padrões e propõe empacotar em skill automaticamente.
+Bruno pede pro agente:
 
-🎬 Abrindo ao vivo a instrução:
+*"Pega os nossos dados de tickets de suporte e compara com os dados de reembolso e vendas dos últimos 7 dias. Me traz insights sobre como nossos tickets de suporte podem estar afetando nossas vendas."*
+
+*(agente cruza tickets-suporte.csv + vendas.csv → gera relatório HTML com KPIs, distribuição por categoria, impacto por produto, timeline tickets vs vendas, e 5 insights acionáveis)*
+
+📂 relatório HTML gerado *(abrir arquivo ao vivo)*
+
+Ninguém pediu pra criar uma skill. Mas no final da análise, o agente sugere sozinho:
+
+> "Percebi que esse cruzamento de suporte com vendas é algo que você provavelmente vai querer rodar toda semana. Quer que eu transforme esse processo em uma skill?"
+
+É isso. O agente não só executa. Ele identifica padrões e propõe empacotar em skill automaticamente. Isso fica configurado nas instruções dele — no `SOUL.md`.
 
 📂 `cerebro/agentes/assistente/SOUL.md` *(abrir arquivo ao vivo — seção de proatividade)*
-
-> O agente não só executa. Ele evolui o sistema junto com você.
 
 ⏸ *Aguarda "próximo"*
 
