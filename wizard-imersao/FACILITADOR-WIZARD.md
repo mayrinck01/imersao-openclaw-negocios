@@ -403,15 +403,51 @@ Vamos abrir o arquivo real e ver como ele funciona:
 
 📤 **Mensagem:**
 
-🎬 **Demo ao vivo — criando uma skill do zero**
+🎬 **Demo ao vivo — gerando um relatório**
 
-Vamos testar. Pedindo pro agente:
+Pedindo pro agente:
 
 *"Me crie um relatório em HTML para que eu veja visualmente os meus leads sem follow-up há mais de 7 dias"*
 
 *(agente analisa a planilha de leads → gera relatório HTML visual com os leads esfriando)*
 
 📂 relatório HTML gerado *(abrir arquivo ao vivo)*
+
+⏸ *Aguarda "próximo"*
+
+---
+
+📤 **Mensagem:**
+
+🎬 **Transformando em skill — Modo 1: Captura de sessão**
+
+Agora o pulo do gato. Pedindo pro agente:
+
+*"Transforma isso que a gente fez em skill"*
+
+*(agente lê o que acabou de fazer → gera SKILL.md + evals/evals.json → QA automático roda)*
+
+O agente capturou o processo inteiro e empacotou em receita reutilizável. A partir de agora, qualquer agente que acessar o Cérebro sabe gerar esse relatório.
+
+📂 `cerebro/areas/vendas/skills/leads-esfriando/SKILL.md` *(abrir arquivo gerado ao vivo)*
+
+⏸ *Aguarda "próximo"*
+
+---
+
+📤 **Mensagem:**
+
+🎬 **Testando a skill — funciona sozinha?**
+
+Pedindo pro agente:
+
+*"Me mostra os leads que estão esfriando"*
+
+*(agente encontra a skill → executa → gera o mesmo relatório visual)*
+
+Mesmo resultado. Sem precisar explicar nada de novo. A skill já sabe o que fazer.
+
+> Esse é o ciclo completo: você faz uma vez → vira skill → roda pra sempre.
 
 ⏸ *Aguarda "próximo"*
 
