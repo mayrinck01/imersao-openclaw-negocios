@@ -384,6 +384,7 @@ Prompt é temporário. Morre quando a sessão fecha. Skill é permanente — fic
 O skill-creator resolve isso: transforma qualquer processo em uma skill estruturada, com QA automático, pronta pra usar.
 
 📂 `slides/05-skill-creator.html` *(abrir arquivo ao vivo)*
+📂 `cerebro/empresa/skills/criar-skill/wizard.html` *(abrir wizard ao vivo — mostrar interface visual de criação de skills)*
 
 ⏸ *Aguarda "próximo"*
 

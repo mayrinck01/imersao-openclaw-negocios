@@ -3,309 +3,128 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Skill Creator — Crie Suas Próprias Skills</title>
+<title>Skill Creator</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
   :root {
-    --bg: #0A0E2A; --bg2: #111630; --bg3: #181e3a;
+    --bg: #0A0E2A; --bg2: #111630;
     --border: #2a3260; --accent: #FE5000; --accent2: #ff7a35;
-    --green: #22c55e; --blue: #60a5fa; --yellow: #eab308;
-    --purple: #a78bfa; --teal: #14b8a6; --red: #ef4444;
+    --green: #22c55e; --red: #ef4444;
+    --purple: #a78bfa; --teal: #14b8a6; --yellow: #eab308;
     --text: #e2e8f0; --text2: #94a3b8;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   html, body { width: 100%; height: 100%; background: var(--bg); font-family: 'Inter', system-ui, sans-serif; color: var(--text); overflow: hidden; }
-  body { display: flex; flex-direction: column; align-items: center; padding: 20px 28px 16px; }
+  body { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 40px 60px; gap: 40px; }
 
   /* ─── HEADER ─── */
-  .header { text-align: center; margin-bottom: 14px; }
-  .badge {
-    display: inline-flex; align-items: center; gap: 6px;
-    background: rgba(254,80,0,0.12); border: 1px solid rgba(254,80,0,0.35);
-    border-radius: 999px; padding: 4px 14px;
-    font-size: 11px; font-weight: 700; color: var(--accent2);
-    letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 8px;
-  }
+  .header { text-align: center; }
   h1 {
-    font-size: clamp(22px, 2.6vw, 32px); font-weight: 900;
+    font-size: clamp(32px, 4vw, 52px); font-weight: 900;
     background: linear-gradient(135deg, #fff 30%, var(--accent2) 100%);
     -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-    background-clip: text; line-height: 1.15; margin-bottom: 4px;
+    background-clip: text; line-height: 1.1; margin-bottom: 12px;
   }
-  .subtitle { color: var(--text2); font-size: 13px; font-weight: 500; }
+  .subtitle { color: var(--text2); font-size: 18px; font-weight: 500; }
 
-  /* ─── MAIN GRID ─── */
-  .main { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; width: 100%; max-width: 1120px; flex: 1; min-height: 0; }
-
-  /* ─── LEFT COLUMN ─── */
-  .left { display: flex; flex-direction: column; gap: 12px; }
-
-  /* ─── PROBLEM vs SOLUTION ─── */
-  .vs-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-  .vs-card { border-radius: 14px; padding: 14px 16px; position: relative; overflow: hidden; }
-  .vs-card::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 3px; }
-  .card-bad { background: rgba(239,68,68,0.06); border: 1px solid rgba(239,68,68,0.2); }
-  .card-bad::before { background: var(--red); }
-  .card-good { background: rgba(34,197,94,0.06); border: 1px solid rgba(34,197,94,0.2); }
-  .card-good::before { background: var(--green); }
-  .vs-tag {
-    display: inline-block; font-size: 9px; font-weight: 700; letter-spacing: 1.5px;
-    text-transform: uppercase; padding: 2px 8px; border-radius: 4px; margin-bottom: 6px;
+  /* ─── VS ROW ─── */
+  .vs {
+    display: flex; align-items: center; gap: 32px;
+    width: 100%; max-width: 800px;
   }
-  .tag-red { background: rgba(239,68,68,0.15); color: var(--red); }
-  .tag-green { background: rgba(34,197,94,0.15); color: var(--green); }
-  .vs-title { font-size: 14px; font-weight: 700; margin-bottom: 5px; }
-  .vs-list { list-style: none; font-size: 11.5px; color: var(--text2); line-height: 1.7; }
-  .vs-list li { display: flex; align-items: center; gap: 6px; }
-  .vs-list li .x { color: var(--red); font-weight: 700; font-size: 10px; }
-  .vs-list li .v { color: var(--green); font-weight: 700; font-size: 10px; }
-
-  /* ─── 3 MODES ─── */
-  .modes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; flex: 1; }
-  .mode-card {
-    background: var(--bg2); border: 1px solid var(--border); border-radius: 12px;
-    padding: 12px 14px; display: flex; flex-direction: column;
+  .vs-card {
+    flex: 1; border-radius: 16px; padding: 24px 28px;
     position: relative; overflow: hidden;
   }
-  .mode-card::after {
-    content: ""; position: absolute; top: 0; left: 0; right: 0; height: 3px; border-radius: 12px 12px 0 0;
-  }
-  .mode-1::after { background: linear-gradient(90deg, var(--purple), #c084fc); }
-  .mode-2::after { background: linear-gradient(90deg, var(--teal), #38bdf8); }
-  .mode-3::after { background: linear-gradient(90deg, var(--yellow), var(--accent2)); }
-  .mode-emoji { font-size: 20px; margin-bottom: 6px; }
-  .mode-num { font-size: 9px; font-weight: 700; letter-spacing: 1px; color: var(--text2); text-transform: uppercase; margin-bottom: 4px; }
-  .mode-name { font-size: 12px; font-weight: 700; margin-bottom: 4px; }
-  .mode-desc { font-size: 10.5px; color: var(--text2); line-height: 1.5; margin-bottom: 8px; }
-  .mode-trigger {
-    margin-top: auto;
-    background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.05);
-    border-radius: 6px; padding: 6px 8px;
-    font-size: 10px; color: var(--text2); font-style: italic; line-height: 1.4;
-  }
-  .mode-trigger strong { color: var(--text); font-style: normal; font-size: 9px; text-transform: uppercase; letter-spacing: 0.5px; }
+  .vs-card::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 3px; }
+  .card-bad { background: rgba(239,68,68,0.05); border: 1px solid rgba(239,68,68,0.2); }
+  .card-bad::before { background: var(--red); }
+  .card-good { background: rgba(34,197,94,0.05); border: 1px solid rgba(34,197,94,0.2); }
+  .card-good::before { background: var(--green); }
+  .vs-label { font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 6px; }
+  .label-red { color: var(--red); }
+  .label-green { color: var(--green); }
+  .vs-title { font-size: 20px; font-weight: 800; margin-bottom: 8px; }
+  .vs-desc { font-size: 14px; color: var(--text2); line-height: 1.6; }
+  .vs-arrow { font-size: 28px; color: var(--accent2); flex-shrink: 0; }
 
-  /* ─── RIGHT COLUMN ─── */
-  .right { display: flex; flex-direction: column; gap: 12px; }
+  /* ─── 3 MODES ─── */
+  .modes {
+    display: flex; gap: 20px; width: 100%; max-width: 800px;
+  }
+  .mode {
+    flex: 1; background: var(--bg2); border: 1px solid var(--border);
+    border-radius: 14px; padding: 20px 22px; text-align: center;
+    position: relative; overflow: hidden;
+  }
+  .mode::after {
+    content: ""; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+    border-radius: 14px 14px 0 0;
+  }
+  .m1::after { background: var(--purple); }
+  .m2::after { background: var(--teal); }
+  .m3::after { background: var(--yellow); }
+  .mode-icon { font-size: 28px; margin-bottom: 8px; }
+  .mode-name { font-size: 14px; font-weight: 700; margin-bottom: 4px; }
+  .mode-desc { font-size: 12px; color: var(--text2); line-height: 1.5; }
 
-  /* ─── PIPELINE ─── */
-  .pipeline {
-    background: var(--bg2); border: 1px solid var(--border); border-radius: 14px;
-    padding: 14px 16px; display: flex; flex-direction: column; gap: 4px;
-  }
-  .pipe-label { font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--accent2); margin-bottom: 6px; }
-  .pipe-step {
-    display: flex; align-items: center; gap: 10px;
-    padding: 5px 10px; border-radius: 8px;
-    font-size: 12px;
-  }
-  .pipe-icon {
-    width: 26px; height: 26px; border-radius: 8px;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 12px; flex-shrink: 0;
-  }
-  .pi-1 { background: rgba(167,139,250,0.15); border: 1px solid rgba(167,139,250,0.3); }
-  .pi-2 { background: rgba(96,165,250,0.15); border: 1px solid rgba(96,165,250,0.3); }
-  .pi-3 { background: rgba(234,179,8,0.15); border: 1px solid rgba(234,179,8,0.3); }
-  .pi-4 { background: rgba(34,197,94,0.15); border: 1px solid rgba(34,197,94,0.3); }
-  .pi-5 { background: rgba(20,184,166,0.15); border: 1px solid rgba(20,184,166,0.3); }
-  .pipe-text { color: var(--text2); }
-  .pipe-text strong { color: var(--text); font-weight: 600; }
-  .pipe-connector { text-align: center; color: var(--border); font-size: 10px; line-height: 1; padding: 0; margin: -2px 0; }
-
-  /* ─── QA PANEL ─── */
-  .qa-panel {
-    background: var(--bg3); border: 1px solid rgba(34,197,94,0.25); border-radius: 14px;
-    padding: 14px 16px;
-  }
-  .qa-label { font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--green); margin-bottom: 8px; }
-  .qa-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4px 12px; }
-  .qa-item { display: flex; align-items: center; gap: 6px; font-size: 11px; color: var(--text2); padding: 3px 0; }
-  .qa-check { color: var(--green); font-weight: 700; font-size: 10px; flex-shrink: 0; }
-
-  /* ─── OUTPUT FILES ─── */
-  .output-panel {
-    background: var(--bg2); border: 1px solid var(--border); border-radius: 14px;
-    padding: 14px 16px; flex: 1;
-    font-family: 'Courier New', monospace; font-size: 12px; line-height: 1.8;
-  }
-  .out-label { font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--blue); margin-bottom: 8px; font-family: 'Inter', sans-serif; }
-  .ft-dir { color: var(--accent2); font-weight: 600; }
-  .ft-file { color: var(--green); }
-  .ft-key { color: var(--blue); }
-  .ft-opt { color: var(--text2); font-style: italic; }
-
-  /* ─── WIZARD CTA ─── */
-  .wizard-cta {
-    background: linear-gradient(135deg, rgba(254,80,0,0.08), rgba(234,179,8,0.06));
-    border: 1px solid rgba(254,80,0,0.3); border-radius: 14px;
-    padding: 14px 16px; display: flex; align-items: center; gap: 14px;
-    cursor: pointer; text-decoration: none; transition: border-color 0.2s;
-  }
-  .wizard-cta:hover { border-color: var(--accent); }
-  .wizard-icon {
-    width: 44px; height: 44px; border-radius: 12px;
-    background: rgba(254,80,0,0.15); border: 1px solid rgba(254,80,0,0.3);
-    display: flex; align-items: center; justify-content: center;
-    font-size: 22px; flex-shrink: 0;
-  }
-  .wizard-text { flex: 1; }
-  .wizard-title { font-size: 13px; font-weight: 700; color: var(--text); margin-bottom: 2px; font-family: 'Inter', sans-serif; }
-  .wizard-desc { font-size: 11px; color: var(--text2); line-height: 1.4; font-family: 'Inter', sans-serif; }
-  .wizard-arrow { font-size: 20px; color: var(--accent2); flex-shrink: 0; }
-
-  /* ─── BOTTOM ─── */
-  .bottom {
-    margin-top: 12px; width: 100%; max-width: 1120px;
-    display: flex; align-items: center; justify-content: center; gap: 14px;
+  /* ─── BOTTOM FLOW ─── */
+  .flow {
+    display: flex; align-items: center; gap: 12px;
     background: rgba(254,80,0,0.06); border: 1px solid rgba(254,80,0,0.2);
-    border-radius: 10px; padding: 10px 20px;
+    border-radius: 12px; padding: 14px 28px;
   }
-  .bottom-text { font-size: 14px; font-weight: 700; color: var(--accent2); }
-  .bottom-sep { color: var(--border); }
-  .bottom-sub { font-size: 12px; color: var(--text2); }
+  .flow-step { font-size: 15px; font-weight: 600; color: var(--text); }
+  .flow-arrow { color: var(--accent2); font-size: 18px; }
 </style>
 </head>
 <body>
 
   <div class="header">
-    <div class="badge">Bloco 4 — Skill Creator</div>
-    <h1>O agente que cria outros agentes</h1>
-    <p class="subtitle">Descreva um processo → skill funcional com QA automático → pronta pra usar</p>
+    <h1>Skill Creator</h1>
+    <p class="subtitle">Transforma qualquer processo em uma skill reutilizável</p>
   </div>
 
-  <div class="main">
-    <!-- LEFT COLUMN -->
-    <div class="left">
-
-      <!-- Prompt vs Skill -->
-      <div class="vs-row">
-        <div class="vs-card card-bad">
-          <div class="vs-tag tag-red">Prompt</div>
-          <div class="vs-title">Temporário</div>
-          <ul class="vs-list">
-            <li><span class="x">✗</span> Morre quando a sessão fecha</li>
-            <li><span class="x">✗</span> Explica tudo de novo toda vez</li>
-            <li><span class="x">✗</span> Vive na cabeça de alguém</li>
-            <li><span class="x">✗</span> Impossível delegar ou agendar</li>
-          </ul>
-        </div>
-        <div class="vs-card card-good">
-          <div class="vs-tag tag-green">Skill</div>
-          <div class="vs-title">Permanente</div>
-          <ul class="vs-list">
-            <li><span class="v">✓</span> Salva no Cérebro (Git)</li>
-            <li><span class="v">✓</span> Qualquer agente acessa</li>
-            <li><span class="v">✓</span> Roda quando quiser / agendar</li>
-            <li><span class="v">✓</span> Melhora a cada uso</li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- 3 Modes -->
-      <div class="modes">
-        <div class="mode-card mode-1">
-          <div class="mode-emoji">📸</div>
-          <div class="mode-num">Modo 1</div>
-          <div class="mode-name">Captura de sessão</div>
-          <div class="mode-desc">Acabou de fazer algo com o agente? Ele lê o histórico e monta a skill sozinho.</div>
-          <div class="mode-trigger"><strong>Exemplo</strong><br>"Transforma isso que a gente fez em skill"</div>
-        </div>
-        <div class="mode-card mode-2">
-          <div class="mode-emoji">📋</div>
-          <div class="mode-num">Modo 2</div>
-          <div class="mode-name">Colar processo</div>
-          <div class="mode-desc">Tem um passo-a-passo anotado? Cola no chat — o agente identifica as etapas.</div>
-          <div class="mode-trigger"><strong>Exemplo</strong><br>"Todo mês eu acesso o painel, exporto o relatório e mando por email"</div>
-        </div>
-        <div class="mode-card mode-3">
-          <div class="mode-emoji">💡</div>
-          <div class="mode-num">Modo 3</div>
-          <div class="mode-name">Descrever ideia</div>
-          <div class="mode-desc">Ideia vaga? O agente faz as perguntas certas até montar a skill completa.</div>
-          <div class="mode-trigger"><strong>Exemplo</strong><br>"Quero algo que avise quando um lead esfria"</div>
-        </div>
-      </div>
-
+  <div class="vs">
+    <div class="vs-card card-bad">
+      <div class="vs-label label-red">Prompt</div>
+      <div class="vs-title">Temporário</div>
+      <div class="vs-desc">Morre quando a sessão fecha.<br>Explica tudo de novo toda vez.</div>
     </div>
-
-    <!-- RIGHT COLUMN -->
-    <div class="right">
-
-      <!-- Pipeline -->
-      <div class="pipeline">
-        <div class="pipe-label">O que acontece quando você pede /criar-skill</div>
-        <div class="pipe-step">
-          <div class="pipe-icon pi-1">🎯</div>
-          <div class="pipe-text"><strong>Detecta modo</strong> — captura, workflow ou entrevista</div>
-        </div>
-        <div class="pipe-connector">↓</div>
-        <div class="pipe-step">
-          <div class="pipe-icon pi-2">📝</div>
-          <div class="pipe-text"><strong>Gera SKILL.md</strong> — workflow, edge cases, exemplos</div>
-        </div>
-        <div class="pipe-connector">↓</div>
-        <div class="pipe-step">
-          <div class="pipe-icon pi-3">🔍</div>
-          <div class="pipe-text"><strong>QA automático</strong> — 10 checks antes de salvar</div>
-        </div>
-        <div class="pipe-connector">↓</div>
-        <div class="pipe-step">
-          <div class="pipe-icon pi-4">💾</div>
-          <div class="pipe-text"><strong>Deploy</strong> — salva no Cérebro + evals de teste</div>
-        </div>
-        <div class="pipe-connector">↓</div>
-        <div class="pipe-step">
-          <div class="pipe-icon pi-5">⚡</div>
-          <div class="pipe-text"><strong>Pronta</strong> — qualquer agente usa, agenda, evolui</div>
-        </div>
-      </div>
-
-      <!-- QA Checks -->
-      <div class="qa-panel">
-        <div class="qa-label">QA automático — 10 checks</div>
-        <div class="qa-grid">
-          <div class="qa-item"><span class="qa-check">✓</span> Nome em kebab-case</div>
-          <div class="qa-item"><span class="qa-check">✓</span> Triggers suficientes</div>
-          <div class="qa-item"><span class="qa-check">✓</span> Passos claros e imperativos</div>
-          <div class="qa-item"><span class="qa-check">✓</span> Exemplos reais (in/out)</div>
-          <div class="qa-item"><span class="qa-check">✓</span> Edge cases cobertos</div>
-          <div class="qa-item"><span class="qa-check">✓</span> Output format definido</div>
-          <div class="qa-item"><span class="qa-check">✓</span> Sem linguagem vaga</div>
-          <div class="qa-item"><span class="qa-check">✓</span> Sem credenciais expostas</div>
-          <div class="qa-item"><span class="qa-check">✓</span> Boundaries negativos</div>
-          <div class="qa-item"><span class="qa-check">✓</span> Evals preparados</div>
-        </div>
-      </div>
-
-      <!-- Output structure -->
-      <div class="output-panel">
-        <div class="out-label">O que é gerado</div>
-        <span class="ft-dir">skill-name/</span><br>
-        <span style="color:var(--border)">├── </span><span class="ft-key">SKILL.md</span> <span class="ft-opt">← workflow, regras, edge cases</span><br>
-        <span style="color:var(--border)">├── </span><span class="ft-dir">evals/</span><br>
-        <span style="color:var(--border)">│   └── </span><span class="ft-file">evals.json</span> <span class="ft-opt">← testes automáticos</span><br>
-        <span style="color:var(--border)">├── </span><span class="ft-dir">references/</span> <span class="ft-opt">← docs de apoio (opcional)</span><br>
-        <span style="color:var(--border)">└── </span><span class="ft-dir">scripts/</span> <span class="ft-opt">← código executável (opcional)</span>
-      </div>
-
-      <!-- Wizard CTA -->
-      <a class="wizard-cta" href="computer:///sessions/dreamy-modest-lamport/mnt/imersao-openclaw-negocios-main/cerebro/empresa/skills/criar-skill/wizard.html" target="_blank">
-        <div class="wizard-icon">🧙</div>
-        <div class="wizard-text">
-          <div class="wizard-title">Wizard Visual — Criar Skill Passo a Passo</div>
-          <div class="wizard-desc">Interface guiada com 4 etapas + biblioteca com 24 exemplos de skills prontas</div>
-        </div>
-        <div class="wizard-arrow">→</div>
-      </a>
-
+    <div class="vs-arrow">→</div>
+    <div class="vs-card card-good">
+      <div class="vs-label label-green">Skill</div>
+      <div class="vs-title">Permanente</div>
+      <div class="vs-desc">Salva no Cérebro. Qualquer agente acessa.<br>Roda quando quiser. Melhora a cada uso.</div>
     </div>
   </div>
 
-  <div class="bottom">
-    <span class="bottom-text">💡 Conhecimento sai da cabeça → vira receita → melhora a cada uso</span>
-    <span class="bottom-sep">|</span>
-    <span class="bottom-sub">Skills não saem perfeitas na 1ª vez — e tá tudo bem. Elas evoluem com o uso real.</span>
+  <div class="modes">
+    <div class="mode m1">
+      <div class="mode-icon">📸</div>
+      <div class="mode-name">Captura</div>
+      <div class="mode-desc">Acabou de fazer algo?<br>O agente transforma em skill.</div>
+    </div>
+    <div class="mode m2">
+      <div class="mode-icon">📋</div>
+      <div class="mode-name">Processo</div>
+      <div class="mode-desc">Cola seu passo-a-passo.<br>O agente estrutura pra você.</div>
+    </div>
+    <div class="mode m3">
+      <div class="mode-icon">💡</div>
+      <div class="mode-name">Ideia</div>
+      <div class="mode-desc">Descreva o que precisa.<br>O agente faz as perguntas certas.</div>
+    </div>
+  </div>
+
+  <div class="flow">
+    <span class="flow-step">Você descreve</span>
+    <span class="flow-arrow">→</span>
+    <span class="flow-step">Agente estrutura</span>
+    <span class="flow-arrow">→</span>
+    <span class="flow-step">QA automático</span>
+    <span class="flow-arrow">→</span>
+    <span class="flow-step">Skill pronta</span>
   </div>
 
 </body>
