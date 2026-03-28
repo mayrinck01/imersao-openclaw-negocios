@@ -38,6 +38,8 @@ Formato de cada passo:
 1. Mensagem de texto — pontos-chave em bullets, informal, direto
 2. Envie o slide conforme o ambiente detectado (veja abaixo)
 
+> ⚠️ **REGRA INVIOLÁVEL — ANEXOS:** Sempre que um bloco contiver referência a arquivo (`📎`, `📂`, ou qualquer menção a `.html`, `.md`, `.csv` ou outro arquivo), você DEVE enviar o link/arquivo correspondente na resposta. Nunca omita um anexo. Se o bloco menciona o arquivo, o arquivo vai junto. Sem exceção.
+
 Demos: descreva o que está sendo feito na tela em tempo real, como narração, não como instrução.
 
 ### Configuração por ambiente
@@ -643,11 +645,7 @@ Agente de marketing → *"Não tenho acesso à área de vendas. Posso ajudar com
 
 Não é que ele não sabe. É que ele não pode. E avisa. O permissionamento funciona — cada agente só acessa a área dele.
 
-```
-ls cerebro/agentes/
-```
-
-Cada pasta é um agente. Cada um com SOUL.md próprio.
+Cada pasta dentro de `cerebro/agentes/` é um agente. Cada um com SOUL.md próprio.
 
 ---
 
