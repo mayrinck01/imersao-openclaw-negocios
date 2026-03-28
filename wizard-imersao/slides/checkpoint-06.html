@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Checkpoint — Como começar</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap');
+  :root {
+    --bg:#0A0E2A; --bg2:#111630; --bg3:#181e3a;
+    --border:#2a3260; --accent:#FE5000;
+    --green:#22c55e; --red:#ef4444; --blue:#60a5fa;
+    --yellow:#eab308; --purple:#a78bfa; --teal:#14b8a6;
+    --text:#e2e8f0; --text2:#94a3b8; --text3:#64748b;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    background:var(--bg);
+    font-family:'Inter',system-ui,sans-serif;
+    color:var(--text);
+    min-height:100vh;
+    display:flex;
+    align-items:flex-start;
+    justify-content:center;
+    padding:40px 24px;
+  }
+  .container { width:100%; max-width:960px; }
+
+  h1 { font-size:clamp(24px, 3vw, 36px); font-weight:900; text-align:center; margin-bottom:6px; }
+  h1 span { color:var(--accent); }
+  .subtitle { font-size:clamp(13px, 1.5vw, 16px); color:var(--text2); text-align:center; margin-bottom:36px; }
+
+  .layout { display:grid; grid-template-columns:1fr 1fr; gap:28px; }
+
+  /* PROGRESS COLUMN */
+  .progress-col {
+    background:var(--bg2);
+    border:1.5px solid var(--border);
+    border-radius:16px;
+    padding:24px;
+  }
+  .progress-title {
+    font-size:13px; font-weight:700; text-transform:uppercase;
+    letter-spacing:1.5px; color:var(--text3); margin-bottom:16px;
+  }
+  .block-item {
+    display:flex; align-items:center; gap:12px;
+    padding:10px 14px; border-radius:10px; margin-bottom:6px;
+    transition:background 0.2s;
+  }
+  .block-item.done { background:rgba(34,197,94,0.06); }
+  .block-item.next { background:rgba(254,80,0,0.08); border:1.5px solid rgba(254,80,0,0.3); }
+  .block-item.pending { opacity:0.45; }
+
+  .block-icon {
+    width:28px; height:28px; border-radius:50%;
+    display:flex; align-items:center; justify-content:center;
+    font-size:14px; flex-shrink:0; font-weight:800;
+  }
+  .block-icon.done { background:rgba(34,197,94,0.2); color:var(--green); }
+  .block-icon.next { background:rgba(254,80,0,0.2); color:var(--accent); }
+  .block-icon.pending { background:var(--bg3); color:var(--text3); }
+
+  .block-text { flex:1; }
+  .block-name { font-size:14px; font-weight:700; }
+  .block-item.done .block-name { color:var(--green); }
+  .block-item.next .block-name { color:var(--accent); }
+  .block-item.pending .block-name { color:var(--text3); }
+  .block-desc { font-size:11px; color:var(--text3); margin-top:2px; }
+  .block-item.next .block-desc { color:var(--text2); }
+
+  /* RECAP COLUMN */
+  .recap-col {
+    background:var(--bg2);
+    border:1.5px solid var(--border);
+    border-radius:16px;
+    padding:24px;
+  }
+  .recap-title {
+    font-size:13px; font-weight:700; text-transform:uppercase;
+    letter-spacing:1.5px; color:var(--accent); margin-bottom:16px;
+  }
+  .recap-item {
+    display:flex; align-items:flex-start; gap:12px;
+    padding:10px 14px; border-radius:10px; margin-bottom:6px;
+    background:rgba(254,80,0,0.04); border:1px solid rgba(254,80,0,0.08);
+  }
+  .recap-icon {
+    width:36px; height:36px; border-radius:9px;
+    display:flex; align-items:center; justify-content:center;
+    font-size:18px; flex-shrink:0;
+    background:rgba(254,80,0,0.1); border:1px solid rgba(254,80,0,0.2);
+  }
+  .recap-text { flex:1; }
+  .recap-label { font-size:14px; font-weight:800; color:var(--text); }
+  .recap-desc { font-size:12px; color:var(--text2); margin-top:2px; line-height:1.4; }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <h1>Dia 2 — <span>Onde estamos</span></h1>
+  <div class="subtitle">Próximo: Como começar</div>
+
+  <div class="layout">
+
+    <div class="progress-col">
+      <div class="progress-title">Progresso do Dia 2</div>
+        <div class="block-item done">
+          <div class="block-icon done">✓</div>
+          <div class="block-text">
+            <div class="block-name">Abertura + Recap</div>
+            <div class="block-desc">Revisão do Dia 1</div>
+          </div>
+        </div>
+        <div class="block-item done">
+          <div class="block-icon done">✓</div>
+          <div class="block-text">
+            <div class="block-name">Multi-agente</div>
+            <div class="block-desc">Evolução, SOULs, permissões, heartbeats</div>
+          </div>
+        </div>
+        <div class="block-item done">
+          <div class="block-icon done">✓</div>
+          <div class="block-text">
+            <div class="block-name">Organização dos agentes</div>
+            <div class="block-desc">Tópicos vs grupos dedicados</div>
+          </div>
+        </div>
+        <div class="block-item done">
+          <div class="block-icon done">✓</div>
+          <div class="block-text">
+            <div class="block-name">Marketing de performance</div>
+            <div class="block-desc">Ciclo automatizado completo</div>
+          </div>
+        </div>
+        <div class="block-item done">
+          <div class="block-icon done">✓</div>
+          <div class="block-text">
+            <div class="block-name">Bot de suporte</div>
+            <div class="block-desc">Aprende sozinho com a operação</div>
+          </div>
+        </div>
+        <div class="block-item next">
+          <div class="block-icon next">▶</div>
+          <div class="block-text">
+            <div class="block-name">Como começar + Fechamento</div>
+            <div class="block-desc">Roadmap prático</div>
+          </div>
+        </div>
+
+    </div>
+
+    <div class="recap-col">
+      <div class="recap-title">Tudo que aprendemos em 2 dias</div>
+        <div class="recap-item">
+          <div class="recap-icon">🧠</div>
+          <div class="recap-text">
+            <div class="recap-label">Cérebro</div>
+            <div class="recap-desc">Repositório centralizado — fonte de verdade</div>
+          </div>
+        </div>
+        <div class="recap-item">
+          <div class="recap-icon">⚡</div>
+          <div class="recap-text">
+            <div class="recap-label">Skills + Crons</div>
+            <div class="recap-desc">Automações + agendamentos automáticos</div>
+          </div>
+        </div>
+        <div class="recap-item">
+          <div class="recap-icon">👤</div>
+          <div class="recap-text">
+            <div class="recap-label">SOUL + AGENTS + HEARTBEAT</div>
+            <div class="recap-desc">A tríade de cada agente</div>
+          </div>
+        </div>
+        <div class="recap-item">
+          <div class="recap-icon">📊</div>
+          <div class="recap-text">
+            <div class="recap-label">Gestão automática</div>
+            <div class="recap-desc">Reports + auditoria do sistema</div>
+          </div>
+        </div>
+        <div class="recap-item">
+          <div class="recap-icon">🔄</div>
+          <div class="recap-text">
+            <div class="recap-label">Marketing automatizado</div>
+            <div class="recap-desc">Ciclo completo: relatório → análise → criativo</div>
+          </div>
+        </div>
+        <div class="recap-item">
+          <div class="recap-icon">🤖</div>
+          <div class="recap-text">
+            <div class="recap-label">Bot de suporte</div>
+            <div class="recap-desc">Aprende sozinho, base cresce com cron, escala infinita</div>
+          </div>
+        </div>
+
+    </div>
+
+  </div>
+
+</div>
+</body>
+</html>
