@@ -999,17 +999,21 @@ E tem mais: novos ângulos descobertos por dados. O ângulo "Não-Técnico" surg
 
 📤 **Mensagem:**
 
-**Nível 5 — Pipeline com inteligência de capacidade**
+**Nível 5 — Recomendações de campanha: teste → escala**
 
-Esse é o nível que separa automação de sistema inteligente. O agente calcula **slots disponíveis** por campanha antes de propor novos criativos. Não adianta gerar 10 criativos se só tem espaço pra 3.
+📎 `slides/10e-marketing-recomendacoes.html`
 
-Regras de promoção claras: Teste → ASC → Foguete, com critérios objetivos — ROAS mínimo + spend mínimo. Se o criativo performou, sobe de nível. Se não, pausa.
+Agora o agente não só produz e testa — ele **recomenda o que fazer com cada criativo**.
 
-Funil monitorado dia a dia: Página → Checkout → Compra. Se cair, diagnóstico automático da causa.
+A estrutura é bem simples. A gente tem basicamente duas campanhas: uma **campanha de teste** e uma **campanha de escala**. Todo criativo novo entra na campanha de teste, com budget baixo — a ideia é validar se ele funciona antes de colocar dinheiro de verdade. Se o criativo prova que performa, o agente recomenda **promover** ele pra campanha de escala, onde o budget é maior e o objetivo é maximizar resultado.
 
-E o relatório agora vem 3 vezes ao dia — com recomendação por criativo e por campanha embutida no HTML.
+E o monitoramento não para. Dentro de cada campanha, o agente fica de olho em cada criativo e recomenda uma de três coisas: **manter** onde está, **pausar** porque parou de performar, ou simplesmente **monitorar** porque ainda não tem dados suficientes pra decidir.
 
-Resultado: **200 criativos sendo monitorados ao mesmo tempo.** O time só executa o que o sistema recomenda.
+A rotina que gera essas recomendações roda automaticamente — todo dia o agente puxa os dados do Meta, analisa e monta o relatório em HTML com os badges de recomendação:
+
+📎 `dados-demo/meta-ads-report-exemplo.html`
+
+Olha as tags: ✅ Manter, ⚠️ Monitorar, ⛔ Pausar. E no nível de campanha também. Esse relatório é enviado pro **time de tráfego**, que vai lá e executa manualmente — pausa o que precisa pausar, promove o que precisa promover. O agente decide, o humano executa.
 
 ⏸ *Aguarda "próximo"*
 
