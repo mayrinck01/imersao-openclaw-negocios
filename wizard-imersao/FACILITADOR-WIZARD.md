@@ -1246,11 +1246,6 @@ A migração foi simples — o agente é o mesmo. O que mudou foi só o canal de
 
 **Bruno, manda uma pergunta ao vivo pro bot.**
 
-> 💡 **Sugestões:**
-> - *"Como conecto o OpenClaw ao Telegram?"*
-> - *"Precisa saber programar para usar o OpenClaw?"*
-> - *"O que é uma skill?"*
-
 🎬 *Bot responde ao vivo. Plateia vê a resposta em tempo real.*
 
 Custo de tudo isso: ~R$ 1k/mês (assinatura OpenAI via OAuth). Pra 7.000 alunos ativos, 24/7. Setup: 2-3 horas.
