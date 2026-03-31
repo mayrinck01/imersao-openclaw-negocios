@@ -27,7 +27,7 @@ Neste setup, você vai montar o **cérebro da empresa** — contexto, métricas,
 
 O agente que vai operar esse cérebro, por enquanto, é o **Assistente de Diretoria**: permissão total, acesso a tudo, o braço direito operacional da empresa.
 
-> Você provavelmente vai querer um **agente pessoal** também — com sua personalidade, suas preferências, sua memória particular. Esse agente **não vai para o GitHub.** Ele fica na sua configuração local, privado. Isso fica para outro momento.
+Depois que o cérebro estiver no ar, você pode conectar o seu **agente pessoal** a ele também. O agente pessoal fica no seu próprio GitHub privado — não neste repositório — mas acessa o cérebro da empresa da mesma forma que o Assistente de Diretoria. Dois agentes, um cérebro.
 
 Por ora: cérebro da empresa no ar, Assistente de Diretoria operando.
 
@@ -406,7 +406,9 @@ git push origin main
 
 ---
 
-**Agentes adicionais:** quando o Assistente de Diretoria estiver rodando bem, você pode criar agentes com escopos específicos para outras pessoas do time — um agente de vendas, um de marketing, um agente pessoal. Cada um com suas permissões e personalidade. Isso vem depois que a base estiver sólida.
+**Agente pessoal:** quando o Assistente de Diretoria estiver funcionando, você pode criar o seu agente pessoal — com sua personalidade, suas preferências, sua memória. Ele fica no seu GitHub privado, mas se conecta a este cérebro da mesma forma que o Assistente de Diretoria. Dois agentes, um cérebro.
+
+**Agentes de time:** outros membros da empresa também podem ter agentes com escopos específicos por área. Isso vem depois que a base estiver sólida.
 
 ---
 
