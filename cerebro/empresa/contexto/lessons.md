@@ -1,31 +1,25 @@
-# Lições Aprendidas — Empresa
+# Lições Aprendidas
 
-> O que aprendemos com erros e acertos. Cada lição gera uma ação concreta.
+> 🔒 Estratégicas = permanentes | ⏳ Táticas = expiram em 30 dias
 
----
+## 🔒 Estratégicas
 
-## Março 2026
+- **Mogo é SPA pesada** — headless trava no spinner infinito; API interna funciona perfeitamente via HTTP
+- **OAuth codes expiram em ~2 min** — processar imediatamente quando recebido
+- **State do OAuth é por sessão** — nunca misturar callback de sessão diferente da que gerou o link
+- **agentTurn crons gastam tokens** — para tarefas simples, usar bash puro via crontab
+- **Michel (23 anos de Cake&Co)** é ativo estratégico raro — considerar nas decisões de produção
+- **Frottas quebrou na pandemia** — Zão já viveu o downside real; não proteger emocionalmente sobre risco, trazer dados claros
+- **Zão decide com 80% de confiança** — ajudar a chegar nos 80% rápido, não forçar análise infinita
+- **Não usar foto pra passar URLs** — texto direto é mais rápido e preciso
+- **Bullet points > parágrafos longos** sempre com o Zão
+- **Ter opinião** — ele não quer 5 opções, quer a melhor com justificativa clara
 
-### Migração de plataforma exige checklist completo
-- **Contexto:** Migração para Hotmart teve 3 dias de links quebrados
-- **Lição:** Sempre ter checklist de pré-migração com: links, emails automáticos, pixel, checkout, área de membros
-- **Ação:** Criado template de checklist para futuras migrações
+## ⏳ Táticas
 
-### Follow-up de leads esfria rápido
-- **Contexto:** 40% dos leads ficavam sem contato por 5+ dias
-- **Lição:** Se não contactar em 48h, a taxa de conversão cai 70%
-- **Ação:** Implementar cron diário de alerta de leads frios
-
-### [2026-03-26] Gap de dados no CSV de vendas
-- **Contexto:** Relatório entregue sem dados dos últimos dias por ausência no CSV
-- **Lição:** Antes de entregar qualquer relatório de vendas/leads, verificar se o CSV tem dados recentes. Se o último registro tiver mais de 2 dias, avisar a equipe sobre possível gap — evita passar imagem de queda quando é só ausência de dado
-- **Ação:** Verificação de atualidade dos dados incorporada ao fluxo de relatórios
-
-### [2026-03-27] Relatórios HTML → sempre enviar como documento .html
-- **Contexto:** Telegram não renderiza HTML inline; Cayo confirmou padrão na sessão de demonstração
-- **Lição:** Sempre enviar arquivos `.html` como documento anexo via Telegram. Screenshot como preview é opcional, não obrigatório
-- **Ação:** Padrão incorporado nas skills de relatório
+- **Compactação em 80%** é suficiente — reserveTokensFloor: 40000 (configurado 14/03/2026)
+- **Token OpenAI expira ~22/03/2026** — renovar antes dessa data
 
 ---
 
-_Atualizado: 28/03/2026_
+*Revisão mensal: deletar táticas vencidas.*

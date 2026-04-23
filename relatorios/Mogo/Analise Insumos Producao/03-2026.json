@@ -1,0 +1,3573 @@
+{
+  "periodo": {
+    "de": "01/03/2026",
+    "ate": "31/03/2026"
+  },
+  "total_registros": 396,
+  "registros": [
+    {
+      "data": "26/03/2026",
+      "hora": "15:24:41",
+      "produto_produzido": "(prod) Geleia Morango 250gr (un)",
+      "insumo": "(desc) Pote Plastico Redondo com Lacre 220ml (und)",
+      "qtde": "5,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "26/03/2026",
+      "hora": "15:24:41",
+      "produto_produzido": "(prod) Geleia Morango 250gr (un)",
+      "insumo": "(prod) Geleia Morango (kg)",
+      "qtde": "1,250",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "26/03/2026",
+      "hora": "15:23:38",
+      "produto_produzido": "(prod) Geleia Morango (kg)",
+      "insumo": "(ins) Morango Fresco (kg)",
+      "qtde": "6,000",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "26/03/2026",
+      "hora": "15:23:38",
+      "produto_produzido": "(prod) Geleia Morango (kg)",
+      "insumo": "(ins) Acucar Refinado (kg)",
+      "qtde": "3,000",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "18:48:23",
+      "produto_produzido": "(prod) Batido Nega Maluca F25 (un)",
+      "insumo": "(prod) Batido Nega Maluca (kg)",
+      "qtde": "7,200",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "18:48:22",
+      "produto_produzido": "(prod) Batido Nega Maluca F20 (un)",
+      "insumo": "(prod) Batido Nega Maluca (kg)",
+      "qtde": "6,000",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "18:48:21",
+      "produto_produzido": "(prod) Batido Nega Maluca F14 (un)",
+      "insumo": "(prod) Batido Nega Maluca (kg)",
+      "qtde": "3,900",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "18:45:59",
+      "produto_produzido": "(prod) Batido Nega Maluca (kg)",
+      "insumo": "(ins) Fermento Em Pó (kg)",
+      "qtde": "0,210",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "18:45:59",
+      "produto_produzido": "(prod) Batido Nega Maluca (kg)",
+      "insumo": "(prod) Farinha Biscoito Maisena (kg)",
+      "qtde": "3,500",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "18:45:59",
+      "produto_produzido": "(prod) Batido Nega Maluca (kg)",
+      "insumo": "(ins) Oleo De Soja (lt)",
+      "qtde": "1,400",
+      "unidade": "Lt",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "18:45:59",
+      "produto_produzido": "(prod) Batido Nega Maluca (kg)",
+      "insumo": "(beb) Agua Granel (Lt)",
+      "qtde": "2,800",
+      "unidade": "Lt",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "18:45:59",
+      "produto_produzido": "(prod) Batido Nega Maluca (kg)",
+      "insumo": "(ins) Nescau (kg)",
+      "qtde": "2,100",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "18:45:59",
+      "produto_produzido": "(prod) Batido Nega Maluca (kg)",
+      "insumo": "(ins) Ovos Jumbo Branco (und)",
+      "qtde": "56,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "18:45:59",
+      "produto_produzido": "(prod) Batido Nega Maluca (kg)",
+      "insumo": "(ins) Acucar Refinado (kg)",
+      "qtde": "2,800",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "18:45:58",
+      "produto_produzido": "(prod) Batido Preto F25 (un)",
+      "insumo": "(prod) Batido Chocolate (kg)",
+      "qtde": "70,070",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "18:45:56",
+      "produto_produzido": "(prod) Batido Preto F13 (un)",
+      "insumo": "(prod) Batido Chocolate (kg)",
+      "qtde": "11,880",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "18:45:56",
+      "produto_produzido": "(prod) Batido Branco F20 (un)",
+      "insumo": "(prod) Batido Branco (kg)",
+      "qtde": "21,500",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "18:45:55",
+      "produto_produzido": "(prod) Batido Branco F25 (un)",
+      "insumo": "(prod) Batido Branco (kg)",
+      "qtde": "102,410",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "18:45:53",
+      "produto_produzido": "(prod) Batido Branco F13 (un)",
+      "insumo": "(prod) Batido Branco (kg)",
+      "qtde": "14,400",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "18:42:24",
+      "produto_produzido": "(prod) Batido Bolo Laranja (kg)",
+      "insumo": "(ins) Fermento Em Pó (kg)",
+      "qtde": "0,040",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "18:42:24",
+      "produto_produzido": "(prod) Batido Bolo Laranja (kg)",
+      "insumo": "(prod) Laranja Espremido (lt)",
+      "qtde": "0,600",
+      "unidade": "Lt",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "18:42:24",
+      "produto_produzido": "(prod) Batido Bolo Laranja (kg)",
+      "insumo": "(ins) Farinha De Trigo (kg)",
+      "qtde": "1,200",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "18:42:24",
+      "produto_produzido": "(prod) Batido Bolo Laranja (kg)",
+      "insumo": "(ins) Ovos Jumbo Branco (und)",
+      "qtde": "16,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "18:42:24",
+      "produto_produzido": "(prod) Batido Bolo Laranja (kg)",
+      "insumo": "(ins) Acucar Refinado (kg)",
+      "qtde": "1,200",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "18:42:24",
+      "produto_produzido": "(prod) Batido Bolo Laranja (kg)",
+      "insumo": "(ins) Margarina (kg)",
+      "qtde": "0,800",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "18:40:55",
+      "produto_produzido": "(prod) Batido Branco (kg)",
+      "insumo": "(ins) Fermento Em Pó (kg)",
+      "qtde": "1,040",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "18:40:55",
+      "produto_produzido": "(prod) Batido Branco (kg)",
+      "insumo": "(ins) Margarina (kg)",
+      "qtde": "15,600",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "18:40:55",
+      "produto_produzido": "(prod) Batido Branco (kg)",
+      "insumo": "(ins) Leite Integral (lt)",
+      "qtde": "20,800",
+      "unidade": "Lt",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "18:40:55",
+      "produto_produzido": "(prod) Batido Branco (kg)",
+      "insumo": "(ins) Ovos Jumbo Branco (und)",
+      "qtde": "520,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "18:40:55",
+      "produto_produzido": "(prod) Batido Branco (kg)",
+      "insumo": "(ins) Farinha De Trigo (kg)",
+      "qtde": "35,100",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "18:40:55",
+      "produto_produzido": "(prod) Batido Branco (kg)",
+      "insumo": "(ins) Acucar Refinado (kg)",
+      "qtde": "41,600",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "18:07:48",
+      "produto_produzido": "(prod) Massa Salgada (kg)",
+      "insumo": "(ins) Sal Refinado (kg)",
+      "qtde": "0,060",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "18:07:48",
+      "produto_produzido": "(prod) Massa Salgada (kg)",
+      "insumo": "(ins) Margarina (kg)",
+      "qtde": "3,200",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "18:07:48",
+      "produto_produzido": "(prod) Massa Salgada (kg)",
+      "insumo": "(ins) Ovos Jumbo Branco (und)",
+      "qtde": "20,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "18:07:48",
+      "produto_produzido": "(prod) Massa Salgada (kg)",
+      "insumo": "(ins) Farinha De Trigo (kg)",
+      "qtde": "5,600",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "18:07:46",
+      "produto_produzido": "(prod) Batido Chocolate (kg)",
+      "insumo": "(ins) Choc. Em Po 50% (kg)",
+      "qtde": "13,000",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "18:07:46",
+      "produto_produzido": "(prod) Batido Chocolate (kg)",
+      "insumo": "(ins) Fermento Em Pó (kg)",
+      "qtde": "1,040",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "18:07:46",
+      "produto_produzido": "(prod) Batido Chocolate (kg)",
+      "insumo": "(ins) Margarina (kg)",
+      "qtde": "15,600",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "18:07:46",
+      "produto_produzido": "(prod) Batido Chocolate (kg)",
+      "insumo": "(ins) Leite Integral (lt)",
+      "qtde": "20,800",
+      "unidade": "Lt",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "18:07:46",
+      "produto_produzido": "(prod) Batido Chocolate (kg)",
+      "insumo": "(ins) Ovos Jumbo Branco (und)",
+      "qtde": "520,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "18:07:46",
+      "produto_produzido": "(prod) Batido Chocolate (kg)",
+      "insumo": "(ins) Farinha De Trigo (kg)",
+      "qtde": "35,100",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "18:07:46",
+      "produto_produzido": "(prod) Batido Chocolate (kg)",
+      "insumo": "(ins) Acucar Refinado (kg)",
+      "qtde": "41,600",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:58:23",
+      "produto_produzido": "(prod) Banoffee F20 (un)",
+      "insumo": "(prod) Semi Banoffee F20 (un)",
+      "qtde": "6,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:58:23",
+      "produto_produzido": "(prod) Banoffee F20 (un)",
+      "insumo": "(ins) Chantilly Dr Oetker (kg)",
+      "qtde": "0,900",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:58:23",
+      "produto_produzido": "(prod) Banoffee F20 (un)",
+      "insumo": "(prod) Calda Chocolate Alema (kg)",
+      "qtde": "0,030",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:58:23",
+      "produto_produzido": "(prod) Banoffee F20 (un)",
+      "insumo": "(ins) Canela Em Po (kg)",
+      "qtde": "0,010",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:58:21",
+      "produto_produzido": "(prod) Banoffee F13 (un)",
+      "insumo": "(ins) Chantilly Dr Oetker (kg)",
+      "qtde": "1,100",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:58:21",
+      "produto_produzido": "(prod) Banoffee F13 (un)",
+      "insumo": "(prod) Semi Banoffee F13 (un)",
+      "qtde": "11,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:58:21",
+      "produto_produzido": "(prod) Banoffee F13 (un)",
+      "insumo": "(prod) Calda Chocolate Alema (kg)",
+      "qtde": "0,030",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:58:21",
+      "produto_produzido": "(prod) Banoffee F13 (un)",
+      "insumo": "(ins) Canela Em Po (kg)",
+      "qtde": "0,010",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:57:24",
+      "produto_produzido": "(prod) Semi Acabada Banoffee F20 (un)",
+      "insumo": "(desc) Caixa Cake Torta 24,5 X 24,5 X 9 Micro (und)",
+      "qtde": "6,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:57:24",
+      "produto_produzido": "(prod) Semi Acabada Banoffee F20 (un)",
+      "insumo": "(desc) Disco Cake 24 Micro (und)",
+      "qtde": "6,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:57:24",
+      "produto_produzido": "(prod) Semi Acabada Banoffee F20 (un)",
+      "insumo": "(prod) Base Banoffee F20 (un)",
+      "qtde": "6,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:57:24",
+      "produto_produzido": "(prod) Semi Acabada Banoffee F20 (un)",
+      "insumo": "(ins) Doce De Leite (kg)",
+      "qtde": "3,000",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:57:22",
+      "produto_produzido": "(prod) Semi Acabada Banoffee F13 (un)",
+      "insumo": "(desc) Disco Cake 17 Micro (und)",
+      "qtde": "11,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:57:22",
+      "produto_produzido": "(prod) Semi Acabada Banoffee F13 (un)",
+      "insumo": "(desc) Caixa Cake Torta 17,5 X 17,5 X 9 Micro (und)",
+      "qtde": "11,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:57:22",
+      "produto_produzido": "(prod) Semi Acabada Banoffee F13 (un)",
+      "insumo": "(ins) Doce De Leite (kg)",
+      "qtde": "2,200",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:57:22",
+      "produto_produzido": "(prod) Semi Acabada Banoffee F13 (un)",
+      "insumo": "(prod) Base Banoffee F13 (un)",
+      "qtde": "11,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:56:19",
+      "produto_produzido": "(prod) Base Banoffee F20 (un)",
+      "insumo": "(prod) Banoffee Base (kg)",
+      "qtde": "1,920",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:56:19",
+      "produto_produzido": "(prod) Base Banoffee F13 (un)",
+      "insumo": "(prod) Banoffee Base (kg)",
+      "qtde": "1,980",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:56:11",
+      "produto_produzido": "(prod) Banoffee Base (kg)",
+      "insumo": "(ins) Manteiga Sem Sal (kg)",
+      "qtde": "1,250",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:56:11",
+      "produto_produzido": "(prod) Banoffee Base (kg)",
+      "insumo": "(ins) Ovos Jumbo Branco (und)",
+      "qtde": "10,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:56:11",
+      "produto_produzido": "(prod) Banoffee Base (kg)",
+      "insumo": "(ins) Acucar Refinado (kg)",
+      "qtde": "0,200",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:56:11",
+      "produto_produzido": "(prod) Banoffee Base (kg)",
+      "insumo": "(ins) Canela Em Po (kg)",
+      "qtde": "0,030",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:56:11",
+      "produto_produzido": "(prod) Banoffee Base (kg)",
+      "insumo": "(ins) Biscoito Maisena (kg)",
+      "qtde": "2,500",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:53:35",
+      "produto_produzido": "(prod) Alema F22 (un)",
+      "insumo": "(desc) Caixa Cake Torta 24,5 X 24,5 X 9 Micro (und)",
+      "qtde": "10,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:53:35",
+      "produto_produzido": "(prod) Alema F22 (un)",
+      "insumo": "(prod) Calda Chocolate Alema (kg)",
+      "qtde": "2,500",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:53:35",
+      "produto_produzido": "(prod) Alema F22 (un)",
+      "insumo": "(desc) Disco Cake 24 Micro (und)",
+      "qtde": "10,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:53:35",
+      "produto_produzido": "(prod) Alema F22 (un)",
+      "insumo": "(prod) Semi Alema F22 (un)",
+      "qtde": "10,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:53:35",
+      "produto_produzido": "(prod) Alema F22 (un)",
+      "insumo": "(desc) Cinta De Acetato 7Cm (m)",
+      "qtde": "9,000",
+      "unidade": "M",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:53:27",
+      "produto_produzido": "(prod) Semi Alema F22 (un)",
+      "insumo": "(ins) Biscoito Maisena (kg)",
+      "qtde": "3,300",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:53:27",
+      "produto_produzido": "(prod) Semi Alema F22 (un)",
+      "insumo": "(prod) Creme de Alema (kg)",
+      "qtde": "10,730",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:53:17",
+      "produto_produzido": "(prod) Creme de Alema (kg)",
+      "insumo": "(ins) Creme De Leite Lata Nestlé 300gr (kg)",
+      "qtde": "6,000",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:53:17",
+      "produto_produzido": "(prod) Creme de Alema (kg)",
+      "insumo": "(ins) Ovos Jumbo Branco (und)",
+      "qtde": "34,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:53:17",
+      "produto_produzido": "(prod) Creme de Alema (kg)",
+      "insumo": "(ins) Manteiga Sem Sal (kg)",
+      "qtde": "2,000",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:53:17",
+      "produto_produzido": "(prod) Creme de Alema (kg)",
+      "insumo": "(ins) Acucar Refinado (kg)",
+      "qtde": "2,500",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:53:16",
+      "produto_produzido": "(prod) Calda Chocolate Alema (kg)",
+      "insumo": "(ins) Margarina (kg)",
+      "qtde": "0,500",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:53:16",
+      "produto_produzido": "(prod) Calda Chocolate Alema (kg)",
+      "insumo": "(beb) Agua Granel (Lt)",
+      "qtde": "5,000",
+      "unidade": "Lt",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:53:16",
+      "produto_produzido": "(prod) Calda Chocolate Alema (kg)",
+      "insumo": "(ins) Nescau (kg)",
+      "qtde": "6,000",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:47:34",
+      "produto_produzido": "(prod) Base Torta Mousse Chocolate F13 (un)",
+      "insumo": "(prod) Recheio Torta Mousse Chocolate (kg)",
+      "qtde": "2,400",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:47:34",
+      "produto_produzido": "(prod) Base Torta Mousse Chocolate F25 (un)",
+      "insumo": "(prod) Recheio Torta Mousse Chocolate (kg)",
+      "qtde": "4,000",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:47:27",
+      "produto_produzido": "(prod) Base Torta Mousse Chocolate F25 (un)",
+      "insumo": "(prod) Recheio Torta Mousse Chocolate (kg)",
+      "qtde": "4,000",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:47:27",
+      "produto_produzido": "(prod) Base Torta Mousse Chocolate F13 (un)",
+      "insumo": "(prod) Recheio Torta Mousse Chocolate (kg)",
+      "qtde": "2,400",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:47:26",
+      "produto_produzido": "(prod) Base Cheescake F25 (un)",
+      "insumo": "(prod) Base Cheescake (kg)",
+      "qtde": "3,120",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:47:25",
+      "produto_produzido": "(prod) Base Banoffee F13 (un)",
+      "insumo": "(prod) Banoffee Base (kg)",
+      "qtde": "1,080",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:43:41",
+      "produto_produzido": "(prod) Recheio Cheescake (kg)",
+      "insumo": "(ins) Essencia De Baunilha (lt)",
+      "qtde": "0,060",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:43:41",
+      "produto_produzido": "(prod) Recheio Cheescake (kg)",
+      "insumo": "(ins) Cream Cheese (kg)",
+      "qtde": "7,920",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:43:41",
+      "produto_produzido": "(prod) Recheio Cheescake (kg)",
+      "insumo": "(ins) Ovos Jumbo Branco (und)",
+      "qtde": "60,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:43:41",
+      "produto_produzido": "(prod) Recheio Cheescake (kg)",
+      "insumo": "(ins) Acucar Refinado (kg)",
+      "qtde": "2,400",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:43:39",
+      "produto_produzido": "(prod) Empadao Frango F25 (un)",
+      "insumo": "(desc) Caixa Cake Torta 29,5 X 29,5 X 9 Micro (und)",
+      "qtde": "13,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:43:39",
+      "produto_produzido": "(prod) Empadao Frango F25 (un)",
+      "insumo": "(desc) Disco Cake 29 Micro (und)",
+      "qtde": "13,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:43:39",
+      "produto_produzido": "(prod) Empadao Frango F25 (un)",
+      "insumo": "(prod) Recheio de Frango (kg)",
+      "qtde": "18,200",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:43:39",
+      "produto_produzido": "(prod) Empadao Frango F25 (un)",
+      "insumo": "(prod) Massa Salgada (kg)",
+      "qtde": "14,300",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:43:39",
+      "produto_produzido": "(prod) Empadao Frango F25 (un)",
+      "insumo": "(ins) Ovos Jumbo Branco (und)",
+      "qtde": "13,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:43:38",
+      "produto_produzido": "(prod) Recheio Crocante (kg)",
+      "insumo": "(ins) Castanha de Caju (kg)",
+      "qtde": "2,000",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:43:38",
+      "produto_produzido": "(prod) Recheio Crocante (kg)",
+      "insumo": "(ins) Manteiga Sem Sal (kg)",
+      "qtde": "0,400",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:43:38",
+      "produto_produzido": "(prod) Recheio Crocante (kg)",
+      "insumo": "(ins) Acucar Refinado (kg)",
+      "qtde": "4,000",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:43:36",
+      "produto_produzido": "(prod) Recheio Torta Mousse Chocolate (kg)",
+      "insumo": "(ins) Choc. Em Po 50% (kg)",
+      "qtde": "4,400",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:43:36",
+      "produto_produzido": "(prod) Recheio Torta Mousse Chocolate (kg)",
+      "insumo": "(ins) Manteiga Sem Sal (kg)",
+      "qtde": "3,570",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:43:36",
+      "produto_produzido": "(prod) Recheio Torta Mousse Chocolate (kg)",
+      "insumo": "(ins) Ovos Jumbo Branco (und)",
+      "qtde": "144,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:43:36",
+      "produto_produzido": "(prod) Recheio Torta Mousse Chocolate (kg)",
+      "insumo": "(ins) Acucar Refinado (kg)",
+      "qtde": "3,570",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:39:42",
+      "produto_produzido": "(prod) Rocambole Laranja (un)",
+      "insumo": "(desc) Fundo Bem Rocambole (und)",
+      "qtde": "4,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:39:42",
+      "produto_produzido": "(prod) Rocambole Laranja (un)",
+      "insumo": "(desc) Caixa Cake Rocambole (und)",
+      "qtde": "4,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:39:42",
+      "produto_produzido": "(prod) Rocambole Laranja (un)",
+      "insumo": "(prod) Semi Rocambole Laranja (un)",
+      "qtde": "4,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:39:33",
+      "produto_produzido": "(prod) Cheescake F13 (un)",
+      "insumo": "(prod) Semi Cheescake F13 (un)",
+      "qtde": "12,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:39:33",
+      "produto_produzido": "(prod) Cheescake F13 (un)",
+      "insumo": "(desc) Caixa Cake Torta 17,5 X 17,5 X 9 Micro (und)",
+      "qtde": "12,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:39:33",
+      "produto_produzido": "(prod) Cheescake F13 (un)",
+      "insumo": "(desc) Disco Cake 17 Micro (und)",
+      "qtde": "12,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:39:31",
+      "produto_produzido": "(prod) Cheescake F25 (un)",
+      "insumo": "(prod) Semi Cheescake F25 (un)",
+      "qtde": "8,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:39:31",
+      "produto_produzido": "(prod) Cheescake F25 (un)",
+      "insumo": "(desc) Caixa Cake Torta 29,5 X 29,5 X 5,5 Micro (und)",
+      "qtde": "8,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:39:31",
+      "produto_produzido": "(prod) Cheescake F25 (un)",
+      "insumo": "(desc) Disco Cake 29 Micro (und)",
+      "qtde": "8,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:39:20",
+      "produto_produzido": "(prod) Batido Rocambole Laranja (kg)",
+      "insumo": "(ins) Laranja Pera Fresca (kg)",
+      "qtde": "4,000",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:39:20",
+      "produto_produzido": "(prod) Batido Rocambole Laranja (kg)",
+      "insumo": "(ins) Farinha De Trigo (kg)",
+      "qtde": "0,120",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:39:20",
+      "produto_produzido": "(prod) Batido Rocambole Laranja (kg)",
+      "insumo": "(ins) Ovos Jumbo Branco (und)",
+      "qtde": "48,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:39:20",
+      "produto_produzido": "(prod) Batido Rocambole Laranja (kg)",
+      "insumo": "(ins) Acucar Refinado (kg)",
+      "qtde": "2,000",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:39:18",
+      "produto_produzido": "(prod) Baba de Moca Grossa (kg)",
+      "insumo": "(beb) Agua Granel (Lt)",
+      "qtde": "2,000",
+      "unidade": "Lt",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:39:18",
+      "produto_produzido": "(prod) Baba de Moca Grossa (kg)",
+      "insumo": "(ins) Leite De Coco (lt)",
+      "qtde": "1,200",
+      "unidade": "Lt",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:39:18",
+      "produto_produzido": "(prod) Baba de Moca Grossa (kg)",
+      "insumo": "(ins) Ovos Jumbo Branco (und)",
+      "qtde": "180,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:39:18",
+      "produto_produzido": "(prod) Baba de Moca Grossa (kg)",
+      "insumo": "(ins) Essencia De Baunilha (lt)",
+      "qtde": "0,030",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:39:18",
+      "produto_produzido": "(prod) Baba de Moca Grossa (kg)",
+      "insumo": "(ins) Acucar Refinado (kg)",
+      "qtde": "4,000",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:39:16",
+      "produto_produzido": "(prod) Recheio Cheescake (kg)",
+      "insumo": "(ins) Ovos Jumbo Branco (und)",
+      "qtde": "55,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:39:16",
+      "produto_produzido": "(prod) Recheio Cheescake (kg)",
+      "insumo": "(ins) Essencia De Baunilha (lt)",
+      "qtde": "0,060",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:39:16",
+      "produto_produzido": "(prod) Recheio Cheescake (kg)",
+      "insumo": "(ins) Acucar Refinado (kg)",
+      "qtde": "2,200",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:39:16",
+      "produto_produzido": "(prod) Recheio Cheescake (kg)",
+      "insumo": "(ins) Cream Cheese (kg)",
+      "qtde": "7,260",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:39:16",
+      "produto_produzido": "(prod) Base Cheescake F25 (un)",
+      "insumo": "(prod) Base Cheescake (kg)",
+      "qtde": "2,500",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:39:15",
+      "produto_produzido": "(prod) Base Cheescake F13 (un)",
+      "insumo": "(prod) Base Cheescake (kg)",
+      "qtde": "1,250",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:39:06",
+      "produto_produzido": "(prod) Base Cheescake (kg)",
+      "insumo": "(ins) Canela Em Po (kg)",
+      "qtde": "0,020",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:39:06",
+      "produto_produzido": "(prod) Base Cheescake (kg)",
+      "insumo": "(ins) Manteiga Sem Sal (kg)",
+      "qtde": "0,880",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:39:06",
+      "produto_produzido": "(prod) Base Cheescake (kg)",
+      "insumo": "(ins) Acucar Mascavo (kg)",
+      "qtde": "0,550",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:39:06",
+      "produto_produzido": "(prod) Base Cheescake (kg)",
+      "insumo": "(prod) Farinha Biscoito Maisena (kg)",
+      "qtde": "1,980",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:31:57",
+      "produto_produzido": "(prod) Empadao Frango F13 (un)",
+      "insumo": "(desc) Caixa Cake Torta 17,5 X 17,5 X 9 Micro (und)",
+      "qtde": "6,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:31:57",
+      "produto_produzido": "(prod) Empadao Frango F13 (un)",
+      "insumo": "(desc) Disco Cake 17 Micro (und)",
+      "qtde": "6,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:31:57",
+      "produto_produzido": "(prod) Empadao Frango F13 (un)",
+      "insumo": "(prod) Recheio de Frango (kg)",
+      "qtde": "3,000",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:31:57",
+      "produto_produzido": "(prod) Empadao Frango F13 (un)",
+      "insumo": "(prod) Massa Salgada (kg)",
+      "qtde": "2,400",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:31:57",
+      "produto_produzido": "(prod) Empadao Frango F13 (un)",
+      "insumo": "(ins) Ovos Jumbo Branco (und)",
+      "qtde": "6,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:31:54",
+      "produto_produzido": "(prod) Baba de Moca Grossa (kg)",
+      "insumo": "(beb) Agua Granel (Lt)",
+      "qtde": "2,000",
+      "unidade": "Lt",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:31:54",
+      "produto_produzido": "(prod) Baba de Moca Grossa (kg)",
+      "insumo": "(ins) Essencia De Baunilha (lt)",
+      "qtde": "0,030",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:31:54",
+      "produto_produzido": "(prod) Baba de Moca Grossa (kg)",
+      "insumo": "(ins) Leite De Coco (lt)",
+      "qtde": "1,200",
+      "unidade": "Lt",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:31:54",
+      "produto_produzido": "(prod) Baba de Moca Grossa (kg)",
+      "insumo": "(ins) Ovos Jumbo Branco (und)",
+      "qtde": "180,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:31:54",
+      "produto_produzido": "(prod) Baba de Moca Grossa (kg)",
+      "insumo": "(ins) Acucar Refinado (kg)",
+      "qtde": "4,000",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:31:47",
+      "produto_produzido": "(prod) Quindim 60gr (un)",
+      "insumo": "(desc) Fundo 9X9 (und)",
+      "qtde": "0,070",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:31:47",
+      "produto_produzido": "(prod) Quindim 60gr (un)",
+      "insumo": "(desc) Forminha Branca Nº 1 (und)",
+      "qtde": "66,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:31:47",
+      "produto_produzido": "(prod) Quindim 60gr (un)",
+      "insumo": "(prod) Quindim (kg)",
+      "qtde": "3,960",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:31:25",
+      "produto_produzido": "(prod) Quindim (kg)",
+      "insumo": "(ins) Coco Ralado Seco (kg)",
+      "qtde": "0,400",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:31:25",
+      "produto_produzido": "(prod) Quindim (kg)",
+      "insumo": "(ins) Glucose (kg)",
+      "qtde": "0,200",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:31:25",
+      "produto_produzido": "(prod) Quindim (kg)",
+      "insumo": "(ins) Margarina (kg)",
+      "qtde": "0,120",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:31:25",
+      "produto_produzido": "(prod) Quindim (kg)",
+      "insumo": "(ins) Coco Ralado Fresco (kg)",
+      "qtde": "0,400",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:31:25",
+      "produto_produzido": "(prod) Quindim (kg)",
+      "insumo": "(ins) Leite De Coco (lt)",
+      "qtde": "0,800",
+      "unidade": "Lt",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:31:25",
+      "produto_produzido": "(prod) Quindim (kg)",
+      "insumo": "(ins) Manteiga Sem Sal (kg)",
+      "qtde": "0,060",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:31:25",
+      "produto_produzido": "(prod) Quindim (kg)",
+      "insumo": "(ins) Ovos Jumbo Branco (und)",
+      "qtde": "56,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:31:25",
+      "produto_produzido": "(prod) Quindim (kg)",
+      "insumo": "(ins) Acucar Refinado (kg)",
+      "qtde": "2,000",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:29:14",
+      "produto_produzido": "(prod) Recheio Torta Mousse Chocolate (kg)",
+      "insumo": "(ins) Choc. Em Po 50% (kg)",
+      "qtde": "4,400",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:29:14",
+      "produto_produzido": "(prod) Recheio Torta Mousse Chocolate (kg)",
+      "insumo": "(ins) Manteiga Sem Sal (kg)",
+      "qtde": "3,570",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:29:14",
+      "produto_produzido": "(prod) Recheio Torta Mousse Chocolate (kg)",
+      "insumo": "(ins) Ovos Jumbo Branco (und)",
+      "qtde": "144,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:29:14",
+      "produto_produzido": "(prod) Recheio Torta Mousse Chocolate (kg)",
+      "insumo": "(ins) Acucar Refinado (kg)",
+      "qtde": "3,570",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:29:13",
+      "produto_produzido": "(prod) Recheio Abacaxi (kg)",
+      "insumo": "(ins) Abacaxi Fresco (kg)",
+      "qtde": "18,000",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:29:13",
+      "produto_produzido": "(prod) Recheio Abacaxi (kg)",
+      "insumo": "(ins) Acucar Refinado (kg)",
+      "qtde": "3,000",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:27:26",
+      "produto_produzido": "(prod) Bolo Laranja F25 (un)",
+      "insumo": "(prod) Calda Laranja (kg)",
+      "qtde": "1,500",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:27:26",
+      "produto_produzido": "(prod) Bolo Laranja F25 (un)",
+      "insumo": "(prod) Batido Bolo Laranja (kg)",
+      "qtde": "6,000",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:27:26",
+      "produto_produzido": "(prod) Bolo Laranja F25 (un)",
+      "insumo": "(desc) Caixa Cake Torta 29,5 X 29,5 X 9 Micro (und)",
+      "qtde": "6,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:27:26",
+      "produto_produzido": "(prod) Bolo Laranja F25 (un)",
+      "insumo": "(desc) Disco Cake 29 Micro (und)",
+      "qtde": "6,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:27:22",
+      "produto_produzido": "(prod) Batido Bolo Laranja (kg)",
+      "insumo": "(prod) Laranja Espremido (lt)",
+      "qtde": "0,600",
+      "unidade": "Lt",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:27:22",
+      "produto_produzido": "(prod) Batido Bolo Laranja (kg)",
+      "insumo": "(ins) Margarina (kg)",
+      "qtde": "0,800",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:27:22",
+      "produto_produzido": "(prod) Batido Bolo Laranja (kg)",
+      "insumo": "(ins) Fermento Em Pó (kg)",
+      "qtde": "0,040",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:27:22",
+      "produto_produzido": "(prod) Batido Bolo Laranja (kg)",
+      "insumo": "(ins) Farinha De Trigo (kg)",
+      "qtde": "1,200",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:27:22",
+      "produto_produzido": "(prod) Batido Bolo Laranja (kg)",
+      "insumo": "(ins) Ovos Jumbo Branco (und)",
+      "qtde": "16,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:27:22",
+      "produto_produzido": "(prod) Batido Bolo Laranja (kg)",
+      "insumo": "(ins) Acucar Refinado (kg)",
+      "qtde": "1,200",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:27:21",
+      "produto_produzido": "(prod) Nova Cobertura de Brigadeiro (kg)",
+      "insumo": "(ins) Leite Condensado Integral (kg)",
+      "qtde": "33,000",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:27:21",
+      "produto_produzido": "(prod) Nova Cobertura de Brigadeiro (kg)",
+      "insumo": "(ins) Creme De Leite (kg)",
+      "qtde": "15,000",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:27:21",
+      "produto_produzido": "(prod) Nova Cobertura de Brigadeiro (kg)",
+      "insumo": "(ins) Choc. Em Po 50% (kg)",
+      "qtde": "4,800",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:27:20",
+      "produto_produzido": "(prod) Bolo Cenoura Ingles (un)",
+      "insumo": "(desc) Forma Bolo Ingles c/ tampa (und)",
+      "qtde": "12,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:27:20",
+      "produto_produzido": "(prod) Bolo Cenoura Ingles (un)",
+      "insumo": "(prod) Batido Bolo Cenoura (kg)",
+      "qtde": "3,000",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:27:19",
+      "produto_produzido": "(prod) Bolo Cenoura F25 (un)",
+      "insumo": "(prod) Calda Chocolate Alema (kg)",
+      "qtde": "2,750",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:27:19",
+      "produto_produzido": "(prod) Bolo Cenoura F25 (un)",
+      "insumo": "(desc) Caixa Cake Torta 29,5 X 29,5 X 9 Micro (und)",
+      "qtde": "11,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:27:19",
+      "produto_produzido": "(prod) Bolo Cenoura F25 (un)",
+      "insumo": "(desc) Disco Cake 29 Micro (und)",
+      "qtde": "11,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:27:19",
+      "produto_produzido": "(prod) Bolo Cenoura F25 (un)",
+      "insumo": "(prod) Batido Bolo Cenoura (kg)",
+      "qtde": "11,000",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:27:16",
+      "produto_produzido": "(prod) Batido Bolo Cenoura (kg)",
+      "insumo": "(ins) Fermento Em Pó (kg)",
+      "qtde": "0,120",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:27:16",
+      "produto_produzido": "(prod) Batido Bolo Cenoura (kg)",
+      "insumo": "(ins) Farinha De Trigo (kg)",
+      "qtde": "3,000",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:27:16",
+      "produto_produzido": "(prod) Batido Bolo Cenoura (kg)",
+      "insumo": "(ins) Ovos Jumbo Branco (und)",
+      "qtde": "30,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:27:16",
+      "produto_produzido": "(prod) Batido Bolo Cenoura (kg)",
+      "insumo": "(ins) Acucar Refinado (kg)",
+      "qtde": "3,600",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:27:16",
+      "produto_produzido": "(prod) Batido Bolo Cenoura (kg)",
+      "insumo": "(ins) Oleo De Soja (lt)",
+      "qtde": "1,800",
+      "unidade": "Lt",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:27:16",
+      "produto_produzido": "(prod) Batido Bolo Cenoura (kg)",
+      "insumo": "(prod) Cenoura Descascada (kg)",
+      "qtde": "2,700",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:26:26",
+      "produto_produzido": "(prod) Cheescake F13 (un)",
+      "insumo": "(prod) Semi Cheescake F13 (un)",
+      "qtde": "15,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:26:26",
+      "produto_produzido": "(prod) Cheescake F13 (un)",
+      "insumo": "(desc) Caixa Cake Torta 17,5 X 17,5 X 9 Micro (und)",
+      "qtde": "15,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:26:26",
+      "produto_produzido": "(prod) Cheescake F13 (un)",
+      "insumo": "(desc) Disco Cake 17 Micro (und)",
+      "qtde": "15,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "16:26:34",
+      "produto_produzido": "(prod) Empadao Frango F13 (un)",
+      "insumo": "(desc) Caixa Cake Torta 17,5 X 17,5 X 9 Micro (und)",
+      "qtde": "4,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "16:26:34",
+      "produto_produzido": "(prod) Empadao Frango F13 (un)",
+      "insumo": "(desc) Disco Cake 17 Micro (und)",
+      "qtde": "4,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "16:26:34",
+      "produto_produzido": "(prod) Empadao Frango F13 (un)",
+      "insumo": "(ins) Ovos Jumbo Branco (und)",
+      "qtde": "4,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "16:26:34",
+      "produto_produzido": "(prod) Empadao Frango F13 (un)",
+      "insumo": "(prod) Recheio de Frango (kg)",
+      "qtde": "2,000",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "16:26:34",
+      "produto_produzido": "(prod) Empadao Frango F13 (un)",
+      "insumo": "(prod) Massa Salgada (kg)",
+      "qtde": "1,600",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "16:26:31",
+      "produto_produzido": "(prod) Empadao Frango F25 (un)",
+      "insumo": "(desc) Caixa Cake Torta 29,5 X 29,5 X 9 Micro (und)",
+      "qtde": "9,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "16:26:31",
+      "produto_produzido": "(prod) Empadao Frango F25 (un)",
+      "insumo": "(desc) Disco Cake 29 Micro (und)",
+      "qtde": "9,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "16:26:31",
+      "produto_produzido": "(prod) Empadao Frango F25 (un)",
+      "insumo": "(ins) Ovos Jumbo Branco (und)",
+      "qtde": "9,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "16:26:31",
+      "produto_produzido": "(prod) Empadao Frango F25 (un)",
+      "insumo": "(prod) Recheio de Frango (kg)",
+      "qtde": "12,600",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "16:26:31",
+      "produto_produzido": "(prod) Empadao Frango F25 (un)",
+      "insumo": "(prod) Massa Salgada (kg)",
+      "qtde": "9,900",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "16:26:30",
+      "produto_produzido": "(prod) Base Cheescake F13 (un)",
+      "insumo": "(prod) Base Cheescake (kg)",
+      "qtde": "1,560",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "16:25:00",
+      "produto_produzido": "(prod) Recheio de Frango (kg)",
+      "insumo": "(ins) Limão Fresco (kg)",
+      "qtde": "0,450",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "16:25:00",
+      "produto_produzido": "(prod) Recheio de Frango (kg)",
+      "insumo": "(ins) Cebola Fresca (kg)",
+      "qtde": "2,300",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "16:25:00",
+      "produto_produzido": "(prod) Recheio de Frango (kg)",
+      "insumo": "(ins) Frango Sobre Coxa (kg)",
+      "qtde": "6,000",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "16:25:00",
+      "produto_produzido": "(prod) Recheio de Frango (kg)",
+      "insumo": "(ins) Oleo De Soja (lt)",
+      "qtde": "0,050",
+      "unidade": "Lt",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "16:25:00",
+      "produto_produzido": "(prod) Recheio de Frango (kg)",
+      "insumo": "(ins) Leite Integral (lt)",
+      "qtde": "1,000",
+      "unidade": "Lt",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "16:25:00",
+      "produto_produzido": "(prod) Recheio de Frango (kg)",
+      "insumo": "(ins) Polpa De Tomate (kg)",
+      "qtde": "0,500",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "16:25:00",
+      "produto_produzido": "(prod) Recheio de Frango (kg)",
+      "insumo": "(ins) Sal Refinado (kg)",
+      "qtde": "0,050",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "16:25:00",
+      "produto_produzido": "(prod) Recheio de Frango (kg)",
+      "insumo": "(ins) Farinha De Trigo (kg)",
+      "qtde": "0,300",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "16:24:59",
+      "produto_produzido": "(prod) Massa Salgada (kg)",
+      "insumo": "(ins) Sal Refinado (kg)",
+      "qtde": "0,060",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "16:24:59",
+      "produto_produzido": "(prod) Massa Salgada (kg)",
+      "insumo": "(ins) Farinha De Trigo (kg)",
+      "qtde": "5,600",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "16:24:59",
+      "produto_produzido": "(prod) Massa Salgada (kg)",
+      "insumo": "(ins) Margarina (kg)",
+      "qtde": "3,200",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "16:24:59",
+      "produto_produzido": "(prod) Massa Salgada (kg)",
+      "insumo": "(ins) Ovos Jumbo Branco (und)",
+      "qtde": "20,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "16:24:57",
+      "produto_produzido": "(prod) Base Cheescake (kg)",
+      "insumo": "(ins) Canela Em Po (kg)",
+      "qtde": "0,010",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "16:24:57",
+      "produto_produzido": "(prod) Base Cheescake (kg)",
+      "insumo": "(ins) Acucar Mascavo (kg)",
+      "qtde": "0,250",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "16:24:57",
+      "produto_produzido": "(prod) Base Cheescake (kg)",
+      "insumo": "(prod) Farinha Biscoito Maisena (kg)",
+      "qtde": "0,900",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "16:24:57",
+      "produto_produzido": "(prod) Base Cheescake (kg)",
+      "insumo": "(ins) Manteiga Sem Sal (kg)",
+      "qtde": "0,400",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "16:24:55",
+      "produto_produzido": "(prod) Baba de Moca Grossa (kg)",
+      "insumo": "(beb) Agua Granel (Lt)",
+      "qtde": "2,000",
+      "unidade": "Lt",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "16:24:55",
+      "produto_produzido": "(prod) Baba de Moca Grossa (kg)",
+      "insumo": "(ins) Essencia De Baunilha (lt)",
+      "qtde": "0,030",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "16:24:55",
+      "produto_produzido": "(prod) Baba de Moca Grossa (kg)",
+      "insumo": "(ins) Leite De Coco (lt)",
+      "qtde": "1,200",
+      "unidade": "Lt",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "16:24:55",
+      "produto_produzido": "(prod) Baba de Moca Grossa (kg)",
+      "insumo": "(ins) Ovos Jumbo Branco (und)",
+      "qtde": "180,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "16:24:55",
+      "produto_produzido": "(prod) Baba de Moca Grossa (kg)",
+      "insumo": "(ins) Acucar Refinado (kg)",
+      "qtde": "4,000",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "16:24:54",
+      "produto_produzido": "(prod) Recheio Crocante (kg)",
+      "insumo": "(ins) Manteiga Sem Sal (kg)",
+      "qtde": "0,400",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "16:24:54",
+      "produto_produzido": "(prod) Recheio Crocante (kg)",
+      "insumo": "(ins) Acucar Refinado (kg)",
+      "qtde": "4,000",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "16:24:54",
+      "produto_produzido": "(prod) Recheio Crocante (kg)",
+      "insumo": "(ins) Castanha de Caju (kg)",
+      "qtde": "2,000",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "16:17:57",
+      "produto_produzido": "(prod) Batido Nega Maluca F25 (un)",
+      "insumo": "(prod) Batido Nega Maluca (kg)",
+      "qtde": "13,200",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "16:17:57",
+      "produto_produzido": "(prod) Batido Nega Maluca F20 (un)",
+      "insumo": "(prod) Batido Nega Maluca (kg)",
+      "qtde": "6,000",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "16:15:45",
+      "produto_produzido": "(prod) Baba de Moca Grossa (kg)",
+      "insumo": "(beb) Agua Granel (Lt)",
+      "qtde": "2,000",
+      "unidade": "Lt",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "16:15:45",
+      "produto_produzido": "(prod) Baba de Moca Grossa (kg)",
+      "insumo": "(ins) Essencia De Baunilha (lt)",
+      "qtde": "0,030",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "16:15:45",
+      "produto_produzido": "(prod) Baba de Moca Grossa (kg)",
+      "insumo": "(ins) Leite De Coco (lt)",
+      "qtde": "1,200",
+      "unidade": "Lt",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "16:15:45",
+      "produto_produzido": "(prod) Baba de Moca Grossa (kg)",
+      "insumo": "(ins) Acucar Refinado (kg)",
+      "qtde": "4,000",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "16:15:45",
+      "produto_produzido": "(prod) Baba de Moca Grossa (kg)",
+      "insumo": "(ins) Ovos Jumbo Branco (und)",
+      "qtde": "180,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "16:15:44",
+      "produto_produzido": "(prod) Mousse de Limao (kg)",
+      "insumo": "(ins) Limão Fresco (kg)",
+      "qtde": "2,400",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "16:15:44",
+      "produto_produzido": "(prod) Mousse de Limao (kg)",
+      "insumo": "(ins) Leite Condensado Integral (kg)",
+      "qtde": "4,800",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "16:15:44",
+      "produto_produzido": "(prod) Mousse de Limao (kg)",
+      "insumo": "(ins) Ovos Jumbo Branco (und)",
+      "qtde": "12,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "16:14:40",
+      "produto_produzido": "(prod) Batido Nega Maluca (kg)",
+      "insumo": "(ins) Fermento Em Pó (kg)",
+      "qtde": "0,240",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "16:14:40",
+      "produto_produzido": "(prod) Batido Nega Maluca (kg)",
+      "insumo": "(prod) Farinha Biscoito Maisena (kg)",
+      "qtde": "4,000",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "16:14:40",
+      "produto_produzido": "(prod) Batido Nega Maluca (kg)",
+      "insumo": "(ins) Oleo De Soja (lt)",
+      "qtde": "1,600",
+      "unidade": "Lt",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "16:14:40",
+      "produto_produzido": "(prod) Batido Nega Maluca (kg)",
+      "insumo": "(beb) Agua Granel (Lt)",
+      "qtde": "3,200",
+      "unidade": "Lt",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "16:14:40",
+      "produto_produzido": "(prod) Batido Nega Maluca (kg)",
+      "insumo": "(ins) Nescau (kg)",
+      "qtde": "2,400",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "16:14:40",
+      "produto_produzido": "(prod) Batido Nega Maluca (kg)",
+      "insumo": "(ins) Acucar Refinado (kg)",
+      "qtde": "3,200",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "16:14:40",
+      "produto_produzido": "(prod) Batido Nega Maluca (kg)",
+      "insumo": "(ins) Ovos Jumbo Branco (und)",
+      "qtde": "64,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "16:14:38",
+      "produto_produzido": "(prod) Massa Salgada (kg)",
+      "insumo": "(ins) Ovos Jumbo Branco (und)",
+      "qtde": "10,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "16:14:38",
+      "produto_produzido": "(prod) Massa Salgada (kg)",
+      "insumo": "(ins) Sal Refinado (kg)",
+      "qtde": "0,030",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "16:14:38",
+      "produto_produzido": "(prod) Massa Salgada (kg)",
+      "insumo": "(ins) Farinha De Trigo (kg)",
+      "qtde": "2,800",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "16:14:38",
+      "produto_produzido": "(prod) Massa Salgada (kg)",
+      "insumo": "(ins) Margarina (kg)",
+      "qtde": "1,600",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "19:10:58",
+      "produto_produzido": "(prod) Bolo Toca do Coelho Pascoa 2026 (un)",
+      "insumo": "(prod) Calda Negra (kg)",
+      "qtde": "0,100",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "19:10:58",
+      "produto_produzido": "(prod) Bolo Toca do Coelho Pascoa 2026 (un)",
+      "insumo": "(prod) Batido Bolo Cenoura (kg)",
+      "qtde": "0,350",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "19:04:53",
+      "produto_produzido": "(prod) Bolo Inglês Aurora da Páscoa 2026 (un)",
+      "insumo": "(ins) sprinkles decorativos (und)",
+      "qtde": "3,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "19:04:53",
+      "produto_produzido": "(prod) Bolo Inglês Aurora da Páscoa 2026 (un)",
+      "insumo": "(prod) Nova Massa Brigadeiro Branco (kg)",
+      "qtde": "0,140",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "19:04:53",
+      "produto_produzido": "(prod) Bolo Inglês Aurora da Páscoa 2026 (un)",
+      "insumo": "(desc) Forma Bolo Ingles c/ tampa (und)",
+      "qtde": "1,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "19:04:53",
+      "produto_produzido": "(prod) Bolo Inglês Aurora da Páscoa 2026 (un)",
+      "insumo": "(prod) Batido Bolo Cenoura (kg)",
+      "qtde": "0,300",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "19:04:53",
+      "produto_produzido": "(prod) Bolo Inglês Aurora da Páscoa 2026 (un)",
+      "insumo": "(ins) Cobertura Chocolate Branco (Gota) (kg)",
+      "qtde": "0,010",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "18:59:52",
+      "produto_produzido": "(prod) Brig Tesouros da Páscoa 2026 (cx12un)",
+      "insumo": "(ins) sprinkles decorativos (und)",
+      "qtde": "6,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "18:59:52",
+      "produto_produzido": "(prod) Brig Tesouros da Páscoa 2026 (cx12un)",
+      "insumo": "(prod) Nova Massa Brigadeiro Preto (kg)",
+      "qtde": "0,090",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "18:59:52",
+      "produto_produzido": "(prod) Brig Tesouros da Páscoa 2026 (cx12un)",
+      "insumo": "(ins) Micanga Branca (kg)",
+      "qtde": "0,020",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "18:59:52",
+      "produto_produzido": "(prod) Brig Tesouros da Páscoa 2026 (cx12un)",
+      "insumo": "(ins) Micanga Coloridos (kg)",
+      "qtde": "0,020",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "18:59:52",
+      "produto_produzido": "(prod) Brig Tesouros da Páscoa 2026 (cx12un)",
+      "insumo": "(desc) Caixa Cake Tortin. C/Visor 14X10X4 (und)",
+      "qtde": "1,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "18:59:52",
+      "produto_produzido": "(prod) Brig Tesouros da Páscoa 2026 (cx12un)",
+      "insumo": "(desc) Forminha Caixeta (Petala) (und)",
+      "qtde": "12,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "18:59:52",
+      "produto_produzido": "(prod) Brig Tesouros da Páscoa 2026 (cx12un)",
+      "insumo": "(prod) Nova Massa Brigadeiro Branco (kg)",
+      "qtde": "0,090",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "18:56:23",
+      "produto_produzido": "(prod) Bolo Toca do Coelho Pascoa 2026 (un)",
+      "insumo": "(prod) Calda Negra (kg)",
+      "qtde": "0,100",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "18:56:23",
+      "produto_produzido": "(prod) Bolo Toca do Coelho Pascoa 2026 (un)",
+      "insumo": "(prod) Batido Bolo Cenoura (kg)",
+      "qtde": "0,300",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "18:53:40",
+      "produto_produzido": "(prod) Nova Massa Brigadeiro Preto (kg)",
+      "insumo": "(ins) Choc. Em Po 50% (kg)",
+      "qtde": "0,400",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "18:53:40",
+      "produto_produzido": "(prod) Nova Massa Brigadeiro Preto (kg)",
+      "insumo": "(ins) Leite Condensado Integral (kg)",
+      "qtde": "6,000",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "18:53:40",
+      "produto_produzido": "(prod) Nova Massa Brigadeiro Preto (kg)",
+      "insumo": "(ins) Creme De Leite (kg)",
+      "qtde": "2,500",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "18:53:40",
+      "produto_produzido": "(prod) Nova Massa Brigadeiro Preto (kg)",
+      "insumo": "(ins) Nescau (kg)",
+      "qtde": "0,500",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "18:52:48",
+      "produto_produzido": "(prod) Nova Massa Brigadeiro Branco (kg)",
+      "insumo": "(ins) Leite Condensado Integral (kg)",
+      "qtde": "6,000",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "18:52:48",
+      "produto_produzido": "(prod) Nova Massa Brigadeiro Branco (kg)",
+      "insumo": "(ins) Creme De Leite (kg)",
+      "qtde": "2,500",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "18:46:15",
+      "produto_produzido": "(prod) Bolo Inglês Aurora da Páscoa 2026 (un)",
+      "insumo": "(ins) sprinkles decorativos (und)",
+      "qtde": "3,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "18:46:15",
+      "produto_produzido": "(prod) Bolo Inglês Aurora da Páscoa 2026 (un)",
+      "insumo": "(prod) Nova Massa Brigadeiro Branco (kg)",
+      "qtde": "0,120",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "18:46:15",
+      "produto_produzido": "(prod) Bolo Inglês Aurora da Páscoa 2026 (un)",
+      "insumo": "(desc) Forma Bolo Ingles c/ tampa (und)",
+      "qtde": "1,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "18:46:15",
+      "produto_produzido": "(prod) Bolo Inglês Aurora da Páscoa 2026 (un)",
+      "insumo": "(prod) Batido Bolo Cenoura (kg)",
+      "qtde": "0,300",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "18:46:15",
+      "produto_produzido": "(prod) Bolo Inglês Aurora da Páscoa 2026 (un)",
+      "insumo": "(ins) Cobertura Chocolate Branco (Gota) (kg)",
+      "qtde": "0,010",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "18:45:19",
+      "produto_produzido": "(prod) Bolo Cenoura Ingles (un)",
+      "insumo": "(prod) Batido Bolo Cenoura (kg)",
+      "qtde": "1,000",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "18:45:19",
+      "produto_produzido": "(prod) Bolo Cenoura Ingles (un)",
+      "insumo": "(desc) Forma Bolo Ingles c/ tampa (und)",
+      "qtde": "4,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "18:15:23",
+      "produto_produzido": "(prod) Brig Tesouros da Páscoa 2026 (cx12un)",
+      "insumo": "(ins) sprinkles decorativos (und)",
+      "qtde": "6,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "18:15:23",
+      "produto_produzido": "(prod) Brig Tesouros da Páscoa 2026 (cx12un)",
+      "insumo": "(prod) Nova Massa Brigadeiro Preto (kg)",
+      "qtde": "0,090",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "18:15:23",
+      "produto_produzido": "(prod) Brig Tesouros da Páscoa 2026 (cx12un)",
+      "insumo": "(ins) Micanga Branca (kg)",
+      "qtde": "0,020",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "18:15:23",
+      "produto_produzido": "(prod) Brig Tesouros da Páscoa 2026 (cx12un)",
+      "insumo": "(ins) Micanga Coloridos (kg)",
+      "qtde": "0,020",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "18:15:23",
+      "produto_produzido": "(prod) Brig Tesouros da Páscoa 2026 (cx12un)",
+      "insumo": "(desc) Caixa Cake Tortin. C/Visor 14X10X4 (und)",
+      "qtde": "1,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "18:15:23",
+      "produto_produzido": "(prod) Brig Tesouros da Páscoa 2026 (cx12un)",
+      "insumo": "(desc) Forminha Caixeta (Petala) (und)",
+      "qtde": "12,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "18:15:23",
+      "produto_produzido": "(prod) Brig Tesouros da Páscoa 2026 (cx12un)",
+      "insumo": "(prod) Nova Massa Brigadeiro Branco (kg)",
+      "qtde": "0,090",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "17:49:53",
+      "produto_produzido": "(prod) Bolo Inglês Aurora da Páscoa 2026 (un)",
+      "insumo": "(desc) Forma Bolo Ingles c/ tampa (und)",
+      "qtde": "1,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "17:49:53",
+      "produto_produzido": "(prod) Bolo Inglês Aurora da Páscoa 2026 (un)",
+      "insumo": "(prod) Batido Bolo Cenoura (kg)",
+      "qtde": "0,300",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "17:49:53",
+      "produto_produzido": "(prod) Bolo Inglês Aurora da Páscoa 2026 (un)",
+      "insumo": "(ins) Cobertura Chocolate Branco (Gota) (kg)",
+      "qtde": "0,010",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "17:49:53",
+      "produto_produzido": "(prod) Bolo Inglês Aurora da Páscoa 2026 (un)",
+      "insumo": "(ins) sprinkles decorativos (und)",
+      "qtde": "2,200",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "17:49:53",
+      "produto_produzido": "(prod) Bolo Inglês Aurora da Páscoa 2026 (un)",
+      "insumo": "(prod) Nova Massa Brigadeiro Branco (kg)",
+      "qtde": "0,120",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "17:49:51",
+      "produto_produzido": "(prod) Bolo Inglês Noite de Páscoa 2026 (un)",
+      "insumo": "(prod) Nova Cobertura de Brigadeiro (kg)",
+      "qtde": "0,140",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "17:49:51",
+      "produto_produzido": "(prod) Bolo Inglês Noite de Páscoa 2026 (un)",
+      "insumo": "(desc) Forma Bolo Ingles c/ tampa (und)",
+      "qtde": "1,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "17:49:51",
+      "produto_produzido": "(prod) Bolo Inglês Noite de Páscoa 2026 (un)",
+      "insumo": "(prod) Batido Bolo Cenoura (kg)",
+      "qtde": "0,300",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "17:49:51",
+      "produto_produzido": "(prod) Bolo Inglês Noite de Páscoa 2026 (un)",
+      "insumo": "(ins) Cobertura Chocolate Branco (Gota) (kg)",
+      "qtde": "0,010",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "17:49:51",
+      "produto_produzido": "(prod) Bolo Inglês Noite de Páscoa 2026 (un)",
+      "insumo": "(ins) sprinkles decorativos (und)",
+      "qtde": "2,200",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "17:49:48",
+      "produto_produzido": "(prod) Brig Tesouros da Páscoa 2026 (cx12un)",
+      "insumo": "(ins) sprinkles decorativos (und)",
+      "qtde": "4,350",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "17:49:48",
+      "produto_produzido": "(prod) Brig Tesouros da Páscoa 2026 (cx12un)",
+      "insumo": "(prod) Nova Massa Brigadeiro Preto (kg)",
+      "qtde": "0,090",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "17:49:48",
+      "produto_produzido": "(prod) Brig Tesouros da Páscoa 2026 (cx12un)",
+      "insumo": "(ins) Micanga Branca (kg)",
+      "qtde": "0,020",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "17:49:48",
+      "produto_produzido": "(prod) Brig Tesouros da Páscoa 2026 (cx12un)",
+      "insumo": "(ins) Micanga Coloridos (kg)",
+      "qtde": "0,020",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "17:49:48",
+      "produto_produzido": "(prod) Brig Tesouros da Páscoa 2026 (cx12un)",
+      "insumo": "(desc) Caixa Cake Tortin. C/Visor 14X10X4 (und)",
+      "qtde": "1,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "17:49:48",
+      "produto_produzido": "(prod) Brig Tesouros da Páscoa 2026 (cx12un)",
+      "insumo": "(desc) Forminha Caixeta (Petala) (und)",
+      "qtde": "12,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "17:49:48",
+      "produto_produzido": "(prod) Brig Tesouros da Páscoa 2026 (cx12un)",
+      "insumo": "(prod) Nova Massa Brigadeiro Branco (kg)",
+      "qtde": "0,090",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "17:25:48",
+      "produto_produzido": "(prod) Ovo Surpresa de Morango - Pascoa 2026 (un)",
+      "insumo": "(prod) Creme de Ninho (kg)",
+      "qtde": "0,160",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "17:25:48",
+      "produto_produzido": "(prod) Ovo Surpresa de Morango - Pascoa 2026 (un)",
+      "insumo": "(prod) Suspiro de Merengue (kg)",
+      "qtde": "0,020",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "17:25:48",
+      "produto_produzido": "(prod) Ovo Surpresa de Morango - Pascoa 2026 (un)",
+      "insumo": "(ins) Casca de Ovo de Chocolate 15x200g (kg)",
+      "qtde": "0,100",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "17:25:48",
+      "produto_produzido": "(prod) Ovo Surpresa de Morango - Pascoa 2026 (un)",
+      "insumo": "(prod) Batido Branco (kg)",
+      "qtde": "0,030",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "17:25:48",
+      "produto_produzido": "(prod) Ovo Surpresa de Morango - Pascoa 2026 (un)",
+      "insumo": "(prod) Geleia Morango (kg)",
+      "qtde": "0,060",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "17:18:52",
+      "produto_produzido": "(prod) Bolo Inglês Aurora da Páscoa 2026 (un)",
+      "insumo": "(prod) Nova Massa Brigadeiro Branco (kg)",
+      "qtde": "0,120",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "17:18:52",
+      "produto_produzido": "(prod) Bolo Inglês Aurora da Páscoa 2026 (un)",
+      "insumo": "(desc) Forma Bolo Ingles c/ tampa (und)",
+      "qtde": "1,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "17:18:52",
+      "produto_produzido": "(prod) Bolo Inglês Aurora da Páscoa 2026 (un)",
+      "insumo": "(prod) Batido Bolo Cenoura (kg)",
+      "qtde": "0,300",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "17:18:52",
+      "produto_produzido": "(prod) Bolo Inglês Aurora da Páscoa 2026 (un)",
+      "insumo": "(ins) Cobertura Chocolate Branco (Gota) (kg)",
+      "qtde": "0,010",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "17:18:52",
+      "produto_produzido": "(prod) Bolo Inglês Aurora da Páscoa 2026 (un)",
+      "insumo": "(ins) sprinkles decorativos (und)",
+      "qtde": "3,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "17:18:06",
+      "produto_produzido": "(prod) Batido Bolo Cenoura (kg)",
+      "insumo": "(ins) Fermento Em Pó (kg)",
+      "qtde": "0,040",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "17:18:06",
+      "produto_produzido": "(prod) Batido Bolo Cenoura (kg)",
+      "insumo": "(ins) Farinha De Trigo (kg)",
+      "qtde": "1,000",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "17:18:06",
+      "produto_produzido": "(prod) Batido Bolo Cenoura (kg)",
+      "insumo": "(ins) Ovos Jumbo Branco (und)",
+      "qtde": "10,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "17:18:06",
+      "produto_produzido": "(prod) Batido Bolo Cenoura (kg)",
+      "insumo": "(ins) Acucar Refinado (kg)",
+      "qtde": "1,200",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "17:18:06",
+      "produto_produzido": "(prod) Batido Bolo Cenoura (kg)",
+      "insumo": "(ins) Oleo De Soja (lt)",
+      "qtde": "0,600",
+      "unidade": "Lt",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "17:18:06",
+      "produto_produzido": "(prod) Batido Bolo Cenoura (kg)",
+      "insumo": "(prod) Cenoura Descascada (kg)",
+      "qtde": "0,900",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "17:15:09",
+      "produto_produzido": "(prod) Bolo Inglês Noite de Páscoa 2026 (un)",
+      "insumo": "(prod) Nova Cobertura de Brigadeiro (kg)",
+      "qtde": "0,140",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "17:15:09",
+      "produto_produzido": "(prod) Bolo Inglês Noite de Páscoa 2026 (un)",
+      "insumo": "(desc) Forma Bolo Ingles c/ tampa (und)",
+      "qtde": "1,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "17:15:09",
+      "produto_produzido": "(prod) Bolo Inglês Noite de Páscoa 2026 (un)",
+      "insumo": "(ins) sprinkles decorativos (und)",
+      "qtde": "3,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "17:15:09",
+      "produto_produzido": "(prod) Bolo Inglês Noite de Páscoa 2026 (un)",
+      "insumo": "(prod) Batido Bolo Cenoura (kg)",
+      "qtde": "0,300",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "17:15:09",
+      "produto_produzido": "(prod) Bolo Inglês Noite de Páscoa 2026 (un)",
+      "insumo": "(ins) Cobertura Chocolate Branco (Gota) (kg)",
+      "qtde": "0,010",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "17:15:07",
+      "produto_produzido": "(prod) Brig Tesouros da Páscoa 2026 (cx12un)",
+      "insumo": "(prod) Nova Massa Brigadeiro Preto (kg)",
+      "qtde": "0,090",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "17:15:07",
+      "produto_produzido": "(prod) Brig Tesouros da Páscoa 2026 (cx12un)",
+      "insumo": "(ins) Micanga Branca (kg)",
+      "qtde": "0,020",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "17:15:07",
+      "produto_produzido": "(prod) Brig Tesouros da Páscoa 2026 (cx12un)",
+      "insumo": "(ins) Micanga Coloridos (kg)",
+      "qtde": "0,020",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "17:15:07",
+      "produto_produzido": "(prod) Brig Tesouros da Páscoa 2026 (cx12un)",
+      "insumo": "(desc) Caixa Cake Tortin. C/Visor 14X10X4 (und)",
+      "qtde": "1,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "17:15:07",
+      "produto_produzido": "(prod) Brig Tesouros da Páscoa 2026 (cx12un)",
+      "insumo": "(desc) Forminha Caixeta (Petala) (und)",
+      "qtde": "12,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "17:15:07",
+      "produto_produzido": "(prod) Brig Tesouros da Páscoa 2026 (cx12un)",
+      "insumo": "(prod) Nova Massa Brigadeiro Branco (kg)",
+      "qtde": "0,090",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "17:15:07",
+      "produto_produzido": "(prod) Brig Tesouros da Páscoa 2026 (cx12un)",
+      "insumo": "(ins) sprinkles decorativos (und)",
+      "qtde": "6,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "17:15:05",
+      "produto_produzido": "(prod) Bolo Inglês Aurora da Páscoa 2026 (un)",
+      "insumo": "(prod) Nova Massa Brigadeiro Branco (kg)",
+      "qtde": "0,120",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "17:15:05",
+      "produto_produzido": "(prod) Bolo Inglês Aurora da Páscoa 2026 (un)",
+      "insumo": "(desc) Forma Bolo Ingles c/ tampa (und)",
+      "qtde": "1,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "17:15:05",
+      "produto_produzido": "(prod) Bolo Inglês Aurora da Páscoa 2026 (un)",
+      "insumo": "(ins) sprinkles decorativos (und)",
+      "qtde": "3,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "17:15:05",
+      "produto_produzido": "(prod) Bolo Inglês Aurora da Páscoa 2026 (un)",
+      "insumo": "(prod) Batido Bolo Cenoura (kg)",
+      "qtde": "0,300",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "17:15:05",
+      "produto_produzido": "(prod) Bolo Inglês Aurora da Páscoa 2026 (un)",
+      "insumo": "(ins) Cobertura Chocolate Branco (Gota) (kg)",
+      "qtde": "0,010",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "17:15:03",
+      "produto_produzido": "(prod) Bolo Toca do Coelho Pascoa 2026 (un)",
+      "insumo": "(ins) sprinkles decorativos (und)",
+      "qtde": "2,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "17:15:03",
+      "produto_produzido": "(prod) Bolo Toca do Coelho Pascoa 2026 (un)",
+      "insumo": "(prod) Calda Negra (kg)",
+      "qtde": "0,100",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "17:15:03",
+      "produto_produzido": "(prod) Bolo Toca do Coelho Pascoa 2026 (un)",
+      "insumo": "(prod) Batido Bolo Cenoura (kg)",
+      "qtde": "0,300",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "17:15:03",
+      "produto_produzido": "(prod) Bolo Toca do Coelho Pascoa 2026 (un)",
+      "insumo": "(ins) Cobertura Chocolate Branco (Gota) (kg)",
+      "qtde": "0,010",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "17:15:02",
+      "produto_produzido": "(prod) Torta Pascoa Chocolate F25 (un)",
+      "insumo": "(prod) Semi Tentacao/Emilia F25 (un)",
+      "qtde": "1,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "17:15:02",
+      "produto_produzido": "(prod) Torta Pascoa Chocolate F25 (un)",
+      "insumo": "(ins) Cobertura Chocolate Branco (Gota) (kg)",
+      "qtde": "0,080",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "17:15:02",
+      "produto_produzido": "(prod) Torta Pascoa Chocolate F25 (un)",
+      "insumo": "(ins) Cobertura Chocolate Meia Amargo (Gota) (kg)",
+      "qtde": "0,320",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "17:15:01",
+      "produto_produzido": "(prod) Torta Pascoa Chocolate F13 (un)",
+      "insumo": "(prod) Semi Tentacao/Emilia F13 (un)",
+      "qtde": "1,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "17:15:01",
+      "produto_produzido": "(prod) Torta Pascoa Chocolate F13 (un)",
+      "insumo": "(ins) Cobertura Chocolate Branco (Gota) (kg)",
+      "qtde": "0,040",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "17:15:01",
+      "produto_produzido": "(prod) Torta Pascoa Chocolate F13 (un)",
+      "insumo": "(ins) Cobertura Chocolate Meia Amargo (Gota) (kg)",
+      "qtde": "0,180",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "16:29:45",
+      "produto_produzido": "(prod) Ovo Surpresa de Morango - Pascoa 2026 (un)",
+      "insumo": "(prod) Creme Ninho (kg)",
+      "qtde": "0,160",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "16:29:45",
+      "produto_produzido": "(prod) Ovo Surpresa de Morango - Pascoa 2026 (un)",
+      "insumo": "(prod) Suspiro de Merengue (kg)",
+      "qtde": "0,020",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "16:29:45",
+      "produto_produzido": "(prod) Ovo Surpresa de Morango - Pascoa 2026 (un)",
+      "insumo": "(prod) Batido Branco (kg)",
+      "qtde": "0,030",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "16:29:45",
+      "produto_produzido": "(prod) Ovo Surpresa de Morango - Pascoa 2026 (un)",
+      "insumo": "(prod) Geleia Morango (kg)",
+      "qtde": "0,060",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "16:29:45",
+      "produto_produzido": "(prod) Ovo Surpresa de Morango - Pascoa 2026 (un)",
+      "insumo": "(prod) Creme de Ninho (kg)",
+      "qtde": "0,160",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "16:29:45",
+      "produto_produzido": "(prod) Ovo Surpresa de Morango - Pascoa 2026 (un)",
+      "insumo": "(ins) Casca de Ovo de Chocolate 15x200g (kg)",
+      "qtde": "0,100",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "16:29:40",
+      "produto_produzido": "(prod) Ovo Crocante de Chocolate - Pascoa 2026 (un)",
+      "insumo": "(prod) Recheio Crocante (kg)",
+      "qtde": "0,040",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "16:29:40",
+      "produto_produzido": "(prod) Ovo Crocante de Chocolate - Pascoa 2026 (un)",
+      "insumo": "(prod) Nova Massa Brigadeiro Preto (kg)",
+      "qtde": "0,070",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "16:29:40",
+      "produto_produzido": "(prod) Ovo Crocante de Chocolate - Pascoa 2026 (un)",
+      "insumo": "(prod) Nova Cobertura de Brigadeiro (kg)",
+      "qtde": "0,120",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "16:29:40",
+      "produto_produzido": "(prod) Ovo Crocante de Chocolate - Pascoa 2026 (un)",
+      "insumo": "(prod) Calda Chocolate (kg)",
+      "qtde": "0,010",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "16:29:40",
+      "produto_produzido": "(prod) Ovo Crocante de Chocolate - Pascoa 2026 (un)",
+      "insumo": "(prod) Ganache Chocolate (kg)",
+      "qtde": "0,050",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "16:29:40",
+      "produto_produzido": "(prod) Ovo Crocante de Chocolate - Pascoa 2026 (un)",
+      "insumo": "(prod) Batido Chocolate (kg)",
+      "qtde": "0,030",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "16:29:40",
+      "produto_produzido": "(prod) Ovo Crocante de Chocolate - Pascoa 2026 (un)",
+      "insumo": "(ins) Casca de Ovo de Chocolate 15x200g (kg)",
+      "qtde": "0,100",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "16:29:38",
+      "produto_produzido": "(prod) Ovo Tentação de Chocolate - Pascoa 2026 (un)",
+      "insumo": "(prod) Nova Massa Brigadeiro Preto (kg)",
+      "qtde": "0,070",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "16:29:38",
+      "produto_produzido": "(prod) Ovo Tentação de Chocolate - Pascoa 2026 (un)",
+      "insumo": "(prod) Nova Cobertura de Brigadeiro (kg)",
+      "qtde": "0,030",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "16:29:38",
+      "produto_produzido": "(prod) Ovo Tentação de Chocolate - Pascoa 2026 (un)",
+      "insumo": "(prod) Calda Chocolate (kg)",
+      "qtde": "0,010",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "16:29:38",
+      "produto_produzido": "(prod) Ovo Tentação de Chocolate - Pascoa 2026 (un)",
+      "insumo": "(prod) Ganache Chocolate (kg)",
+      "qtde": "0,150",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "16:29:38",
+      "produto_produzido": "(prod) Ovo Tentação de Chocolate - Pascoa 2026 (un)",
+      "insumo": "(prod) Batido Chocolate (kg)",
+      "qtde": "0,030",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "16:29:38",
+      "produto_produzido": "(prod) Ovo Tentação de Chocolate - Pascoa 2026 (un)",
+      "insumo": "(ins) Casca de Ovo de Chocolate 15x200g (kg)",
+      "qtde": "0,100",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "16:29:35",
+      "produto_produzido": "(prod) Ovo Ninho & Nutella - Pascoa 2026 (un)",
+      "insumo": "(prod) Nova Massa Brigadeiro Branco (kg)",
+      "qtde": "0,040",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "16:29:35",
+      "produto_produzido": "(prod) Ovo Ninho & Nutella - Pascoa 2026 (un)",
+      "insumo": "(ins) Creme de Avelã Nutella (kg)",
+      "qtde": "0,070",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "16:29:35",
+      "produto_produzido": "(prod) Ovo Ninho & Nutella - Pascoa 2026 (un)",
+      "insumo": "(prod) Creme de Ninho (kg)",
+      "qtde": "0,280",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "16:29:35",
+      "produto_produzido": "(prod) Ovo Ninho & Nutella - Pascoa 2026 (un)",
+      "insumo": "(ins) Casca de Ovo de Chocolate 15x200g (kg)",
+      "qtde": "0,100",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "14:44:34",
+      "produto_produzido": "(prod) Creme de Ninho (kg)",
+      "insumo": "(ins) Creme De Leite (kg)",
+      "qtde": "0,800",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "14:44:34",
+      "produto_produzido": "(prod) Creme de Ninho (kg)",
+      "insumo": "(ins) Cobertura Chocolate Branco (Gota) (kg)",
+      "qtde": "0,400",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "14:44:34",
+      "produto_produzido": "(prod) Creme de Ninho (kg)",
+      "insumo": "(ins) Leite em Po Ninho (Kg)",
+      "qtde": "0,380",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "14:37:46",
+      "produto_produzido": "(prod) Creme Ninho (kg)",
+      "insumo": "(ins) Creme De Leite (kg)",
+      "qtde": "0,800",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "14:37:46",
+      "produto_produzido": "(prod) Creme Ninho (kg)",
+      "insumo": "(ins) Cobertura Chocolate Branco (Gota) (kg)",
+      "qtde": "0,400",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "14:37:46",
+      "produto_produzido": "(prod) Creme Ninho (kg)",
+      "insumo": "(ins) Leite em Po Ninho (Kg)",
+      "qtde": "0,380",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "14:21:56",
+      "produto_produzido": "(prod) Creme Ninho (kg)",
+      "insumo": "(ins) Creme De Leite (kg)",
+      "qtde": "0,800",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "14:21:56",
+      "produto_produzido": "(prod) Creme Ninho (kg)",
+      "insumo": "(ins) Cobertura Chocolate Branco (Gota) (kg)",
+      "qtde": "0,400",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "14:21:56",
+      "produto_produzido": "(prod) Creme Ninho (kg)",
+      "insumo": "(ins) Leite em Po Ninho (Kg)",
+      "qtde": "0,380",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "14:20:13",
+      "produto_produzido": "(prod) Ovo Surpresa de Morango - Pascoa 2026 (un)",
+      "insumo": "(prod) Suspiro de Merengue (kg)",
+      "qtde": "0,020",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "14:20:13",
+      "produto_produzido": "(prod) Ovo Surpresa de Morango - Pascoa 2026 (un)",
+      "insumo": "(ins) Casca de Ovo de Chocolate 15x200g (kg)",
+      "qtde": "0,100",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "14:20:13",
+      "produto_produzido": "(prod) Ovo Surpresa de Morango - Pascoa 2026 (un)",
+      "insumo": "(prod) Batido Branco (kg)",
+      "qtde": "0,030",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "14:20:13",
+      "produto_produzido": "(prod) Ovo Surpresa de Morango - Pascoa 2026 (un)",
+      "insumo": "(prod) Geleia Morango (kg)",
+      "qtde": "0,060",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "14:20:13",
+      "produto_produzido": "(prod) Ovo Surpresa de Morango - Pascoa 2026 (un)",
+      "insumo": "(prod) Creme Ninho (kg)",
+      "qtde": "0,160",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "12:40:50",
+      "produto_produzido": "(prod) Creme Ninho (kg)",
+      "insumo": "(ins) Creme De Leite (kg)",
+      "qtde": "2,400",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "12:40:50",
+      "produto_produzido": "(prod) Creme Ninho (kg)",
+      "insumo": "(ins) Cobertura Chocolate Branco (Gota) (kg)",
+      "qtde": "1,200",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "12:40:50",
+      "produto_produzido": "(prod) Creme Ninho (kg)",
+      "insumo": "(ins) Leite em Po Ninho (Kg)",
+      "qtde": "1,140",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "06/03/2026",
+      "hora": "15:09:02",
+      "produto_produzido": "(prod) Batido Red Velvet (kg)",
+      "insumo": "(ins) Limão Fresco (kg)",
+      "qtde": "0,100",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "06/03/2026",
+      "hora": "15:09:02",
+      "produto_produzido": "(prod) Batido Red Velvet (kg)",
+      "insumo": "(ins) Corante Hidrossoluvel Em Po Vermelho 30gr (kg)",
+      "qtde": "0,010",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "06/03/2026",
+      "hora": "15:09:02",
+      "produto_produzido": "(prod) Batido Red Velvet (kg)",
+      "insumo": "(ins) Essencia De Baunilha (lt)",
+      "qtde": "0,040",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "06/03/2026",
+      "hora": "15:09:02",
+      "produto_produzido": "(prod) Batido Red Velvet (kg)",
+      "insumo": "(ins) Leite Integral (lt)",
+      "qtde": "1,400",
+      "unidade": "Lt",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "06/03/2026",
+      "hora": "15:09:02",
+      "produto_produzido": "(prod) Batido Red Velvet (kg)",
+      "insumo": "(ins) Choc. Em Po 50% (kg)",
+      "qtde": "0,050",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "06/03/2026",
+      "hora": "15:09:02",
+      "produto_produzido": "(prod) Batido Red Velvet (kg)",
+      "insumo": "(ins) Margarina (kg)",
+      "qtde": "0,800",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "06/03/2026",
+      "hora": "15:09:02",
+      "produto_produzido": "(prod) Batido Red Velvet (kg)",
+      "insumo": "(ins) Ovos Jumbo Branco (und)",
+      "qtde": "12,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "06/03/2026",
+      "hora": "15:09:02",
+      "produto_produzido": "(prod) Batido Red Velvet (kg)",
+      "insumo": "(ins) Farinha De Trigo (kg)",
+      "qtde": "1,400",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "06/03/2026",
+      "hora": "15:09:02",
+      "produto_produzido": "(prod) Batido Red Velvet (kg)",
+      "insumo": "(ins) Acucar Refinado (kg)",
+      "qtde": "1,400",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "06/03/2026",
+      "hora": "15:09:02",
+      "produto_produzido": "(prod) Batido Red Velvet (kg)",
+      "insumo": "(ins) Fermento Em Pó (kg)",
+      "qtde": "0,040",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "06/03/2026",
+      "hora": "11:21:22",
+      "produto_produzido": "(prod) Colorida F25 (un)",
+      "insumo": "(ins) Chantilly Dr Oetker (kg)",
+      "qtde": "0,300",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "06/03/2026",
+      "hora": "11:21:22",
+      "produto_produzido": "(prod) Colorida F25 (un)",
+      "insumo": "(prod) Semi Colorida F25 (un)",
+      "qtde": "1,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "06/03/2026",
+      "hora": "11:21:22",
+      "produto_produzido": "(prod) Colorida F25 (un)",
+      "insumo": "(ins) Morango Fresco (kg)",
+      "qtde": "0,280",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "06/03/2026",
+      "hora": "11:21:22",
+      "produto_produzido": "(prod) Colorida F25 (un)",
+      "insumo": "(prod) Nova Cobertura de Brigadeiro (kg)",
+      "qtde": "0,440",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "06/03/2026",
+      "hora": "11:21:06",
+      "produto_produzido": "(prod) Semi Colorida F25 (un)",
+      "insumo": "(ins) Morango Fresco (kg)",
+      "qtde": "0,500",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "06/03/2026",
+      "hora": "11:21:06",
+      "produto_produzido": "(prod) Semi Colorida F25 (un)",
+      "insumo": "(prod) Semi Pronta Colorida F25 (un)",
+      "qtde": "1,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "06/03/2026",
+      "hora": "11:20:58",
+      "produto_produzido": "(prod) Semi Pronta Colorida F25 (un)",
+      "insumo": "(desc) Caixa Cake Torta 29,5 X 29,5 X 12 Micro (und)",
+      "qtde": "1,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "06/03/2026",
+      "hora": "11:20:58",
+      "produto_produzido": "(prod) Semi Pronta Colorida F25 (un)",
+      "insumo": "(prod) Calda Chocolate (kg)",
+      "qtde": "0,350",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "06/03/2026",
+      "hora": "11:20:58",
+      "produto_produzido": "(prod) Semi Pronta Colorida F25 (un)",
+      "insumo": "(prod) Batido Chocolate (kg)",
+      "qtde": "0,770",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "06/03/2026",
+      "hora": "11:20:58",
+      "produto_produzido": "(prod) Semi Pronta Colorida F25 (un)",
+      "insumo": "(desc) Disco Cake 29 Micro (und)",
+      "qtde": "1,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    }
+  ]
+}

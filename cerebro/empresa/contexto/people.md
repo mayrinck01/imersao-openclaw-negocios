@@ -1,50 +1,28 @@
-# OpenClaw — Equipe
+# Pessoas & Contatos
 
-> Quem trabalha aqui, seus papéis e como se comunicar.
+## Equipe Cake&Co
 
----
+| Nome | Papel | Contato | Notas |
+|------|-------|---------|-------|
+| João Mayrinck (Zão) | CEO e sócio | Telegram @jmayrinck / 968564677 | Chamo de Zão, Animal ou Animalzinho — só em privado |
+| Laura | Sócia fundadora | — | Guardiã da alma da Cake. Viúva do Tio Pedro. Mudanças de essência precisam do alinhamento dela |
+| Álvaro | Filho de Laura e Pedro | — | Quem convidou o Zão para a Cake em agosto/2023 |
+| Alex Gonzaga | Gerente de confiança | — | 20 anos de experiência com Carlos Vianna (cunhado do Zão) e Suzana (irmã do Zão). Cuida da loja, manutenção, compras e equipe |
+| Michel | Líder de produção | — | 23 anos de Cake&Co — conhecimento institucional profundo |
+| Eduarda | Marketing | — | — |
+| Samuel | Expedição | — | — |
+| Deivilene | Expedição | — | — |
 
-## Time Principal
+## Parceiros & Fornecedores
 
-| Pessoa | Cargo | Foco | Contato |
-|--------|-------|------|---------|
-| **Bruno** | Co-fundador / Apresentador | Produto, conteúdo, demos ao vivo | @bruno (Telegram) |
-| **Carlos** | Gestor de Tráfego | Meta Ads, criativos, ROAS | @carlos (Telegram) |
-| **Marina** | Conteúdo & Comunidade | Instagram, YouTube, newsletter | @marina (Telegram) |
-| **Fernanda** | Sucesso do Cliente | Atendimento, onboarding, churn | @fernanda (Telegram) |
-| **Diego** | Ops & Infra | Servidores, crons, integrações | @diego (Telegram) |
+| Nome | Empresa | Relação | Notas |
+|------|---------|---------|-------|
+| — | Mogo Gourmet | ERP | app3.mogogourmet.com.br — acesso via API interna |
 
----
+## Pessoas de Referência (Históricas)
 
-## Estrutura de Decisão
-
-| Tipo de decisão | Quem decide |
-|-----------------|-------------|
-| Produto e pricing | Bruno |
-| Budget Meta Ads | Carlos (até R$5k) / Bruno (acima) |
-| Criativos novos | Carlos + Marina |
-| Suporte ao cliente | Fernanda |
-| Infra e deploy | Diego |
-| Contratações | Bruno |
-
----
-
-## Como nos comunicar
-
-- **Canal principal:** Telegram (grupos por área)
-- **Suporte ao cliente:** @openclawsuporte (bot → Fernanda)
-- **Urgências técnicas:** @diego direto
-
----
-
-## Reuniões Recorrentes
-
-| Reunião | Frequência | Participantes |
-|---------|-----------|---------------|
-| Weekly ops | Segunda 9h | Bruno + Carlos + Diego |
-| Review de criativos | Quarta 10h | Carlos + Marina |
-| Check de atendimento | Sexta 14h | Fernanda + Bruno |
-
----
-
-*Atualizado: março 2026*
+| Nome | Contexto |
+|------|---------|
+| Pedro (Cachorrão / Tio Pedro) | Padrinho de Crisma do Zão. Marido de Laura. Trabalhou na Cake até 09/04/2025. Partiu em 10/04/2025. BigDog é sua homenagem. |
+| Eduardo Ourivio | Ex-sócio na Retaguarda Participações — depois cofundou o Grupo Trigo |
+| Mário Chady | Ex-sócio na Retaguarda Participações — depois cofundou o Grupo Trigo |

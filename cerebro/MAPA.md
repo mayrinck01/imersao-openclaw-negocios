@@ -1,78 +1,63 @@
-# Cérebro — Mapa
+# Cérebro — Mapa da Cake & Co
 
-## Estrutura
+## Estrutura viva atual
 
-```
+```text
 cerebro/
-├── MAPA.md                         ← Este arquivo
-├── README.md                       ← O que é o Cérebro e como funciona
+├── MAPA.md
+├── README.md
 │
-├── empresa/                        ← Contexto global da empresa
+├── empresa/
 │   ├── MAPA.md
-│   ├── contexto/                   ← Quem somos, equipe, métricas, decisões, lições
-│   ├── skills/                     ← Skills cross-área
-│   ├── rotinas/                    ← Rotinas automáticas
-│   └── projetos/                   ← Projetos e pendências
+│   ├── contexto/
+│   └── projetos/
 │
-├── areas/                          ← Áreas da empresa
-│   ├── vendas/                     ← Pipeline, leads, follow-up
-│   │   ├── MAPA.md
-│   │   ├── contexto/
-│   │   ├── skills/
-│   │   ├── rotinas/
-│   │   ├── projetos/
-│   │   └── bot/
-│   ├── marketing/                  ← Campanhas, criativos, tráfego pago
-│   │   ├── MAPA.md
-│   │   ├── contexto/
-│   │   ├── skills/
-│   │   ├── rotinas/
-│   │   ├── projetos/
-│   │   └── sub-areas/trafego-pago/
-│   ├── atendimento/                ← Suporte, FAQ, bot
-│   │   ├── MAPA.md
-│   │   ├── contexto/
-│   │   ├── skills/
-│   │   ├── rotinas/
-│   │   ├── projetos/
-│   │   └── bot/
-│   └── operacoes/                  ← Rotinas internas, sync, heartbeat
-│       ├── MAPA.md
-│       ├── contexto/
-│       ├── skills/
-│       ├── rotinas/
-│       └── projetos/
-│
-├── agentes/                        ← Configuração de cada agente
-│   ├── COMO-CONECTAR.md
-│   ├── assistente/
+├── areas/
+│   ├── financeiro/
 │   ├── marketing/
-│   └── bot-suporte/
+│   ├── operacoes/
+│   └── pessoas/
 │
-└── seguranca/                      ← Permissões e políticas de acesso
-    └── permissoes.md
+├── agentes/
+│   └── README.md
+│
+└── seguranca/
 ```
 
-## O que tem em cada lugar
+## O que existe hoje
 
-| Pasta | O que o agente encontra |
-|-------|------------------------|
-| `empresa/` | Contexto global — missão, produto, equipe, métricas, decisões, lições, projetos |
-| `areas/` | Cada área da empresa com a mesma estrutura: contexto, skills, rotinas, projetos |
-| `agentes/` | Configuração de cada agente — SOUL, AGENTS, TOOLS, permissões |
-| `seguranca/` | Quem pode acessar o quê, políticas de acesso |
+### `empresa/`
+Contexto institucional da Cake:
+- história
+- pessoas
+- decisões
+- lições
+- integrações
+- projetos e pendências
 
-## Padrão de navegação
+### `areas/financeiro/`
+Tudo que toca Mogo financeiro, relatórios, contas e fluxo operacional financeiro.
 
-Toda pasta (empresa, área, sub-área) segue a mesma estrutura:
+### `areas/marketing/`
+Marca, campanhas, Instagram, Meta Ads, conteúdo e rastreamento.
 
-```
-qualquer-pasta/
-├── MAPA.md         ← Onde estou, o que tem aqui
-├── contexto/       ← O que preciso saber
-├── skills/         ← O que posso fazer
-├── rotinas/        ← O que roda automaticamente
-└── projetos/       ← O que está em andamento
-```
+### `areas/operacoes/`
+Loja, fábrica, ERP Mogo, automações, rotinas e cadência operacional.
 
-O agente aprende o padrão uma vez e navega qualquer nível.
+### `areas/pessoas/`
+Equipe, estrutura, papéis, contexto humano e memória institucional das pessoas.
+
+### `agentes/`
+Reservado para configurações futuras de agentes específicos da empresa.
+
+## O que foi removido da navegação principal
+
+As estruturas demo do curso que não refletem a Cake foram retiradas da árvore principal e arquivadas em:
+- `template-archive/2026-04-22/`
+
+## Próximo estágio
+
+Quando a fase 2 começar, este mapa também vai incorporar:
+- `automacoes/scripts/`
+- `automacoes/cron/`
+- `automacoes/integrations/`

@@ -1,45 +1,50 @@
-# 🧠 Cérebro — TechFlow Solutions
+# 🧠 Cérebro — Cake & Co
 
-> Repositório central de conhecimento e configuração dos agentes IA da TechFlow Solutions.
+> Repositório central de contexto institucional, memória curada e organização operacional da Cake & Co.
 
-## O que é o Cérebro?
+## O que é este cérebro
 
-O Cérebro é o **repositório GitHub que serve como memória persistente** dos agentes de IA da empresa. Enquanto o agente "pensa" em tempo real, o cérebro guarda tudo que importa: contexto da empresa, processos, resultados de testes, base de conhecimento, rotinas.
+Este cérebro é a memória persistente da empresa.
 
-**Sem o cérebro, o agente esquece tudo ao fechar a sessão.**  
-**Com o cérebro, o agente aprende, evolui e fica cada vez mais eficiente.**
+Ele guarda:
+- história
+- pessoas-chave
+- áreas
+- decisões
+- lições
+- projetos
+- relatórios
+- documentação institucional
+- automações da operação
 
----
+## O que ele não guarda
 
-## Como Funciona
+Ele não substitui o workspace operacional do BigDog.
 
+O BigDog continua tendo sua própria casa para:
+- identidade do agente
+- memória pessoal do João
+- regras do runtime
+- segurança do agente
+- fallback, cron e handoff do assistente
+
+## Como usar
+
+```text
+BigDog workspace = operador
+Cake Brain = cérebro da empresa
 ```
-┌─────────────────────────────────────────────────────────────┐
-│                     FLUXO DO CÉREBRO                        │
-├─────────────────────────────────────────────────────────────┤
-│                                                             │
-│   GitHub Repo (cerebro/)                                    │
-│         │                                                   │
-│         ▼ clone/pull                                        │
-│   Servidor do Agente                                        │
-│         │                                                   │
-│         ▼ lê contexto, skills, rotinas                      │
-│   Agente IA em execução                                     │
-│         │                                                   │
-│         ├── lê arquivos → entende contexto                  │
-│         ├── executa skills → produz output                  │
-│         ├── escreve resultados → atualiza arquivos          │
-│         └── commit + push → sincroniza com GitHub           │
-│                                                             │
-│   GitHub Repo ← outros agentes, ferramentas, equipe        │
-│                                                             │
-└─────────────────────────────────────────────────────────────┘
-```
 
----
+Quando a pergunta for sobre:
+- marca
+- operação
+- equipe
+- crescimento
+- projetos
+- relatórios
+- marketing
+- rotinas da Cake
 
-> Para navegar a estrutura completa de pastas, veja o `MAPA.md`.
+...a resposta deve nascer daqui.
 
----
-
-*Versão: 1.0 | Empresa: TechFlow Solutions (exemplo fictício)*
+> Para a navegação da estrutura, ver `MAPA.md`.

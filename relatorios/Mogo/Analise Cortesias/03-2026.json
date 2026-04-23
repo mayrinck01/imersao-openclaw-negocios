@@ -1,0 +1,121 @@
+{
+  "periodo": {
+    "de": "01/03/2026",
+    "ate": "31/03/2026"
+  },
+  "total_registros": 10,
+  "total_valor": "R$ 1.930,50",
+  "total_custo": "R$ 275,76",
+  "registros": [
+    {
+      "data": "30/03/2026",
+      "hora": "11:42:52",
+      "funcionario": "cristiane",
+      "cliente": "MARIA CECILIA REGO MACEDO ",
+      "telefone": "21993841028",
+      "valor": "140,00",
+      "custo": "20,17",
+      "motivo": "Influencer",
+      "id": "146557"
+    },
+    {
+      "data": "30/03/2026",
+      "hora": "11:38:43",
+      "funcionario": "cristiane",
+      "cliente": "Milena Martins ",
+      "telefone": "21996068061",
+      "valor": "76,00",
+      "custo": "0,00",
+      "motivo": "Pedido 19/03: biscoito alemã aro 22 murcho, menos crocante, creme menos doce e pouco fresco.",
+      "id": "146556"
+    },
+    {
+      "data": "26/03/2026",
+      "hora": "15:45:50",
+      "funcionario": "eduarda",
+      "cliente": "Raquel Mendes Damasceno (influ)",
+      "telefone": "21994031722",
+      "valor": "211,00",
+      "custo": "43,35",
+      "motivo": "influencer vai levar pra gravar conteúdo",
+      "id": "145432"
+    },
+    {
+      "data": "24/03/2026",
+      "hora": "17:15:35",
+      "funcionario": "cristiane",
+      "cliente": "Obra do Berço",
+      "telefone": "21989093435",
+      "valor": "280,00",
+      "custo": "48,08",
+      "motivo": "Doação Dona Laura",
+      "id": "144960"
+    },
+    {
+      "data": "24/03/2026",
+      "hora": "13:12:11",
+      "funcionario": "eduarda",
+      "cliente": "Maria Lúcia Schwerdtner",
+      "telefone": "",
+      "valor": "48,50",
+      "custo": "5,53",
+      "motivo": "retratação ifood colorida congelada",
+      "id": "144817"
+    },
+    {
+      "data": "24/03/2026",
+      "hora": "10:11:53",
+      "funcionario": "cristiane",
+      "cliente": "Paróquia Nossa Senhora da Esperança",
+      "telefone": "",
+      "valor": "315,00",
+      "custo": "48,10",
+      "motivo": "Doação Dona Laura",
+      "id": "144782"
+    },
+    {
+      "data": "14/03/2026",
+      "hora": "09:36:27",
+      "funcionario": "cristiane",
+      "cliente": "Andrea Cristina Jacob Pontes ",
+      "telefone": "21997600111",
+      "valor": "91,00",
+      "custo": "0,00",
+      "motivo": "Torta chegou desmontada na casa da cliente trta de limão",
+      "id": "142283"
+    },
+    {
+      "data": "12/03/2026",
+      "hora": "16:09:12",
+      "funcionario": "cristiane",
+      "cliente": "CRISTINA VACCARI MANGHI DE CARVALHO",
+      "telefone": "21984092949",
+      "valor": "4,00",
+      "custo": "0,00",
+      "motivo": "Divergencia de preços",
+      "id": "141838"
+    },
+    {
+      "data": "09/03/2026",
+      "hora": "16:52:23",
+      "funcionario": "Juliana Fidelis Alvez",
+      "cliente": "Obra do Berço",
+      "telefone": "21989093435",
+      "valor": "450,00",
+      "custo": "62,43",
+      "motivo": "Presente de Dona Laura",
+      "id": "141119"
+    },
+    {
+      "data": "04/03/2026",
+      "hora": "14:59:50",
+      "funcionario": "cristiane",
+      "cliente": "Rafael Bela Gestante",
+      "telefone": "982416089",
+      "valor": "315,00",
+      "custo": "48,10",
+      "motivo": "Pedido feito por Michel Rocha",
+      "id": "139752"
+    }
+  ]
+}

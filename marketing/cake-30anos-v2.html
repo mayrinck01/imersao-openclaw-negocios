@@ -1,0 +1,1970 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cake & Co — Estratégia de Marca · 30 Anos · Versão Identidade Oficial</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=Inter:wght@300;400;500;600&family=Lora:ital,wght@0,400;0,600;1,400&display=swap');
+
+:root {
+  --cake-black: #161515;
+  --chocolate:  #3F0505;
+  --deliciosa:  #B72746;
+  --quindim:    #E6C068;
+  --baunilha:   #EADBB2;
+  --manteiga:   #FAF3E9;
+
+  --ink:        var(--cake-black);
+  --brown:      var(--chocolate);
+  --caramel:    #8A5A28;
+  --gold:       var(--quindim);
+  --gold-lt:    #F0D388;
+  --cream:      var(--manteiga);
+  --parchment:  var(--baunilha);
+  --warm:       var(--manteiga);
+  --text:       var(--cake-black);
+  --muted:      #6E5147;
+  --border:     #DDC9B2;
+  --red:        var(--deliciosa);
+}
+
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--cream);
+  color: var(--text);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── TIPOGRAFIA ── */
+.serif   { font-family: 'Playfair Display', serif; }
+.lora    { font-family: 'Lora', serif; }
+
+.eyebrow {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 14px;
+}
+
+h1,h2,h3 { font-family: 'Playfair Display', serif; line-height: 1.15; }
+
+/* ── LAYOUT ── */
+.wrap    { max-width: 1080px; margin: 0 auto; padding: 0 40px; }
+.wrap-sm { max-width: 780px;  margin: 0 auto; padding: 0 40px; }
+
+section { padding: 96px 0; }
+
+/* ── CAPA ── */
+.cover {
+  min-height: 100vh;
+  background: var(--ink);
+  display: flex; align-items: center; justify-content: center;
+  text-align: center;
+  padding: 80px 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+.cover-bg {
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse 60% 60% at 50% 0%,   rgba(120,64,32,.45) 0%, transparent 70%),
+    radial-gradient(ellipse 80% 50% at 50% 100%,  rgba(200,152,64,.12) 0%, transparent 70%);
+}
+
+.cover-grain {
+  position: absolute; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+  opacity: .4;
+  pointer-events: none;
+}
+
+.cover-inner { position: relative; z-index: 1; }
+
+.cover-eyebrow {
+  font-size: 10px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: var(--gold-lt);
+  font-weight: 500;
+  margin-bottom: 28px;
+  display: block;
+  opacity: .75;
+}
+
+.cover-title {
+  font-size: clamp(64px, 11vw, 130px);
+  font-weight: 900;
+  color: var(--warm);
+  line-height: .95;
+  letter-spacing: -2px;
+  margin-bottom: 6px;
+}
+
+.cover-title em { color: var(--gold); font-style: italic; }
+
+.cover-amp {
+  font-size: clamp(48px, 8vw, 100px);
+  color: var(--gold);
+  font-style: italic;
+  display: inline;
+}
+
+.cover-rule {
+  width: 48px; height: 1px;
+  background: var(--gold);
+  margin: 32px auto;
+  opacity: .6;
+}
+
+.cover-sub {
+  font-family: 'Lora', serif;
+  font-style: italic;
+  font-size: clamp(16px, 2vw, 22px);
+  color: rgba(253,250,244,.55);
+  letter-spacing: .3px;
+  max-width: 420px;
+  margin: 0 auto 56px;
+}
+
+.cover-stats {
+  display: flex; gap: 64px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.cover-stat { text-align: center; }
+
+.cover-stat-num {
+  display: block;
+  font-family: 'Playfair Display', serif;
+  font-size: 44px; font-weight: 700;
+  color: var(--gold);
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.cover-stat-lbl {
+  font-size: 10px; letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: rgba(253,250,244,.35);
+}
+
+.cover-scroll {
+  position: absolute;
+  bottom: 36px; left: 50%;
+  transform: translateX(-50%);
+  font-size: 11px; letter-spacing: 3px;
+  text-transform: uppercase;
+  color: rgba(253,250,244,.25);
+  z-index: 1;
+}
+
+/* ── SUMÁRIO ── */
+.toc-section { background: var(--parchment); padding: 72px 0; }
+
+.toc-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 3px;
+  margin-top: 48px;
+}
+
+.toc-item {
+  background: var(--warm);
+  padding: 28px 24px;
+  text-decoration: none;
+  border: 1px solid var(--border);
+  display: block;
+  transition: background .15s, border-color .15s;
+}
+
+.toc-item:hover { background: var(--ink); border-color: var(--ink); }
+.toc-item:hover .toc-n,
+.toc-item:hover .toc-t,
+.toc-item:hover .toc-d { color: var(--warm); opacity: 1; }
+.toc-item:hover .toc-t { color: var(--gold-lt); }
+
+.toc-n {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px; font-weight: 700;
+  color: var(--gold);
+  display: block; line-height: 1;
+  margin-bottom: 10px;
+}
+
+.toc-t {
+  font-size: 13px; font-weight: 600;
+  color: var(--ink);
+  display: block; margin-bottom: 4px;
+}
+
+.toc-d { font-size: 11px; color: var(--muted); }
+
+/* ── SECTION HEADERS ── */
+.sh { margin-bottom: 60px; }
+
+.sh h2 {
+  font-size: clamp(34px, 4.5vw, 58px);
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.1;
+  margin-bottom: 16px;
+}
+
+.sh h2 em { color: var(--gold); font-style: italic; }
+
+.sh p {
+  font-family: 'Lora', serif;
+  font-style: italic;
+  font-size: 17px;
+  color: var(--muted);
+  max-width: 600px;
+  line-height: 1.75;
+}
+
+.sh-light h2 { color: var(--warm); }
+.sh-light p  { color: rgba(253,250,244,.5); }
+.sh-light .eyebrow { color: var(--gold-lt); }
+
+/* ── DARK SECTIONS ── */
+.dark-section { background: var(--ink); color: var(--warm); }
+.mid-section  { background: var(--brown); color: var(--warm); }
+
+/* ── MANIFESTO ── */
+.manifesto-section { background: var(--ink); }
+
+.manifesto-pull {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(28px, 4vw, 52px);
+  font-weight: 700;
+  font-style: italic;
+  color: var(--warm);
+  line-height: 1.2;
+  text-align: center;
+  max-width: 860px;
+  margin: 0 auto 48px;
+}
+
+.manifesto-pull strong {
+  color: var(--gold);
+  font-style: normal;
+}
+
+.manifesto-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+  margin-top: 64px;
+}
+
+.manifesto-col {
+  padding: 48px;
+  background: rgba(255,255,255,.03);
+}
+
+.manifesto-col h3 {
+  font-size: 13px; font-weight: 600;
+  letter-spacing: 3px; text-transform: uppercase;
+  color: var(--gold-lt);
+  margin-bottom: 18px;
+}
+
+.manifesto-col p {
+  font-size: 15px;
+  color: rgba(253,250,244,.65);
+  line-height: 1.85;
+}
+
+.manifesto-col blockquote {
+  margin-top: 20px;
+  padding: 16px 20px;
+  border-left: 2px solid var(--gold);
+  background: rgba(200,152,64,.08);
+  font-family: 'Lora', serif;
+  font-style: italic;
+  font-size: 14px;
+  color: rgba(253,250,244,.75);
+  line-height: 1.7;
+}
+
+/* ── PILARES ── */
+.pilares-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+}
+
+.pilar {
+  padding: 52px 44px;
+}
+
+.pilar-1 { background: var(--brown); }
+.pilar-2 { background: var(--caramel); }
+.pilar-3 { background: var(--ink); }
+
+.pilar-icon { font-size: 32px; margin-bottom: 20px; display: block; }
+
+.pilar h3 {
+  font-size: 22px; font-weight: 700;
+  color: var(--gold-lt);
+  margin-bottom: 12px;
+}
+
+.pilar p {
+  font-size: 14px;
+  color: rgba(253,250,244,.65);
+  line-height: 1.85;
+}
+
+/* ── SLOGANS ── */
+.slogans-section { background: var(--parchment); }
+
+.slogan-hero {
+  background: var(--ink);
+  padding: 72px;
+  text-align: center;
+  margin-bottom: 3px;
+}
+
+.slogan-hero-tag {
+  font-size: 10px; letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--gold); font-weight: 600;
+  display: block; margin-bottom: 20px;
+}
+
+.slogan-hero-text {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(32px, 5vw, 60px);
+  font-weight: 700; font-style: italic;
+  color: var(--warm);
+  line-height: 1.15;
+  margin-bottom: 20px;
+}
+
+.slogan-hero-note {
+  font-family: 'Lora', serif;
+  font-style: italic;
+  font-size: 15px;
+  color: rgba(253,250,244,.4);
+  max-width: 560px; margin: 0 auto;
+}
+
+.slogans-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: 3px;
+}
+
+.slogan-card {
+  background: var(--warm);
+  border: 1px solid var(--border);
+  padding: 36px;
+}
+
+.slogan-tag {
+  font-size: 10px; letter-spacing: 3px;
+  text-transform: uppercase; color: var(--gold);
+  font-weight: 600; display: block;
+  margin-bottom: 12px;
+}
+
+.slogan-text {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(19px, 2.2vw, 26px);
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.25;
+  margin-bottom: 12px;
+}
+
+.slogan-note {
+  font-size: 12px; color: var(--muted);
+  line-height: 1.7;
+  border-top: 1px solid var(--border);
+  padding-top: 12px;
+}
+
+/* ── CAMPANHAS ── */
+.campaigns-section { background: var(--cream); }
+
+.campaign {
+  border: 1px solid var(--border);
+  background: var(--warm);
+  margin-bottom: 3px;
+  display: grid;
+  grid-template-columns: 6px 1fr;
+  overflow: hidden;
+}
+
+.campaign-stripe { background: var(--gold); }
+.campaign-stripe.red  { background: var(--red); }
+.campaign-stripe.dark { background: var(--ink); }
+.campaign-stripe.caramel { background: var(--caramel); }
+
+.campaign-inner { padding: 44px 52px; }
+
+.campaign-header {
+  display: flex; align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px; flex-wrap: wrap;
+  margin-bottom: 8px;
+}
+
+.campaign-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 12px; letter-spacing: 2px;
+  color: var(--gold); font-weight: 600;
+}
+
+.campaign-badges { display: flex; gap: 8px; flex-wrap: wrap; }
+
+.badge {
+  font-size: 10px; letter-spacing: 1.5px;
+  text-transform: uppercase; padding: 4px 11px;
+  border-radius: 2px; font-weight: 600;
+}
+
+.b-gold   { background: rgba(200,152,64,.12); color: var(--gold); }
+.b-ink    { background: rgba(30,15,10,.08);   color: var(--ink); }
+.b-red    { background: rgba(122,28,28,.1);   color: var(--red); }
+.b-caramel{ background: rgba(122,64,32,.1);   color: var(--caramel); }
+
+.campaign-title {
+  font-size: clamp(22px, 2.8vw, 34px);
+  font-weight: 700; color: var(--ink);
+  margin-bottom: 6px;
+}
+
+.campaign-concept {
+  font-family: 'Lora', serif;
+  font-style: italic; font-size: 15px;
+  color: var(--muted);
+  margin-bottom: 28px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid var(--border);
+  max-width: 740px;
+  line-height: 1.8;
+}
+
+.campaign-cols {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 32px;
+  margin-bottom: 28px;
+}
+
+.campaign-col h4 {
+  font-size: 10px; letter-spacing: 3px;
+  text-transform: uppercase; color: var(--gold);
+  font-weight: 600; margin-bottom: 12px;
+}
+
+.campaign-col ul { list-style: none; }
+
+.campaign-col ul li {
+  font-size: 13px; color: var(--muted);
+  padding: 6px 0;
+  border-bottom: 1px solid var(--border);
+  display: flex; gap: 8px; align-items: flex-start;
+}
+
+.campaign-col ul li::before {
+  content: '→'; color: var(--gold); flex-shrink: 0;
+  font-size: 11px; margin-top: 2px;
+}
+
+.campaign-col p { font-size: 13px; color: var(--muted); line-height: 1.75; }
+
+.campaign-hl {
+  background: var(--parchment);
+  border-left: 3px solid var(--gold);
+  padding: 18px 22px;
+}
+
+.campaign-hl-lbl {
+  font-size: 9px; letter-spacing: 3px;
+  text-transform: uppercase; color: var(--gold);
+  font-weight: 600; display: block; margin-bottom: 6px;
+}
+
+.campaign-hl-text {
+  font-family: 'Playfair Display', serif;
+  font-size: 19px; font-weight: 700;
+  font-style: italic; color: var(--ink);
+}
+
+/* ── STORYTELLING ── */
+.story-section { background: var(--ink); }
+
+.timeline {
+  position: relative; padding-left: 48px;
+  margin-top: 64px;
+}
+
+.timeline::before {
+  content: ''; position: absolute;
+  left: 16px; top: 8px; bottom: 8px;
+  width: 1px;
+  background: linear-gradient(to bottom, var(--gold), rgba(200,152,64,.1));
+}
+
+.story-event {
+  position: relative;
+  margin-bottom: 48px;
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(200,152,64,.12);
+  padding: 32px 36px;
+}
+
+.story-event::before {
+  content: ''; position: absolute;
+  left: -38px; top: 34px;
+  width: 12px; height: 12px;
+  border-radius: 50%;
+  background: var(--gold);
+  border: 3px solid var(--ink);
+}
+
+.story-date {
+  font-size: 10px; letter-spacing: 3.5px;
+  text-transform: uppercase; color: var(--gold);
+  font-weight: 600; display: block;
+  margin-bottom: 8px;
+}
+
+.story-title {
+  font-size: 22px; font-weight: 700;
+  color: var(--warm); margin-bottom: 10px;
+}
+
+.story-text {
+  font-size: 14px; color: rgba(253,250,244,.55);
+  line-height: 1.85; margin-bottom: 16px;
+}
+
+.story-idea {
+  background: rgba(200,152,64,.09);
+  border-left: 2px solid var(--gold);
+  padding: 12px 16px;
+  font-size: 12px; color: rgba(253,250,244,.6);
+  line-height: 1.7;
+}
+
+.story-idea strong {
+  display: block; font-size: 9px;
+  letter-spacing: 3px; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 4px;
+}
+
+/* ── FRASES PRONTAS ── */
+.quotes-section { background: var(--brown); }
+
+.quotes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 3px;
+  margin-top: 56px;
+}
+
+.quote-card {
+  padding: 36px;
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(200,152,64,.15);
+  position: relative;
+}
+
+.q-mark {
+  font-family: 'Playfair Display', serif;
+  font-size: 64px; color: var(--gold); opacity: .2;
+  position: absolute; top: 8px; left: 24px;
+  line-height: 1;
+}
+
+.q-text {
+  font-family: 'Lora', serif; font-style: italic;
+  font-size: 17px; color: var(--warm);
+  line-height: 1.65; padding-top: 28px;
+  margin-bottom: 16px;
+}
+
+.q-use {
+  font-size: 10px; letter-spacing: 2.5px;
+  text-transform: uppercase; color: var(--gold);
+  font-weight: 600;
+}
+
+/* ── EMBALAGENS ── */
+.pack-section { background: var(--parchment); }
+
+.pack-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin-top: 56px;
+}
+
+.pack-card {
+  background: var(--warm);
+  border: 1px solid var(--border);
+  overflow: hidden;
+}
+
+.pack-vis {
+  height: 160px;
+  display: flex; align-items: center;
+  justify-content: center; padding: 28px;
+  text-align: center; font-style: italic;
+  font-family: 'Playfair Display', serif;
+  font-size: 15px; line-height: 1.5;
+}
+
+.pv-ink    { background: var(--ink); color: var(--parchment); }
+.pv-gold   { background: linear-gradient(135deg, #A87228, var(--gold-lt)); color: var(--ink); }
+.pv-cream  { background: var(--cream); color: var(--caramel); }
+.pv-red    { background: var(--red); color: var(--parchment); }
+.pv-caramel{ background: var(--caramel); color: var(--parchment); }
+
+.pack-info { padding: 28px; }
+
+.pack-name {
+  font-size: 17px; font-weight: 700;
+  font-family: 'Playfair Display', serif;
+  color: var(--ink); margin-bottom: 8px;
+}
+
+.pack-desc {
+  font-size: 13px; color: var(--muted);
+  line-height: 1.75; margin-bottom: 14px;
+}
+
+.pack-detail {
+  font-size: 11px; color: var(--gold);
+  letter-spacing: 1px;
+  border-top: 1px solid var(--border);
+  padding-top: 12px;
+}
+
+/* ── SITE ── */
+.site-section { background: var(--cream); }
+
+.site-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px; margin-top: 56px;
+}
+
+.site-page {
+  border: 1px solid var(--border);
+  background: var(--warm); overflow: hidden;
+}
+
+.site-head {
+  background: var(--ink);
+  padding: 20px 24px;
+  display: flex; align-items: center; gap: 14px;
+}
+
+.site-head-icon { font-size: 22px; }
+
+.site-head-title {
+  font-size: 15px; font-weight: 700;
+  color: var(--warm); display: block;
+}
+
+.site-head-url {
+  font-size: 10px; color: var(--gold);
+  letter-spacing: 1px;
+}
+
+.site-body { padding: 24px; }
+
+.site-body h4 {
+  font-size: 9px; letter-spacing: 3px;
+  text-transform: uppercase; color: var(--gold);
+  font-weight: 600; margin-bottom: 12px;
+}
+
+.sf {
+  display: flex; gap: 8px; align-items: flex-start;
+  padding: 7px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 12px; color: var(--muted); line-height: 1.55;
+}
+
+.sf::before {
+  content: '◆'; color: var(--gold);
+  font-size: 7px; flex-shrink: 0; margin-top: 3px;
+}
+
+/* ── BRANDING ── */
+.brand-section { background: var(--ink); }
+
+.brand-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2px; margin-top: 56px;
+}
+
+.brand-card {
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(200,152,64,.15);
+  padding: 40px;
+}
+
+.brand-card h3 {
+  font-size: 18px; font-weight: 700;
+  color: var(--gold-lt); margin-bottom: 20px;
+}
+
+.swatches {
+  display: flex; gap: 10px; flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.sw-item { text-align: center; }
+
+.sw {
+  width: 44px; height: 44px;
+  border-radius: 50%; margin-bottom: 5px;
+  border: 1px solid rgba(255,255,255,.08);
+}
+
+.sw-lbl { font-size: 9px; color: rgba(253,250,244,.35); }
+
+.tone-row {
+  display: flex; align-items: center; gap: 10px;
+  padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,.06);
+  font-size: 12px;
+}
+
+.dot-on  { width: 7px; height: 7px; border-radius: 50%; background: var(--gold); flex-shrink: 0; }
+.dot-off { width: 7px; height: 7px; border-radius: 50%; background: rgba(255,255,255,.15); flex-shrink: 0; }
+
+.tone-yes { color: rgba(253,250,244,.7); }
+.tone-no  { color: rgba(253,250,244,.2); text-decoration: line-through; }
+
+.font-block { margin-bottom: 18px; }
+.font-lbl   { font-size: 9px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 4px; }
+
+/* ── CALENDÁRIO ── */
+.cal-section { background: var(--parchment); }
+
+.cal-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 3px; margin-top: 56px;
+}
+
+.cal-card {
+  background: var(--warm);
+  border: 1px solid var(--border);
+  padding: 24px 20px;
+  text-align: center;
+}
+
+.cal-card.featured {
+  background: var(--ink);
+  border-color: var(--gold);
+}
+
+.cal-month {
+  font-family: 'Playfair Display', serif;
+  font-size: 17px; font-weight: 700;
+  color: var(--ink); margin-bottom: 6px;
+}
+
+.cal-card.featured .cal-month { color: var(--gold); }
+
+.cal-event {
+  font-size: 9px; letter-spacing: 2px;
+  text-transform: uppercase; color: var(--gold);
+  font-weight: 600; margin-bottom: 10px;
+}
+
+.cal-action {
+  font-size: 11px; color: var(--muted); line-height: 1.6;
+}
+
+.cal-card.featured .cal-action { color: rgba(253,250,244,.45); }
+
+/* ── PRIORIDADES ── */
+.priority-section { background: var(--cream); }
+
+.priority-list {
+  counter-reset: pri; list-style: none;
+  margin-top: 56px;
+}
+
+.priority-item {
+  counter-increment: pri;
+  display: grid;
+  grid-template-columns: 52px 1fr;
+  gap: 28px;
+  padding: 28px 0;
+  border-bottom: 1px solid var(--border);
+  align-items: start;
+}
+
+.priority-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px; font-weight: 700;
+  color: var(--gold); line-height: 1;
+  text-align: right;
+}
+
+.priority-body h3 {
+  font-size: 17px; font-weight: 700;
+  color: var(--ink); margin-bottom: 6px;
+}
+
+.priority-body p {
+  font-size: 13px; color: var(--muted); line-height: 1.75;
+}
+
+.priority-item:first-child .priority-num,
+.priority-item:first-child .priority-body h3 {
+  color: var(--gold);
+}
+
+/* ── INSIGHTS ESTRATÉGICOS ── */
+.insights-section { background: var(--brown); }
+
+.insight-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px; margin-top: 56px;
+}
+
+.insight-card {
+  padding: 44px;
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(200,152,64,.12);
+}
+
+.insight-card h3 {
+  font-size: 18px; font-weight: 700;
+  color: var(--gold-lt); margin-bottom: 14px;
+}
+
+.insight-card p, .insight-card li {
+  font-size: 14px; color: rgba(253,250,244,.6);
+  line-height: 1.85;
+}
+
+.insight-card ul { list-style: none; }
+
+.insight-card ul li {
+  padding: 5px 0;
+  display: flex; gap: 10px;
+}
+
+.insight-card ul li::before {
+  content: '→'; color: var(--gold); flex-shrink: 0;
+}
+
+/* ── CLOSING ── */
+.closing-section {
+  background: var(--ink);
+  padding: 140px 40px;
+  text-align: center;
+}
+
+.closing-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(38px, 5.5vw, 72px);
+  font-weight: 900;
+  color: var(--warm);
+  line-height: 1.1;
+  max-width: 840px; margin: 0 auto 28px;
+}
+
+.closing-title em { color: var(--gold); }
+
+.closing-sub {
+  font-family: 'Lora', serif; font-style: italic;
+  font-size: 18px;
+  color: rgba(253,250,244,.4);
+  max-width: 520px; margin: 0 auto 72px;
+  line-height: 1.7;
+}
+
+.closing-stats {
+  display: flex; gap: 72px;
+  justify-content: center; flex-wrap: wrap;
+}
+
+.cs { text-align: center; }
+.cs-num {
+  display: block;
+  font-family: 'Playfair Display', serif;
+  font-size: 58px; font-weight: 900;
+  color: var(--gold); line-height: 1;
+  margin-bottom: 8px;
+}
+.cs-lbl {
+  font-size: 10px; letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: rgba(253,250,244,.28);
+}
+
+/* ── RESPONSIVO ── */
+@media (max-width: 768px) {
+  .wrap, .wrap-sm { padding: 0 24px; }
+  section { padding: 64px 0; }
+  .manifesto-body { grid-template-columns: 1fr; }
+  .pilares-grid   { grid-template-columns: 1fr; }
+  .campaign-inner { padding: 32px 24px; }
+  .insight-grid   { grid-template-columns: 1fr; }
+  .cover-stats    { gap: 36px; }
+  .cover-title    { letter-spacing: -1px; }
+  .slogan-hero    { padding: 48px 28px; }
+  .priority-item  { grid-template-columns: 40px 1fr; gap: 16px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ════════ CAPA ════════ -->
+<div class="cover">
+  <div class="cover-bg"></div>
+  <div class="cover-grain"></div>
+  <div class="cover-inner">
+    <span class="cover-eyebrow">Estratégia de Marca · Abril 2026 · Identidade Oficial Cake</span>
+    <h1 class="cover-title">Cake <em class="cover-amp">&</em> Co</h1>
+    <div class="cover-rule"></div>
+    <p class="cover-sub">30 anos fazendo o amanhã<br>saber melhor.</p>
+    <div class="cover-stats">
+      <div class="cover-stat">
+        <span class="cover-stat-num">30</span>
+        <span class="cover-stat-lbl">Anos</span>
+      </div>
+      <div class="cover-stat">
+        <span class="cover-stat-num">200+</span>
+        <span class="cover-stat-lbl">Receitas vivas</span>
+      </div>
+      <div class="cover-stat">
+        <span class="cover-stat-num">0</span>
+        <span class="cover-stat-lbl">Causas trabalhistas</span>
+      </div>
+      <div class="cover-stat">
+        <span class="cover-stat-num">∞</span>
+        <span class="cover-stat-lbl">Memórias criadas</span>
+      </div>
+    </div>
+  </div>
+  <span class="cover-scroll">↓ scroll</span>
+</div>
+
+<!-- ════════ SUMÁRIO ════════ -->
+<div class="toc-section">
+  <div class="wrap">
+    <span class="eyebrow">Conteúdo</span>
+    <h2 class="serif" style="font-size:clamp(28px,3.5vw,42px); color:var(--ink); margin-bottom:6px;">O que está nessa apresentação</h2>
+    <div class="toc-grid">
+      <a class="toc-item" href="#manifesto"><span class="toc-n">01</span><span class="toc-t">Manifesto da Marca</span><span class="toc-d">O que a Cake realmente é</span></a>
+      <a class="toc-item" href="#slogans"><span class="toc-n">02</span><span class="toc-t">Slogans & Frases</span><span class="toc-d">Taglines e frases de impacto</span></a>
+      <a class="toc-item" href="#campanhas"><span class="toc-n">03</span><span class="toc-t">Campanhas</span><span class="toc-d">8 campanhas com conceito completo</span></a>
+      <a class="toc-item" href="#storytelling"><span class="toc-n">04</span><span class="toc-t">Storytelling</span><span class="toc-d">As histórias que ninguém inventaria</span></a>
+      <a class="toc-item" href="#frases"><span class="toc-n">05</span><span class="toc-t">Banco de Frases</span><span class="toc-d">Prontas para anúncios e posts</span></a>
+      <a class="toc-item" href="#embalagens"><span class="toc-n">06</span><span class="toc-t">Embalagens</span><span class="toc-d">Caixas que contam história</span></a>
+      <a class="toc-item" href="#site"><span class="toc-n">07</span><span class="toc-t">Site</span><span class="toc-d">Estrutura e experiência digital</span></a>
+      <a class="toc-item" href="#branding"><span class="toc-n">08</span><span class="toc-t">Branding</span><span class="toc-d">Identidade visual e tom de voz</span></a>
+      <a class="toc-item" href="#calendario"><span class="toc-n">09</span><span class="toc-t">Calendário</span><span class="toc-d">O ano inteiro em datas estratégicas</span></a>
+      <a class="toc-item" href="#prioridades"><span class="toc-n">10</span><span class="toc-t">Prioridades</span><span class="toc-d">O que fazer primeiro</span></a>
+    </div>
+  </div>
+</div>
+
+<!-- ════════ 01 MANIFESTO ════════ -->
+<section id="manifesto" class="manifesto-section dark-section">
+  <div class="wrap">
+    <span class="eyebrow" style="color:var(--gold-lt);">01 — Manifesto</span>
+
+    <p class="manifesto-pull">
+      A Cake não vende doce.<br>
+      A Cake vende o que nenhuma planilha<br>
+      consegue medir: <strong>presença</strong>.
+    </p>
+
+    <p style="font-family:'Lora',serif; font-style:italic; font-size:17px; color:rgba(253,250,244,.5); text-align:center; max-width:640px; margin:0 auto 72px; line-height:1.8;">
+      Em 30 anos, nenhuma causa trabalhista. Funcionários com décadas de casa. Receitas que não mudaram. Uma crise superada de mãos dadas. Um homem que vinha todo dia porque a Cake o fazia bem — até o último dia. Isso não é história. Isso é vantagem competitiva que dinheiro não compra.
+    </p>
+
+    <div class="manifesto-body">
+      <div class="manifesto-col">
+        <h3>O que fazem as concorrentes</h3>
+        <p>Vendem doce com foto bonita. Apostam em tendência: croissant na berlinda, brigadeiro gourmet, sobremesa instagramável. Constroem marca na superfície — packaging novo, paleta pastelhada, logo minimalista. Esquecem de construir alma.</p>
+        <blockquote>"Tem lugares que servem doce. A Cake serve lembrança."</blockquote>
+      </div>
+      <div class="manifesto-col">
+        <h3>O que a Cake faz diferente</h3>
+        <p>Tem 200+ receitas que não mudaram porque não precisam mudar. Tem Michel que enrola brigadeiro há 23 anos e ninguém o superou na velocidade nem no acabamento. Tem Laura que abriu a Cake quase aos 50 anos sem plano de negócio — só com fé infinita e o mantra do pai.</p>
+        <blockquote>"Persistência, persistência e persistência." — Pai de Laura</blockquote>
+      </div>
+    </div>
+
+    <div class="pilares-grid" style="margin-top:3px;">
+      <div class="pilar pilar-1">
+        <span class="pilar-icon">🏡</span>
+        <h3>Fazenda numa rua de bairro</h3>
+        <p>Quem entra na Cake não entra numa loja. Entra na casa da vó — aquela que mora na fazenda e abre as janelas de manhã. Esse ambiente é construído com memória real, não com decoração comprada. Fogão de ferro antigo. Sagrado Coração de Jesus na prateleira alta. Calor que não se fabrica.</p>
+      </div>
+      <div class="pilar pilar-2">
+        <span class="pilar-icon">🤝</span>
+        <h3>Gente que fica — por escolha</h3>
+        <p>Cecília: 28 anos. Michel: 23 anos. Maira: 23 anos. Samuel, Jô, Deivilene, Alex. Funcionários que são padrinho de crisma de filhos dos donos. Donos que foram no chá de bebê da equipe. Que pagaram apartamento, psicólogo, faculdade. A Cake chegou aos 30 anos sem uma causa trabalhista. Isso não é RH — é filosofia.</p>
+      </div>
+      <div class="pilar pilar-3">
+        <span class="pilar-icon">⏳</span>
+        <h3>O tempo como vantagem</h3>
+        <p>Num mundo que muda rápido demais, permanecer é um ato radical. As mesmas receitas cruzam gerações: o neto come a torta Alemã que o avô comia. "Quando sinto saudades do meu pai, venho comer um quindim." — cliente real. Esse é o ativo que a Cake tem e nenhuma concorrente pode comprar.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 02 SLOGANS ════════ -->
+<section id="slogans" class="slogans-section">
+  <div class="wrap">
+    <span class="eyebrow">02 — Slogans & Frases de Efeito</span>
+    <div class="sh">
+      <h2>Frases que carregam <em>30 anos</em></h2>
+      <p>Cada frase abaixo nasceu de uma cena, uma fala ou um valor real do livro dos 30 anos. Não há slogan inventado aqui — só destilação da história real.</p>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="slogan-hero">
+      <span class="slogan-hero-tag">✦ Tagline principal — 30 anos</span>
+      <div class="slogan-hero-text">30 anos fazendo o amanhã saber melhor.</div>
+      <p class="slogan-hero-note">Direto da filosofia da Laura: "o amanhã será melhor." A torta Aurora — baba de moça bem amarela — foi criada exatamente por essa crença. A tagline é, ao mesmo tempo, aniversário, produto e alma da fundadora.</p>
+    </div>
+
+    <div class="slogans-grid">
+      <div class="slogan-card">
+        <span class="slogan-tag">Institucional</span>
+        <div class="slogan-text">Feita com tempo.<br>Entregue com afeto.</div>
+        <div class="slogan-note">Os dois eixos da Cake: receitas que não mudam há décadas e relações humanas que duram mais do que a torta.</div>
+      </div>
+      <div class="slogan-card">
+        <span class="slogan-tag">Produto — Deliciosa</span>
+        <div class="slogan-text">A torta que você vai pedir de volta.</div>
+        <div class="slogan-note">Para a campeã que representa 30% do faturamento. "Chatíssima para armazenar" porque é fresca demais para esperar. Como as melhores coisas da vida.</div>
+      </div>
+      <div class="slogan-card">
+        <span class="slogan-tag">Storytelling</span>
+        <div class="slogan-text">Não é o doce que você lembra.<br>É o momento.</div>
+        <div class="slogan-note">Para campanhas com clientes reais. O quindim do pai. A torta do aniversário de infância. A Cake não é destino — é portal do tempo.</div>
+      </div>
+      <div class="slogan-card">
+        <span class="slogan-tag">30 anos</span>
+        <div class="slogan-text">Persistência tem sabor.</div>
+        <div class="slogan-note">O mantra do pai de Laura transformado em assinatura de marca. Simples, forte, verdadeiro. Funciona em qualquer formato.</div>
+      </div>
+      <div class="slogan-card">
+        <span class="slogan-tag">Employer brand</span>
+        <div class="slogan-text">30 anos. Zero causas. Muito afeto.</div>
+        <div class="slogan-note">O dado mais surpreendente da história da Cake. Precisa ser dito em voz alta. Honra a equipe e faz o cliente se sentir bem comprando de uma empresa com ética de verdade.</div>
+      </div>
+      <div class="slogan-card">
+        <span class="slogan-tag">Produto — Aurora</span>
+        <div class="slogan-text">Desde a infância da Laura,<br>o amanhã sempre soube melhor.</div>
+        <div class="slogan-note">Para a torta Aurora — batida branca, baba de moça amarela como o raiar do dia. Conecta produto à alma da fundadora.</div>
+      </div>
+      <div class="slogan-card">
+        <span class="slogan-tag">Produto — Tentação</span>
+        <div class="slogan-text">A família chama de Satanás.<br>A gente preferiu Tentação.</div>
+        <div class="slogan-note">A família de Laura sempre chamou a torta de chocolate de Satanás. "Mas não dá para usar esse nome." Essa honestidade bem-humorada é marketing melhor do que qualquer copy.</div>
+      </div>
+      <div class="slogan-card">
+        <span class="slogan-tag">Redes sociais</span>
+        <div class="slogan-text">Quem quer um doce<br>não quer guerra com ninguém.</div>
+        <div class="slogan-note">Primeira frase do livro dos 30 anos. Funciona como claim do Instagram, texto de embalagem, camiseta, ou abertura de vídeo.</div>
+      </div>
+      <div class="slogan-card">
+        <span class="slogan-tag">Reativação de clientes</span>
+        <div class="slogan-text">Está na hora de sentir<br>saudades de novo.</div>
+        <div class="slogan-note">Para e-mail marketing e campanhas de reativação. A Cake vive na memória afetiva do cliente. Ele não esquece — só precisa ser lembrado de voltar.</div>
+      </div>
+      <div class="slogan-card">
+        <span class="slogan-tag">Linha clássica</span>
+        <div class="slogan-text">Tem receita que envelhece.<br>Essa virou tradição.</div>
+        <div class="slogan-note">Para os produtos que nunca mudaram. 200+ receitas intactas em 30 anos. A permanência como diferencial competitivo.</div>
+      </div>
+      <div class="slogan-card">
+        <span class="slogan-tag">Entrega / PDV</span>
+        <div class="slogan-text">Sai daqui. Chega lá. Chega inteiro.</div>
+        <div class="slogan-note">Referência bem-humorada à primeira entrega da Laura — a torta que se desmilinguiu no banco de trás do carro indo ao Flamengo. 30 anos depois, dominamos a arte.</div>
+      </div>
+      <div class="slogan-card">
+        <span class="slogan-tag">Natal</span>
+        <div class="slogan-text">No Natal, a Cake cuida<br>de quem cuida de você.</div>
+        <div class="slogan-note">Para a maior operação do ano: mais de 1.000 tortas em uma semana. Conecta o Natal à cultura de solidariedade da empresa — a caixinha de alimentos, a missa, o jantar da equipe.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 03 CAMPANHAS ════════ -->
+<section id="campanhas" class="campaigns-section">
+  <div class="wrap">
+    <span class="eyebrow">03 — Campanhas</span>
+    <div class="sh">
+      <h2>8 campanhas para os <em>30 anos</em></h2>
+      <p>Do digital ao PDV, da emoção à conversão. Cada campanha tem raiz na história real da Cake — porque a história real é o melhor briefing.</p>
+    </div>
+
+    <!-- ── Campanha 1 ── -->
+    <div class="campaign">
+      <div class="campaign-stripe"></div>
+      <div class="campaign-inner">
+        <div class="campaign-header">
+          <span class="campaign-num">CAMPANHA 01</span>
+          <div class="campaign-badges">
+            <span class="badge b-gold">Storytelling</span>
+            <span class="badge b-ink">Sempre ativa</span>
+          </div>
+        </div>
+        <div class="campaign-title">Memórias de Mesa</div>
+        <p class="campaign-concept">"Quando sinto saudades do meu pai, venho comer um quindim." Esta frase real de um cliente do livro é mais poderosa que qualquer campanha que um publicitário invente. O plano é coletar e publicar histórias como essa — e fazer o cliente virar protagonista da marca.</p>
+        <div class="campaign-cols">
+          <div class="campaign-col">
+            <h4>Conceito</h4>
+            <p>Abrir um canal permanente de histórias: "Qual é a sua memória Cake?" As histórias coletadas viram posts, vídeos e conteúdo do site. A cada história publicada, a Cake reforça que não é uma confeitaria — é um lugar de memória.</p>
+          </div>
+          <div class="campaign-col">
+            <h4>Execução</h4>
+            <ul>
+              <li>Formulário no site cakeco.com.br/memorias</li>
+              <li>30 histórias ao longo do ano do aniversário</li>
+              <li>Cada história vira post editorial no Instagram</li>
+              <li>Top 3 histórias viram Reels de 60 segundos</li>
+              <li>QR code nas caixas linkando para as histórias</li>
+            </ul>
+          </div>
+          <div class="campaign-col">
+            <h4>Por que funciona</h4>
+            <ul>
+              <li>Custo quase zero — o cliente cria o conteúdo</li>
+              <li>Autenticidade máxima — impossível de inventar</li>
+              <li>Cria comunidade de clientes antigos</li>
+              <li>Prova social da mais alta qualidade</li>
+            </ul>
+          </div>
+        </div>
+        <div class="campaign-hl">
+          <span class="campaign-hl-lbl">Headline da campanha</span>
+          <div class="campaign-hl-text">"Qual é a sua memória Cake? A gente guarda junto."</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── Campanha 2 ── -->
+    <div class="campaign">
+      <div class="campaign-stripe dark"></div>
+      <div class="campaign-inner">
+        <div class="campaign-header">
+          <span class="campaign-num">CAMPANHA 02</span>
+          <div class="campaign-badges">
+            <span class="badge b-ink">Aniversário</span>
+            <span class="badge b-gold">Livro dos 30 Anos</span>
+          </div>
+        </div>
+        <div class="campaign-title">30 Anos, 30 Histórias</div>
+        <p class="campaign-concept">O livro dos 30 anos tem 35 capítulos e material suficiente para um ano inteiro de conteúdo autêntico. A campanha publica uma história por semana, em formatos diferentes — e transforma o aniversário em narrativa editorial contínua.</p>
+        <div class="campaign-cols">
+          <div class="campaign-col">
+            <h4>Histórias prioritárias</h4>
+            <ul>
+              <li>Laura e Pedro na Kombi branca — como começou tudo</li>
+              <li>A primeira entrega — a torta que se desmilinguiu</li>
+              <li>Michel deixando as férias pelo bolo de laranja</li>
+              <li>Cecília contratada porque já tinha um burro chamado Viajante</li>
+              <li>A crise 2005–2008 e os objetos de prata vendidos</li>
+              <li>08/08/2008 — o dia que a Cake voou</li>
+              <li>Pedro: "Como é bom estar na Cake com você."</li>
+            </ul>
+          </div>
+          <div class="campaign-col">
+            <h4>Formatos</h4>
+            <ul>
+              <li>Carrossel Instagram — visual editorial + texto</li>
+              <li>Reels 30–60s com narração em voz over</li>
+              <li>Thread no LinkedIn para alcance B2B</li>
+              <li>Série de e-mails para base de clientes</li>
+              <li>Frases impressas nas embalagens comemorativas</li>
+            </ul>
+          </div>
+        </div>
+        <div class="campaign-hl">
+          <span class="campaign-hl-lbl">Headline da campanha</span>
+          <div class="campaign-hl-text">"30 histórias que nenhum livro de negócios ia inventar."</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── Campanha 3 ── -->
+    <div class="campaign">
+      <div class="campaign-stripe caramel"></div>
+      <div class="campaign-inner">
+        <div class="campaign-header">
+          <span class="campaign-num">CAMPANHA 03</span>
+          <div class="campaign-badges">
+            <span class="badge b-caramel">Produto hero</span>
+            <span class="badge b-gold">Vídeo</span>
+          </div>
+        </div>
+        <div class="campaign-title">Aurora — A Torta que Virou Nome</div>
+        <p class="campaign-concept">A torta Aurora não é apenas um produto — é a infância de Laura. A baba de moça amarela lembra o raiar de um novo dia. Laura é adepta ferrenha do ditado que o amanhã será melhor — e a Aurora é a prova comestível disso. Cada caixa vendida carrega essa crença.</p>
+        <div class="campaign-cols">
+          <div class="campaign-col">
+            <h4>Execução</h4>
+            <ul>
+              <li>Vídeo documental 2 minutos: "A história da Aurora"</li>
+              <li>Reels: processo artesanal — baba de moça, merengue</li>
+              <li>Embalagem especial com a história impressa na tampa</li>
+              <li>Oferta: "Presenteie alguém com um novo começo"</li>
+              <li>Período ideal: março–abril (aniversário da Cake)</li>
+            </ul>
+          </div>
+          <div class="campaign-col">
+            <h4>Por que essa torta</h4>
+            <p>A Deliciosa é a campeã de vendas. A Aurora é a campeã de alma. Ela é a torta que mais concentra a história pessoal da Laura — e, portanto, a torta que mais representa o que a Cake é. Contar a história da Aurora é contar a história da marca.</p>
+          </div>
+        </div>
+        <div class="campaign-hl">
+          <span class="campaign-hl-lbl">Headline da campanha</span>
+          <div class="campaign-hl-text">"Desde a infância da Laura, o amanhã sempre soube melhor."</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── Campanha 4 ── -->
+    <div class="campaign">
+      <div class="campaign-stripe dark"></div>
+      <div class="campaign-inner">
+        <div class="campaign-header">
+          <span class="campaign-num">CAMPANHA 04</span>
+          <div class="campaign-badges">
+            <span class="badge b-ink">Mini-doc</span>
+            <span class="badge b-gold">Potencial viral</span>
+            <span class="badge b-caramel">Agosto</span>
+          </div>
+        </div>
+        <div class="campaign-title">08.08.08 — O dia que a Cake voou</div>
+        <p class="campaign-concept">Em 08/08/2008, a crise de três anos terminou. Laura vendeu a última bandeja de prata da família para comprar passagens aéreas para quatro funcionários que nunca tinham voado. Cecília. Michel. Maira. Cris. Foram a São Paulo juntos. Esse é o conteúdo mais cinematográfico da história da empresa.</p>
+        <div class="campaign-cols">
+          <div class="campaign-col">
+            <h4>Execução</h4>
+            <ul>
+              <li>Mini-documentário 5 minutos — Cecília, Michel, Maira e Cris contam a viagem</li>
+              <li>Publicar em 08/08 — aniversário do evento</li>
+              <li>Teasers nos dias anteriores: "8 de agosto. Algo aconteceu."</li>
+              <li>Reels de trecho para tráfego orgânico</li>
+              <li>Distribuição: YouTube + Instagram + LinkedIn</li>
+            </ul>
+          </div>
+          <div class="campaign-col">
+            <h4>Por que é viral</h4>
+            <p>É uma história com todos os ingredientes: crise real, sacrifício (vender a bandeja de prata), recompensa inesperada, personagens que o público já conhece. Não precisa de roteirista — só de câmera e coragem de contar.</p>
+          </div>
+        </div>
+        <div class="campaign-hl">
+          <span class="campaign-hl-lbl">Headline da campanha</span>
+          <div class="campaign-hl-text">"Ela vendeu a última bandeja de prata para que eles voassem pela primeira vez."</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── Campanha 5 ── -->
+    <div class="campaign">
+      <div class="campaign-stripe"></div>
+      <div class="campaign-inner">
+        <div class="campaign-header">
+          <span class="campaign-num">CAMPANHA 05</span>
+          <div class="campaign-badges">
+            <span class="badge b-gold">Employer brand</span>
+            <span class="badge b-ink">Série mensal</span>
+          </div>
+        </div>
+        <div class="campaign-title">Quem faz a Cake</div>
+        <p class="campaign-concept">Michel, Cecília, Maira, Samuel, Jô, Deivilene, Alex. Cada um entrou pela porta de um jeito improvável — um ex-camelô, uma filha de família com burro chamado Viajante, um zelador de Igreja, uma guardadora de carros. Humanizar a produção é a estratégia de marca mais poderosa que existe.</p>
+        <div class="campaign-cols">
+          <div class="campaign-col">
+            <h4>Execução</h4>
+            <ul>
+              <li>Um colaborador por mês — foto profissional + depoimento em vídeo</li>
+              <li>Fato curioso de cada um: "Michel enrola brigadeiro há 23 anos. Ninguém o superou."</li>
+              <li>Destaques permanentes no site em /equipe</li>
+              <li>Integração com PDV: mini-placa no balcão com quem fez o produto</li>
+            </ul>
+          </div>
+          <div class="campaign-col">
+            <h4>Impacto</h4>
+            <p>Quando o cliente sabe que a torta que está comprando foi feita pelo Michel — que trabalha há 23 anos naquela cozinha — a percepção de valor sobe. Não é só torta. É dedicação com nome e sobrenome.</p>
+          </div>
+        </div>
+        <div class="campaign-hl">
+          <span class="campaign-hl-lbl">Headline da campanha</span>
+          <div class="campaign-hl-text">"Cada torta tem um nome. O dela é Michel."</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── Campanha 6 ── -->
+    <div class="campaign">
+      <div class="campaign-stripe red"></div>
+      <div class="campaign-inner">
+        <div class="campaign-header">
+          <span class="campaign-num">CAMPANHA 06</span>
+          <div class="campaign-badges">
+            <span class="badge b-red">Produto</span>
+            <span class="badge b-gold">Humor</span>
+            <span class="badge b-ink">Digital</span>
+          </div>
+        </div>
+        <div class="campaign-title">A Satanás</div>
+        <p class="campaign-concept">"A torta é tão viciante que na família da Laura é conhecida como Satanás. Mas não dá para usar um nome desses, né? Tentação é melhor." — Livro dos 30 Anos. Este detalhe real é a campanha. Não precisa inventar nada.</p>
+        <div class="campaign-cols">
+          <div class="campaign-col">
+            <h4>Execução</h4>
+            <ul>
+              <li>Post: "A família chama de Satanás. A gente preferiu Tentação."</li>
+              <li>Reels com Michel explicando por que a torta é "perigosa"</li>
+              <li>Caixinha especial: "Handle with care. (ou não.) ☠️"</li>
+              <li>Campanha de Páscoa com o coelho de chocolate "A Satanás"</li>
+              <li>Hashtag: #ASatanas</li>
+            </ul>
+          </div>
+          <div class="campaign-col">
+            <h4>Por que funciona</h4>
+            <p>Autenticidade com humor. A Cake se permite ser engraçada sem perder a elegância — porque a piada vem de uma história real, não de copy forçado. Esse tipo de conteúdo gera compartilhamento espontâneo.</p>
+          </div>
+        </div>
+        <div class="campaign-hl">
+          <span class="campaign-hl-lbl">Headline da campanha</span>
+          <div class="campaign-hl-text">"A família chama de Satanás. Nós chamamos de Tentação. Você vai entender quando provar."</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── Campanha 7 ── -->
+    <div class="campaign">
+      <div class="campaign-stripe dark"></div>
+      <div class="campaign-inner">
+        <div class="campaign-header">
+          <span class="campaign-num">CAMPANHA 07</span>
+          <div class="campaign-badges">
+            <span class="badge b-ink">Natal</span>
+            <span class="badge b-gold">Alto volume</span>
+            <span class="badge b-caramel">Dezembro</span>
+          </div>
+        </div>
+        <div class="campaign-title">Natal Cake — Um mês de afeto</div>
+        <p class="campaign-concept">Mais de mil tortas em uma semana. Dez vezes mais entregadores. Um padre que vem celebrar missa. Uma caixinha de alimentos que a equipe enche ao longo de dezembro para uma família que precisa. O Natal da Cake não é operação — é cultura. E cultura é o melhor conteúdo de marketing que existe.</p>
+        <div class="campaign-cols">
+          <div class="campaign-col">
+            <h4>Execução</h4>
+            <ul>
+              <li>"Adote uma cesta" — cliente compra torta e doa 1 item</li>
+              <li>Embalagem natalina com frase do livro sobre solidariedade</li>
+              <li>Contagem regressiva: "X dias para o Natal Cake"</li>
+              <li>Documentar a missa anual e compartilhar (com permissão)</li>
+              <li>Encomendas antecipadas com desconto — urgência real</li>
+            </ul>
+          </div>
+          <div class="campaign-col">
+            <h4>Diferencial</h4>
+            <p>Toda confeitaria faz campanha de Natal. A Cake tem uma tradição real de 30 anos: a caixinha, o padre, o jantar da equipe. Comunicar isso não é só marketing — é mostrar quem a Cake é quando ninguém está olhando.</p>
+          </div>
+        </div>
+        <div class="campaign-hl">
+          <span class="campaign-hl-lbl">Headline da campanha</span>
+          <div class="campaign-hl-text">"No Natal, a Cake cuida de quem cuida de você."</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── Campanha 8 ── -->
+    <div class="campaign">
+      <div class="campaign-stripe"></div>
+      <div class="campaign-inner">
+        <div class="campaign-header">
+          <span class="campaign-num">CAMPANHA 08</span>
+          <div class="campaign-badges">
+            <span class="badge b-gold">Aniversário</span>
+            <span class="badge b-caramel">Produto especial</span>
+            <span class="badge b-ink">Março 2026</span>
+          </div>
+        </div>
+        <div class="campaign-title">29 de março — Lanço 30 Anos</div>
+        <p class="campaign-concept">A Cake completou 30 anos em 29 de março de 2026. "Começamos sem caixa registradora, sem plano de negócios. Só fé." Esse evento precisa de um produto especial, um evento real na loja e uma declaração de intenções para os próximos 30 anos.</p>
+        <div class="campaign-cols">
+          <div class="campaign-col">
+            <h4>Produto especial</h4>
+            <ul>
+              <li>Torta Aurora edição limitada 30 anos — embalagem dourada</li>
+              <li>Kit "30 Anos de Afeto" — seleção dos doces históricos</li>
+              <li>Caixa comemorativa com linha do tempo da Cake impressa</li>
+              <li>Cartão manuscrito com frase do livro em cada kit</li>
+            </ul>
+          </div>
+          <div class="campaign-col">
+            <h4>Evento na loja</h4>
+            <ul>
+              <li>Tarde de aniversário para clientes históricos</li>
+              <li>Exposição de fotos da Cake ao longo dos 30 anos</li>
+              <li>Depoimentos ao vivo de Michel, Cecília e Maira</li>
+              <li>Lançamento do livro dos 30 anos para clientes especiais</li>
+              <li>Cobertura ao vivo nas redes sociais</li>
+            </ul>
+          </div>
+        </div>
+        <div class="campaign-hl">
+          <span class="campaign-hl-lbl">Headline da campanha</span>
+          <div class="campaign-hl-text">"29 de março de 1996. Sem caixa registradora. Sem plano de negócios. Com fé infinita. Funcionou."</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ════════ 04 STORYTELLING ════════ -->
+<section id="storytelling" class="story-section dark-section">
+  <div class="wrap">
+    <span class="eyebrow" style="color:var(--gold-lt);">04 — Storytelling</span>
+    <div class="sh sh-light">
+      <h2>A linha do tempo que<br>ninguém <em>inventaria</em></h2>
+      <p>São acontecimentos reais — com datas, personagens e emoção. Cada um é um conteúdo. Alguns são potencialmente virais. Nenhum precisa de roteirista.</p>
+    </div>
+
+    <div class="timeline">
+      <div class="story-event">
+        <span class="story-date">1957 — Cozinha de uma família carioca</span>
+        <div class="story-title">Onde as receitas nasceram</div>
+        <p class="story-text">Três mulheres — a dona da casa, a cozinheira titular e uma que vinha nas datas comemorativas — inventavam e reinventavam receitas entre uma tarefa e outra. Daquelas tardes saíram dois batidos diferentes de tudo: as massas que são o alicerce de 200+ tortas até hoje. Uma menina aparecia na porta da cozinha e olhava curioso. Ela se chamava Laura.</p>
+        <div class="story-idea"><strong>Ideia de conteúdo</strong>"70 anos antes de você provar, uma menina olhava pela porta da cozinha."</div>
+      </div>
+
+      <div class="story-event">
+        <span class="story-date">Julho de 1967 — BR-116, km 235</span>
+        <div class="story-title">O ombro na Kombi</div>
+        <p class="story-text">Laura e Pedro vinham de uma fazenda em viagem de volta ao Rio. Ela, cansada, resolveu apoiar a cabeça no ombro dele. Esperou a reação. Ele se acomodou melhor para ela ficar mais confortável. "Eu digo que eu comecei a namorar quando comecei a botar a minha cabeça no ombro dele durante a viagem. E dali foi." Cinquenta e seis anos de casamento começaram assim — numa Kombi branca, BR-116.</p>
+        <div class="story-idea"><strong>Ideia de conteúdo</strong>"A Cake começou numa kombi branca. Ela apoiou a cabeça. Ele se acomodou. E dali foi."</div>
+      </div>
+
+      <div class="story-event">
+        <span class="story-date">29 de março de 1996 — Leblon, Rio de Janeiro</span>
+        <div class="story-title">Dia 1 — sem caixa registradora</div>
+        <p class="story-text">Laura, 49 anos. Pedro, 57 anos. Sem plano de negócios. Sem experiência em comércio. Fé: infinita. O lucro do primeiro dia foi R$440 — porque a família inteira foi comprar. Na segunda-feira: R$60. E foi diminuindo. A família toda tinha ido no primeiro dia. "Inauguramos a loja sem caixa registradora, sem saber nada de custo, de nada. A gente só sabia o seguinte: fizemos um monte de salgados e doces."</p>
+        <div class="story-idea"><strong>Ideia de conteúdo</strong>"Dia 1: R$440 (a família toda foi). Dia 2: R$60. E continuaram. 30 anos depois, ainda estão."</div>
+      </div>
+
+      <div class="story-event">
+        <span class="story-date">Dia das Mães — Leblon, 1996</span>
+        <div class="story-title">A torta que se desmilinguiu</div>
+        <p class="story-text">Laura marcou a retirada de todos os clientes para as 10h no Dia das Mães. Todos ao mesmo tempo. Enquanto a fila reclamava do lado de fora, ela mesma foi fazer a primeira entrega — no banco de trás do carro, sem proteção. A torta fresca chacoalhou do Leblon ao Flamengo e chegou se desmilinguindo. Ela voltou, fez outra e entregou de novo. Sem drama. Com persistência.</p>
+        <div class="story-idea"><strong>Ideia de conteúdo</strong>"30 anos atrás, nossa primeira entrega chegou desmilinguindo. Hoje entregamos mil tortas na semana do Natal. Persistência tem sabor."</div>
+      </div>
+
+      <div class="story-event">
+        <span class="story-date">2005 a 2008 — A crise</span>
+        <div class="story-title">Gerente de banco todo santo dia</div>
+        <p class="story-text">A obra da loja nova custou três vezes o orçamento. Funcionários sem receber em dia. Objetos de prata da avó vendidos. A cadeira cativa do avô de Pedro vendida. Um grupo tentou comprar a empresa por valor vergonhoso. Laura e Pedro recusaram. Abriram as contas para os funcionários mais antigos. Perguntaram quem precisava mais urgente receber. "Essas dívidas são um câncer. Eu tenho um câncer e vou me curar." — Laura.</p>
+        <div class="story-idea"><strong>Ideia de conteúdo</strong>"A crise chegou. Eles abriram as contas para a equipe. Venderam as peças de prata da família. Recusaram a oferta vergonhosa de compra. E ficaram."</div>
+      </div>
+
+      <div class="story-event">
+        <span class="story-date">08 de agosto de 2008</span>
+        <div class="story-title">O dia que a Cake voou</div>
+        <p class="story-text">No dia em que a crise terminou, Laura não se deu por satisfeita ao chegar em casa. Vendeu a última bandeja de prata da família. Comprou passagens aéreas. Cecília, Michel, Maira e Cris voaram pela primeira vez na vida — para São Paulo, para celebrar. Andaram tanto pela cidade que a equipe pediu: "Não dá para descansar? A gente não está aguentando o ritmo de vocês."</p>
+        <div class="story-idea"><strong>Ideia de conteúdo</strong>Mini-documentário publicado em 08/08. Candidato a viral orgânico com zero investimento de mídia.</div>
+      </div>
+
+      <div class="story-event">
+        <span class="story-date">9 de abril de 2025</span>
+        <div class="story-title">O último dia do Pedro</div>
+        <p class="story-text">Pedro esteve na Cake até 9 de abril de 2025. Dizia: "Eu preciso vir para a Cake todos os dias… porque isso me faz bem." E foi. Com 86 anos. "Como é bom estar na Cake com você." — última frase na empresa. Na manhã do dia 10, partiu numa quinta-feira de sol carioca, às 7h da manhã. A empresa caiu em prantos. "Agora sei que tenho mais um anjo da guarda com nome e sobrenome." — Laura.</p>
+        <div class="story-idea"><strong>Ideia de conteúdo</strong>Com cuidado, com a permissão da Laura. "Havia um homem que vinha todos os dias porque a Cake o fazia bem. Ele foi embora em abril. O que ele construiu permanece."</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 05 FRASES PRONTAS ════════ -->
+<section id="frases" class="quotes-section">
+  <div class="wrap">
+    <span class="eyebrow" style="color:var(--gold-lt);">05 — Banco de Frases</span>
+    <div class="sh sh-light">
+      <h2>Prontas para <em>usar</em></h2>
+      <p>Frases curtas para anúncios, posts, embalagens, site e cartões. Todas com raiz na história real.</p>
+    </div>
+    <div class="quotes-grid">
+      <div class="quote-card">
+        <span class="q-mark">"</span>
+        <p class="q-text">Há 30 anos, a gente não vende só torta. A gente participa da mesa.</p>
+        <div class="q-use">Home · About · Vídeo manifesto</div>
+      </div>
+      <div class="quote-card">
+        <span class="q-mark">"</span>
+        <p class="q-text">O problema da Deliciosa é que acaba. O resto é perfeição.</p>
+        <div class="q-use">Anúncio da Deliciosa</div>
+      </div>
+      <div class="quote-card">
+        <span class="q-mark">"</span>
+        <p class="q-text">Se o presente precisa emocionar, talvez ele precise vir da Cake.</p>
+        <div class="q-use">Página de presentes · Datas comemorativas</div>
+      </div>
+      <div class="quote-card">
+        <span class="q-mark">"</span>
+        <p class="q-text">Receita boa não envelhece. Vira tradição.</p>
+        <div class="q-use">Linha clássica · Cardápio · PDV</div>
+      </div>
+      <div class="quote-card">
+        <span class="q-mark">"</span>
+        <p class="q-text">Uma torta da Cake chega antes mesmo de abrir a caixa.</p>
+        <div class="q-use">Embalagem · Sacola · Sticker</div>
+      </div>
+      <div class="quote-card">
+        <span class="q-mark">"</span>
+        <p class="q-text">Ela abriu a loja aos 49 anos. Sem plano. Com fé. Deu certo.</p>
+        <div class="q-use">Dia das Mães · Institucional</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 06 EMBALAGENS ════════ -->
+<section id="embalagens" class="pack-section">
+  <div class="wrap">
+    <span class="eyebrow">06 — Embalagens</span>
+    <div class="sh">
+      <h2>A caixa que conta <em>uma história</em></h2>
+      <p>A embalagem é o primeiro e o último contato físico com o cliente. Na Cake, ela precisa ser extensão do afeto que está dentro.</p>
+    </div>
+    <div class="pack-grid">
+      <div class="pack-card">
+        <div class="pack-vis pv-gold"><em>"O amanhã<br>sempre soube<br>melhor."</em></div>
+        <div class="pack-info">
+          <div class="pack-name">Caixa Aurora — 30 Anos</div>
+          <p class="pack-desc">Edição comemorativa em dourado. Interior da tampa com a história completa da torta Aurora — da infância de Laura aos 30 anos da Cake. QR code na base leva ao vídeo documental.</p>
+          <div class="pack-detail">QR → Vídeo "A história da Aurora" · Papel premium</div>
+        </div>
+      </div>
+      <div class="pack-card">
+        <div class="pack-vis pv-ink"><em>"Persistência,<br>persistência,<br>persistência."</em></div>
+        <div class="pack-info">
+          <div class="pack-name">Linha Institucional — 30 Anos</div>
+          <p class="pack-desc">Fundo escuro com o mantra do pai de Laura em dourado. Interior com a linha do tempo resumida da Cake desde 1996. Para toda a linha comemorativa do aniversário.</p>
+          <div class="pack-detail">Desde 29 de março de 1996 · Botafogo · Rio de Janeiro</div>
+        </div>
+      </div>
+      <div class="pack-card">
+        <div class="pack-vis pv-red"><em>"A família<br>chama de<br>Satanás."</em></div>
+        <div class="pack-info">
+          <div class="pack-name">Caixa Tentação — Edição Especial</div>
+          <p class="pack-desc">Vermelha. Com humor controlado. Interior: "A família chama de Satanás. Mas não dá para usar esse nome, né? Tentação é melhor." A mais presenteável da linha.</p>
+          <div class="pack-detail">Handle with care. (ou não.) ☠️🍫</div>
+        </div>
+      </div>
+      <div class="pack-card">
+        <div class="pack-vis pv-cream"><em>"Os pequenos gestos<br>mantêm a amizade."</em></div>
+        <div class="pack-info">
+          <div class="pack-name">Linha Presente — Afeto</div>
+          <p class="pack-desc">A frase da mãe de Laura — dita em francês desde a infância — agora impressa nas caixas de presente. Versão bilíngue: português e o original em francês.</p>
+          <div class="pack-detail">Les petits gestes gardent l'amitié · Edição permanente</div>
+        </div>
+      </div>
+      <div class="pack-card">
+        <div class="pack-vis pv-caramel"><em>"Natal Cake.<br>30 anos<br>esquentando<br>o inverno carioca."</em></div>
+        <div class="pack-info">
+          <div class="pack-name">Caixa Natal — Edição Limitada</div>
+          <p class="pack-desc">Para a semana em que mais de mil tortas saem. Interior com a história da tradição natalina: a caixinha de alimentos, o padre, o jantar da equipe.</p>
+          <div class="pack-detail">Parte da receita vai para a cesta de doações da equipe</div>
+        </div>
+      </div>
+      <div class="pack-card">
+        <div class="pack-vis pv-ink"><em>Você está<br>carregando<br>30 anos<br>de afeto.</em></div>
+        <div class="pack-info">
+          <div class="pack-name">Sacola Comemorativa 30 Anos</div>
+          <p class="pack-desc">A sacola padrão ganha a frase mais simples e verdadeira. Quem sai da Cake carregando uma torta está carregando algo muito maior do que doce.</p>
+          <div class="pack-detail">Kraft premium · Alça de tecido · Acabamento cera</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 07 SITE ════════ -->
+<section id="site" class="site-section">
+  <div class="wrap">
+    <span class="eyebrow">07 — Site</span>
+    <div class="sh">
+      <h2>O site como <em>extensão da loja</em></h2>
+      <p>O site precisa fazer o que a loja física faz: acolher, contar histórias e fazer o visitante sentir que está em casa antes mesmo de abrir a porta.</p>
+    </div>
+    <div class="site-grid">
+      <div class="site-page">
+        <div class="site-head">
+          <span class="site-head-icon">🏠</span>
+          <div>
+            <span class="site-head-title">Home</span>
+            <span class="site-head-url">cakeco.com.br</span>
+          </div>
+        </div>
+        <div class="site-body">
+          <h4>Deve ter</h4>
+          <div class="sf">Hero: "Desde 1996, uma loja que parece a casa da vó."</div>
+          <div class="sf">Vídeo 30s de bastidores da produção</div>
+          <div class="sf">Contador: 30 anos · 200+ receitas · 0 causas trabalhistas</div>
+          <div class="sf">Chamada de encomenda via WhatsApp</div>
+          <div class="sf">Depoimentos de clientes em rotação</div>
+        </div>
+      </div>
+      <div class="site-page">
+        <div class="site-head">
+          <span class="site-head-icon">❤️</span>
+          <div>
+            <span class="site-head-title">Nossa História</span>
+            <span class="site-head-url">cakeco.com.br/historia</span>
+          </div>
+        </div>
+        <div class="site-body">
+          <h4>Deve ter</h4>
+          <div class="sf">Linha do tempo interativa de 1996 a 2026</div>
+          <div class="sf">Seção "Laura e Pedro" — do ombro na Kombi ao 10/04/2025</div>
+          <div class="sf">Seção "A Crise" — transparência que fideliza</div>
+          <div class="sf">Fotos históricas da loja ao longo dos 30 anos</div>
+          <div class="sf">Link para comprar o livro dos 30 anos</div>
+        </div>
+      </div>
+      <div class="site-page">
+        <div class="site-head">
+          <span class="site-head-icon">🎂</span>
+          <div>
+            <span class="site-head-title">Cardápio</span>
+            <span class="site-head-url">cakeco.com.br/cardapio</span>
+          </div>
+        </div>
+        <div class="site-body">
+          <h4>Deve ter</h4>
+          <div class="sf">Cada torta com a história de origem — não só ingredientes</div>
+          <div class="sf">Destaque para a Deliciosa: "30% do nosso faturamento"</div>
+          <div class="sf">Selos: "Receita original 1996" / "Favorita da Laura"</div>
+          <div class="sf">Filtros: "Para presentear" / "Clássica" / "Amo chocolate"</div>
+          <div class="sf">Botão de encomenda integrado por produto</div>
+        </div>
+      </div>
+      <div class="site-page">
+        <div class="site-head">
+          <span class="site-head-icon">👥</span>
+          <div>
+            <span class="site-head-title">Nossa Equipe</span>
+            <span class="site-head-url">cakeco.com.br/equipe</span>
+          </div>
+        </div>
+        <div class="site-body">
+          <h4>Deve ter</h4>
+          <div class="sf">Michel: "23 anos. Ninguém o supera no brigadeiro."</div>
+          <div class="sf">Cecília: "28 anos. Contratada porque tinha um burro chamado Viajante."</div>
+          <div class="sf">Destaque: Zero causas trabalhistas em 30 anos</div>
+          <div class="sf">Depoimentos em vídeo de 30–60 segundos</div>
+          <div class="sf">"Venha ser Cake também" — vagas abertas</div>
+        </div>
+      </div>
+      <div class="site-page">
+        <div class="site-head">
+          <span class="site-head-icon">📖</span>
+          <div>
+            <span class="site-head-title">Memórias de Mesa</span>
+            <span class="site-head-url">cakeco.com.br/memorias</span>
+          </div>
+        </div>
+        <div class="site-body">
+          <h4>Deve ter</h4>
+          <div class="sf">Formulário: "Qual é a sua memória Cake?"</div>
+          <div class="sf">Galeria de histórias enviadas por clientes</div>
+          <div class="sf">História em destaque: o quindim e o pai</div>
+          <div class="sf">Moderação simples antes de publicar</div>
+          <div class="sf">Compartilhamento automático no Instagram</div>
+        </div>
+      </div>
+      <div class="site-page">
+        <div class="site-head">
+          <span class="site-head-icon">🎁</span>
+          <div>
+            <span class="site-head-title">Presentes</span>
+            <span class="site-head-url">cakeco.com.br/presentes</span>
+          </div>
+        </div>
+        <div class="site-body">
+          <h4>Deve ter</h4>
+          <div class="sf">Foco em conversão — presentear é o maior uso da Cake</div>
+          <div class="sf">Kits curados: "Kit Aurora" / "Kit Satanás" / "Kit 30 Anos"</div>
+          <div class="sf">Cartão personalizado com mensagem à mão (foto)</div>
+          <div class="sf">Filtros por valor e ocasião</div>
+          <div class="sf">Prazo de entrega em destaque</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 08 BRANDING ════════ -->
+<section id="branding" class="brand-section dark-section">
+  <div class="wrap">
+    <span class="eyebrow" style="color:var(--gold-lt);">08 — Branding</span>
+    <div class="sh sh-light">
+      <h2>A identidade que <em>já existe</em></h2>
+      <p>A Cake não precisa reinventar quem é. Precisa formalizar o que já é: clássica, quente, artesanal, humana. Sem modismos. Sem tendência que envelhece. A partir desta versão, toda a direção visual foi ajustada para a paleta oficial da marca: Deliciosa, Quindim, Baunilha, Chocolate, Cake &amp; Co e Manteiga.</p>
+    </div>
+    <div class="brand-grid">
+      <div class="brand-card">
+        <h3>Paleta de Cores</h3>
+        <div class="swatches">
+          <div class="sw-item"><div class="sw" style="background:#1E0F0A;"></div><div class="sw-lbl">Café Escuro</div></div>
+          <div class="sw-item"><div class="sw" style="background:#C89840;"></div><div class="sw-lbl">Ouro Cake</div></div>
+          <div class="sw-item"><div class="sw" style="background:#FAF4EA;"></div><div class="sw-lbl">Creme Antigo</div></div>
+          <div class="sw-item"><div class="sw" style="background:#7A4020;"></div><div class="sw-lbl">Canela</div></div>
+          <div class="sw-item"><div class="sw" style="background:#7A1C1C;"></div><div class="sw-lbl">Veludo</div></div>
+        </div>
+        <p style="font-size:12px; color:rgba(253,250,244,.4); line-height:1.75; margin-top:12px;">Tons quentes que remetem à fazenda, ao chocolate, ao café passado na hora. Sem frios, sem pastéis modernos, sem nada que não dure 10 anos.</p>
+      </div>
+      <div class="brand-card">
+        <h3>Tipografia</h3>
+        <div class="font-block">
+          <div class="font-lbl">Títulos — Playfair Display</div>
+          <div style="font-family:'Playfair Display',serif; font-size:28px; font-weight:700; color:var(--warm);">Cake & Co</div>
+          <div style="font-family:'Playfair Display',serif; font-size:18px; font-style:italic; color:var(--gold);">30 Anos de Afeto</div>
+        </div>
+        <div class="font-block">
+          <div class="font-lbl">Corpo — Lora</div>
+          <div style="font-family:'Lora',serif; font-size:14px; font-style:italic; color:rgba(253,250,244,.6);">"Os pequenos gestos mantêm a amizade."</div>
+        </div>
+        <div class="font-block">
+          <div class="font-lbl">Interface — Inter</div>
+          <div style="font-family:'Inter',sans-serif; font-size:11px; letter-spacing:2px; text-transform:uppercase; color:rgba(253,250,244,.4);">ENCOMENDAR · VER CARDÁPIO</div>
+        </div>
+      </div>
+      <div class="brand-card">
+        <h3>Tom de Voz</h3>
+        <div class="tone-row"><span class="dot-on"></span><span class="tone-yes">Caloroso e direto</span></div>
+        <div class="tone-row"><span class="dot-on"></span><span class="tone-yes">Conta histórias reais, não produto</span></div>
+        <div class="tone-row"><span class="dot-on"></span><span class="tone-yes">Orgulhoso sem arrogância</span></div>
+        <div class="tone-row"><span class="dot-on"></span><span class="tone-yes">Bem-humorado quando cabe (A Satanás)</span></div>
+        <div class="tone-row"><span class="dot-on"></span><span class="tone-yes">Fala de pessoas, não de produtos</span></div>
+        <div class="tone-row"><span class="dot-off"></span><span class="tone-no">Corporativo e distante</span></div>
+        <div class="tone-row"><span class="dot-off"></span><span class="tone-no">Hipérboles sem fundamento</span></div>
+        <div class="tone-row"><span class="dot-off"></span><span class="tone-no">Modismos e gírias forçadas</span></div>
+      </div>
+      <div class="brand-card">
+        <h3>Direção de Arte</h3>
+        <p style="font-size:13px; color:rgba(253,250,244,.55); line-height:1.85; margin-bottom:16px;">A Cake deve se parecer com uma coleção — não com uma franquia. Cada peça tem textura, história e imperfeição intencional. Como as receitas que nunca mudaram.</p>
+        <div class="tone-row"><span class="dot-on"></span><span class="tone-yes">Fotografia com luz natural, quente</span></div>
+        <div class="tone-row"><span class="dot-on"></span><span class="tone-yes">Props reais: pratos de borda, linho, flores</span></div>
+        <div class="tone-row"><span class="dot-on"></span><span class="tone-yes">Mãos aparecem nas fotos — humanidade</span></div>
+        <div class="tone-row"><span class="dot-on"></span><span class="tone-yes">Granulado, textura, imperfeição proposital</span></div>
+        <div class="tone-row"><span class="dot-off"></span><span class="tone-no">Fundos brancos estéreis</span></div>
+        <div class="tone-row"><span class="dot-off"></span><span class="tone-no">Estética pastelhada de confeitaria instagramável</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 09 CALENDÁRIO ════════ -->
+<section id="calendario" class="cal-section">
+  <div class="wrap">
+    <span class="eyebrow">09 — Calendário Estratégico</span>
+    <div class="sh">
+      <h2>O ano da Cake <em>em datas</em></h2>
+      <p>A Cake tem histórias reais para cada data importante. Isso é vantagem competitiva. A tese: menos datas, mais profundidade em cada uma.</p>
+    </div>
+    <div class="cal-grid">
+      <div class="cal-card">
+        <div class="cal-month">Janeiro</div>
+        <div class="cal-event">Ano Novo</div>
+        <div class="cal-action">"O amanhã sempre foi melhor." Linha Aurora em destaque. Mensagem de começo de ano da Laura.</div>
+      </div>
+      <div class="cal-card">
+        <div class="cal-month">Fevereiro</div>
+        <div class="cal-event">Namorados — 12/02</div>
+        <div class="cal-action">História real: Laura e Pedro. "56 anos de casados. Começou numa Kombi." Caixa especial vermelha.</div>
+      </div>
+      <div class="cal-card featured">
+        <div class="cal-month">Março</div>
+        <div class="cal-event">Aniversário — 29/03</div>
+        <div class="cal-action">O mês mais importante. Evento na loja, produto especial, campanha "30 Histórias", livro.</div>
+      </div>
+      <div class="cal-card">
+        <div class="cal-month">Abril</div>
+        <div class="cal-event">Páscoa</div>
+        <div class="cal-action">Tentação em formato de coelho. Bolo de laranja coelho. "A Páscoa mais gostosa do Botafogo."</div>
+      </div>
+      <div class="cal-card featured">
+        <div class="cal-month">Maio</div>
+        <div class="cal-event">Dia das Mães</div>
+        <div class="cal-action">A data mais importante depois do Natal. "Ela não sabia nada de negócio. Sabia de amor. Deu certo."</div>
+      </div>
+      <div class="cal-card">
+        <div class="cal-month">Junho</div>
+        <div class="cal-event">Festa Junina</div>
+        <div class="cal-action">Quindim, pé-de-moleque, cocada. "A vovó da fazenda teria orgulho."</div>
+      </div>
+      <div class="cal-card">
+        <div class="cal-month">Agosto</div>
+        <div class="cal-event">Dia dos Pais + 08/08</div>
+        <div class="cal-action">Torta temática para os pais. E em 08/08: o mini-documentário "O dia que a Cake voou".</div>
+      </div>
+      <div class="cal-card">
+        <div class="cal-month">Outubro</div>
+        <div class="cal-event">Dia das Crianças</div>
+        <div class="cal-action">"Toda criança que prova a Tentação entende porque a família chama de Satanás." Caixa divertida.</div>
+      </div>
+      <div class="cal-card">
+        <div class="cal-month">Novembro</div>
+        <div class="cal-event">Pré-Natal</div>
+        <div class="cal-action">Abertura das encomendas. "A produção começa agora. O Natal começa aqui." Urgência real.</div>
+      </div>
+      <div class="cal-card featured">
+        <div class="cal-month">Dezembro</div>
+        <div class="cal-event">Natal — Pico total</div>
+        <div class="cal-action">1.000+ tortas. Caixas especiais, solidariedade, missa, tradição de 30 anos. A maior operação do ano.</div>
+      </div>
+      <div class="cal-card">
+        <div class="cal-month">Todo mês</div>
+        <div class="cal-event">Aniversários da equipe</div>
+        <div class="cal-action">Conteúdo de employer brand. O almoço especial, o parabéns, a cultura real. Série "Quem faz a Cake".</div>
+      </div>
+      <div class="cal-card">
+        <div class="cal-month">Semanal</div>
+        <div class="cal-event">Memórias de Mesa</div>
+        <div class="cal-action">Uma história de cliente por semana. Nunca acaba o material. Nunca perde a autenticidade.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 10 PRIORIDADES ════════ -->
+<section id="prioridades" class="priority-section">
+  <div class="wrap">
+    <span class="eyebrow">10 — Prioridades</span>
+    <div class="sh">
+      <h2>O que eu faria <em>primeiro</em></h2>
+      <p>Muita ideia boa nesse material. Para gerar impacto real, precisamos sequenciar. Essa é a minha recomendação objetiva.</p>
+    </div>
+
+    <ol class="priority-list">
+      <li class="priority-item">
+        <div class="priority-num">01</div>
+        <div class="priority-body">
+          <h3>Campanha-mãe: "30 Anos, 30 Histórias"</h3>
+          <p>É o guarda-chuva de tudo. Dá direção editorial para o ano inteiro, valoriza o livro, organiza o storytelling e não depende de produção gigante logo de saída. Começa com o conteúdo que a Cake já tem: o livro dos 30 anos. Uma história por semana, 52 semanas.</p>
+        </div>
+      </li>
+      <li class="priority-item">
+        <div class="priority-num">02</div>
+        <div class="priority-body">
+          <h3>Nova linha de embalagens com frases do livro</h3>
+          <p>Baixo custo comparado a qualquer reforma de branding. Impacto imediato em todo cliente que compra. As frases estão prontas — é só executar. Começar pela Tentação ("A família chama de Satanás"), a Aurora e a linha de presentes.</p>
+        </div>
+      </li>
+      <li class="priority-item">
+        <div class="priority-num">03</div>
+        <div class="priority-body">
+          <h3>Página "Nossa História" no site</h3>
+          <p>A Cake tem uma história extraordinária que o site não conta direito. Isso é desperdício de ativo. Uma página boa de história aumenta conversão, atrai imprensa e diferencia a marca de qualquer concorrente sem precisar de verba.</p>
+        </div>
+      </li>
+      <li class="priority-item">
+        <div class="priority-num">04</div>
+        <div class="priority-body">
+          <h3>Série "Quem faz a Cake"</h3>
+          <p>Michel, Cecília, Samuel, Jô, Deivilene e Alex são ouro puro. Um por mês, foto profissional e depoimento de 60 segundos. Fortalece marca, cultura, confiança do cliente e engajamento orgânico.</p>
+        </div>
+      </li>
+      <li class="priority-item">
+        <div class="priority-num">05</div>
+        <div class="priority-body">
+          <h3>Mini-documentário 08.08.08</h3>
+          <p>A história da bandeja de prata vendida para comprar passagens aéreas tem todos os ingredientes de conteúdo viral: sacrifício real, celebração, personagens com décadas de empresa. Fazer bem feito — câmera boa, coragem de contar.</p>
+        </div>
+      </li>
+      <li class="priority-item">
+        <div class="priority-num">06</div>
+        <div class="priority-body">
+          <h3>Campanha "Memórias de Mesa" — UGC permanente</h3>
+          <p>Abrir o canal de histórias de clientes é o investimento de menor custo e maior retorno de longo prazo. A Cake tem 30 anos de clientes com memórias afetivas reais. Só precisa pedir.</p>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ════════ TESE ESTRATÉGICA ════════ -->
+<section class="insights-section mid-section">
+  <div class="wrap">
+    <span class="eyebrow" style="color:var(--gold-lt);">Tese estratégica</span>
+    <div class="sh sh-light">
+      <h2>O que esse trabalho <em>realmente diz</em></h2>
+      <p>Antes de executar qualquer campanha, é preciso entender o jogo que a Cake está jogando — e que é diferente do jogo das concorrentes.</p>
+    </div>
+    <div class="insight-grid">
+      <div class="insight-card">
+        <h3>A vantagem que dinheiro não compra</h3>
+        <p>A Cake tem algo que nenhuma confeitaria nova do Rio de Janeiro pode comprar: autenticidade documentada. 30 anos de história real, contada por um jornalista, com depoimentos de funcionários que ficaram décadas, clientes que voltam por saudade e uma crise superada de mãos dadas. Isso não é marketing. É a matéria-prima do melhor marketing possível.</p>
+      </div>
+      <div class="insight-card">
+        <h3>O erro a evitar</h3>
+        <ul>
+          <li>Copiar a estética fria de confeitarias "premium" modernas</li>
+          <li>Investir em tendência (croissant, brigadeiro gourmet) antes de contar a história</li>
+          <li>Fazer campanha bonita sem narrativa real por trás</li>
+          <li>Crescer de forma que apague o que fez a Cake durar 30 anos</li>
+          <li>Tratar a história como passado — ela é o presente da marca</li>
+        </ul>
+      </div>
+      <div class="insight-card">
+        <h3>O luxury que a Cake tem</h3>
+        <p>O luxo da Cake não é preço, embalagem ou ingredient premium. É outro: tempo, permanência, gente, verdade. Em um mercado de marcas que nascem e morrem em 3 anos, ter 30 anos com a mesma receita e a mesma equipe é o posicionamento de luxo mais difícil de replicar que existe.</p>
+      </div>
+      <div class="insight-card">
+        <h3>Resumo executivo</h3>
+        <ul>
+          <li>A marca precisa vender história, não só produto</li>
+          <li>O livro dos 30 anos é 12 meses de conteúdo autêntico</li>
+          <li>Deliciosa, Aurora, Tentação e equipe são os grandes heróis</li>
+          <li>Site e embalagem precisam carregar mais narrativa</li>
+          <li>Zero causas trabalhistas é ativo de marca — precisa ser dito</li>
+          <li>O diferencial competitivo da Cake é humano, não gastronômico</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ FECHAMENTO ════════ -->
+<div class="closing-section">
+  <h2 class="closing-title">A Cake não precisa parecer <em>grande</em>.<br>Ela precisa parecer <em>inesquecível</em>.</h2>
+  <p class="closing-sub">Porque marca forte não nasce só de mídia.<br>Nasce de verdade bem contada — e disso a Cake tem de sobra.</p>
+  <div class="closing-stats">
+    <div class="cs"><span class="cs-num">30</span><span class="cs-lbl">anos de história real</span></div>
+    <div class="cs"><span class="cs-num">200+</span><span class="cs-lbl">receitas intactas</span></div>
+    <div class="cs"><span class="cs-num">0</span><span class="cs-lbl">causas trabalhistas</span></div>
+    <div class="cs"><span class="cs-num">1</span><span class="cs-lbl">alma impossível de copiar</span></div>
+  </div>
+</div>
+
+</body>
+</html>

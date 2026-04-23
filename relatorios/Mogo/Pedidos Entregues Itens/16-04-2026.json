@@ -1,0 +1,4062 @@
+[
+  {
+    "pedido_id": 143208,
+    "numero_pedido": "029711",
+    "cliente": "Mariana Coutinho",
+    "origem": "IFood",
+    "data_entrega": "16/04/2026",
+    "hora_entrega": "22:27",
+    "bairro": "Botafogo",
+    "forma_entrega": "P/Entregar (Motoboy)",
+    "valor_final": "95,24",
+    "itens": [
+      {
+        "produto": "FT FANTASIA",
+        "quantidade": 1.0,
+        "valor_total": "33,00",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      },
+      {
+        "produto": "FT RED VELVET",
+        "quantidade": 1.0,
+        "valor_total": "36,75",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      },
+      {
+        "produto": "FT TENTACAO",
+        "quantidade": 1.0,
+        "valor_total": "33,50",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      },
+      {
+        "produto": "Taxa de entrega",
+        "quantidade": 1.0,
+        "valor_total": "0,00",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      },
+      {
+        "produto": "Taxa de Serviço",
+        "quantidade": 1.0,
+        "valor_total": "1,99",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      }
+    ]
+  },
+  {
+    "pedido_id": 143207,
+    "numero_pedido": "029710",
+    "cliente": "Horacio Andres Leon Encina",
+    "origem": "IFood",
+    "data_entrega": "16/04/2026",
+    "hora_entrega": "22:14",
+    "bairro": "Botafogo",
+    "forma_entrega": "P/Entregar (Motoboy)",
+    "valor_final": "57,98",
+    "itens": [
+      {
+        "produto": "Taxa de entrega",
+        "quantidade": 1.0,
+        "valor_total": "14,99",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": "frente ao posto"
+      },
+      {
+        "produto": "Taxa de Serviço",
+        "quantidade": 1.0,
+        "valor_total": "0,99",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": "frente ao posto"
+      },
+      {
+        "produto": "VELA ESTRELA DOURADA 4UN",
+        "quantidade": 1.0,
+        "valor_total": "33,00",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": "frente ao posto"
+      },
+      {
+        "produto": "VELA FAISCA",
+        "quantidade": 1.0,
+        "valor_total": "19,00",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": "frente ao posto"
+      }
+    ]
+  },
+  {
+    "pedido_id": 143206,
+    "numero_pedido": "029709",
+    "cliente": "Sueli Donizete",
+    "origem": "IFood",
+    "data_entrega": "16/04/2026",
+    "hora_entrega": "22:14",
+    "bairro": "Botafogo",
+    "forma_entrega": "P/Entregar (Motoboy)",
+    "valor_final": "96,99",
+    "itens": [
+      {
+        "produto": "BRIG. C/ MORANGO BRANCO",
+        "quantidade": 1.0,
+        "valor_total": "16,50",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": "Na Altura Da Sorocaba"
+      },
+      {
+        "produto": "BRIG. C/ MORANGO TRADICIONAL",
+        "quantidade": 1.0,
+        "valor_total": "16,50",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": "Na Altura Da Sorocaba"
+      },
+      {
+        "produto": "PATE SECRETO 150GR",
+        "quantidade": 1.0,
+        "valor_total": "63,00",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": "Na Altura Da Sorocaba"
+      },
+      {
+        "produto": "Taxa de entrega",
+        "quantidade": 1.0,
+        "valor_total": "0,00",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": "Na Altura Da Sorocaba"
+      },
+      {
+        "produto": "Taxa de Serviço",
+        "quantidade": 1.0,
+        "valor_total": "0,99",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": "Na Altura Da Sorocaba"
+      }
+    ]
+  },
+  {
+    "pedido_id": 143205,
+    "numero_pedido": "029708",
+    "cliente": "Natacha Bischoff",
+    "origem": "IFood",
+    "data_entrega": "16/04/2026",
+    "hora_entrega": "22:06",
+    "bairro": "Copacabana",
+    "forma_entrega": "P/Entregar (Motoboy)",
+    "valor_final": "56,93",
+    "itens": [
+      {
+        "produto": "Taxa de entrega",
+        "quantidade": 1.0,
+        "valor_total": "10,99",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": "Em cima da lavandeiria Rio."
+      },
+      {
+        "produto": "Taxa de Serviço",
+        "quantidade": 1.0,
+        "valor_total": "0,99",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": "Em cima da lavandeiria Rio."
+      },
+      {
+        "produto": "TORTINHA GOURMET MISTA FESTA CX",
+        "quantidade": 1.0,
+        "valor_total": "54,95",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": "Em cima da lavandeiria Rio."
+      }
+    ]
+  },
+  {
+    "pedido_id": 143204,
+    "numero_pedido": "029707",
+    "cliente": "LUIZ TORRES",
+    "origem": "IFood",
+    "data_entrega": "16/04/2026",
+    "hora_entrega": "22:07",
+    "bairro": "Catete",
+    "forma_entrega": "P/Entregar (Motoboy)",
+    "valor_final": "229,08",
+    "itens": [
+      {
+        "produto": "BRIG. C/ MORANGO BRULEE",
+        "quantidade": 2.0,
+        "valor_total": "43,60",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      },
+      {
+        "produto": "MORANGO - DELICIOSA NAKED F13",
+        "quantidade": 1.0,
+        "valor_total": "169,50",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      },
+      {
+        "produto": "Taxa de entrega",
+        "quantidade": 1.0,
+        "valor_total": "13,99",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      },
+      {
+        "produto": "Taxa de Serviço",
+        "quantidade": 1.0,
+        "valor_total": "1,99",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      }
+    ]
+  },
+  {
+    "pedido_id": 143202,
+    "numero_pedido": "029705",
+    "cliente": "Graziella Mendonça",
+    "origem": "IFood",
+    "data_entrega": "16/04/2026",
+    "hora_entrega": "21:46",
+    "bairro": "Leblon",
+    "forma_entrega": "P/Entregar (Motoboy)",
+    "valor_final": "243,38",
+    "itens": [
+      {
+        "produto": "IF BRIG. BRULLE",
+        "quantidade": 1.0,
+        "valor_total": "0,00",
+        "adicionais": [
+          "Brûlée CX 12 UN"
+        ],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      },
+      {
+        "produto": "IF VELA PRATA NUMERO",
+        "quantidade": 1.0,
+        "valor_total": "0,00",
+        "adicionais": [
+          "Vela Prata nº 9"
+        ],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      },
+      {
+        "produto": "MORANGO - DELICIOSA NAKED F13",
+        "quantidade": 1.0,
+        "valor_total": "169,50",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      },
+      {
+        "produto": "Taxa de entrega",
+        "quantidade": 1.0,
+        "valor_total": "13,99",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      },
+      {
+        "produto": "Taxa de Serviço",
+        "quantidade": 1.0,
+        "valor_total": "1,99",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      }
+    ]
+  },
+  {
+    "pedido_id": 143200,
+    "numero_pedido": "029703",
+    "cliente": "Daniela Galper",
+    "origem": "IFood",
+    "data_entrega": "16/04/2026",
+    "hora_entrega": "21:32",
+    "bairro": "Leme",
+    "forma_entrega": "P/Entregar (Motoboy)",
+    "valor_final": "80,48",
+    "itens": [
+      {
+        "produto": "FT CHEESECAKE FRTS VERM.",
+        "quantidade": 1.0,
+        "valor_total": "33,00",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      },
+      {
+        "produto": "FT MARAVILHA ABACAXI",
+        "quantidade": 1.0,
+        "valor_total": "33,50",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      },
+      {
+        "produto": "Taxa de entrega",
+        "quantidade": 1.0,
+        "valor_total": "12,99",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      },
+      {
+        "produto": "Taxa de Serviço",
+        "quantidade": 1.0,
+        "valor_total": "0,99",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      }
+    ]
+  },
+  {
+    "pedido_id": 143199,
+    "numero_pedido": "029702",
+    "cliente": "MARIANA MIRANDA",
+    "origem": "IFood",
+    "data_entrega": "16/04/2026",
+    "hora_entrega": "21:27",
+    "bairro": "Flamengo",
+    "forma_entrega": "P/Entregar (Motoboy)",
+    "valor_final": "80,28",
+    "itens": [
+      {
+        "produto": "BRIG. C/ MORANGO BRULEE",
+        "quantidade": 1.0,
+        "valor_total": "21,80",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": "Em cima da drogasmil"
+      },
+      {
+        "produto": "Taxa de entrega",
+        "quantidade": 1.0,
+        "valor_total": "10,99",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": "Em cima da drogasmil"
+      },
+      {
+        "produto": "Taxa de Serviço",
+        "quantidade": 1.0,
+        "valor_total": "0,99",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": "Em cima da drogasmil"
+      },
+      {
+        "produto": "VULCAO CENOURA",
+        "quantidade": 1.0,
+        "valor_total": "28,00",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": "Em cima da drogasmil"
+      },
+      {
+        "produto": "VULCAO DE NUTELLA",
+        "quantidade": 1.0,
+        "valor_total": "28,50",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": "Em cima da drogasmil"
+      }
+    ]
+  },
+  {
+    "pedido_id": 143198,
+    "numero_pedido": "029701",
+    "cliente": "GIULIA COLUCCI",
+    "origem": "IFood",
+    "data_entrega": "16/04/2026",
+    "hora_entrega": "21:10",
+    "bairro": "Botafogo",
+    "forma_entrega": "P/Entregar (Motoboy)",
+    "valor_final": "23,87",
+    "itens": [
+      {
+        "produto": "FT TORTA LIMAO",
+        "quantidade": 1.0,
+        "valor_total": "30,50",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      },
+      {
+        "produto": "Taxa de entrega",
+        "quantidade": 1.0,
+        "valor_total": "0,00",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      },
+      {
+        "produto": "Taxa de Serviço",
+        "quantidade": 1.0,
+        "valor_total": "0,99",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      }
+    ]
+  },
+  {
+    "pedido_id": 143197,
+    "numero_pedido": "029700",
+    "cliente": "Bianca Brandão",
+    "origem": "IFood",
+    "data_entrega": "16/04/2026",
+    "hora_entrega": "21:10",
+    "bairro": "Botafogo",
+    "forma_entrega": "P/Entregar (Motoboy)",
+    "valor_final": "38,49",
+    "itens": [
+      {
+        "produto": "FT CHOCONOZES",
+        "quantidade": 1.0,
+        "valor_total": "37,50",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      },
+      {
+        "produto": "Taxa de entrega",
+        "quantidade": 1.0,
+        "valor_total": "0,00",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      },
+      {
+        "produto": "Taxa de Serviço",
+        "quantidade": 1.0,
+        "valor_total": "0,99",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      }
+    ]
+  },
+  {
+    "pedido_id": 143195,
+    "numero_pedido": "029698",
+    "cliente": "Luciano Ferreira",
+    "origem": "IFood",
+    "data_entrega": "16/04/2026",
+    "hora_entrega": "21:09",
+    "bairro": "Copacabana",
+    "forma_entrega": "P/Entregar (Motoboy)",
+    "valor_final": "64,98",
+    "itens": [
+      {
+        "produto": "BRIG. C/ MORANGO BRANCO",
+        "quantidade": 1.0,
+        "valor_total": "16,50",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      },
+      {
+        "produto": "BRIG. C/ MORANGO TRADICIONAL",
+        "quantidade": 1.0,
+        "valor_total": "16,50",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      },
+      {
+        "produto": "FT CHEESECAKE FRTS VERM.",
+        "quantidade": 1.0,
+        "valor_total": "33,00",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      },
+      {
+        "produto": "Taxa de entrega",
+        "quantidade": 1.0,
+        "valor_total": "9,99",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      },
+      {
+        "produto": "Taxa de Serviço",
+        "quantidade": 1.0,
+        "valor_total": "0,99",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      }
+    ]
+  },
+  {
+    "pedido_id": 143194,
+    "numero_pedido": "029697",
+    "cliente": "LUCIA ALMEIDA",
+    "origem": "IFood",
+    "data_entrega": "16/04/2026",
+    "hora_entrega": "21:03",
+    "bairro": "Humaitá",
+    "forma_entrega": "P/Entregar (Motoboy)",
+    "valor_final": "18,99",
+    "itens": [
+      {
+        "produto": "FT FANTASIA",
+        "quantidade": 1.0,
+        "valor_total": "33,00",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      },
+      {
+        "produto": "Taxa de entrega",
+        "quantidade": 1.0,
+        "valor_total": "0,00",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      },
+      {
+        "produto": "Taxa de Serviço",
+        "quantidade": 1.0,
+        "valor_total": "0,99",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      }
+    ]
+  },
+  {
+    "pedido_id": 143193,
+    "numero_pedido": "029696",
+    "cliente": "LUIZA BOTELHO",
+    "origem": "IFood",
+    "data_entrega": "16/04/2026",
+    "hora_entrega": "21:04",
+    "bairro": "Copacabana",
+    "forma_entrega": "P/Entregar (Motoboy)",
+    "valor_final": "33,89",
+    "itens": [
+      {
+        "produto": "IF BRIG. DARK",
+        "quantidade": 1.0,
+        "valor_total": "0,00",
+        "adicionais": [
+          "Dark CX 12 UN"
+        ],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": "Oi, gente! Podem adicionar um bilhetinho de niver pra minha mãe? “Mãe, um docinho para abrilhantar a festa. Te amo muito! Parabéns ♥️”"
+      },
+      {
+        "produto": "Taxa de entrega",
+        "quantidade": 1.0,
+        "valor_total": "0,00",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      },
+      {
+        "produto": "Taxa de Serviço",
+        "quantidade": 1.0,
+        "valor_total": "0,99",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      }
+    ]
+  },
+  {
+    "pedido_id": 143192,
+    "numero_pedido": "029695",
+    "cliente": "Laís Prata",
+    "origem": "IFood",
+    "data_entrega": "16/04/2026",
+    "hora_entrega": "21:23",
+    "bairro": "Tijuca",
+    "forma_entrega": "P/Entregar (Motoboy)",
+    "valor_final": "78,48",
+    "itens": [
+      {
+        "produto": "FT CROCANTE",
+        "quantidade": 1.0,
+        "valor_total": "33,50",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": "Em frente ao assaí (centro coreografico) um castelinho branco"
+      },
+      {
+        "produto": "FT FANTASIA",
+        "quantidade": 1.0,
+        "valor_total": "33,00",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": "Em frente ao assaí (centro coreografico) um castelinho branco"
+      },
+      {
+        "produto": "Taxa de entrega",
+        "quantidade": 1.0,
+        "valor_total": "20,99",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": "Em frente ao assaí (centro coreografico) um castelinho branco"
+      },
+      {
+        "produto": "Taxa de Serviço",
+        "quantidade": 1.0,
+        "valor_total": "0,99",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": "Em frente ao assaí (centro coreografico) um castelinho branco"
+      }
+    ]
+  },
+  {
+    "pedido_id": 143191,
+    "numero_pedido": "029694",
+    "cliente": "CAIO MAS SZTAJMAN",
+    "origem": "IFood",
+    "data_entrega": "16/04/2026",
+    "hora_entrega": "21:10",
+    "bairro": "Ipanema",
+    "forma_entrega": "P/Entregar (Motoboy)",
+    "valor_final": "77,23",
+    "itens": [
+      {
+        "produto": "FT CROCANTE",
+        "quantidade": 1.0,
+        "valor_total": "33,50",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      },
+      {
+        "produto": "MORANGO - FT DELICIOSA",
+        "quantidade": 1.0,
+        "valor_total": "38,75",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      },
+      {
+        "produto": "Taxa de entrega",
+        "quantidade": 1.0,
+        "valor_total": "13,99",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      },
+      {
+        "produto": "Taxa de Serviço",
+        "quantidade": 1.0,
+        "valor_total": "0,99",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      }
+    ]
+  },
+  {
+    "pedido_id": 143190,
+    "numero_pedido": "029693",
+    "cliente": "Patrick Andrade",
+    "origem": "IFood",
+    "data_entrega": "16/04/2026",
+    "hora_entrega": "21:04",
+    "bairro": "Copacabana",
+    "forma_entrega": "P/Entregar (Motoboy)",
+    "valor_final": "106,98",
+    "itens": [
+      {
+        "produto": "FT CROCANTE",
+        "quantidade": 1.0,
+        "valor_total": "33,50",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      },
+      {
+        "produto": "FT SWEET DARK",
+        "quantidade": 1.0,
+        "valor_total": "36,50",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      },
+      {
+        "produto": "FT TORTA BANANA",
+        "quantidade": 1.0,
+        "valor_total": "32,00",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      },
+      {
+        "produto": "Taxa de entrega",
+        "quantidade": 1.0,
+        "valor_total": "12,99",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      },
+      {
+        "produto": "Taxa de Serviço",
+        "quantidade": 1.0,
+        "valor_total": "1,99",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      }
+    ]
+  },
+  {
+    "pedido_id": 143189,
+    "numero_pedido": "029692",
+    "cliente": "GIOVANA LINHARES",
+    "origem": "IFood",
+    "data_entrega": "16/04/2026",
+    "hora_entrega": "21:10",
+    "bairro": "Tijuca",
+    "forma_entrega": "P/Entregar (Motoboy)",
+    "valor_final": "75,23",
+    "itens": [
+      {
+        "produto": "FT TENTACAO",
+        "quantidade": 1.0,
+        "valor_total": "33,50",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      },
+      {
+        "produto": "MORANGO - FT DELICIOSA",
+        "quantidade": 1.0,
+        "valor_total": "38,75",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      },
+      {
+        "produto": "Taxa de entrega",
+        "quantidade": 1.0,
+        "valor_total": "21,99",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      },
+      {
+        "produto": "Taxa de Serviço",
+        "quantidade": 1.0,
+        "valor_total": "0,99",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      }
+    ]
+  },
+  {
+    "pedido_id": 143188,
+    "numero_pedido": "029691",
+    "cliente": "Carolina Magalhaes",
+    "origem": "IFood",
+    "data_entrega": "16/04/2026",
+    "hora_entrega": "20:42",
+    "bairro": "Botafogo",
+    "forma_entrega": "P/Entregar (Motoboy)",
+    "valor_final": "35,79",
+    "itens": [
+      {
+        "produto": "BRIG. C/ MORANGO BRANCO",
+        "quantidade": 1.0,
+        "valor_total": "16,50",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": "Cond do Spotlight 2"
+      },
+      {
+        "produto": "BRIG. C/ MORANGO BRULEE",
+        "quantidade": 1.0,
+        "valor_total": "21,80",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": "Cond do Spotlight 2"
+      },
+      {
+        "produto": "BRIG. C/ MORANGO TRADICIONAL",
+        "quantidade": 1.0,
+        "valor_total": "16,50",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": "Cond do Spotlight 2"
+      },
+      {
+        "produto": "Taxa de entrega",
+        "quantidade": 1.0,
+        "valor_total": "0,00",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": "Cond do Spotlight 2"
+      },
+      {
+        "produto": "Taxa de Serviço",
+        "quantidade": 1.0,
+        "valor_total": "0,99",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": "Cond do Spotlight 2"
+      }
+    ]
+  },
+  {
+    "pedido_id": 143187,
+    "numero_pedido": "029690",
+    "cliente": "Monique Evans",
+    "origem": "IFood",
+    "data_entrega": "16/04/2026",
+    "hora_entrega": "20:44",
+    "bairro": "Ipanema",
+    "forma_entrega": "P/Entregar (Motoboy)",
+    "valor_final": "48,98",
+    "itens": [
+      {
+        "produto": "BRIG. C/ MORANGO TRADICIONAL",
+        "quantidade": 2.0,
+        "valor_total": "33,00",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      },
+      {
+        "produto": "Taxa de entrega",
+        "quantidade": 1.0,
+        "valor_total": "14,99",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      },
+      {
+        "produto": "Taxa de Serviço",
+        "quantidade": 1.0,
+        "valor_total": "0,99",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      }
+    ]
+  },
+  {
+    "pedido_id": 143186,
+    "numero_pedido": "029689",
+    "cliente": "Rê Freitas",
+    "origem": "IFood",
+    "data_entrega": "16/04/2026",
+    "hora_entrega": "20:36",
+    "bairro": "Laranjeiras",
+    "forma_entrega": "P/Entregar (Motoboy)",
+    "valor_final": "126,53",
+    "itens": [
+      {
+        "produto": "BRIG. C/ MORANGO BRULEE",
+        "quantidade": 1.0,
+        "valor_total": "21,80",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": "Academia Exata"
+      },
+      {
+        "produto": "BRIG. C/ MORANGO TRADICIONAL",
+        "quantidade": 1.0,
+        "valor_total": "16,50",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": "Academia Exata"
+      },
+      {
+        "produto": "FT TENTACAO",
+        "quantidade": 1.0,
+        "valor_total": "33,50",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": "Academia Exata"
+      },
+      {
+        "produto": "MORANGO - FT DELICIOSA",
+        "quantidade": 1.0,
+        "valor_total": "38,75",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": "Academia Exata"
+      },
+      {
+        "produto": "Taxa de entrega",
+        "quantidade": 1.0,
+        "valor_total": "13,99",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": "Academia Exata"
+      },
+      {
+        "produto": "Taxa de Serviço",
+        "quantidade": 1.0,
+        "valor_total": "1,99",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": "Academia Exata"
+      }
+    ]
+  },
+  {
+    "pedido_id": 143185,
+    "numero_pedido": "029688",
+    "cliente": "Renata Emília Rodrigues Marques ",
+    "origem": "IFood",
+    "data_entrega": "16/04/2026",
+    "hora_entrega": "20:30",
+    "bairro": "Flamengo",
+    "forma_entrega": "P/Entregar (Motoboy)",
+    "valor_final": "66,98",
+    "itens": [
+      {
+        "produto": "BRIG. C/ MORANGO TRADICIONAL",
+        "quantidade": 1.0,
+        "valor_total": "16,50",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": "Prédio em frente à Rua Ypiranga"
+      },
+      {
+        "produto": "FT AURORA",
+        "quantidade": 1.0,
+        "valor_total": "32,00",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": "Prédio em frente à Rua Ypiranga"
+      },
+      {
+        "produto": "Taxa de entrega",
+        "quantidade": 1.0,
+        "valor_total": "10,99",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": "Prédio em frente à Rua Ypiranga"
+      },
+      {
+        "produto": "Taxa de Serviço",
+        "quantidade": 1.0,
+        "valor_total": "0,99",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": "Prédio em frente à Rua Ypiranga"
+      },
+      {
+        "produto": "TORTINHA BABA",
+        "quantidade": 1.0,
+        "valor_total": "16,50",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": "Prédio em frente à Rua Ypiranga"
+      }
+    ]
+  },
+  {
+    "pedido_id": 143184,
+    "numero_pedido": "029687",
+    "cliente": "Juliana Scardino",
+    "origem": "IFood",
+    "data_entrega": "16/04/2026",
+    "hora_entrega": "20:24",
+    "bairro": "Copacabana",
+    "forma_entrega": "P/Entregar (Motoboy)",
+    "valor_final": "39,74",
+    "itens": [
+      {
+        "produto": "MORANGO - FT DELICIOSA",
+        "quantidade": 1.0,
+        "valor_total": "38,75",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": "Entre siqueira Campos e figueiredo de Magalhães"
+      },
+      {
+        "produto": "Taxa de entrega",
+        "quantidade": 1.0,
+        "valor_total": "0,00",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": "Entre siqueira Campos e figueiredo de Magalhães"
+      },
+      {
+        "produto": "Taxa de Serviço",
+        "quantidade": 1.0,
+        "valor_total": "0,99",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": "Entre siqueira Campos e figueiredo de Magalhães"
+      }
+    ]
+  },
+  {
+    "pedido_id": 143182,
+    "numero_pedido": "029685",
+    "cliente": "Pedro Curi",
+    "origem": "IFood",
+    "data_entrega": "16/04/2026",
+    "hora_entrega": "20:16",
+    "bairro": "Flamengo",
+    "forma_entrega": "P/Entregar (Motoboy)",
+    "valor_final": "144,64",
+    "itens": [
+      {
+        "produto": "BOLO TOCA DO COELHO",
+        "quantidade": 1.0,
+        "valor_total": "44,50",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": "Bem no início da rua, do lado direito. Tem uma lixeira laranja na frente."
+      },
+      {
+        "produto": "BRIG. C/ MORANGO TRADICIONAL",
+        "quantidade": 1.0,
+        "valor_total": "16,50",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": "Bem no início da rua, do lado direito. Tem uma lixeira laranja na frente."
+      },
+      {
+        "produto": "IF BRIG. BRANCO DIVERTIDO",
+        "quantidade": 1.0,
+        "valor_total": "0,00",
+        "adicionais": [
+          "Branco Divertido CX 12 UN"
+        ],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": "Bem no início da rua, do lado direito. Tem uma lixeira laranja na frente."
+      },
+      {
+        "produto": "MORANGO - FT DELICIOSA",
+        "quantidade": 1.0,
+        "valor_total": "38,75",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": "Bem no início da rua, do lado direito. Tem uma lixeira laranja na frente."
+      },
+      {
+        "produto": "Taxa de entrega",
+        "quantidade": 1.0,
+        "valor_total": "0,00",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": "Bem no início da rua, do lado direito. Tem uma lixeira laranja na frente."
+      },
+      {
+        "produto": "Taxa de Serviço",
+        "quantidade": 1.0,
+        "valor_total": "1,99",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": "Bem no início da rua, do lado direito. Tem uma lixeira laranja na frente."
+      }
+    ]
+  },
+  {
+    "pedido_id": 143181,
+    "numero_pedido": "029684",
+    "cliente": "Sylvio Meanda",
+    "origem": "IFood",
+    "data_entrega": "16/04/2026",
+    "hora_entrega": "20:18",
+    "bairro": "Flamengo",
+    "forma_entrega": "P/Entregar (Motoboy)",
+    "valor_final": "67,98",
+    "itens": [
+      {
+        "produto": "FT TENTACAO",
+        "quantidade": 1.0,
+        "valor_total": "33,50",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      },
+      {
+        "produto": "FT TORTA LIMAO",
+        "quantidade": 1.0,
+        "valor_total": "30,50",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      },
+      {
+        "produto": "Taxa de entrega",
+        "quantidade": 1.0,
+        "valor_total": "12,99",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      },
+      {
+        "produto": "Taxa de Serviço",
+        "quantidade": 1.0,
+        "valor_total": "0,99",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      }
+    ]
+  },
+  {
+    "pedido_id": 143180,
+    "numero_pedido": "029683",
+    "cliente": "Ana Paula de Castro Forman",
+    "origem": "IFood",
+    "data_entrega": "16/04/2026",
+    "hora_entrega": "19:56",
+    "bairro": "Flamengo",
+    "forma_entrega": "P/Entregar (Motoboy)",
+    "valor_final": "86,44",
+    "itens": [
+      {
+        "produto": "FT TORTA LIMAO",
+        "quantidade": 1.0,
+        "valor_total": "30,50",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": "Próximo ao Hospital Fernandes Figueira"
+      },
+      {
+        "produto": "Taxa de entrega",
+        "quantidade": 1.0,
+        "valor_total": "0,00",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": "Próximo ao Hospital Fernandes Figueira"
+      },
+      {
+        "produto": "Taxa de Serviço",
+        "quantidade": 1.0,
+        "valor_total": "0,99",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": "Próximo ao Hospital Fernandes Figueira"
+      },
+      {
+        "produto": "TORTINHA GOURMET MISTA FESTA CX",
+        "quantidade": 1.0,
+        "valor_total": "54,95",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": "Próximo ao Hospital Fernandes Figueira"
+      }
+    ]
+  },
+  {
+    "pedido_id": 143178,
+    "numero_pedido": "029681",
+    "cliente": "Dulciane Barros Pinheiro",
+    "origem": "IFood",
+    "data_entrega": "16/04/2026",
+    "hora_entrega": "19:27",
+    "bairro": "Lagoa",
+    "forma_entrega": "P/Entregar (Motoboy)",
+    "valor_final": "41,98",
+    "itens": [
+      {
+        "produto": "FT ALEMA",
+        "quantidade": 1.0,
+        "valor_total": "32,00",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": "Academia Velox"
+      },
+      {
+        "produto": "IF VELA PRATA NUMERO",
+        "quantidade": 1.0,
+        "valor_total": "0,00",
+        "adicionais": [
+          "Vela Prata nº 1"
+        ],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": "Academia Velox"
+      },
+      {
+        "produto": "Taxa de entrega",
+        "quantidade": 1.0,
+        "valor_total": "3,99",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": "Academia Velox"
+      },
+      {
+        "produto": "Taxa de Serviço",
+        "quantidade": 1.0,
+        "valor_total": "0,99",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": "Academia Velox"
+      }
+    ]
+  },
+  {
+    "pedido_id": 143177,
+    "numero_pedido": "029680",
+    "cliente": "Lucas Prado",
+    "origem": "IFood",
+    "data_entrega": "16/04/2026",
+    "hora_entrega": "19:18",
+    "bairro": "Botafogo",
+    "forma_entrega": "P/Entregar (Motoboy)",
+    "valor_final": "12,74",
+    "itens": [
+      {
+        "produto": "FT CHOCOBERRIES",
+        "quantidade": 1.0,
+        "valor_total": "36,75",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      },
+      {
+        "produto": "Taxa de entrega",
+        "quantidade": 1.0,
+        "valor_total": "0,00",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      },
+      {
+        "produto": "Taxa de Serviço",
+        "quantidade": 1.0,
+        "valor_total": "0,99",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      }
+    ]
+  },
+  {
+    "pedido_id": 143176,
+    "numero_pedido": "029679",
+    "cliente": "Patricia  Matias",
+    "origem": "IFood",
+    "data_entrega": "16/04/2026",
+    "hora_entrega": "19:28",
+    "bairro": "Copacabana",
+    "forma_entrega": "P/Entregar (Motoboy)",
+    "valor_final": "433,99",
+    "itens": [
+      {
+        "produto": "MORANGO - DELICIOSA NAKED F25",
+        "quantidade": 1.0,
+        "valor_total": "395,00",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      },
+      {
+        "produto": "Taxa de entrega",
+        "quantidade": 1.0,
+        "valor_total": "0,00",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      },
+      {
+        "produto": "Taxa de Serviço",
+        "quantidade": 1.0,
+        "valor_total": "1,99",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      },
+      {
+        "produto": "VELA PARABENS NEON",
+        "quantidade": 1.0,
+        "valor_total": "37,00",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      }
+    ]
+  },
+  {
+    "pedido_id": 143175,
+    "numero_pedido": "029678",
+    "cliente": "GUILHERME SIMONINI",
+    "origem": "IFood",
+    "data_entrega": "16/04/2026",
+    "hora_entrega": "19:16",
+    "bairro": "Lagoa",
+    "forma_entrega": "P/Entregar (Motoboy)",
+    "valor_final": "55,49",
+    "itens": [
+      {
+        "produto": "FT FANTASIA",
+        "quantidade": 1.0,
+        "valor_total": "33,00",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      },
+      {
+        "produto": "FT TENTACAO",
+        "quantidade": 1.0,
+        "valor_total": "33,50",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      },
+      {
+        "produto": "Taxa de entrega",
+        "quantidade": 1.0,
+        "valor_total": "0,00",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      },
+      {
+        "produto": "Taxa de Serviço",
+        "quantidade": 1.0,
+        "valor_total": "0,99",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      }
+    ]
+  },
+  {
+    "pedido_id": 143170,
+    "numero_pedido": "029673",
+    "cliente": "Pedro Ribeiro",
+    "origem": "IFood",
+    "data_entrega": "16/04/2026",
+    "hora_entrega": "19:14",
+    "bairro": "Leme",
+    "forma_entrega": "P/Entregar (Motoboy)",
+    "valor_final": "64,48",
+    "itens": [
+      {
+        "produto": "FT AURORA",
+        "quantidade": 1.0,
+        "valor_total": "32,00",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": "Rua sem saída/ Início Av. Nossa Senhora de Copacabana"
+      },
+      {
+        "produto": "FT TORTA LIMAO",
+        "quantidade": 1.0,
+        "valor_total": "30,50",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": "Rua sem saída/ Início Av. Nossa Senhora de Copacabana"
+      },
+      {
+        "produto": "Taxa de entrega",
+        "quantidade": 1.0,
+        "valor_total": "10,99",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": "Rua sem saída/ Início Av. Nossa Senhora de Copacabana"
+      },
+      {
+        "produto": "Taxa de Serviço",
+        "quantidade": 1.0,
+        "valor_total": "0,99",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": "Rua sem saída/ Início Av. Nossa Senhora de Copacabana"
+      }
+    ]
+  },
+  {
+    "pedido_id": 143169,
+    "numero_pedido": "029672",
+    "cliente": "Lenine Alves dos Santos",
+    "origem": "IFood",
+    "data_entrega": "16/04/2026",
+    "hora_entrega": "19:13",
+    "bairro": "Glória",
+    "forma_entrega": "P/Entregar (Motoboy)",
+    "valor_final": "110,48",
+    "itens": [
+      {
+        "produto": "FT SWEET DARK",
+        "quantidade": 1.0,
+        "valor_total": "36,50",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      },
+      {
+        "produto": "FT TORTA LIMAO",
+        "quantidade": 1.0,
+        "valor_total": "30,50",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      },
+      {
+        "produto": "Taxa de entrega",
+        "quantidade": 1.0,
+        "valor_total": "13,99",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      },
+      {
+        "produto": "Taxa de Serviço",
+        "quantidade": 1.0,
+        "valor_total": "0,99",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      },
+      {
+        "produto": "VULCAO DE NUTELLA",
+        "quantidade": 1.0,
+        "valor_total": "28,50",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      }
+    ]
+  },
+  {
+    "pedido_id": 143161,
+    "numero_pedido": "029664",
+    "cliente": "Sandro Vaz",
+    "origem": "IFood",
+    "data_entrega": "16/04/2026",
+    "hora_entrega": "18:44",
+    "bairro": "Botafogo",
+    "forma_entrega": "P/Entregar (Motoboy)",
+    "valor_final": "27,49",
+    "itens": [
+      {
+        "produto": "FT SWEET DARK",
+        "quantidade": 1.0,
+        "valor_total": "36,50",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      },
+      {
+        "produto": "Taxa de entrega",
+        "quantidade": 1.0,
+        "valor_total": "0,00",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      },
+      {
+        "produto": "Taxa de Serviço",
+        "quantidade": 1.0,
+        "valor_total": "0,99",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      }
+    ]
+  },
+  {
+    "pedido_id": 143160,
+    "numero_pedido": "029663",
+    "cliente": "Daniel de Alcantara Prazeres",
+    "origem": "IFood",
+    "data_entrega": "16/04/2026",
+    "hora_entrega": "18:32",
+    "bairro": "Botafogo",
+    "forma_entrega": "P/Entregar (Motoboy)",
+    "valor_final": "175,49",
+    "itens": [
+      {
+        "produto": "FT TORTA LIMAO",
+        "quantidade": 2.0,
+        "valor_total": "61,00",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": "Condominio morada do sol"
+      },
+      {
+        "produto": "MORANGO - FT DELICIOSA",
+        "quantidade": 2.0,
+        "valor_total": "77,50",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": "Condominio morada do sol"
+      },
+      {
+        "produto": "QUINDIM UN",
+        "quantidade": 2.0,
+        "valor_total": "28,00",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": "Condominio morada do sol"
+      },
+      {
+        "produto": "Taxa de entrega",
+        "quantidade": 1.0,
+        "valor_total": "7,00",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": "Condominio morada do sol"
+      },
+      {
+        "produto": "Taxa de Serviço",
+        "quantidade": 1.0,
+        "valor_total": "1,99",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": "Condominio morada do sol"
+      }
+    ]
+  },
+  {
+    "pedido_id": 143158,
+    "numero_pedido": "029661",
+    "cliente": "Maria Carolina",
+    "origem": "IFood",
+    "data_entrega": "16/04/2026",
+    "hora_entrega": "18:33",
+    "bairro": "Ipanema",
+    "forma_entrega": "P/Entregar (Motoboy)",
+    "valor_final": "45,48",
+    "itens": [
+      {
+        "produto": "IF VELA DOURADA NUMERO",
+        "quantidade": 1.0,
+        "valor_total": "0,00",
+        "adicionais": [
+          "Vela Dourada nº 2",
+          "Vela Dourada nº 3"
+        ],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      },
+      {
+        "produto": "Taxa de entrega",
+        "quantidade": 1.0,
+        "valor_total": "21,99",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      },
+      {
+        "produto": "Taxa de Serviço",
+        "quantidade": 1.0,
+        "valor_total": "0,99",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      }
+    ]
+  },
+  {
+    "pedido_id": 143151,
+    "numero_pedido": "029654",
+    "cliente": "Gabrielle de Souza Rocha Alves Dos Santos Abreu",
+    "origem": "IFood",
+    "data_entrega": "16/04/2026",
+    "hora_entrega": "18:29",
+    "bairro": "Sampaio",
+    "forma_entrega": "P/Entregar (Motoboy)",
+    "valor_final": "166,98",
+    "itens": [
+      {
+        "produto": "Taxa de entrega",
+        "quantidade": 1.0,
+        "valor_total": "24,99",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": "Rua Em frente à estação do Sampaio"
+      },
+      {
+        "produto": "Taxa de Serviço",
+        "quantidade": 1.0,
+        "valor_total": "1,99",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": "Rua Em frente à estação do Sampaio"
+      },
+      {
+        "produto": "TORTA MOUSSE F13",
+        "quantidade": 1.0,
+        "valor_total": "148,00",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": "Rua Em frente à estação do Sampaio"
+      }
+    ]
+  },
+  {
+    "pedido_id": 143149,
+    "numero_pedido": "029652",
+    "cliente": "MARIA N TABORDA",
+    "origem": "IFood",
+    "data_entrega": "16/04/2026",
+    "hora_entrega": "18:18",
+    "bairro": "Santa Teresa",
+    "forma_entrega": "P/Entregar (Motoboy)",
+    "valor_final": "389,53",
+    "itens": [
+      {
+        "produto": "RED VELVET F25",
+        "quantidade": 1.0,
+        "valor_total": "365,55",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      },
+      {
+        "produto": "Taxa de entrega",
+        "quantidade": 1.0,
+        "valor_total": "21,99",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      },
+      {
+        "produto": "Taxa de Serviço",
+        "quantidade": 1.0,
+        "valor_total": "1,99",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      }
+    ]
+  },
+  {
+    "pedido_id": 143141,
+    "numero_pedido": "029644",
+    "cliente": "Alexandra Goncalves",
+    "origem": "IFood",
+    "data_entrega": "16/04/2026",
+    "hora_entrega": "17:47",
+    "bairro": "Ipanema",
+    "forma_entrega": "P/Entregar (Motoboy)",
+    "valor_final": "351,93",
+    "itens": [
+      {
+        "produto": "MORANGO - DELICIOSA NAKED F20",
+        "quantidade": 1.0,
+        "valor_total": "284,00",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      },
+      {
+        "produto": "Taxa de entrega",
+        "quantidade": 1.0,
+        "valor_total": "10,99",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      },
+      {
+        "produto": "Taxa de Serviço",
+        "quantidade": 1.0,
+        "valor_total": "1,99",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      },
+      {
+        "produto": "TORTINHA GOURMET MISTA FESTA CX",
+        "quantidade": 1.0,
+        "valor_total": "54,95",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      }
+    ]
+  },
+  {
+    "pedido_id": 143125,
+    "numero_pedido": "029628",
+    "cliente": "DANIELE RODRIGUES",
+    "origem": "IFood",
+    "data_entrega": "16/04/2026",
+    "hora_entrega": "17:10",
+    "bairro": "Flamengo",
+    "forma_entrega": "P/Entregar (Motoboy)",
+    "valor_final": "36,37",
+    "itens": [
+      {
+        "produto": "FT SWEET DARK",
+        "quantidade": 1.0,
+        "valor_total": "36,50",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": "Golden age flat"
+      },
+      {
+        "produto": "Taxa de entrega",
+        "quantidade": 1.0,
+        "valor_total": "8,99",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": "Golden age flat"
+      }
+    ]
+  },
+  {
+    "pedido_id": 143121,
+    "numero_pedido": "029624",
+    "cliente": "Cris Claessen",
+    "origem": "IFood",
+    "data_entrega": "16/04/2026",
+    "hora_entrega": "16:58",
+    "bairro": "Botafogo",
+    "forma_entrega": "P/Entregar (Motoboy)",
+    "valor_final": "25,74",
+    "itens": [
+      {
+        "produto": "BRIG. C/ MORANGO BRANCO",
+        "quantidade": 2.0,
+        "valor_total": "33,00",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      },
+      {
+        "produto": "Taxa de entrega",
+        "quantidade": 1.0,
+        "valor_total": "0,00",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      },
+      {
+        "produto": "Taxa de Serviço",
+        "quantidade": 1.0,
+        "valor_total": "0,99",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      }
+    ]
+  },
+  {
+    "pedido_id": 143120,
+    "numero_pedido": "029623",
+    "cliente": "Nadia Cazelli ",
+    "origem": "IFood",
+    "data_entrega": "16/04/2026",
+    "hora_entrega": "16:53",
+    "bairro": "Botafogo",
+    "forma_entrega": "P/Entregar (Motoboy)",
+    "valor_final": "73,24",
+    "itens": [
+      {
+        "produto": "FT CROCANTE",
+        "quantidade": 1.0,
+        "valor_total": "33,50",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      },
+      {
+        "produto": "MORANGO - FT DELICIOSA",
+        "quantidade": 1.0,
+        "valor_total": "38,75",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      },
+      {
+        "produto": "Taxa de entrega",
+        "quantidade": 1.0,
+        "valor_total": "0,00",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      },
+      {
+        "produto": "Taxa de Serviço",
+        "quantidade": 1.0,
+        "valor_total": "0,99",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      }
+    ]
+  },
+  {
+    "pedido_id": 143114,
+    "numero_pedido": "029617",
+    "cliente": "Vivoan Moura",
+    "origem": "IFood",
+    "data_entrega": "16/04/2026",
+    "hora_entrega": "16:48",
+    "bairro": "Centro",
+    "forma_entrega": "P/Entregar (Motoboy)",
+    "valor_final": "138,98",
+    "itens": [
+      {
+        "produto": "Taxa de entrega",
+        "quantidade": 1.0,
+        "valor_total": "16,99",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      },
+      {
+        "produto": "Taxa de Serviço",
+        "quantidade": 1.0,
+        "valor_total": "1,99",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      },
+      {
+        "produto": "TENTACAO F13",
+        "quantidade": 1.0,
+        "valor_total": "132,00",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      }
+    ]
+  },
+  {
+    "pedido_id": 143111,
+    "numero_pedido": "029614",
+    "cliente": "Isabelly Pinheiro",
+    "origem": "IFood",
+    "data_entrega": "16/04/2026",
+    "hora_entrega": "16:37",
+    "bairro": "Flamengo",
+    "forma_entrega": "P/Entregar (Motoboy)",
+    "valor_final": "183,29",
+    "itens": [
+      {
+        "produto": "BRIG. C/ MORANGO BRULEE",
+        "quantidade": 1.0,
+        "valor_total": "21,80",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      },
+      {
+        "produto": "MARAVILHA ABACAXI F13",
+        "quantidade": 1.0,
+        "valor_total": "132,50",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      },
+      {
+        "produto": "Taxa de entrega",
+        "quantidade": 1.0,
+        "valor_total": "0,00",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      },
+      {
+        "produto": "Taxa de Serviço",
+        "quantidade": 1.0,
+        "valor_total": "1,99",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      },
+      {
+        "produto": "VELA PARABENS PRATA",
+        "quantidade": 1.0,
+        "valor_total": "37,00",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      }
+    ]
+  },
+  {
+    "pedido_id": 143110,
+    "numero_pedido": "029613",
+    "cliente": "Angela Almada",
+    "origem": "IFood",
+    "data_entrega": "16/04/2026",
+    "hora_entrega": "16:45",
+    "bairro": "São Conrado",
+    "forma_entrega": "P/Entregar (Motoboy)",
+    "valor_final": "303,98",
+    "itens": [
+      {
+        "produto": "MORANGO - DELICIOSA NAKED F20",
+        "quantidade": 1.0,
+        "valor_total": "284,00",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": "Fashion Mall"
+      },
+      {
+        "produto": "Taxa de entrega",
+        "quantidade": 1.0,
+        "valor_total": "17,99",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": "Fashion Mall"
+      },
+      {
+        "produto": "Taxa de Serviço",
+        "quantidade": 1.0,
+        "valor_total": "1,99",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": "Fashion Mall"
+      }
+    ]
+  },
+  {
+    "pedido_id": 143109,
+    "numero_pedido": "029612",
+    "cliente": "Tatiana Barros",
+    "origem": "IFood",
+    "data_entrega": "16/04/2026",
+    "hora_entrega": "16:44",
+    "bairro": "Leblon",
+    "forma_entrega": "P/Entregar (Motoboy)",
+    "valor_final": "52,48",
+    "itens": [
+      {
+        "produto": "FT TENTACAO",
+        "quantidade": 1.0,
+        "valor_total": "33,50",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": "Edifício Pedra da Gávea (São Conrado)"
+      },
+      {
+        "produto": "Taxa de entrega",
+        "quantidade": 1.0,
+        "valor_total": "17,99",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": "Edifício Pedra da Gávea (São Conrado)"
+      },
+      {
+        "produto": "Taxa de Serviço",
+        "quantidade": 1.0,
+        "valor_total": "0,99",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": "Edifício Pedra da Gávea (São Conrado)"
+      }
+    ]
+  },
+  {
+    "pedido_id": 143108,
+    "numero_pedido": "029611",
+    "cliente": "ACEPIPES",
+    "origem": "WhatsApp",
+    "data_entrega": "16/04/2026",
+    "hora_entrega": "16:00",
+    "bairro": "Flamengo",
+    "forma_entrega": "P/Entregar (Motoboy)",
+    "valor_final": "476,70",
+    "itens": [
+      {
+        "produto": "DELICIA CAMADAS F13",
+        "quantidade": 1.0,
+        "valor_total": "93,00",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      },
+      {
+        "produto": "FANTASIA F13",
+        "quantidade": 3.0,
+        "valor_total": "285,00",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      },
+      {
+        "produto": "Taxa de entrega",
+        "quantidade": 1.0,
+        "valor_total": "0,00",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      },
+      {
+        "produto": "TORTA MOUSSE F25",
+        "quantidade": 1.0,
+        "valor_total": "303,00",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      }
+    ]
+  },
+  {
+    "pedido_id": 143103,
+    "numero_pedido": "029606",
+    "cliente": "Vítor Alexandre Montovani de Souza",
+    "origem": "IFood",
+    "data_entrega": "16/04/2026",
+    "hora_entrega": "16:39",
+    "bairro": "Santo Cristo",
+    "forma_entrega": "P/Entregar (Motoboy)",
+    "valor_final": "296,98",
+    "itens": [
+      {
+        "produto": "MORANGO - DELICIOSA NAKED F20",
+        "quantidade": 1.0,
+        "valor_total": "284,00",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      },
+      {
+        "produto": "Taxa de entrega",
+        "quantidade": 1.0,
+        "valor_total": "20,99",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      },
+      {
+        "produto": "Taxa de Serviço",
+        "quantidade": 1.0,
+        "valor_total": "1,99",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      }
+    ]
+  },
+  {
+    "pedido_id": 143092,
+    "numero_pedido": "029595",
+    "cliente": "THAÍSSA VALLE",
+    "origem": "IFood",
+    "data_entrega": "16/04/2026",
+    "hora_entrega": "15:55",
+    "bairro": "Copacabana",
+    "forma_entrega": "P/Entregar (Motoboy)",
+    "valor_final": "36,48",
+    "itens": [
+      {
+        "produto": "Taxa de entrega",
+        "quantidade": 1.0,
+        "valor_total": "6,99",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      },
+      {
+        "produto": "Taxa de Serviço",
+        "quantidade": 1.0,
+        "valor_total": "0,99",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      },
+      {
+        "produto": "VULCAO DE NUTELLA",
+        "quantidade": 1.0,
+        "valor_total": "28,50",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      }
+    ]
+  },
+  {
+    "pedido_id": 143090,
+    "numero_pedido": "029593",
+    "cliente": "Camila C Henriques",
+    "origem": "IFood",
+    "data_entrega": "16/04/2026",
+    "hora_entrega": "15:43",
+    "bairro": "Lagoa",
+    "forma_entrega": "P/Entregar (Motoboy)",
+    "valor_final": "46,74",
+    "itens": [
+      {
+        "produto": "MORANGO - FT DELICIOSA",
+        "quantidade": 1.0,
+        "valor_total": "38,75",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      },
+      {
+        "produto": "Taxa de entrega",
+        "quantidade": 1.0,
+        "valor_total": "7,00",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      },
+      {
+        "produto": "Taxa de Serviço",
+        "quantidade": 1.0,
+        "valor_total": "0,99",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      }
+    ]
+  },
+  {
+    "pedido_id": 143077,
+    "numero_pedido": "029580",
+    "cliente": "Rosa Helena Peres Pereira",
+    "origem": "IFood",
+    "data_entrega": "16/04/2026",
+    "hora_entrega": "15:32",
+    "bairro": "Laranjeiras",
+    "forma_entrega": "P/Entregar (Motoboy)",
+    "valor_final": "88,88",
+    "itens": [
+      {
+        "produto": "IF BRIG. TRADICIONAL",
+        "quantidade": 1.0,
+        "valor_total": "0,00",
+        "adicionais": [
+          "Brigadeiro Tradicional CX 25 UN"
+        ],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": "EM FRENTE AO HORTIFRUTI"
+      },
+      {
+        "produto": "Taxa de entrega",
+        "quantidade": 1.0,
+        "valor_total": "12,99",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": "EM FRENTE AO HORTIFRUTI"
+      },
+      {
+        "produto": "Taxa de Serviço",
+        "quantidade": 1.0,
+        "valor_total": "0,99",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": "EM FRENTE AO HORTIFRUTI"
+      }
+    ]
+  },
+  {
+    "pedido_id": 143072,
+    "numero_pedido": "029575",
+    "cliente": "Renata Lopes da Silva Lima ",
+    "origem": "WhatsApp",
+    "data_entrega": "16/04/2026",
+    "hora_entrega": "17:30",
+    "bairro": "Copacabana",
+    "forma_entrega": "P/Entregar (Motoboy)",
+    "valor_final": "187,60",
+    "itens": [
+      {
+        "produto": "MORANGO - DELICIOSA NAKED F20",
+        "quantidade": 1.0,
+        "valor_total": "222,00",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      },
+      {
+        "produto": "Taxa de entrega",
+        "quantidade": 1.0,
+        "valor_total": "10,00",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      }
+    ]
+  },
+  {
+    "pedido_id": 143071,
+    "numero_pedido": "029574",
+    "cliente": "Mariana Rabelo ",
+    "origem": "IFood",
+    "data_entrega": "16/04/2026",
+    "hora_entrega": "15:10",
+    "bairro": "Botafogo",
+    "forma_entrega": "P/Entregar (Motoboy)",
+    "valor_final": "26,12",
+    "itens": [
+      {
+        "produto": "FT CROCANTE",
+        "quantidade": 1.0,
+        "valor_total": "33,50",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      },
+      {
+        "produto": "Taxa de entrega",
+        "quantidade": 1.0,
+        "valor_total": "0,00",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      },
+      {
+        "produto": "Taxa de Serviço",
+        "quantidade": 1.0,
+        "valor_total": "0,99",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      }
+    ]
+  },
+  {
+    "pedido_id": 143066,
+    "numero_pedido": "029569",
+    "cliente": "Fátima Regina Mourão Rodrigues Amorim",
+    "origem": "MogoSmart",
+    "data_entrega": "16/04/2026",
+    "hora_entrega": "16:00",
+    "bairro": "Laranjeiras",
+    "forma_entrega": "Vem Buscar",
+    "valor_final": "212,00",
+    "itens": [
+      {
+        "produto": "FANTASIA F25",
+        "quantidade": 1.0,
+        "valor_total": "212,00",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      }
+    ]
+  },
+  {
+    "pedido_id": 143058,
+    "numero_pedido": "029561",
+    "cliente": "Gabriel Lins",
+    "origem": "IFood",
+    "data_entrega": "16/04/2026",
+    "hora_entrega": "14:40",
+    "bairro": "Botafogo",
+    "forma_entrega": "P/Entregar (Motoboy)",
+    "valor_final": "49,26",
+    "itens": [
+      {
+        "produto": "BRIG. C/ MORANGO DARK",
+        "quantidade": 3.0,
+        "valor_total": "49,50",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      },
+      {
+        "produto": "COCA COLA ZERO",
+        "quantidade": 1.0,
+        "valor_total": "8,77",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      },
+      {
+        "produto": "Taxa de entrega",
+        "quantidade": 1.0,
+        "valor_total": "0,00",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      },
+      {
+        "produto": "Taxa de Serviço",
+        "quantidade": 1.0,
+        "valor_total": "0,99",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      }
+    ]
+  },
+  {
+    "pedido_id": 143057,
+    "numero_pedido": "029560",
+    "cliente": "Karina Freire",
+    "origem": "IFood",
+    "data_entrega": "16/04/2026",
+    "hora_entrega": "14:59",
+    "bairro": "Centro",
+    "forma_entrega": "P/Entregar (Motoboy)",
+    "valor_final": "286,48",
+    "itens": [
+      {
+        "produto": "CHEESECAKE F. VERM F25",
+        "quantidade": 1.0,
+        "valor_total": "274,50",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": "Lamina III - TJRJ"
+      },
+      {
+        "produto": "Taxa de entrega",
+        "quantidade": 1.0,
+        "valor_total": "19,99",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": "Lamina III - TJRJ"
+      },
+      {
+        "produto": "Taxa de Serviço",
+        "quantidade": 1.0,
+        "valor_total": "1,99",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": "Lamina III - TJRJ"
+      }
+    ]
+  },
+  {
+    "pedido_id": 143056,
+    "numero_pedido": "029559",
+    "cliente": "Guilherme Santos",
+    "origem": "IFood",
+    "data_entrega": "16/04/2026",
+    "hora_entrega": "14:27",
+    "bairro": "Lagoa",
+    "forma_entrega": "P/Entregar (Motoboy)",
+    "valor_final": "190,49",
+    "itens": [
+      {
+        "produto": "MORANGO - DELICIOSA NAKED F13",
+        "quantidade": 1.0,
+        "valor_total": "169,50",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      },
+      {
+        "produto": "Taxa de entrega",
+        "quantidade": 1.0,
+        "valor_total": "0,00",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      },
+      {
+        "produto": "Taxa de Serviço",
+        "quantidade": 1.0,
+        "valor_total": "1,99",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      },
+      {
+        "produto": "VELA FAISCA",
+        "quantidade": 1.0,
+        "valor_total": "19,00",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      }
+    ]
+  },
+  {
+    "pedido_id": 143055,
+    "numero_pedido": "029558",
+    "cliente": "Lea Alpis",
+    "origem": "IFood",
+    "data_entrega": "16/04/2026",
+    "hora_entrega": "14:48",
+    "bairro": "Santa Teresa",
+    "forma_entrega": "P/Entregar (Motoboy)",
+    "valor_final": "157,98",
+    "itens": [
+      {
+        "produto": "DELICIA COCO F13",
+        "quantidade": 1.0,
+        "valor_total": "134,00",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": "Subir a rampa junto ao número 71"
+      },
+      {
+        "produto": "Taxa de entrega",
+        "quantidade": 1.0,
+        "valor_total": "21,99",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": "Subir a rampa junto ao número 71"
+      },
+      {
+        "produto": "Taxa de Serviço",
+        "quantidade": 1.0,
+        "valor_total": "1,99",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": "Subir a rampa junto ao número 71"
+      }
+    ]
+  },
+  {
+    "pedido_id": 143051,
+    "numero_pedido": "029554",
+    "cliente": "CAROLINE SPAGNOLO",
+    "origem": "IFood",
+    "data_entrega": "16/04/2026",
+    "hora_entrega": "14:14",
+    "bairro": "Flamengo",
+    "forma_entrega": "P/Entregar (Motoboy)",
+    "valor_final": "41,36",
+    "itens": [
+      {
+        "produto": "FT SWEET DARK",
+        "quantidade": 1.0,
+        "valor_total": "36,50",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": "Consulado Japao"
+      },
+      {
+        "produto": "Taxa de entrega",
+        "quantidade": 1.0,
+        "valor_total": "12,99",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": "Consulado Japao"
+      },
+      {
+        "produto": "Taxa de Serviço",
+        "quantidade": 1.0,
+        "valor_total": "0,99",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": "Consulado Japao"
+      }
+    ]
+  },
+  {
+    "pedido_id": 143048,
+    "numero_pedido": "029551",
+    "cliente": "Brenda  Fernandes ",
+    "origem": "IFood",
+    "data_entrega": "16/04/2026",
+    "hora_entrega": "14:13",
+    "bairro": "Centro",
+    "forma_entrega": "P/Entregar (Motoboy)",
+    "valor_final": "93,28",
+    "itens": [
+      {
+        "produto": "BRIG. C/ MORANGO BRULEE",
+        "quantidade": 1.0,
+        "valor_total": "21,80",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      },
+      {
+        "produto": "FT FANTASIA",
+        "quantidade": 1.0,
+        "valor_total": "33,00",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      },
+      {
+        "produto": "Taxa de entrega",
+        "quantidade": 1.0,
+        "valor_total": "18,99",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      },
+      {
+        "produto": "Taxa de Serviço",
+        "quantidade": 1.0,
+        "valor_total": "0,99",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      },
+      {
+        "produto": "VULCAO DE NUTELLA",
+        "quantidade": 1.0,
+        "valor_total": "28,50",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      }
+    ]
+  },
+  {
+    "pedido_id": 143047,
+    "numero_pedido": "029550",
+    "cliente": "LAURA OLIVEIRA CASTRO",
+    "origem": "WhatsApp",
+    "data_entrega": "16/04/2026",
+    "hora_entrega": "15:00",
+    "bairro": "Lagoa",
+    "forma_entrega": "P/Entregar (Motoboy)",
+    "valor_final": "15,00",
+    "itens": [
+      {
+        "produto": "MORANGO - DELICIOSA NAKED F20",
+        "quantidade": 1.0,
+        "valor_total": "222,00",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      },
+      {
+        "produto": "Taxa de entrega",
+        "quantidade": 1.0,
+        "valor_total": "15,00",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      }
+    ]
+  },
+  {
+    "pedido_id": 143039,
+    "numero_pedido": "029542",
+    "cliente": "JÚLIA PAULINO LIMA",
+    "origem": "IFood",
+    "data_entrega": "16/04/2026",
+    "hora_entrega": "13:48",
+    "bairro": "Centro",
+    "forma_entrega": "P/Entregar (Motoboy)",
+    "valor_final": "382,53",
+    "itens": [
+      {
+        "produto": "CHOCOBERRIES F25",
+        "quantidade": 1.0,
+        "valor_total": "365,55",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      },
+      {
+        "produto": "Taxa de entrega",
+        "quantidade": 1.0,
+        "valor_total": "20,99",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      },
+      {
+        "produto": "Taxa de Serviço",
+        "quantidade": 1.0,
+        "valor_total": "1,99",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      }
+    ]
+  },
+  {
+    "pedido_id": 143037,
+    "numero_pedido": "029540",
+    "cliente": "Manuela Pinho",
+    "origem": "IFood",
+    "data_entrega": "16/04/2026",
+    "hora_entrega": "13:20",
+    "bairro": "Humaitá",
+    "forma_entrega": "P/Entregar (Motoboy)",
+    "valor_final": "34,49",
+    "itens": [
+      {
+        "produto": "FT EMILIA",
+        "quantidade": 1.0,
+        "valor_total": "33,50",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      },
+      {
+        "produto": "Taxa de entrega",
+        "quantidade": 1.0,
+        "valor_total": "0,00",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      },
+      {
+        "produto": "Taxa de Serviço",
+        "quantidade": 1.0,
+        "valor_total": "0,99",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      }
+    ]
+  },
+  {
+    "pedido_id": 143017,
+    "numero_pedido": "029520",
+    "cliente": "DAIVID",
+    "origem": "IFood",
+    "data_entrega": "16/04/2026",
+    "hora_entrega": "12:34",
+    "bairro": "Botafogo",
+    "forma_entrega": "P/Entregar (Motoboy)",
+    "valor_final": "25,74",
+    "itens": [
+      {
+        "produto": "BRIG. C/ MORANGO TRADICIONAL",
+        "quantidade": 2.0,
+        "valor_total": "33,00",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      },
+      {
+        "produto": "Taxa de entrega",
+        "quantidade": 1.0,
+        "valor_total": "0,00",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      },
+      {
+        "produto": "Taxa de Serviço",
+        "quantidade": 1.0,
+        "valor_total": "0,99",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      }
+    ]
+  },
+  {
+    "pedido_id": 143016,
+    "numero_pedido": "029519",
+    "cliente": "Luisi Valadão",
+    "origem": "IFood",
+    "data_entrega": "16/04/2026",
+    "hora_entrega": "12:43",
+    "bairro": "Laranjeiras",
+    "forma_entrega": "P/Entregar (Motoboy)",
+    "valor_final": "47,98",
+    "itens": [
+      {
+        "produto": "Taxa de entrega",
+        "quantidade": 1.0,
+        "valor_total": "13,99",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      },
+      {
+        "produto": "Taxa de Serviço",
+        "quantidade": 1.0,
+        "valor_total": "0,99",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      },
+      {
+        "produto": "VELA ESTRELA DOURADA 4UN",
+        "quantidade": 1.0,
+        "valor_total": "33,00",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      }
+    ]
+  },
+  {
+    "pedido_id": 143012,
+    "numero_pedido": "029515",
+    "cliente": "Livia Berti Ramos",
+    "origem": "IFood",
+    "data_entrega": "16/04/2026",
+    "hora_entrega": "12:25",
+    "bairro": "Botafogo",
+    "forma_entrega": "P/Entregar (Motoboy)",
+    "valor_final": "215,98",
+    "itens": [
+      {
+        "produto": "EMPADAO FRANGO F25",
+        "quantidade": 1.0,
+        "valor_total": "214,00",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      },
+      {
+        "produto": "Taxa de entrega",
+        "quantidade": 1.0,
+        "valor_total": "9,99",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      },
+      {
+        "produto": "Taxa de Serviço",
+        "quantidade": 1.0,
+        "valor_total": "1,99",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      }
+    ]
+  },
+  {
+    "pedido_id": 142998,
+    "numero_pedido": "029501",
+    "cliente": "Nina Rodrigues",
+    "origem": "IFood",
+    "data_entrega": "16/04/2026",
+    "hora_entrega": "11:57",
+    "bairro": "Copacabana",
+    "forma_entrega": "P/Entregar (Motoboy)",
+    "valor_final": "39,29",
+    "itens": [
+      {
+        "produto": "BRIG. C/ MORANGO BRANCO",
+        "quantidade": 1.0,
+        "valor_total": "16,50",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": "Atrás do ponto de ônibus"
+      },
+      {
+        "produto": "BRIG. C/ MORANGO BRULEE",
+        "quantidade": 1.0,
+        "valor_total": "21,80",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": "Atrás do ponto de ônibus"
+      },
+      {
+        "produto": "Taxa de entrega",
+        "quantidade": 1.0,
+        "valor_total": "0,00",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": "Atrás do ponto de ônibus"
+      },
+      {
+        "produto": "Taxa de Serviço",
+        "quantidade": 1.0,
+        "valor_total": "0,99",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": "Atrás do ponto de ônibus"
+      }
+    ]
+  },
+  {
+    "pedido_id": 142995,
+    "numero_pedido": "029498",
+    "cliente": "Daniel Villela",
+    "origem": "IFood",
+    "data_entrega": "16/04/2026",
+    "hora_entrega": "11:32",
+    "bairro": "Copacabana",
+    "forma_entrega": "P/Entregar (Motoboy)",
+    "valor_final": "89,49",
+    "itens": [
+      {
+        "produto": "IF VELA DOURADA NUMERO",
+        "quantidade": 1.0,
+        "valor_total": "0,00",
+        "adicionais": [
+          "Vela Dourada nº 2",
+          "Vela Dourada nº 9"
+        ],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": "Bairro Peixoto"
+      },
+      {
+        "produto": "OVO NINHO E NUTELLA",
+        "quantidade": 1.0,
+        "valor_total": "68,50",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": "Bairro Peixoto"
+      },
+      {
+        "produto": "Taxa de entrega",
+        "quantidade": 1.0,
+        "valor_total": "0,00",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": "Bairro Peixoto"
+      },
+      {
+        "produto": "Taxa de Serviço",
+        "quantidade": 1.0,
+        "valor_total": "0,99",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": "Bairro Peixoto"
+      }
+    ]
+  },
+  {
+    "pedido_id": 142986,
+    "numero_pedido": "029489",
+    "cliente": "Ana Claudia",
+    "origem": "MogoSmart",
+    "data_entrega": "16/04/2026",
+    "hora_entrega": "14:00",
+    "bairro": null,
+    "forma_entrega": "Vem Buscar",
+    "valor_final": "315,00",
+    "itens": [
+      {
+        "produto": "MORANGO - DELICIOSA NAKED F25",
+        "quantidade": 1.0,
+        "valor_total": "315,00",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      }
+    ]
+  },
+  {
+    "pedido_id": 142985,
+    "numero_pedido": "029488",
+    "cliente": "PAULA BAHIENSE ",
+    "origem": "IFood",
+    "data_entrega": "16/04/2026",
+    "hora_entrega": "10:12",
+    "bairro": "Jardim Botânico",
+    "forma_entrega": "P/Entregar (Motoboy)",
+    "valor_final": "126,38",
+    "itens": [
+      {
+        "produto": "BOLIM DE CENROURA GRD (300GR)",
+        "quantidade": 1.0,
+        "valor_total": "31,50",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      },
+      {
+        "produto": "BRIG. C/ MORANGO BRANCO",
+        "quantidade": 2.0,
+        "valor_total": "33,00",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      },
+      {
+        "produto": "IF BRIG. BEIJINHO",
+        "quantidade": 1.0,
+        "valor_total": "0,00",
+        "adicionais": [
+          "Beijinho CX 12 UN"
+        ],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      },
+      {
+        "produto": "Taxa de entrega",
+        "quantidade": 1.0,
+        "valor_total": "16,99",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      },
+      {
+        "produto": "Taxa de Serviço",
+        "quantidade": 1.0,
+        "valor_total": "1,99",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      }
+    ]
+  },
+  {
+    "pedido_id": 142964,
+    "numero_pedido": "029467",
+    "cliente": "MIGUEL ANGEL GOMEZ",
+    "origem": "Neemo",
+    "data_entrega": "16/04/2026",
+    "hora_entrega": "19:00",
+    "bairro": "Botafogo",
+    "forma_entrega": "P/Entregar (Motoboy)",
+    "valor_final": "67,80",
+    "itens": [
+      {
+        "produto": "FT CHEESECAKE MORANGO",
+        "quantidade": 1.0,
+        "valor_total": "27,90",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": "- Casa 20B , entregar a Miguel Ángel Gómez Contreras (colombiano)"
+      },
+      {
+        "produto": "Taxa de entrega",
+        "quantidade": 1.0,
+        "valor_total": "10,00",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": "- Casa 20B , entregar a Miguel Ángel Gómez Contreras (colombiano)"
+      },
+      {
+        "produto": "VELA DOURADA NUMERO - X",
+        "quantidade": 1.0,
+        "valor_total": "10,00",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": "- Casa 20B , entregar a Miguel Ángel Gómez Contreras (colombiano)"
+      },
+      {
+        "produto": "VULCAO CENOURA",
+        "quantidade": 1.0,
+        "valor_total": "19,90",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": "- Casa 20B , entregar a Miguel Ángel Gómez Contreras (colombiano)"
+      }
+    ]
+  },
+  {
+    "pedido_id": 142909,
+    "numero_pedido": "029412",
+    "cliente": "Ana Carolina Borges Evangelista ",
+    "origem": "Neemo",
+    "data_entrega": "16/04/2026",
+    "hora_entrega": "18:30",
+    "bairro": "Botafogo",
+    "forma_entrega": "P/Entregar (Motoboy)",
+    "valor_final": "276,40",
+    "itens": [
+      {
+        "produto": "BRIG. NINHO NUTELLA 12UN",
+        "quantidade": 1.0,
+        "valor_total": "37,00",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": "Condomínio Morada do Sol"
+      },
+      {
+        "produto": "BRIG. TRADICIONAL 12UN",
+        "quantidade": 1.0,
+        "valor_total": "37,00",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": "Condomínio Morada do Sol"
+      },
+      {
+        "produto": "MORANGO - DELICIOSA NAKED F20",
+        "quantidade": 1.0,
+        "valor_total": "222,00",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": "Condomínio Morada do Sol"
+      },
+      {
+        "produto": "Taxa de entrega",
+        "quantidade": 1.0,
+        "valor_total": "10,00",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": "Condomínio Morada do Sol"
+      }
+    ]
+  },
+  {
+    "pedido_id": 142886,
+    "numero_pedido": "029389",
+    "cliente": "Denise pinheiro",
+    "origem": "Telefone",
+    "data_entrega": "16/04/2026",
+    "hora_entrega": "11:00",
+    "bairro": "Lagoa",
+    "forma_entrega": "P/Entregar (Motoboy)",
+    "valor_final": "112,00",
+    "itens": [
+      {
+        "produto": "BANOFFE F13",
+        "quantidade": 1.0,
+        "valor_total": "97,00",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": "A/c de Marli"
+      },
+      {
+        "produto": "Taxa de entrega",
+        "quantidade": 1.0,
+        "valor_total": "15,00",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": "A/c de Marli"
+      }
+    ]
+  },
+  {
+    "pedido_id": 142850,
+    "numero_pedido": "029353",
+    "cliente": "Vitoria Lopes",
+    "origem": "WhatsApp",
+    "data_entrega": "16/04/2026",
+    "hora_entrega": "13:00",
+    "bairro": "Botafogo",
+    "forma_entrega": "P/Entregar (Motoboy)",
+    "valor_final": "325,00",
+    "itens": [
+      {
+        "produto": "MORANGO - DELICIOSA NAKED F25",
+        "quantidade": 1.0,
+        "valor_total": "315,00",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      },
+      {
+        "produto": "Taxa de entrega",
+        "quantidade": 1.0,
+        "valor_total": "10,00",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      }
+    ]
+  },
+  {
+    "pedido_id": 142822,
+    "numero_pedido": "029325",
+    "cliente": "Rachel Tavares Nunes ",
+    "origem": "WhatsApp",
+    "data_entrega": "16/04/2026",
+    "hora_entrega": "10:00",
+    "bairro": "Leblon",
+    "forma_entrega": "P/Entregar (Motoboy)",
+    "valor_final": "237,00",
+    "itens": [
+      {
+        "produto": "MORANGO - DELICIOSA NAKED F20",
+        "quantidade": 1.0,
+        "valor_total": "222,00",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      },
+      {
+        "produto": "Taxa de entrega",
+        "quantidade": 1.0,
+        "valor_total": "15,00",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      }
+    ]
+  },
+  {
+    "pedido_id": 142809,
+    "numero_pedido": "029312",
+    "cliente": "Sergio Barbosa",
+    "origem": "MogoSmart",
+    "data_entrega": "16/04/2026",
+    "hora_entrega": "09:30",
+    "bairro": null,
+    "forma_entrega": "Vem Buscar",
+    "valor_final": "23,00",
+    "itens": [
+      {
+        "produto": "BOLIM DE CHOCOLATE GRD (300GR)",
+        "quantidade": 1.0,
+        "valor_total": "23,00",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      }
+    ]
+  },
+  {
+    "pedido_id": 142598,
+    "numero_pedido": "029101",
+    "cliente": "MARCIA VELLOSO MOREIRA RAMOS",
+    "origem": "Neemo",
+    "data_entrega": "16/04/2026",
+    "hora_entrega": "10:00",
+    "bairro": "Laranjeiras",
+    "forma_entrega": "P/Entregar (Motoboy)",
+    "valor_final": "204,30",
+    "itens": [
+      {
+        "produto": "CHEESECAKE GOIABA F25",
+        "quantidade": 1.0,
+        "valor_total": "212,00",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": "Ao lado Supermercado Rede Economia"
+      },
+      {
+        "produto": "Taxa de entrega",
+        "quantidade": 1.0,
+        "valor_total": "15,00",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": "Ao lado Supermercado Rede Economia"
+      }
+    ]
+  },
+  {
+    "pedido_id": 142587,
+    "numero_pedido": "029090",
+    "cliente": "PATRICIA COSME",
+    "origem": "Telefone",
+    "data_entrega": "16/04/2026",
+    "hora_entrega": "10:00",
+    "bairro": "Centro",
+    "forma_entrega": "P/Entregar (Motoboy)",
+    "valor_final": "607,00",
+    "itens": [
+      {
+        "produto": "BRIG. BRULLE 12UN",
+        "quantidade": 1.0,
+        "valor_total": "37,00",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": "BECO DA MÚSICA"
+      },
+      {
+        "produto": "BRIG. CHOCOLATE BRANCO 12UN",
+        "quantidade": 1.0,
+        "valor_total": "37,00",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": "BECO DA MÚSICA"
+      },
+      {
+        "produto": "MORANGO - DELICIOSA NAKED F25",
+        "quantidade": 1.0,
+        "valor_total": "315,00",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": "BECO DA MÚSICA"
+      },
+      {
+        "produto": "QUICHE ALHO PORO F25",
+        "quantidade": 1.0,
+        "valor_total": "170,00",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": "BECO DA MÚSICA"
+      },
+      {
+        "produto": "Taxa de entrega",
+        "quantidade": 1.0,
+        "valor_total": "30,00",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": "BECO DA MÚSICA"
+      },
+      {
+        "produto": "VELA ESPIRAL FINA ROSE 4UN",
+        "quantidade": 1.0,
+        "valor_total": "18,00",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": "BECO DA MÚSICA"
+      }
+    ]
+  },
+  {
+    "pedido_id": 142562,
+    "numero_pedido": "029065",
+    "cliente": "Jacqueline Pires Santanna",
+    "origem": "WhatsApp",
+    "data_entrega": "16/04/2026",
+    "hora_entrega": "12:00",
+    "bairro": "Grajaú",
+    "forma_entrega": "P/Entregar (Motoboy)",
+    "valor_final": "127,00",
+    "itens": [
+      {
+        "produto": "MARAVILHA ABACAXI F13",
+        "quantidade": 1.0,
+        "valor_total": "97,00",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      },
+      {
+        "produto": "Taxa de entrega",
+        "quantidade": 1.0,
+        "valor_total": "30,00",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      }
+    ]
+  },
+  {
+    "pedido_id": 142541,
+    "numero_pedido": "029044",
+    "cliente": "Paula Pedroni",
+    "origem": "WhatsApp",
+    "data_entrega": "16/04/2026",
+    "hora_entrega": "16:00",
+    "bairro": "Botafogo",
+    "forma_entrega": "P/Entregar (Motoboy)",
+    "valor_final": "135,00",
+    "itens": [
+      {
+        "produto": "MORANGO - DELICIOSA NAKED F13",
+        "quantidade": 1.0,
+        "valor_total": "125,00",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      },
+      {
+        "produto": "Taxa de entrega",
+        "quantidade": 1.0,
+        "valor_total": "10,00",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      }
+    ]
+  },
+  {
+    "pedido_id": 142529,
+    "numero_pedido": "029032",
+    "cliente": "Eliana da Costa Lourenço",
+    "origem": "Neemo",
+    "data_entrega": "16/04/2026",
+    "hora_entrega": "15:00",
+    "bairro": "Jardim Botânico",
+    "forma_entrega": "P/Entregar (Motoboy)",
+    "valor_final": "311,00",
+    "itens": [
+      {
+        "produto": "MORANGO - DELICIOSA NAKED F20",
+        "quantidade": 1.0,
+        "valor_total": "222,00",
+        "adicionais": [
+          "Brigadeiro Dois Amores CX 25 UN"
+        ],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      },
+      {
+        "produto": "Taxa de entrega",
+        "quantidade": 1.0,
+        "valor_total": "15,00",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      }
+    ]
+  },
+  {
+    "pedido_id": 142453,
+    "numero_pedido": "028956",
+    "cliente": "Carlos Ruhl ",
+    "origem": "Neemo",
+    "data_entrega": "16/04/2026",
+    "hora_entrega": "15:00",
+    "bairro": "Jardim Botânico",
+    "forma_entrega": "P/Entregar (Motoboy)",
+    "valor_final": "130,00",
+    "itens": [
+      {
+        "produto": "RED VELVET F13",
+        "quantidade": 1.0,
+        "valor_total": "120,00",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": "A rua antes do Rebouças"
+      },
+      {
+        "produto": "Taxa de entrega",
+        "quantidade": 1.0,
+        "valor_total": "10,00",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": "A rua antes do Rebouças"
+      }
+    ]
+  },
+  {
+    "pedido_id": 142424,
+    "numero_pedido": "028927",
+    "cliente": "Mariana Maia Simone ",
+    "origem": "MogoSmart",
+    "data_entrega": "16/04/2026",
+    "hora_entrega": "10:00",
+    "bairro": "Ipanema",
+    "forma_entrega": "P/Entregar (Motoboy)",
+    "valor_final": "163,00",
+    "itens": [
+      {
+        "produto": "BRIG. TRADICIONAL 25UN",
+        "quantidade": 2.0,
+        "valor_total": "148,00",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      },
+      {
+        "produto": "Taxa de entrega",
+        "quantidade": 1.0,
+        "valor_total": "15,00",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      }
+    ]
+  },
+  {
+    "pedido_id": 142405,
+    "numero_pedido": "028908",
+    "cliente": "Valéria forges de Araújo",
+    "origem": "MogoSmart",
+    "data_entrega": "16/04/2026",
+    "hora_entrega": "09:00",
+    "bairro": null,
+    "forma_entrega": "Vem Buscar",
+    "valor_final": "251,00",
+    "itens": [
+      {
+        "produto": "NOVA SWEET DARK F25",
+        "quantidade": 1.0,
+        "valor_total": "251,00",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      }
+    ]
+  },
+  {
+    "pedido_id": 142401,
+    "numero_pedido": "028904",
+    "cliente": "valquíria ",
+    "origem": "MogoSmart",
+    "data_entrega": "16/04/2026",
+    "hora_entrega": "18:00",
+    "bairro": "Laranjeiras",
+    "forma_entrega": "P/Entregar (Motoboy)",
+    "valor_final": "348,00",
+    "itens": [
+      {
+        "produto": "MORANGO - DELICIOSA NAKED F25",
+        "quantidade": 1.0,
+        "valor_total": "315,00",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      },
+      {
+        "produto": "Taxa de entrega",
+        "quantidade": 1.0,
+        "valor_total": "15,00",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      },
+      {
+        "produto": "VELA ESPIRAL FINA ROSE 4UN",
+        "quantidade": 1.0,
+        "valor_total": "18,00",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      }
+    ]
+  },
+  {
+    "pedido_id": 142239,
+    "numero_pedido": "028742",
+    "cliente": "Michelle Houdjakoff Goncalves",
+    "origem": "Neemo",
+    "data_entrega": "16/04/2026",
+    "hora_entrega": "17:00",
+    "bairro": "Tijuca",
+    "forma_entrega": "P/Entregar (Motoboy)",
+    "valor_final": "252,00",
+    "itens": [
+      {
+        "produto": "MORANGO - DELICIOSA NAKED F20",
+        "quantidade": 1.0,
+        "valor_total": "222,00",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      },
+      {
+        "produto": "Taxa de entrega",
+        "quantidade": 1.0,
+        "valor_total": "30,00",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      }
+    ]
+  },
+  {
+    "pedido_id": 141902,
+    "numero_pedido": "028405",
+    "cliente": "Juliana Barros",
+    "origem": "Neemo",
+    "data_entrega": "16/04/2026",
+    "hora_entrega": "14:30",
+    "bairro": "Botafogo",
+    "forma_entrega": "P/Entregar (Motoboy)",
+    "valor_final": "108,90",
+    "itens": [
+      {
+        "produto": "BRIG. TRADICIONAL 12UN",
+        "quantidade": 1.0,
+        "valor_total": "37,00",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      },
+      {
+        "produto": "BRIG. TRADICIONAL 25UN",
+        "quantidade": 1.0,
+        "valor_total": "74,00",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      },
+      {
+        "produto": "Taxa de entrega",
+        "quantidade": 1.0,
+        "valor_total": "10,00",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      }
+    ]
+  },
+  {
+    "pedido_id": 137642,
+    "numero_pedido": "024145",
+    "cliente": "Maria Clara tapajos",
+    "origem": "WhatsApp",
+    "data_entrega": "16/04/2026",
+    "hora_entrega": "10:00",
+    "bairro": "Lagoa",
+    "forma_entrega": "P/Entregar (Motoboy)",
+    "valor_final": "655,00",
+    "itens": [
+      {
+        "produto": "MORANGO - DELICIOSA NAKED F30",
+        "quantidade": 1.0,
+        "valor_total": "640,00",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      },
+      {
+        "produto": "Taxa de entrega",
+        "quantidade": 1.0,
+        "valor_total": "15,00",
+        "adicionais": [],
+        "componentes": [],
+        "sabores": [],
+        "observacoes": [],
+        "nota": ""
+      }
+    ]
+  }
+]

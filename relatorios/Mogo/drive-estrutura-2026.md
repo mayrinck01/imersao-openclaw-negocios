@@ -1,0 +1,83 @@
+# Drive MOGO — Estrutura 2026
+
+## Raiz
+- BigDog: https://drive.google.com/drive/folders/1e-omtBbXyd0jBg0E5dTYoOapmymVnFrP
+- Financeiro: https://drive.google.com/drive/folders/1ifc3seEiXkiiyqDfmXYBxYvOnYbaFRhb
+- MOGO: https://drive.google.com/drive/folders/1v-sM9QiG7Vo6uGSQvI-IwLZ0tL6TAIRn
+
+## Relatórios
+- **Análise Cadastro Clientes**
+  - Pasta do relatório: https://drive.google.com/drive/folders/1navorku3zCHl24LRm6DtzlUa_9MQC30a
+  - Pasta 2026: https://drive.google.com/drive/folders/1Kd_eB0oMAi3pM4n1aceV7sBRFfyAAw5u
+- **Análise de Cortesias**
+  - Pasta do relatório: https://drive.google.com/drive/folders/1YWti_a5m5P73KzMBiUY88PVGZyK7cCKh
+  - Pasta 2026: https://drive.google.com/drive/folders/1RryHG9DOb3Gzu_iqZisq42Q2FSv3TIwr
+- **Análise de Quantidades Produzidas**
+  - Pasta do relatório: https://drive.google.com/drive/folders/1wYK9rqHk_VM4Q46r_SfZPkIVoN0u2UHv
+  - Pasta 2026: https://drive.google.com/drive/folders/1_Gu9VF4n_Jyt4mvexW2wuBH05sPnzEIa
+- **Compra de Produtos**
+  - Pasta do relatório: https://drive.google.com/drive/folders/1TLy9EkS4UzJCXGGydrXdJZrjVQdAPxsy
+  - Pasta 2026: https://drive.google.com/drive/folders/107mp9LDRBrEMJi2swKknHkmEDMB_bn4a
+- **Contas Assinada**
+  - Pasta do relatório: https://drive.google.com/drive/folders/1qJz-Lgvmvef_Ya-v6TmNBw3rM8rYmm_B
+  - Pasta 2026: https://drive.google.com/drive/folders/1V7g5KO9kXPf2c7Zw3ajsOF2HcMrwXjZj
+- **Contas a Receber**
+  - Pasta do relatório: https://drive.google.com/drive/folders/1816LrrHQo2X-JkoWBsD8LaQbCtdp597k
+  - Pasta 2026: https://drive.google.com/drive/folders/1jgp0w9w_pbF_Nde30nH3C4W9wcJ8YfzJ
+- **Descontos Concedidos**
+  - Pasta do relatório: https://drive.google.com/drive/folders/10ijMMq694sNrexUCUGcytS2CMyZPnpv1
+  - Pasta 2026: https://drive.google.com/drive/folders/1D-kK4hZryH4RlyfvpI4BDKJVnA20O58i
+- **Entradas XML Detalhado**
+  - Pasta do relatório: https://drive.google.com/drive/folders/1C0mJeZ4hEm9ztR9AeQJ6xxqwux7z5r-A
+  - Pasta 2026: https://drive.google.com/drive/folders/1vAvMI5nzFwvyChuUeJKGDDFuFlddRq5H
+- **Faturamento Detalhado**
+  - Pasta do relatório: https://drive.google.com/drive/folders/1Aj_w1fDW3eKHBlWzrmwX3rt57UKuH58A
+  - Pasta 2026: https://drive.google.com/drive/folders/1XqwCBDY9tbrd-6E4NEod07YpB-mVufw-
+- **Histórico de Pagamento**
+  - Pasta do relatório: https://drive.google.com/drive/folders/1M7dJizNkljIuXaGxrGmq_fg_-PnRCUpZ
+  - Pasta 2026: https://drive.google.com/drive/folders/1ghQXenV5QknxC12l94Lg3TTSU76mbml_
+- **Insumos Gastos na Produção**
+  - Pasta do relatório: https://drive.google.com/drive/folders/1AYw2v-8TVo-24bycSvNwLZXd74Xf4U59
+  - Pasta 2026: https://drive.google.com/drive/folders/1OtAPHt6UivBAUCXYlN5p98l2rk97HvoO
+- **Lançamentos de Pedidos**
+  - Pasta do relatório: https://drive.google.com/drive/folders/19es1XTwM14C2RQFAF2QlWugpy07oZkIj
+  - Pasta 2026: https://drive.google.com/drive/folders/1lxzLSH6fz6yndF5_tun9MvNWXRshemCy
+- **Lucratividade por Produto**
+  - Pasta do relatório: https://drive.google.com/drive/folders/1cUb0nOZgW1-L6rpyiCnHk9JbN4R3mCMK
+  - Pasta 2026: https://drive.google.com/drive/folders/1Ry6AcIX8cxg0wzi2Qok8Hs_qDX0dDEU6
+- **Movimentação Crédito Cliente**
+  - Pasta do relatório: https://drive.google.com/drive/folders/1w5AAV7X_cPn0v5feKnhN-9iqM5lpl-lY
+  - Pasta 2026: https://drive.google.com/drive/folders/1lAotEmj_j7lJsht1ctP9Z3BwTalvIalN
+- **Na Entrega**
+  - Pasta do relatório: https://drive.google.com/drive/folders/16kspaV5kklFicCFNICBQyeSsSJOI3vwH
+  - Pasta 2026: https://drive.google.com/drive/folders/1meFkQGgPLhVUzi0FScNLWfz4xlHjq9hR
+- **Pedidos Entregues**
+  - Pasta do relatório: https://drive.google.com/drive/folders/1nHUjnO8zsn6q9qq07RCbNeKkkaJcfRvk
+  - Pasta 2026: https://drive.google.com/drive/folders/11DuY1XuUpOKmUIix20dcS24vKQLc5cyX
+- **Pedidos Pendentes**
+  - Pasta do relatório: https://drive.google.com/drive/folders/1WSOHGZHYunNCZh0K1YlKetjcU1MnZY8z
+  - Pasta 2026: https://drive.google.com/drive/folders/1f1X_WrVPk5_7fPVe2JtFazBOph8Vr4Z8
+- **Saldo Crédito Carteira**
+  - Pasta do relatório: https://drive.google.com/drive/folders/1LqXffQnSgtv52MToNAnpm20vlaopbu51
+  - Pasta 2026: https://drive.google.com/drive/folders/1ynzV6cfCrqOxj3-9oexrufId9NHgmDfF
+- **Taxa de Serviço**
+  - Pasta do relatório: https://drive.google.com/drive/folders/1eaDKSBjRf2G-B5MciCHwBQY-X4EyHO57
+  - Pasta 2026: https://drive.google.com/drive/folders/1DsUw_y8SyeAA0MJaGj-l4hPT8C1pRstt
+- **Ticket Médio**
+  - Pasta do relatório: https://drive.google.com/drive/folders/1-du_KisuiBwKDJ5ssyRmWGOVUiOC-8U0
+  - Pasta 2026: https://drive.google.com/drive/folders/19rXsDAZAFTkUf775sce9r2VwAVbRltuu
+- **Variação Preço Compra**
+  - Pasta do relatório: https://drive.google.com/drive/folders/19xjkOkEfSg-JtU-MF0nIXLXnyPaj7Z1G
+  - Pasta 2026: https://drive.google.com/drive/folders/1CDFU7cSM5hTsssXJIZas5PPNq7rMU-Ws
+- **Venda em Nota Assinada**
+  - Pasta do relatório: https://drive.google.com/drive/folders/1bMlroR6zloiiRbY_JPJ2bWzgJKbsYRy-
+  - Pasta 2026: https://drive.google.com/drive/folders/16bpt8lKyyEI2jr2wRJybSqCEGmIKNswl
+- **Vendas Analítico**
+  - Pasta do relatório: https://drive.google.com/drive/folders/1tamMnboly-TxWniu_0WruoRf2chcDKId
+  - Pasta 2026: https://drive.google.com/drive/folders/1ub3HnWGbASS-UjWWld5AT3U07smj4EvP
+- **Vendas Sintético**
+  - Pasta do relatório: https://drive.google.com/drive/folders/1O9oE8IoU5VTt-Oy9qpMkrYP-47pdZS9v
+  - Pasta 2026: https://drive.google.com/drive/folders/1F0oJYwjzVWucKVD7qSYdkuKptu1yOUz_
+- **Vendas de Adicionais**
+  - Pasta do relatório: https://drive.google.com/drive/folders/1itp7peZ6rAa-4gxqwoeYm2l5I7uRg0CQ
+  - Pasta 2026: https://drive.google.com/drive/folders/1Tk_dlE_L20UgpEdfoCwJVcqEQHx1NE8f

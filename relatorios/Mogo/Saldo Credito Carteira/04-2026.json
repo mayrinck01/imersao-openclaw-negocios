@@ -1,0 +1,907 @@
+{
+  "gerado_em": "07/04/2026 16:16",
+  "total_clientes": 150,
+  "total_saldo": "R$ 6.874,11",
+  "registros": [
+    {
+      "cliente": "Ana Paula Vianna quintal",
+      "cpf": "03545781704",
+      "saldo": "15,00",
+      "id_cliente": "11834"
+    },
+    {
+      "cliente": "Alexandre Schueda",
+      "cpf": "04799289918",
+      "saldo": "8,00",
+      "id_cliente": "9578"
+    },
+    {
+      "cliente": "Amanda Rodrigues Pereira Palhares",
+      "cpf": "13007703760",
+      "saldo": "15,00",
+      "id_cliente": "5303"
+    },
+    {
+      "cliente": "Ana Beatriz Rodrigues de Brito",
+      "cpf": "",
+      "saldo": "0,00",
+      "id_cliente": "20227"
+    },
+    {
+      "cliente": "Ana Carolina",
+      "cpf": "07564017716",
+      "saldo": "132,00",
+      "id_cliente": "2094"
+    },
+    {
+      "cliente": "Ana Clara Mayrinck",
+      "cpf": "14991075793",
+      "saldo": "5,00",
+      "id_cliente": "10339"
+    },
+    {
+      "cliente": "Ana Faria de Freitas Moreira",
+      "cpf": "10070804770",
+      "saldo": "10,00",
+      "id_cliente": "6715"
+    },
+    {
+      "cliente": "Ana Ines Bocardo",
+      "cpf": "03153505985",
+      "saldo": "0,00",
+      "id_cliente": "8366"
+    },
+    {
+      "cliente": "Ana Lins",
+      "cpf": "",
+      "saldo": "0,00",
+      "id_cliente": "19167"
+    },
+    {
+      "cliente": "ANA LUCIA LINS E SILVA",
+      "cpf": "09929952721",
+      "saldo": "81,00",
+      "id_cliente": "10677"
+    },
+    {
+      "cliente": "ANA LUISA  REGO MACEDO",
+      "cpf": "",
+      "saldo": "0,00",
+      "id_cliente": "7505"
+    },
+    {
+      "cliente": "Ana Maria Coimbra Bueno Feldman",
+      "cpf": "14653796149",
+      "saldo": "0,00",
+      "id_cliente": "1481"
+    },
+    {
+      "cliente": "ANA PAULA DE CARVALHO RODRIGUES",
+      "cpf": "05260544765",
+      "saldo": "203,50",
+      "id_cliente": "119"
+    },
+    {
+      "cliente": "Ana Teresa Serpa Schirmer",
+      "cpf": "83019014700",
+      "saldo": "33,00",
+      "id_cliente": "6689"
+    },
+    {
+      "cliente": "Andrea Pedroza",
+      "cpf": "13051145742",
+      "saldo": "0,00",
+      "id_cliente": "18943"
+    },
+    {
+      "cliente": "Andréa vianna",
+      "cpf": "83948660778",
+      "saldo": "51,00",
+      "id_cliente": "7584"
+    },
+    {
+      "cliente": "Andreia",
+      "cpf": "98514571753",
+      "saldo": "0,00",
+      "id_cliente": "11893"
+    },
+    {
+      "cliente": "Ângela Christino del Pino",
+      "cpf": "80557635004",
+      "saldo": "10,00",
+      "id_cliente": "7339"
+    },
+    {
+      "cliente": "ANGELA MARIA RODRIGUES MEDEIROS",
+      "cpf": "34422676768",
+      "saldo": "42,00",
+      "id_cliente": "11109"
+    },
+    {
+      "cliente": "Angélica Coutinho Fiorett",
+      "cpf": "08161767793",
+      "saldo": "0,00",
+      "id_cliente": "286"
+    },
+    {
+      "cliente": "Anna Leão",
+      "cpf": "",
+      "saldo": "0,00",
+      "id_cliente": "2114"
+    },
+    {
+      "cliente": "Anna Paula Kalix F. Mendes",
+      "cpf": "54525896191",
+      "saldo": "4,50",
+      "id_cliente": "2042"
+    },
+    {
+      "cliente": "Antônia Cloudiny Silva do Nascimento Aguiar",
+      "cpf": "12681934702",
+      "saldo": "200,00",
+      "id_cliente": "16125"
+    },
+    {
+      "cliente": "BARBARA CERRANTE",
+      "cpf": "",
+      "saldo": "0,00",
+      "id_cliente": "13557"
+    },
+    {
+      "cliente": "Beatriz Almeida dos Anjos",
+      "cpf": "15304535774",
+      "saldo": "0,00",
+      "id_cliente": "22960"
+    },
+    {
+      "cliente": "Camila da Silva Mello",
+      "cpf": "12417854732",
+      "saldo": "0,00",
+      "id_cliente": "8055"
+    },
+    {
+      "cliente": "Camila Mattos",
+      "cpf": "07532190773",
+      "saldo": "268,50",
+      "id_cliente": "1639"
+    },
+    {
+      "cliente": "Carla Del Guercio",
+      "cpf": "14483239759",
+      "saldo": "0,00",
+      "id_cliente": "10985"
+    },
+    {
+      "cliente": "carmem",
+      "cpf": "08723620781",
+      "saldo": "0,00",
+      "id_cliente": "8610"
+    },
+    {
+      "cliente": "Carolina Chaves",
+      "cpf": "06138299990",
+      "saldo": "0,00",
+      "id_cliente": "9880"
+    },
+    {
+      "cliente": "CAROLINA PAULINO DOS SANTOS",
+      "cpf": "12322870757",
+      "saldo": "66,00",
+      "id_cliente": "4230"
+    },
+    {
+      "cliente": "Christiane Binello",
+      "cpf": "",
+      "saldo": "0,00",
+      "id_cliente": "3950"
+    },
+    {
+      "cliente": "Christiane Madruga Costa Binello",
+      "cpf": "80158706749",
+      "saldo": "0,00",
+      "id_cliente": "6752"
+    },
+    {
+      "cliente": "CHRISTINA NOGUEIRA",
+      "cpf": "02533419737",
+      "saldo": "0,00",
+      "id_cliente": "8238"
+    },
+    {
+      "cliente": "Christina Sequeiro",
+      "cpf": "",
+      "saldo": "196,50",
+      "id_cliente": "5250"
+    },
+    {
+      "cliente": "Christina Serqueiro",
+      "cpf": "",
+      "saldo": "7,50",
+      "id_cliente": "11534"
+    },
+    {
+      "cliente": "Cinthya Stebere",
+      "cpf": "",
+      "saldo": "113,00",
+      "id_cliente": "6803"
+    },
+    {
+      "cliente": "Clara lins",
+      "cpf": "13591948780",
+      "saldo": "0,00",
+      "id_cliente": "5367"
+    },
+    {
+      "cliente": "CLAUDIA MAYA",
+      "cpf": "83185887700",
+      "saldo": "84,50",
+      "id_cliente": "1996"
+    },
+    {
+      "cliente": "CLAUDIA MORAIS LOMAR",
+      "cpf": "",
+      "saldo": "0,00",
+      "id_cliente": "1898"
+    },
+    {
+      "cliente": "CRISTINA VACCARI MANGHI DE CARVALHO",
+      "cpf": "02045628728",
+      "saldo": "0,00",
+      "id_cliente": "26843"
+    },
+    {
+      "cliente": "CRISTINE RIBEIRO",
+      "cpf": "34424725715",
+      "saldo": "107,50",
+      "id_cliente": "5015"
+    },
+    {
+      "cliente": "Cynthia Ozon Boghossian",
+      "cpf": "01649775709",
+      "saldo": "0,00",
+      "id_cliente": "17067"
+    },
+    {
+      "cliente": "Dani Féres",
+      "cpf": "04295601764",
+      "saldo": "0,00",
+      "id_cliente": "4757"
+    },
+    {
+      "cliente": "Daniela Romão",
+      "cpf": "07194147769",
+      "saldo": "10,00",
+      "id_cliente": "22438"
+    },
+    {
+      "cliente": "DEBORAH MATHIAS",
+      "cpf": "",
+      "saldo": "0,00",
+      "id_cliente": "5125"
+    },
+    {
+      "cliente": "deca",
+      "cpf": "10046899774",
+      "saldo": "36,50",
+      "id_cliente": "23317"
+    },
+    {
+      "cliente": "Denise Gerchenzon Braile",
+      "cpf": "",
+      "saldo": "10,00",
+      "id_cliente": "4559"
+    },
+    {
+      "cliente": "Eduardo Carneiro",
+      "cpf": "80401724700",
+      "saldo": "0,00",
+      "id_cliente": "6461"
+    },
+    {
+      "cliente": "Eliana F Lewkowicz",
+      "cpf": "46895540725",
+      "saldo": "88,00",
+      "id_cliente": "8496"
+    },
+    {
+      "cliente": "Elisa Werneck",
+      "cpf": "",
+      "saldo": "30,00",
+      "id_cliente": "17754"
+    },
+    {
+      "cliente": "ELISANGELA FERREIRA",
+      "cpf": "",
+      "saldo": "0,00",
+      "id_cliente": "4614"
+    },
+    {
+      "cliente": "Elizabeth Lins",
+      "cpf": "09946681714",
+      "saldo": "13,50",
+      "id_cliente": "5849"
+    },
+    {
+      "cliente": "ELIZABETH RIBEIRO MARQUES GOMES",
+      "cpf": "",
+      "saldo": "0,00",
+      "id_cliente": "6673"
+    },
+    {
+      "cliente": "Estrela Regina",
+      "cpf": "",
+      "saldo": "0,00",
+      "id_cliente": "9103"
+    },
+    {
+      "cliente": "Felipe Castro (Jornalista)",
+      "cpf": "07836630722",
+      "saldo": "260,61",
+      "id_cliente": "19411"
+    },
+    {
+      "cliente": "Fernanda De Souza Cardoso",
+      "cpf": "",
+      "saldo": "4,00",
+      "id_cliente": "29188"
+    },
+    {
+      "cliente": "Fernanda Levy",
+      "cpf": "08840263705",
+      "saldo": "0,00",
+      "id_cliente": "7889"
+    },
+    {
+      "cliente": "FERNANDA PRESTES TAFT",
+      "cpf": "10789826780",
+      "saldo": "0,00",
+      "id_cliente": "22769"
+    },
+    {
+      "cliente": "Flávia Mara Miranda (21 98680-4614)",
+      "cpf": "",
+      "saldo": "0,00",
+      "id_cliente": "4567"
+    },
+    {
+      "cliente": "Gabriela Furtado",
+      "cpf": "13921043786",
+      "saldo": "33,00",
+      "id_cliente": "8382"
+    },
+    {
+      "cliente": "GABRIELA TEIXEIRA",
+      "cpf": "",
+      "saldo": "0,00",
+      "id_cliente": "7611"
+    },
+    {
+      "cliente": "Galt Capital Consultoria de Investimentos LTDA",
+      "cpf": "09175140000175",
+      "saldo": "0,00",
+      "id_cliente": "2393"
+    },
+    {
+      "cliente": "Glaucia Delgado",
+      "cpf": "76011755704",
+      "saldo": "33,00",
+      "id_cliente": "9043"
+    },
+    {
+      "cliente": "Gustavo Cavalcanti",
+      "cpf": "10286112426",
+      "saldo": "0,00",
+      "id_cliente": "26804"
+    },
+    {
+      "cliente": "HYACINTA FARIAS",
+      "cpf": "",
+      "saldo": "0,00",
+      "id_cliente": "1683"
+    },
+    {
+      "cliente": "Irene Guerra Dantas",
+      "cpf": "",
+      "saldo": "0,00",
+      "id_cliente": "2004"
+    },
+    {
+      "cliente": "Isabela Braga",
+      "cpf": "01101681780",
+      "saldo": "0,00",
+      "id_cliente": "6406"
+    },
+    {
+      "cliente": "Jane de Araújo Carvalho",
+      "cpf": "",
+      "saldo": "10,00",
+      "id_cliente": "5453"
+    },
+    {
+      "cliente": "Jeannine Nacif",
+      "cpf": "01066953635",
+      "saldo": "0,00",
+      "id_cliente": "26824"
+    },
+    {
+      "cliente": "José André Cavalcanti da Silva",
+      "cpf": "91984211404",
+      "saldo": "37,00",
+      "id_cliente": "2588"
+    },
+    {
+      "cliente": "Juana Coimbra",
+      "cpf": "07198489702",
+      "saldo": "0,00",
+      "id_cliente": "10183"
+    },
+    {
+      "cliente": "Juliana de  Paula",
+      "cpf": "12692213700",
+      "saldo": "0,00",
+      "id_cliente": "10344"
+    },
+    {
+      "cliente": "JULIANA DEL BARRIO",
+      "cpf": "02952676909",
+      "saldo": "0,00",
+      "id_cliente": "3876"
+    },
+    {
+      "cliente": "Katya Goldenstein",
+      "cpf": "97513946787",
+      "saldo": "123,50",
+      "id_cliente": "2041"
+    },
+    {
+      "cliente": "Laisa Cazelli Botelho",
+      "cpf": "",
+      "saldo": "0,00",
+      "id_cliente": "1735"
+    },
+    {
+      "cliente": "Larissa Cysne",
+      "cpf": "07917192784",
+      "saldo": "0,00",
+      "id_cliente": "11234"
+    },
+    {
+      "cliente": "laura schnoor",
+      "cpf": "10715440713",
+      "saldo": "0,00",
+      "id_cliente": "21269"
+    },
+    {
+      "cliente": "LEONARD DE QUEIROZ SOARES",
+      "cpf": "07925880708",
+      "saldo": "0,00",
+      "id_cliente": "9134"
+    },
+    {
+      "cliente": "Letícia Martins da Cunha",
+      "cpf": "18829239798",
+      "saldo": "0,00",
+      "id_cliente": "12911"
+    },
+    {
+      "cliente": "Lilian Fernandes Turlão",
+      "cpf": "13066198740",
+      "saldo": "33,00",
+      "id_cliente": "5077"
+    },
+    {
+      "cliente": "Lívia Amaral",
+      "cpf": "",
+      "saldo": "0,00",
+      "id_cliente": "2271"
+    },
+    {
+      "cliente": "Lorena Campos Rachello",
+      "cpf": "08453566666",
+      "saldo": "0,00",
+      "id_cliente": "24287"
+    },
+    {
+      "cliente": "Luana  SINOTI",
+      "cpf": "",
+      "saldo": "0,00",
+      "id_cliente": "9408"
+    },
+    {
+      "cliente": "Lucia Helena Mugayar Guedes Wambier",
+      "cpf": "49124781720",
+      "saldo": "0,00",
+      "id_cliente": "138"
+    },
+    {
+      "cliente": "LUCIA MARIA BARROS DE SÁ",
+      "cpf": "",
+      "saldo": "0,00",
+      "id_cliente": "4663"
+    },
+    {
+      "cliente": "LUCIANO ROCHA ARAUJO",
+      "cpf": "00599805757",
+      "saldo": "107,50",
+      "id_cliente": "6871"
+    },
+    {
+      "cliente": "Marcela Freitas",
+      "cpf": "07200011703",
+      "saldo": "0,00",
+      "id_cliente": "10760"
+    },
+    {
+      "cliente": "Marcelo Lucena",
+      "cpf": "92617344720",
+      "saldo": "188,50",
+      "id_cliente": "22665"
+    },
+    {
+      "cliente": "MARCIA DANTONIO",
+      "cpf": "",
+      "saldo": "0,00",
+      "id_cliente": "4713"
+    },
+    {
+      "cliente": "Marcus Trovó",
+      "cpf": "00000000000000",
+      "saldo": "322,50",
+      "id_cliente": "1462"
+    },
+    {
+      "cliente": "MARIA AMELIA FREITAS DE PAULA PESSOA",
+      "cpf": "53594800768",
+      "saldo": "0,00",
+      "id_cliente": "6577"
+    },
+    {
+      "cliente": "Maria Antonieta",
+      "cpf": "",
+      "saldo": "0,00",
+      "id_cliente": "4591"
+    },
+    {
+      "cliente": "Maria Beatriz",
+      "cpf": "85993905700",
+      "saldo": "0,00",
+      "id_cliente": "17027"
+    },
+    {
+      "cliente": "Maria Celina",
+      "cpf": "54944066600",
+      "saldo": "0,00",
+      "id_cliente": "30238"
+    },
+    {
+      "cliente": "MARIA CLARA",
+      "cpf": "",
+      "saldo": "0,00",
+      "id_cliente": "184"
+    },
+    {
+      "cliente": "Maria Clara tapajos",
+      "cpf": "02163156702",
+      "saldo": "0,00",
+      "id_cliente": "17474"
+    },
+    {
+      "cliente": "Maria Constança Burity Carvalho",
+      "cpf": "00587800500",
+      "saldo": "69,50",
+      "id_cliente": "10911"
+    },
+    {
+      "cliente": "MARIA DE JESUS PANTOJA DE MATOS",
+      "cpf": "79276113720",
+      "saldo": "0,00",
+      "id_cliente": "1810"
+    },
+    {
+      "cliente": "Maria Fernanda Carvalho completo",
+      "cpf": "96702613768",
+      "saldo": "0,00",
+      "id_cliente": "10056"
+    },
+    {
+      "cliente": "Maria Isabel Simões Castanheira",
+      "cpf": "37653121772",
+      "saldo": "33,00",
+      "id_cliente": "2835"
+    },
+    {
+      "cliente": "Maria Isabella Albuquerque de Oliveira",
+      "cpf": "",
+      "saldo": "0,00",
+      "id_cliente": "2213"
+    },
+    {
+      "cliente": "Maria Izabel Pena",
+      "cpf": "40677532768",
+      "saldo": "5,00",
+      "id_cliente": "11180"
+    },
+    {
+      "cliente": "Maria luiza",
+      "cpf": "50450379787",
+      "saldo": "0,00",
+      "id_cliente": "4156"
+    },
+    {
+      "cliente": "Mariana Miranda",
+      "cpf": "12398522741",
+      "saldo": "7,00",
+      "id_cliente": "9893"
+    },
+    {
+      "cliente": "Mariana Pezzini",
+      "cpf": "01407230131",
+      "saldo": "0,00",
+      "id_cliente": "24160"
+    },
+    {
+      "cliente": "MARILDA OLIVEIRA",
+      "cpf": "34772081704",
+      "saldo": "0,00",
+      "id_cliente": "18410"
+    },
+    {
+      "cliente": "MARÍLIA BONELLI RAMOS DE AZEVEDO",
+      "cpf": "07088076748",
+      "saldo": "0,00",
+      "id_cliente": "161"
+    },
+    {
+      "cliente": "Marisa de Lima Viana",
+      "cpf": "",
+      "saldo": "213,50",
+      "id_cliente": "6640"
+    },
+    {
+      "cliente": "Marli Gomes Leal",
+      "cpf": "",
+      "saldo": "13,00",
+      "id_cliente": "24259"
+    },
+    {
+      "cliente": "Mayara Queiroz do Nascimento",
+      "cpf": "38217255830",
+      "saldo": "225,00",
+      "id_cliente": "11293"
+    },
+    {
+      "cliente": "Mellissa Büchi",
+      "cpf": "05213771700",
+      "saldo": "0,00",
+      "id_cliente": "22062"
+    },
+    {
+      "cliente": "Michel Cosme Ferreira da Silva",
+      "cpf": "11896738788",
+      "saldo": "0,00",
+      "id_cliente": "8733"
+    },
+    {
+      "cliente": "Miguel Angelo Campagnac Rabello",
+      "cpf": "80885179749",
+      "saldo": "0,00",
+      "id_cliente": "16263"
+    },
+    {
+      "cliente": "Mirian",
+      "cpf": "",
+      "saldo": "0,00",
+      "id_cliente": "4775"
+    },
+    {
+      "cliente": "Nathalia Lira",
+      "cpf": "17172493702",
+      "saldo": "188,50",
+      "id_cliente": "17276"
+    },
+    {
+      "cliente": "Nathália Regina Alves Dourado",
+      "cpf": "40581106865",
+      "saldo": "10,00",
+      "id_cliente": "27175"
+    },
+    {
+      "cliente": "Neusa Tamaio",
+      "cpf": "10546934803",
+      "saldo": "0,00",
+      "id_cliente": "18571"
+    },
+    {
+      "cliente": "Neuza Garcia",
+      "cpf": "83185550749",
+      "saldo": "0,00",
+      "id_cliente": "5759"
+    },
+    {
+      "cliente": "Nicole Ascer",
+      "cpf": "37490060753",
+      "saldo": "0,00",
+      "id_cliente": "4378"
+    },
+    {
+      "cliente": "Nicole Bentes Franca",
+      "cpf": "11936466775",
+      "saldo": "0,00",
+      "id_cliente": "12226"
+    },
+    {
+      "cliente": "Odete Monteiro",
+      "cpf": "",
+      "saldo": "0,00",
+      "id_cliente": "30405"
+    },
+    {
+      "cliente": "Patrícia Braun",
+      "cpf": "52902056087",
+      "saldo": "0,00",
+      "id_cliente": "20310"
+    },
+    {
+      "cliente": "Paula Padilha",
+      "cpf": "82911240782",
+      "saldo": "0,00",
+      "id_cliente": "2670"
+    },
+    {
+      "cliente": "Rachel de Sá Campos",
+      "cpf": "",
+      "saldo": "0,00",
+      "id_cliente": "4755"
+    },
+    {
+      "cliente": "Rachel K Rianeli",
+      "cpf": "04124846924",
+      "saldo": "22,00",
+      "id_cliente": "8787"
+    },
+    {
+      "cliente": "RAFAEL SAMPAIO PINCER",
+      "cpf": "",
+      "saldo": "36,00",
+      "id_cliente": "1506"
+    },
+    {
+      "cliente": "Regina Miranda",
+      "cpf": "15296784120",
+      "saldo": "0,00",
+      "id_cliente": "10948"
+    },
+    {
+      "cliente": "Renata",
+      "cpf": "05641000728",
+      "saldo": "0,00",
+      "id_cliente": "22675"
+    },
+    {
+      "cliente": "Renata Couto da Silva",
+      "cpf": "02544897708",
+      "saldo": "- 203,50",
+      "id_cliente": "13584"
+    },
+    {
+      "cliente": "RENATA CURI HAUEGEN",
+      "cpf": "00538243694",
+      "saldo": "0,00",
+      "id_cliente": "12781"
+    },
+    {
+      "cliente": "Renata Tenório",
+      "cpf": "",
+      "saldo": "0,00",
+      "id_cliente": "7081"
+    },
+    {
+      "cliente": "RITA SAMPAIO",
+      "cpf": "",
+      "saldo": "0,00",
+      "id_cliente": "4627"
+    },
+    {
+      "cliente": "Rosangela Evangelista",
+      "cpf": "",
+      "saldo": "0,00",
+      "id_cliente": "3929"
+    },
+    {
+      "cliente": "Rosângela La porta",
+      "cpf": "66723388704",
+      "saldo": "0,00",
+      "id_cliente": "29384"
+    },
+    {
+      "cliente": "Roseane Teles Correia",
+      "cpf": "07386953780",
+      "saldo": "74,00",
+      "id_cliente": "9668"
+    },
+    {
+      "cliente": "Sérgio de Campante Santos",
+      "cpf": "07405701701",
+      "saldo": "2.880,00",
+      "id_cliente": "30407"
+    },
+    {
+      "cliente": "sonia violeta rodrigues muller",
+      "cpf": "10973552760",
+      "saldo": "15,00",
+      "id_cliente": "23202"
+    },
+    {
+      "cliente": "Susana Gonçalves Arraes",
+      "cpf": "94034834749",
+      "saldo": "30,00",
+      "id_cliente": "4754"
+    },
+    {
+      "cliente": "SYMPOSIUM",
+      "cpf": "",
+      "saldo": "14,50",
+      "id_cliente": "1708"
+    },
+    {
+      "cliente": "Telda Rejane Batista Ramos",
+      "cpf": "55494196020",
+      "saldo": "0,00",
+      "id_cliente": "6906"
+    },
+    {
+      "cliente": "VERA A PEREIRA",
+      "cpf": "",
+      "saldo": "10,00",
+      "id_cliente": "2431"
+    },
+    {
+      "cliente": "VERA VIEIRA",
+      "cpf": "",
+      "saldo": "0,00",
+      "id_cliente": "16295"
+    },
+    {
+      "cliente": "Veronica",
+      "cpf": "07704080792",
+      "saldo": "10,00",
+      "id_cliente": "11971"
+    },
+    {
+      "cliente": "Victor da Maceno Faro",
+      "cpf": "04506704304",
+      "saldo": "- 122,50",
+      "id_cliente": "23258"
+    },
+    {
+      "cliente": "Victor Hugo Teixeira correia",
+      "cpf": "",
+      "saldo": "0,00",
+      "id_cliente": "6216"
+    },
+    {
+      "cliente": "Vitor Máximo",
+      "cpf": "14210682730",
+      "saldo": "8,00",
+      "id_cliente": "19916"
+    },
+    {
+      "cliente": "Vitória Alecsandra Santos do Rosario",
+      "cpf": "11568489706",
+      "saldo": "0,00",
+      "id_cliente": "9825"
+    },
+    {
+      "cliente": "William Sandes",
+      "cpf": "92986021204",
+      "saldo": "10,00",
+      "id_cliente": "11899"
+    },
+    {
+      "cliente": "Yana Croce Ferreira de Carvalho",
+      "cpf": "12482465788",
+      "saldo": "6,00",
+      "id_cliente": "19825"
+    }
+  ]
+}

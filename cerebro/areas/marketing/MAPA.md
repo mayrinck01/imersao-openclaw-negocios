@@ -1,42 +1,30 @@
-# Marketing — Mapa da Área
+# MAPA — Área: Marketing
 
-## Estrutura
+## O que cobre
+- Instagram (@cakeco ou similar)
+- Meta Ads (tráfego pago)
+- Conteúdo e criativos
+- LinkedIn (em estruturação)
 
-```
-marketing/
-├── MAPA.md
-├── contexto/
-│   ├── geral.md           ← Objetivo, KPIs, canais, calendário
-│   ├── people.md          ← Quem trabalha na área
-│   ├── decisions.md       ← Decisões da área
-│   └── lessons.md         ← Lições aprendidas
-├── rotinas/
-│   └── relatorio-campanha-semanal.md
-├── skills/
-│   └── _index.md
-├── projetos/
-└── sub-areas/
-    └── trafego-pago/
-        ├── contexto/
-        │   ├── geral.md           ← Processo completo do ciclo de criativos
-        │   ├── mapa-criativos.md  ← Tabela de criativos ativos
-        │   ├── people.md          ← Quem opera tráfego
-        │   ├── decisions.md       ← Decisões de campanhas
-        │   └── lessons.md         ← Learnings de criativos
-        ├── rotinas/
-        ├── skills/
-        └── projetos/
-```
+## Pessoas-chave
+| Pessoa | Papel |
+|--------|-------|
+| **Eduarda** | Marketing interno |
 
-## O que tem em cada lugar
+## Sistemas
+- **Instagram API** — token configurado, coleta mensal de insights
+- **Meta Ads API** — token (necessita renovação periódica)
+- **Cron mensal:** `instagram-insights-coletor.sh` (1º do mês às 9h)
 
-| Caminho | O que o agente encontra |
-|---------|------------------------|
-| `contexto/geral.md` | Objetivo, KPIs, canais, calendário, ferramentas |
-| `contexto/people.md` | Responsáveis e estrutura de decisão |
-| `contexto/decisions.md` | Decisões tomadas na área |
-| `contexto/lessons.md` | Lições aprendidas |
-| `rotinas/` | Crons configurados (relatório semanal) |
-| `skills/` | Skills da área (ver `_index.md`) |
-| `projetos/` | Projetos ativos e concluídos |
-| `sub-areas/trafego-pago/` | Sub-área com mesma estrutura (sem sub-areas dentro) |
+## Automações ativas
+| Horário | Script | O que faz |
+|---------|--------|-----------|
+| 1º mês 09:00 | instagram-insights-coletor.sh | Coleta métricas Instagram |
+
+## Pendências
+- [ ] Relatório Instagram Mensal Detalhado — breakdown demográfico, top posts, novos seguidores
+- [ ] Token Meta Ads permanente (atual expira semanalmente)
+- [ ] Campanhas ativas — mapeamento e acompanhamento
+
+## Contexto
+Ver `cerebro/empresa/contexto/geral.md` para posicionamento da marca.

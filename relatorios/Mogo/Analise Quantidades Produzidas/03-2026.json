@@ -1,0 +1,964 @@
+{
+  "periodo": {
+    "de": "01/03/2026",
+    "ate": "31/03/2026"
+  },
+  "total_registros": 106,
+  "custo_total": "R$ 15.121,48",
+  "registros": [
+    {
+      "data": "26/03/2026",
+      "hora": "15:24:41",
+      "produto": "(prod) Geleia Morango 250gr (un)",
+      "qtde": "5,000",
+      "custo_unit": "5,91",
+      "custo_total": "29,57",
+      "turno": "Geral"
+    },
+    {
+      "data": "26/03/2026",
+      "hora": "15:23:39",
+      "produto": "(prod) Geleia Morango (kg)",
+      "qtde": "8,100",
+      "custo_unit": "20,50",
+      "custo_total": "166,02",
+      "turno": "Geral"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "18:48:23",
+      "produto": "(prod) Batido Nega Maluca F25 (un)",
+      "qtde": "6,000",
+      "custo_unit": "11,98",
+      "custo_total": "71,85",
+      "turno": "Geral"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "18:48:22",
+      "produto": "(prod) Batido Nega Maluca F20 (un)",
+      "qtde": "10,000",
+      "custo_unit": "5,99",
+      "custo_total": "59,88",
+      "turno": "Geral"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "18:48:21",
+      "produto": "(prod) Batido Nega Maluca F14 (un)",
+      "qtde": "13,000",
+      "custo_unit": "2,99",
+      "custo_total": "38,92",
+      "turno": "Geral"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "18:46:02",
+      "produto": "(prod) Batido Nega Maluca (kg)",
+      "qtde": "16,800",
+      "custo_unit": "9,98",
+      "custo_total": "167,66",
+      "turno": "Geral"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "18:45:58",
+      "produto": "(prod) Batido Preto F25 (un)",
+      "qtde": "91,000",
+      "custo_unit": "7,49",
+      "custo_total": "681,83",
+      "turno": "Geral"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "18:45:57",
+      "produto": "(prod) Batido Preto F13 (un)",
+      "qtde": "66,000",
+      "custo_unit": "1,75",
+      "custo_total": "115,60",
+      "turno": "Geral"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "18:45:56",
+      "produto": "(prod) Batido Branco F20 (un)",
+      "qtde": "43,000",
+      "custo_unit": "3,47",
+      "custo_total": "149,34",
+      "turno": "Geral"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "18:45:55",
+      "produto": "(prod) Batido Branco F25 (un)",
+      "qtde": "133,000",
+      "custo_unit": "5,35",
+      "custo_total": "711,34",
+      "turno": "Geral"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "18:45:54",
+      "produto": "(prod) Batido Branco F13 (un)",
+      "qtde": "72,000",
+      "custo_unit": "1,39",
+      "custo_total": "100,02",
+      "turno": "Geral"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "18:42:26",
+      "produto": "(prod) Batido Bolo Laranja (kg)",
+      "qtde": "5,220",
+      "custo_unit": "7,28",
+      "custo_total": "38,00",
+      "turno": "Geral"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "18:40:57",
+      "produto": "(prod) Batido Branco (kg)",
+      "qtde": "140,140",
+      "custo_unit": "6,95",
+      "custo_total": "973,42",
+      "turno": "Geral"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "18:07:50",
+      "produto": "(prod) Massa Salgada (kg)",
+      "qtde": "9,540",
+      "custo_unit": "7,65",
+      "custo_total": "72,97",
+      "turno": "Geral"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "18:07:48",
+      "produto": "(prod) Batido Chocolate (kg)",
+      "qtde": "153,140",
+      "custo_unit": "9,73",
+      "custo_total": "1.490,17",
+      "turno": "Geral"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:58:25",
+      "produto": "(prod) Banoffee F20 (un)",
+      "qtde": "6,000",
+      "custo_unit": "32,65",
+      "custo_total": "195,92",
+      "turno": "Geral"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:58:23",
+      "produto": "(prod) Banoffee F13 (un)",
+      "qtde": "11,000",
+      "custo_unit": "19,37",
+      "custo_total": "213,12",
+      "turno": "Geral"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:57:25",
+      "produto": "(prod) Semi Acabada Banoffee F20 (un)",
+      "qtde": "6,000",
+      "custo_unit": "22,36",
+      "custo_total": "134,17",
+      "turno": "Geral"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:57:23",
+      "produto": "(prod) Semi Acabada Banoffee F13 (un)",
+      "qtde": "11,000",
+      "custo_unit": "12,45",
+      "custo_total": "136,90",
+      "turno": "Geral"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:56:20",
+      "produto": "(prod) Base Banoffee F20 (un)",
+      "qtde": "6,000",
+      "custo_unit": "7,02",
+      "custo_total": "42,13",
+      "turno": "Geral"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:56:19",
+      "produto": "(prod) Base Banoffee F13 (un)",
+      "qtde": "11,000",
+      "custo_unit": "3,95",
+      "custo_total": "43,45",
+      "turno": "Geral"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:56:13",
+      "produto": "(prod) Banoffee Base (kg)",
+      "qtde": "4,600",
+      "custo_unit": "21,94",
+      "custo_total": "100,94",
+      "turno": "Geral"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:53:37",
+      "produto": "(prod) Alema F22 (un)",
+      "qtde": "10,000",
+      "custo_unit": "45,94",
+      "custo_total": "459,35",
+      "turno": "Geral"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:53:28",
+      "produto": "(prod) Semi Alema F22 (un)",
+      "qtde": "10,000",
+      "custo_unit": "37,36",
+      "custo_total": "373,57",
+      "turno": "Geral"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:53:18",
+      "produto": "(prod) Creme de Alema (kg)",
+      "qtde": "10,730",
+      "custo_unit": "29,76",
+      "custo_total": "319,28",
+      "turno": "Geral"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:53:17",
+      "produto": "(prod) Calda Chocolate Alema (kg)",
+      "qtde": "9,000",
+      "custo_unit": "13,41",
+      "custo_total": "120,73",
+      "turno": "Geral"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:47:35",
+      "produto": "(prod) Base Torta Mousse Chocolate F13 (un)",
+      "qtde": "24,000",
+      "custo_unit": "2,19",
+      "custo_total": "52,51",
+      "turno": "Geral"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:47:34",
+      "produto": "(prod) Base Torta Mousse Chocolate F25 (un)",
+      "qtde": "8,000",
+      "custo_unit": "10,94",
+      "custo_total": "87,51",
+      "turno": "Geral"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:47:28",
+      "produto": "(prod) Base Torta Mousse Chocolate F25 (un)",
+      "qtde": "8,000",
+      "custo_unit": "10,94",
+      "custo_total": "87,51",
+      "turno": "Geral"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:47:27",
+      "produto": "(prod) Base Torta Mousse Chocolate F13 (un)",
+      "qtde": "24,000",
+      "custo_unit": "2,19",
+      "custo_total": "52,51",
+      "turno": "Geral"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:47:26",
+      "produto": "(prod) Base Cheescake F25 (un)",
+      "qtde": "10,000",
+      "custo_unit": "7,28",
+      "custo_total": "72,80",
+      "turno": "Geral"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:47:26",
+      "produto": "(prod) Base Banoffee F13 (un)",
+      "qtde": "6,000",
+      "custo_unit": "3,92",
+      "custo_total": "23,51",
+      "turno": "Geral"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:43:42",
+      "produto": "(prod) Recheio Cheescake (kg)",
+      "qtde": "13,440",
+      "custo_unit": "22,89",
+      "custo_total": "307,66",
+      "turno": "Geral"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:43:41",
+      "produto": "(prod) Empadao Frango F25 (un)",
+      "qtde": "13,000",
+      "custo_unit": "30,00",
+      "custo_total": "390,01",
+      "turno": "Geral"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:43:39",
+      "produto": "(prod) Recheio Crocante (kg)",
+      "qtde": "6,400",
+      "custo_unit": "13,75",
+      "custo_total": "87,98",
+      "turno": "Geral"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:43:37",
+      "produto": "(prod) Recheio Torta Mousse Chocolate (kg)",
+      "qtde": "19,540",
+      "custo_unit": "21,88",
+      "custo_total": "427,48",
+      "turno": "Geral"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:39:43",
+      "produto": "(prod) Rocambole Laranja (un)",
+      "qtde": "4,000",
+      "custo_unit": "27,05",
+      "custo_total": "108,20",
+      "turno": "Geral"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:39:34",
+      "produto": "(prod) Cheescake F13 (un)",
+      "qtde": "12,000",
+      "custo_unit": "14,95",
+      "custo_total": "179,40",
+      "turno": "Geral"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:39:32",
+      "produto": "(prod) Cheescake F25 (un)",
+      "qtde": "8,000",
+      "custo_unit": "39,65",
+      "custo_total": "317,20",
+      "turno": "Geral"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:39:21",
+      "produto": "(prod) Batido Rocambole Laranja (kg)",
+      "qtde": "7,360",
+      "custo_unit": "7,47",
+      "custo_total": "54,99",
+      "turno": "Geral"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:39:20",
+      "produto": "(prod) Baba de Moca Grossa (kg)",
+      "qtde": "9,700",
+      "custo_unit": "16,04",
+      "custo_total": "155,54",
+      "turno": "Geral"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:39:18",
+      "produto": "(prod) Recheio Cheescake (kg)",
+      "qtde": "12,320",
+      "custo_unit": "22,90",
+      "custo_total": "282,11",
+      "turno": "Geral"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:39:16",
+      "produto": "(prod) Base Cheescake F25 (un)",
+      "qtde": "8,000",
+      "custo_unit": "7,29",
+      "custo_total": "58,33",
+      "turno": "Geral"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:39:15",
+      "produto": "(prod) Base Cheescake F13 (un)",
+      "qtde": "12,000",
+      "custo_unit": "2,43",
+      "custo_total": "29,17",
+      "turno": "Geral"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:39:07",
+      "produto": "(prod) Base Cheescake (kg)",
+      "qtde": "3,410",
+      "custo_unit": "23,33",
+      "custo_total": "79,56",
+      "turno": "Geral"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:31:58",
+      "produto": "(prod) Empadao Frango F13 (un)",
+      "qtde": "6,000",
+      "custo_unit": "13,30",
+      "custo_total": "79,80",
+      "turno": "Geral"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:31:56",
+      "produto": "(prod) Baba de Moca Grossa (kg)",
+      "qtde": "9,700",
+      "custo_unit": "16,04",
+      "custo_total": "155,54",
+      "turno": "Geral"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:31:48",
+      "produto": "(prod) Quindim 60gr (un)",
+      "qtde": "66,000",
+      "custo_unit": "5,28",
+      "custo_total": "348,46",
+      "turno": "Geral"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:31:28",
+      "produto": "(prod) Quindim (kg)",
+      "qtde": "4,560",
+      "custo_unit": "21,35",
+      "custo_total": "97,34",
+      "turno": "Geral"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:29:15",
+      "produto": "(prod) Recheio Torta Mousse Chocolate (kg)",
+      "qtde": "19,540",
+      "custo_unit": "21,88",
+      "custo_total": "427,48",
+      "turno": "Geral"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:29:14",
+      "produto": "(prod) Recheio Abacaxi (kg)",
+      "qtde": "5,200",
+      "custo_unit": "27,52",
+      "custo_total": "143,10",
+      "turno": "Geral"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:27:28",
+      "produto": "(prod) Bolo Laranja F25 (un)",
+      "qtde": "6,000",
+      "custo_unit": "15,17",
+      "custo_total": "91,01",
+      "turno": "Geral"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:27:25",
+      "produto": "(prod) Batido Bolo Laranja (kg)",
+      "qtde": "5,220",
+      "custo_unit": "7,28",
+      "custo_total": "38,00",
+      "turno": "Geral"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:27:22",
+      "produto": "(prod) Nova Cobertura de Brigadeiro (kg)",
+      "qtde": "45,600",
+      "custo_unit": "20,04",
+      "custo_total": "913,80",
+      "turno": "Geral"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:27:21",
+      "produto": "(prod) Bolo Cenoura Ingles (un)",
+      "qtde": "12,000",
+      "custo_unit": "3,48",
+      "custo_total": "41,77",
+      "turno": "Geral"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:27:20",
+      "produto": "(prod) Bolo Cenoura F25 (un)",
+      "qtde": "11,000",
+      "custo_unit": "15,49",
+      "custo_total": "170,39",
+      "turno": "Geral"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:27:18",
+      "produto": "(prod) Batido Bolo Cenoura (kg)",
+      "qtde": "12,000",
+      "custo_unit": "6,40",
+      "custo_total": "76,81",
+      "turno": "Geral"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:26:27",
+      "produto": "(prod) Cheescake F13 (un)",
+      "qtde": "15,000",
+      "custo_unit": "14,95",
+      "custo_total": "224,25",
+      "turno": "Geral"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "16:26:36",
+      "produto": "(prod) Empadao Frango F13 (un)",
+      "qtde": "4,000",
+      "custo_unit": "13,30",
+      "custo_total": "53,20",
+      "turno": "Geral"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "16:26:34",
+      "produto": "(prod) Empadao Frango F25 (un)",
+      "qtde": "9,000",
+      "custo_unit": "30,00",
+      "custo_total": "270,00",
+      "turno": "Geral"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "16:26:31",
+      "produto": "(prod) Base Cheescake F13 (un)",
+      "qtde": "15,000",
+      "custo_unit": "2,43",
+      "custo_total": "36,44",
+      "turno": "Geral"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "16:25:02",
+      "produto": "(prod) Recheio de Frango (kg)",
+      "qtde": "7,500",
+      "custo_unit": "10,86",
+      "custo_total": "81,46",
+      "turno": "Geral"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "16:25:00",
+      "produto": "(prod) Massa Salgada (kg)",
+      "qtde": "9,540",
+      "custo_unit": "7,65",
+      "custo_total": "72,97",
+      "turno": "Geral"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "16:24:59",
+      "produto": "(prod) Base Cheescake (kg)",
+      "qtde": "1,550",
+      "custo_unit": "23,36",
+      "custo_total": "36,21",
+      "turno": "Geral"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "16:24:57",
+      "produto": "(prod) Baba de Moca Grossa (kg)",
+      "qtde": "9,700",
+      "custo_unit": "16,04",
+      "custo_total": "155,54",
+      "turno": "Geral"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "16:24:55",
+      "produto": "(prod) Recheio Crocante (kg)",
+      "qtde": "6,400",
+      "custo_unit": "13,75",
+      "custo_total": "87,98",
+      "turno": "Geral"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "16:17:58",
+      "produto": "(prod) Batido Nega Maluca F25 (un)",
+      "qtde": "11,000",
+      "custo_unit": "11,98",
+      "custo_total": "131,73",
+      "turno": "Geral"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "16:17:57",
+      "produto": "(prod) Batido Nega Maluca F20 (un)",
+      "qtde": "10,000",
+      "custo_unit": "5,99",
+      "custo_total": "59,88",
+      "turno": "Geral"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "16:15:47",
+      "produto": "(prod) Baba de Moca Grossa (kg)",
+      "qtde": "9,700",
+      "custo_unit": "16,04",
+      "custo_total": "155,54",
+      "turno": "Geral"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "16:15:45",
+      "produto": "(prod) Mousse de Limao (kg)",
+      "qtde": "6,240",
+      "custo_unit": "15,47",
+      "custo_total": "96,55",
+      "turno": "Geral"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "16:14:42",
+      "produto": "(prod) Batido Nega Maluca (kg)",
+      "qtde": "19,200",
+      "custo_unit": "9,98",
+      "custo_total": "191,61",
+      "turno": "Geral"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "16:14:39",
+      "produto": "(prod) Massa Salgada (kg)",
+      "qtde": "4,770",
+      "custo_unit": "7,65",
+      "custo_total": "36,49",
+      "turno": "Geral"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "19:10:59",
+      "produto": "(prod) Bolo Toca do Coelho Pascoa 2026 (un)",
+      "qtde": "1,000",
+      "custo_unit": "4,27",
+      "custo_total": "4,27",
+      "turno": "Geral"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "19:04:55",
+      "produto": "(prod) Bolo Inglês Aurora da Páscoa 2026 (un)",
+      "qtde": "1,000",
+      "custo_unit": "8,95",
+      "custo_total": "8,95",
+      "turno": "Geral"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "18:59:55",
+      "produto": "(prod) Brig Tesouros da Páscoa 2026 (cx12un)",
+      "qtde": "1,000",
+      "custo_unit": "11,02",
+      "custo_total": "11,02",
+      "turno": "Geral"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "18:56:24",
+      "produto": "(prod) Bolo Toca do Coelho Pascoa 2026 (un)",
+      "qtde": "1,000",
+      "custo_unit": "3,95",
+      "custo_total": "3,95",
+      "turno": "Geral"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "18:53:41",
+      "produto": "(prod) Nova Massa Brigadeiro Preto (kg)",
+      "qtde": "9,930",
+      "custo_unit": "15,33",
+      "custo_total": "152,25",
+      "turno": "Geral"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "18:52:49",
+      "produto": "(prod) Nova Massa Brigadeiro Branco (kg)",
+      "qtde": "7,100",
+      "custo_unit": "17,87",
+      "custo_total": "126,88",
+      "turno": "Geral"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "18:46:17",
+      "produto": "(prod) Bolo Inglês Aurora da Páscoa 2026 (un)",
+      "qtde": "1,000",
+      "custo_unit": "6,32",
+      "custo_total": "6,32",
+      "turno": "Geral"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "18:45:20",
+      "produto": "(prod) Bolo Cenoura Ingles (un)",
+      "qtde": "4,000",
+      "custo_unit": "3,35",
+      "custo_total": "13,41",
+      "turno": "Geral"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "18:15:26",
+      "produto": "(prod) Brig Tesouros da Páscoa 2026 (cx12un)",
+      "qtde": "1,000",
+      "custo_unit": "9,54",
+      "custo_total": "9,54",
+      "turno": "Geral"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "17:49:56",
+      "produto": "(prod) Bolo Inglês Aurora da Páscoa 2026 (un)",
+      "qtde": "1,000",
+      "custo_unit": "6,37",
+      "custo_total": "6,37",
+      "turno": "Geral"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "17:49:53",
+      "produto": "(prod) Bolo Inglês Noite de Páscoa 2026 (un)",
+      "qtde": "1,000",
+      "custo_unit": "9,15",
+      "custo_total": "9,15",
+      "turno": "Geral"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "17:49:50",
+      "produto": "(prod) Brig Tesouros da Páscoa 2026 (cx12un)",
+      "qtde": "1,000",
+      "custo_unit": "9,54",
+      "custo_total": "9,54",
+      "turno": "Geral"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "17:25:49",
+      "produto": "(prod) Ovo Surpresa de Morango - Pascoa 2026 (un)",
+      "qtde": "1,000",
+      "custo_unit": "15,08",
+      "custo_total": "15,08",
+      "turno": "Geral"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "17:18:54",
+      "produto": "(prod) Bolo Inglês Aurora da Páscoa 2026 (un)",
+      "qtde": "1,000",
+      "custo_unit": "7,21",
+      "custo_total": "7,21",
+      "turno": "Geral"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "17:18:07",
+      "produto": "(prod) Batido Bolo Cenoura (kg)",
+      "qtde": "4,000",
+      "custo_unit": "6,41",
+      "custo_total": "25,62",
+      "turno": "Geral"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "17:15:11",
+      "produto": "(prod) Bolo Inglês Noite de Páscoa 2026 (un)",
+      "qtde": "1,000",
+      "custo_unit": "9,97",
+      "custo_total": "9,97",
+      "turno": "Geral"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "17:15:09",
+      "produto": "(prod) Brig Tesouros da Páscoa 2026 (cx12un)",
+      "qtde": "1,000",
+      "custo_unit": "11,28",
+      "custo_total": "11,28",
+      "turno": "Geral"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "17:15:07",
+      "produto": "(prod) Bolo Inglês Aurora da Páscoa 2026 (un)",
+      "qtde": "1,000",
+      "custo_unit": "7,20",
+      "custo_total": "7,20",
+      "turno": "Geral"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "17:15:05",
+      "produto": "(prod) Bolo Toca do Coelho Pascoa 2026 (un)",
+      "qtde": "1,000",
+      "custo_unit": "6,43",
+      "custo_total": "6,43",
+      "turno": "Geral"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "17:15:03",
+      "produto": "(prod) Torta Pascoa Chocolate F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "48,08",
+      "custo_total": "48,08",
+      "turno": "Geral"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "17:15:02",
+      "produto": "(prod) Torta Pascoa Chocolate F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "22,85",
+      "custo_total": "22,85",
+      "turno": "Geral"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "16:29:46",
+      "produto": "(prod) Ovo Surpresa de Morango - Pascoa 2026 (un)",
+      "qtde": "1,000",
+      "custo_unit": "19,39",
+      "custo_total": "19,39",
+      "turno": "Geral"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "16:29:44",
+      "produto": "(prod) Ovo Crocante de Chocolate - Pascoa 2026 (un)",
+      "qtde": "1,000",
+      "custo_unit": "14,62",
+      "custo_total": "14,62",
+      "turno": "Geral"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "16:29:40",
+      "produto": "(prod) Ovo Tentação de Chocolate - Pascoa 2026 (un)",
+      "qtde": "1,000",
+      "custo_unit": "14,69",
+      "custo_total": "14,69",
+      "turno": "Geral"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "16:29:37",
+      "produto": "(prod) Ovo Ninho & Nutella - Pascoa 2026 (un)",
+      "qtde": "1,000",
+      "custo_unit": "21,23",
+      "custo_total": "21,23",
+      "turno": "Geral"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "14:44:35",
+      "produto": "(prod) Creme de Ninho (kg)",
+      "qtde": "1,500",
+      "custo_unit": "26,94",
+      "custo_total": "40,41",
+      "turno": "Geral"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "14:37:46",
+      "produto": "(prod) Creme Ninho (kg)",
+      "qtde": "1,500",
+      "custo_unit": "26,94",
+      "custo_total": "40,41",
+      "turno": "Geral"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "14:21:56",
+      "produto": "(prod) Creme Ninho (kg)",
+      "qtde": "1,500",
+      "custo_unit": "26,94",
+      "custo_total": "40,41",
+      "turno": "Geral"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "14:20:15",
+      "produto": "(prod) Ovo Surpresa de Morango - Pascoa 2026 (un)",
+      "qtde": "1,000",
+      "custo_unit": "15,08",
+      "custo_total": "15,08",
+      "turno": "Geral"
+    },
+    {
+      "data": "17/03/2026",
+      "hora": "12:40:51",
+      "produto": "(prod) Creme Ninho (kg)",
+      "qtde": "4,500",
+      "custo_unit": "26,94",
+      "custo_total": "121,23",
+      "turno": "Geral"
+    },
+    {
+      "data": "06/03/2026",
+      "hora": "15:09:06",
+      "produto": "(prod) Batido Red Velvet (kg)",
+      "qtde": "5,900",
+      "custo_unit": "6,99",
+      "custo_total": "41,24",
+      "turno": "Geral"
+    },
+    {
+      "data": "06/03/2026",
+      "hora": "11:21:23",
+      "produto": "(prod) Colorida F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "55,26",
+      "custo_total": "55,26",
+      "turno": "Geral"
+    },
+    {
+      "data": "06/03/2026",
+      "hora": "11:21:07",
+      "produto": "(prod) Semi Colorida F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "30,47",
+      "custo_total": "30,47",
+      "turno": "Geral"
+    },
+    {
+      "data": "06/03/2026",
+      "hora": "11:20:59",
+      "produto": "(prod) Semi Pronta Colorida F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "18,19",
+      "custo_total": "18,19",
+      "turno": "Geral"
+    }
+  ]
+}

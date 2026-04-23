@@ -1,33 +1,14 @@
-# Pessoas — Marketing
+# Pessoas — Marketing Cake & Co
 
-> Quem trabalha nesta área, seus papéis e responsabilidades.
+## Time atual mapeado
 
----
+| Pessoa | Papel | Observação |
+|---|---|---|
+| Eduarda | Marketing interno | operação e apoio do marketing |
+| João Mayrinck | Direção estratégica | aprova direção de crescimento e posicionamento |
+| Laura | Guardiã da essência | decisões que tocam identidade e tradição pedem sensibilidade com a visão dela |
 
-## Time
-
-| Pessoa | Papel | Responsabilidades |
-|--------|-------|-------------------|
-| Felipe Santos | CEO / Estratégia | Direção de marketing, aprovação de budget |
-| Carlos | Gestor de Tráfego | Meta Ads, criativos, ROAS, orçamento de mídia |
-| Marina | Conteúdo & Comunidade | Instagram, YouTube, newsletter |
-| Lucas | Gestor de Tráfego (externo) | Execução de campanhas Meta Ads |
-| Patrícia | Gestora de Tráfego (externa) | Execução de campanhas Meta Ads |
-| Marcos | Designer (externo) | Thumbnails, artes, criativos visuais |
-| Diego | Edição de Vídeo (externo) | Edição de vídeos YouTube |
-
----
-
-## Estrutura de Decisão
-
-| Tipo | Quem decide |
-|------|-------------|
-| Estratégia e budget | Felipe Santos |
-| Budget Meta Ads (até R$5k) | Carlos |
-| Criativos novos | Carlos + Marina |
-| Conteúdo para publicação | Ricardo Mendes (aprovação) |
-| Contratação de freelancers | Bruno |
-
----
-
-_Atualizado: março 2026_
+## Regra de decisão
+- campanha e posicionamento precisam respeitar a alma da Cake
+- peças institucionais não devem atropelar a história construída pela Laura
+- o marketing serve ao crescimento, mas também protege a memória da marca

@@ -1,0 +1,27 @@
+{
+  "periodo": {
+    "de": "01/03/2026",
+    "ate": "31/03/2026"
+  },
+  "tipo_data": "Pedido",
+  "registros": [
+    {
+      "tipo_pedido": "Mesa",
+      "quantidade": "1.442,00",
+      "total": "85.659,28",
+      "ticket_medio": "59,40"
+    },
+    {
+      "tipo_pedido": "Entrega",
+      "quantidade": "3.593,00",
+      "total": "562.888,02",
+      "ticket_medio": "156,66"
+    },
+    {
+      "tipo_pedido": "Balcão",
+      "quantidade": "800,00",
+      "total": "50.307,11",
+      "ticket_medio": "62,88"
+    }
+  ]
+}

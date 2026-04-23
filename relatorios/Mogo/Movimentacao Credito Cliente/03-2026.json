@@ -1,0 +1,198 @@
+{
+  "periodo": {
+    "de": "01/03/2026",
+    "ate": "31/03/2026"
+  },
+  "total_registros": 17,
+  "total_credito": "R$ 4.064,00",
+  "total_debito": "R$ 1.201,50",
+  "registros": [
+    {
+      "data": "31/03/2026",
+      "hora": "12:51:44",
+      "cliente": "Odete Monteiro",
+      "cpf": "",
+      "tipo": "Debito",
+      "descricao": "Pedido: 025791 (Balcão)",
+      "valor": "224,00",
+      "saldo": "0,00",
+      "financeiro": "Não selecionado"
+    },
+    {
+      "data": "31/03/2026",
+      "hora": "12:24:53",
+      "cliente": "Odete Monteiro",
+      "cpf": "",
+      "tipo": "Credito",
+      "descricao": "troca de produto pedido 25791",
+      "valor": "224,00",
+      "saldo": "224,00",
+      "financeiro": "Não gerar financeiro"
+    },
+    {
+      "data": "30/03/2026",
+      "hora": "17:35:04",
+      "cliente": "Sérgio de Campante Santos",
+      "cpf": "07405701701",
+      "tipo": "Credito",
+      "descricao": "PERMUTA LIVRO",
+      "valor": "2.880,00",
+      "saldo": "2.880,00",
+      "financeiro": "Não gerar financeiro"
+    },
+    {
+      "data": "30/03/2026",
+      "hora": "17:13:18",
+      "cliente": "Maria Celina ",
+      "cpf": "54944066600",
+      "tipo": "Debito",
+      "descricao": "Pedido: 025065 (Delivery)",
+      "valor": "237,00",
+      "saldo": "0,00",
+      "financeiro": "Não selecionado"
+    },
+    {
+      "data": "30/03/2026",
+      "hora": "17:11:16",
+      "cliente": "Maria Celina ",
+      "cpf": "54944066600",
+      "tipo": "Credito",
+      "descricao": "Credito referente ao pedido 25065 ",
+      "valor": "237,00",
+      "saldo": "237,00",
+      "financeiro": "Não gerar financeiro"
+    },
+    {
+      "data": "25/03/2026",
+      "hora": "17:10:37",
+      "cliente": "Felipe Castro (Jornalista)",
+      "cpf": "07836630722",
+      "tipo": "Debito",
+      "descricao": "Pedido: 024532 (Mesa: 213)",
+      "valor": "36,85",
+      "saldo": "300,61",
+      "financeiro": "Não selecionado"
+    },
+    {
+      "data": "13/03/2026",
+      "hora": "17:09:20",
+      "cliente": "Felipe Castro (Jornalista)",
+      "cpf": "07836630722",
+      "tipo": "Debito",
+      "descricao": "Pedido: 021696 (Mesa: 12)",
+      "valor": "36,85",
+      "saldo": "337,46",
+      "financeiro": "Não selecionado"
+    },
+    {
+      "data": "12/03/2026",
+      "hora": "16:09:12",
+      "cliente": "CRISTINA VACCARI MANGHI DE CARVALHO",
+      "cpf": "02045628728",
+      "tipo": "Debito",
+      "descricao": "Pedido: 021396 (Delivery)",
+      "valor": "21,80",
+      "saldo": "0,00",
+      "financeiro": "Não selecionado"
+    },
+    {
+      "data": "12/03/2026",
+      "hora": "15:18:17",
+      "cliente": "Rosângela La porta ",
+      "cpf": "66723388704",
+      "tipo": "Debito",
+      "descricao": "Pedido: 021465 (Mesa: 01)",
+      "valor": "100,00",
+      "saldo": "0,00",
+      "financeiro": "Não selecionado"
+    },
+    {
+      "data": "10/03/2026",
+      "hora": "16:41:58",
+      "cliente": "Maria Clara tapajos",
+      "cpf": "02163156702",
+      "tipo": "Debito",
+      "descricao": "Pedido: 019254 (Delivery)",
+      "valor": "330,00",
+      "saldo": "0,00",
+      "financeiro": "Não selecionado"
+    },
+    {
+      "data": "10/03/2026",
+      "hora": "16:35:32",
+      "cliente": "Maria Clara tapajos",
+      "cpf": "02163156702",
+      "tipo": "Credito",
+      "descricao": "comprou uma torta e vai trocar por uma maior",
+      "valor": "330,00",
+      "saldo": "330,00",
+      "financeiro": "Não gerar financeiro"
+    },
+    {
+      "data": "09/03/2026",
+      "hora": "14:17:27",
+      "cliente": "Roseane Teles Correia ",
+      "cpf": "07386953780",
+      "tipo": "Credito",
+      "descricao": "meu último pedido veio incompleto. Sem os docinhos de churr",
+      "valor": "74,00",
+      "saldo": "74,00",
+      "financeiro": "Não gerar financeiro"
+    },
+    {
+      "data": "05/03/2026",
+      "hora": "18:56:19",
+      "cliente": "Rosângela La porta ",
+      "cpf": "66723388704",
+      "tipo": "Credito",
+      "descricao": "",
+      "valor": "100,00",
+      "saldo": "100,00",
+      "financeiro": "Não gerar financeiro"
+    },
+    {
+      "data": "04/03/2026",
+      "hora": "17:07:10",
+      "cliente": "Fernanda De Souza Cardoso ",
+      "cpf": "",
+      "tipo": "Debito",
+      "descricao": "Pedido: 019698 (Balcão)",
+      "valor": "4,00",
+      "saldo": "4,00",
+      "financeiro": "Não selecionado"
+    },
+    {
+      "data": "02/03/2026",
+      "hora": "10:09:56",
+      "cliente": "Fernanda De Souza Cardoso ",
+      "cpf": "",
+      "tipo": "Credito",
+      "descricao": "Alterou sabor",
+      "valor": "4,00",
+      "saldo": "8,00",
+      "financeiro": "Não gerar financeiro"
+    },
+    {
+      "data": "02/03/2026",
+      "hora": "10:00:37",
+      "cliente": "Fernanda De Souza Cardoso ",
+      "cpf": "",
+      "tipo": "Debito",
+      "descricao": "Pedido: 018890 (Delivery)",
+      "valor": "211,00",
+      "saldo": "4,00",
+      "financeiro": "Não selecionado"
+    },
+    {
+      "data": "02/03/2026",
+      "hora": "09:57:17",
+      "cliente": "Fernanda De Souza Cardoso ",
+      "cpf": "",
+      "tipo": "Credito",
+      "descricao": "Alterou sabor",
+      "valor": "215,00",
+      "saldo": "215,00",
+      "financeiro": "Não gerar financeiro"
+    }
+  ]
+}

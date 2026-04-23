@@ -1,0 +1,22 @@
+Arquivos incluídos:
+Faturamento Detalhado/03-2026.xlsx
+Ticket Medio/03-2026.xlsx
+Vendas Analitico/03-2026.xlsx
+Vendas Sintetico/03-2026.xlsx
+Vendas Adicionais/03-2026.xlsx
+Lucratividade Produto/03-2026.xlsx
+Descontos Concedidos/03-2026.xlsx
+Movimentacao Credito Cliente/03-2026.xlsx
+Taxa Servico/03-2026.xlsx
+Analise Cortesias/03-2026.xlsx
+Lancamentos Pedidos/03-2026.xlsx
+Historico Pagamento/03-2026.xlsx
+Entradas XML Detalhado/03-2026.xlsx
+Compra Produtos/03-2026.xlsx
+Variacao Preco Compra/03-2026.xlsx
+Analise Quantidades Produzidas/03-2026.xlsx
+Analise Insumos Producao/03-2026.xlsx
+Analise Cadastro Clientes/03-2026.xlsx
+Itens Vendidos Agendamento/03-2026.xlsx
+Venda em Nota Assinada/2026-03-venda-nota-assinada.xlsx
+Saldo Credito Carteira/04-2026.xlsx

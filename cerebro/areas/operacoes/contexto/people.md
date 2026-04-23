@@ -1,29 +1,17 @@
-# Pessoas — Operações
+# Pessoas — Operações Cake & Co
 
-> Quem trabalha nesta área, seus papéis e responsabilidades.
+## Pessoas-chave
 
----
+| Pessoa | Papel | Observação |
+|---|---|---|
+| Alex Gonzaga | Gerente de confiança | loja, manutenção, compras e apoio operacional |
+| Michel | Líder de produção | conhecimento profundo da fábrica |
+| Samuel | Expedição | operação diária |
+| Deivilene | Expedição | operação diária |
+| João Mayrinck | CEO | direção e priorização estratégica |
+| Laura | Sócia fundadora | mudanças sensíveis precisam considerar a história e a cultura |
 
-## Time
-
-| Pessoa | Papel | Responsabilidades |
-|--------|-------|-------------------|
-| André Costa | COO | Gestão de operações, processos, budget, projetos |
-| Diego | Ops & Infra | Servidores, crons, integrações, deploy |
-| Felipe Santos | CEO | Aprovação de gastos acima de R$2k, contratações |
-
----
-
-## Estrutura de Decisão
-
-| Tipo | Quem decide |
-|------|-------------|
-| Gestão de operações | André Costa |
-| Gastos até R$2k | André Costa |
-| Gastos acima de R$2k | Felipe Santos |
-| Contratações | André Costa + Felipe Santos |
-| Deploy e infra | Diego |
-
----
-
-_Atualizado: março 2026_
+## Regra de decisão
+- operação não pode crescer atropelando a essência da Cake
+- quando uma mudança toca processo histórico, vale alinhar com Laura
+- estabilidade operacional vem antes de firula tecnológica

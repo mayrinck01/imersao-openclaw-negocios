@@ -1,20 +1,13 @@
-# Lições Aprendidas — [Área]
+# Lições Aprendidas — Operações Cake & Co
 
-> O que aprendemos com erros e acertos nesta área. Cada lição gera uma ação concreta.
+## 2026
 
----
+### 22/04 — Separar cérebro de runtime reduz risco
+- **Contexto:** automações críticas da empresa estavam misturadas ao runtime do assistente.
+- **Lição:** quando operação da empresa e casa do agente dividem o mesmo chão, manutenção fica confusa e risco de quebra cresce.
+- **Ação:** centralizar automações empresariais no `cake-brain`.
 
-## Março 2026
-
-_Nenhuma lição registrada ainda._
-
-<!-- Template:
-### [Título da lição]
-- **Contexto:** [O que aconteceu]
-- **Lição:** [O que aprendemos]
-- **Ação:** [O que fizemos / vamos fazer diferente]
--->
-
----
-
-_Atualizado: março 2026_
+### 22/04 — Compatibilidade de caminhos evita trauma
+- **Contexto:** muitos scripts e relatórios ainda tinham caminhos absolutos legados.
+- **Lição:** migração boa não depende de corte seco; ponte de compatibilidade economiza retrabalho e susto.
+- **Ação:** usar symlink temporário enquanto a limpeza final amadurece.

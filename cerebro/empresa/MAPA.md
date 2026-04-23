@@ -1,32 +1,43 @@
-# Empresa — Mapa
+# Empresa — Mapa da Cake & Co
 
-## Estrutura
+## Estrutura atual
 
-```
+```text
 empresa/
 ├── MAPA.md
 ├── contexto/
-│   ├── geral.md          ← Quem é a empresa, missão, produtos
-│   ├── people.md          ← Equipe, cargos, estrutura de decisão
-│   ├── metricas.md        ← KPIs e números atuais
-│   ├── decisions.md       ← Decisões estratégicas registradas
-│   └── lessons.md         ← Lições aprendidas
-├── rotinas/
-├── skills/
+│   ├── geral.md
+│   ├── people.md
+│   ├── decisions.md
+│   ├── lessons.md
+│   └── integrations.md
 └── projetos/
-    ├── README.md          ← Projetos ativos e concluídos
-    └── pendencias.md      ← Pendências abertas
+    ├── README.md
+    ├── projetos.md
+    └── pendencias.md
 ```
 
-## O que tem em cada lugar
+## O que tem aqui
 
-| Caminho | O que o agente encontra |
-|---------|------------------------|
-| `contexto/geral.md` | Missão, produtos, canais, modelo de negócio |
-| `contexto/people.md` | Quem trabalha aqui, papéis e estrutura de decisão |
-| `contexto/metricas.md` | MRR, clientes, CAC, ROAS — números atuais |
-| `contexto/decisions.md` | Decisões estratégicas com contexto e status |
-| `contexto/lessons.md` | Lições aprendidas com erros e acertos |
-| `rotinas/` | Rotinas automáticas (crons) |
-| `skills/` | Skills cross-área (ver `_index.md`) |
-| `projetos/` | Projetos em andamento e concluídos |
+### `contexto/geral.md`
+História da Cake, fase atual, tese de crescimento, visão e pilares da marca.
+
+### `contexto/people.md`
+Pessoas-chave, papéis, relações e contexto humano da empresa.
+
+### `contexto/decisions.md`
+Decisões já tomadas que não devem se perder.
+
+### `contexto/lessons.md`
+Lições aprendidas, padrões e erros que viraram aprendizado.
+
+### `contexto/integrations.md`
+Integrações da empresa e seu papel operacional.
+
+### `projetos/`
+Projetos ativos, frentes estratégicas e pendências abertas.
+
+## Regra de uso
+
+O que for contexto global da Cake entra aqui.
+O que for específico de uma área deve ir para `cerebro/areas/`.

@@ -1,17 +1,6 @@
-# Projetos
+# Projetos — Operações Cake & Co
 
-> Projetos ativos e concluídos desta área.
-
----
-
-## Em andamento
-
-_Nenhum projeto ativo._
-
-## Concluídos
-
-_Nenhum projeto concluído._
-
----
-
-_Atualizado: março 2026_
+## Frentes atuais
+- estabilização e documentação das automações do Mogo
+- sincronização dos relatórios operacionais com Google Drive
+- consolidação da arquitetura `BigDog runtime` vs `Cake Brain`
