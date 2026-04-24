@@ -12,12 +12,15 @@ def buscar_emails_rede(data_str):
     """Busca emails da Rede para uma data específica (formato: YYYY/MM/DD)"""
     data_obj = datetime.strptime(data_str, "%Y/%m/%d")
     data_next = data_obj + timedelta(days=1)
-    
+
     result = subprocess.run(
         ['bash', '-c', f'GOG_KEYRING_PASSWORD="" gog gmail search "from:rede@userede.com.br after:{data_str} before:{data_next.strftime("%Y/%m/%d")}" --max 100 --account joao@cakeco.com.br'],
         capture_output=True, text=True
     )
-    
+
+    if result.returncode != 0:
+        raise RuntimeError(f"Falha ao buscar emails da Rede: {result.stderr[:200]}")
+
     threads = []
     for line in result.stdout.split('\n'):
         match = re.search(r'(19[a-f0-9]{15})\s+(\d{4}-\d{2}-\d{2} \d{2}:\d{2})', line)
@@ -31,6 +34,8 @@ def ler_email(thread_id):
         ['bash', '-c', f'GOG_KEYRING_PASSWORD="" gog gmail thread {thread_id} --account joao@cakeco.com.br'],
         capture_output=True, text=True
     )
+    if result.returncode != 0:
+        raise RuntimeError(f"Falha ao ler thread {thread_id}: {result.stderr[:200]}")
     return result.stdout
 
 def parse_email(conteudo, hora):
@@ -114,15 +119,15 @@ def enviar_resumo(data_str):
     """Busca emails, processa e envia resumo"""
     data_obj = datetime.strptime(data_str, "%Y/%m/%d")
     data_formatada = data_obj.strftime("%d/%m/%Y")
-    
+
     print(f"\n📅 Processando {data_formatada}...")
-    
+
     threads = buscar_emails_rede(data_str)
     print(f"   {len(threads)} email(s) encontrado(s)")
-    
+
     if not threads:
         print(f"   Nenhum email da Rede em {data_formatada} — pulando")
-        return False
+        return None
     
     aprovados = []
     cancelados = []
@@ -163,11 +168,11 @@ def enviar_resumo(data_str):
     )
     import os; os.unlink(html_path)
     
-    if 'message_id' in result.stdout:
+    if result.returncode == 0 and 'message_id' in result.stdout:
         print(f"   ✅ Email enviado!")
         return True
     else:
-        print(f"   ❌ Erro: {result.stderr[:100]}")
+        print(f"   ❌ Erro: {result.stderr[:200]}")
         return False
 
 if __name__ == "__main__":
@@ -177,5 +182,13 @@ if __name__ == "__main__":
     else:
         ontem = datetime.now() - timedelta(days=1)
         data = ontem.strftime("%Y/%m/%d")
-    
-    enviar_resumo(data)
+
+    try:
+        resultado = enviar_resumo(data)
+    except Exception as e:
+        print(f"❌ Erro fatal: {e}")
+        sys.exit(1)
+
+    if resultado is False:
+        sys.exit(1)
+    sys.exit(0)

@@ -1,8 +1,16 @@
 # Agentes — Cake Brain
 
-Esta pasta fica reservada para configurações futuras de agentes ligados à empresa.
+Esta pasta fica reservada para os agentes ligados à empresa.
 
-Exemplos possíveis no futuro:
+## Agente oficial atual
+
+- **Aurora** — agente orquestrador oficial da Cake
+  - homenagem a uma torta da casa
+  - papel: agente institucional principal, responsável por orquestrar contexto, operação e futuros agentes especializados da empresa
+  - base moral inicial já registrada em `aurora/SOUL.md`
+  - referência viva principal: livro dos 30 anos em `aurora/referencias/`
+
+Exemplos possíveis de agentes futuros:
 - agente de marketing
 - agente de operações
 - agente financeiro
