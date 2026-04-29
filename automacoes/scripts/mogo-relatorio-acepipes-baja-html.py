@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Relatório diário HTML — Contas assinadas ACEPIPES e BAJA CALIFÓRNIA.
+"""Conta assinada REVENDA — relatório diário HTML.
 
 Usa:
 - Status 1: contas assinadas em aberto do dia anterior + valor do pedido pelo relatório 82
@@ -342,7 +342,7 @@ def render_html(*, data_ref: str, status1_finance_rows: list[dict], order_rows: 
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8">
-<title>Relatório Diário — ACEPIPES e BAJA CALIFÓRNIA</title>
+<title>Conta assinada REVENDA</title>
 <style>
   body {{ font-family: Arial, Helvetica, sans-serif; color: #222; margin: 0; padding: 24px; background: #f7f5f0; }}
   .wrap {{ max-width: 1120px; margin: 0 auto; background: #fff; border-radius: 14px; overflow: hidden; box-shadow: 0 8px 30px rgba(0,0,0,.08); }}
@@ -374,7 +374,7 @@ def render_html(*, data_ref: str, status1_finance_rows: list[dict], order_rows: 
 <body>
 <div class="wrap">
   <div class="header">
-    <h1>Relatório Diário — ACEPIPES e BAJA CALIFÓRNIA</h1>
+    <h1>Conta assinada REVENDA</h1>
     <p>Referência: {html.escape(data_ref)} · HTML sem anexos</p>
   </div>
 
@@ -460,7 +460,7 @@ def main() -> None:
     ref_dt = parse_date(args.date) if args.date else datetime.now() - timedelta(days=1)
     data_ref = br_date(ref_dt)
 
-    print(f'Relatório diário ACEPIPES/BAJA — {data_ref}')
+    print(f'Conta assinada REVENDA — {data_ref}')
     session = mogo_login(verbose=False)
 
     status1_finance_rows = normalize_open_rows(
@@ -490,7 +490,7 @@ def main() -> None:
     print(f'HTML salvo: {out_path}')
 
     if args.send_email:
-        subject = f'{args.subject_prefix}Relatório Diário — ACEPIPES e BAJA — {data_ref}'
+        subject = f'{args.subject_prefix}Conta assinada REVENDA — {data_ref}'
         send_email(html_body, subject, args.to)
         print(f'Email enviado para {args.to}')
 
