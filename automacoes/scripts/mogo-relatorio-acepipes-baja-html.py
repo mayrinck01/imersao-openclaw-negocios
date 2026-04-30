@@ -379,6 +379,7 @@ def render_html(*, data_ref: str, status1_finance_rows: list[dict], order_rows: 
   .header p {{ margin: 0; opacity: .9; }}
   .section {{ padding: 24px 28px; border-bottom: 1px solid #eee; }}
   h2 {{ margin: 0 0 16px; color: #1f5b3b; font-size: 19px; }}
+  .status1-title {{ font-size: 25px; font-weight: 900; }}
   h3 {{ margin: 20px 0 10px; color: #333; font-size: 16px; }}
   h3 span {{ color: #667; font-weight: 400; }}
   .cards {{ display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 18px; }}
@@ -411,7 +412,7 @@ def render_html(*, data_ref: str, status1_finance_rows: list[dict], order_rows: 
   </div>
 
   <div class="section">
-    <h2>Status 1 — Pedidos assinados do dia com desconto aplicado</h2>
+    <h2 class="status1-title">Status 1 — Pedidos assinados {html.escape(data_ref)}</h2>
     <div class="cards">
       <div class="card"><div class="label">Clientes</div><div class="value small">ACEPIPES / BAJA</div></div>
       <div class="card"><div class="label">Itens relatório 82</div><div class="value">{len(order_rows)}</div></div>
