@@ -399,7 +399,7 @@ def render_html(*, data_ref: str, status1_finance_rows: list[dict], order_rows: 
   .mismatch {{ color: #c62828; }}
   .month-divider td {{ background: #e0eadf; border-top: 3px solid #1f5b3b; border-bottom: 1px solid #bfd2c3; color: #1f5b3b; font-weight: 700; text-transform: uppercase; letter-spacing: .03em; }}
   .note {{ color: #666; font-size: 12px; margin-top: 8px; }}
-  .alert {{ background: #fff3cd; border: 1px solid #f1d27a; color: #5c4300; padding: 14px 16px; border-radius: 10px; margin: 18px 0 0; font-weight: 700; text-transform: uppercase; }}
+  .alert {{ background: #fff3cd; border: 1px solid #f1d27a; color: #000; padding: 14px 16px; border-radius: 10px; margin: 18px 0 0; font-weight: 900; font-size: 15px; line-height: 1.25; text-transform: uppercase; white-space: nowrap; }}
 </style>
 </head>
 <body>
