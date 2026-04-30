@@ -85,6 +85,22 @@ def date_sort_key(value: str) -> tuple[int, str]:
         return (1, value or '')
 
 
+def date_sort_key_desc(value: str) -> tuple[int, str]:
+    try:
+        return (0, datetime.strptime(value, '%d/%m/%Y').strftime('%Y-%m-%d'))
+    except Exception:
+        return (1, '0000-00-00')
+
+
+def month_label(value: str) -> str:
+    meses = ['janeiro', 'fevereiro', 'março', 'abril', 'maio', 'junho', 'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro']
+    try:
+        dt = datetime.strptime(value, '%d/%m/%Y')
+        return f'{meses[dt.month - 1].capitalize()} / {dt.year}'
+    except Exception:
+        return 'Sem mês'
+
+
 def is_delivery_fee(row: dict) -> bool:
     text = ' '.join(str(row.get(k, '')) for k in ('product', 'category', 'group', 'type')).casefold()
     tokens = ['taxa de entrega', 'taxa entrega', 'entrega', 'delivery', 'frete']
@@ -286,6 +302,7 @@ def render_status1(order_rows: list[dict], finance_rows: list[dict]) -> str:
             </tr>''')
 
         vencimentos = ', '.join(sorted({r['vencimento'] for r in finance_by_client.get(client, []) if r['vencimento']}, key=lambda d: date_sort_key(d))) or '—'
+        total_class = 'value small mismatch' if round(net_total, 2) != round(finance_total, 2) else 'value small'
         parts.append(f'''
         <div class="client-block">
           <h3>{html.escape(client)}</h3>
@@ -293,8 +310,8 @@ def render_status1(order_rows: list[dict], finance_rows: list[dict]) -> str:
             <div class="card"><div class="label">Produtos bruto</div><div class="value small">{fmt_brl(product_total)}</div></div>
             <div class="card"><div class="label">Taxa de entrega</div><div class="value small"><strong>{fmt_brl(delivery_total)}</strong></div></div>
             <div class="card"><div class="label">Desconto 30%</div><div class="value small">{fmt_brl(discount_total)}</div></div>
-            <div class="card"><div class="label">Total c/ desconto</div><div class="value small">{fmt_brl(net_total)}</div></div>
-            <div class="card"><div class="label">Saldo Mogo</div><div class="value small">{fmt_brl(finance_total)}</div></div>
+            <div class="card"><div class="label">Total c/ desconto</div><div class="{total_class}">{fmt_brl(net_total)}</div></div>
+            <div class="card"><div class="label">Saldo a receber</div><div class="value small">{fmt_brl(finance_total)}</div></div>
             <div class="card"><div class="label">Vencimento(s)</div><div class="value tiny">{html.escape(vencimentos)}</div></div>
           </div>
           <table>
@@ -310,9 +327,20 @@ def render_status4(finance_rows: list[dict]) -> str:
         return '<p class="empty">Nenhuma conta assinada em aberto geral para ACEPIPES ou BAJA CALIFÓRNIA.</p>'
     parts = []
     for client, items in grouped_by_client(finance_rows):
+        items = sorted(
+            items,
+            key=lambda r: (date_sort_key_desc(r['emissao'])[1], date_sort_key_desc(r['vencimento'])[1], r['pedido']),
+            reverse=True,
+        )
         total = sum(row['saldo'] for row in items)
         body = []
+        current_month = None
         for row in items:
+            row_month = month_label(row['emissao'])
+            if row_month != current_month:
+                current_month = row_month
+                body.append(f'''
+            <tr class="month-divider"><td colspan="6">{html.escape(current_month)}</td></tr>''')
             body.append(f'''
             <tr>
               <td>{html.escape(row['pedido'])}</td>
@@ -325,9 +353,9 @@ def render_status4(finance_rows: list[dict]) -> str:
         parts.append(f'''
         <div class="client-block">
           <h3>{html.escape(client)} <span>({len(items)} conta(s))</span></h3>
-          <div class="cards mini one"><div class="card"><div class="label">Total em aberto</div><div class="value small">{fmt_brl(total)}</div></div></div>
+          <div class="cards mini one"><div class="card"><div class="label">Saldo a receber</div><div class="value small">{fmt_brl(total)}</div></div></div>
           <table>
-            <thead><tr><th>Pedido</th><th>Histórico</th><th>Emissão</th><th>Vencimento</th><th class="num">Valor</th><th class="num">Saldo</th></tr></thead>
+            <thead><tr><th>Pedido</th><th>Histórico</th><th>Emissão</th><th>Vencimento</th><th class="num">Valor</th><th class="num">Saldo a receber</th></tr></thead>
             <tbody>{''.join(body)}</tbody>
           </table>
         </div>''')
@@ -368,6 +396,8 @@ def render_html(*, data_ref: str, status1_finance_rows: list[dict], order_rows: 
   .strong {{ font-weight: 700; }}
   .empty {{ text-align: center; color: #777; padding: 20px; }}
   .delivery td {{ background: #fff8df; font-weight: 700; }}
+  .mismatch {{ color: #c62828; }}
+  .month-divider td {{ background: #e0eadf; border-top: 3px solid #1f5b3b; border-bottom: 1px solid #bfd2c3; color: #1f5b3b; font-weight: 700; text-transform: uppercase; letter-spacing: .03em; }}
   .note {{ color: #666; font-size: 12px; margin-top: 8px; }}
   .alert {{ background: #fff3cd; border: 1px solid #f1d27a; color: #5c4300; padding: 14px 16px; border-radius: 10px; margin: 18px 0 0; font-weight: 700; text-transform: uppercase; }}
 </style>
@@ -376,7 +406,7 @@ def render_html(*, data_ref: str, status1_finance_rows: list[dict], order_rows: 
 <div class="wrap">
   <div class="header">
     <h1>Conta assinada REVENDA</h1>
-    <p>Referência: {html.escape(data_ref)} · HTML sem anexos</p>
+    <p>Referência: {html.escape(data_ref)}</p>
     <div class="alert">CONFERIR OS VALORES DE ONTEM DAS ASSINADAS E MANDAR O PRINT PARA O GRUPO FINANCEIRO COM O OK</div>
   </div>
 
@@ -392,11 +422,11 @@ def render_html(*, data_ref: str, status1_finance_rows: list[dict], order_rows: 
   </div>
 
   <div class="section">
-    <h2>Status 4 — Total de conta assinada em aberto geral</h2>
+    <h2>Status 4 — Saldo a receber geral</h2>
     <div class="cards">
       <div class="card"><div class="label">Clientes</div><div class="value small">ACEPIPES / BAJA</div></div>
       <div class="card"><div class="label">Contas em aberto</div><div class="value">{len(status4_rows)}</div></div>
-      <div class="card"><div class="label">Saldo geral</div><div class="value">{fmt_brl(status4_total)}</div></div>
+      <div class="card"><div class="label">Saldo a receber</div><div class="value">{fmt_brl(status4_total)}</div></div>
     </div>
     {render_status4(status4_rows)}
   </div>
