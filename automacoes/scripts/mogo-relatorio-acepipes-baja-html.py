@@ -359,8 +359,11 @@ def render_status4(finance_rows: list[dict], *, today: str, order_rows: list[dic
                 current_month = row_month
                 body.append(f'''
             <tr class="month-divider"><td colspan="6">{html.escape(current_month)}</td></tr>''')
+            venc_dt = parse_br_date_or_none(row['vencimento'])
+            is_overdue = bool(today_dt and venc_dt and venc_dt < today_dt)
+            row_class = ' class="overdue"' if is_overdue else ''
             body.append(f'''
-            <tr>
+            <tr{row_class}>
               <td>{html.escape(row['pedido'])}</td>
               <td>{html.escape(row['historico'])}</td>
               <td>{html.escape(row['emissao'])}</td>
@@ -426,6 +429,7 @@ def render_html(*, data_ref: str, today: str, status1_finance_rows: list[dict], 
   .empty {{ text-align: center; color: #6b7c93; padding: 20px; }}
   .delivery td {{ background: #fff8e6; font-weight: 800; }}
   .mismatch {{ color: #b42318; }}
+  .overdue td {{ color: #b42318; background: #fff1f0; }}
   .blue-total {{ color: #0b2f63; font-weight: 900; }}
   .receivable-summary {{ background: #f8fafc; border-left: 4px solid #0b2f63; border-radius: 10px; padding: 12px 16px; margin: 10px 0 16px; color: #111827; }}
   .receivable-summary p {{ margin: 0 0 8px; }}
