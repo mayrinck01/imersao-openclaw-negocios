@@ -92,6 +92,13 @@ def date_sort_key_desc(value: str) -> tuple[int, str]:
         return (1, '0000-00-00')
 
 
+def parse_br_date_or_none(value: str) -> datetime | None:
+    try:
+        return datetime.strptime(value, '%d/%m/%Y')
+    except Exception:
+        return None
+
+
 def month_label(value: str) -> str:
     meses = ['janeiro', 'fevereiro', 'março', 'abril', 'maio', 'junho', 'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro']
     try:
@@ -322,7 +329,7 @@ def render_status1(order_rows: list[dict], finance_rows: list[dict]) -> str:
     return '\n'.join(parts)
 
 
-def render_status4(finance_rows: list[dict]) -> str:
+def render_status4(finance_rows: list[dict], *, today: str) -> str:
     if not finance_rows:
         return '<p class="empty">Nenhuma conta assinada em aberto geral para ACEPIPES ou BAJA CALIFÓRNIA.</p>'
     parts = []
@@ -333,6 +340,12 @@ def render_status4(finance_rows: list[dict]) -> str:
             reverse=True,
         )
         total = sum(row['saldo'] for row in items)
+        today_dt = parse_br_date_or_none(today)
+        total_until_today = sum(
+            row['saldo']
+            for row in items
+            if today_dt and (venc_dt := parse_br_date_or_none(row['vencimento'])) and venc_dt <= today_dt
+        )
         body = []
         current_month = None
         for row in items:
@@ -353,7 +366,10 @@ def render_status4(finance_rows: list[dict]) -> str:
         parts.append(f'''
         <div class="client-block">
           <h3>{html.escape(client)} <span>({len(items)} conta(s))</span></h3>
-          <div class="cards mini one"><div class="card"><div class="label">Saldo a receber</div><div class="value small">{fmt_brl(total)}</div></div></div>
+          <div class="cards two">
+            <div class="card"><div class="label">Saldo a receber</div><div class="value small">{fmt_brl(total)}</div></div>
+            <div class="card"><div class="label">Saldo total a receber até hoje</div><div class="value small blue-total">{fmt_brl(total_until_today)}</div></div>
+          </div>
           <table>
             <thead><tr><th>Pedido</th><th>Histórico</th><th>Emissão</th><th>Vencimento</th><th class="num">Valor</th><th class="num">Saldo a receber</th></tr></thead>
             <tbody>{''.join(body)}</tbody>
@@ -362,7 +378,7 @@ def render_status4(finance_rows: list[dict]) -> str:
     return '\n'.join(parts)
 
 
-def render_html(*, data_ref: str, status1_finance_rows: list[dict], order_rows: list[dict], status4_rows: list[dict]) -> str:
+def render_html(*, data_ref: str, today: str, status1_finance_rows: list[dict], order_rows: list[dict], status4_rows: list[dict]) -> str:
     calculated_orders = calculate_discounted_order_rows(order_rows)
     status1_total = sum(r['net_value'] for r in calculated_orders)
     status4_total = sum(r['saldo'] for r in status4_rows)
@@ -385,6 +401,7 @@ def render_html(*, data_ref: str, status1_finance_rows: list[dict], order_rows: 
   .cards {{ display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 18px; }}
   .cards.mini {{ grid-template-columns: repeat(6, 1fr); }}
   .cards.one {{ grid-template-columns: repeat(1, minmax(180px, 240px)); }}
+  .cards.two {{ grid-template-columns: repeat(2, minmax(180px, 240px)); }}
   .card {{ background: #faf8f2; border: 1px solid #e8e0d2; border-radius: 12px; padding: 12px; }}
   .label {{ font-size: 11px; color: #666; text-transform: uppercase; letter-spacing: .04em; }}
   .value {{ font-size: 22px; font-weight: 700; margin-top: 4px; }}
@@ -398,6 +415,7 @@ def render_html(*, data_ref: str, status1_finance_rows: list[dict], order_rows: 
   .empty {{ text-align: center; color: #777; padding: 20px; }}
   .delivery td {{ background: #fff8df; font-weight: 700; }}
   .mismatch {{ color: #c62828; }}
+  .blue-total {{ color: #0b2f63; font-weight: 900; }}
   .month-divider td {{ background: #e0eadf; border-top: 3px solid #1f5b3b; border-bottom: 1px solid #bfd2c3; color: #1f5b3b; font-weight: 700; text-transform: uppercase; letter-spacing: .03em; }}
   .note {{ color: #666; font-size: 12px; margin-top: 8px; }}
   .alert {{ background: #fff3cd; border: 1px solid #f1d27a; color: #000; padding: 14px 16px; border-radius: 10px; margin: 18px 0 0; font-weight: 900; font-size: 15px; line-height: 1.25; text-transform: uppercase; white-space: nowrap; }}
@@ -429,7 +447,7 @@ def render_html(*, data_ref: str, status1_finance_rows: list[dict], order_rows: 
       <div class="card"><div class="label">Contas em aberto</div><div class="value">{len(status4_rows)}</div></div>
       <div class="card"><div class="label">Saldo a receber</div><div class="value">{fmt_brl(status4_total)}</div></div>
     </div>
-    {render_status4(status4_rows)}
+    {render_status4(status4_rows, today=today)}
   </div>
 </div>
 </body>
@@ -514,6 +532,7 @@ def main() -> None:
 
     html_body = render_html(
         data_ref=data_ref,
+        today=br_date(datetime.now()),
         status1_finance_rows=status1_finance_rows,
         order_rows=order_rows,
         status4_rows=status4_rows,
