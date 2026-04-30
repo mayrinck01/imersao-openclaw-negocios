@@ -388,37 +388,37 @@ def render_html(*, data_ref: str, today: str, status1_finance_rows: list[dict], 
 <meta charset="utf-8">
 <title>Conta assinada REVENDA</title>
 <style>
-  body {{ font-family: Arial, Helvetica, sans-serif; color: #222; margin: 0; padding: 24px; background: #f7f5f0; }}
-  .wrap {{ max-width: 1120px; margin: 0 auto; background: #fff; border-radius: 14px; overflow: hidden; box-shadow: 0 8px 30px rgba(0,0,0,.08); }}
-  .header {{ background: #1f5b3b; color: #fff; padding: 24px 28px; }}
-  .header h1 {{ margin: 0 0 6px; font-size: 24px; }}
-  .header p {{ margin: 0; opacity: .9; }}
-  .section {{ padding: 24px 28px; border-bottom: 1px solid #eee; }}
-  h2 {{ margin: 0 0 16px; color: #1f5b3b; font-size: 19px; }}
+  body {{ font-family: Arial, Helvetica, sans-serif; color: #1f2933; margin: 0; padding: 24px; background: #eef2f6; }}
+  .wrap {{ max-width: 1120px; margin: 0 auto; background: #ffffff; border-radius: 16px; overflow: hidden; box-shadow: 0 12px 34px rgba(15, 23, 42, .12); border: 1px solid #d9e2ec; }}
+  .header {{ background: linear-gradient(135deg, #0b1f3a 0%, #123c69 100%); color: #fff; padding: 26px 30px; }}
+  .header h1 {{ margin: 0 0 6px; font-size: 25px; letter-spacing: .01em; }}
+  .header p {{ margin: 0; opacity: .86; color: #dbe6f3; }}
+  .section {{ padding: 24px 28px; border-bottom: 1px solid #e5eaf0; }}
+  h2 {{ margin: 0 0 16px; color: #0b1f3a; font-size: 20px; font-weight: 900; }}
   .status1-title {{ font-size: 25px; font-weight: 900; }}
-  h3 {{ margin: 20px 0 10px; color: #333; font-size: 16px; }}
-  h3 span {{ color: #667; font-weight: 400; }}
+  h3 {{ margin: 20px 0 10px; color: #102a43; font-size: 16px; }}
+  h3 span {{ color: #62748a; font-weight: 400; }}
   .cards {{ display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 18px; }}
   .cards.mini {{ grid-template-columns: repeat(6, 1fr); }}
   .cards.one {{ grid-template-columns: repeat(1, minmax(180px, 240px)); }}
-  .cards.two {{ grid-template-columns: repeat(2, minmax(180px, 240px)); }}
-  .card {{ background: #faf8f2; border: 1px solid #e8e0d2; border-radius: 12px; padding: 12px; }}
-  .label {{ font-size: 11px; color: #666; text-transform: uppercase; letter-spacing: .04em; }}
-  .value {{ font-size: 22px; font-weight: 700; margin-top: 4px; }}
+  .cards.two {{ grid-template-columns: repeat(2, minmax(180px, 260px)); }}
+  .card {{ background: #f8fafc; border: 1px solid #d9e2ec; border-radius: 12px; padding: 12px; }}
+  .label {{ font-size: 11px; color: #65758b; text-transform: uppercase; letter-spacing: .05em; }}
+  .value {{ font-size: 22px; font-weight: 800; margin-top: 4px; color: #0b1f3a; }}
   .value.small {{ font-size: 15px; }}
-  .value.tiny {{ font-size: 13px; font-weight: 700; }}
-  table {{ width: 100%; border-collapse: collapse; font-size: 12px; margin-bottom: 16px; }}
-  th {{ text-align: left; background: #f0eadf; color: #3b3428; padding: 9px; }}
-  td {{ border-top: 1px solid #eee; padding: 8px 9px; vertical-align: top; }}
+  .value.tiny {{ font-size: 13px; font-weight: 800; }}
+  table {{ width: 100%; border-collapse: collapse; font-size: 12px; margin-bottom: 16px; border: 1px solid #e5eaf0; }}
+  th {{ text-align: left; background: #e8eef6; color: #102a43; padding: 9px; border-bottom: 1px solid #d4dde8; }}
+  td {{ border-top: 1px solid #e7edf3; padding: 8px 9px; vertical-align: top; }}
   .num {{ text-align: right; white-space: nowrap; }}
-  .strong {{ font-weight: 700; }}
-  .empty {{ text-align: center; color: #777; padding: 20px; }}
-  .delivery td {{ background: #fff8df; font-weight: 700; }}
-  .mismatch {{ color: #c62828; }}
+  .strong {{ font-weight: 800; }}
+  .empty {{ text-align: center; color: #6b7c93; padding: 20px; }}
+  .delivery td {{ background: #fff8e6; font-weight: 800; }}
+  .mismatch {{ color: #b42318; }}
   .blue-total {{ color: #0b2f63; font-weight: 900; }}
-  .month-divider td {{ background: #e0eadf; border-top: 3px solid #1f5b3b; border-bottom: 1px solid #bfd2c3; color: #1f5b3b; font-weight: 700; text-transform: uppercase; letter-spacing: .03em; }}
-  .note {{ color: #666; font-size: 12px; margin-top: 8px; }}
-  .alert {{ background: #fff3cd; border: 1px solid #f1d27a; color: #000; padding: 14px 16px; border-radius: 10px; margin: 18px 0 0; font-weight: 900; font-size: 15px; line-height: 1.25; text-transform: uppercase; white-space: nowrap; }}
+  .month-divider td {{ background: #dbe7f3; border-top: 3px solid #0b1f3a; border-bottom: 1px solid #b7c6d8; color: #0b1f3a; font-weight: 900; text-transform: uppercase; letter-spacing: .04em; }}
+  .note {{ color: #52616f; font-size: 12px; margin-top: 8px; }}
+  .alert {{ background: #fff4cc; border: 1px solid #e2b84d; color: #000; padding: 14px 16px; border-radius: 10px; margin: 18px 0 0; font-weight: 900; font-size: 15px; line-height: 1.25; text-transform: uppercase; white-space: nowrap; }}
 </style>
 </head>
 <body>
