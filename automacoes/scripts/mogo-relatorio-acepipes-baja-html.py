@@ -369,6 +369,7 @@ def render_html(*, data_ref: str, status1_finance_rows: list[dict], order_rows: 
   .empty {{ text-align: center; color: #777; padding: 20px; }}
   .delivery td {{ background: #fff8df; font-weight: 700; }}
   .note {{ color: #666; font-size: 12px; margin-top: 8px; }}
+  .alert {{ background: #fff3cd; border: 1px solid #f1d27a; color: #5c4300; padding: 14px 16px; border-radius: 10px; margin: 18px 0 0; font-weight: 700; text-transform: uppercase; }}
 </style>
 </head>
 <body>
@@ -376,6 +377,7 @@ def render_html(*, data_ref: str, status1_finance_rows: list[dict], order_rows: 
   <div class="header">
     <h1>Conta assinada REVENDA</h1>
     <p>Referência: {html.escape(data_ref)} · HTML sem anexos</p>
+    <div class="alert">CONFERIR OS VALORES DE ONTEM DAS ASSINADAS E MANDAR O PRINT PARA O GRUPO FINANCEIRO COM O OK</div>
   </div>
 
   <div class="section">
