@@ -376,9 +376,9 @@ def render_status4(finance_rows: list[dict], *, today: str, order_rows: list[dic
           <div class="receivable-summary">
             <p>Para <strong>{html.escape(client)}</strong> ficaria:</p>
             <ul>
-              <li>Saldo até hoje: <strong>{fmt_brl(total_until_today)}</strong></li>
-              <li>Pedido de ontem com desconto: <strong>{fmt_brl(order_total)}</strong></li>
-              <li class="total-line">Total a receber hoje: <strong>{fmt_brl(total_to_collect_today)}</strong></li>
+              <li>Saldo anterior: <strong>{fmt_brl(total_until_today)}</strong></li>
+              <li>Pedidos de ontem: <strong>{fmt_brl(order_total)}</strong></li>
+              <li class="total-line">Total a receber: <strong>{fmt_brl(total_to_collect_today)}</strong></li>
             </ul>
           </div>
           <table>
