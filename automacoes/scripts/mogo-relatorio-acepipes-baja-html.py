@@ -329,10 +329,15 @@ def render_status1(order_rows: list[dict], finance_rows: list[dict]) -> str:
     return '\n'.join(parts)
 
 
-def render_status4(finance_rows: list[dict], *, today: str) -> str:
+def render_status4(finance_rows: list[dict], *, today: str, order_rows: list[dict]) -> str:
     if not finance_rows:
         return '<p class="empty">Nenhuma conta assinada em aberto geral para ACEPIPES ou BAJA CALIFÓRNIA.</p>'
     parts = []
+    discounted_orders = calculate_discounted_order_rows(order_rows)
+    order_total_by_client: dict[str, float] = defaultdict(float)
+    for row in discounted_orders:
+        order_total_by_client[row['cliente']] += row['net_value']
+
     for client, items in grouped_by_client(finance_rows):
         items = sorted(
             items,
@@ -363,12 +368,18 @@ def render_status4(finance_rows: list[dict], *, today: str) -> str:
               <td class="num">{fmt_brl(row['valor'])}</td>
               <td class="num strong">{fmt_brl(row['saldo'])}</td>
             </tr>''')
+        order_total = order_total_by_client.get(client, 0.0)
+        total_to_collect_today = total_until_today + order_total
         parts.append(f'''
         <div class="client-block">
           <h3>{html.escape(client)} <span>({len(items)} conta(s))</span></h3>
-          <div class="cards two">
-            <div class="card"><div class="label">Saldo a receber</div><div class="value small">{fmt_brl(total)}</div></div>
-            <div class="card"><div class="label">Saldo total a receber até hoje</div><div class="value small blue-total">{fmt_brl(total_until_today)}</div></div>
+          <div class="receivable-summary">
+            <p>Para <strong>{html.escape(client)}</strong> ficaria:</p>
+            <ul>
+              <li>Saldo até hoje: <strong>{fmt_brl(total_until_today)}</strong></li>
+              <li>Pedido de ontem com desconto: <strong>{fmt_brl(order_total)}</strong></li>
+              <li class="total-line">Total a receber hoje: <strong>{fmt_brl(total_to_collect_today)}</strong></li>
+            </ul>
           </div>
           <table>
             <thead><tr><th>Pedido</th><th>Histórico</th><th>Emissão</th><th>Vencimento</th><th class="num">Valor</th><th class="num">Saldo a receber</th></tr></thead>
@@ -416,6 +427,11 @@ def render_html(*, data_ref: str, today: str, status1_finance_rows: list[dict], 
   .delivery td {{ background: #fff8e6; font-weight: 800; }}
   .mismatch {{ color: #b42318; }}
   .blue-total {{ color: #0b2f63; font-weight: 900; }}
+  .receivable-summary {{ background: #f8fafc; border-left: 4px solid #0b2f63; border-radius: 10px; padding: 12px 16px; margin: 10px 0 16px; color: #111827; }}
+  .receivable-summary p {{ margin: 0 0 8px; }}
+  .receivable-summary ul {{ margin: 0; padding-left: 18px; }}
+  .receivable-summary li {{ margin: 4px 0; }}
+  .receivable-summary .total-line {{ font-weight: 900; color: #0b2f63; }}
   .month-divider td {{ background: #dbe7f3; border-top: 3px solid #0b1f3a; border-bottom: 1px solid #b7c6d8; color: #0b1f3a; font-weight: 900; text-transform: uppercase; letter-spacing: .04em; }}
   .note {{ color: #52616f; font-size: 12px; margin-top: 8px; }}
   .alert {{ background: #fff4cc; border: 1px solid #e2b84d; color: #000; padding: 14px 16px; border-radius: 10px; margin: 18px 0 0; font-weight: 900; font-size: 15px; line-height: 1.25; text-transform: uppercase; white-space: nowrap; }}
@@ -447,7 +463,7 @@ def render_html(*, data_ref: str, today: str, status1_finance_rows: list[dict], 
       <div class="card"><div class="label">Contas em aberto</div><div class="value">{len(status4_rows)}</div></div>
       <div class="card"><div class="label">Saldo a receber</div><div class="value">{fmt_brl(status4_total)}</div></div>
     </div>
-    {render_status4(status4_rows, today=today)}
+    {render_status4(status4_rows, today=today, order_rows=order_rows)}
   </div>
 </div>
 </body>
