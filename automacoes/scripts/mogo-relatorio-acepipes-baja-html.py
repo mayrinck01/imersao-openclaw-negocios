@@ -412,7 +412,7 @@ def render_html(*, data_ref: str, status1_finance_rows: list[dict], order_rows: 
   </div>
 
   <div class="section">
-    <h2 class="status1-title">Status 1 — Pedidos assinados {html.escape(data_ref)}</h2>
+    <h2 class="status1-title">Pedidos assinados {html.escape(data_ref)}</h2>
     <div class="cards">
       <div class="card"><div class="label">Clientes</div><div class="value small">ACEPIPES / BAJA</div></div>
       <div class="card"><div class="label">Itens relatório 82</div><div class="value">{len(order_rows)}</div></div>
@@ -423,7 +423,7 @@ def render_html(*, data_ref: str, status1_finance_rows: list[dict], order_rows: 
   </div>
 
   <div class="section">
-    <h2>Status 4 — Saldo a receber geral</h2>
+    <h2>Saldo a receber anterior</h2>
     <div class="cards">
       <div class="card"><div class="label">Clientes</div><div class="value small">ACEPIPES / BAJA</div></div>
       <div class="card"><div class="label">Contas em aberto</div><div class="value">{len(status4_rows)}</div></div>
