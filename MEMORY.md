@@ -23,6 +23,7 @@
 - `marketing/` → materiais e estudos de marketing
 - `relatorios/marketing/` → relatórios já produzidos
 - `docs/cake-co-report-themes.md` → catálogo canônico de temas visuais para reports/boards/dashboards HTML
+- `skills/cake-co-social-report/` → skill canônica para relatórios de redes sociais/performance digital
 
 ## Migração em andamento
 - Base inicial herdada do curso: `imersao-openclaw-negocios`
