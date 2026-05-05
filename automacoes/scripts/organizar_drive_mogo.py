@@ -4,12 +4,16 @@ organizar_drive_mogo.py — Sync relatórios Mogo → Google Drive
 
 Modos:
   --mode daily    Apenas relatórios diários (Pendentes, Na Entrega, Pedidos Entregues)
-  --mode monthly  Apenas relatórios mensais (upload — rodar no dia 1)
-  --mode verify   Verifica se os mensais estão no Drive sem fazer upload (rodar no dia 8)
+  --mode monthly  Apenas relatórios mensais do mês anterior (upload — rodar no dia 5)
+  --mode verify   Verifica os mensais do mês anterior no Drive sem fazer upload (rodar no dia 8)
 
-Sem flag: comportamento legado (todos os arquivos)
+Regra operacional:
+  - Cron mensal nunca reprocessa meses antigos.
+  - No dia 05/05/2026, por exemplo, só sobe 04-2026 / 2026-04.
+  - Backfill histórico exige --period all ou --period YYYY-MM explícito.
 """
 import argparse
+import datetime as dt
 import json
 import os
 import re
@@ -30,6 +34,7 @@ FOLDER_MAP = {
     'Entradas XML Detalhado': 'Entradas XML Detalhado',
     'Faturamento Detalhado': 'Faturamento Detalhado',
     'Historico Pagamento': 'Histórico de Pagamento',
+    'Itens Vendidos Agendamento': 'Itens Vendidos por Agendamento',
     'Analise Insumos Producao': 'Insumos Gastos na Produção',
     'Lancamentos Pedidos': 'Lançamentos de Pedidos',
     'Lucratividade Produto': 'Lucratividade por Produto',
@@ -55,6 +60,8 @@ DAILY_FOLDERS = {'Pendentes', 'Na Entrega', 'Pedidos Entregues'}
 
 # Relatórios mensais = tudo que não é diário
 MONTHLY_FOLDERS = {k for k in FOLDER_MAP if k not in DAILY_FOLDERS}
+# Este relatório é snapshot atual, não histórico por mês; fica fora do sync mensal padrão.
+MONTHLY_FOLDERS.discard('Saldo Credito Carteira')
 
 SKIP_FOLDERS = {'exports'}
 ALLOWED_EXT = {'.xlsx', '.json', '.txt', '.md'}
@@ -159,16 +166,56 @@ def extract_year(name: str) -> str:
     return '2026'
 
 
+def previous_month(today=None):
+    today = today or dt.date.today()
+    year = today.year
+    month = today.month - 1
+    if month == 0:
+        year -= 1
+        month = 12
+    return year, month
+
+
+def parse_period(period: str):
+    if period == 'all':
+        return None
+    if period == 'previous':
+        return previous_month()
+    m = re.fullmatch(r'(20\d{2})-(0[1-9]|1[0-2])', period or '')
+    if not m:
+        raise ValueError('period inválido; use previous, all ou YYYY-MM')
+    return int(m.group(1)), int(m.group(2))
+
+
+def file_matches_period(file_name: str, period: str) -> bool:
+    target = parse_period(period)
+    if target is None:
+        return True
+    year, month = target
+    tokens = {
+        f'{month:02d}-{year}',
+        f'{year}-{month:02d}',
+    }
+    return any(token in file_name for token in tokens)
+
+
 def build_drive_index(report_folder_ids):
-    """Monta índice de pastas de ano já existentes no Drive."""
+    """Monta índice de pastas de ano já existentes no Drive.
+
+    Antes só indexava/criava 2026. Para backfills históricos, precisamos
+    reconhecer também pastas como 2025 já existentes e criar anos sob demanda.
+    """
     year_folder_ids = {}
     for local_name, report_id in report_folder_ids.items():
-        children = ls_parent(report_id, max_results=100)
+        children = ls_parent(report_id, max_results=200)
         by_name = {x['name']: x for x in children if x.get('mimeType') == 'application/vnd.google-apps.folder'}
+
+        for year, item in by_name.items():
+            if re.fullmatch(r'20\d{2}', year):
+                year_folder_ids[(local_name, year)] = item['id']
+
         for year in ['2026']:
-            if year in by_name:
-                year_folder_ids[(local_name, year)] = by_name[year]['id']
-            else:
+            if (local_name, year) not in year_folder_ids:
                 created = mkdir(year, report_id)
                 year_folder_ids[(local_name, year)] = created['id']
                 print(f'CREATED_YEAR_FOLDER\t{local_name}\t{year}\t{created["id"]}')
@@ -192,7 +239,7 @@ def get_report_folder_ids(target_folders):
     return report_folder_ids
 
 
-def sync_upload(target_folders):
+def sync_upload(target_folders, period='all', replace_existing=True):
     """Faz upload/replace dos arquivos locais para o Drive."""
     report_folder_ids = get_report_folder_ids(target_folders)
     year_folder_ids = build_drive_index(report_folder_ids)
@@ -223,6 +270,8 @@ def sync_upload(target_folders):
         for file in sorted(local_folder.iterdir()):
             if not file.is_file() or file.suffix.lower() not in ALLOWED_EXT:
                 continue
+            if not file_matches_period(file.name, period):
+                continue
             year = extract_year(file.name)
             if (local_folder.name, year) not in year_folder_ids:
                 created = mkdir(year, report_folder_ids[local_folder.name])
@@ -232,18 +281,21 @@ def sync_upload(target_folders):
             existing_children = ls_parent(year_id, max_results=200)
             existing_by_name = {x['name']: x for x in existing_children if x.get('name') == file.name}
             if file.name in existing_by_name:
-                upload(file, year_id, replace_id=existing_by_name[file.name]['id'])
-                replaced += 1
-                print(f'REPLACED\t{local_folder.name}\t{year}\t{file.name}')
+                if replace_existing:
+                    upload(file, year_id, replace_id=existing_by_name[file.name]['id'])
+                    replaced += 1
+                    print(f'REPLACED\t{local_folder.name}\t{year}\t{file.name}')
+                else:
+                    print(f'SKIPPED_EXISTING_DRIVE\t{local_folder.name}\t{year}\t{file.name}')
             else:
                 upload(file, year_id)
                 uploaded += 1
                 print(f'UPLOADED\t{local_folder.name}\t{year}\t{file.name}')
 
-    print(f'SUMMARY\treplaced={replaced}\tuploaded={uploaded}')
+    print(f'SUMMARY\tperiod={period}\treplaced={replaced}\tuploaded={uploaded}')
 
 
-def verify_monthly():
+def verify_monthly(period='previous'):
     """Verifica se os arquivos mensais estão presentes no Drive (sem fazer upload)."""
     report_folder_ids = get_report_folder_ids(MONTHLY_FOLDERS)
     year_folder_ids = build_drive_index(report_folder_ids)
@@ -259,6 +311,8 @@ def verify_monthly():
         for file in sorted(local_folder.iterdir()):
             if not file.is_file() or file.suffix.lower() not in ALLOWED_EXT:
                 continue
+            if not file_matches_period(file.name, period):
+                continue
             year = extract_year(file.name)
             year_id = year_folder_ids.get((local_folder.name, year))
             if not year_id:
@@ -273,7 +327,7 @@ def verify_monthly():
                 missing.append(f'{local_folder.name}/{year}/{file.name}')
                 print(f'MISSING\t{local_folder.name}\t{year}\t{file.name}')
 
-    print(f'\nVERIFY_SUMMARY\tok={ok}\tmissing={len(missing)}')
+    print(f'\nVERIFY_SUMMARY\tperiod={period}\tok={ok}\tmissing={len(missing)}')
     if missing:
         print('ARQUIVOS FALTANDO NO DRIVE:')
         for m in missing:
@@ -287,29 +341,39 @@ def main():
     parser.add_argument(
         '--mode',
         choices=['daily', 'monthly', 'verify', 'all'],
-        default='all',
+        default='monthly',
         help='daily=só diários | monthly=só mensais (upload) | verify=checar mensais | all=tudo (legado)'
+    )
+    parser.add_argument(
+        '--period',
+        default='previous',
+        help='Para monthly/verify: previous (padrão), all (backfill explícito) ou YYYY-MM'
+    )
+    parser.add_argument(
+        '--no-replace',
+        action='store_true',
+        help='Não substitui arquivos já existentes no Drive; útil para backfill histórico.'
     )
     args = parser.parse_args()
 
     if args.mode == 'daily':
         print(f'[MODO: diário] Subindo {len(DAILY_FOLDERS)} pastas: {sorted(DAILY_FOLDERS)}')
-        sync_upload(DAILY_FOLDERS)
+        sync_upload(DAILY_FOLDERS, period='all', replace_existing=not args.no_replace)
 
     elif args.mode == 'monthly':
-        print(f'[MODO: mensal] Subindo {len(MONTHLY_FOLDERS)} pastas mensais')
-        sync_upload(MONTHLY_FOLDERS)
+        print(f'[MODO: mensal] Subindo {len(MONTHLY_FOLDERS)} pastas mensais | period={args.period}')
+        sync_upload(MONTHLY_FOLDERS, period=args.period, replace_existing=not args.no_replace)
 
     elif args.mode == 'verify':
-        print(f'[MODO: verificação] Checando {len(MONTHLY_FOLDERS)} pastas mensais no Drive')
-        ok = verify_monthly()
+        print(f'[MODO: verificação] Checando {len(MONTHLY_FOLDERS)} pastas mensais no Drive | period={args.period}')
+        ok = verify_monthly(period=args.period)
         if not ok:
             exit(1)
 
     else:  # all — comportamento legado
-        print('[MODO: all] Subindo todas as pastas')
+        print('[MODO: all] Subindo todas as pastas e todos os períodos — uso manual/backfill')
         all_folders = set(FOLDER_MAP.keys())
-        sync_upload(all_folders)
+        sync_upload(all_folders, period='all', replace_existing=not args.no_replace)
 
 
 if __name__ == '__main__':

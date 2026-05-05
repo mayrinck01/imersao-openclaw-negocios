@@ -13,7 +13,7 @@ Endpoint: GET /relatorios/BuscaDadosRelatorioDinamico
 Campos: nome, cpf, Total=Saldo, subRel=ID Cliente
 """
 
-import sys, os, subprocess, json, calendar
+import sys, os, subprocess, json, calendar, argparse
 from datetime import datetime
 import openpyxl
 from openpyxl.styles import Font, PatternFill, Alignment
@@ -21,6 +21,18 @@ from mogo_excel import order_columns_by_first_record, format_currency_cells
 from filter_pt import month_year_pt
 sys.path.insert(0, os.path.dirname(__file__))
 from mogo_login import mogo_login, MOGO_URL
+
+parser = argparse.ArgumentParser()
+parser.add_argument(
+    '--allow-current-snapshot',
+    action='store_true',
+    help='Executa snapshot atual. Não usar no cron mensal do dia 5, que é sempre mês anterior.'
+)
+args, _ = parser.parse_known_args()
+
+if not args.allow_current_snapshot:
+    print('SKIPPED: Saldo Crédito Carteira é snapshot atual e não tem filtro histórico/mês anterior no Mogo. Fora do cron mensal do dia 5.')
+    sys.exit(0)
 
 op_token = open('/root/.openclaw/credentials/1password-token.txt').read().strip()
 env = os.environ.copy()
