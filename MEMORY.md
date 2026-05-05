@@ -23,6 +23,7 @@
 - `marketing/` → materiais e estudos de marketing
 - `relatorios/marketing/` → relatórios já produzidos
 - `docs/cake-co-report-themes.md` → catálogo canônico de temas visuais para reports/boards/dashboards HTML
+- `docs/MOGO-CHANNEL-BOARD-MODELO.md` → modelo padrão do board executivo Mogo de canais + caixa; regra Drive primeiro
 - `skills/cake-co-social-report/` → skill canônica para relatórios de redes sociais/performance digital
 
 ## Migração em andamento
