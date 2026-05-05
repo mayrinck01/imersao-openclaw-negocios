@@ -22,6 +22,7 @@
 - `brand/` → ativos de marca e manuais
 - `marketing/` → materiais e estudos de marketing
 - `relatorios/marketing/` → relatórios já produzidos
+- `docs/cake-co-report-themes.md` → catálogo canônico de temas visuais para reports/boards/dashboards HTML
 
 ## Migração em andamento
 - Base inicial herdada do curso: `imersao-openclaw-negocios`
