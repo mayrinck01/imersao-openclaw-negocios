@@ -1,0 +1,986 @@
+{
+  "months": [
+    "Janeiro",
+    "Fevereiro",
+    "Março",
+    "Abril"
+  ],
+  "monthly": {
+    "2025": [
+      377252.72,
+      401509.21,
+      455524.61,
+      526744.89
+    ],
+    "2026": [
+      501096.45,
+      550238.35,
+      681474.72,
+      684604.5
+    ],
+    "ped25": [
+      4348,
+      4789,
+      5383,
+      5487
+    ],
+    "ped26": [
+      5396,
+      5649,
+      6862,
+      6286
+    ],
+    "tkt25": [
+      86.76,
+      83.84,
+      84.62,
+      96.0
+    ],
+    "tkt26": [
+      92.86,
+      97.4,
+      99.31,
+      108.91
+    ]
+  },
+  "canais": [
+    {
+      "nome": "LOJA · Mesa",
+      "grupo": "loja",
+      "v25": 224111.21,
+      "v26": 282586.6,
+      "d": 58475.39,
+      "dp": 26.1,
+      "p25": 7711,
+      "p26": 8674,
+      "t25": 29.06,
+      "t26": 32.58
+    },
+    {
+      "nome": "LOJA · Balcão",
+      "grupo": "loja",
+      "v25": 194032.33,
+      "v26": 250216.21,
+      "d": 56183.88,
+      "dp": 29.0,
+      "p25": 2884,
+      "p26": 3238,
+      "t25": 67.28,
+      "t26": 77.27
+    },
+    {
+      "nome": "DELIVERY · iFood",
+      "grupo": "delivery",
+      "v25": 696414.59,
+      "v26": 1012047.51,
+      "d": 315632.92,
+      "dp": 45.3,
+      "p25": 6504,
+      "p26": 8677,
+      "t25": 107.07,
+      "t26": 116.64
+    },
+    {
+      "nome": "DELIVERY · Neemo",
+      "grupo": "delivery",
+      "v25": 274769.5,
+      "v26": 482809.3,
+      "d": 208039.8,
+      "dp": 75.7,
+      "p25": 1294,
+      "p26": 2033,
+      "t25": 212.34,
+      "t26": 237.49
+    },
+    {
+      "nome": "DELIVERY · Atendimento",
+      "grupo": "delivery",
+      "v25": 371703.8,
+      "v26": 389754.4,
+      "d": 18050.6,
+      "dp": 4.9,
+      "p25": 1614,
+      "p26": 1571,
+      "t25": 230.3,
+      "t26": 248.09
+    }
+  ],
+  "dfc": {
+    "2025": [
+      244874.17,
+      231220.56,
+      238623.77,
+      202184.03
+    ],
+    "2026": [
+      550418.1,
+      539855.54,
+      550277.41,
+      594930.21
+    ]
+  },
+  "products": {
+    "macro": {
+      "GERAL": [
+        {
+          "produto": "MORANGO - DELICIOSA NAKED F25",
+          "valor": 207891.25,
+          "qtde": 631.0
+        },
+        {
+          "produto": "MORANGO - DELICIOSA NAKED F20",
+          "valor": 187987.0,
+          "qtde": 771.0
+        },
+        {
+          "produto": "MORANGO - DELICIOSA NAKED F13",
+          "valor": 119967.0,
+          "qtde": 807.0
+        },
+        {
+          "produto": "MORANGO - FT DELICIOSA",
+          "valor": 119767.75,
+          "qtde": 3284.0
+        },
+        {
+          "produto": "TENTACAO F25",
+          "valor": 63835.1,
+          "qtde": 269.0
+        },
+        {
+          "produto": "ALEMA F22",
+          "valor": 54877.5,
+          "qtde": 242.0
+        },
+        {
+          "produto": "FT SWEET DARK",
+          "valor": 47514.85,
+          "qtde": 1424.0
+        },
+        {
+          "produto": "CHOCOBERRIES F20",
+          "valor": 38770.1,
+          "qtde": 162.0
+        },
+        {
+          "produto": "FT TENTACAO",
+          "valor": 38140.61,
+          "qtde": 1189.0
+        },
+        {
+          "produto": "TENTACAO F13",
+          "valor": 37790.0,
+          "qtde": 321.0
+        }
+      ],
+      "DELIVERY": [
+        {
+          "produto": "MORANGO - DELICIOSA NAKED F25",
+          "valor": 186156.25,
+          "qtde": 562.0
+        },
+        {
+          "produto": "MORANGO - DELICIOSA NAKED F20",
+          "valor": 166231.0,
+          "qtde": 673.0
+        },
+        {
+          "produto": "MORANGO - DELICIOSA NAKED F13",
+          "valor": 108592.0,
+          "qtde": 716.0
+        },
+        {
+          "produto": "MORANGO - FT DELICIOSA",
+          "valor": 74174.0,
+          "qtde": 1923.0
+        },
+        {
+          "produto": "TENTACAO F25",
+          "valor": 56525.1,
+          "qtde": 235.0
+        },
+        {
+          "produto": "ALEMA F22",
+          "valor": 39109.5,
+          "qtde": 169.0
+        },
+        {
+          "produto": "CHOCOBERRIES F25",
+          "valor": 35080.4,
+          "qtde": 108.0
+        },
+        {
+          "produto": "TENTACAO F13",
+          "valor": 34686.0,
+          "qtde": 289.0
+        },
+        {
+          "produto": "FT TENTACAO",
+          "valor": 33907.3,
+          "qtde": 1019.0
+        },
+        {
+          "produto": "FT SWEET DARK",
+          "valor": 33514.0,
+          "qtde": 924.0
+        }
+      ],
+      "LOJA": [
+        {
+          "produto": "MORANGO - FT DELICIOSA",
+          "valor": 45593.75,
+          "qtde": 1361.0
+        },
+        {
+          "produto": "MORANGO - DELICIOSA NAKED F20",
+          "valor": 21756.0,
+          "qtde": 98.0
+        },
+        {
+          "produto": "MORANGO - DELICIOSA NAKED F25",
+          "valor": 21735.0,
+          "qtde": 69.0
+        },
+        {
+          "produto": "ALEMA F22",
+          "valor": 15768.0,
+          "qtde": 73.0
+        },
+        {
+          "produto": "PAO DE QUEIJO",
+          "valor": 14273.21,
+          "qtde": 2099.0
+        },
+        {
+          "produto": "CAFE EXPRESSO",
+          "valor": 14212.02,
+          "qtde": 1672.0
+        },
+        {
+          "produto": "FT SWEET DARK",
+          "valor": 14000.85,
+          "qtde": 500.0
+        },
+        {
+          "produto": "FT EMPADAO FRANGO",
+          "valor": 11681.34,
+          "qtde": 587.0
+        },
+        {
+          "produto": "MORANGO - DELICIOSA NAKED F13",
+          "valor": 11375.0,
+          "qtde": 91.0
+        },
+        {
+          "produto": "SALADA VERAO",
+          "valor": 9177.3,
+          "qtde": 297.0
+        }
+      ]
+    },
+    "micro": {
+      "DELIVERY · Neemo": [
+        {
+          "produto": "MORANGO - DELICIOSA NAKED F25",
+          "valor": 87086.0,
+          "qtde": 267.0
+        },
+        {
+          "produto": "MORANGO - DELICIOSA NAKED F20",
+          "valor": 59283.0,
+          "qtde": 258.0
+        },
+        {
+          "produto": "MORANGO - DELICIOSA NAKED F13",
+          "valor": 24366.0,
+          "qtde": 191.0
+        },
+        {
+          "produto": "TENTACAO F25",
+          "valor": 21067.0,
+          "qtde": 91.0
+        },
+        {
+          "produto": "CHOCOBERRIES F25",
+          "valor": 16445.0,
+          "qtde": 52.0
+        },
+        {
+          "produto": "NOVA SWEET DARK F25",
+          "valor": 14009.0,
+          "qtde": 55.0
+        },
+        {
+          "produto": "CHOCOBERRIES F20",
+          "valor": 12563.0,
+          "qtde": 55.0
+        },
+        {
+          "produto": "DELICIA COCO F25",
+          "valor": 9542.0,
+          "qtde": 42.0
+        },
+        {
+          "produto": "RED VELVET F20",
+          "valor": 9369.0,
+          "qtde": 43.0
+        },
+        {
+          "produto": "EMILIA F25",
+          "valor": 8770.0,
+          "qtde": 37.0
+        }
+      ],
+      "DELIVERY · Atendimento": [
+        {
+          "produto": "MORANGO - DELICIOSA NAKED F25",
+          "valor": 67095.0,
+          "qtde": 213.0
+        },
+        {
+          "produto": "MORANGO - DELICIOSA NAKED F20",
+          "valor": 39072.0,
+          "qtde": 176.0
+        },
+        {
+          "produto": "TENTACAO F25",
+          "valor": 17630.0,
+          "qtde": 82.0
+        },
+        {
+          "produto": "ALEMA F22",
+          "valor": 15984.0,
+          "qtde": 74.0
+        },
+        {
+          "produto": "MORANGO - DELICIOSA NAKED F13",
+          "valor": 13375.0,
+          "qtde": 107.0
+        },
+        {
+          "produto": "FANTASIA F25",
+          "valor": 8904.0,
+          "qtde": 42.0
+        },
+        {
+          "produto": "NOVA SWEET DARK F25",
+          "valor": 8534.0,
+          "qtde": 34.0
+        },
+        {
+          "produto": "DELICIA COCO F25",
+          "valor": 8424.0,
+          "qtde": 39.0
+        },
+        {
+          "produto": "CHOCOBERRIES F25",
+          "valor": 8400.0,
+          "qtde": 28.0
+        },
+        {
+          "produto": "ALEMA F13",
+          "valor": 7372.0,
+          "qtde": 76.0
+        }
+      ],
+      "LOJA · Balcão": [
+        {
+          "produto": "MORANGO - DELICIOSA NAKED F25",
+          "valor": 20475.0,
+          "qtde": 65.0
+        },
+        {
+          "produto": "MORANGO - DELICIOSA NAKED F20",
+          "valor": 18648.0,
+          "qtde": 84.0
+        },
+        {
+          "produto": "ALEMA F22",
+          "valor": 14688.0,
+          "qtde": 68.0
+        },
+        {
+          "produto": "MORANGO - FT DELICIOSA",
+          "valor": 13969.5,
+          "qtde": 417.0
+        },
+        {
+          "produto": "MORANGO - DELICIOSA NAKED F13",
+          "valor": 9750.0,
+          "qtde": 78.0
+        },
+        {
+          "produto": "TENTACAO F25",
+          "valor": 6880.0,
+          "qtde": 32.0
+        },
+        {
+          "produto": "NOVA SWEET DARK F25",
+          "valor": 6024.0,
+          "qtde": 24.0
+        },
+        {
+          "produto": "CHOCOBERRIES F20",
+          "valor": 5064.0,
+          "qtde": 24.0
+        },
+        {
+          "produto": "FT SWEET DARK",
+          "valor": 4788.0,
+          "qtde": 171.0
+        },
+        {
+          "produto": "BRIG. TRADICIONAL 04UN",
+          "valor": 3465.0,
+          "qtde": 231.0
+        }
+      ],
+      "DELIVERY · iFood": [
+        {
+          "produto": "MORANGO - FT DELICIOSA",
+          "valor": 70912.5,
+          "qtde": 1830.0
+        },
+        {
+          "produto": "MORANGO - DELICIOSA NAKED F13",
+          "valor": 70851.0,
+          "qtde": 418.0
+        },
+        {
+          "produto": "MORANGO - DELICIOSA NAKED F20",
+          "valor": 67876.0,
+          "qtde": 239.0
+        },
+        {
+          "produto": "FT TENTACAO",
+          "valor": 33064.5,
+          "qtde": 987.0
+        },
+        {
+          "produto": "FT SWEET DARK",
+          "valor": 32558.0,
+          "qtde": 892.0
+        },
+        {
+          "produto": "MORANGO - DELICIOSA NAKED F25",
+          "valor": 31975.25,
+          "qtde": 82.0
+        },
+        {
+          "produto": "TENTACAO F13",
+          "valor": 24156.0,
+          "qtde": 183.0
+        },
+        {
+          "produto": "FT ALEMA",
+          "valor": 17984.0,
+          "qtde": 562.0
+        },
+        {
+          "produto": "TENTACAO F25",
+          "valor": 17828.1,
+          "qtde": 62.0
+        },
+        {
+          "produto": "CHOCOBERRIES F20",
+          "valor": 16712.1,
+          "qtde": 62.0
+        }
+      ],
+      "LOJA · Mesa": [
+        {
+          "produto": "MORANGO - FT DELICIOSA",
+          "valor": 31624.25,
+          "qtde": 944.0
+        },
+        {
+          "produto": "CAFE EXPRESSO",
+          "valor": 13931.52,
+          "qtde": 1639.0
+        },
+        {
+          "produto": "PAO DE QUEIJO",
+          "valor": 11383.21,
+          "qtde": 1674.0
+        },
+        {
+          "produto": "FT SWEET DARK",
+          "valor": 9212.85,
+          "qtde": 329.0
+        },
+        {
+          "produto": "FT EMPADAO FRANGO",
+          "valor": 8656.54,
+          "qtde": 435.0
+        },
+        {
+          "produto": "CAFE COADO",
+          "valor": 7959.01,
+          "qtde": 758.0
+        },
+        {
+          "produto": "SALADA VERAO",
+          "valor": 7137.9,
+          "qtde": 231.0
+        },
+        {
+          "produto": "CAPUCCINO GRD",
+          "valor": 6088.62,
+          "qtde": 451.0
+        },
+        {
+          "produto": "AGUA GASOSA",
+          "valor": 5440.64,
+          "qtde": 837.0
+        },
+        {
+          "produto": "FT ALEMA",
+          "valor": 5253.9,
+          "qtde": 211.0
+        }
+      ]
+    },
+    "individual": {
+      "Neemo": [
+        {
+          "produto": "MORANGO - DELICIOSA NAKED F25",
+          "valor": 87086.0,
+          "qtde": 267.0
+        },
+        {
+          "produto": "MORANGO - DELICIOSA NAKED F20",
+          "valor": 59283.0,
+          "qtde": 258.0
+        },
+        {
+          "produto": "MORANGO - DELICIOSA NAKED F13",
+          "valor": 24366.0,
+          "qtde": 191.0
+        },
+        {
+          "produto": "TENTACAO F25",
+          "valor": 21067.0,
+          "qtde": 91.0
+        },
+        {
+          "produto": "CHOCOBERRIES F25",
+          "valor": 16445.0,
+          "qtde": 52.0
+        },
+        {
+          "produto": "NOVA SWEET DARK F25",
+          "valor": 14009.0,
+          "qtde": 55.0
+        },
+        {
+          "produto": "CHOCOBERRIES F20",
+          "valor": 12563.0,
+          "qtde": 55.0
+        },
+        {
+          "produto": "DELICIA COCO F25",
+          "valor": 9542.0,
+          "qtde": 42.0
+        },
+        {
+          "produto": "RED VELVET F20",
+          "valor": 9369.0,
+          "qtde": 43.0
+        },
+        {
+          "produto": "EMILIA F25",
+          "valor": 8770.0,
+          "qtde": 37.0
+        }
+      ],
+      "WhatsApp": [
+        {
+          "produto": "MORANGO - DELICIOSA NAKED F25",
+          "valor": 36540.0,
+          "qtde": 116.0
+        },
+        {
+          "produto": "MORANGO - DELICIOSA NAKED F20",
+          "valor": 21090.0,
+          "qtde": 95.0
+        },
+        {
+          "produto": "ALEMA F22",
+          "valor": 10800.0,
+          "qtde": 50.0
+        },
+        {
+          "produto": "TENTACAO F25",
+          "valor": 10750.0,
+          "qtde": 50.0
+        },
+        {
+          "produto": "MORANGO - DELICIOSA NAKED F13",
+          "valor": 7625.0,
+          "qtde": 61.0
+        },
+        {
+          "produto": "CHOCOBERRIES F25",
+          "valor": 5100.0,
+          "qtde": 17.0
+        },
+        {
+          "produto": "NOVA SWEET DARK F25",
+          "valor": 5020.0,
+          "qtde": 20.0
+        },
+        {
+          "produto": "ALEMA F13",
+          "valor": 4850.0,
+          "qtde": 50.0
+        },
+        {
+          "produto": "MORANGO - DELICIOSA NAKED F30",
+          "valor": 4480.0,
+          "qtde": 7.0
+        },
+        {
+          "produto": "FANTASIA F13",
+          "valor": 4465.0,
+          "qtde": 47.0
+        }
+      ],
+      "Telefone": [
+        {
+          "produto": "MORANGO - DELICIOSA NAKED F25",
+          "valor": 14175.0,
+          "qtde": 45.0
+        },
+        {
+          "produto": "MORANGO - DELICIOSA NAKED F20",
+          "valor": 9324.0,
+          "qtde": 42.0
+        },
+        {
+          "produto": "TENTACAO F25",
+          "valor": 4085.0,
+          "qtde": 19.0
+        },
+        {
+          "produto": "ALEMA F22",
+          "valor": 3672.0,
+          "qtde": 17.0
+        },
+        {
+          "produto": "MORANGO - DELICIOSA NAKED F13",
+          "valor": 3250.0,
+          "qtde": 26.0
+        },
+        {
+          "produto": "FANTASIA F25",
+          "valor": 3180.0,
+          "qtde": 15.0
+        },
+        {
+          "produto": "DELICIA COCO F25",
+          "valor": 2592.0,
+          "qtde": 12.0
+        },
+        {
+          "produto": "EMPADAO FRANGO F25",
+          "valor": 2136.0,
+          "qtde": 12.0
+        },
+        {
+          "produto": "CROCANTE F25",
+          "valor": 1935.0,
+          "qtde": 9.0
+        },
+        {
+          "produto": "CHOCOBERRIES F25",
+          "valor": 1800.0,
+          "qtde": 6.0
+        }
+      ],
+      "Balcão": [
+        {
+          "produto": "MORANGO - DELICIOSA NAKED F25",
+          "valor": 20475.0,
+          "qtde": 65.0
+        },
+        {
+          "produto": "MORANGO - DELICIOSA NAKED F20",
+          "valor": 18648.0,
+          "qtde": 84.0
+        },
+        {
+          "produto": "ALEMA F22",
+          "valor": 14688.0,
+          "qtde": 68.0
+        },
+        {
+          "produto": "MORANGO - FT DELICIOSA",
+          "valor": 13969.5,
+          "qtde": 417.0
+        },
+        {
+          "produto": "MORANGO - DELICIOSA NAKED F13",
+          "valor": 9750.0,
+          "qtde": 78.0
+        },
+        {
+          "produto": "TENTACAO F25",
+          "valor": 6880.0,
+          "qtde": 32.0
+        },
+        {
+          "produto": "NOVA SWEET DARK F25",
+          "valor": 6024.0,
+          "qtde": 24.0
+        },
+        {
+          "produto": "CHOCOBERRIES F20",
+          "valor": 5064.0,
+          "qtde": 24.0
+        },
+        {
+          "produto": "FT SWEET DARK",
+          "valor": 4788.0,
+          "qtde": 171.0
+        },
+        {
+          "produto": "BRIG. TRADICIONAL 04UN",
+          "valor": 3465.0,
+          "qtde": 231.0
+        }
+      ],
+      "iFood": [
+        {
+          "produto": "MORANGO - FT DELICIOSA",
+          "valor": 70912.5,
+          "qtde": 1830.0
+        },
+        {
+          "produto": "MORANGO - DELICIOSA NAKED F13",
+          "valor": 70851.0,
+          "qtde": 418.0
+        },
+        {
+          "produto": "MORANGO - DELICIOSA NAKED F20",
+          "valor": 67876.0,
+          "qtde": 239.0
+        },
+        {
+          "produto": "FT TENTACAO",
+          "valor": 33064.5,
+          "qtde": 987.0
+        },
+        {
+          "produto": "FT SWEET DARK",
+          "valor": 32558.0,
+          "qtde": 892.0
+        },
+        {
+          "produto": "MORANGO - DELICIOSA NAKED F25",
+          "valor": 31975.25,
+          "qtde": 82.0
+        },
+        {
+          "produto": "TENTACAO F13",
+          "valor": 24156.0,
+          "qtde": 183.0
+        },
+        {
+          "produto": "FT ALEMA",
+          "valor": 17984.0,
+          "qtde": 562.0
+        },
+        {
+          "produto": "TENTACAO F25",
+          "valor": 17828.1,
+          "qtde": 62.0
+        },
+        {
+          "produto": "CHOCOBERRIES F20",
+          "valor": 16712.1,
+          "qtde": 62.0
+        }
+      ],
+      "Mesa / Comanda / Totem": [
+        {
+          "produto": "MORANGO - FT DELICIOSA",
+          "valor": 31624.25,
+          "qtde": 944.0
+        },
+        {
+          "produto": "CAFE EXPRESSO",
+          "valor": 13931.52,
+          "qtde": 1639.0
+        },
+        {
+          "produto": "PAO DE QUEIJO",
+          "valor": 11383.21,
+          "qtde": 1674.0
+        },
+        {
+          "produto": "FT SWEET DARK",
+          "valor": 9212.85,
+          "qtde": 329.0
+        },
+        {
+          "produto": "FT EMPADAO FRANGO",
+          "valor": 8656.54,
+          "qtde": 435.0
+        },
+        {
+          "produto": "CAFE COADO",
+          "valor": 7959.01,
+          "qtde": 758.0
+        },
+        {
+          "produto": "SALADA VERAO",
+          "valor": 7137.9,
+          "qtde": 231.0
+        },
+        {
+          "produto": "CAPUCCINO GRD",
+          "valor": 6088.62,
+          "qtde": 451.0
+        },
+        {
+          "produto": "AGUA GASOSA",
+          "valor": 5440.64,
+          "qtde": 837.0
+        },
+        {
+          "produto": "FT ALEMA",
+          "valor": 5253.9,
+          "qtde": 211.0
+        }
+      ],
+      "Mogo Gourmet": [
+        {
+          "produto": "MORANGO - DELICIOSA NAKED F25",
+          "valor": 14175.0,
+          "qtde": 45.0
+        },
+        {
+          "produto": "MORANGO - DELICIOSA NAKED F20",
+          "valor": 7326.0,
+          "qtde": 33.0
+        },
+        {
+          "produto": "TENTACAO F25",
+          "valor": 2795.0,
+          "qtde": 13.0
+        },
+        {
+          "produto": "MORANGO - DELICIOSA NAKED F13",
+          "valor": 2375.0,
+          "qtde": 19.0
+        },
+        {
+          "produto": "DELICIA COCO F25",
+          "valor": 1728.0,
+          "qtde": 8.0
+        },
+        {
+          "produto": "ALEMA F22",
+          "valor": 1512.0,
+          "qtde": 7.0
+        },
+        {
+          "produto": "NOVA SWEET DARK F25",
+          "valor": 1506.0,
+          "qtde": 6.0
+        },
+        {
+          "produto": "CHOCOBERRIES F25",
+          "valor": 1500.0,
+          "qtde": 5.0
+        },
+        {
+          "produto": "ALEMA F13",
+          "valor": 1455.0,
+          "qtde": 15.0
+        },
+        {
+          "produto": "EMPADAO FRANGO F25",
+          "valor": 1424.0,
+          "qtde": 8.0
+        }
+      ],
+      "Outros": [
+        {
+          "produto": "MORANGO - DELICIOSA NAKED F25",
+          "valor": 2205.0,
+          "qtde": 7.0
+        },
+        {
+          "produto": "MORANGO - DELICIOSA NAKED F20",
+          "valor": 1332.0,
+          "qtde": 6.0
+        },
+        {
+          "produto": "DELICIA COCO F25",
+          "valor": 432.0,
+          "qtde": 2.0
+        },
+        {
+          "produto": "CHOCOBERRIES F20",
+          "valor": 422.0,
+          "qtde": 2.0
+        },
+        {
+          "produto": "CHOCOBERRIES F13",
+          "valor": 360.0,
+          "qtde": 3.0
+        },
+        {
+          "produto": "BRIG. TRADICIONAL 25UN",
+          "valor": 296.0,
+          "qtde": 4.0
+        },
+        {
+          "produto": "TORTA CAÇA AO CHOCOLATE F25",
+          "valor": 280.0,
+          "qtde": 1.0
+        },
+        {
+          "produto": "NOVA SWEET DARK F25",
+          "valor": 251.0,
+          "qtde": 1.0
+        },
+        {
+          "produto": "EMILIA F25",
+          "valor": 224.0,
+          "qtde": 1.0
+        },
+        {
+          "produto": "BANOFFE F20",
+          "valor": 215.0,
+          "qtde": 1.0
+        }
+      ]
+    }
+  },
+  "productKeys": {
+    "macro": [
+      "GERAL",
+      "LOJA",
+      "DELIVERY"
+    ],
+    "micro": [
+      "LOJA · Mesa",
+      "LOJA · Balcão",
+      "DELIVERY · iFood",
+      "DELIVERY · Neemo",
+      "DELIVERY · Atendimento"
+    ],
+    "individual": [
+      "Mesa / Comanda / Totem",
+      "Balcão",
+      "iFood",
+      "Neemo",
+      "WhatsApp",
+      "Telefone",
+      "Mogo Gourmet",
+      "Outros"
+    ]
+  }
+}

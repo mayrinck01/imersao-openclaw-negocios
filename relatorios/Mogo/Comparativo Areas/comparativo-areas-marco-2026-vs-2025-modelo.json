@@ -1,0 +1,7200 @@
+{
+  "2026": {
+    "total": 680164.72,
+    "pedidos": 6860,
+    "ticket": 99.14937609329445,
+    "linhas": 16874,
+    "by_div": {
+      "DELIVERY": {
+        "valor": 538910.0099999801,
+        "pedidos": 3513,
+        "rows": 10578,
+        "ticket": 153.4045004269798
+      },
+      "LOJA": {
+        "valor": 141254.70999999647,
+        "pedidos": 3347,
+        "rows": 6296,
+        "ticket": 42.20337914550238
+      }
+    },
+    "by_area": {
+      "DELIVERY — Neemo": {
+        "valor": 143729.29999999993,
+        "pedidos": 600,
+        "rows": 1529,
+        "ticket": 239.54883333333322
+      },
+      "DELIVERY — iFood": {
+        "valor": 281154.809999985,
+        "pedidos": 2467,
+        "rows": 7932,
+        "ticket": 113.96627888122617
+      },
+      "LOJA — Balcão": {
+        "valor": 63239.31000000035,
+        "pedidos": 869,
+        "rows": 1509,
+        "ticket": 72.77250863061029
+      },
+      "DELIVERY — Pedido Atendimento": {
+        "valor": 114025.90000000004,
+        "pedidos": 446,
+        "rows": 1117,
+        "ticket": 255.66345291479828
+      },
+      "LOJA — Mesa": {
+        "valor": 78015.40000000026,
+        "pedidos": 2478,
+        "rows": 4787,
+        "ticket": 31.483212267958134
+      }
+    },
+    "by_origin": {
+      "neemo": {
+        "valor": 143729.29999999993,
+        "pedidos": 600,
+        "rows": 1529,
+        "ticket": 239.54883333333322
+      },
+      "iFood": {
+        "valor": 281154.809999985,
+        "pedidos": 2467,
+        "rows": 7932,
+        "ticket": 113.96627888122617
+      },
+      "balcão": {
+        "valor": 63239.31000000035,
+        "pedidos": 869,
+        "rows": 1509,
+        "ticket": 72.77250863061029
+      },
+      "WhatsApp": {
+        "valor": 68116.9,
+        "pedidos": 255,
+        "rows": 612,
+        "ticket": 267.1250980392157
+      },
+      "Telefone": {
+        "valor": 31554.099999999995,
+        "pedidos": 138,
+        "rows": 366,
+        "ticket": 228.65289855072461
+      },
+      "mesa 10": {
+        "valor": 5033.800000000001,
+        "pedidos": 184,
+        "rows": 335,
+        "ticket": 27.35760869565218
+      },
+      "mesa 01": {
+        "valor": 7820.049999999985,
+        "pedidos": 264,
+        "rows": 513,
+        "ticket": 29.621401515151458
+      },
+      "mesa 04": {
+        "valor": 5974.0999999999985,
+        "pedidos": 187,
+        "rows": 329,
+        "ticket": 31.947058823529403
+      },
+      "mesa 09": {
+        "valor": 7752.049999999988,
+        "pedidos": 233,
+        "rows": 482,
+        "ticket": 33.27060085836905
+      },
+      "mesa 03": {
+        "valor": 3736.6100000000047,
+        "pedidos": 117,
+        "rows": 238,
+        "ticket": 31.936837606837646
+      },
+      "mesa 29": {
+        "valor": 23.3,
+        "pedidos": 2,
+        "rows": 3,
+        "ticket": 11.65
+      },
+      "mesa 14": {
+        "valor": 1502.7000000000003,
+        "pedidos": 45,
+        "rows": 103,
+        "ticket": 33.39333333333334
+      },
+      "mesa 22": {
+        "valor": 429.2,
+        "pedidos": 15,
+        "rows": 34,
+        "ticket": 28.613333333333333
+      },
+      "mesa 02": {
+        "valor": 4198.600000000004,
+        "pedidos": 120,
+        "rows": 244,
+        "ticket": 34.988333333333365
+      },
+      "mesa 15": {
+        "valor": 3639.9000000000037,
+        "pedidos": 113,
+        "rows": 222,
+        "ticket": 32.211504424778795
+      },
+      "mesa 05": {
+        "valor": 5531.549999999998,
+        "pedidos": 191,
+        "rows": 346,
+        "ticket": 28.960994764397896
+      },
+      "mesa 215": {
+        "valor": 3864.700000000003,
+        "pedidos": 64,
+        "rows": 158,
+        "ticket": 60.38593750000005
+      },
+      "mesa 11": {
+        "valor": 4309.000000000003,
+        "pedidos": 166,
+        "rows": 285,
+        "ticket": 25.95783132530122
+      },
+      "mesa 13": {
+        "valor": 4018.9100000000035,
+        "pedidos": 125,
+        "rows": 256,
+        "ticket": 32.15128000000003
+      },
+      "Mogo Gourmet": {
+        "valor": 11154.9,
+        "pedidos": 42,
+        "rows": 112,
+        "ticket": 265.59285714285716
+      },
+      "mesa 214": {
+        "valor": 574.3,
+        "pedidos": 12,
+        "rows": 29,
+        "ticket": 47.85833333333333
+      },
+      "mesa 23": {
+        "valor": 642.2999999999998,
+        "pedidos": 22,
+        "rows": 45,
+        "ticket": 29.195454545454538
+      },
+      "mesa 06": {
+        "valor": 2358.4200000000014,
+        "pedidos": 82,
+        "rows": 152,
+        "ticket": 28.76121951219514
+      },
+      "mesa 12": {
+        "valor": 4650.810000000001,
+        "pedidos": 130,
+        "rows": 265,
+        "ticket": 35.77546153846155
+      },
+      "mesa 300": {
+        "valor": 254.20000000000005,
+        "pedidos": 17,
+        "rows": 23,
+        "ticket": 14.95294117647059
+      },
+      "mesa 07": {
+        "valor": 2801.800000000002,
+        "pedidos": 96,
+        "rows": 179,
+        "ticket": 29.185416666666686
+      },
+      "mesa 08": {
+        "valor": 3816.200000000004,
+        "pedidos": 116,
+        "rows": 224,
+        "ticket": 32.898275862069
+      },
+      "mesa 211": {
+        "valor": 117.9,
+        "pedidos": 7,
+        "rows": 8,
+        "ticket": 16.842857142857145
+      },
+      "mesa 210": {
+        "valor": 617.7999999999998,
+        "pedidos": 18,
+        "rows": 37,
+        "ticket": 34.322222222222216
+      },
+      "mesa 27": {
+        "valor": 193.60000000000002,
+        "pedidos": 7,
+        "rows": 12,
+        "ticket": 27.657142857142862
+      },
+      "mesa 16": {
+        "valor": 369.90000000000003,
+        "pedidos": 15,
+        "rows": 23,
+        "ticket": 24.660000000000004
+      },
+      "mesa 212": {
+        "valor": 221.70000000000002,
+        "pedidos": 3,
+        "rows": 11,
+        "ticket": 73.9
+      },
+      "mesa 21": {
+        "valor": 1224.9,
+        "pedidos": 52,
+        "rows": 86,
+        "ticket": 23.555769230769233
+      },
+      "Outros": {
+        "valor": 3200.0,
+        "pedidos": 11,
+        "rows": 27,
+        "ticket": 290.90909090909093
+      },
+      "mesa 213": {
+        "valor": 453.09999999999997,
+        "pedidos": 8,
+        "rows": 18,
+        "ticket": 56.637499999999996
+      },
+      "mesa 24": {
+        "valor": 497.09999999999997,
+        "pedidos": 20,
+        "rows": 37,
+        "ticket": 24.854999999999997
+      },
+      "mesa 25": {
+        "valor": 615.7,
+        "pedidos": 23,
+        "rows": 42,
+        "ticket": 26.769565217391307
+      },
+      "mesa 26": {
+        "valor": 341.59999999999997,
+        "pedidos": 12,
+        "rows": 25,
+        "ticket": 28.466666666666665
+      },
+      "mesa 17": {
+        "valor": 286.7,
+        "pedidos": 6,
+        "rows": 14,
+        "ticket": 47.78333333333333
+      },
+      "mesa 28": {
+        "valor": 142.9,
+        "pedidos": 6,
+        "rows": 9,
+        "ticket": 23.816666666666666
+      }
+    },
+    "products": {
+      "MORANGO - DELICIOSA NAKED F25": {
+        "valor": 66139.0,
+        "qtde": 198.0
+      },
+      "FT SWEET DARK": {
+        "valor": 15931.11,
+        "qtde": 467.0
+      },
+      "DELICIA COCO F13": {
+        "valor": 3197.0,
+        "qtde": 28.0
+      },
+      "VELA VULCAO DOURADA": {
+        "valor": 256.0,
+        "qtde": 11.0
+      },
+      "MORANGO - DELICIOSA NAKED F20": {
+        "valor": 46356.0,
+        "qtde": 192.0
+      },
+      "TENTACAO F13": {
+        "valor": 10660.0,
+        "qtde": 91.0
+      },
+      "IF BRIG. BRANCO PRECIOSO": {
+        "valor": 1070.6999999999998,
+        "qtde": 23.0
+      },
+      "QUINDIM UN": {
+        "valor": 1469.0,
+        "qtde": 118.0
+      },
+      "MORANGO - FT DELICIOSA": {
+        "valor": 34000.75,
+        "qtde": 932.0
+      },
+      "QUICHE PRESUNTO F13": {
+        "valor": 882.9999999999997,
+        "qtde": 37.0
+      },
+      "QUICHE CEBOLA F25": {
+        "valor": 2513.0,
+        "qtde": 14.0
+      },
+      "PATE SECRETO 150GR": {
+        "valor": 574.0,
+        "qtde": 11.0
+      },
+      "GELEIA FRUT VER 200GR": {
+        "valor": 114.0,
+        "qtde": 4.0
+      },
+      "IF BRIG. DARK": {
+        "valor": 2996.7000000000035,
+        "qtde": 63.0
+      },
+      "IF VELA PRATA NUMERO": {
+        "valor": 705.0,
+        "qtde": 27.0
+      },
+      "BOLIM DE CENROURA C/ COBERTURA GRD (300GR)": {
+        "valor": 1268.5,
+        "qtde": 28.0
+      },
+      "MORANGO - DELICIOSA NAKED F13": {
+        "valor": 30158.0,
+        "qtde": 200.0
+      },
+      "IF BRIG. BEIJINHO": {
+        "valor": 1114.4999999999998,
+        "qtde": 25.0
+      },
+      "IF BRIG. TRADICIONAL": {
+        "valor": 5555.399999999995,
+        "qtde": 106.0
+      },
+      "BRIG. BRANCO DIVERTIDO 25UN": {
+        "valor": 814.0,
+        "qtde": 11.0
+      },
+      "BRIG. BRANCO PRECIOSO 25UN": {
+        "valor": 148.0,
+        "qtde": 2.0
+      },
+      "TORTINHA CHOCOLATE": {
+        "valor": 1403.700000000001,
+        "qtde": 97.0
+      },
+      "FT DELICIA COCO": {
+        "valor": 4079.1000000000045,
+        "qtde": 139.0
+      },
+      "BRIG. BRANCO PRECIOSO 12UN": {
+        "valor": 74.0,
+        "qtde": 2.0
+      },
+      "BRIG. TRADICIONAL 12UN": {
+        "valor": 1369.0,
+        "qtde": 37.0
+      },
+      "RED VELVET F13": {
+        "valor": 4062.0,
+        "qtde": 28.0
+      },
+      "BOLO DE POTE NINHO COM NUTELLA": {
+        "valor": 328.0,
+        "qtde": 8.0
+      },
+      "FT EMPADAO FRANGO": {
+        "valor": 5847.519999999993,
+        "qtde": 261.0
+      },
+      "ALEMA F13": {
+        "valor": 7854.0,
+        "qtde": 70.0
+      },
+      "NOVA SWEET DARK F13": {
+        "valor": 7444.0,
+        "qtde": 54.0
+      },
+      "FT RED VELVET": {
+        "valor": 4385.5,
+        "qtde": 127.0
+      },
+      "FT CHOCOBERRIES": {
+        "valor": 3014.5,
+        "qtde": 90.0
+      },
+      "CHOCONOZES F13": {
+        "valor": 1100.0,
+        "qtde": 7.0
+      },
+      "FT TENTACAO": {
+        "valor": 10070.099999999991,
+        "qtde": 313.0
+      },
+      "BRIG. C/ MORANGO DARK": {
+        "valor": 2980.1100000000033,
+        "qtde": 205.0
+      },
+      "IF BRIG. CHOCOLATE BRANCO": {
+        "valor": 899.9999999999997,
+        "qtde": 20.0
+      },
+      "ALEMA F22": {
+        "valor": 13110.0,
+        "qtde": 58.0
+      },
+      "IF BRIG. PRETO PRECIOSO": {
+        "valor": 1880.400000000001,
+        "qtde": 36.0
+      },
+      "IF BRIG. DOIS AMORES": {
+        "valor": 2227.200000000002,
+        "qtde": 48.0
+      },
+      "EMPADAO FRANGO F13": {
+        "valor": 1722.3000000000002,
+        "qtde": 19.0
+      },
+      "TORTINHA BABA": {
+        "valor": 1144.9999999999995,
+        "qtde": 82.0
+      },
+      "IF BRIG. BRANCO DIVERTIDO": {
+        "valor": 985.7999999999996,
+        "qtde": 22.0
+      },
+      "FT MARAVILHA ABACAXI": {
+        "valor": 3893.000000000005,
+        "qtde": 134.0
+      },
+      "BRIG. C/ MORANGO BRANCO": {
+        "valor": 2400.4000000000015,
+        "qtde": 154.0
+      },
+      "BOLO CENOURA F25": {
+        "valor": 3217.5,
+        "qtde": 39.0
+      },
+      "FT AURORA": {
+        "valor": 2072.000000000001,
+        "qtde": 71.0
+      },
+      "MERENGUE 200ML": {
+        "valor": 1152.0,
+        "qtde": 44.0
+      },
+      "VELA PARABENS PRATA": {
+        "valor": 171.0,
+        "qtde": 5.0
+      },
+      "BRIG. ABRE ALAS 12UN": {
+        "valor": 424.5,
+        "qtde": 5.0
+      },
+      "FT CROCANTE": {
+        "valor": 4849.700000000001,
+        "qtde": 153.0
+      },
+      "BRIG. C/ MORANGO BRULEE": {
+        "valor": 1739.9999999999986,
+        "qtde": 84.0
+      },
+      "BOLIM CHOCOLATE": {
+        "valor": 52.5,
+        "qtde": 3.0
+      },
+      "BRIG. C/ MORANGO TRADICIONAL": {
+        "valor": 6724.709999999997,
+        "qtde": 435.0
+      },
+      "BISC ALHO PORO 100GR": {
+        "valor": 243.0,
+        "qtde": 9.0
+      },
+      "MATE LIMAO": {
+        "valor": 349.0,
+        "qtde": 46.0
+      },
+      "COCA COLA ZERO": {
+        "valor": 1491.399999999999,
+        "qtde": 187.0
+      },
+      "DELICIA CAMADAS F13": {
+        "valor": 1728.3999999999999,
+        "qtde": 17.0
+      },
+      "QUICHE CEBOLA F13": {
+        "valor": 1105.2999999999995,
+        "qtde": 50.0
+      },
+      "BRIG. DOIS AMORES 12UN": {
+        "valor": 666.0,
+        "qtde": 18.0
+      },
+      "EMPADAO FRANGO F25": {
+        "valor": 4416.0,
+        "qtde": 24.0
+      },
+      "NOVA SWEET DARK F25": {
+        "valor": 10094.0,
+        "qtde": 38.0
+      },
+      "FT BANOFFEE": {
+        "valor": 432.3999999999999,
+        "qtde": 16.0
+      },
+      "DELICIA COCO F25": {
+        "valor": 9085.2,
+        "qtde": 40.0
+      },
+      "BRIG. DARK 25UN": {
+        "valor": 1998.0,
+        "qtde": 27.0
+      },
+      "BRIG. TRADICIONAL 25UN": {
+        "valor": 2220.0,
+        "qtde": 30.0
+      },
+      "BANOFFE F20": {
+        "valor": 3969.3000000000006,
+        "qtde": 17.0
+      },
+      "BOLO LARANJA F25": {
+        "valor": 2520.0,
+        "qtde": 31.0
+      },
+      "AURORA F13": {
+        "valor": 951.4000000000001,
+        "qtde": 9.0
+      },
+      "CHOCOBERRIES F25": {
+        "valor": 10445.85,
+        "qtde": 33.0
+      },
+      "VELA FAISCA BRINDE UN": {
+        "valor": 0.01,
+        "qtde": 1.0
+      },
+      "SALADA VERAO": {
+        "valor": 2626.5000000000036,
+        "qtde": 85.0
+      },
+      "BRIG. DARK 01UN": {
+        "valor": 171.0,
+        "qtde": 38.0
+      },
+      "GUARANA ZERO": {
+        "valor": 292.5,
+        "qtde": 39.0
+      },
+      "CAPUCCINO PEQ": {
+        "valor": 910.7999999999987,
+        "qtde": 92.0
+      },
+      "MEDIA": {
+        "valor": 1188.0,
+        "qtde": 88.0
+      },
+      "TORTA BANANA F22": {
+        "valor": 1600.0,
+        "qtde": 7.0
+      },
+      "COCA COLA": {
+        "valor": 794.4499999999998,
+        "qtde": 100.0
+      },
+      "MORANGO - DELICIOSA NAKED F30": {
+        "valor": 1280.0,
+        "qtde": 2.0
+      },
+      "MISTO PAO FRANCES": {
+        "valor": 432.0,
+        "qtde": 32.0
+      },
+      "QUEBRA NOZES F25": {
+        "valor": 780.0,
+        "qtde": 3.0
+      },
+      "FT ALEMA": {
+        "valor": 6920.599999999997,
+        "qtde": 237.0
+      },
+      "CAFE EXPRESSO": {
+        "valor": 4224.51,
+        "qtde": 497.0
+      },
+      "FT TORTA BANANA": {
+        "valor": 1842.0,
+        "qtde": 65.0
+      },
+      "BRIG. TRADICIONAL 01UN": {
+        "valor": 382.5,
+        "qtde": 85.0
+      },
+      "FT CHEESECAKE MORANGO": {
+        "valor": 623.1999999999999,
+        "qtde": 21.0
+      },
+      "FT CHEESECAKE FRTS VERM.": {
+        "valor": 2110.6000000000004,
+        "qtde": 69.0
+      },
+      "FT BOLO LARANJA": {
+        "valor": 1247.4700000000003,
+        "qtde": 126.0
+      },
+      "FT TORTA MOUSSE": {
+        "valor": 5084.0,
+        "qtde": 144.0
+      },
+      "AGUA GASOSA": {
+        "valor": 1686.44,
+        "qtde": 259.0
+      },
+      "CROCANTE F25": {
+        "valor": 7569.3,
+        "qtde": 33.0
+      },
+      "TENTACAO F25": {
+        "valor": 19104.449999999993,
+        "qtde": 80.0
+      },
+      "VELA DOURADA NUMERO - 9": {
+        "valor": 30.0,
+        "qtde": 3.0
+      },
+      "BRIG. BRULLE 12UN": {
+        "valor": 457.0,
+        "qtde": 13.0
+      },
+      "BRIG. DOIS AMORES 25UN": {
+        "valor": 1110.0,
+        "qtde": 15.0
+      },
+      "BRIG. CHURROS 12UN": {
+        "valor": 333.0,
+        "qtde": 9.0
+      },
+      "VELA ESPIRAL FINA ROSE 4UN": {
+        "valor": 432.0,
+        "qtde": 21.0
+      },
+      "VULCAO RED VELVET": {
+        "valor": 28.0,
+        "qtde": 1.0
+      },
+      "BRIG. CHURROS 02UN": {
+        "valor": 8.0,
+        "qtde": 1.0
+      },
+      "PAO ITALIANO": {
+        "valor": 1035.0,
+        "qtde": 138.0
+      },
+      "BRIG. TRADICIONAL 04UN": {
+        "valor": 1005.0,
+        "qtde": 67.0
+      },
+      "BISC PALMIER 100GR": {
+        "valor": 828.01,
+        "qtde": 54.0
+      },
+      "MATE ZERO C LIMAO": {
+        "valor": 165.0,
+        "qtde": 22.0
+      },
+      "CACHORRINHO": {
+        "valor": 720.0,
+        "qtde": 96.0
+      },
+      "PAO DE QUEIJO": {
+        "valor": 3957.600000000012,
+        "qtde": 582.0
+      },
+      "FT BOLO CENOURA": {
+        "valor": 1277.1000000000004,
+        "qtde": 129.0
+      },
+      "CAFE EXPRESSO C/ BRIG. PEQ": {
+        "valor": 566.7999999999996,
+        "qtde": 52.0
+      },
+      "CAFE CARIOCA": {
+        "valor": 603.5,
+        "qtde": 71.0
+      },
+      "PAO NA CHAPA CROISSANT": {
+        "valor": 279.0,
+        "qtde": 18.0
+      },
+      "CAPUCCINO GRD": {
+        "valor": 1903.5,
+        "qtde": 141.0
+      },
+      "SUCO MORANGO": {
+        "valor": 139.5,
+        "qtde": 9.0
+      },
+      "TORTINHA GOURMET BABA FESTA CX": {
+        "valor": 807.6500000000001,
+        "qtde": 16.0
+      },
+      "TORTINHA GOURMET CHOCO FESTA CX": {
+        "valor": 1481.5500000000002,
+        "qtde": 30.0
+      },
+      "FT BOLO MILHO": {
+        "valor": 722.6999999999991,
+        "qtde": 73.0
+      },
+      "BISC GORGONZOLA 100GR": {
+        "valor": 108.0,
+        "qtde": 9.0
+      },
+      "BISC QUEIJO PARMESAO 100GR": {
+        "valor": 459.0,
+        "qtde": 32.0
+      },
+      "BRIG. NINHO NUTELLA 25UN": {
+        "valor": 518.0,
+        "qtde": 7.0
+      },
+      "BRIG. BEIJINHO 25UN": {
+        "valor": 592.0,
+        "qtde": 8.0
+      },
+      "BRIG. CHURROS 01UN": {
+        "valor": 31.5,
+        "qtde": 7.0
+      },
+      "AGUA NATURAL": {
+        "valor": 1430.49,
+        "qtde": 220.0
+      },
+      "CAFE COADO": {
+        "valor": 2152.5,
+        "qtde": 205.0
+      },
+      "FT CHEESECAKE GOIABA": {
+        "valor": 1049.7999999999997,
+        "qtde": 37.0
+      },
+      "FT FANTASIA": {
+        "valor": 3912.0000000000027,
+        "qtde": 128.0
+      },
+      "QUICHE ALHO PORO F13": {
+        "valor": 2660.800000000003,
+        "qtde": 122.0
+      },
+      "EMBALAGEM FATIA": {
+        "valor": 108.0,
+        "qtde": 54.0
+      },
+      "IF VELA DOURADA NUMERO": {
+        "valor": 609.0,
+        "qtde": 23.0
+      },
+      "MINI QUICHE ALHO PORO": {
+        "valor": 238.0,
+        "qtde": 17.0
+      },
+      "MATE DA CASA": {
+        "valor": 516.01,
+        "qtde": 43.0
+      },
+      "CHOC QUENTE PEQ": {
+        "valor": 108.90000000000002,
+        "qtde": 11.0
+      },
+      "VULCAO DIVERTIDO": {
+        "valor": 728.0999999999998,
+        "qtde": 33.0
+      },
+      "MARAVILHA ABACAXI F13": {
+        "valor": 2227.5,
+        "qtde": 21.0
+      },
+      "CHOCOBERRIES F13": {
+        "valor": 5761.0,
+        "qtde": 40.0
+      },
+      "DELICIA CAMADAS F25": {
+        "valor": 2859.0,
+        "qtde": 13.0
+      },
+      "MISTO TORRADA PETROPOLIS": {
+        "valor": 703.0,
+        "qtde": 38.0
+      },
+      "OVOS MEXIDOS": {
+        "valor": 552.0,
+        "qtde": 46.0
+      },
+      "MARAVILHA ABACAXI F25": {
+        "valor": 6049.0,
+        "qtde": 27.0
+      },
+      "FANTASIA F25": {
+        "valor": 6358.200000000001,
+        "qtde": 28.0
+      },
+      "BRIG. COCO QUEIMADO 25UN": {
+        "valor": 222.0,
+        "qtde": 3.0
+      },
+      "FANTASIA F13": {
+        "valor": 4718.0,
+        "qtde": 43.0
+      },
+      "BISC COOKIE SUICO 100GR": {
+        "valor": 999.0,
+        "qtde": 72.0
+      },
+      "AURORA ENFEITADA F25": {
+        "valor": 948.0,
+        "qtde": 4.0
+      },
+      "MACCHIATO PEQ": {
+        "valor": 408.0,
+        "qtde": 48.0
+      },
+      "OMELETE": {
+        "valor": 616.0,
+        "qtde": 28.0
+      },
+      "AD GELEIA FRUTAS VERMELHA": {
+        "valor": 16.0,
+        "qtde": 4.0
+      },
+      "PUDIM POTE UN": {
+        "valor": 749.0,
+        "qtde": 40.0
+      },
+      "QUEIJO Q TORRADA PETROPOLIS": {
+        "valor": 296.0,
+        "qtde": 16.0
+      },
+      "CAFE PRENSA FRANC. DUPLO": {
+        "valor": 170.5,
+        "qtde": 11.0
+      },
+      "VULCAO CENOURA": {
+        "valor": 1560.8000000000006,
+        "qtde": 65.0
+      },
+      "SALADA MONTADA": {
+        "valor": 954.0,
+        "qtde": 36.0
+      },
+      "BISC GOIABINHA 100GR": {
+        "valor": 420.0,
+        "qtde": 25.0
+      },
+      "TORTA LIMAO F25": {
+        "valor": 6009.800000000001,
+        "qtde": 25.0
+      },
+      "SUCO LARANJA": {
+        "valor": 828.0,
+        "qtde": 69.0
+      },
+      "VELA FAISCA": {
+        "valor": 585.0,
+        "qtde": 39.0
+      },
+      "BRIG. DARK 12UN": {
+        "valor": 851.0,
+        "qtde": 23.0
+      },
+      "CAFE DUPLO": {
+        "valor": 844.9999999999994,
+        "qtde": 50.0
+      },
+      "VELA PRATA NUMERO - X": {
+        "valor": 20.0,
+        "qtde": 2.0
+      },
+      "MATE NATURAL": {
+        "valor": 334.0,
+        "qtde": 44.0
+      },
+      "FT TORTA LIMAO": {
+        "valor": 5289.9,
+        "qtde": 187.0
+      },
+      "BRIG. DARK 04UN": {
+        "valor": 120.0,
+        "qtde": 8.0
+      },
+      "MISTO Q CROISSANT": {
+        "valor": 684.5,
+        "qtde": 37.0
+      },
+      "MILKSHAKE CHOCOLATE 300ML": {
+        "valor": 220.0,
+        "qtde": 10.0
+      },
+      "CHOCOLATE GELADO": {
+        "valor": 170.5,
+        "qtde": 11.0
+      },
+      "CAFE VIENENSE GDR": {
+        "valor": 92.5,
+        "qtde": 5.0
+      },
+      "MOKA GRD": {
+        "valor": 222.0,
+        "qtde": 12.0
+      },
+      "BRIG. NINHO NUTELLA 01UN": {
+        "valor": 31.5,
+        "qtde": 7.0
+      },
+      "QUEIJO Q MULTIGRAOS": {
+        "valor": 232.5,
+        "qtde": 15.0
+      },
+      "AD LEITE": {
+        "valor": 18.0,
+        "qtde": 3.0
+      },
+      "SUCO ABACAXI": {
+        "valor": 139.5,
+        "qtde": 9.0
+      },
+      "FT DELICIA CAMADAS": {
+        "valor": 1501.7000000000007,
+        "qtde": 53.0
+      },
+      "VELA CORACAO 4UN": {
+        "valor": 572.0,
+        "qtde": 20.0
+      },
+      "CAFE AFFOGATO": {
+        "valor": 70.0,
+        "qtde": 4.0
+      },
+      "PAO FRANCES CHAPA": {
+        "valor": 355.99999999999994,
+        "qtde": 40.0
+      },
+      "CHA QUENTE": {
+        "valor": 337.5,
+        "qtde": 25.0
+      },
+      "IF BRIG. BRULLE": {
+        "valor": 1627.5000000000007,
+        "qtde": 35.0
+      },
+      "CAFE PINGADO": {
+        "valor": 187.0,
+        "qtde": 22.0
+      },
+      "QUICHE PRESUNTO F25": {
+        "valor": 1606.0,
+        "qtde": 9.0
+      },
+      "SUCO LARANJA C/ ABACAXI": {
+        "valor": 496.0,
+        "qtde": 32.0
+      },
+      "CAFE C/ CREME": {
+        "valor": 237.60000000000008,
+        "qtde": 24.0
+      },
+      "BRIG. COCO QUEIMADO 12UN": {
+        "valor": 185.0,
+        "qtde": 5.0
+      },
+      "BRIG. BRANCO DIVERTIDO 12UN": {
+        "valor": 370.0,
+        "qtde": 10.0
+      },
+      "TORTINHA GOURMET MISTA FESTA CX": {
+        "valor": 995.6500000000001,
+        "qtde": 20.0
+      },
+      "GELATO ARTESANAL TAPIOCA BOLA": {
+        "valor": 135.0,
+        "qtde": 9.0
+      },
+      "GELATO ARTESANAL BAULINHA AFRICANA BOLA": {
+        "valor": 195.0,
+        "qtde": 13.0
+      },
+      "VULCAO DE NUTELLA": {
+        "valor": 1178.7999999999997,
+        "qtde": 48.0
+      },
+      "SHOT LIMAO": {
+        "valor": 24.0,
+        "qtde": 12.0
+      },
+      "BRIG. BEIJINHO 04UN": {
+        "valor": 45.0,
+        "qtde": 3.0
+      },
+      "BOLIM DE LARANJA GRD (300GR)": {
+        "valor": 1096.0,
+        "qtde": 41.0
+      },
+      "VELA PARABENS NEON": {
+        "valor": 231.0,
+        "qtde": 7.0
+      },
+      "QUICHE ALHO PORO F25": {
+        "valor": 2928.0,
+        "qtde": 17.0
+      },
+      "LIMONADA SUICA": {
+        "valor": 217.0,
+        "qtde": 14.0
+      },
+      "FT CHOCONOZES": {
+        "valor": 1569.5,
+        "qtde": 47.0
+      },
+      "CROCANTE F13": {
+        "valor": 2166.0,
+        "qtde": 18.0
+      },
+      "BRIG. NOZES 01UN": {
+        "valor": 60.0,
+        "qtde": 10.0
+      },
+      "MILKSHAKE MORANGO 300ML": {
+        "valor": 110.0,
+        "qtde": 5.0
+      },
+      "BOLIM DE CENROURA GRD (300GR)": {
+        "valor": 815.0,
+        "qtde": 31.0
+      },
+      "BRIG. CARAMELO 25UN": {
+        "valor": 148.0,
+        "qtde": 2.0
+      },
+      "BRIG. PRETO PRECIOSO 12UN": {
+        "valor": 444.0,
+        "qtde": 12.0
+      },
+      "VELA DOURADA NUMERO - 5": {
+        "valor": 30.0,
+        "qtde": 3.0
+      },
+      "VELA DOURADA NUMERO - 3": {
+        "valor": 30.0,
+        "qtde": 3.0
+      },
+      "VELA PRATA NUMERO - 0": {
+        "valor": 70.0,
+        "qtde": 7.0
+      },
+      "VELA PRATA NUMERO - 3": {
+        "valor": 50.0,
+        "qtde": 5.0
+      },
+      "SODA ITALIANA MACA VERDE": {
+        "valor": 64.5,
+        "qtde": 5.0
+      },
+      "BRIG. CHURROS 25UN": {
+        "valor": 444.0,
+        "qtde": 6.0
+      },
+      "BRIG. BRULLE 25UN": {
+        "valor": 666.0,
+        "qtde": 9.0
+      },
+      "MISTO Q MULTIGRAOS": {
+        "valor": 263.5,
+        "qtde": 17.0
+      },
+      "FT ROCAMBOLE LARANJA": {
+        "valor": 1584.8000000000002,
+        "qtde": 54.0
+      },
+      "MINI QUICHE PRESUNTO": {
+        "valor": 14.0,
+        "qtde": 1.0
+      },
+      "CHOC QUENTE GRD": {
+        "valor": 201.5,
+        "qtde": 13.0
+      },
+      "QUEBRA NOZES F13": {
+        "valor": 995.5,
+        "qtde": 8.0
+      },
+      "CHOCOBERRIES F20": {
+        "valor": 8817.05,
+        "qtde": 38.0
+      },
+      "BRIG. BRULLE 04UN": {
+        "valor": 15.0,
+        "qtde": 1.0
+      },
+      "BRIG. BRANCO DIVERTIDO 04UN": {
+        "valor": 15.0,
+        "qtde": 1.0
+      },
+      "BANOFFE F13": {
+        "valor": 2497.8999999999996,
+        "qtde": 20.0
+      },
+      "CHEESECAKE F. VERM F25": {
+        "valor": 3764.5,
+        "qtde": 16.0
+      },
+      "QUEIJO Q CROISSANT": {
+        "valor": 462.5,
+        "qtde": 25.0
+      },
+      "CAFE EXPR DESCAF PEQ": {
+        "valor": 114.0,
+        "qtde": 12.0
+      },
+      "BOLO MILHO COM COCO F25": {
+        "valor": 375.0,
+        "qtde": 5.0
+      },
+      "BRIG. DOIS AMORES 01UN": {
+        "valor": 94.5,
+        "qtde": 21.0
+      },
+      "BRIG. BRULLE 01UN": {
+        "valor": 31.5,
+        "qtde": 7.0
+      },
+      "PET HAPPY": {
+        "valor": 296.0,
+        "qtde": 31.0
+      },
+      "TORTA MOUSSE F13": {
+        "valor": 4065.0,
+        "qtde": 33.0
+      },
+      "CALDA CHOC 200GR": {
+        "valor": 492.0,
+        "qtde": 14.0
+      },
+      "PETROPOLIS CHAPA": {
+        "valor": 202.5,
+        "qtde": 15.0
+      },
+      "TORTA LIMAO F13": {
+        "valor": 1409.25,
+        "qtde": 13.0
+      },
+      "CALDA LARANJA 200GR": {
+        "valor": 124.0,
+        "qtde": 5.0
+      },
+      "VELA DOURADA NUMERO - 1": {
+        "valor": 50.0,
+        "qtde": 5.0
+      },
+      "VELA DOURADA NUMERO - 7": {
+        "valor": 40.0,
+        "qtde": 4.0
+      },
+      "AGUA TONICA": {
+        "valor": 16.27,
+        "qtde": 2.0
+      },
+      "VELA ESTRELA DOURADA 4UN": {
+        "valor": 471.0,
+        "qtde": 15.0
+      },
+      "CHEESECAKE GOIABA F13": {
+        "valor": 1049.1000000000001,
+        "qtde": 9.0
+      },
+      "CHEESECAKE F. VERM F13": {
+        "valor": 1654.4999999999998,
+        "qtde": 14.0
+      },
+      "COMBO 03 CAFE DA MANHA": {
+        "valor": 390.0,
+        "qtde": 5.0
+      },
+      "VELA DOURADA NUMERO - X": {
+        "valor": 90.0,
+        "qtde": 9.0
+      },
+      "CHEESECAKE MORANGO F13": {
+        "valor": 631.7,
+        "qtde": 6.0
+      },
+      "MACCHIADO DUPLO": {
+        "valor": 236.60000000000005,
+        "qtde": 14.0
+      },
+      "GUARANA": {
+        "valor": 115.03999999999999,
+        "qtde": 15.0
+      },
+      "TORTA MOUSSE F25": {
+        "valor": 3135.1,
+        "qtde": 10.0
+      },
+      "VELA DOURADA NUMERO - 2": {
+        "valor": 40.0,
+        "qtde": 4.0
+      },
+      "BRIG. MIX 25UN": {
+        "valor": 912.0,
+        "qtde": 12.0
+      },
+      "BRIG. MIX 12UN": {
+        "valor": 456.0,
+        "qtde": 12.0
+      },
+      "EMILIA F25": {
+        "valor": 7027.000000000002,
+        "qtde": 28.0
+      },
+      "BRIG. BRANCO DIVERTIDO 01UN": {
+        "valor": 36.0,
+        "qtde": 8.0
+      },
+      "BRIG. PRETO PRECIOSO 25UN": {
+        "valor": 444.0,
+        "qtde": 6.0
+      },
+      "PAO CHAPA MULTIGRAOS": {
+        "valor": 54.5,
+        "qtde": 5.0
+      },
+      "ENCHARCADA COPO 180gr": {
+        "valor": 612.0,
+        "qtde": 15.0
+      },
+      "BRIG. CARAMELO 04UN": {
+        "valor": 15.0,
+        "qtde": 1.0
+      },
+      "TORTINHA GOURMET BABA FESTA UN": {
+        "valor": 112.0,
+        "qtde": 14.0
+      },
+      "BRIG. DOIS AMORES 04UN": {
+        "valor": 105.0,
+        "qtde": 7.0
+      },
+      "BOLIM DE CHOCOLATE GRD (300GR)": {
+        "valor": 743.5,
+        "qtde": 29.0
+      },
+      "QUEIJO Q PAO FRANCES": {
+        "valor": 229.5,
+        "qtde": 17.0
+      },
+      "TAÇA VINHO BRANCO": {
+        "valor": 210.0,
+        "qtde": 6.0
+      },
+      "CHOCOLATE CREMOSO": {
+        "valor": 87.5,
+        "qtde": 5.0
+      },
+      "ROCAMBOLE LARANJA F25": {
+        "valor": 848.9,
+        "qtde": 4.0
+      },
+      "COMBO 02 CAFE DA MANHA": {
+        "valor": 490.0,
+        "qtde": 7.0
+      },
+      "AD MANTEIGA": {
+        "valor": 6.75,
+        "qtde": 3.0
+      },
+      "MINI QUICHE CEBOLA": {
+        "valor": 98.0,
+        "qtde": 7.0
+      },
+      "VELA DOURADA NUMERO - 8": {
+        "valor": 50.0,
+        "qtde": 5.0
+      },
+      "RED VELVET F20": {
+        "valor": 5441.750000000001,
+        "qtde": 23.0
+      },
+      "TORTA BANANA F13": {
+        "valor": 679.0,
+        "qtde": 7.0
+      },
+      "CHA GELADO": {
+        "valor": 27.0,
+        "qtde": 2.0
+      },
+      "SUCO LARANJA C/ MORANGO": {
+        "valor": 139.5,
+        "qtde": 9.0
+      },
+      "BRIG. DARK 02UN": {
+        "valor": 8.0,
+        "qtde": 1.0
+      },
+      "STRUDEL DIET": {
+        "valor": 144.0,
+        "qtde": 9.0
+      },
+      "VELA PRATA NUMERO - 2": {
+        "valor": 10.0,
+        "qtde": 1.0
+      },
+      "VELA PRATA NUMERO - 9": {
+        "valor": 10.0,
+        "qtde": 1.0
+      },
+      "VELA DOURADA NUMERO - 4": {
+        "valor": 30.0,
+        "qtde": 3.0
+      },
+      "BRIG. NINHO NUTELLA 12UN": {
+        "valor": 629.0,
+        "qtde": 17.0
+      },
+      "GELEIA GOIABA 200GR": {
+        "valor": 56.0,
+        "qtde": 2.0
+      },
+      "BRIG. CHOCOLATE BRANCO 25UN": {
+        "valor": 222.0,
+        "qtde": 3.0
+      },
+      "BOLIM CHOCOLATE C/ COBERTURA GRD (300GR)": {
+        "valor": 1159.0,
+        "qtde": 26.0
+      },
+      "BRIG. CARAMELO 12UN": {
+        "valor": 111.0,
+        "qtde": 3.0
+      },
+      "BRIG. BEIJINHO 12UN": {
+        "valor": 185.0,
+        "qtde": 5.0
+      },
+      "CHEESECAKE MORANGO F25": {
+        "valor": 424.0,
+        "qtde": 2.0
+      },
+      "CAFE EXPRESSO C BRIG. GRD": {
+        "valor": 105.0,
+        "qtde": 6.0
+      },
+      "BRIG. BRULLE 02UN": {
+        "valor": 8.0,
+        "qtde": 1.0
+      },
+      "AURORA F25": {
+        "valor": 1987.65,
+        "qtde": 9.0
+      },
+      "WAFFEL SIMPLES": {
+        "valor": 120.0,
+        "qtde": 6.0
+      },
+      "GELEIA MORANGO 200GR": {
+        "valor": 108.0,
+        "qtde": 4.0
+      },
+      "CHEESECAKE GOIABA F25": {
+        "valor": 424.0,
+        "qtde": 2.0
+      },
+      "FT EMILIA": {
+        "valor": 1104.0,
+        "qtde": 36.0
+      },
+      "SODA ITALIANA TANGERINA": {
+        "valor": 25.8,
+        "qtde": 2.0
+      },
+      "CAFE DA VOVO": {
+        "valor": 18.5,
+        "qtde": 1.0
+      },
+      "FIOS DE OVOS 250GRS": {
+        "valor": 450.0,
+        "qtde": 8.0
+      },
+      "RED VELVET F25": {
+        "valor": 4696.65,
+        "qtde": 15.0
+      },
+      "IF BRIG. PINGO DE EMILIA": {
+        "valor": 1193.1,
+        "qtde": 19.0
+      },
+      "CAPUCCINO DESCAF. GRD": {
+        "valor": 28.4,
+        "qtde": 2.0
+      },
+      "BRIG. CHOCOLATE BRANCO 01UN": {
+        "valor": 13.5,
+        "qtde": 3.0
+      },
+      "EMILIA F13": {
+        "valor": 2295.0,
+        "qtde": 18.0
+      },
+      "VELA DOURADA NUMERO - 6": {
+        "valor": 30.0,
+        "qtde": 3.0
+      },
+      "FT COLORIDA": {
+        "valor": 4409.25,
+        "qtde": 123.0
+      },
+      "TORTA COLORIDA F25": {
+        "valor": 1950.0,
+        "qtde": 6.0
+      },
+      "BRIG. PINGO DE EMILIA 25UN": {
+        "valor": 444.0,
+        "qtde": 6.0
+      },
+      "BOLO DE POTE BROWNIE NINHO E MORANGO": {
+        "valor": 164.0,
+        "qtde": 4.0
+      },
+      "BRIG. CHOCOLATE BRANCO 12UN": {
+        "valor": 259.0,
+        "qtde": 7.0
+      },
+      "BRIG. DOIS AMORES 02UN": {
+        "valor": 24.0,
+        "qtde": 3.0
+      },
+      "MORANGO AO LEITE": {
+        "valor": 70.0,
+        "qtde": 4.0
+      },
+      "BRIG. PINGO DE EMILIA 01UN": {
+        "valor": 27.0,
+        "qtde": 6.0
+      },
+      "BRIG. NOZES 04UN": {
+        "valor": 20.0,
+        "qtde": 1.0
+      },
+      "FT QUEBRA NOZES": {
+        "valor": 674.75,
+        "qtde": 20.0
+      },
+      "BOLO DE POTE PISTACHE COM MORANGO": {
+        "valor": 94.0,
+        "qtde": 2.0
+      },
+      "COMBO 01 CAFE DA MANHA": {
+        "valor": 96.0,
+        "qtde": 3.0
+      },
+      "MEDIA DESCAFEINADO": {
+        "valor": 28.4,
+        "qtde": 2.0
+      },
+      "CAPUCCINO DESCAF. PEQ": {
+        "valor": 21.8,
+        "qtde": 2.0
+      },
+      "TOPPER CAKE": {
+        "valor": 15.0,
+        "qtde": 1.0
+      },
+      "AD CENOURA RALADA": {
+        "valor": 2.0,
+        "qtde": 1.0
+      },
+      "BRIG. TRADICIONAL 02UN": {
+        "valor": 48.0,
+        "qtde": 6.0
+      },
+      "CALDA LARANJA 150GR": {
+        "valor": 12.0,
+        "qtde": 1.0
+      },
+      "AD GELEIA MORANGO": {
+        "valor": 6.0,
+        "qtde": 2.0
+      },
+      "BRIG. NOZES 02UN": {
+        "valor": 11.0,
+        "qtde": 1.0
+      },
+      "AD AMENDOAS": {
+        "valor": 5.0,
+        "qtde": 2.0
+      },
+      "AD QUEIJO PARMESAO": {
+        "valor": 2.5,
+        "qtde": 1.0
+      },
+      "BRIG. PINGO DE EMILIA 12UN": {
+        "valor": 74.0,
+        "qtde": 2.0
+      },
+      "BRIG. BEIJINHO 01UN": {
+        "valor": 13.5,
+        "qtde": 3.0
+      },
+      "BOLO CENOURA F30": {
+        "valor": 124.0,
+        "qtde": 1.0
+      },
+      "VELA PRATA NUMERO - 1": {
+        "valor": 30.0,
+        "qtde": 3.0
+      },
+      "BRIG. PINGO DE EMILIA 02UN": {
+        "valor": 8.0,
+        "qtde": 1.0
+      },
+      "BRIG. TESOUROS DE PÁSCOA 12UN": {
+        "valor": 6497.5,
+        "qtde": 93.11
+      },
+      "TORTA CAÇA AO CHOCOLATE F13": {
+        "valor": 2325.0,
+        "qtde": 15.0
+      },
+      "VELA PRATA NUMERO - 5": {
+        "valor": 10.0,
+        "qtde": 1.0
+      },
+      "BRIG. NOZES 12UN": {
+        "valor": 165.0,
+        "qtde": 3.0
+      },
+      "CALDA CHOC 100GR": {
+        "valor": 9.5,
+        "qtde": 1.0
+      },
+      "BRIG. PINGO DE EMILIA 04UN": {
+        "valor": 30.0,
+        "qtde": 2.0
+      },
+      "CHANTILLY A PARTE": {
+        "valor": 6.0,
+        "qtde": 2.0
+      },
+      "CHOCONOZES F25": {
+        "valor": 390.0,
+        "qtde": 1.0
+      },
+      "OVO TENTAÇÃO DE CHOCOLATE": {
+        "valor": 844.0,
+        "qtde": 5.0
+      },
+      "BRIG. NOZES 25UN": {
+        "valor": 90.0,
+        "qtde": 1.0
+      },
+      "BRIG. COCO QUEIMADO 01UN": {
+        "valor": 4.5,
+        "qtde": 1.0
+      },
+      "BOLO INGLES NOITE DE PÁSCOA": {
+        "valor": 1330.0,
+        "qtde": 30.0
+      },
+      "FRUTA DA ESTACAO": {
+        "valor": 7.0,
+        "qtde": 1.0
+      },
+      "BOLO INGLES AURORA DE PÁSCOA": {
+        "valor": 460.0,
+        "qtde": 10.0
+      },
+      "VELA PRATA NUMERO - 6": {
+        "valor": 20.0,
+        "qtde": 2.0
+      },
+      "TORTA CAÇA AO CHOCOLATE F25": {
+        "valor": 3640.0,
+        "qtde": 13.0
+      },
+      "TOPO DE BOLO PARA FESTA PRATA PARABÉNS": {
+        "valor": 15.0,
+        "qtde": 1.0
+      },
+      "AD CALDA CHOC": {
+        "valor": 3.5,
+        "qtde": 1.0
+      },
+      "BOLO TOCA DO COELHO": {
+        "valor": 1371.0,
+        "qtde": 19.0
+      },
+      "ENCHARCADA F13": {
+        "valor": 526.0,
+        "qtde": 4.0
+      },
+      "OVO CROCANTE DE CHOCOLATE": {
+        "valor": 150.0,
+        "qtde": 1.0
+      },
+      "VELA DOURADA NUMERO - 0": {
+        "valor": 10.0,
+        "qtde": 1.0
+      },
+      "OVO NINHO E NUTELLA": {
+        "valor": 750.0,
+        "qtde": 5.0
+      },
+      "TORTA DE PASCOA F25": {
+        "valor": 740.0,
+        "qtde": 2.0
+      },
+      "EXPRESSO C/ CREME DESCAF.": {
+        "valor": 10.9,
+        "qtde": 1.0
+      },
+      "IF BRIG. NINHO NUTELLA": {
+        "valor": 42.9,
+        "qtde": 1.0
+      },
+      "OVO SURPRESA DE MORANGO": {
+        "valor": 150.0,
+        "qtde": 1.0
+      },
+      "VELA PRATA NUMERO - 4": {
+        "valor": 10.0,
+        "qtde": 1.0
+      },
+      "BRIG. CHURROS 04UN": {
+        "valor": 15.0,
+        "qtde": 1.0
+      }
+    },
+    "products_by_div": {
+      "DELIVERY": {
+        "MORANGO - DELICIOSA NAKED F25": {
+          "valor": 60154.0,
+          "qtde": 179.0
+        },
+        "FT SWEET DARK": {
+          "valor": 12431.0,
+          "qtde": 342.0
+        },
+        "DELICIA COCO F13": {
+          "valor": 3003.0,
+          "qtde": 26.0
+        },
+        "VELA VULCAO DOURADA": {
+          "valor": 236.0,
+          "qtde": 10.0
+        },
+        "MORANGO - DELICIOSA NAKED F20": {
+          "valor": 41028.0,
+          "qtde": 168.0
+        },
+        "TENTACAO F13": {
+          "valor": 10078.0,
+          "qtde": 85.0
+        },
+        "IF BRIG. BRANCO PRECIOSO": {
+          "valor": 1070.6999999999998,
+          "qtde": 23.0
+        },
+        "QUINDIM UN": {
+          "valor": 875.0,
+          "qtde": 64.0
+        },
+        "MORANGO - FT DELICIOSA": {
+          "valor": 21270.75,
+          "qtde": 552.0
+        },
+        "QUICHE PRESUNTO F13": {
+          "valor": 544.6999999999999,
+          "qtde": 20.0
+        },
+        "QUICHE CEBOLA F25": {
+          "valor": 2343.0,
+          "qtde": 13.0
+        },
+        "PATE SECRETO 150GR": {
+          "valor": 528.0,
+          "qtde": 10.0
+        },
+        "GELEIA FRUT VER 200GR": {
+          "valor": 114.0,
+          "qtde": 4.0
+        },
+        "IF BRIG. DARK": {
+          "valor": 2996.7000000000035,
+          "qtde": 63.0
+        },
+        "IF VELA PRATA NUMERO": {
+          "valor": 705.0,
+          "qtde": 27.0
+        },
+        "BOLIM DE CENROURA C/ COBERTURA GRD (300GR)": {
+          "valor": 968.5,
+          "qtde": 20.0
+        },
+        "MORANGO - DELICIOSA NAKED F13": {
+          "valor": 28033.0,
+          "qtde": 183.0
+        },
+        "IF BRIG. BEIJINHO": {
+          "valor": 1114.4999999999998,
+          "qtde": 25.0
+        },
+        "IF BRIG. TRADICIONAL": {
+          "valor": 5555.399999999995,
+          "qtde": 106.0
+        },
+        "BRIG. BRANCO DIVERTIDO 25UN": {
+          "valor": 666.0,
+          "qtde": 9.0
+        },
+        "BRIG. BRANCO PRECIOSO 25UN": {
+          "valor": 148.0,
+          "qtde": 2.0
+        },
+        "TORTINHA CHOCOLATE": {
+          "valor": 1029.6,
+          "qtde": 68.0
+        },
+        "FT DELICIA COCO": {
+          "valor": 2585.1000000000004,
+          "qtde": 79.0
+        },
+        "BRIG. BRANCO PRECIOSO 12UN": {
+          "valor": 74.0,
+          "qtde": 2.0
+        },
+        "BRIG. TRADICIONAL 12UN": {
+          "valor": 888.0,
+          "qtde": 24.0
+        },
+        "RED VELVET F13": {
+          "valor": 3822.0,
+          "qtde": 26.0
+        },
+        "BOLO DE POTE NINHO COM NUTELLA": {
+          "valor": 328.0,
+          "qtde": 8.0
+        },
+        "FT EMPADAO FRANGO": {
+          "valor": 2325.2,
+          "qtde": 84.0
+        },
+        "ALEMA F13": {
+          "valor": 7078.0,
+          "qtde": 62.0
+        },
+        "NOVA SWEET DARK F13": {
+          "valor": 6834.0,
+          "qtde": 49.0
+        },
+        "FT RED VELVET": {
+          "valor": 2866.5,
+          "qtde": 78.0
+        },
+        "FT CHOCOBERRIES": {
+          "valor": 1557.5,
+          "qtde": 43.0
+        },
+        "CHOCONOZES F13": {
+          "valor": 1100.0,
+          "qtde": 7.0
+        },
+        "FT TENTACAO": {
+          "valor": 8949.6,
+          "qtde": 268.0
+        },
+        "BRIG. C/ MORANGO DARK": {
+          "valor": 1844.8999999999999,
+          "qtde": 117.0
+        },
+        "IF BRIG. CHOCOLATE BRANCO": {
+          "valor": 899.9999999999997,
+          "qtde": 20.0
+        },
+        "ALEMA F22": {
+          "valor": 10950.0,
+          "qtde": 48.0
+        },
+        "IF BRIG. PRETO PRECIOSO": {
+          "valor": 1880.400000000001,
+          "qtde": 36.0
+        },
+        "IF BRIG. DOIS AMORES": {
+          "valor": 2227.200000000002,
+          "qtde": 48.0
+        },
+        "EMPADAO FRANGO F13": {
+          "valor": 1642.3000000000002,
+          "qtde": 18.0
+        },
+        "TORTINHA BABA": {
+          "valor": 835.3999999999999,
+          "qtde": 58.0
+        },
+        "IF BRIG. BRANCO DIVERTIDO": {
+          "valor": 985.7999999999996,
+          "qtde": 22.0
+        },
+        "FT MARAVILHA ABACAXI": {
+          "valor": 2274.5000000000005,
+          "qtde": 69.0
+        },
+        "BRIG. C/ MORANGO BRANCO": {
+          "valor": 1910.2,
+          "qtde": 116.0
+        },
+        "BOLO CENOURA F25": {
+          "valor": 2692.5,
+          "qtde": 32.0
+        },
+        "FT AURORA": {
+          "valor": 1454.5000000000002,
+          "qtde": 46.0
+        },
+        "MERENGUE 200ML": {
+          "valor": 1112.0,
+          "qtde": 42.0
+        },
+        "VELA PARABENS PRATA": {
+          "valor": 111.0,
+          "qtde": 3.0
+        },
+        "BRIG. ABRE ALAS 12UN": {
+          "valor": 424.5,
+          "qtde": 5.0
+        },
+        "FT CROCANTE": {
+          "valor": 4127.6,
+          "qtde": 124.0
+        },
+        "BRIG. C/ MORANGO BRULEE": {
+          "valor": 1415.9999999999989,
+          "qtde": 66.0
+        },
+        "BOLIM CHOCOLATE": {
+          "valor": 52.5,
+          "qtde": 3.0
+        },
+        "BRIG. C/ MORANGO TRADICIONAL": {
+          "valor": 5499.2,
+          "qtde": 340.0
+        },
+        "BISC ALHO PORO 100GR": {
+          "valor": 243.0,
+          "qtde": 9.0
+        },
+        "MATE LIMAO": {
+          "valor": 34.0,
+          "qtde": 4.0
+        },
+        "COCA COLA ZERO": {
+          "valor": 666.3999999999996,
+          "qtde": 77.0
+        },
+        "DELICIA CAMADAS F13": {
+          "valor": 1542.3999999999999,
+          "qtde": 15.0
+        },
+        "QUICHE CEBOLA F13": {
+          "valor": 528.2,
+          "qtde": 21.0
+        },
+        "EMPADAO FRANGO F25": {
+          "valor": 3882.0,
+          "qtde": 21.0
+        },
+        "NOVA SWEET DARK F25": {
+          "valor": 8337.0,
+          "qtde": 31.0
+        },
+        "FT BANOFFEE": {
+          "valor": 28.9,
+          "qtde": 1.0
+        },
+        "DELICIA COCO F25": {
+          "valor": 8437.2,
+          "qtde": 37.0
+        },
+        "BRIG. DARK 25UN": {
+          "valor": 1702.0,
+          "qtde": 23.0
+        },
+        "BRIG. TRADICIONAL 25UN": {
+          "valor": 1776.0,
+          "qtde": 24.0
+        },
+        "BANOFFE F20": {
+          "valor": 3754.3000000000006,
+          "qtde": 16.0
+        },
+        "AURORA F13": {
+          "valor": 951.4000000000001,
+          "qtde": 9.0
+        },
+        "TORTA BANANA F22": {
+          "valor": 1168.0,
+          "qtde": 5.0
+        },
+        "MORANGO - DELICIOSA NAKED F30": {
+          "valor": 1280.0,
+          "qtde": 2.0
+        },
+        "QUEBRA NOZES F25": {
+          "valor": 520.0,
+          "qtde": 2.0
+        },
+        "CROCANTE F25": {
+          "valor": 7569.3,
+          "qtde": 33.0
+        },
+        "TENTACAO F25": {
+          "valor": 17169.449999999993,
+          "qtde": 71.0
+        },
+        "VELA DOURADA NUMERO - 9": {
+          "valor": 30.0,
+          "qtde": 3.0
+        },
+        "BRIG. BRULLE 12UN": {
+          "valor": 457.0,
+          "qtde": 13.0
+        },
+        "BRIG. DOIS AMORES 25UN": {
+          "valor": 888.0,
+          "qtde": 12.0
+        },
+        "BRIG. CHURROS 12UN": {
+          "valor": 333.0,
+          "qtde": 9.0
+        },
+        "VELA ESPIRAL FINA ROSE 4UN": {
+          "valor": 288.0,
+          "qtde": 13.0
+        },
+        "BRIG. DOIS AMORES 12UN": {
+          "valor": 555.0,
+          "qtde": 15.0
+        },
+        "VULCAO RED VELVET": {
+          "valor": 28.0,
+          "qtde": 1.0
+        },
+        "FT TORTA BANANA": {
+          "valor": 1017.0,
+          "qtde": 32.0
+        },
+        "FT ALEMA": {
+          "valor": 4704.500000000001,
+          "qtde": 148.0
+        },
+        "TORTINHA GOURMET BABA FESTA CX": {
+          "valor": 807.6500000000001,
+          "qtde": 16.0
+        },
+        "AGUA GASOSA": {
+          "valor": 41.940000000000005,
+          "qtde": 6.0
+        },
+        "CHOCOBERRIES F25": {
+          "valor": 9845.85,
+          "qtde": 31.0
+        },
+        "BRIG. NINHO NUTELLA 25UN": {
+          "valor": 518.0,
+          "qtde": 7.0
+        },
+        "BRIG. BEIJINHO 25UN": {
+          "valor": 592.0,
+          "qtde": 8.0
+        },
+        "IF VELA DOURADA NUMERO": {
+          "valor": 609.0,
+          "qtde": 23.0
+        },
+        "MARAVILHA ABACAXI F13": {
+          "valor": 1742.5,
+          "qtde": 16.0
+        },
+        "DELICIA CAMADAS F25": {
+          "valor": 2439.0,
+          "qtde": 11.0
+        },
+        "FT CHEESECAKE FRTS VERM.": {
+          "valor": 1540.8,
+          "qtde": 47.0
+        },
+        "MARAVILHA ABACAXI F25": {
+          "valor": 5404.0,
+          "qtde": 24.0
+        },
+        "FANTASIA F25": {
+          "valor": 5722.2,
+          "qtde": 25.0
+        },
+        "BRIG. COCO QUEIMADO 25UN": {
+          "valor": 222.0,
+          "qtde": 3.0
+        },
+        "FANTASIA F13": {
+          "valor": 4338.0,
+          "qtde": 39.0
+        },
+        "BISC COOKIE SUICO 100GR": {
+          "valor": 255.0,
+          "qtde": 10.0
+        },
+        "AURORA ENFEITADA F25": {
+          "valor": 711.0,
+          "qtde": 3.0
+        },
+        "BISC GOIABINHA 100GR": {
+          "valor": 228.0,
+          "qtde": 9.0
+        },
+        "TORTA LIMAO F25": {
+          "valor": 6009.800000000001,
+          "qtde": 25.0
+        },
+        "FT TORTA MOUSSE": {
+          "valor": 3855.5,
+          "qtde": 105.0
+        },
+        "BOLO LARANJA F25": {
+          "valor": 1770.0,
+          "qtde": 21.0
+        },
+        "QUICHE ALHO PORO F13": {
+          "valor": 1307.5999999999997,
+          "qtde": 54.0
+        },
+        "VELA FAISCA": {
+          "valor": 507.0,
+          "qtde": 33.0
+        },
+        "BRIG. DARK 12UN": {
+          "valor": 703.0,
+          "qtde": 19.0
+        },
+        "VELA PRATA NUMERO - X": {
+          "valor": 10.0,
+          "qtde": 1.0
+        },
+        "VELA CORACAO 4UN": {
+          "valor": 497.0,
+          "qtde": 17.0
+        },
+        "MATE NATURAL": {
+          "valor": 34.0,
+          "qtde": 4.0
+        },
+        "COCA COLA": {
+          "valor": 314.45,
+          "qtde": 36.0
+        },
+        "AGUA NATURAL": {
+          "valor": 6.99,
+          "qtde": 1.0
+        },
+        "IF BRIG. BRULLE": {
+          "valor": 1627.5000000000007,
+          "qtde": 35.0
+        },
+        "QUICHE PRESUNTO F25": {
+          "valor": 1606.0,
+          "qtde": 9.0
+        },
+        "FT DELICIA CAMADAS": {
+          "valor": 908.9,
+          "qtde": 29.0
+        },
+        "BRIG. COCO QUEIMADO 12UN": {
+          "valor": 185.0,
+          "qtde": 5.0
+        },
+        "BRIG. BRANCO DIVERTIDO 12UN": {
+          "valor": 296.0,
+          "qtde": 8.0
+        },
+        "TORTINHA GOURMET CHOCO FESTA CX": {
+          "valor": 635.55,
+          "qtde": 12.0
+        },
+        "VELA PARABENS NEON": {
+          "valor": 171.0,
+          "qtde": 5.0
+        },
+        "CHOCOBERRIES F13": {
+          "valor": 5521.0,
+          "qtde": 38.0
+        },
+        "FT CHEESECAKE GOIABA": {
+          "valor": 480.0,
+          "qtde": 15.0
+        },
+        "CROCANTE F13": {
+          "valor": 2069.0,
+          "qtde": 17.0
+        },
+        "VELA DOURADA NUMERO - 5": {
+          "valor": 30.0,
+          "qtde": 3.0
+        },
+        "VELA DOURADA NUMERO - 3": {
+          "valor": 20.0,
+          "qtde": 2.0
+        },
+        "BRIG. CARAMELO 25UN": {
+          "valor": 74.0,
+          "qtde": 1.0
+        },
+        "BRIG. CHURROS 25UN": {
+          "valor": 370.0,
+          "qtde": 5.0
+        },
+        "BRIG. BRULLE 25UN": {
+          "valor": 592.0,
+          "qtde": 8.0
+        },
+        "FT ROCAMBOLE LARANJA": {
+          "valor": 1288.9,
+          "qtde": 43.0
+        },
+        "BOLIM DE LARANJA GRD (300GR)": {
+          "valor": 567.0,
+          "qtde": 18.0
+        },
+        "BOLIM DE CENROURA GRD (300GR)": {
+          "valor": 378.0,
+          "qtde": 12.0
+        },
+        "QUEBRA NOZES F13": {
+          "valor": 995.5,
+          "qtde": 8.0
+        },
+        "CHOCOBERRIES F20": {
+          "valor": 6918.050000000001,
+          "qtde": 29.0
+        },
+        "BRIG. PRETO PRECIOSO 12UN": {
+          "valor": 370.0,
+          "qtde": 10.0
+        },
+        "PUDIM POTE UN": {
+          "valor": 581.0,
+          "qtde": 26.0
+        },
+        "BANOFFE F13": {
+          "valor": 2400.8999999999996,
+          "qtde": 19.0
+        },
+        "CHEESECAKE F. VERM F25": {
+          "valor": 3552.5,
+          "qtde": 15.0
+        },
+        "FT TORTA LIMAO": {
+          "valor": 3546.9000000000005,
+          "qtde": 117.0
+        },
+        "VULCAO CENOURA": {
+          "valor": 1003.5999999999999,
+          "qtde": 37.0
+        },
+        "PET HAPPY": {
+          "valor": 208.0,
+          "qtde": 20.0
+        },
+        "TORTA MOUSSE F13": {
+          "valor": 3520.0,
+          "qtde": 28.0
+        },
+        "CALDA CHOC 200GR": {
+          "valor": 432.0,
+          "qtde": 12.0
+        },
+        "BISC PALMIER 100GR": {
+          "valor": 360.0,
+          "qtde": 15.0
+        },
+        "TORTA LIMAO F13": {
+          "valor": 1219.25,
+          "qtde": 11.0
+        },
+        "CALDA LARANJA 200GR": {
+          "valor": 124.0,
+          "qtde": 5.0
+        },
+        "VELA DOURADA NUMERO - 1": {
+          "valor": 40.0,
+          "qtde": 4.0
+        },
+        "VELA DOURADA NUMERO - 7": {
+          "valor": 40.0,
+          "qtde": 4.0
+        },
+        "VELA ESTRELA DOURADA 4UN": {
+          "valor": 446.0,
+          "qtde": 14.0
+        },
+        "CHEESECAKE GOIABA F13": {
+          "valor": 861.1,
+          "qtde": 7.0
+        },
+        "VULCAO DE NUTELLA": {
+          "valor": 860.4,
+          "qtde": 32.0
+        },
+        "CHEESECAKE F. VERM F13": {
+          "valor": 1560.4999999999998,
+          "qtde": 13.0
+        },
+        "VELA DOURADA NUMERO - X": {
+          "valor": 70.0,
+          "qtde": 7.0
+        },
+        "CHEESECAKE MORANGO F13": {
+          "valor": 631.7,
+          "qtde": 6.0
+        },
+        "TORTA MOUSSE F25": {
+          "valor": 2832.1,
+          "qtde": 9.0
+        },
+        "BISC GORGONZOLA 100GR": {
+          "valor": 12.0,
+          "qtde": 1.0
+        },
+        "VELA DOURADA NUMERO - 2": {
+          "valor": 40.0,
+          "qtde": 4.0
+        },
+        "BISC QUEIJO PARMESAO 100GR": {
+          "valor": 147.0,
+          "qtde": 6.0
+        },
+        "SALADA VERAO": {
+          "valor": 92.69999999999999,
+          "qtde": 3.0
+        },
+        "BRIG. MIX 25UN": {
+          "valor": 836.0,
+          "qtde": 11.0
+        },
+        "BRIG. MIX 12UN": {
+          "valor": 342.0,
+          "qtde": 9.0
+        },
+        "FT FANTASIA": {
+          "valor": 3115.2000000000003,
+          "qtde": 96.0
+        },
+        "FT CHEESECAKE MORANGO": {
+          "valor": 416.0,
+          "qtde": 13.0
+        },
+        "BRIG. PRETO PRECIOSO 25UN": {
+          "valor": 296.0,
+          "qtde": 4.0
+        },
+        "ENCHARCADA COPO 180gr": {
+          "valor": 504.0,
+          "qtde": 12.0
+        },
+        "ROCAMBOLE LARANJA F25": {
+          "valor": 660.9,
+          "qtde": 3.0
+        },
+        "BOLIM DE CHOCOLATE GRD (300GR)": {
+          "valor": 283.5,
+          "qtde": 9.0
+        },
+        "VELA DOURADA NUMERO - 8": {
+          "valor": 30.0,
+          "qtde": 3.0
+        },
+        "RED VELVET F20": {
+          "valor": 4808.750000000001,
+          "qtde": 20.0
+        },
+        "TORTA BANANA F13": {
+          "valor": 388.0,
+          "qtde": 4.0
+        },
+        "VELA PRATA NUMERO - 3": {
+          "valor": 40.0,
+          "qtde": 4.0
+        },
+        "VELA PRATA NUMERO - 0": {
+          "valor": 60.0,
+          "qtde": 6.0
+        },
+        "FT CHOCONOZES": {
+          "valor": 819.5,
+          "qtde": 22.0
+        },
+        "VELA PRATA NUMERO - 2": {
+          "valor": 10.0,
+          "qtde": 1.0
+        },
+        "VELA PRATA NUMERO - 9": {
+          "valor": 10.0,
+          "qtde": 1.0
+        },
+        "VELA DOURADA NUMERO - 4": {
+          "valor": 30.0,
+          "qtde": 3.0
+        },
+        "BRIG. NINHO NUTELLA 12UN": {
+          "valor": 629.0,
+          "qtde": 17.0
+        },
+        "GELEIA GOIABA 200GR": {
+          "valor": 56.0,
+          "qtde": 2.0
+        },
+        "TORTINHA GOURMET MISTA FESTA CX": {
+          "valor": 666.65,
+          "qtde": 13.0
+        },
+        "BRIG. CHOCOLATE BRANCO 25UN": {
+          "valor": 222.0,
+          "qtde": 3.0
+        },
+        "BOLIM CHOCOLATE C/ COBERTURA GRD (300GR)": {
+          "valor": 784.0,
+          "qtde": 16.0
+        },
+        "BRIG. CARAMELO 12UN": {
+          "valor": 111.0,
+          "qtde": 3.0
+        },
+        "BRIG. BEIJINHO 12UN": {
+          "valor": 185.0,
+          "qtde": 5.0
+        },
+        "CHEESECAKE MORANGO F25": {
+          "valor": 424.0,
+          "qtde": 2.0
+        },
+        "PAO DE QUEIJO": {
+          "valor": 27.2,
+          "qtde": 4.0
+        },
+        "AURORA F25": {
+          "valor": 1987.65,
+          "qtde": 9.0
+        },
+        "QUICHE ALHO PORO F25": {
+          "valor": 2248.0,
+          "qtde": 13.0
+        },
+        "GELEIA MORANGO 200GR": {
+          "valor": 108.0,
+          "qtde": 4.0
+        },
+        "CHEESECAKE GOIABA F25": {
+          "valor": 424.0,
+          "qtde": 2.0
+        },
+        "FT EMILIA": {
+          "valor": 804.0,
+          "qtde": 24.0
+        },
+        "EMILIA F25": {
+          "valor": 6355.000000000002,
+          "qtde": 25.0
+        },
+        "FIOS DE OVOS 250GRS": {
+          "valor": 450.0,
+          "qtde": 8.0
+        },
+        "RED VELVET F25": {
+          "valor": 4696.65,
+          "qtde": 15.0
+        },
+        "IF BRIG. PINGO DE EMILIA": {
+          "valor": 1193.1,
+          "qtde": 19.0
+        },
+        "EMILIA F13": {
+          "valor": 2185.0,
+          "qtde": 17.0
+        },
+        "VULCAO DIVERTIDO": {
+          "valor": 350.0,
+          "qtde": 14.0
+        },
+        "BOLO MILHO COM COCO F25": {
+          "valor": 75.0,
+          "qtde": 1.0
+        },
+        "VELA DOURADA NUMERO - 6": {
+          "valor": 20.0,
+          "qtde": 2.0
+        },
+        "FT COLORIDA": {
+          "valor": 2466.25,
+          "qtde": 65.0
+        },
+        "TORTA COLORIDA F25": {
+          "valor": 1625.0,
+          "qtde": 5.0
+        },
+        "BRIG. PINGO DE EMILIA 25UN": {
+          "valor": 296.0,
+          "qtde": 4.0
+        },
+        "BOLO DE POTE BROWNIE NINHO E MORANGO": {
+          "valor": 164.0,
+          "qtde": 4.0
+        },
+        "BRIG. CHOCOLATE BRANCO 12UN": {
+          "valor": 259.0,
+          "qtde": 7.0
+        },
+        "FT BOLO MILHO": {
+          "valor": 9.9,
+          "qtde": 1.0
+        },
+        "FT QUEBRA NOZES": {
+          "valor": 464.75,
+          "qtde": 13.0
+        },
+        "AGUA TONICA": {
+          "valor": 8.77,
+          "qtde": 1.0
+        },
+        "BOLO DE POTE PISTACHE COM MORANGO": {
+          "valor": 94.0,
+          "qtde": 2.0
+        },
+        "BRIG. PINGO DE EMILIA 12UN": {
+          "valor": 74.0,
+          "qtde": 2.0
+        },
+        "BOLO CENOURA F30": {
+          "valor": 124.0,
+          "qtde": 1.0
+        },
+        "VELA PRATA NUMERO - 1": {
+          "valor": 20.0,
+          "qtde": 2.0
+        },
+        "BRIG. TESOUROS DE PÁSCOA 12UN": {
+          "valor": 6365.5,
+          "qtde": 91.11
+        },
+        "TORTA CAÇA AO CHOCOLATE F13": {
+          "valor": 2325.0,
+          "qtde": 15.0
+        },
+        "VELA PRATA NUMERO - 5": {
+          "valor": 10.0,
+          "qtde": 1.0
+        },
+        "BRIG. NOZES 12UN": {
+          "valor": 165.0,
+          "qtde": 3.0
+        },
+        "CHOCONOZES F25": {
+          "valor": 390.0,
+          "qtde": 1.0
+        },
+        "OVO TENTAÇÃO DE CHOCOLATE": {
+          "valor": 694.0,
+          "qtde": 4.0
+        },
+        "BRIG. NOZES 25UN": {
+          "valor": 90.0,
+          "qtde": 1.0
+        },
+        "BOLO INGLES NOITE DE PÁSCOA": {
+          "valor": 970.0,
+          "qtde": 21.0
+        },
+        "BOLO INGLES AURORA DE PÁSCOA": {
+          "valor": 380.0,
+          "qtde": 8.0
+        },
+        "GUARANA": {
+          "valor": 17.54,
+          "qtde": 2.0
+        },
+        "SALADA MONTADA": {
+          "valor": 53.0,
+          "qtde": 2.0
+        },
+        "TORTA CAÇA AO CHOCOLATE F25": {
+          "valor": 3360.0,
+          "qtde": 12.0
+        },
+        "BOLO TOCA DO COELHO": {
+          "valor": 1302.0,
+          "qtde": 18.0
+        },
+        "ENCHARCADA F13": {
+          "valor": 526.0,
+          "qtde": 4.0
+        },
+        "OVO CROCANTE DE CHOCOLATE": {
+          "valor": 150.0,
+          "qtde": 1.0
+        },
+        "VELA DOURADA NUMERO - 0": {
+          "valor": 10.0,
+          "qtde": 1.0
+        },
+        "OVO NINHO E NUTELLA": {
+          "valor": 750.0,
+          "qtde": 5.0
+        },
+        "TORTA DE PASCOA F25": {
+          "valor": 740.0,
+          "qtde": 2.0
+        },
+        "VELA PRATA NUMERO - 6": {
+          "valor": 10.0,
+          "qtde": 1.0
+        },
+        "IF BRIG. NINHO NUTELLA": {
+          "valor": 42.9,
+          "qtde": 1.0
+        },
+        "OVO SURPRESA DE MORANGO": {
+          "valor": 150.0,
+          "qtde": 1.0
+        },
+        "VELA PRATA NUMERO - 4": {
+          "valor": 10.0,
+          "qtde": 1.0
+        }
+      },
+      "LOJA": {
+        "BRIG. DOIS AMORES 12UN": {
+          "valor": 111.0,
+          "qtde": 3.0
+        },
+        "MORANGO - DELICIOSA NAKED F13": {
+          "valor": 2125.0,
+          "qtde": 17.0
+        },
+        "MORANGO - DELICIOSA NAKED F20": {
+          "valor": 5328.0,
+          "qtde": 24.0
+        },
+        "BOLO LARANJA F25": {
+          "valor": 750.0,
+          "qtde": 10.0
+        },
+        "CHOCOBERRIES F25": {
+          "valor": 600.0,
+          "qtde": 2.0
+        },
+        "NOVA SWEET DARK F13": {
+          "valor": 610.0,
+          "qtde": 5.0
+        },
+        "VELA FAISCA BRINDE UN": {
+          "valor": 0.01,
+          "qtde": 1.0
+        },
+        "SALADA VERAO": {
+          "valor": 2533.8000000000034,
+          "qtde": 82.0
+        },
+        "BRIG. DARK 01UN": {
+          "valor": 171.0,
+          "qtde": 38.0
+        },
+        "GUARANA ZERO": {
+          "valor": 292.5,
+          "qtde": 39.0
+        },
+        "CAPUCCINO PEQ": {
+          "valor": 910.7999999999987,
+          "qtde": 92.0
+        },
+        "MEDIA": {
+          "valor": 1188.0,
+          "qtde": 88.0
+        },
+        "FT EMPADAO FRANGO": {
+          "valor": 3522.3200000000093,
+          "qtde": 177.0
+        },
+        "COCA COLA": {
+          "valor": 480.0,
+          "qtde": 64.0
+        },
+        "MISTO PAO FRANCES": {
+          "valor": 432.0,
+          "qtde": 32.0
+        },
+        "FT ALEMA": {
+          "valor": 2216.100000000003,
+          "qtde": 89.0
+        },
+        "BRIG. C/ MORANGO BRANCO": {
+          "valor": 490.1999999999997,
+          "qtde": 38.0
+        },
+        "MORANGO - FT DELICIOSA": {
+          "valor": 12730.0,
+          "qtde": 380.0
+        },
+        "QUINDIM UN": {
+          "valor": 594.0,
+          "qtde": 54.0
+        },
+        "CAFE EXPRESSO": {
+          "valor": 4224.51,
+          "qtde": 497.0
+        },
+        "FT TORTA BANANA": {
+          "valor": 825.0,
+          "qtde": 33.0
+        },
+        "FT DELICIA COCO": {
+          "valor": 1494.000000000001,
+          "qtde": 60.0
+        },
+        "FT BANOFFEE": {
+          "valor": 403.4999999999999,
+          "qtde": 15.0
+        },
+        "BRIG. TRADICIONAL 01UN": {
+          "valor": 382.5,
+          "qtde": 85.0
+        },
+        "FT CHEESECAKE MORANGO": {
+          "valor": 207.20000000000002,
+          "qtde": 8.0
+        },
+        "FT CHEESECAKE FRTS VERM.": {
+          "valor": 569.7999999999997,
+          "qtde": 22.0
+        },
+        "FT AURORA": {
+          "valor": 617.5,
+          "qtde": 25.0
+        },
+        "FT BOLO LARANJA": {
+          "valor": 1247.4700000000003,
+          "qtde": 126.0
+        },
+        "FT TENTACAO": {
+          "valor": 1120.4999999999998,
+          "qtde": 45.0
+        },
+        "FT TORTA MOUSSE": {
+          "valor": 1228.5,
+          "qtde": 39.0
+        },
+        "FT SWEET DARK": {
+          "valor": 3500.11,
+          "qtde": 125.0
+        },
+        "FT CHOCOBERRIES": {
+          "valor": 1457.0,
+          "qtde": 47.0
+        },
+        "BRIG. C/ MORANGO TRADICIONAL": {
+          "valor": 1225.51,
+          "qtde": 95.0
+        },
+        "AGUA GASOSA": {
+          "valor": 1644.5,
+          "qtde": 253.0
+        },
+        "MATE LIMAO": {
+          "valor": 315.0,
+          "qtde": 42.0
+        },
+        "COCA COLA ZERO": {
+          "valor": 825.0,
+          "qtde": 110.0
+        },
+        "BRIG. TRADICIONAL 12UN": {
+          "valor": 481.0,
+          "qtde": 13.0
+        },
+        "BRIG. CHURROS 02UN": {
+          "valor": 8.0,
+          "qtde": 1.0
+        },
+        "PAO ITALIANO": {
+          "valor": 1035.0,
+          "qtde": 138.0
+        },
+        "BRIG. C/ MORANGO DARK": {
+          "valor": 1135.2099999999996,
+          "qtde": 88.0
+        },
+        "FT MARAVILHA ABACAXI": {
+          "valor": 1618.5000000000014,
+          "qtde": 65.0
+        },
+        "MERENGUE 200ML": {
+          "valor": 40.0,
+          "qtde": 2.0
+        },
+        "BRIG. TRADICIONAL 04UN": {
+          "valor": 1005.0,
+          "qtde": 67.0
+        },
+        "BISC PALMIER 100GR": {
+          "valor": 468.01,
+          "qtde": 39.0
+        },
+        "MATE ZERO C LIMAO": {
+          "valor": 165.0,
+          "qtde": 22.0
+        },
+        "CACHORRINHO": {
+          "valor": 720.0,
+          "qtde": 96.0
+        },
+        "PAO DE QUEIJO": {
+          "valor": 3930.400000000012,
+          "qtde": 578.0
+        },
+        "FT BOLO CENOURA": {
+          "valor": 1277.1000000000004,
+          "qtde": 129.0
+        },
+        "CAFE EXPRESSO C/ BRIG. PEQ": {
+          "valor": 566.7999999999996,
+          "qtde": 52.0
+        },
+        "CAFE CARIOCA": {
+          "valor": 603.5,
+          "qtde": 71.0
+        },
+        "PAO NA CHAPA CROISSANT": {
+          "valor": 279.0,
+          "qtde": 18.0
+        },
+        "CAPUCCINO GRD": {
+          "valor": 1903.5,
+          "qtde": 141.0
+        },
+        "SUCO MORANGO": {
+          "valor": 139.5,
+          "qtde": 9.0
+        },
+        "TORTINHA GOURMET CHOCO FESTA CX": {
+          "valor": 846.0,
+          "qtde": 18.0
+        },
+        "FT BOLO MILHO": {
+          "valor": 712.7999999999993,
+          "qtde": 72.0
+        },
+        "BISC GORGONZOLA 100GR": {
+          "valor": 96.0,
+          "qtde": 8.0
+        },
+        "BISC QUEIJO PARMESAO 100GR": {
+          "valor": 312.0,
+          "qtde": 26.0
+        },
+        "BRIG. CHURROS 01UN": {
+          "valor": 31.5,
+          "qtde": 7.0
+        },
+        "AGUA NATURAL": {
+          "valor": 1423.5,
+          "qtde": 219.0
+        },
+        "CAFE COADO": {
+          "valor": 2152.5,
+          "qtde": 205.0
+        },
+        "FT CHEESECAKE GOIABA": {
+          "valor": 569.7999999999997,
+          "qtde": 22.0
+        },
+        "FT FANTASIA": {
+          "valor": 796.7999999999996,
+          "qtde": 32.0
+        },
+        "QUICHE ALHO PORO F13": {
+          "valor": 1353.2000000000005,
+          "qtde": 68.0
+        },
+        "EMBALAGEM FATIA": {
+          "valor": 108.0,
+          "qtde": 54.0
+        },
+        "MINI QUICHE ALHO PORO": {
+          "valor": 238.0,
+          "qtde": 17.0
+        },
+        "MATE DA CASA": {
+          "valor": 516.01,
+          "qtde": 43.0
+        },
+        "CHOC QUENTE PEQ": {
+          "valor": 108.90000000000002,
+          "qtde": 11.0
+        },
+        "VULCAO DIVERTIDO": {
+          "valor": 378.09999999999997,
+          "qtde": 19.0
+        },
+        "FT RED VELVET": {
+          "valor": 1519.0,
+          "qtde": 49.0
+        },
+        "CHOCOBERRIES F13": {
+          "valor": 240.0,
+          "qtde": 2.0
+        },
+        "MISTO TORRADA PETROPOLIS": {
+          "valor": 703.0,
+          "qtde": 38.0
+        },
+        "OVOS MEXIDOS": {
+          "valor": 552.0,
+          "qtde": 46.0
+        },
+        "MACCHIATO PEQ": {
+          "valor": 408.0,
+          "qtde": 48.0
+        },
+        "OMELETE": {
+          "valor": 616.0,
+          "qtde": 28.0
+        },
+        "AD GELEIA FRUTAS VERMELHA": {
+          "valor": 16.0,
+          "qtde": 4.0
+        },
+        "PUDIM POTE UN": {
+          "valor": 168.0,
+          "qtde": 14.0
+        },
+        "QUEIJO Q TORRADA PETROPOLIS": {
+          "valor": 296.0,
+          "qtde": 16.0
+        },
+        "CAFE PRENSA FRANC. DUPLO": {
+          "valor": 170.5,
+          "qtde": 11.0
+        },
+        "VULCAO CENOURA": {
+          "valor": 557.1999999999997,
+          "qtde": 28.0
+        },
+        "SALADA MONTADA": {
+          "valor": 901.0,
+          "qtde": 34.0
+        },
+        "SUCO LARANJA": {
+          "valor": 828.0,
+          "qtde": 69.0
+        },
+        "QUICHE CEBOLA F13": {
+          "valor": 577.0999999999997,
+          "qtde": 29.0
+        },
+        "BISC COOKIE SUICO 100GR": {
+          "valor": 744.0,
+          "qtde": 62.0
+        },
+        "TENTACAO F13": {
+          "valor": 582.0,
+          "qtde": 6.0
+        },
+        "CAFE DUPLO": {
+          "valor": 844.9999999999994,
+          "qtde": 50.0
+        },
+        "TORTINHA BABA": {
+          "valor": 309.59999999999997,
+          "qtde": 24.0
+        },
+        "MATE NATURAL": {
+          "valor": 300.0,
+          "qtde": 40.0
+        },
+        "MORANGO - DELICIOSA NAKED F25": {
+          "valor": 5985.0,
+          "qtde": 19.0
+        },
+        "FANTASIA F13": {
+          "valor": 380.0,
+          "qtde": 4.0
+        },
+        "FT TORTA LIMAO": {
+          "valor": 1743.0000000000011,
+          "qtde": 70.0
+        },
+        "BRIG. DARK 04UN": {
+          "valor": 120.0,
+          "qtde": 8.0
+        },
+        "BISC GOIABINHA 100GR": {
+          "valor": 192.0,
+          "qtde": 16.0
+        },
+        "MARAVILHA ABACAXI F13": {
+          "valor": 485.0,
+          "qtde": 5.0
+        },
+        "TENTACAO F25": {
+          "valor": 1935.0,
+          "qtde": 9.0
+        },
+        "AURORA ENFEITADA F25": {
+          "valor": 237.0,
+          "qtde": 1.0
+        },
+        "MISTO Q CROISSANT": {
+          "valor": 684.5,
+          "qtde": 37.0
+        },
+        "MILKSHAKE CHOCOLATE 300ML": {
+          "valor": 220.0,
+          "qtde": 10.0
+        },
+        "CHOCOLATE GELADO": {
+          "valor": 170.5,
+          "qtde": 11.0
+        },
+        "CAFE VIENENSE GDR": {
+          "valor": 92.5,
+          "qtde": 5.0
+        },
+        "MOKA GRD": {
+          "valor": 222.0,
+          "qtde": 12.0
+        },
+        "BRIG. NINHO NUTELLA 01UN": {
+          "valor": 31.5,
+          "qtde": 7.0
+        },
+        "QUEIJO Q MULTIGRAOS": {
+          "valor": 232.5,
+          "qtde": 15.0
+        },
+        "AD LEITE": {
+          "valor": 18.0,
+          "qtde": 3.0
+        },
+        "SUCO ABACAXI": {
+          "valor": 139.5,
+          "qtde": 9.0
+        },
+        "FT DELICIA CAMADAS": {
+          "valor": 592.8,
+          "qtde": 24.0
+        },
+        "QUICHE PRESUNTO F13": {
+          "valor": 338.2999999999999,
+          "qtde": 17.0
+        },
+        "CAFE AFFOGATO": {
+          "valor": 70.0,
+          "qtde": 4.0
+        },
+        "PAO FRANCES CHAPA": {
+          "valor": 355.99999999999994,
+          "qtde": 40.0
+        },
+        "CHA QUENTE": {
+          "valor": 337.5,
+          "qtde": 25.0
+        },
+        "VELA FAISCA": {
+          "valor": 78.0,
+          "qtde": 6.0
+        },
+        "CAFE PINGADO": {
+          "valor": 187.0,
+          "qtde": 22.0
+        },
+        "SUCO LARANJA C/ ABACAXI": {
+          "valor": 496.0,
+          "qtde": 32.0
+        },
+        "CAFE C/ CREME": {
+          "valor": 237.60000000000008,
+          "qtde": 24.0
+        },
+        "BRIG. C/ MORANGO BRULEE": {
+          "valor": 324.0,
+          "qtde": 18.0
+        },
+        "TORTINHA GOURMET MISTA FESTA CX": {
+          "valor": 329.0,
+          "qtde": 7.0
+        },
+        "GELATO ARTESANAL TAPIOCA BOLA": {
+          "valor": 135.0,
+          "qtde": 9.0
+        },
+        "GELATO ARTESANAL BAULINHA AFRICANA BOLA": {
+          "valor": 195.0,
+          "qtde": 13.0
+        },
+        "VULCAO DE NUTELLA": {
+          "valor": 318.4,
+          "qtde": 16.0
+        },
+        "SHOT LIMAO": {
+          "valor": 24.0,
+          "qtde": 12.0
+        },
+        "BRIG. BEIJINHO 04UN": {
+          "valor": 45.0,
+          "qtde": 3.0
+        },
+        "BOLIM DE LARANJA GRD (300GR)": {
+          "valor": 529.0,
+          "qtde": 23.0
+        },
+        "QUICHE ALHO PORO F25": {
+          "valor": 680.0,
+          "qtde": 4.0
+        },
+        "LIMONADA SUICA": {
+          "valor": 217.0,
+          "qtde": 14.0
+        },
+        "FT CHOCONOZES": {
+          "valor": 750.0,
+          "qtde": 25.0
+        },
+        "BRIG. NOZES 01UN": {
+          "valor": 60.0,
+          "qtde": 10.0
+        },
+        "MILKSHAKE MORANGO 300ML": {
+          "valor": 110.0,
+          "qtde": 5.0
+        },
+        "BOLIM DE CENROURA GRD (300GR)": {
+          "valor": 437.0,
+          "qtde": 19.0
+        },
+        "FT CROCANTE": {
+          "valor": 722.0999999999997,
+          "qtde": 29.0
+        },
+        "BRIG. CARAMELO 25UN": {
+          "valor": 74.0,
+          "qtde": 1.0
+        },
+        "BRIG. PRETO PRECIOSO 12UN": {
+          "valor": 74.0,
+          "qtde": 2.0
+        },
+        "BRIG. DARK 25UN": {
+          "valor": 296.0,
+          "qtde": 4.0
+        },
+        "BRIG. BRANCO DIVERTIDO 25UN": {
+          "valor": 148.0,
+          "qtde": 2.0
+        },
+        "VELA PRATA NUMERO - 0": {
+          "valor": 10.0,
+          "qtde": 1.0
+        },
+        "VELA PRATA NUMERO - 3": {
+          "valor": 10.0,
+          "qtde": 1.0
+        },
+        "SODA ITALIANA MACA VERDE": {
+          "valor": 64.5,
+          "qtde": 5.0
+        },
+        "TORTINHA CHOCOLATE": {
+          "valor": 374.09999999999985,
+          "qtde": 29.0
+        },
+        "MISTO Q MULTIGRAOS": {
+          "valor": 263.5,
+          "qtde": 17.0
+        },
+        "MINI QUICHE PRESUNTO": {
+          "valor": 14.0,
+          "qtde": 1.0
+        },
+        "CHOC QUENTE GRD": {
+          "valor": 201.5,
+          "qtde": 13.0
+        },
+        "CHOCOBERRIES F20": {
+          "valor": 1899.0,
+          "qtde": 9.0
+        },
+        "BRIG. BRULLE 04UN": {
+          "valor": 15.0,
+          "qtde": 1.0
+        },
+        "BRIG. BRANCO DIVERTIDO 04UN": {
+          "valor": 15.0,
+          "qtde": 1.0
+        },
+        "BRIG. TRADICIONAL 25UN": {
+          "valor": 444.0,
+          "qtde": 6.0
+        },
+        "TORTA BANANA F22": {
+          "valor": 432.0,
+          "qtde": 2.0
+        },
+        "RED VELVET F13": {
+          "valor": 240.0,
+          "qtde": 2.0
+        },
+        "QUEIJO Q CROISSANT": {
+          "valor": 462.5,
+          "qtde": 25.0
+        },
+        "CAFE EXPR DESCAF PEQ": {
+          "valor": 114.0,
+          "qtde": 12.0
+        },
+        "BOLO MILHO COM COCO F25": {
+          "valor": 300.0,
+          "qtde": 4.0
+        },
+        "BOLO CENOURA F25": {
+          "valor": 525.0,
+          "qtde": 7.0
+        },
+        "BRIG. DOIS AMORES 01UN": {
+          "valor": 94.5,
+          "qtde": 21.0
+        },
+        "BRIG. BRULLE 01UN": {
+          "valor": 31.5,
+          "qtde": 7.0
+        },
+        "PETROPOLIS CHAPA": {
+          "valor": 202.5,
+          "qtde": 15.0
+        },
+        "PET HAPPY": {
+          "valor": 88.0,
+          "qtde": 11.0
+        },
+        "AGUA TONICA": {
+          "valor": 7.5,
+          "qtde": 1.0
+        },
+        "COMBO 03 CAFE DA MANHA": {
+          "valor": 390.0,
+          "qtde": 5.0
+        },
+        "MACCHIADO DUPLO": {
+          "valor": 236.60000000000005,
+          "qtde": 14.0
+        },
+        "DELICIA CAMADAS F13": {
+          "valor": 186.0,
+          "qtde": 2.0
+        },
+        "GUARANA": {
+          "valor": 97.5,
+          "qtde": 13.0
+        },
+        "EMILIA F25": {
+          "valor": 672.0,
+          "qtde": 3.0
+        },
+        "BOLIM DE CENROURA C/ COBERTURA GRD (300GR)": {
+          "valor": 300.0,
+          "qtde": 8.0
+        },
+        "BRIG. BRANCO DIVERTIDO 01UN": {
+          "valor": 36.0,
+          "qtde": 8.0
+        },
+        "PAO CHAPA MULTIGRAOS": {
+          "valor": 54.5,
+          "qtde": 5.0
+        },
+        "FT ROCAMBOLE LARANJA": {
+          "valor": 295.9,
+          "qtde": 11.0
+        },
+        "BRIG. CARAMELO 04UN": {
+          "valor": 15.0,
+          "qtde": 1.0
+        },
+        "TORTINHA GOURMET BABA FESTA UN": {
+          "valor": 112.0,
+          "qtde": 14.0
+        },
+        "BRIG. DOIS AMORES 04UN": {
+          "valor": 105.0,
+          "qtde": 7.0
+        },
+        "BOLIM DE CHOCOLATE GRD (300GR)": {
+          "valor": 460.0,
+          "qtde": 20.0
+        },
+        "QUEIJO Q PAO FRANCES": {
+          "valor": 229.5,
+          "qtde": 17.0
+        },
+        "TAÇA VINHO BRANCO": {
+          "valor": 210.0,
+          "qtde": 6.0
+        },
+        "CHOCOLATE CREMOSO": {
+          "valor": 87.5,
+          "qtde": 5.0
+        },
+        "COMBO 02 CAFE DA MANHA": {
+          "valor": 490.0,
+          "qtde": 7.0
+        },
+        "AD MANTEIGA": {
+          "valor": 6.75,
+          "qtde": 3.0
+        },
+        "MINI QUICHE CEBOLA": {
+          "valor": 98.0,
+          "qtde": 7.0
+        },
+        "VELA DOURADA NUMERO - 8": {
+          "valor": 20.0,
+          "qtde": 2.0
+        },
+        "VELA DOURADA NUMERO - 3": {
+          "valor": 10.0,
+          "qtde": 1.0
+        },
+        "CHA GELADO": {
+          "valor": 27.0,
+          "qtde": 2.0
+        },
+        "SUCO LARANJA C/ MORANGO": {
+          "valor": 139.5,
+          "qtde": 9.0
+        },
+        "FANTASIA F25": {
+          "valor": 636.0,
+          "qtde": 3.0
+        },
+        "BRIG. DARK 02UN": {
+          "valor": 8.0,
+          "qtde": 1.0
+        },
+        "STRUDEL DIET": {
+          "valor": 144.0,
+          "qtde": 9.0
+        },
+        "NOVA SWEET DARK F25": {
+          "valor": 1757.0,
+          "qtde": 7.0
+        },
+        "ENCHARCADA COPO 180gr": {
+          "valor": 108.0,
+          "qtde": 3.0
+        },
+        "TORTA LIMAO F13": {
+          "valor": 190.0,
+          "qtde": 2.0
+        },
+        "ALEMA F13": {
+          "valor": 776.0,
+          "qtde": 8.0
+        },
+        "BRIG. DARK 12UN": {
+          "valor": 148.0,
+          "qtde": 4.0
+        },
+        "TORTA BANANA F13": {
+          "valor": 291.0,
+          "qtde": 3.0
+        },
+        "CAFE EXPRESSO C BRIG. GRD": {
+          "valor": 105.0,
+          "qtde": 6.0
+        },
+        "BRIG. BRULLE 02UN": {
+          "valor": 8.0,
+          "qtde": 1.0
+        },
+        "CHEESECAKE F. VERM F25": {
+          "valor": 212.0,
+          "qtde": 1.0
+        },
+        "WAFFEL SIMPLES": {
+          "valor": 120.0,
+          "qtde": 6.0
+        },
+        "TORTA MOUSSE F13": {
+          "valor": 545.0,
+          "qtde": 5.0
+        },
+        "SODA ITALIANA TANGERINA": {
+          "valor": 25.8,
+          "qtde": 2.0
+        },
+        "CAFE DA VOVO": {
+          "valor": 18.5,
+          "qtde": 1.0
+        },
+        "EMPADAO FRANGO F13": {
+          "valor": 80.0,
+          "qtde": 1.0
+        },
+        "CAPUCCINO DESCAF. GRD": {
+          "valor": 28.4,
+          "qtde": 2.0
+        },
+        "BOLIM CHOCOLATE C/ COBERTURA GRD (300GR)": {
+          "valor": 375.0,
+          "qtde": 10.0
+        },
+        "ALEMA F22": {
+          "valor": 2160.0,
+          "qtde": 10.0
+        },
+        "BRIG. CHOCOLATE BRANCO 01UN": {
+          "valor": 13.5,
+          "qtde": 3.0
+        },
+        "BRIG. BRANCO DIVERTIDO 12UN": {
+          "valor": 74.0,
+          "qtde": 2.0
+        },
+        "MARAVILHA ABACAXI F25": {
+          "valor": 645.0,
+          "qtde": 3.0
+        },
+        "EMILIA F13": {
+          "valor": 110.0,
+          "qtde": 1.0
+        },
+        "VELA ESPIRAL FINA ROSE 4UN": {
+          "valor": 144.0,
+          "qtde": 8.0
+        },
+        "VELA PARABENS NEON": {
+          "valor": 60.0,
+          "qtde": 2.0
+        },
+        "RED VELVET F20": {
+          "valor": 633.0,
+          "qtde": 3.0
+        },
+        "FT COLORIDA": {
+          "valor": 1943.0,
+          "qtde": 58.0
+        },
+        "DELICIA COCO F13": {
+          "valor": 194.0,
+          "qtde": 2.0
+        },
+        "EMPADAO FRANGO F25": {
+          "valor": 534.0,
+          "qtde": 3.0
+        },
+        "BRIG. DOIS AMORES 25UN": {
+          "valor": 222.0,
+          "qtde": 3.0
+        },
+        "FT EMILIA": {
+          "valor": 300.0,
+          "qtde": 12.0
+        },
+        "BRIG. DOIS AMORES 02UN": {
+          "valor": 24.0,
+          "qtde": 3.0
+        },
+        "TORTA MOUSSE F25": {
+          "valor": 303.0,
+          "qtde": 1.0
+        },
+        "MORANGO AO LEITE": {
+          "valor": 70.0,
+          "qtde": 4.0
+        },
+        "CHEESECAKE GOIABA F13": {
+          "valor": 188.0,
+          "qtde": 2.0
+        },
+        "BANOFFE F20": {
+          "valor": 215.0,
+          "qtde": 1.0
+        },
+        "BRIG. PINGO DE EMILIA 01UN": {
+          "valor": 27.0,
+          "qtde": 6.0
+        },
+        "BRIG. NOZES 04UN": {
+          "valor": 20.0,
+          "qtde": 1.0
+        },
+        "PATE SECRETO 150GR": {
+          "valor": 46.0,
+          "qtde": 1.0
+        },
+        "COMBO 01 CAFE DA MANHA": {
+          "valor": 96.0,
+          "qtde": 3.0
+        },
+        "MEDIA DESCAFEINADO": {
+          "valor": 28.4,
+          "qtde": 2.0
+        },
+        "CAPUCCINO DESCAF. PEQ": {
+          "valor": 21.8,
+          "qtde": 2.0
+        },
+        "FT QUEBRA NOZES": {
+          "valor": 210.0,
+          "qtde": 7.0
+        },
+        "DELICIA CAMADAS F25": {
+          "valor": 420.0,
+          "qtde": 2.0
+        },
+        "TOPPER CAKE": {
+          "valor": 15.0,
+          "qtde": 1.0
+        },
+        "AD CENOURA RALADA": {
+          "valor": 2.0,
+          "qtde": 1.0
+        },
+        "BRIG. TRADICIONAL 02UN": {
+          "valor": 48.0,
+          "qtde": 6.0
+        },
+        "CALDA LARANJA 150GR": {
+          "valor": 12.0,
+          "qtde": 1.0
+        },
+        "AD GELEIA MORANGO": {
+          "valor": 6.0,
+          "qtde": 2.0
+        },
+        "BRIG. NOZES 02UN": {
+          "valor": 11.0,
+          "qtde": 1.0
+        },
+        "AD AMENDOAS": {
+          "valor": 5.0,
+          "qtde": 2.0
+        },
+        "AD QUEIJO PARMESAO": {
+          "valor": 2.5,
+          "qtde": 1.0
+        },
+        "BRIG. BEIJINHO 01UN": {
+          "valor": 13.5,
+          "qtde": 3.0
+        },
+        "QUEBRA NOZES F25": {
+          "valor": 260.0,
+          "qtde": 1.0
+        },
+        "BRIG. PINGO DE EMILIA 02UN": {
+          "valor": 8.0,
+          "qtde": 1.0
+        },
+        "VELA CORACAO 4UN": {
+          "valor": 75.0,
+          "qtde": 3.0
+        },
+        "ROCAMBOLE LARANJA F25": {
+          "valor": 188.0,
+          "qtde": 1.0
+        },
+        "CALDA CHOC 100GR": {
+          "valor": 9.5,
+          "qtde": 1.0
+        },
+        "VELA PARABENS PRATA": {
+          "valor": 60.0,
+          "qtde": 2.0
+        },
+        "BRIG. PINGO DE EMILIA 04UN": {
+          "valor": 30.0,
+          "qtde": 2.0
+        },
+        "CHANTILLY A PARTE": {
+          "valor": 6.0,
+          "qtde": 2.0
+        },
+        "BRIG. COCO QUEIMADO 01UN": {
+          "valor": 4.5,
+          "qtde": 1.0
+        },
+        "BANOFFE F13": {
+          "valor": 97.0,
+          "qtde": 1.0
+        },
+        "DELICIA COCO F25": {
+          "valor": 648.0,
+          "qtde": 3.0
+        },
+        "FRUTA DA ESTACAO": {
+          "valor": 7.0,
+          "qtde": 1.0
+        },
+        "CALDA CHOC 200GR": {
+          "valor": 60.0,
+          "qtde": 2.0
+        },
+        "VELA PRATA NUMERO - 6": {
+          "valor": 10.0,
+          "qtde": 1.0
+        },
+        "VELA PRATA NUMERO - 1": {
+          "valor": 10.0,
+          "qtde": 1.0
+        },
+        "QUICHE CEBOLA F25": {
+          "valor": 170.0,
+          "qtde": 1.0
+        },
+        "TORTA CAÇA AO CHOCOLATE F25": {
+          "valor": 280.0,
+          "qtde": 1.0
+        },
+        "BOLO INGLES NOITE DE PÁSCOA": {
+          "valor": 360.0,
+          "qtde": 9.0
+        },
+        "TOPO DE BOLO PARA FESTA PRATA PARABÉNS": {
+          "valor": 15.0,
+          "qtde": 1.0
+        },
+        "AD CALDA CHOC": {
+          "valor": 3.5,
+          "qtde": 1.0
+        },
+        "VELA PRATA NUMERO - X": {
+          "valor": 10.0,
+          "qtde": 1.0
+        },
+        "BRIG. PINGO DE EMILIA 25UN": {
+          "valor": 148.0,
+          "qtde": 2.0
+        },
+        "BOLO TOCA DO COELHO": {
+          "valor": 69.0,
+          "qtde": 1.0
+        },
+        "BRIG. CHURROS 25UN": {
+          "valor": 74.0,
+          "qtde": 1.0
+        },
+        "BRIG. BRULLE 25UN": {
+          "valor": 74.0,
+          "qtde": 1.0
+        },
+        "BRIG. PRETO PRECIOSO 25UN": {
+          "valor": 148.0,
+          "qtde": 2.0
+        },
+        "BRIG. TESOUROS DE PÁSCOA 12UN": {
+          "valor": 132.0,
+          "qtde": 2.0
+        },
+        "VELA DOURADA NUMERO - X": {
+          "valor": 20.0,
+          "qtde": 2.0
+        },
+        "VELA ESTRELA DOURADA 4UN": {
+          "valor": 25.0,
+          "qtde": 1.0
+        },
+        "BOLO INGLES AURORA DE PÁSCOA": {
+          "valor": 80.0,
+          "qtde": 2.0
+        },
+        "VELA DOURADA NUMERO - 6": {
+          "valor": 10.0,
+          "qtde": 1.0
+        },
+        "VELA DOURADA NUMERO - 1": {
+          "valor": 10.0,
+          "qtde": 1.0
+        },
+        "EXPRESSO C/ CREME DESCAF.": {
+          "valor": 10.9,
+          "qtde": 1.0
+        },
+        "CROCANTE F13": {
+          "valor": 97.0,
+          "qtde": 1.0
+        },
+        "VELA VULCAO DOURADA": {
+          "valor": 20.0,
+          "qtde": 1.0
+        },
+        "BRIG. MIX 12UN": {
+          "valor": 114.0,
+          "qtde": 3.0
+        },
+        "TORTA COLORIDA F25": {
+          "valor": 325.0,
+          "qtde": 1.0
+        },
+        "BRIG. MIX 25UN": {
+          "valor": 76.0,
+          "qtde": 1.0
+        },
+        "OVO TENTAÇÃO DE CHOCOLATE": {
+          "valor": 150.0,
+          "qtde": 1.0
+        },
+        "CHEESECAKE F. VERM F13": {
+          "valor": 94.0,
+          "qtde": 1.0
+        },
+        "BRIG. CHURROS 04UN": {
+          "valor": 15.0,
+          "qtde": 1.0
+        }
+      }
+    }
+  },
+  "2025": {
+    "total": 455524.61,
+    "pedidos": 5383,
+    "ticket": 84.6228144157533,
+    "linhas": 11473,
+    "by_div": {
+      "DELIVERY": {
+        "valor": 350286.4399999948,
+        "pedidos": 2622,
+        "rows": 6304,
+        "ticket": 133.59513348588666
+      },
+      "LOJA": {
+        "valor": 105238.1699999995,
+        "pedidos": 2761,
+        "rows": 5169,
+        "ticket": 38.11596160811282
+      }
+    },
+    "by_area": {
+      "DELIVERY — iFood": {
+        "valor": 192440.43999999782,
+        "pedidos": 1914,
+        "rows": 4588,
+        "ticket": 100.54359456635204
+      },
+      "DELIVERY — Pedido Atendimento": {
+        "valor": 90967.00000000001,
+        "pedidos": 394,
+        "rows": 920,
+        "ticket": 230.8807106598985
+      },
+      "LOJA — Balcão": {
+        "valor": 47237.430000000255,
+        "pedidos": 769,
+        "rows": 1318,
+        "ticket": 61.427087126138176
+      },
+      "LOJA — Mesa": {
+        "valor": 58000.740000000944,
+        "pedidos": 1992,
+        "rows": 3851,
+        "ticket": 29.116837349398065
+      },
+      "DELIVERY — Neemo": {
+        "valor": 66879.00000000004,
+        "pedidos": 314,
+        "rows": 796,
+        "ticket": 212.99044585987275
+      }
+    },
+    "by_origin": {
+      "iFood": {
+        "valor": 192440.43999999782,
+        "pedidos": 1914,
+        "rows": 4588,
+        "ticket": 100.54359456635204
+      },
+      "WhatsApp": {
+        "valor": 67333.1,
+        "pedidos": 282,
+        "rows": 671,
+        "ticket": 238.7698581560284
+      },
+      "balcão": {
+        "valor": 47237.430000000255,
+        "pedidos": 769,
+        "rows": 1318,
+        "ticket": 61.427087126138176
+      },
+      "mesa 04": {
+        "valor": 4944.900000000004,
+        "pedidos": 175,
+        "rows": 351,
+        "ticket": 28.25657142857145
+      },
+      "neemo": {
+        "valor": 66879.00000000004,
+        "pedidos": 314,
+        "rows": 796,
+        "ticket": 212.99044585987275
+      },
+      "mesa 05": {
+        "valor": 4340.710000000005,
+        "pedidos": 148,
+        "rows": 279,
+        "ticket": 29.329121621621653
+      },
+      "mesa 10": {
+        "valor": 5159.430000000003,
+        "pedidos": 208,
+        "rows": 365,
+        "ticket": 24.80495192307694
+      },
+      "mesa 09": {
+        "valor": 5246.8200000000015,
+        "pedidos": 169,
+        "rows": 345,
+        "ticket": 31.04627218934912
+      },
+      "mesa 08": {
+        "valor": 4830.320000000003,
+        "pedidos": 138,
+        "rows": 269,
+        "ticket": 35.00231884057973
+      },
+      "mesa 02": {
+        "valor": 3530.200000000004,
+        "pedidos": 122,
+        "rows": 239,
+        "ticket": 28.936065573770524
+      },
+      "mesa 06": {
+        "valor": 2006.9000000000003,
+        "pedidos": 69,
+        "rows": 143,
+        "ticket": 29.085507246376817
+      },
+      "Mogo Gourmet": {
+        "valor": 6951.4,
+        "pedidos": 35,
+        "rows": 82,
+        "ticket": 198.61142857142855
+      },
+      "mesa 11": {
+        "valor": 2923.5300000000025,
+        "pedidos": 122,
+        "rows": 215,
+        "ticket": 23.963360655737723
+      },
+      "mesa 03": {
+        "valor": 4168.410000000005,
+        "pedidos": 140,
+        "rows": 273,
+        "ticket": 29.77435714285718
+      },
+      "mesa 13": {
+        "valor": 4288.610000000002,
+        "pedidos": 114,
+        "rows": 252,
+        "ticket": 37.619385964912304
+      },
+      "mesa 01": {
+        "valor": 6378.699999999999,
+        "pedidos": 241,
+        "rows": 446,
+        "ticket": 26.46763485477178
+      },
+      "Telefone": {
+        "valor": 16479.0,
+        "pedidos": 76,
+        "rows": 165,
+        "ticket": 216.82894736842104
+      },
+      "mesa 12": {
+        "valor": 2147.7000000000007,
+        "pedidos": 80,
+        "rows": 148,
+        "ticket": 26.84625000000001
+      },
+      "mesa 15": {
+        "valor": 1718.5099999999998,
+        "pedidos": 53,
+        "rows": 112,
+        "ticket": 32.42471698113207
+      },
+      "mesa 17": {
+        "valor": 401.9,
+        "pedidos": 12,
+        "rows": 26,
+        "ticket": 33.49166666666667
+      },
+      "mesa 07": {
+        "valor": 2719.900000000002,
+        "pedidos": 91,
+        "rows": 191,
+        "ticket": 29.88901098901101
+      },
+      "mesa 14": {
+        "valor": 2251.500000000001,
+        "pedidos": 63,
+        "rows": 138,
+        "ticket": 35.738095238095255
+      },
+      "mesa 16": {
+        "valor": 258.0,
+        "pedidos": 12,
+        "rows": 18,
+        "ticket": 21.5
+      },
+      "comanda 0001": {
+        "valor": 103.30000000000001,
+        "pedidos": 4,
+        "rows": 7,
+        "ticket": 25.825000000000003
+      },
+      "comanda 0002": {
+        "valor": 79.8,
+        "pedidos": 6,
+        "rows": 6,
+        "ticket": 13.299999999999999
+      },
+      "comanda 0003": {
+        "valor": 89.9,
+        "pedidos": 5,
+        "rows": 5,
+        "ticket": 17.98
+      },
+      "comanda 0004": {
+        "valor": 81.2,
+        "pedidos": 5,
+        "rows": 6,
+        "ticket": 16.240000000000002
+      },
+      "comanda 0005": {
+        "valor": 72.5,
+        "pedidos": 3,
+        "rows": 3,
+        "ticket": 24.166666666666668
+      },
+      "comanda 0006": {
+        "valor": 89.30000000000001,
+        "pedidos": 4,
+        "rows": 5,
+        "ticket": 22.325000000000003
+      },
+      "comanda 0007": {
+        "valor": 46.9,
+        "pedidos": 2,
+        "rows": 2,
+        "ticket": 23.45
+      },
+      "comanda 0008": {
+        "valor": 59.5,
+        "pedidos": 3,
+        "rows": 4,
+        "ticket": 19.833333333333332
+      },
+      "Instagram": {
+        "valor": 203.5,
+        "pedidos": 1,
+        "rows": 2,
+        "ticket": 203.5
+      },
+      "comanda 0009": {
+        "valor": 21.9,
+        "pedidos": 1,
+        "rows": 1,
+        "ticket": 21.9
+      },
+      "comanda 0011": {
+        "valor": 21.9,
+        "pedidos": 1,
+        "rows": 1,
+        "ticket": 21.9
+      },
+      "comanda 0010": {
+        "valor": 18.5,
+        "pedidos": 1,
+        "rows": 1,
+        "ticket": 18.5
+      }
+    },
+    "products": {
+      "BOLIM CENOURA C/ COBERTURA": {
+        "valor": 1452.0,
+        "qtde": 42.0
+      },
+      "DELICIOSA NAKED F25": {
+        "valor": 38225.850000000006,
+        "qtde": 136.0
+      },
+      "MISTO Q CROISSANT": {
+        "valor": 351.5,
+        "qtde": 19.0
+      },
+      "MORANGO AO LEITE": {
+        "valor": 126.0,
+        "qtde": 9.0
+      },
+      "BISC PALMIER 100GR": {
+        "valor": 678.0,
+        "qtde": 49.0
+      },
+      "BRIG. TRADICIONAL 25UN": {
+        "valor": 3036.0,
+        "qtde": 46.0
+      },
+      "FANTASIA F13": {
+        "valor": 2965.45,
+        "qtde": 32.0
+      },
+      "GUARANA ZERO": {
+        "valor": 217.62,
+        "qtde": 28.0
+      },
+      "FT DELICIOSA": {
+        "valor": 27169.230000000007,
+        "qtde": 817.0
+      },
+      "DELICIOSA NAKED F20": {
+        "valor": 44112.80000000002,
+        "qtde": 209.0
+      },
+      "MEDIA": {
+        "valor": 1107.0,
+        "qtde": 82.0
+      },
+      "SUCO LARANJA C/ MORANGO": {
+        "valor": 480.5,
+        "qtde": 31.0
+      },
+      "CAFE COADO": {
+        "valor": 1480.51,
+        "qtde": 141.0
+      },
+      "FRUTA DA ESTACAO": {
+        "valor": 56.0,
+        "qtde": 8.0
+      },
+      "PAO ITALIANO": {
+        "valor": 622.56,
+        "qtde": 83.0
+      },
+      "PAO DE QUEIJO": {
+        "valor": 3372.8000000000047,
+        "qtde": 496.0
+      },
+      "FT BOLO CENOURA": {
+        "valor": 862.3999999999987,
+        "qtde": 98.0
+      },
+      "SUCO MORANGO": {
+        "valor": 170.5,
+        "qtde": 11.0
+      },
+      "TENTACAO F25": {
+        "valor": 12603.299999999997,
+        "qtde": 61.0
+      },
+      "VELA VULCAO PRATEADA": {
+        "valor": 154.0,
+        "qtde": 14.0
+      },
+      "FT EMPADAO FRANGO": {
+        "valor": 3869.94,
+        "qtde": 188.0
+      },
+      "EXPRESSO C/ BRIG. PEQ": {
+        "valor": 501.3999999999997,
+        "qtde": 46.0
+      },
+      "ALEMA F22": {
+        "valor": 11196.0,
+        "qtde": 56.0
+      },
+      "CAFE EXPRESSO": {
+        "valor": 4641.0,
+        "qtde": 546.0
+      },
+      "FT TENTACAO": {
+        "valor": 7287.399999999994,
+        "qtde": 248.0
+      },
+      "CAPPUCCINO GRD": {
+        "valor": 1188.01,
+        "qtde": 88.0
+      },
+      "TENTACAO F13": {
+        "valor": 6457.400000000003,
+        "qtde": 63.0
+      },
+      "IF BRIG. PRECIOSO": {
+        "valor": 853.4999999999999,
+        "qtde": 15.0
+      },
+      "DELICIA CAMADAS F13": {
+        "valor": 1414.25,
+        "qtde": 15.0
+      },
+      "BISC QUEIJO PARMESAO 100GR": {
+        "valor": 300.0,
+        "qtde": 22.0
+      },
+      "BISC GOIABINHA 100GR": {
+        "valor": 348.0,
+        "qtde": 23.0
+      },
+      "BOLIM LARANJA": {
+        "valor": 843.0,
+        "qtde": 40.0
+      },
+      "FT TORTA BANANA": {
+        "valor": 1352.6999999999998,
+        "qtde": 54.0
+      },
+      "FT TORTA LIMAO": {
+        "valor": 3909.100000000003,
+        "qtde": 149.0
+      },
+      "CHOCOLATE GELADO": {
+        "valor": 294.5,
+        "qtde": 19.0
+      },
+      "FT BANOFFEE": {
+        "valor": 460.0,
+        "qtde": 20.0
+      },
+      "MISTO TORRADA PETROPOLIS": {
+        "valor": 555.01,
+        "qtde": 30.0
+      },
+      "TORTA MOUSSE F13": {
+        "valor": 4264.900000000001,
+        "qtde": 37.0
+      },
+      "VELA PALITO ROSA": {
+        "valor": 18.0,
+        "qtde": 3.0
+      },
+      "AURORA F25": {
+        "valor": 2086.4500000000003,
+        "qtde": 10.0
+      },
+      "QUICHE ALHO PORO F13": {
+        "valor": 1410.5,
+        "qtde": 73.0
+      },
+      "FT BOLO LARANJA": {
+        "valor": 906.3999999999992,
+        "qtde": 103.0
+      },
+      "DELICIOSA NAKED F13": {
+        "valor": 20998.25,
+        "qtde": 156.0
+      },
+      "PETROPOLIS CHAPA": {
+        "valor": 297.0,
+        "qtde": 22.0
+      },
+      "COMBO 03 CAFE DA MANHA": {
+        "valor": 546.0,
+        "qtde": 7.0
+      },
+      "AGUA NATURAL": {
+        "valor": 1041.97,
+        "qtde": 160.0
+      },
+      "BRIG. BEIJINHO 12UN": {
+        "valor": 132.0,
+        "qtde": 4.0
+      },
+      "ALEMA F13": {
+        "valor": 6078.450000000002,
+        "qtde": 60.0
+      },
+      "BRIG. CHOCOLATE BRANCO 12UN": {
+        "valor": 231.0,
+        "qtde": 7.0
+      },
+      "MINI QUICHE CEBOLA": {
+        "valor": 200.0,
+        "qtde": 16.0
+      },
+      "FT CROCANTE": {
+        "valor": 1093.6099999999997,
+        "qtde": 45.0
+      },
+      "COCA COLA ZERO": {
+        "valor": 820.52,
+        "qtde": 105.0
+      },
+      "EMBALAGEM FATIA": {
+        "valor": 140.0,
+        "qtde": 70.0
+      },
+      "MATE DA CASA": {
+        "valor": 612.0,
+        "qtde": 51.0
+      },
+      "SALADA VERAO": {
+        "valor": 1699.5000000000011,
+        "qtde": 55.0
+      },
+      "SUCO LARANJA": {
+        "valor": 936.01,
+        "qtde": 78.0
+      },
+      "FT RED VELVET": {
+        "valor": 3433.5,
+        "qtde": 104.0
+      },
+      "CAFE EM PÓ TASSINARI (NERO)": {
+        "valor": 28.0,
+        "qtde": 1.0
+      },
+      "VULCAO DIVERTIDO": {
+        "valor": 709.0,
+        "qtde": 34.0
+      },
+      "BRIG. TRADICIONAL 04UN": {
+        "valor": 403.05,
+        "qtde": 31.0
+      },
+      "STRUDEL DIET": {
+        "valor": 160.0,
+        "qtde": 10.0
+      },
+      "FT SWEET DARK": {
+        "valor": 9166.27,
+        "qtde": 293.0
+      },
+      "FT CHOCOBERRIES": {
+        "valor": 3119.52,
+        "qtde": 96.0
+      },
+      "BRIG. C/ MORANGO DARK": {
+        "valor": 1873.1000000000008,
+        "qtde": 141.0
+      },
+      "VULCAO CENOURA": {
+        "valor": 2329.5,
+        "qtde": 98.0
+      },
+      "CAFE EXPR DESCAF PEQ": {
+        "valor": 152.0,
+        "qtde": 16.0
+      },
+      "FT ALEMA": {
+        "valor": 7830.149999999987,
+        "qtde": 291.0
+      },
+      "FT TORTA MOUSSE": {
+        "valor": 4324.27,
+        "qtde": 124.0
+      },
+      "AGUA GASOSA": {
+        "valor": 1358.5,
+        "qtde": 209.0
+      },
+      "COCA COLA": {
+        "valor": 450.35999999999996,
+        "qtde": 57.0
+      },
+      "OVOS MEXIDOS": {
+        "valor": 456.0,
+        "qtde": 38.0
+      },
+      "BRIG. C/ MORANGO BRANCO": {
+        "valor": 1869.200000000001,
+        "qtde": 135.0
+      },
+      "BRIG. C/ MORANGO PISTACHE": {
+        "valor": 936.5999999999997,
+        "qtde": 50.0
+      },
+      "FT DELICIA COCO": {
+        "valor": 2793.3000000000025,
+        "qtde": 102.0
+      },
+      "FT CHEESECAKE GOIABA": {
+        "valor": 699.0,
+        "qtde": 24.0
+      },
+      "FT AURORA": {
+        "valor": 1594.0,
+        "qtde": 59.0
+      },
+      "FT EMILIA": {
+        "valor": 1779.6700000000003,
+        "qtde": 62.0
+      },
+      "CHOC QUENTE PEQ": {
+        "valor": 89.10000000000001,
+        "qtde": 9.0
+      },
+      "FT MARAVILHA ABACAXI": {
+        "valor": 3171.600000000002,
+        "qtde": 113.0
+      },
+      "BRIG. C/ MORANGO TRADICIONAL": {
+        "valor": 5870.2999999999965,
+        "qtde": 437.0
+      },
+      "ENCHARCADA COPO": {
+        "valor": 644.0,
+        "qtde": 36.0
+      },
+      "FT FANTASIA": {
+        "valor": 3070.6000000000026,
+        "qtde": 113.0
+      },
+      "TORTINHA GOURMET CHOCO FESTA CX": {
+        "valor": 896.1000000000001,
+        "qtde": 19.0
+      },
+      "FANTASIA F25": {
+        "valor": 5123.150000000001,
+        "qtde": 26.0
+      },
+      "QUEBRA NOZES F13": {
+        "valor": 1045.5,
+        "qtde": 9.0
+      },
+      "POTE BABA DE MOÇA FINA 250GR": {
+        "valor": 97.0,
+        "qtde": 2.0
+      },
+      "FT BOLO MILHO": {
+        "valor": 528.0000000000003,
+        "qtde": 60.0
+      },
+      "AURORA F13": {
+        "valor": 860.5500000000001,
+        "qtde": 9.0
+      },
+      "GUARANA": {
+        "valor": 150.12,
+        "qtde": 19.0
+      },
+      "FT CHOCONOZES": {
+        "valor": 1860.0,
+        "qtde": 53.0
+      },
+      "TORTINHA CHOCOLATE": {
+        "valor": 1614.6700000000008,
+        "qtde": 121.0
+      },
+      "FT CHEESECAKE FRTS VERM.": {
+        "valor": 2152.0,
+        "qtde": 75.0
+      },
+      "FT QUEBRA NOZES": {
+        "valor": 1009.25,
+        "qtde": 31.0
+      },
+      "CACHORRINHO": {
+        "valor": 517.5,
+        "qtde": 69.0
+      },
+      "ROCAMBOLE LARANJA F25": {
+        "valor": 499.5,
+        "qtde": 3.0
+      },
+      "EMILIA F25": {
+        "valor": 4146.8,
+        "qtde": 18.0
+      },
+      "MATE ZERO C LIMAO": {
+        "valor": 76.0,
+        "qtde": 10.0
+      },
+      "FT DELICIA EM CAMADAS": {
+        "valor": 909.6999999999996,
+        "qtde": 37.0
+      },
+      "EMILIA F13": {
+        "valor": 3108.6499999999996,
+        "qtde": 25.0
+      },
+      "FT ROCAMBOLE LARANJA": {
+        "valor": 948.0999999999997,
+        "qtde": 38.0
+      },
+      "TORTINHA BABA": {
+        "valor": 1001.0999999999997,
+        "qtde": 75.0
+      },
+      "VELA FAISCA": {
+        "valor": 445.0,
+        "qtde": 43.0
+      },
+      "(prod) Nova Sweet Dark F25 (un)": {
+        "valor": 3625.0,
+        "qtde": 25.0
+      },
+      "IF BRIG. DOIS AMORES": {
+        "valor": 1069.7999999999997,
+        "qtde": 22.0
+      },
+      "VELA VULCAO VERMELHA": {
+        "valor": 174.5,
+        "qtde": 15.0
+      },
+      "BANOFFE F20": {
+        "valor": 3134.5,
+        "qtde": 15.0
+      },
+      "TORTA LIMAO F13": {
+        "valor": 2392.5899999999992,
+        "qtde": 23.0
+      },
+      "SWEET DARK F14": {
+        "valor": 707.5,
+        "qtde": 5.0
+      },
+      "TORTA LIMAO F25": {
+        "valor": 1949.1,
+        "qtde": 10.0
+      },
+      "MARAVILHA ABACAXI F25": {
+        "valor": 2953.0,
+        "qtde": 14.0
+      },
+      "CROCANTE F25": {
+        "valor": 2211.6,
+        "qtde": 11.0
+      },
+      "NOVA SWEET DARK F25": {
+        "valor": 5534.7,
+        "qtde": 24.0
+      },
+      "QUINDIM UN": {
+        "valor": 1316.0,
+        "qtde": 118.0
+      },
+      "IF BRIG. BRANCO DIVERTIDO": {
+        "valor": 470.9999999999999,
+        "qtde": 10.0
+      },
+      "DELICIA COCO F13": {
+        "valor": 1549.9499999999996,
+        "qtde": 15.0
+      },
+      "BOLO LARANJA F25": {
+        "valor": 1522.6599999999999,
+        "qtde": 21.0
+      },
+      "BOLIM CHOCOLATE C/ COBERTURA": {
+        "valor": 1426.5,
+        "qtde": 44.0
+      },
+      "MARAVILHA ABACAXI F13": {
+        "valor": 1285.25,
+        "qtde": 13.0
+      },
+      "VULCAO DE NUTELLA": {
+        "valor": 961.0,
+        "qtde": 40.0
+      },
+      "CHEESECAKE F. VERM F13": {
+        "valor": 1769.9999999999998,
+        "qtde": 17.0
+      },
+      "IF BRIG. TRADICIONAL": {
+        "valor": 2093.1000000000004,
+        "qtde": 39.0
+      },
+      "MERENGUE 200ML": {
+        "valor": 862.0,
+        "qtde": 38.0
+      },
+      "BANOFFE F13": {
+        "valor": 2621.0999999999995,
+        "qtde": 23.0
+      },
+      "RED VELVET F20": {
+        "valor": 4482.25,
+        "qtde": 22.0
+      },
+      "IF BRIG. BRULLE": {
+        "valor": 513.8999999999999,
+        "qtde": 11.0
+      },
+      "RED VELVET F13": {
+        "valor": 2700.0,
+        "qtde": 21.0
+      },
+      "VULCAO RED VELVET": {
+        "valor": 602.0999999999998,
+        "qtde": 23.0
+      },
+      "PATE SECRETO 250GR": {
+        "valor": 224.0,
+        "qtde": 4.0
+      },
+      "CALDA CHOC 200GR": {
+        "valor": 192.0,
+        "qtde": 6.0
+      },
+      "QUICHE CEBOLA F13": {
+        "valor": 609.0,
+        "qtde": 31.0
+      },
+      "BISC COOKIE SUICO 100GR": {
+        "valor": 312.0,
+        "qtde": 23.0
+      },
+      "EMPADAO FRANGO F13": {
+        "valor": 943.4,
+        "qtde": 11.0
+      },
+      "TORTINHA GOURMET MISTA FESTA CX": {
+        "valor": 1294.2000000000003,
+        "qtde": 26.0
+      },
+      "BRIG. DOIS AMORES 25UN": {
+        "valor": 462.0,
+        "qtde": 7.0
+      },
+      "BRIG. DARK 25UN": {
+        "valor": 924.0,
+        "qtde": 14.0
+      },
+      "BOLO CENOURA F25": {
+        "valor": 1612.0,
+        "qtde": 23.0
+      },
+      "CHOCOBERRIES F13": {
+        "valor": 3227.5,
+        "qtde": 25.0
+      },
+      "CHEESECAKE GOIABA F20": {
+        "valor": 377.0,
+        "qtde": 2.0
+      },
+      "BRIG. DARK 12UN": {
+        "valor": 561.0,
+        "qtde": 17.0
+      },
+      "BOLIM CENOURA": {
+        "valor": 411.5,
+        "qtde": 21.0
+      },
+      "CALDA CHOC 150GR": {
+        "valor": 40.0,
+        "qtde": 2.0
+      },
+      "CHOCONOZES F13": {
+        "valor": 310.0,
+        "qtde": 2.0
+      },
+      "BRIG. TRADICIONAL 12UN": {
+        "valor": 693.0,
+        "qtde": 21.0
+      },
+      "BRIG. BRANCO DIVERTIDO 12UN": {
+        "valor": 66.0,
+        "qtde": 2.0
+      },
+      "DELICIA COCO F25": {
+        "valor": 4852.6,
+        "qtde": 25.0
+      },
+      "SALADA MONTADA": {
+        "valor": 636.0,
+        "qtde": 24.0
+      },
+      "PET HAPPY": {
+        "valor": 112.0,
+        "qtde": 14.0
+      },
+      "MACCHIATO PEQ": {
+        "valor": 221.0,
+        "qtde": 26.0
+      },
+      "AD PISTACHE": {
+        "valor": 2.5,
+        "qtde": 1.0
+      },
+      "CAFE CARIOCA": {
+        "valor": 578.0,
+        "qtde": 68.0
+      },
+      "BRIG. CHURROS 12UN": {
+        "valor": 297.0,
+        "qtde": 9.0
+      },
+      "BRIG. DOIS AMORES 12UN": {
+        "valor": 231.0,
+        "qtde": 7.0
+      },
+      "BRIG. DOIS AMORES 02UN": {
+        "valor": 23.1,
+        "qtde": 3.0
+      },
+      "BRIG. BEIJINHO 25UN": {
+        "valor": 264.0,
+        "qtde": 4.0
+      },
+      "BRIG. NOZES 25UN": {
+        "valor": 82.0,
+        "qtde": 1.0
+      },
+      "CHOCOBERRIES F20": {
+        "valor": 6859.950000000002,
+        "qtde": 33.0
+      },
+      "CAFE PRENSA FRANC. DUPLO": {
+        "valor": 93.0,
+        "qtde": 6.0
+      },
+      "CAFE DUPLO": {
+        "valor": 557.7099999999997,
+        "qtde": 33.0
+      },
+      "GELEIA FRUT VER 200GR": {
+        "valor": 130.0,
+        "qtde": 5.0
+      },
+      "TORTINHA GOURMET CHOCO FESTA UN": {
+        "valor": 7.0,
+        "qtde": 1.0
+      },
+      "BRIG. CHURROS 02UN": {
+        "valor": 23.1,
+        "qtde": 3.0
+      },
+      "TORTINHA GOURMET BABA FESTA UN": {
+        "valor": 14.0,
+        "qtde": 2.0
+      },
+      "MATE LIMAO": {
+        "valor": 107.0,
+        "qtde": 14.0
+      },
+      "BRIG. CHOCOLATE BRANCO 02UN": {
+        "valor": 7.7,
+        "qtde": 1.0
+      },
+      "BRIG. BRANCO DIVERTIDO 25UN": {
+        "valor": 198.0,
+        "qtde": 3.0
+      },
+      "IF PINGO DE EMILIA": {
+        "valor": 384.29999999999995,
+        "qtde": 6.0
+      },
+      "BRIG. CHOCOLATE BRANCO 01UN": {
+        "valor": 9.0,
+        "qtde": 2.0
+      },
+      "CHA QUENTE": {
+        "valor": 229.5,
+        "qtde": 17.0
+      },
+      "BRIG. NOZES 01UN": {
+        "valor": 38.5,
+        "qtde": 7.0
+      },
+      "BOLIM MILHO": {
+        "valor": 87.5,
+        "qtde": 5.0
+      },
+      "GELEIA MORANGO 200GR": {
+        "valor": 104.0,
+        "qtde": 4.0
+      },
+      "BRIG. BRULLE 02UN": {
+        "valor": 15.4,
+        "qtde": 2.0
+      },
+      "BRIG. PISTACHE 01UN": {
+        "valor": 93.61,
+        "qtde": 17.0
+      },
+      "MILKSHAKE MORANGO 300ML": {
+        "valor": 220.0,
+        "qtde": 10.0
+      },
+      "TORTA MOUSSE F25": {
+        "valor": 2503.55,
+        "qtde": 9.0
+      },
+      "TORTA BANANA F13": {
+        "valor": 169.0,
+        "qtde": 2.0
+      },
+      "SUCO ABACAXI": {
+        "valor": 201.5,
+        "qtde": 13.0
+      },
+      "PAO FRANCES CHAPA": {
+        "valor": 186.90000000000006,
+        "qtde": 21.0
+      },
+      "IF BRIG. NINHO NUTELLA": {
+        "valor": 640.4999999999999,
+        "qtde": 12.0
+      },
+      "BRIG. DARK 01UN": {
+        "valor": 67.5,
+        "qtde": 15.0
+      },
+      "CAPPUCCINO PEQ": {
+        "valor": 653.3999999999994,
+        "qtde": 66.0
+      },
+      "MACCHIADO DUPLO": {
+        "valor": 84.5,
+        "qtde": 5.0
+      },
+      "CHOC QUENTE GRD": {
+        "valor": 124.0,
+        "qtde": 8.0
+      },
+      "CAFE PINGADO": {
+        "valor": 212.5,
+        "qtde": 25.0
+      },
+      "CAFE C/ CREME": {
+        "valor": 108.9,
+        "qtde": 11.0
+      },
+      "TORTINHA GOURMET BABA FESTA CX": {
+        "valor": 552.95,
+        "qtde": 13.0
+      },
+      "BRIG. TRADICIONAL 01UN": {
+        "valor": 162.0,
+        "qtde": 36.0
+      },
+      "QUEIJO Q PAO FRANCES": {
+        "valor": 94.5,
+        "qtde": 7.0
+      },
+      "BRIG. NINHO NUTELLA 01UN": {
+        "valor": 40.5,
+        "qtde": 9.0
+      },
+      "NOVA SWEET DARK F13": {
+        "valor": 1450.0,
+        "qtde": 13.0
+      },
+      "VELA PALITO BRANCA": {
+        "valor": 42.0,
+        "qtde": 7.0
+      },
+      "QUICHE ALHO PORO F25": {
+        "valor": 1755.0,
+        "qtde": 11.0
+      },
+      "BRIG. PISTACHE 12UN": {
+        "valor": 392.0,
+        "qtde": 8.0
+      },
+      "BRIG. PRECIOSO 12UN": {
+        "valor": 297.0,
+        "qtde": 9.0
+      },
+      "BRIG. BRANCO PRECIOSO 12UN": {
+        "valor": 165.0,
+        "qtde": 5.0
+      },
+      "TOPO DE BOLO PARA FESTA PRATA FELIZ ANIVERSÁRIO": {
+        "valor": 64.0,
+        "qtde": 4.0
+      },
+      "BRIG. PRECIOSO 25UN": {
+        "valor": 330.0,
+        "qtde": 5.0
+      },
+      "OMELETE": {
+        "valor": 286.0,
+        "qtde": 13.0
+      },
+      "MATE NATURAL": {
+        "valor": 270.5,
+        "qtde": 35.0
+      },
+      "BRIG. TRADICIONAL 02UN": {
+        "valor": 277.1999999999998,
+        "qtde": 36.0
+      },
+      "EMPADAO FRANGO F25": {
+        "valor": 2080.0,
+        "qtde": 13.0
+      },
+      "MINI QUICHE ALHO PORO": {
+        "valor": 275.11,
+        "qtde": 22.0
+      },
+      "FIOS DE OVOS 250GRS": {
+        "valor": 417.0,
+        "qtde": 7.0
+      },
+      "PINGO DE EMILIA 01UN": {
+        "valor": 13.5,
+        "qtde": 3.0
+      },
+      "BRIG. PISTACHE 04UN": {
+        "valor": 52.5,
+        "qtde": 3.0
+      },
+      "VELA PALITO AZUL": {
+        "valor": 36.0,
+        "qtde": 6.0
+      },
+      "GELEIA GOIABA 200GR": {
+        "valor": 98.0,
+        "qtde": 4.0
+      },
+      "MILKSHAKE CHOCOLATE 300ML": {
+        "valor": 242.0,
+        "qtde": 11.0
+      },
+      "BISC GORGONZOLA 100GR": {
+        "valor": 156.0,
+        "qtde": 13.0
+      },
+      "IF BRIG. BEIJINHO": {
+        "valor": 257.4,
+        "qtde": 6.0
+      },
+      "MISTO Q MULTIGRAOS": {
+        "valor": 139.51,
+        "qtde": 9.0
+      },
+      "IF BRIG. DARK": {
+        "valor": 470.9999999999999,
+        "qtde": 10.0
+      },
+      "QUEBRA NOZES F25": {
+        "valor": 1016.4,
+        "qtde": 4.0
+      },
+      "BRIG. NINHO NUTELLA 12UN": {
+        "valor": 297.0,
+        "qtde": 9.0
+      },
+      "BRIG. BRULLE 12UN": {
+        "valor": 132.0,
+        "qtde": 4.0
+      },
+      "BRIG. DOIS AMORES 01UN": {
+        "valor": 40.5,
+        "qtde": 9.0
+      },
+      "QUEIJO Q MULTIGRAOS": {
+        "valor": 170.5,
+        "qtde": 11.0
+      },
+      "COMBO 01 CAFE DA MANHA": {
+        "valor": 192.0,
+        "qtde": 6.0
+      },
+      "CHOCOBERRIES F25": {
+        "valor": 5268.250000000001,
+        "qtde": 18.0
+      },
+      "BOLO MILHO COM COCO F25": {
+        "valor": 130.0,
+        "qtde": 2.0
+      },
+      "CHOCONOZES F25": {
+        "valor": 596.0,
+        "qtde": 2.0
+      },
+      "DELICIA CAMADAS F25": {
+        "valor": 2012.0,
+        "qtde": 10.0
+      },
+      "IF BRIG. BRANCO PRECIOSO": {
+        "valor": 171.6,
+        "qtde": 4.0
+      },
+      "BRIG. NOZES 12UN": {
+        "valor": 196.0,
+        "qtde": 4.0
+      },
+      "BRIG. NINHO NUTELLA 25UN": {
+        "valor": 462.0,
+        "qtde": 7.0
+      },
+      "CAFE AFFOGATO": {
+        "valor": 122.5,
+        "qtde": 7.0
+      },
+      "BOLIM CHOCOLATE": {
+        "valor": 361.0,
+        "qtde": 20.0
+      },
+      "BRIG. DARK 04UN": {
+        "valor": 39.0,
+        "qtde": 3.0
+      },
+      "PUDIM POTE UN": {
+        "valor": 82.5,
+        "qtde": 5.0
+      },
+      "CHA GELADO": {
+        "valor": 148.5,
+        "qtde": 11.0
+      },
+      "CAFE VIENENSE GDR": {
+        "valor": 111.0,
+        "qtde": 6.0
+      },
+      "RED VELVET F25": {
+        "valor": 3483.1500000000005,
+        "qtde": 12.0
+      },
+      "IF BRIG. PISTACHE": {
+        "valor": 383.4,
+        "qtde": 6.0
+      },
+      "IF BRIG. NOZES": {
+        "valor": 425.4,
+        "qtde": 6.0
+      },
+      "IF BRIG. CHURROS": {
+        "valor": 512.0999999999999,
+        "qtde": 9.0
+      },
+      "CHEESECAKE F. VERM F20": {
+        "valor": 1650.1,
+        "qtde": 8.0
+      },
+      "QUEIJO Q CROISSANT": {
+        "valor": 203.5,
+        "qtde": 11.0
+      },
+      "LIMONADA SUICA": {
+        "valor": 155.0,
+        "qtde": 10.0
+      },
+      "MISTO PAO FRANCES": {
+        "valor": 270.0,
+        "qtde": 20.0
+      },
+      "CALDA LARANJA 200GR": {
+        "valor": 72.0,
+        "qtde": 3.0
+      },
+      "BRIG. NOZES 04UN": {
+        "valor": 35.0,
+        "qtde": 2.0
+      },
+      "BRIG. BRULLE 25UN": {
+        "valor": 198.0,
+        "qtde": 3.0
+      },
+      "QUEIJO Q TORRADA PETROPOLIS": {
+        "valor": 203.51,
+        "qtde": 11.0
+      },
+      "CAFE EM GRAO TASSINARI(NERO)": {
+        "valor": 28.0,
+        "qtde": 1.0
+      },
+      "BRIG. CARAMELO 12UN": {
+        "valor": 264.0,
+        "qtde": 8.0
+      },
+      "PINGADO DESCAFEINDO": {
+        "valor": 28.5,
+        "qtde": 3.0
+      },
+      "BRIG. PISTACHE 02UN": {
+        "valor": 79.2,
+        "qtde": 8.0
+      },
+      "QUICHE CEBOLA F25": {
+        "valor": 648.0,
+        "qtde": 4.0
+      },
+      "IF BRIG. CHOCOLATE BRANCO": {
+        "valor": 213.60000000000002,
+        "qtde": 4.0
+      },
+      "PAO CHAPA MULTIGRAOS": {
+        "valor": 65.41,
+        "qtde": 6.0
+      },
+      "MEDIA DESCAFEINADO": {
+        "valor": 42.599999999999994,
+        "qtde": 3.0
+      },
+      "MATE NAT ZERO": {
+        "valor": 37.5,
+        "qtde": 5.0
+      },
+      "CAFE EM PO TASSINARI(ORO)": {
+        "valor": 28.0,
+        "qtde": 1.0
+      },
+      "SHOT LIMAO": {
+        "valor": 12.0,
+        "qtde": 6.0
+      },
+      "CAPUCCINO DESCAF. PEQ": {
+        "valor": 32.7,
+        "qtde": 3.0
+      },
+      "QUICHE PRESUNTO F13": {
+        "valor": 105.0,
+        "qtde": 6.0
+      },
+      "PAO NA CHAPA CROISSANT": {
+        "valor": 124.0,
+        "qtde": 8.0
+      },
+      "AURORA ENFEITADA F25": {
+        "valor": 1260.0,
+        "qtde": 6.0
+      },
+      "GELATO ARTESANAL TAPIOCA BOLA": {
+        "valor": 30.0,
+        "qtde": 2.0
+      },
+      "GELATO ARTESANAL BAULINHA AFRICANA BOLA": {
+        "valor": 210.0,
+        "qtde": 14.0
+      },
+      "BRIG. NINHO NUTELLA 02UN": {
+        "valor": 7.7,
+        "qtde": 1.0
+      },
+      "BRIG. DOIS AMORES 04UN": {
+        "valor": 13.0,
+        "qtde": 1.0
+      },
+      "PINGO DE EMILIA 04UN": {
+        "valor": 13.0,
+        "qtde": 1.0
+      },
+      "AD CALDA CHOC": {
+        "valor": 3.5,
+        "qtde": 1.0
+      },
+      "MINI QUICHE PRESUNTO": {
+        "valor": 50.0,
+        "qtde": 4.0
+      },
+      "MEDIA DESCAFEINADA": {
+        "valor": 19.8,
+        "qtde": 2.0
+      },
+      "BRIG. CARAMELO 04UN": {
+        "valor": 13.0,
+        "qtde": 1.0
+      },
+      "COMBO 02 CAFE DA MANHA": {
+        "valor": 140.0,
+        "qtde": 2.0
+      },
+      "TOPPER CAKE": {
+        "valor": 30.0,
+        "qtde": 2.0
+      },
+      "BRIG. MIX 12UN": {
+        "valor": 165.0,
+        "qtde": 5.0
+      },
+      "AD MUSSARELA": {
+        "valor": 12.0,
+        "qtde": 2.0
+      },
+      "BRIG. NINHO NUTELLA 04UN": {
+        "valor": 13.0,
+        "qtde": 1.0
+      },
+      "CHOCOLATE CREMOSO": {
+        "valor": 87.5,
+        "qtde": 5.0
+      },
+      "CAFE EM GRAO TASSINARI(ORO)": {
+        "valor": 84.0,
+        "qtde": 3.0
+      },
+      "BRIG. NOZES 02UN": {
+        "valor": 19.8,
+        "qtde": 2.0
+      },
+      "AGUA TONICA ZERO": {
+        "valor": 25.04,
+        "qtde": 3.0
+      },
+      "BRIG. CARAMELO 25UN": {
+        "valor": 66.0,
+        "qtde": 1.0
+      },
+      "ENCHARCADA F13": {
+        "valor": 215.0,
+        "qtde": 2.0
+      },
+      "PINGO DE EMILIA 25UN": {
+        "valor": 198.0,
+        "qtde": 3.0
+      },
+      "BRIG. CARAMELO 02UN": {
+        "valor": 23.1,
+        "qtde": 3.0
+      },
+      "CHANTILLY A PARTE": {
+        "valor": 9.0,
+        "qtde": 3.0
+      },
+      "BRIG. DARK 02UN": {
+        "valor": 15.4,
+        "qtde": 2.0
+      },
+      "CAFE DA VOVO": {
+        "valor": 55.5,
+        "qtde": 3.0
+      },
+      "BRIG. CHURROS 25UN": {
+        "valor": 330.0,
+        "qtde": 5.0
+      },
+      "TORTA COLORIDA F25": {
+        "valor": 268.5,
+        "qtde": 1.0
+      },
+      "CHEESECAKE GOIABA F13": {
+        "valor": 84.5,
+        "qtde": 1.0
+      },
+      "WAFFEL SIMPLES": {
+        "valor": 80.0,
+        "qtde": 4.0
+      },
+      "BRIG. BRANCO PRECIOSO 01UN": {
+        "valor": 4.5,
+        "qtde": 1.0
+      },
+      "AGUA TONICA": {
+        "valor": 53.769999999999996,
+        "qtde": 7.0
+      },
+      "TORTA DE BANANA F22": {
+        "valor": 438.55,
+        "qtde": 2.0
+      },
+      "CAFE DUPLO DESCAF.": {
+        "valor": 30.0,
+        "qtde": 2.0
+      },
+      "BRIG. BEIJINHO 02UN": {
+        "valor": 15.4,
+        "qtde": 2.0
+      },
+      "DELICIOSA NAKED F30": {
+        "valor": 550.0,
+        "qtde": 1.0
+      },
+      "AD QUEIJO PARMESAO": {
+        "valor": 2.5,
+        "qtde": 1.0
+      },
+      "MOKA GRD": {
+        "valor": 92.5,
+        "qtde": 5.0
+      },
+      "AD LEITE": {
+        "valor": 6.0,
+        "qtde": 1.0
+      },
+      "PINGO DE EMILIA 12UN": {
+        "valor": 33.0,
+        "qtde": 1.0
+      },
+      "TOPO DE BOLO PARA FESTA DOURADA FELIZ ANIVERSÁRIO": {
+        "valor": 15.0,
+        "qtde": 1.0
+      },
+      "CROCANTE F13": {
+        "valor": 253.5,
+        "qtde": 3.0
+      },
+      "BRIG. NINHO DELICADO 04UN": {
+        "valor": 13.0,
+        "qtde": 1.0
+      },
+      "BRIG. BRULLE 01UN": {
+        "valor": 9.0,
+        "qtde": 2.0
+      },
+      "BRIG. PISTACHE 25UN": {
+        "valor": 82.0,
+        "qtde": 1.0
+      },
+      "AURORA ENFEITADA F30": {
+        "valor": 550.0,
+        "qtde": 1.0
+      },
+      "AD MEL": {
+        "valor": 10.5,
+        "qtde": 3.0
+      },
+      "VELA DESING PARABENS NEON": {
+        "valor": 60.0,
+        "qtde": 2.0
+      },
+      "TORTA DE PASCOA F25": {
+        "valor": 275.0,
+        "qtde": 1.0
+      },
+      "BRIG. PASCOA 12UN": {
+        "valor": 323.5,
+        "qtde": 6.0
+      },
+      "CAPUCCINO DESCAF. GRD": {
+        "valor": 14.2,
+        "qtde": 1.0
+      },
+      "CHEESECAKE GOIABA F25": {
+        "valor": 188.5,
+        "qtde": 1.0
+      },
+      "VELA PRATA NUMERO - ?": {
+        "valor": 20.0,
+        "qtde": 2.0
+      },
+      "BRIG. NINHO DELICADO 02UN": {
+        "valor": 7.7,
+        "qtde": 1.0
+      },
+      "VELA DOURADA NUMERO - 1": {
+        "valor": 20.0,
+        "qtde": 2.0
+      },
+      "VELA DOURADA NUMERO - 6": {
+        "valor": 10.0,
+        "qtde": 1.0
+      },
+      "CHEESECAKE F. VERM F25": {
+        "valor": 448.05,
+        "qtde": 2.0
+      },
+      "BRIG. CHURROS 01UN": {
+        "valor": 4.5,
+        "qtde": 1.0
+      },
+      "TORTA DE PASCOA F13": {
+        "valor": 145.0,
+        "qtde": 1.0
+      },
+      "VELA ESTRELA DOURADA 4UN": {
+        "valor": 105.0,
+        "qtde": 4.0
+      },
+      "BRIG. PINGO DE EMILIA 25UN": {
+        "valor": 132.0,
+        "qtde": 2.0
+      },
+      "VELA CORACAO 4UN": {
+        "valor": 100.0,
+        "qtde": 4.0
+      },
+      "VELA DOURADA NUMERO - 5": {
+        "valor": 10.0,
+        "qtde": 1.0
+      },
+      "VELA PRATA NUMERO - 5": {
+        "valor": 10.0,
+        "qtde": 1.0
+      },
+      "VELA PRATA NUMERO - 1": {
+        "valor": 10.0,
+        "qtde": 1.0
+      },
+      "BOLIM CHOCOLATE PASCOA": {
+        "valor": 33.0,
+        "qtde": 1.0
+      },
+      "IF BRIG. PINGO DE EMILIA": {
+        "valor": 169.8,
+        "qtde": 2.0
+      },
+      "VELA DESING PARABENS PRATA": {
+        "valor": 65.0,
+        "qtde": 2.0
+      },
+      "AD GELEIA GOIABA": {
+        "valor": 6.0,
+        "qtde": 2.0
+      },
+      "BRIG. PASCOA 25UN": {
+        "valor": 176.0,
+        "qtde": 2.0
+      },
+      "VELA DOURADA NUMERO - 9": {
+        "valor": 10.0,
+        "qtde": 1.0
+      },
+      "VELA DOURADA NUMERO - 3": {
+        "valor": 10.0,
+        "qtde": 1.0
+      },
+      "BRIG. BEIJINHO 01UN": {
+        "valor": 9.0,
+        "qtde": 2.0
+      },
+      "VELA PRATA NUMERO - 8": {
+        "valor": 10.0,
+        "qtde": 1.0
+      },
+      "VELA PRATA NUMERO - 4": {
+        "valor": 10.0,
+        "qtde": 1.0
+      },
+      "VULCAO CENOURA PASCOA": {
+        "valor": 23.0,
+        "qtde": 1.0
+      },
+      "FT CHEESECAKE MORANGO": {
+        "valor": 30.0,
+        "qtde": 1.0
+      },
+      "BRIG. BRANCO DIVERTIDO 01UN": {
+        "valor": 4.5,
+        "qtde": 1.0
+      }
+    },
+    "products_by_div": {
+      "DELIVERY": {
+        "BOLIM CENOURA C/ COBERTURA": {
+          "valor": 1252.5,
+          "qtde": 35.0
+        },
+        "DELICIOSA NAKED F25": {
+          "valor": 34466.850000000006,
+          "qtde": 122.0
+        },
+        "BRIG. TRADICIONAL 25UN": {
+          "valor": 2640.0,
+          "qtde": 40.0
+        },
+        "FANTASIA F13": {
+          "valor": 2542.9499999999994,
+          "qtde": 27.0
+        },
+        "DELICIOSA NAKED F20": {
+          "valor": 39777.3,
+          "qtde": 186.0
+        },
+        "TENTACAO F25": {
+          "valor": 12037.799999999997,
+          "qtde": 58.0
+        },
+        "VELA VULCAO PRATEADA": {
+          "valor": 94.0,
+          "qtde": 8.0
+        },
+        "ALEMA F22": {
+          "valor": 8180.0,
+          "qtde": 40.0
+        },
+        "TENTACAO F13": {
+          "valor": 5781.400000000002,
+          "qtde": 55.0
+        },
+        "IF BRIG. PRECIOSO": {
+          "valor": 853.4999999999999,
+          "qtde": 15.0
+        },
+        "DELICIA CAMADAS F13": {
+          "valor": 1414.25,
+          "qtde": 15.0
+        },
+        "BISC QUEIJO PARMESAO 100GR": {
+          "valor": 72.0,
+          "qtde": 3.0
+        },
+        "BISC GOIABINHA 100GR": {
+          "valor": 144.0,
+          "qtde": 6.0
+        },
+        "BOLIM LARANJA": {
+          "valor": 440.5,
+          "qtde": 17.0
+        },
+        "TORTA MOUSSE F13": {
+          "valor": 4168.400000000001,
+          "qtde": 36.0
+        },
+        "DELICIOSA NAKED F13": {
+          "valor": 19708.25,
+          "qtde": 144.0
+        },
+        "FT TENTACAO": {
+          "valor": 5841.990000000002,
+          "qtde": 182.0
+        },
+        "BRIG. BEIJINHO 12UN": {
+          "valor": 132.0,
+          "qtde": 4.0
+        },
+        "ALEMA F13": {
+          "valor": 5909.450000000001,
+          "qtde": 58.0
+        },
+        "BRIG. CHOCOLATE BRANCO 12UN": {
+          "valor": 165.0,
+          "qtde": 5.0
+        },
+        "FT DELICIOSA": {
+          "valor": 16439.22,
+          "qtde": 447.0
+        },
+        "FT RED VELVET": {
+          "valor": 2278.5,
+          "qtde": 62.0
+        },
+        "BRIG. C/ MORANGO DARK": {
+          "valor": 1230.0,
+          "qtde": 82.0
+        },
+        "VULCAO CENOURA": {
+          "valor": 2049.0,
+          "qtde": 81.0
+        },
+        "FT TORTA MOUSSE": {
+          "valor": 3719.27,
+          "qtde": 102.0
+        },
+        "BRIG. C/ MORANGO BRANCO": {
+          "valor": 1585.8,
+          "qtde": 109.0
+        },
+        "BRIG. C/ MORANGO PISTACHE": {
+          "valor": 682.2,
+          "qtde": 34.0
+        },
+        "FT DELICIA COCO": {
+          "valor": 1829.7000000000003,
+          "qtde": 58.0
+        },
+        "FT CHEESECAKE GOIABA": {
+          "valor": 630.0,
+          "qtde": 21.0
+        },
+        "FT EMPADAO FRANGO": {
+          "valor": 1839.93,
+          "qtde": 72.0
+        },
+        "FT MARAVILHA ABACAXI": {
+          "valor": 2229.9,
+          "qtde": 70.0
+        },
+        "BRIG. C/ MORANGO TRADICIONAL": {
+          "valor": 4780.3,
+          "qtde": 337.0
+        },
+        "ENCHARCADA COPO": {
+          "valor": 594.5,
+          "qtde": 33.0
+        },
+        "FT ALEMA": {
+          "valor": 5421.14,
+          "qtde": 181.0
+        },
+        "FT FANTASIA": {
+          "valor": 1953.7000000000003,
+          "qtde": 62.0
+        },
+        "FANTASIA F25": {
+          "valor": 4180.65,
+          "qtde": 21.0
+        },
+        "AURORA F13": {
+          "valor": 776.0500000000001,
+          "qtde": 8.0
+        },
+        "GUARANA": {
+          "valor": 52.61999999999999,
+          "qtde": 6.0
+        },
+        "FT CHOCONOZES": {
+          "valor": 1350.0,
+          "qtde": 36.0
+        },
+        "QUICHE ALHO PORO F13": {
+          "valor": 518.0,
+          "qtde": 22.0
+        },
+        "FT SWEET DARK": {
+          "valor": 6891.27,
+          "qtde": 202.0
+        },
+        "TORTINHA CHOCOLATE": {
+          "valor": 1200.47,
+          "qtde": 83.0
+        },
+        "FT TORTA LIMAO": {
+          "valor": 2529.4,
+          "qtde": 86.0
+        },
+        "FT CHEESECAKE FRTS VERM.": {
+          "valor": 1830.0,
+          "qtde": 61.0
+        },
+        "EMILIA F25": {
+          "valor": 3555.7999999999997,
+          "qtde": 15.0
+        },
+        "FT AURORA": {
+          "valor": 1195.0,
+          "qtde": 40.0
+        },
+        "FT TORTA BANANA": {
+          "valor": 695.6999999999999,
+          "qtde": 24.0
+        },
+        "FT EMILIA": {
+          "valor": 1341.67,
+          "qtde": 42.0
+        },
+        "MATE ZERO C LIMAO": {
+          "valor": 8.5,
+          "qtde": 1.0
+        },
+        "FT DELICIA EM CAMADAS": {
+          "valor": 427.9,
+          "qtde": 15.0
+        },
+        "FT CHOCOBERRIES": {
+          "valor": 1909.52,
+          "qtde": 52.0
+        },
+        "EMILIA F13": {
+          "valor": 2819.1499999999996,
+          "qtde": 22.0
+        },
+        "FT ROCAMBOLE LARANJA": {
+          "valor": 649.5999999999999,
+          "qtde": 23.0
+        },
+        "TORTINHA BABA": {
+          "valor": 794.0,
+          "qtde": 56.0
+        },
+        "VELA FAISCA": {
+          "valor": 427.0,
+          "qtde": 41.0
+        },
+        "(prod) Nova Sweet Dark F25 (un)": {
+          "valor": 3625.0,
+          "qtde": 25.0
+        },
+        "IF BRIG. DOIS AMORES": {
+          "valor": 1069.7999999999997,
+          "qtde": 22.0
+        },
+        "VELA VULCAO VERMELHA": {
+          "valor": 144.5,
+          "qtde": 12.0
+        },
+        "BANOFFE F20": {
+          "valor": 2946.0,
+          "qtde": 14.0
+        },
+        "COCA COLA ZERO": {
+          "valor": 228.02,
+          "qtde": 26.0
+        },
+        "BISC PALMIER 100GR": {
+          "valor": 246.0,
+          "qtde": 13.0
+        },
+        "TORTA LIMAO F13": {
+          "valor": 2308.0899999999992,
+          "qtde": 22.0
+        },
+        "SWEET DARK F14": {
+          "valor": 707.5,
+          "qtde": 5.0
+        },
+        "TORTA LIMAO F25": {
+          "valor": 1760.6,
+          "qtde": 9.0
+        },
+        "MARAVILHA ABACAXI F25": {
+          "valor": 2010.5,
+          "qtde": 9.0
+        },
+        "CROCANTE F25": {
+          "valor": 2211.6,
+          "qtde": 11.0
+        },
+        "NOVA SWEET DARK F25": {
+          "valor": 4412.2,
+          "qtde": 19.0
+        },
+        "TORTINHA GOURMET CHOCO FESTA CX": {
+          "valor": 522.6,
+          "qtde": 10.0
+        },
+        "QUINDIM UN": {
+          "valor": 856.0,
+          "qtde": 72.0
+        },
+        "IF BRIG. BRANCO DIVERTIDO": {
+          "valor": 470.9999999999999,
+          "qtde": 10.0
+        },
+        "DELICIA COCO F13": {
+          "valor": 1380.9499999999998,
+          "qtde": 13.0
+        },
+        "COCA COLA": {
+          "valor": 165.35999999999999,
+          "qtde": 19.0
+        },
+        "BOLO LARANJA F25": {
+          "valor": 1457.6599999999999,
+          "qtde": 20.0
+        },
+        "BOLIM CHOCOLATE C/ COBERTURA": {
+          "valor": 885.0,
+          "qtde": 25.0
+        },
+        "MARAVILHA ABACAXI F13": {
+          "valor": 1031.75,
+          "qtde": 10.0
+        },
+        "VULCAO DE NUTELLA": {
+          "valor": 768.5,
+          "qtde": 29.0
+        },
+        "CHEESECAKE F. VERM F13": {
+          "valor": 1600.9999999999995,
+          "qtde": 15.0
+        },
+        "IF BRIG. TRADICIONAL": {
+          "valor": 2093.1000000000004,
+          "qtde": 39.0
+        },
+        "MERENGUE 200ML": {
+          "valor": 782.0,
+          "qtde": 34.0
+        },
+        "BANOFFE F13": {
+          "valor": 2621.0999999999995,
+          "qtde": 23.0
+        },
+        "RED VELVET F20": {
+          "valor": 4105.25,
+          "qtde": 20.0
+        },
+        "IF BRIG. BRULLE": {
+          "valor": 513.8999999999999,
+          "qtde": 11.0
+        },
+        "RED VELVET F13": {
+          "valor": 2377.5,
+          "qtde": 18.0
+        },
+        "VULCAO RED VELVET": {
+          "valor": 530.0999999999998,
+          "qtde": 19.0
+        },
+        "PATE SECRETO 250GR": {
+          "valor": 224.0,
+          "qtde": 4.0
+        },
+        "CALDA CHOC 200GR": {
+          "valor": 162.0,
+          "qtde": 5.0
+        },
+        "QUICHE CEBOLA F13": {
+          "valor": 206.5,
+          "qtde": 8.0
+        },
+        "VULCAO DIVERTIDO": {
+          "valor": 359.0,
+          "qtde": 14.0
+        },
+        "BISC COOKIE SUICO 100GR": {
+          "valor": 72.0,
+          "qtde": 3.0
+        },
+        "EMPADAO FRANGO F13": {
+          "valor": 943.4,
+          "qtde": 11.0
+        },
+        "TORTINHA GOURMET MISTA FESTA CX": {
+          "valor": 879.2000000000003,
+          "qtde": 16.0
+        },
+        "BRIG. DOIS AMORES 25UN": {
+          "valor": 396.0,
+          "qtde": 6.0
+        },
+        "BRIG. DARK 25UN": {
+          "valor": 924.0,
+          "qtde": 14.0
+        },
+        "BOLO CENOURA F25": {
+          "valor": 1352.0,
+          "qtde": 19.0
+        },
+        "CHOCOBERRIES F13": {
+          "valor": 3012.5,
+          "qtde": 23.0
+        },
+        "CHEESECAKE GOIABA F20": {
+          "valor": 377.0,
+          "qtde": 2.0
+        },
+        "BRIG. DARK 12UN": {
+          "valor": 561.0,
+          "qtde": 17.0
+        },
+        "DELICIA COCO F25": {
+          "valor": 4664.1,
+          "qtde": 24.0
+        },
+        "BRIG. CHURROS 12UN": {
+          "valor": 297.0,
+          "qtde": 9.0
+        },
+        "BRIG. DOIS AMORES 12UN": {
+          "valor": 231.0,
+          "qtde": 7.0
+        },
+        "BRIG. BEIJINHO 25UN": {
+          "valor": 264.0,
+          "qtde": 4.0
+        },
+        "BRIG. NOZES 25UN": {
+          "valor": 82.0,
+          "qtde": 1.0
+        },
+        "CHOCOBERRIES F20": {
+          "valor": 5917.450000000001,
+          "qtde": 28.0
+        },
+        "GELEIA FRUT VER 200GR": {
+          "valor": 130.0,
+          "qtde": 5.0
+        },
+        "BRIG. BRANCO DIVERTIDO 25UN": {
+          "valor": 198.0,
+          "qtde": 3.0
+        },
+        "IF PINGO DE EMILIA": {
+          "valor": 384.29999999999995,
+          "qtde": 6.0
+        },
+        "GELEIA MORANGO 200GR": {
+          "valor": 104.0,
+          "qtde": 4.0
+        },
+        "BOLIM CENOURA": {
+          "valor": 131.5,
+          "qtde": 5.0
+        },
+        "TORTA MOUSSE F25": {
+          "valor": 2235.05,
+          "qtde": 8.0
+        },
+        "TORTA BANANA F13": {
+          "valor": 169.0,
+          "qtde": 2.0
+        },
+        "IF BRIG. NINHO NUTELLA": {
+          "valor": 640.4999999999999,
+          "qtde": 12.0
+        },
+        "TORTINHA GOURMET BABA FESTA CX": {
+          "valor": 386.95,
+          "qtde": 9.0
+        },
+        "FT QUEBRA NOZES": {
+          "valor": 734.25,
+          "qtde": 21.0
+        },
+        "QUICHE ALHO PORO F25": {
+          "valor": 1449.0,
+          "qtde": 9.0
+        },
+        "BRIG. PISTACHE 12UN": {
+          "valor": 294.0,
+          "qtde": 6.0
+        },
+        "BRIG. PRECIOSO 12UN": {
+          "valor": 297.0,
+          "qtde": 9.0
+        },
+        "BRIG. BRANCO PRECIOSO 12UN": {
+          "valor": 165.0,
+          "qtde": 5.0
+        },
+        "TOPO DE BOLO PARA FESTA PRATA FELIZ ANIVERSÁRIO": {
+          "valor": 64.0,
+          "qtde": 4.0
+        },
+        "BRIG. PRECIOSO 25UN": {
+          "valor": 330.0,
+          "qtde": 5.0
+        },
+        "PET HAPPY": {
+          "valor": 32.0,
+          "qtde": 4.0
+        },
+        "NOVA SWEET DARK F13": {
+          "valor": 1014.0,
+          "qtde": 9.0
+        },
+        "EMPADAO FRANGO F25": {
+          "valor": 1920.0,
+          "qtde": 12.0
+        },
+        "FIOS DE OVOS 250GRS": {
+          "valor": 417.0,
+          "qtde": 7.0
+        },
+        "QUEBRA NOZES F13": {
+          "valor": 940.5,
+          "qtde": 8.0
+        },
+        "GELEIA GOIABA 200GR": {
+          "valor": 98.0,
+          "qtde": 4.0
+        },
+        "IF BRIG. BEIJINHO": {
+          "valor": 257.4,
+          "qtde": 6.0
+        },
+        "MATE NATURAL": {
+          "valor": 68.0,
+          "qtde": 8.0
+        },
+        "IF BRIG. DARK": {
+          "valor": 470.9999999999999,
+          "qtde": 10.0
+        },
+        "QUEBRA NOZES F25": {
+          "valor": 1016.4,
+          "qtde": 4.0
+        },
+        "BRIG. NINHO NUTELLA 12UN": {
+          "valor": 297.0,
+          "qtde": 9.0
+        },
+        "BRIG. BRULLE 12UN": {
+          "valor": 132.0,
+          "qtde": 4.0
+        },
+        "AURORA F25": {
+          "valor": 1897.95,
+          "qtde": 9.0
+        },
+        "BOLO MILHO COM COCO F25": {
+          "valor": 65.0,
+          "qtde": 1.0
+        },
+        "CHOCONOZES F25": {
+          "valor": 596.0,
+          "qtde": 2.0
+        },
+        "IF BRIG. BRANCO PRECIOSO": {
+          "valor": 171.6,
+          "qtde": 4.0
+        },
+        "BRIG. NOZES 12UN": {
+          "valor": 196.0,
+          "qtde": 4.0
+        },
+        "BRIG. NINHO NUTELLA 25UN": {
+          "valor": 462.0,
+          "qtde": 7.0
+        },
+        "RED VELVET F25": {
+          "valor": 3483.1500000000005,
+          "qtde": 12.0
+        },
+        "IF BRIG. PISTACHE": {
+          "valor": 383.4,
+          "qtde": 6.0
+        },
+        "IF BRIG. NOZES": {
+          "valor": 425.4,
+          "qtde": 6.0
+        },
+        "IF BRIG. CHURROS": {
+          "valor": 512.0999999999999,
+          "qtde": 9.0
+        },
+        "AGUA NATURAL": {
+          "valor": 27.96,
+          "qtde": 4.0
+        },
+        "CHOCOBERRIES F25": {
+          "valor": 4194.25,
+          "qtde": 14.0
+        },
+        "CALDA LARANJA 200GR": {
+          "valor": 52.0,
+          "qtde": 2.0
+        },
+        "MATE LIMAO": {
+          "valor": 17.0,
+          "qtde": 2.0
+        },
+        "MINI QUICHE ALHO PORO": {
+          "valor": 12.5,
+          "qtde": 1.0
+        },
+        "GUARANA ZERO": {
+          "valor": 52.61999999999999,
+          "qtde": 6.0
+        },
+        "BRIG. BRULLE 25UN": {
+          "valor": 198.0,
+          "qtde": 3.0
+        },
+        "CHEESECAKE F. VERM F20": {
+          "valor": 1461.6,
+          "qtde": 7.0
+        },
+        "BRIG. CARAMELO 12UN": {
+          "valor": 231.0,
+          "qtde": 7.0
+        },
+        "CHOCONOZES F13": {
+          "valor": 155.0,
+          "qtde": 1.0
+        },
+        "QUICHE CEBOLA F25": {
+          "valor": 648.0,
+          "qtde": 4.0
+        },
+        "IF BRIG. CHOCOLATE BRANCO": {
+          "valor": 213.60000000000002,
+          "qtde": 4.0
+        },
+        "AURORA ENFEITADA F25": {
+          "valor": 1260.0,
+          "qtde": 6.0
+        },
+        "BOLIM CHOCOLATE": {
+          "valor": 46.0,
+          "qtde": 2.0
+        },
+        "BRIG. TRADICIONAL 12UN": {
+          "valor": 264.0,
+          "qtde": 8.0
+        },
+        "DELICIA CAMADAS F25": {
+          "valor": 1446.5,
+          "qtde": 7.0
+        },
+        "AGUA TONICA ZERO": {
+          "valor": 17.54,
+          "qtde": 2.0
+        },
+        "BRIG. BRANCO DIVERTIDO 12UN": {
+          "valor": 33.0,
+          "qtde": 1.0
+        },
+        "BRIG. CARAMELO 25UN": {
+          "valor": 66.0,
+          "qtde": 1.0
+        },
+        "ENCHARCADA F13": {
+          "valor": 215.0,
+          "qtde": 2.0
+        },
+        "PINGO DE EMILIA 25UN": {
+          "valor": 198.0,
+          "qtde": 3.0
+        },
+        "BRIG. CHURROS 25UN": {
+          "valor": 330.0,
+          "qtde": 5.0
+        },
+        "TORTA DE BANANA F22": {
+          "valor": 438.55,
+          "qtde": 2.0
+        },
+        "DELICIOSA NAKED F30": {
+          "valor": 550.0,
+          "qtde": 1.0
+        },
+        "PINGO DE EMILIA 12UN": {
+          "valor": 33.0,
+          "qtde": 1.0
+        },
+        "TOPO DE BOLO PARA FESTA DOURADA FELIZ ANIVERSÁRIO": {
+          "valor": 15.0,
+          "qtde": 1.0
+        },
+        "CROCANTE F13": {
+          "valor": 253.5,
+          "qtde": 3.0
+        },
+        "BRIG. PISTACHE 25UN": {
+          "valor": 82.0,
+          "qtde": 1.0
+        },
+        "FT BOLO CENOURA": {
+          "valor": 17.6,
+          "qtde": 2.0
+        },
+        "AGUA TONICA": {
+          "valor": 8.77,
+          "qtde": 1.0
+        },
+        "AURORA ENFEITADA F30": {
+          "valor": 550.0,
+          "qtde": 1.0
+        },
+        "ROCAMBOLE LARANJA F25": {
+          "valor": 333.0,
+          "qtde": 2.0
+        },
+        "TORTA DE PASCOA F25": {
+          "valor": 275.0,
+          "qtde": 1.0
+        },
+        "BRIG. PASCOA 12UN": {
+          "valor": 323.5,
+          "qtde": 6.0
+        },
+        "STRUDEL DIET": {
+          "valor": 16.0,
+          "qtde": 1.0
+        },
+        "CHEESECAKE GOIABA F25": {
+          "valor": 188.5,
+          "qtde": 1.0
+        },
+        "CHEESECAKE F. VERM F25": {
+          "valor": 448.05,
+          "qtde": 2.0
+        },
+        "TORTA DE PASCOA F13": {
+          "valor": 145.0,
+          "qtde": 1.0
+        },
+        "CACHORRINHO": {
+          "valor": 15.0,
+          "qtde": 2.0
+        },
+        "FT CROCANTE": {
+          "valor": 370.9,
+          "qtde": 12.0
+        },
+        "BRIG. PINGO DE EMILIA 25UN": {
+          "valor": 132.0,
+          "qtde": 2.0
+        },
+        "VELA DOURADA NUMERO - 5": {
+          "valor": 10.0,
+          "qtde": 1.0
+        },
+        "VELA PRATA NUMERO - 5": {
+          "valor": 10.0,
+          "qtde": 1.0
+        },
+        "VELA DOURADA NUMERO - 1": {
+          "valor": 10.0,
+          "qtde": 1.0
+        },
+        "VELA PRATA NUMERO - 1": {
+          "valor": 10.0,
+          "qtde": 1.0
+        },
+        "BRIG. MIX 12UN": {
+          "valor": 66.0,
+          "qtde": 2.0
+        },
+        "FT BOLO MILHO": {
+          "valor": 17.6,
+          "qtde": 2.0
+        },
+        "FT BOLO LARANJA": {
+          "valor": 17.6,
+          "qtde": 2.0
+        },
+        "BOLIM CHOCOLATE PASCOA": {
+          "valor": 33.0,
+          "qtde": 1.0
+        },
+        "IF BRIG. PINGO DE EMILIA": {
+          "valor": 169.8,
+          "qtde": 2.0
+        },
+        "VELA DESING PARABENS PRATA": {
+          "valor": 35.0,
+          "qtde": 1.0
+        },
+        "VELA ESTRELA DOURADA 4UN": {
+          "valor": 30.0,
+          "qtde": 1.0
+        },
+        "BRIG. PASCOA 25UN": {
+          "valor": 176.0,
+          "qtde": 2.0
+        },
+        "FT CHEESECAKE MORANGO": {
+          "valor": 30.0,
+          "qtde": 1.0
+        }
+      },
+      "LOJA": {
+        "MISTO Q CROISSANT": {
+          "valor": 351.5,
+          "qtde": 19.0
+        },
+        "MORANGO AO LEITE": {
+          "valor": 126.0,
+          "qtde": 9.0
+        },
+        "BISC PALMIER 100GR": {
+          "valor": 432.0,
+          "qtde": 36.0
+        },
+        "GUARANA ZERO": {
+          "valor": 165.0,
+          "qtde": 22.0
+        },
+        "FT DELICIOSA": {
+          "valor": 10730.01,
+          "qtde": 370.0
+        },
+        "MEDIA": {
+          "valor": 1107.0,
+          "qtde": 82.0
+        },
+        "SUCO LARANJA C/ MORANGO": {
+          "valor": 480.5,
+          "qtde": 31.0
+        },
+        "CAFE COADO": {
+          "valor": 1480.51,
+          "qtde": 141.0
+        },
+        "FRUTA DA ESTACAO": {
+          "valor": 56.0,
+          "qtde": 8.0
+        },
+        "PAO ITALIANO": {
+          "valor": 622.56,
+          "qtde": 83.0
+        },
+        "PAO DE QUEIJO": {
+          "valor": 3372.8000000000047,
+          "qtde": 496.0
+        },
+        "FT BOLO CENOURA": {
+          "valor": 844.7999999999988,
+          "qtde": 96.0
+        },
+        "SUCO MORANGO": {
+          "valor": 170.5,
+          "qtde": 11.0
+        },
+        "FT EMPADAO FRANGO": {
+          "valor": 2030.01,
+          "qtde": 116.0
+        },
+        "EXPRESSO C/ BRIG. PEQ": {
+          "valor": 501.3999999999997,
+          "qtde": 46.0
+        },
+        "CAFE EXPRESSO": {
+          "valor": 4641.0,
+          "qtde": 546.0
+        },
+        "FT TENTACAO": {
+          "valor": 1445.4100000000008,
+          "qtde": 66.0
+        },
+        "CAPPUCCINO GRD": {
+          "valor": 1188.01,
+          "qtde": 88.0
+        },
+        "FT TORTA BANANA": {
+          "valor": 656.9999999999997,
+          "qtde": 30.0
+        },
+        "FT TORTA LIMAO": {
+          "valor": 1379.700000000001,
+          "qtde": 63.0
+        },
+        "CHOCOLATE GELADO": {
+          "valor": 294.5,
+          "qtde": 19.0
+        },
+        "FT BANOFFEE": {
+          "valor": 460.0,
+          "qtde": 20.0
+        },
+        "MISTO TORRADA PETROPOLIS": {
+          "valor": 555.01,
+          "qtde": 30.0
+        },
+        "VELA PALITO ROSA": {
+          "valor": 18.0,
+          "qtde": 3.0
+        },
+        "AURORA F25": {
+          "valor": 188.5,
+          "qtde": 1.0
+        },
+        "QUICHE ALHO PORO F13": {
+          "valor": 892.5,
+          "qtde": 51.0
+        },
+        "FT BOLO LARANJA": {
+          "valor": 888.7999999999992,
+          "qtde": 101.0
+        },
+        "PETROPOLIS CHAPA": {
+          "valor": 297.0,
+          "qtde": 22.0
+        },
+        "COMBO 03 CAFE DA MANHA": {
+          "valor": 546.0,
+          "qtde": 7.0
+        },
+        "AGUA NATURAL": {
+          "valor": 1014.01,
+          "qtde": 156.0
+        },
+        "MINI QUICHE CEBOLA": {
+          "valor": 200.0,
+          "qtde": 16.0
+        },
+        "FT CROCANTE": {
+          "valor": 722.7099999999996,
+          "qtde": 33.0
+        },
+        "COCA COLA ZERO": {
+          "valor": 592.5,
+          "qtde": 79.0
+        },
+        "EMBALAGEM FATIA": {
+          "valor": 140.0,
+          "qtde": 70.0
+        },
+        "DELICIOSA NAKED F20": {
+          "valor": 4335.5,
+          "qtde": 23.0
+        },
+        "MATE DA CASA": {
+          "valor": 612.0,
+          "qtde": 51.0
+        },
+        "SALADA VERAO": {
+          "valor": 1699.5000000000011,
+          "qtde": 55.0
+        },
+        "SUCO LARANJA": {
+          "valor": 936.01,
+          "qtde": 78.0
+        },
+        "CAFE EM PÓ TASSINARI (NERO)": {
+          "valor": 28.0,
+          "qtde": 1.0
+        },
+        "VULCAO DIVERTIDO": {
+          "valor": 350.0,
+          "qtde": 20.0
+        },
+        "BRIG. TRADICIONAL 04UN": {
+          "valor": 403.05,
+          "qtde": 31.0
+        },
+        "STRUDEL DIET": {
+          "valor": 144.0,
+          "qtde": 9.0
+        },
+        "FT SWEET DARK": {
+          "valor": 2275.0,
+          "qtde": 91.0
+        },
+        "FT CHOCOBERRIES": {
+          "valor": 1210.0,
+          "qtde": 44.0
+        },
+        "CAFE EXPR DESCAF PEQ": {
+          "valor": 152.0,
+          "qtde": 16.0
+        },
+        "FT ALEMA": {
+          "valor": 2409.0100000000034,
+          "qtde": 110.0
+        },
+        "VULCAO CENOURA": {
+          "valor": 280.5,
+          "qtde": 17.0
+        },
+        "ALEMA F22": {
+          "valor": 3016.0,
+          "qtde": 16.0
+        },
+        "AGUA GASOSA": {
+          "valor": 1358.5,
+          "qtde": 209.0
+        },
+        "COCA COLA": {
+          "valor": 285.0,
+          "qtde": 38.0
+        },
+        "OVOS MEXIDOS": {
+          "valor": 456.0,
+          "qtde": 38.0
+        },
+        "FT AURORA": {
+          "valor": 399.0,
+          "qtde": 19.0
+        },
+        "FT EMILIA": {
+          "valor": 437.9999999999999,
+          "qtde": 20.0
+        },
+        "CHOC QUENTE PEQ": {
+          "valor": 89.10000000000001,
+          "qtde": 9.0
+        },
+        "BOLIM LARANJA": {
+          "valor": 402.5,
+          "qtde": 23.0
+        },
+        "TORTINHA GOURMET CHOCO FESTA CX": {
+          "valor": 373.5,
+          "qtde": 9.0
+        },
+        "BISC GOIABINHA 100GR": {
+          "valor": 204.0,
+          "qtde": 17.0
+        },
+        "QUEBRA NOZES F13": {
+          "valor": 105.0,
+          "qtde": 1.0
+        },
+        "POTE BABA DE MOÇA FINA 250GR": {
+          "valor": 97.0,
+          "qtde": 2.0
+        },
+        "FT BOLO MILHO": {
+          "valor": 510.40000000000043,
+          "qtde": 58.0
+        },
+        "FT TORTA MOUSSE": {
+          "valor": 605.0,
+          "qtde": 22.0
+        },
+        "FT DELICIA COCO": {
+          "valor": 963.5999999999993,
+          "qtde": 44.0
+        },
+        "FT QUEBRA NOZES": {
+          "valor": 275.0,
+          "qtde": 10.0
+        },
+        "CACHORRINHO": {
+          "valor": 502.5,
+          "qtde": 67.0
+        },
+        "ROCAMBOLE LARANJA F25": {
+          "valor": 166.5,
+          "qtde": 1.0
+        },
+        "FT RED VELVET": {
+          "valor": 1155.0,
+          "qtde": 42.0
+        },
+        "FT FANTASIA": {
+          "valor": 1116.8999999999996,
+          "qtde": 51.0
+        },
+        "FANTASIA F25": {
+          "valor": 942.5,
+          "qtde": 5.0
+        },
+        "BOLIM CENOURA": {
+          "valor": 280.0,
+          "qtde": 16.0
+        },
+        "CALDA CHOC 150GR": {
+          "valor": 40.0,
+          "qtde": 2.0
+        },
+        "CHOCONOZES F13": {
+          "valor": 155.0,
+          "qtde": 1.0
+        },
+        "BRIG. TRADICIONAL 12UN": {
+          "valor": 429.0,
+          "qtde": 13.0
+        },
+        "BRIG. BRANCO DIVERTIDO 12UN": {
+          "valor": 33.0,
+          "qtde": 1.0
+        },
+        "SALADA MONTADA": {
+          "valor": 636.0,
+          "qtde": 24.0
+        },
+        "PET HAPPY": {
+          "valor": 80.0,
+          "qtde": 10.0
+        },
+        "MACCHIATO PEQ": {
+          "valor": 221.0,
+          "qtde": 26.0
+        },
+        "AD PISTACHE": {
+          "valor": 2.5,
+          "qtde": 1.0
+        },
+        "CAFE CARIOCA": {
+          "valor": 578.0,
+          "qtde": 68.0
+        },
+        "BRIG. DOIS AMORES 02UN": {
+          "valor": 23.1,
+          "qtde": 3.0
+        },
+        "TORTINHA BABA": {
+          "valor": 207.10000000000005,
+          "qtde": 19.0
+        },
+        "CAFE PRENSA FRANC. DUPLO": {
+          "valor": 93.0,
+          "qtde": 6.0
+        },
+        "CAFE DUPLO": {
+          "valor": 557.7099999999997,
+          "qtde": 33.0
+        },
+        "BRIG. C/ MORANGO TRADICIONAL": {
+          "valor": 1089.9999999999989,
+          "qtde": 100.0
+        },
+        "TORTINHA GOURMET CHOCO FESTA UN": {
+          "valor": 7.0,
+          "qtde": 1.0
+        },
+        "BRIG. CHURROS 02UN": {
+          "valor": 23.1,
+          "qtde": 3.0
+        },
+        "FT ROCAMBOLE LARANJA": {
+          "valor": 298.5,
+          "qtde": 15.0
+        },
+        "TORTINHA GOURMET BABA FESTA UN": {
+          "valor": 14.0,
+          "qtde": 2.0
+        },
+        "MATE LIMAO": {
+          "valor": 90.0,
+          "qtde": 12.0
+        },
+        "BRIG. CHOCOLATE BRANCO 02UN": {
+          "valor": 7.7,
+          "qtde": 1.0
+        },
+        "BRIG. C/ MORANGO PISTACHE": {
+          "valor": 254.40000000000003,
+          "qtde": 16.0
+        },
+        "TORTINHA CHOCOLATE": {
+          "valor": 414.2,
+          "qtde": 38.0
+        },
+        "FT MARAVILHA ABACAXI": {
+          "valor": 941.6999999999995,
+          "qtde": 43.0
+        },
+        "BRIG. CHOCOLATE BRANCO 01UN": {
+          "valor": 9.0,
+          "qtde": 2.0
+        },
+        "VULCAO DE NUTELLA": {
+          "valor": 192.5,
+          "qtde": 11.0
+        },
+        "CHA QUENTE": {
+          "valor": 229.5,
+          "qtde": 17.0
+        },
+        "BRIG. NOZES 01UN": {
+          "valor": 38.5,
+          "qtde": 7.0
+        },
+        "QUINDIM UN": {
+          "valor": 460.0,
+          "qtde": 46.0
+        },
+        "QUICHE CEBOLA F13": {
+          "valor": 402.5,
+          "qtde": 23.0
+        },
+        "DELICIOSA NAKED F13": {
+          "valor": 1290.0,
+          "qtde": 12.0
+        },
+        "BOLIM MILHO": {
+          "valor": 87.5,
+          "qtde": 5.0
+        },
+        "TORTA LIMAO F25": {
+          "valor": 188.5,
+          "qtde": 1.0
+        },
+        "CHEESECAKE F. VERM F13": {
+          "valor": 169.0,
+          "qtde": 2.0
+        },
+        "BANOFFE F20": {
+          "valor": 188.5,
+          "qtde": 1.0
+        },
+        "BRIG. BRULLE 02UN": {
+          "valor": 15.4,
+          "qtde": 2.0
+        },
+        "BRIG. PISTACHE 01UN": {
+          "valor": 93.61,
+          "qtde": 17.0
+        },
+        "BRIG. C/ MORANGO BRANCO": {
+          "valor": 283.40000000000003,
+          "qtde": 26.0
+        },
+        "MILKSHAKE MORANGO 300ML": {
+          "valor": 220.0,
+          "qtde": 10.0
+        },
+        "BISC COOKIE SUICO 100GR": {
+          "valor": 240.0,
+          "qtde": 20.0
+        },
+        "FT DELICIA EM CAMADAS": {
+          "valor": 481.79999999999984,
+          "qtde": 22.0
+        },
+        "MATE ZERO C LIMAO": {
+          "valor": 67.5,
+          "qtde": 9.0
+        },
+        "SUCO ABACAXI": {
+          "valor": 201.5,
+          "qtde": 13.0
+        },
+        "PAO FRANCES CHAPA": {
+          "valor": 186.90000000000006,
+          "qtde": 21.0
+        },
+        "RED VELVET F13": {
+          "valor": 322.5,
+          "qtde": 3.0
+        },
+        "BRIG. DARK 01UN": {
+          "valor": 67.5,
+          "qtde": 15.0
+        },
+        "CAPPUCCINO PEQ": {
+          "valor": 653.3999999999994,
+          "qtde": 66.0
+        },
+        "MACCHIADO DUPLO": {
+          "valor": 84.5,
+          "qtde": 5.0
+        },
+        "CHOC QUENTE GRD": {
+          "valor": 124.0,
+          "qtde": 8.0
+        },
+        "CAFE PINGADO": {
+          "valor": 212.5,
+          "qtde": 25.0
+        },
+        "CALDA CHOC 200GR": {
+          "valor": 30.0,
+          "qtde": 1.0
+        },
+        "CAFE C/ CREME": {
+          "valor": 108.9,
+          "qtde": 11.0
+        },
+        "BISC QUEIJO PARMESAO 100GR": {
+          "valor": 228.0,
+          "qtde": 19.0
+        },
+        "BRIG. TRADICIONAL 01UN": {
+          "valor": 162.0,
+          "qtde": 36.0
+        },
+        "QUEIJO Q PAO FRANCES": {
+          "valor": 94.5,
+          "qtde": 7.0
+        },
+        "BRIG. NINHO NUTELLA 01UN": {
+          "valor": 40.5,
+          "qtde": 9.0
+        },
+        "NOVA SWEET DARK F13": {
+          "valor": 436.0,
+          "qtde": 4.0
+        },
+        "VELA PALITO BRANCA": {
+          "valor": 42.0,
+          "qtde": 7.0
+        },
+        "BRIG. C/ MORANGO DARK": {
+          "valor": 643.0999999999996,
+          "qtde": 59.0
+        },
+        "FT CHEESECAKE FRTS VERM.": {
+          "valor": 322.0,
+          "qtde": 14.0
+        },
+        "OMELETE": {
+          "valor": 286.0,
+          "qtde": 13.0
+        },
+        "MATE NATURAL": {
+          "valor": 202.5,
+          "qtde": 27.0
+        },
+        "BRIG. TRADICIONAL 02UN": {
+          "valor": 277.1999999999998,
+          "qtde": 36.0
+        },
+        "VELA VULCAO PRATEADA": {
+          "valor": 60.0,
+          "qtde": 6.0
+        },
+        "CHOCOBERRIES F13": {
+          "valor": 215.0,
+          "qtde": 2.0
+        },
+        "BOLIM CHOCOLATE C/ COBERTURA": {
+          "valor": 541.5,
+          "qtde": 19.0
+        },
+        "MINI QUICHE ALHO PORO": {
+          "valor": 262.61,
+          "qtde": 21.0
+        },
+        "MARAVILHA ABACAXI F13": {
+          "valor": 253.5,
+          "qtde": 3.0
+        },
+        "EMILIA F25": {
+          "valor": 591.0,
+          "qtde": 3.0
+        },
+        "PINGO DE EMILIA 01UN": {
+          "valor": 13.5,
+          "qtde": 3.0
+        },
+        "EMPADAO FRANGO F25": {
+          "valor": 160.0,
+          "qtde": 1.0
+        },
+        "MERENGUE 200ML": {
+          "valor": 80.0,
+          "qtde": 4.0
+        },
+        "BRIG. PISTACHE 04UN": {
+          "valor": 52.5,
+          "qtde": 3.0
+        },
+        "VELA PALITO AZUL": {
+          "valor": 36.0,
+          "qtde": 6.0
+        },
+        "MILKSHAKE CHOCOLATE 300ML": {
+          "valor": 242.0,
+          "qtde": 11.0
+        },
+        "BISC GORGONZOLA 100GR": {
+          "valor": 156.0,
+          "qtde": 13.0
+        },
+        "FT CHOCONOZES": {
+          "valor": 510.0,
+          "qtde": 17.0
+        },
+        "MISTO Q MULTIGRAOS": {
+          "valor": 139.51,
+          "qtde": 9.0
+        },
+        "BRIG. DOIS AMORES 01UN": {
+          "valor": 40.5,
+          "qtde": 9.0
+        },
+        "QUEIJO Q MULTIGRAOS": {
+          "valor": 170.5,
+          "qtde": 11.0
+        },
+        "COMBO 01 CAFE DA MANHA": {
+          "valor": 192.0,
+          "qtde": 6.0
+        },
+        "TORTINHA GOURMET MISTA FESTA CX": {
+          "valor": 415.0,
+          "qtde": 10.0
+        },
+        "ALEMA F13": {
+          "valor": 169.0,
+          "qtde": 2.0
+        },
+        "CHOCOBERRIES F20": {
+          "valor": 942.5,
+          "qtde": 5.0
+        },
+        "CHOCOBERRIES F25": {
+          "valor": 1074.0,
+          "qtde": 4.0
+        },
+        "BRIG. TRADICIONAL 25UN": {
+          "valor": 396.0,
+          "qtde": 6.0
+        },
+        "TORTA LIMAO F13": {
+          "valor": 84.5,
+          "qtde": 1.0
+        },
+        "TENTACAO F13": {
+          "valor": 676.0,
+          "qtde": 8.0
+        },
+        "GUARANA": {
+          "valor": 97.5,
+          "qtde": 13.0
+        },
+        "DELICIA CAMADAS F25": {
+          "valor": 565.5,
+          "qtde": 3.0
+        },
+        "CAFE AFFOGATO": {
+          "valor": 122.5,
+          "qtde": 7.0
+        },
+        "BOLIM CHOCOLATE": {
+          "valor": 315.0,
+          "qtde": 18.0
+        },
+        "BRIG. DARK 04UN": {
+          "valor": 39.0,
+          "qtde": 3.0
+        },
+        "PUDIM POTE UN": {
+          "valor": 82.5,
+          "qtde": 5.0
+        },
+        "CHA GELADO": {
+          "valor": 148.5,
+          "qtde": 11.0
+        },
+        "CAFE VIENENSE GDR": {
+          "valor": 111.0,
+          "qtde": 6.0
+        },
+        "FT CHEESECAKE GOIABA": {
+          "valor": 69.0,
+          "qtde": 3.0
+        },
+        "CHEESECAKE F. VERM F20": {
+          "valor": 188.5,
+          "qtde": 1.0
+        },
+        "QUEIJO Q CROISSANT": {
+          "valor": 203.5,
+          "qtde": 11.0
+        },
+        "LIMONADA SUICA": {
+          "valor": 155.0,
+          "qtde": 10.0
+        },
+        "BOLO CENOURA F25": {
+          "valor": 260.0,
+          "qtde": 4.0
+        },
+        "MISTO PAO FRANCES": {
+          "valor": 270.0,
+          "qtde": 20.0
+        },
+        "BRIG. NOZES 04UN": {
+          "valor": 35.0,
+          "qtde": 2.0
+        },
+        "BRIG. PISTACHE 12UN": {
+          "valor": 98.0,
+          "qtde": 2.0
+        },
+        "TORTA MOUSSE F25": {
+          "valor": 268.5,
+          "qtde": 1.0
+        },
+        "TORTINHA GOURMET BABA FESTA CX": {
+          "valor": 166.0,
+          "qtde": 4.0
+        },
+        "QUEIJO Q TORRADA PETROPOLIS": {
+          "valor": 203.51,
+          "qtde": 11.0
+        },
+        "CAFE EM GRAO TASSINARI(NERO)": {
+          "valor": 28.0,
+          "qtde": 1.0
+        },
+        "VELA FAISCA": {
+          "valor": 18.0,
+          "qtde": 2.0
+        },
+        "PINGADO DESCAFEINDO": {
+          "valor": 28.5,
+          "qtde": 3.0
+        },
+        "BRIG. PISTACHE 02UN": {
+          "valor": 79.2,
+          "qtde": 8.0
+        },
+        "NOVA SWEET DARK F25": {
+          "valor": 1122.5,
+          "qtde": 5.0
+        },
+        "PAO CHAPA MULTIGRAOS": {
+          "valor": 65.41,
+          "qtde": 6.0
+        },
+        "MEDIA DESCAFEINADO": {
+          "valor": 42.599999999999994,
+          "qtde": 3.0
+        },
+        "MATE NAT ZERO": {
+          "valor": 37.5,
+          "qtde": 5.0
+        },
+        "CAFE EM PO TASSINARI(ORO)": {
+          "valor": 28.0,
+          "qtde": 1.0
+        },
+        "SHOT LIMAO": {
+          "valor": 12.0,
+          "qtde": 6.0
+        },
+        "MARAVILHA ABACAXI F25": {
+          "valor": 942.5,
+          "qtde": 5.0
+        },
+        "CAPUCCINO DESCAF. PEQ": {
+          "valor": 32.7,
+          "qtde": 3.0
+        },
+        "QUICHE PRESUNTO F13": {
+          "valor": 105.0,
+          "qtde": 6.0
+        },
+        "PAO NA CHAPA CROISSANT": {
+          "valor": 124.0,
+          "qtde": 8.0
+        },
+        "BRIG. CARAMELO 12UN": {
+          "valor": 33.0,
+          "qtde": 1.0
+        },
+        "VELA VULCAO VERMELHA": {
+          "valor": 30.0,
+          "qtde": 3.0
+        },
+        "VULCAO RED VELVET": {
+          "valor": 72.0,
+          "qtde": 4.0
+        },
+        "GELATO ARTESANAL TAPIOCA BOLA": {
+          "valor": 30.0,
+          "qtde": 2.0
+        },
+        "GELATO ARTESANAL BAULINHA AFRICANA BOLA": {
+          "valor": 210.0,
+          "qtde": 14.0
+        },
+        "FANTASIA F13": {
+          "valor": 422.5,
+          "qtde": 5.0
+        },
+        "TENTACAO F25": {
+          "valor": 565.5,
+          "qtde": 3.0
+        },
+        "BOLIM CENOURA C/ COBERTURA": {
+          "valor": 199.5,
+          "qtde": 7.0
+        },
+        "BRIG. NINHO NUTELLA 02UN": {
+          "valor": 7.7,
+          "qtde": 1.0
+        },
+        "DELICIOSA NAKED F25": {
+          "valor": 3759.0,
+          "qtde": 14.0
+        },
+        "BRIG. DOIS AMORES 04UN": {
+          "valor": 13.0,
+          "qtde": 1.0
+        },
+        "PINGO DE EMILIA 04UN": {
+          "valor": 13.0,
+          "qtde": 1.0
+        },
+        "AD CALDA CHOC": {
+          "valor": 3.5,
+          "qtde": 1.0
+        },
+        "MINI QUICHE PRESUNTO": {
+          "valor": 50.0,
+          "qtde": 4.0
+        },
+        "MEDIA DESCAFEINADA": {
+          "valor": 19.8,
+          "qtde": 2.0
+        },
+        "BRIG. CARAMELO 04UN": {
+          "valor": 13.0,
+          "qtde": 1.0
+        },
+        "COMBO 02 CAFE DA MANHA": {
+          "valor": 140.0,
+          "qtde": 2.0
+        },
+        "TOPPER CAKE": {
+          "valor": 30.0,
+          "qtde": 2.0
+        },
+        "DELICIA COCO F13": {
+          "valor": 169.0,
+          "qtde": 2.0
+        },
+        "BRIG. MIX 12UN": {
+          "valor": 99.0,
+          "qtde": 3.0
+        },
+        "AD MUSSARELA": {
+          "valor": 12.0,
+          "qtde": 2.0
+        },
+        "BRIG. NINHO NUTELLA 04UN": {
+          "valor": 13.0,
+          "qtde": 1.0
+        },
+        "BRIG. DOIS AMORES 25UN": {
+          "valor": 66.0,
+          "qtde": 1.0
+        },
+        "CHOCOLATE CREMOSO": {
+          "valor": 87.5,
+          "qtde": 5.0
+        },
+        "CAFE EM GRAO TASSINARI(ORO)": {
+          "valor": 84.0,
+          "qtde": 3.0
+        },
+        "BRIG. NOZES 02UN": {
+          "valor": 19.8,
+          "qtde": 2.0
+        },
+        "EMILIA F13": {
+          "valor": 289.5,
+          "qtde": 3.0
+        },
+        "BRIG. CARAMELO 02UN": {
+          "valor": 23.1,
+          "qtde": 3.0
+        },
+        "CHANTILLY A PARTE": {
+          "valor": 9.0,
+          "qtde": 3.0
+        },
+        "BRIG. DARK 02UN": {
+          "valor": 15.4,
+          "qtde": 2.0
+        },
+        "BRIG. CHOCOLATE BRANCO 12UN": {
+          "valor": 66.0,
+          "qtde": 2.0
+        },
+        "CAFE DA VOVO": {
+          "valor": 55.5,
+          "qtde": 3.0
+        },
+        "BOLO MILHO COM COCO F25": {
+          "valor": 65.0,
+          "qtde": 1.0
+        },
+        "TORTA COLORIDA F25": {
+          "valor": 268.5,
+          "qtde": 1.0
+        },
+        "CHEESECAKE GOIABA F13": {
+          "valor": 84.5,
+          "qtde": 1.0
+        },
+        "WAFFEL SIMPLES": {
+          "valor": 80.0,
+          "qtde": 4.0
+        },
+        "BRIG. BRANCO PRECIOSO 01UN": {
+          "valor": 4.5,
+          "qtde": 1.0
+        },
+        "AGUA TONICA": {
+          "valor": 45.0,
+          "qtde": 6.0
+        },
+        "CAFE DUPLO DESCAF.": {
+          "valor": 30.0,
+          "qtde": 2.0
+        },
+        "BRIG. BEIJINHO 02UN": {
+          "valor": 15.4,
+          "qtde": 2.0
+        },
+        "AD QUEIJO PARMESAO": {
+          "valor": 2.5,
+          "qtde": 1.0
+        },
+        "ENCHARCADA COPO": {
+          "valor": 49.5,
+          "qtde": 3.0
+        },
+        "MOKA GRD": {
+          "valor": 92.5,
+          "qtde": 5.0
+        },
+        "AD LEITE": {
+          "valor": 6.0,
+          "qtde": 1.0
+        },
+        "TORTA MOUSSE F13": {
+          "valor": 96.5,
+          "qtde": 1.0
+        },
+        "CALDA LARANJA 200GR": {
+          "valor": 20.0,
+          "qtde": 1.0
+        },
+        "BRIG. NINHO DELICADO 04UN": {
+          "valor": 13.0,
+          "qtde": 1.0
+        },
+        "BRIG. BRULLE 01UN": {
+          "valor": 9.0,
+          "qtde": 2.0
+        },
+        "QUICHE ALHO PORO F25": {
+          "valor": 306.0,
+          "qtde": 2.0
+        },
+        "RED VELVET F20": {
+          "valor": 377.0,
+          "qtde": 2.0
+        },
+        "AD MEL": {
+          "valor": 10.5,
+          "qtde": 3.0
+        },
+        "VELA DESING PARABENS NEON": {
+          "valor": 60.0,
+          "qtde": 2.0
+        },
+        "AURORA F13": {
+          "valor": 84.5,
+          "qtde": 1.0
+        },
+        "BOLO LARANJA F25": {
+          "valor": 65.0,
+          "qtde": 1.0
+        },
+        "CAPUCCINO DESCAF. GRD": {
+          "valor": 14.2,
+          "qtde": 1.0
+        },
+        "VELA PRATA NUMERO - ?": {
+          "valor": 20.0,
+          "qtde": 2.0
+        },
+        "BRIG. NINHO DELICADO 02UN": {
+          "valor": 7.7,
+          "qtde": 1.0
+        },
+        "DELICIA COCO F25": {
+          "valor": 188.5,
+          "qtde": 1.0
+        },
+        "VELA DOURADA NUMERO - 1": {
+          "valor": 10.0,
+          "qtde": 1.0
+        },
+        "VELA DOURADA NUMERO - 6": {
+          "valor": 10.0,
+          "qtde": 1.0
+        },
+        "BRIG. CHURROS 01UN": {
+          "valor": 4.5,
+          "qtde": 1.0
+        },
+        "VELA ESTRELA DOURADA 4UN": {
+          "valor": 75.0,
+          "qtde": 3.0
+        },
+        "AGUA TONICA ZERO": {
+          "valor": 7.5,
+          "qtde": 1.0
+        },
+        "VELA CORACAO 4UN": {
+          "valor": 100.0,
+          "qtde": 4.0
+        },
+        "AD GELEIA GOIABA": {
+          "valor": 6.0,
+          "qtde": 2.0
+        },
+        "VELA DOURADA NUMERO - 9": {
+          "valor": 10.0,
+          "qtde": 1.0
+        },
+        "VELA DOURADA NUMERO - 3": {
+          "valor": 10.0,
+          "qtde": 1.0
+        },
+        "BRIG. BEIJINHO 01UN": {
+          "valor": 9.0,
+          "qtde": 2.0
+        },
+        "VELA DESING PARABENS PRATA": {
+          "valor": 30.0,
+          "qtde": 1.0
+        },
+        "VELA PRATA NUMERO - 8": {
+          "valor": 10.0,
+          "qtde": 1.0
+        },
+        "VELA PRATA NUMERO - 4": {
+          "valor": 10.0,
+          "qtde": 1.0
+        },
+        "VULCAO CENOURA PASCOA": {
+          "valor": 23.0,
+          "qtde": 1.0
+        },
+        "BRIG. BRANCO DIVERTIDO 01UN": {
+          "valor": 4.5,
+          "qtde": 1.0
+        }
+      }
+    }
+  },
+  "total": {
+    "label": "TOTAL",
+    "v25": 455524.61,
+    "v26": 680164.72,
+    "delta": 224640.11,
+    "delta_pct": 49.314593562793455,
+    "p25": 5383,
+    "p26": 6860,
+    "t25": 84.6228144157533,
+    "t26": 99.14937609329445
+  },
+  "areas": [
+    {
+      "label": "LOJA — Mesa",
+      "v25": 58000.740000000944,
+      "v26": 78015.40000000026,
+      "delta": 20014.659999999312,
+      "delta_pct": 34.50759421345139,
+      "p25": 1992,
+      "p26": 2478,
+      "t25": 29.116837349398065,
+      "t26": 31.483212267958134
+    },
+    {
+      "label": "LOJA — Balcão",
+      "v25": 47237.430000000255,
+      "v26": 63239.31000000035,
+      "delta": 16001.880000000092,
+      "delta_pct": 33.875424636776394,
+      "p25": 769,
+      "p26": 869,
+      "t25": 61.427087126138176,
+      "t26": 72.77250863061029
+    },
+    {
+      "label": "DELIVERY — iFood",
+      "v25": 192440.43999999782,
+      "v26": 281154.809999985,
+      "delta": 88714.36999998716,
+      "delta_pct": 46.099650364543,
+      "p25": 1914,
+      "p26": 2467,
+      "t25": 100.54359456635204,
+      "t26": 113.96627888122617
+    },
+    {
+      "label": "DELIVERY — Neemo",
+      "v25": 66879.00000000004,
+      "v26": 143729.29999999993,
+      "delta": 76850.29999999989,
+      "delta_pct": 114.90946335920069,
+      "p25": 314,
+      "p26": 600,
+      "t25": 212.99044585987275,
+      "t26": 239.54883333333322
+    },
+    {
+      "label": "DELIVERY — Pedido Atendimento",
+      "v25": 90967.00000000001,
+      "v26": 114025.90000000004,
+      "delta": 23058.900000000023,
+      "delta_pct": 25.34864291446351,
+      "p25": 394,
+      "p26": 446,
+      "t25": 230.8807106598985,
+      "t26": 255.66345291479828
+    }
+  ],
+  "divisions": [
+    {
+      "label": "LOJA",
+      "v25": 105238.1699999995,
+      "v26": 141254.70999999647,
+      "delta": 36016.53999999697,
+      "delta_pct": 34.22383722559707,
+      "p25": 2761,
+      "p26": 3347,
+      "t25": 38.11596160811282,
+      "t26": 42.20337914550238
+    },
+    {
+      "label": "DELIVERY",
+      "v25": 350286.4399999948,
+      "v26": 538910.0099999801,
+      "delta": 188623.56999998528,
+      "delta_pct": 53.84837905800409,
+      "p25": 2622,
+      "p26": 3513,
+      "t25": 133.59513348588666,
+      "t26": 153.4045004269798
+    }
+  ]
+}
