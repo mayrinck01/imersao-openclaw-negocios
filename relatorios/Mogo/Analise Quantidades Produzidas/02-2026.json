@@ -1,0 +1,370 @@
+{
+  "periodo": {
+    "de": "01/02/2026",
+    "ate": "28/02/2026"
+  },
+  "total_registros": 40,
+  "custo_total": "R$ 10.252,69",
+  "registros": [
+    {
+      "data": "09/02/2026",
+      "hora": "12:09:14",
+      "produto": "(prod) Alema F22 (un)",
+      "qtde": "35,000",
+      "custo_unit": "46,75",
+      "custo_total": "1.636,10",
+      "turno": "Geral"
+    },
+    {
+      "data": "09/02/2026",
+      "hora": "12:08:37",
+      "produto": "(prod) Semi Alema F22 (un)",
+      "qtde": "35,000",
+      "custo_unit": "37,38",
+      "custo_total": "1.308,16",
+      "turno": "Geral"
+    },
+    {
+      "data": "09/02/2026",
+      "hora": "12:08:09",
+      "produto": "(prod) Calda Chocolate Alema (kg)",
+      "qtde": "27,000",
+      "custo_unit": "13,34",
+      "custo_total": "360,17",
+      "turno": "Geral"
+    },
+    {
+      "data": "09/02/2026",
+      "hora": "12:08:00",
+      "produto": "(prod) Creme de Alema (kg)",
+      "qtde": "32,190",
+      "custo_unit": "29,75",
+      "custo_total": "957,66",
+      "turno": "Geral"
+    },
+    {
+      "data": "09/02/2026",
+      "hora": "11:59:53",
+      "produto": "(prod) Alema F13 (un)",
+      "qtde": "41,000",
+      "custo_unit": "18,03",
+      "custo_total": "739,27",
+      "turno": "Geral"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "18:10:34",
+      "produto": "(prod) Batido Preto F25 (un)",
+      "qtde": "49,000",
+      "custo_unit": "7,47",
+      "custo_total": "366,22",
+      "turno": "Geral"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "18:10:33",
+      "produto": "(prod) Batido Preto F13 (un)",
+      "qtde": "16,000",
+      "custo_unit": "1,75",
+      "custo_total": "27,95",
+      "turno": "Geral"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "18:10:33",
+      "produto": "(prod) Batido Branco F25 (un)",
+      "qtde": "21,000",
+      "custo_unit": "5,39",
+      "custo_total": "113,10",
+      "turno": "Geral"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "18:10:32",
+      "produto": "(prod) Batido Branco F13 (un)",
+      "qtde": "20,000",
+      "custo_unit": "1,40",
+      "custo_total": "27,98",
+      "turno": "Geral"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "18:10:31",
+      "produto": "(prod) Batido Branco F20 (un)",
+      "qtde": "30,000",
+      "custo_unit": "3,50",
+      "custo_total": "104,92",
+      "turno": "Geral"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "18:07:49",
+      "produto": "(prod) Batido Chocolate (kg)",
+      "qtde": "41,230",
+      "custo_unit": "9,71",
+      "custo_total": "400,20",
+      "turno": "Geral"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "18:07:47",
+      "produto": "(prod) Batido Branco (kg)",
+      "qtde": "37,730",
+      "custo_unit": "7,00",
+      "custo_total": "263,91",
+      "turno": "Geral"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "18:04:49",
+      "produto": "(prod) Base Torta Limao F25 (un)",
+      "qtde": "14,000",
+      "custo_unit": "2,61",
+      "custo_total": "36,51",
+      "turno": "Geral"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "18:04:49",
+      "produto": "(prod) Base Torta Limao F13 (un)",
+      "qtde": "11,000",
+      "custo_unit": "0,65",
+      "custo_total": "7,17",
+      "turno": "Geral"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "18:02:59",
+      "produto": "(prod) Quiche Cebola F25 (un)",
+      "qtde": "7,000",
+      "custo_unit": "19,70",
+      "custo_total": "137,89",
+      "turno": "Geral"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "18:02:58",
+      "produto": "(prod) Base Quiche F13 (un)",
+      "qtde": "19,000",
+      "custo_unit": "0,38",
+      "custo_total": "7,23",
+      "turno": "Geral"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "18:02:57",
+      "produto": "(prod) Quiche Alho Poro F9 (un)",
+      "qtde": "9,000",
+      "custo_unit": "1,03",
+      "custo_total": "9,27",
+      "turno": "Geral"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "18:02:56",
+      "produto": "(prod) Quiche Alho Poro F13 (un)",
+      "qtde": "31,000",
+      "custo_unit": "1,49",
+      "custo_total": "46,05",
+      "turno": "Geral"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "18:01:37",
+      "produto": "(prod) Recheio Quiche Cebola (kg)",
+      "qtde": "9,900",
+      "custo_unit": "7,50",
+      "custo_total": "74,20",
+      "turno": "Geral"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "18:01:35",
+      "produto": "(prod) Recheio Quiche Alho Poro (kg)",
+      "qtde": "3,300",
+      "custo_unit": "13,21",
+      "custo_total": "43,61",
+      "turno": "Geral"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "17:59:52",
+      "produto": "(prod) Base Quiche F9 (un)",
+      "qtde": "9,000",
+      "custo_unit": "0,30",
+      "custo_total": "2,74",
+      "turno": "Geral"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "17:59:52",
+      "produto": "(prod) Base Quiche F25 (un)",
+      "qtde": "7,000",
+      "custo_unit": "2,66",
+      "custo_total": "18,64",
+      "turno": "Geral"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "17:59:51",
+      "produto": "(prod) Base Quiche F13 (un)",
+      "qtde": "50,000",
+      "custo_unit": "0,38",
+      "custo_total": "19,02",
+      "turno": "Geral"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "17:57:51",
+      "produto": "(prod) Base Cheescake F25 (un)",
+      "qtde": "12,000",
+      "custo_unit": "7,28",
+      "custo_total": "87,36",
+      "turno": "Geral"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "17:57:51",
+      "produto": "(prod) Base Cheescake F13 (un)",
+      "qtde": "12,000",
+      "custo_unit": "2,43",
+      "custo_total": "29,20",
+      "turno": "Geral"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "17:56:34",
+      "produto": "(prod) Recheio Cheescake (kg)",
+      "qtde": "17,920",
+      "custo_unit": "22,62",
+      "custo_total": "405,32",
+      "turno": "Geral"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "17:56:33",
+      "produto": "(prod) Base Cheescake (kg)",
+      "qtde": "4,960",
+      "custo_unit": "23,36",
+      "custo_total": "115,86",
+      "turno": "Geral"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "17:56:32",
+      "produto": "(prod) Massa Doce (LIMAO) (kg)",
+      "qtde": "6,150",
+      "custo_unit": "6,52",
+      "custo_total": "40,09",
+      "turno": "Geral"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "17:56:31",
+      "produto": "(prod) Massa Salgada (kg)",
+      "qtde": "4,770",
+      "custo_unit": "7,61",
+      "custo_total": "36,28",
+      "turno": "Geral"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "17:56:18",
+      "produto": "(prod) Batido Bolo Milho (kg)",
+      "qtde": "6,440",
+      "custo_unit": "17,35",
+      "custo_total": "111,72",
+      "turno": "Geral"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "17:56:17",
+      "produto": "(prod) Nova Massa Brigadeiro Preto (kg)",
+      "qtde": "19,860",
+      "custo_unit": "15,36",
+      "custo_total": "305,13",
+      "turno": "Geral"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "17:56:16",
+      "produto": "(prod) Massa Brigadeiro Brulle (kg)",
+      "qtde": "3,600",
+      "custo_unit": "23,25",
+      "custo_total": "83,71",
+      "turno": "Geral"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "17:56:14",
+      "produto": "(prod) Nova Cobertura de Brigadeiro (kg)",
+      "qtde": "22,800",
+      "custo_unit": "19,82",
+      "custo_total": "451,99",
+      "turno": "Geral"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "17:56:13",
+      "produto": "(prod) Creme Cake Patisserie (kg)",
+      "qtde": "35,120",
+      "custo_unit": "15,71",
+      "custo_total": "551,85",
+      "turno": "Geral"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "17:44:40",
+      "produto": "(prod) Alema F22 (un)",
+      "qtde": "10,000",
+      "custo_unit": "46,72",
+      "custo_total": "467,23",
+      "turno": "Geral"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "17:44:33",
+      "produto": "(prod) Semi Alema F22 (un)",
+      "qtde": "10,000",
+      "custo_unit": "37,36",
+      "custo_total": "373,59",
+      "turno": "Geral"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "17:44:28",
+      "produto": "(prod) Calda Chocolate Alema (kg)",
+      "qtde": "9,000",
+      "custo_unit": "13,32",
+      "custo_total": "119,86",
+      "turno": "Geral"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "17:44:27",
+      "produto": "(prod) Creme de Alema (kg)",
+      "qtde": "10,730",
+      "custo_unit": "29,73",
+      "custo_total": "319,01",
+      "turno": "Geral"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "13:53:15",
+      "produto": "(prod) Bolo Pote Ninho com Nutella (un)",
+      "qtde": "1,000",
+      "custo_unit": "5,95",
+      "custo_total": "5,95",
+      "turno": "Geral"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "13:51:48",
+      "produto": "(prod) Creme Ninho (kg)",
+      "qtde": "1,500",
+      "custo_unit": "27,05",
+      "custo_total": "40,57",
+      "turno": "Geral"
+    }
+  ]
+}

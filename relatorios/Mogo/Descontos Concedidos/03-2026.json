@@ -4284,7 +4284,7 @@
     {
       "data": "25/03/2026",
       "hora": "17:09",
-      "cliente": "GRACIELLA AMORIM da Cruz",
+      "cliente": "GRACIELLA AMORIM DA CRUZ",
       "desconto": "20,00",
       "origem": "iFood",
       "tipo_pedido": "Balcão",
@@ -7929,7 +7929,7 @@
     {
       "data": "19/03/2026",
       "hora": "18:55",
-      "cliente": "Heltom G Vicente",
+      "cliente": "HELTOM GUIMARAES VICENTE",
       "desconto": "10,00",
       "origem": "iFood",
       "tipo_pedido": "Balcão",
@@ -8262,7 +8262,7 @@
     {
       "data": "18/03/2026",
       "hora": "19:16",
-      "cliente": "Heltom G Vicente",
+      "cliente": "HELTOM GUIMARAES VICENTE",
       "desconto": "11,62",
       "origem": "iFood",
       "tipo_pedido": "Balcão",
@@ -8307,7 +8307,7 @@
     {
       "data": "18/03/2026",
       "hora": "17:47",
-      "cliente": "João Pires",
+      "cliente": "NÃO VENDER PARA ESSE CLIENTE",
       "desconto": "19,40",
       "origem": "neemo",
       "tipo_pedido": "Delivery",

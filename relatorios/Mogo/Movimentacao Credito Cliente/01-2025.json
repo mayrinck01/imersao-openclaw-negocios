@@ -1,0 +1,110 @@
+{
+  "periodo": {
+    "de": "01/01/2025",
+    "ate": "31/01/2025"
+  },
+  "total_registros": 9,
+  "total_credito": "R$ 1.160,25",
+  "total_debito": "R$ 140,50",
+  "registros": [
+    {
+      "data": "30/01/2025",
+      "hora": "18:14:28",
+      "cliente": "Letícia Martins da Cunha",
+      "cpf": "18829239798",
+      "tipo": "Credito",
+      "descricao": "Pedido 045603",
+      "valor": "134,25",
+      "saldo": "134,25",
+      "financeiro": "Não gerar financeiro"
+    },
+    {
+      "data": "30/01/2025",
+      "hora": "10:13:38",
+      "cliente": "Mariana Miranda ",
+      "cpf": "12398522741",
+      "tipo": "Credito",
+      "descricao": "Pedido 043892 cliente antiga de Doces e Salgados.",
+      "valor": "160,00",
+      "saldo": "160,00",
+      "financeiro": "Não gerar financeiro"
+    },
+    {
+      "data": "30/01/2025",
+      "hora": "09:56:55",
+      "cliente": "MARIA DE JESUS PANTOJA DE MATOS",
+      "cpf": "79276113720",
+      "tipo": "Credito",
+      "descricao": "Pedido 043221 Luis Matos ",
+      "valor": "188,50",
+      "saldo": "188,50",
+      "financeiro": "Não gerar financeiro"
+    },
+    {
+      "data": "30/01/2025",
+      "hora": "09:28:35",
+      "cliente": "RENATA CURI HAUEGEN",
+      "cpf": "00538243694",
+      "tipo": "Credito",
+      "descricao": "Pedido 045002",
+      "valor": "268,50",
+      "saldo": "268,50",
+      "financeiro": "Não gerar financeiro"
+    },
+    {
+      "data": "10/01/2025",
+      "hora": "14:20:19",
+      "cliente": "Nicole Bentes Franca ",
+      "cpf": "11936466775",
+      "tipo": "Debito",
+      "descricao": "Pedido: 042684 (Delivery)",
+      "valor": "33,00",
+      "saldo": "0,00",
+      "financeiro": "Não selecionado"
+    },
+    {
+      "data": "10/01/2025",
+      "hora": "10:42:41",
+      "cliente": "Nicole Bentes Franca ",
+      "cpf": "11936466775",
+      "tipo": "Credito",
+      "descricao": "Brigadeiros sabor trocado",
+      "valor": "33,00",
+      "saldo": "33,00",
+      "financeiro": "Não gerar financeiro"
+    },
+    {
+      "data": "04/01/2025",
+      "hora": "13:13:43",
+      "cliente": "Camila Mattos",
+      "cpf": "07532190773",
+      "tipo": "Credito",
+      "descricao": "Deliciosa 25 Pedido entrega 31/12 (040640)",
+      "valor": "268,50",
+      "saldo": "268,50",
+      "financeiro": "Não gerar financeiro"
+    },
+    {
+      "data": "04/01/2025",
+      "hora": "13:15:09",
+      "cliente": "Andreia",
+      "cpf": "98514571753",
+      "tipo": "Debito",
+      "descricao": "Pedido: 041789 (Delivery)",
+      "valor": "107,50",
+      "saldo": "0,00",
+      "financeiro": "Não selecionado"
+    },
+    {
+      "data": "04/01/2025",
+      "hora": "12:51:29",
+      "cliente": "Andreia",
+      "cpf": "98514571753",
+      "tipo": "Credito",
+      "descricao": "Pedido 041668",
+      "valor": "107,50",
+      "saldo": "107,50",
+      "financeiro": "Não gerar financeiro"
+    }
+  ]
+}

@@ -1,0 +1,121 @@
+{
+  "periodo": {
+    "de": "01/06/2025",
+    "ate": "30/06/2025"
+  },
+  "total_registros": 10,
+  "total_valor": "R$ 2.052,30",
+  "total_custo": "R$ 66,91",
+  "registros": [
+    {
+      "data": "30/06/2025",
+      "hora": "11:06:18",
+      "funcionario": "Larissa Lira",
+      "cliente": "Joana Cardoso",
+      "telefone": "21985569288",
+      "valor": "111,50",
+      "custo": "4,27",
+      "motivo": "",
+      "id": "79985"
+    },
+    {
+      "data": "26/06/2025",
+      "hora": "18:36:44",
+      "funcionario": "alex",
+      "cliente": "",
+      "telefone": "",
+      "valor": "55,00",
+      "custo": "0,00",
+      "motivo": "",
+      "id": "79249"
+    },
+    {
+      "data": "21/06/2025",
+      "hora": "17:47:18",
+      "funcionario": "cristiane",
+      "cliente": "Daniela Sayão Vieira ",
+      "telefone": "21996634293",
+      "valor": "73,00",
+      "custo": "0,00",
+      "motivo": "",
+      "id": "78259"
+    },
+    {
+      "data": "18/06/2025",
+      "hora": "16:32:57",
+      "funcionario": "cristiane",
+      "cliente": "Eduarda",
+      "telefone": "21988025609",
+      "valor": "188,50",
+      "custo": "29,97",
+      "motivo": "",
+      "id": "77572"
+    },
+    {
+      "data": "12/06/2025",
+      "hora": "19:33:23",
+      "funcionario": "cristiane",
+      "cliente": "EMPRESA JUNIOR PUC-RIO",
+      "telefone": "21988122772",
+      "valor": "409,00",
+      "custo": "10,89",
+      "motivo": "",
+      "id": "76411"
+    },
+    {
+      "data": "11/06/2025",
+      "hora": "17:32:29",
+      "funcionario": "cristiane",
+      "cliente": "EMPRESA JUNIOR PUC-RIO",
+      "telefone": "21988122772",
+      "valor": "409,00",
+      "custo": "10,89",
+      "motivo": "",
+      "id": "75993"
+    },
+    {
+      "data": "10/06/2025",
+      "hora": "17:10:22",
+      "funcionario": "Larissa Lira",
+      "cliente": "EMPRESA JUNIOR PUC-RIO",
+      "telefone": "21988122772",
+      "valor": "409,00",
+      "custo": "10,89",
+      "motivo": "",
+      "id": "75764"
+    },
+    {
+      "data": "10/06/2025",
+      "hora": "17:09:00",
+      "funcionario": "Larissa Lira",
+      "cliente": "LAIS OLIVEIRA",
+      "telefone": "21991855255",
+      "valor": "77,50",
+      "custo": "0,00",
+      "motivo": "",
+      "id": "75761"
+    },
+    {
+      "data": "07/06/2025",
+      "hora": "16:17:13",
+      "funcionario": "alex",
+      "cliente": "",
+      "telefone": "",
+      "valor": "21,80",
+      "custo": "0,00",
+      "motivo": "",
+      "id": "75245"
+    },
+    {
+      "data": "05/06/2025",
+      "hora": "17:49:25",
+      "funcionario": "cristiane",
+      "cliente": "Juan Pablo Machado de Almeida",
+      "telefone": "21979478074",
+      "valor": "298,00",
+      "custo": "0,00",
+      "motivo": "",
+      "id": "74713"
+    }
+  ]
+}

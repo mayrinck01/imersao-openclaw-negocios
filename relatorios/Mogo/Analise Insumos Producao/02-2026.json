@@ -1,0 +1,1134 @@
+{
+  "periodo": {
+    "de": "01/02/2026",
+    "ate": "28/02/2026"
+  },
+  "total_registros": 125,
+  "registros": [
+    {
+      "data": "09/02/2026",
+      "hora": "12:09:10",
+      "produto_produzido": "(prod) Alema F22 (un)",
+      "insumo": "(desc) Caixa Cake Torta 24,5 X 24,5 X 9 Micro (und)",
+      "qtde": "35,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "09/02/2026",
+      "hora": "12:09:10",
+      "produto_produzido": "(prod) Alema F22 (un)",
+      "insumo": "(prod) Calda Chocolate Alema (kg)",
+      "qtde": "8,750",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "09/02/2026",
+      "hora": "12:09:10",
+      "produto_produzido": "(prod) Alema F22 (un)",
+      "insumo": "(desc) Disco Cake 24 Micro (und)",
+      "qtde": "35,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "09/02/2026",
+      "hora": "12:09:10",
+      "produto_produzido": "(prod) Alema F22 (un)",
+      "insumo": "(prod) Semi Alema F22 (un)",
+      "qtde": "35,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "09/02/2026",
+      "hora": "12:09:10",
+      "produto_produzido": "(prod) Alema F22 (un)",
+      "insumo": "(desc) Cinta De Acetato 7Cm (m)",
+      "qtde": "31,500",
+      "unidade": "M",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "09/02/2026",
+      "hora": "12:08:36",
+      "produto_produzido": "(prod) Semi Alema F22 (un)",
+      "insumo": "(ins) Biscoito Maisena (kg)",
+      "qtde": "11,550",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "09/02/2026",
+      "hora": "12:08:36",
+      "produto_produzido": "(prod) Semi Alema F22 (un)",
+      "insumo": "(prod) Creme de Alema (kg)",
+      "qtde": "37,550",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "09/02/2026",
+      "hora": "12:08:09",
+      "produto_produzido": "(prod) Calda Chocolate Alema (kg)",
+      "insumo": "(ins) Margarina (kg)",
+      "qtde": "1,500",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "09/02/2026",
+      "hora": "12:08:09",
+      "produto_produzido": "(prod) Calda Chocolate Alema (kg)",
+      "insumo": "(beb) Agua Granel (Lt)",
+      "qtde": "15,000",
+      "unidade": "Lt",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "09/02/2026",
+      "hora": "12:08:09",
+      "produto_produzido": "(prod) Calda Chocolate Alema (kg)",
+      "insumo": "(ins) Nescau (kg)",
+      "qtde": "18,000",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "09/02/2026",
+      "hora": "12:07:59",
+      "produto_produzido": "(prod) Creme de Alema (kg)",
+      "insumo": "(ins) Creme De Leite Lata Nestlé 300gr (kg)",
+      "qtde": "18,000",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "09/02/2026",
+      "hora": "12:07:59",
+      "produto_produzido": "(prod) Creme de Alema (kg)",
+      "insumo": "(ins) Ovos Jumbo Branco (und)",
+      "qtde": "102,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "09/02/2026",
+      "hora": "12:07:59",
+      "produto_produzido": "(prod) Creme de Alema (kg)",
+      "insumo": "(ins) Manteiga Sem Sal (kg)",
+      "qtde": "6,000",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "09/02/2026",
+      "hora": "12:07:59",
+      "produto_produzido": "(prod) Creme de Alema (kg)",
+      "insumo": "(ins) Acucar Refinado (kg)",
+      "qtde": "7,500",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "09/02/2026",
+      "hora": "11:59:51",
+      "produto_produzido": "(prod) Alema F13 (un)",
+      "insumo": "(desc) Caixa Cake Torta 17,5 X 17,5 X 9 Micro (und)",
+      "qtde": "41,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "09/02/2026",
+      "hora": "11:59:51",
+      "produto_produzido": "(prod) Alema F13 (un)",
+      "insumo": "(desc) Disco Cake 17 Micro (und)",
+      "qtde": "41,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "09/02/2026",
+      "hora": "11:59:51",
+      "produto_produzido": "(prod) Alema F13 (un)",
+      "insumo": "(prod) Semi Alema F13 (un)",
+      "qtde": "41,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "09/02/2026",
+      "hora": "11:59:51",
+      "produto_produzido": "(prod) Alema F13 (un)",
+      "insumo": "(desc) Cinta De Acetato 7Cm (m)",
+      "qtde": "20,500",
+      "unidade": "M",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "09/02/2026",
+      "hora": "11:59:51",
+      "produto_produzido": "(prod) Alema F13 (un)",
+      "insumo": "(prod) Calda Chocolate Alema (kg)",
+      "qtde": "2,050",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "18:10:33",
+      "produto_produzido": "(prod) Batido Preto F25 (un)",
+      "insumo": "(prod) Batido Chocolate (kg)",
+      "qtde": "37,730",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "18:10:33",
+      "produto_produzido": "(prod) Batido Preto F13 (un)",
+      "insumo": "(prod) Batido Chocolate (kg)",
+      "qtde": "2,880",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "18:10:32",
+      "produto_produzido": "(prod) Batido Branco F25 (un)",
+      "insumo": "(prod) Batido Branco (kg)",
+      "qtde": "16,170",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "18:10:32",
+      "produto_produzido": "(prod) Batido Branco F13 (un)",
+      "insumo": "(prod) Batido Branco (kg)",
+      "qtde": "4,000",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "18:10:31",
+      "produto_produzido": "(prod) Batido Branco F20 (un)",
+      "insumo": "(prod) Batido Branco (kg)",
+      "qtde": "15,000",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "18:07:47",
+      "produto_produzido": "(prod) Batido Chocolate (kg)",
+      "insumo": "(ins) Choc. Em Po 50% (kg)",
+      "qtde": "3,500",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "18:07:47",
+      "produto_produzido": "(prod) Batido Chocolate (kg)",
+      "insumo": "(ins) Fermento Em Pó (kg)",
+      "qtde": "0,280",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "18:07:47",
+      "produto_produzido": "(prod) Batido Chocolate (kg)",
+      "insumo": "(ins) Margarina (kg)",
+      "qtde": "4,200",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "18:07:47",
+      "produto_produzido": "(prod) Batido Chocolate (kg)",
+      "insumo": "(ins) Leite Integral (lt)",
+      "qtde": "5,600",
+      "unidade": "Lt",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "18:07:47",
+      "produto_produzido": "(prod) Batido Chocolate (kg)",
+      "insumo": "(ins) Ovos Jumbo Branco (und)",
+      "qtde": "140,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "18:07:47",
+      "produto_produzido": "(prod) Batido Chocolate (kg)",
+      "insumo": "(ins) Farinha De Trigo (kg)",
+      "qtde": "9,450",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "18:07:47",
+      "produto_produzido": "(prod) Batido Chocolate (kg)",
+      "insumo": "(ins) Acucar Refinado (kg)",
+      "qtde": "11,200",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "18:07:46",
+      "produto_produzido": "(prod) Batido Branco (kg)",
+      "insumo": "(ins) Fermento Em Pó (kg)",
+      "qtde": "0,280",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "18:07:46",
+      "produto_produzido": "(prod) Batido Branco (kg)",
+      "insumo": "(ins) Margarina (kg)",
+      "qtde": "4,200",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "18:07:46",
+      "produto_produzido": "(prod) Batido Branco (kg)",
+      "insumo": "(ins) Leite Integral (lt)",
+      "qtde": "5,600",
+      "unidade": "Lt",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "18:07:46",
+      "produto_produzido": "(prod) Batido Branco (kg)",
+      "insumo": "(ins) Ovos Jumbo Branco (und)",
+      "qtde": "140,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "18:07:46",
+      "produto_produzido": "(prod) Batido Branco (kg)",
+      "insumo": "(ins) Farinha De Trigo (kg)",
+      "qtde": "9,450",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "18:07:46",
+      "produto_produzido": "(prod) Batido Branco (kg)",
+      "insumo": "(ins) Acucar Refinado (kg)",
+      "qtde": "11,200",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "18:04:49",
+      "produto_produzido": "(prod) Base Torta Limao F25 (un)",
+      "insumo": "(prod) Massa Doce (LIMAO) (kg)",
+      "qtde": "5,600",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "18:04:48",
+      "produto_produzido": "(prod) Base Torta Limao F13 (un)",
+      "insumo": "(prod) Massa Doce (LIMAO) (kg)",
+      "qtde": "1,100",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "18:02:58",
+      "produto_produzido": "(prod) Quiche Cebola F25 (un)",
+      "insumo": "(prod) Recheio Quiche Cebola (kg)",
+      "qtde": "7,700",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "18:02:58",
+      "produto_produzido": "(prod) Quiche Cebola F25 (un)",
+      "insumo": "(desc) Disco Cake 29 Micro (und)",
+      "qtde": "7,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "18:02:58",
+      "produto_produzido": "(prod) Quiche Cebola F25 (un)",
+      "insumo": "(desc) Caixa Cake Torta 29,5 X 29,5 X 5,5 Micro (und)",
+      "qtde": "7,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "18:02:58",
+      "produto_produzido": "(prod) Quiche Cebola F25 (un)",
+      "insumo": "(ins) Queijo Parmesão (kg)",
+      "qtde": "0,350",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "18:02:58",
+      "produto_produzido": "(prod) Quiche Cebola F25 (un)",
+      "insumo": "(prod) Massa Salgada (kg)",
+      "qtde": "2,100",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "18:02:57",
+      "produto_produzido": "(prod) Base Quiche F13 (un)",
+      "insumo": "(prod) Massa Salgada (kg)",
+      "qtde": "0,950",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "18:02:56",
+      "produto_produzido": "(prod) Quiche Alho Poro F9 (un)",
+      "insumo": "(prod) Recheio Quiche Alho Poro (kg)",
+      "qtde": "0,360",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "18:02:56",
+      "produto_produzido": "(prod) Quiche Alho Poro F9 (un)",
+      "insumo": "(ins) Queijo Parmesão (kg)",
+      "qtde": "0,040",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "18:02:56",
+      "produto_produzido": "(prod) Quiche Alho Poro F9 (un)",
+      "insumo": "(prod) Massa Salgada (kg)",
+      "qtde": "0,360",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "18:02:54",
+      "produto_produzido": "(prod) Quiche Alho Poro F13 (un)",
+      "insumo": "(prod) Recheio Quiche Alho Poro (kg)",
+      "qtde": "1,550",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "18:02:54",
+      "produto_produzido": "(prod) Quiche Alho Poro F13 (un)",
+      "insumo": "(ins) Queijo Parmesão (kg)",
+      "qtde": "0,310",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "18:02:54",
+      "produto_produzido": "(prod) Quiche Alho Poro F13 (un)",
+      "insumo": "(prod) Massa Salgada (kg)",
+      "qtde": "1,550",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "18:01:36",
+      "produto_produzido": "(prod) Recheio Quiche Cebola (kg)",
+      "insumo": "(ins) Cebola Fresca (kg)",
+      "qtde": "6,300",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "18:01:36",
+      "produto_produzido": "(prod) Recheio Quiche Cebola (kg)",
+      "insumo": "(ins) Ovos Jumbo Branco (und)",
+      "qtde": "27,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "18:01:36",
+      "produto_produzido": "(prod) Recheio Quiche Cebola (kg)",
+      "insumo": "(ins) Farinha De Trigo (kg)",
+      "qtde": "0,270",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "18:01:36",
+      "produto_produzido": "(prod) Recheio Quiche Cebola (kg)",
+      "insumo": "(ins) Leite Integral (lt)",
+      "qtde": "0,900",
+      "unidade": "Lt",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "18:01:36",
+      "produto_produzido": "(prod) Recheio Quiche Cebola (kg)",
+      "insumo": "(ins) Sal Refinado (kg)",
+      "qtde": "0,040",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "18:01:36",
+      "produto_produzido": "(prod) Recheio Quiche Cebola (kg)",
+      "insumo": "(ins) Creme De Leite (kg)",
+      "qtde": "2,700",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "18:01:34",
+      "produto_produzido": "(prod) Recheio Quiche Alho Poro (kg)",
+      "insumo": "(ins) Ovos Jumbo Branco (und)",
+      "qtde": "9,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "18:01:34",
+      "produto_produzido": "(prod) Recheio Quiche Alho Poro (kg)",
+      "insumo": "(ins) Farinha De Trigo (kg)",
+      "qtde": "0,090",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "18:01:34",
+      "produto_produzido": "(prod) Recheio Quiche Alho Poro (kg)",
+      "insumo": "(ins) Leite Integral (lt)",
+      "qtde": "0,300",
+      "unidade": "Lt",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "18:01:34",
+      "produto_produzido": "(prod) Recheio Quiche Alho Poro (kg)",
+      "insumo": "(ins) Sal Refinado (kg)",
+      "qtde": "0,010",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "18:01:34",
+      "produto_produzido": "(prod) Recheio Quiche Alho Poro (kg)",
+      "insumo": "(ins) Creme De Leite (kg)",
+      "qtde": "0,900",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "18:01:34",
+      "produto_produzido": "(prod) Recheio Quiche Alho Poro (kg)",
+      "insumo": "(ins) Alho Poro (kg)",
+      "qtde": "1,800",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "17:59:52",
+      "produto_produzido": "(prod) Base Quiche F9 (un)",
+      "insumo": "(prod) Massa Salgada (kg)",
+      "qtde": "0,360",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "17:59:52",
+      "produto_produzido": "(prod) Base Quiche F25 (un)",
+      "insumo": "(prod) Massa Salgada (kg)",
+      "qtde": "2,450",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "17:59:51",
+      "produto_produzido": "(prod) Base Quiche F13 (un)",
+      "insumo": "(prod) Massa Salgada (kg)",
+      "qtde": "2,500",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "17:57:51",
+      "produto_produzido": "(prod) Base Cheescake F25 (un)",
+      "insumo": "(prod) Base Cheescake (kg)",
+      "qtde": "3,740",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "17:57:51",
+      "produto_produzido": "(prod) Base Cheescake F13 (un)",
+      "insumo": "(prod) Base Cheescake (kg)",
+      "qtde": "1,250",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "17:56:34",
+      "produto_produzido": "(prod) Recheio Cheescake (kg)",
+      "insumo": "(ins) Essencia De Baunilha (lt)",
+      "qtde": "0,080",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "17:56:34",
+      "produto_produzido": "(prod) Recheio Cheescake (kg)",
+      "insumo": "(ins) Cream Cheese (kg)",
+      "qtde": "10,560",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "17:56:34",
+      "produto_produzido": "(prod) Recheio Cheescake (kg)",
+      "insumo": "(ins) Acucar Refinado (kg)",
+      "qtde": "3,200",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "17:56:34",
+      "produto_produzido": "(prod) Recheio Cheescake (kg)",
+      "insumo": "(ins) Ovos Jumbo Branco (und)",
+      "qtde": "80,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "17:56:33",
+      "produto_produzido": "(prod) Base Cheescake (kg)",
+      "insumo": "(ins) Canela Em Po (kg)",
+      "qtde": "0,030",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "17:56:33",
+      "produto_produzido": "(prod) Base Cheescake (kg)",
+      "insumo": "(ins) Manteiga Sem Sal (kg)",
+      "qtde": "1,280",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "17:56:33",
+      "produto_produzido": "(prod) Base Cheescake (kg)",
+      "insumo": "(ins) Acucar Mascavo (kg)",
+      "qtde": "0,800",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "17:56:33",
+      "produto_produzido": "(prod) Base Cheescake (kg)",
+      "insumo": "(prod) Farinha Biscoito Maisena (kg)",
+      "qtde": "2,880",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "17:56:32",
+      "produto_produzido": "(prod) Massa Doce (LIMAO) (kg)",
+      "insumo": "(ins) Acucar Refinado (kg)",
+      "qtde": "0,450",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "17:56:32",
+      "produto_produzido": "(prod) Massa Doce (LIMAO) (kg)",
+      "insumo": "(ins) Farinha De Trigo (kg)",
+      "qtde": "3,700",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "17:56:32",
+      "produto_produzido": "(prod) Massa Doce (LIMAO) (kg)",
+      "insumo": "(ins) Margarina (kg)",
+      "qtde": "2,000",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "17:56:31",
+      "produto_produzido": "(prod) Massa Salgada (kg)",
+      "insumo": "(ins) Ovos Jumbo Branco (und)",
+      "qtde": "10,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "17:56:31",
+      "produto_produzido": "(prod) Massa Salgada (kg)",
+      "insumo": "(ins) Sal Refinado (kg)",
+      "qtde": "0,030",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "17:56:31",
+      "produto_produzido": "(prod) Massa Salgada (kg)",
+      "insumo": "(ins) Farinha De Trigo (kg)",
+      "qtde": "2,800",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "17:56:31",
+      "produto_produzido": "(prod) Massa Salgada (kg)",
+      "insumo": "(ins) Margarina (kg)",
+      "qtde": "1,600",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "17:56:17",
+      "produto_produzido": "(prod) Batido Bolo Milho (kg)",
+      "insumo": "(ins) Fermento Em Pó (kg)",
+      "qtde": "0,120",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "17:56:17",
+      "produto_produzido": "(prod) Batido Bolo Milho (kg)",
+      "insumo": "(ins) Coco Ralado Seco (kg)",
+      "qtde": "0,800",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "17:56:17",
+      "produto_produzido": "(prod) Batido Bolo Milho (kg)",
+      "insumo": "(ins) Milho Verde 200gr (kg)",
+      "qtde": "0,680",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "17:56:17",
+      "produto_produzido": "(prod) Batido Bolo Milho (kg)",
+      "insumo": "(ins) Manteiga Sem Sal (kg)",
+      "qtde": "0,160",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "17:56:17",
+      "produto_produzido": "(prod) Batido Bolo Milho (kg)",
+      "insumo": "(ins) Leite Condensado Semi Desnatado (kg)",
+      "qtde": "3,200",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "17:56:17",
+      "produto_produzido": "(prod) Batido Bolo Milho (kg)",
+      "insumo": "(ins) Ovos Jumbo Branco (und)",
+      "qtde": "24,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "17:56:16",
+      "produto_produzido": "(prod) Nova Massa Brigadeiro Preto (kg)",
+      "insumo": "(ins) Nescau (kg)",
+      "qtde": "1,000",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "17:56:16",
+      "produto_produzido": "(prod) Nova Massa Brigadeiro Preto (kg)",
+      "insumo": "(ins) Leite Condensado Integral (kg)",
+      "qtde": "12,000",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "17:56:16",
+      "produto_produzido": "(prod) Nova Massa Brigadeiro Preto (kg)",
+      "insumo": "(ins) Choc. Em Po 50% (kg)",
+      "qtde": "0,800",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "17:56:16",
+      "produto_produzido": "(prod) Nova Massa Brigadeiro Preto (kg)",
+      "insumo": "(ins) Creme De Leite (kg)",
+      "qtde": "5,000",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "17:56:15",
+      "produto_produzido": "(prod) Massa Brigadeiro Brulle (kg)",
+      "insumo": "(ins) Cobertura Chocolate Branco (Gota) (kg)",
+      "qtde": "0,350",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "17:56:15",
+      "produto_produzido": "(prod) Massa Brigadeiro Brulle (kg)",
+      "insumo": "(ins) Essencia De Baunilha (lt)",
+      "qtde": "0,040",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "17:56:15",
+      "produto_produzido": "(prod) Massa Brigadeiro Brulle (kg)",
+      "insumo": "(ins) Manteiga Sem Sal (kg)",
+      "qtde": "0,150",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "17:56:15",
+      "produto_produzido": "(prod) Massa Brigadeiro Brulle (kg)",
+      "insumo": "(ins) Leite Condensado Integral (kg)",
+      "qtde": "3,000",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "17:56:15",
+      "produto_produzido": "(prod) Massa Brigadeiro Brulle (kg)",
+      "insumo": "(ins) Ovos Jumbo Branco (und)",
+      "qtde": "24,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "17:56:14",
+      "produto_produzido": "(prod) Nova Cobertura de Brigadeiro (kg)",
+      "insumo": "(ins) Leite Condensado Integral (kg)",
+      "qtde": "16,500",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "17:56:14",
+      "produto_produzido": "(prod) Nova Cobertura de Brigadeiro (kg)",
+      "insumo": "(ins) Choc. Em Po 50% (kg)",
+      "qtde": "2,400",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "17:56:14",
+      "produto_produzido": "(prod) Nova Cobertura de Brigadeiro (kg)",
+      "insumo": "(ins) Creme De Leite (kg)",
+      "qtde": "7,500",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "17:56:13",
+      "produto_produzido": "(prod) Creme Cake Patisserie (kg)",
+      "insumo": "(ins) Leite Condensado Semi Desnatado (kg)",
+      "qtde": "20,000",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "17:56:13",
+      "produto_produzido": "(prod) Creme Cake Patisserie (kg)",
+      "insumo": "(ins) Creme De Leite (kg)",
+      "qtde": "15,600",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "17:56:13",
+      "produto_produzido": "(prod) Creme Cake Patisserie (kg)",
+      "insumo": "(ins) Ovos Jumbo Branco (und)",
+      "qtde": "160,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "17:44:39",
+      "produto_produzido": "(prod) Alema F22 (un)",
+      "insumo": "(desc) Caixa Cake Torta 24,5 X 24,5 X 9 Micro (und)",
+      "qtde": "10,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "17:44:39",
+      "produto_produzido": "(prod) Alema F22 (un)",
+      "insumo": "(prod) Calda Chocolate Alema (kg)",
+      "qtde": "2,500",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "17:44:39",
+      "produto_produzido": "(prod) Alema F22 (un)",
+      "insumo": "(desc) Disco Cake 24 Micro (und)",
+      "qtde": "10,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "17:44:39",
+      "produto_produzido": "(prod) Alema F22 (un)",
+      "insumo": "(prod) Semi Alema F22 (un)",
+      "qtde": "10,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "17:44:39",
+      "produto_produzido": "(prod) Alema F22 (un)",
+      "insumo": "(desc) Cinta De Acetato 7Cm (m)",
+      "qtde": "9,000",
+      "unidade": "M",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "17:44:33",
+      "produto_produzido": "(prod) Semi Alema F22 (un)",
+      "insumo": "(ins) Biscoito Maisena (kg)",
+      "qtde": "3,300",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "17:44:33",
+      "produto_produzido": "(prod) Semi Alema F22 (un)",
+      "insumo": "(prod) Creme de Alema (kg)",
+      "qtde": "10,730",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "17:44:27",
+      "produto_produzido": "(prod) Calda Chocolate Alema (kg)",
+      "insumo": "(ins) Margarina (kg)",
+      "qtde": "0,500",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "17:44:27",
+      "produto_produzido": "(prod) Calda Chocolate Alema (kg)",
+      "insumo": "(beb) Agua Granel (Lt)",
+      "qtde": "5,000",
+      "unidade": "Lt",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "17:44:27",
+      "produto_produzido": "(prod) Calda Chocolate Alema (kg)",
+      "insumo": "(ins) Nescau (kg)",
+      "qtde": "6,000",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "17:44:26",
+      "produto_produzido": "(prod) Creme de Alema (kg)",
+      "insumo": "(ins) Creme De Leite Lata Nestlé 300gr (kg)",
+      "qtde": "6,000",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "17:44:26",
+      "produto_produzido": "(prod) Creme de Alema (kg)",
+      "insumo": "(ins) Ovos Jumbo Branco (und)",
+      "qtde": "34,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "17:44:26",
+      "produto_produzido": "(prod) Creme de Alema (kg)",
+      "insumo": "(ins) Manteiga Sem Sal (kg)",
+      "qtde": "2,000",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "17:44:26",
+      "produto_produzido": "(prod) Creme de Alema (kg)",
+      "insumo": "(ins) Acucar Refinado (kg)",
+      "qtde": "2,500",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "13:53:13",
+      "produto_produzido": "(prod) Bolo Pote Ninho com Nutella (un)",
+      "insumo": "(desc) Pote Quadrado Plastico com Tampa 220ml (und)",
+      "qtde": "1,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "13:53:13",
+      "produto_produzido": "(prod) Bolo Pote Ninho com Nutella (un)",
+      "insumo": "(prod) Recheio Nutella (kg)",
+      "qtde": "0,040",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "13:53:13",
+      "produto_produzido": "(prod) Bolo Pote Ninho com Nutella (un)",
+      "insumo": "(prod) Creme Ninho (kg)",
+      "qtde": "0,110",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "13:53:13",
+      "produto_produzido": "(prod) Bolo Pote Ninho com Nutella (un)",
+      "insumo": "(prod) Batido Branco (kg)",
+      "qtde": "0,040",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "13:51:48",
+      "produto_produzido": "(prod) Creme Ninho (kg)",
+      "insumo": "(ins) Creme De Leite (kg)",
+      "qtde": "0,800",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "13:51:48",
+      "produto_produzido": "(prod) Creme Ninho (kg)",
+      "insumo": "(ins) Cobertura Chocolate Branco (Gota) (kg)",
+      "qtde": "0,400",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "13:51:48",
+      "produto_produzido": "(prod) Creme Ninho (kg)",
+      "insumo": "(ins) Leite em Po Ninho (Kg)",
+      "qtde": "0,380",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    }
+  ]
+}

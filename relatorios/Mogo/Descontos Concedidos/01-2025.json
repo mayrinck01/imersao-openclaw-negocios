@@ -1,0 +1,7273 @@
+{
+  "periodo": {
+    "de": "01/01/2025",
+    "ate": "31/01/2025"
+  },
+  "total_registros": 807,
+  "total_descontos": "R$ 15.126,28",
+  "registros": [
+    {
+      "data": "31/01/2025",
+      "hora": "22:42",
+      "cliente": "Matheus Ghanem",
+      "desconto": "24,45",
+      "origem": "neemo",
+      "tipo_pedido": "Delivery",
+      "atendente": ""
+    },
+    {
+      "data": "31/01/2025",
+      "hora": "22:04",
+      "cliente": "Thieres Aboumrad",
+      "desconto": "8,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "31/01/2025",
+      "hora": "21:21",
+      "cliente": "Victória Castro",
+      "desconto": "13,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "31/01/2025",
+      "hora": "20:47",
+      "cliente": "Isabella",
+      "desconto": "7,50",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "31/01/2025",
+      "hora": "20:29",
+      "cliente": "ROSEMERE",
+      "desconto": "9,19",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "31/01/2025",
+      "hora": "20:17",
+      "cliente": "Fernanda Fernandes",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "31/01/2025",
+      "hora": "19:51",
+      "cliente": "Beatriz Tonietto",
+      "desconto": "9,19",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "31/01/2025",
+      "hora": "19:48",
+      "cliente": "JOAO ",
+      "desconto": "56,40",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "deivilene"
+    },
+    {
+      "data": "31/01/2025",
+      "hora": "18:54",
+      "cliente": "Julia Simei da Cunha",
+      "desconto": "9,19",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "31/01/2025",
+      "hora": "18:41",
+      "cliente": "Cristiane De",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "31/01/2025",
+      "hora": "18:35",
+      "cliente": "LEANDRO LOPES DE BARROS BUENO",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "31/01/2025",
+      "hora": "17:55",
+      "cliente": "ALEX GONZAGA",
+      "desconto": "10,95",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "alex"
+    },
+    {
+      "data": "31/01/2025",
+      "hora": "17:33",
+      "cliente": "Mario Ristovski",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "31/01/2025",
+      "hora": "16:34",
+      "cliente": "DANIELA BARROSO TEIXEIRA MENDES CORREA MARTIN",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "31/01/2025",
+      "hora": "15:55",
+      "cliente": "Fabriene Guimaraes",
+      "desconto": "16,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "31/01/2025",
+      "hora": "15:07",
+      "cliente": "PEDRO CRUZ",
+      "desconto": "6,50",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "31/01/2025",
+      "hora": "14:48",
+      "cliente": "",
+      "desconto": "21,90",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "alex"
+    },
+    {
+      "data": "31/01/2025",
+      "hora": "14:41",
+      "cliente": "DEBORA JUNCÁ",
+      "desconto": "9,19",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "31/01/2025",
+      "hora": "14:40",
+      "cliente": "Simone Silva",
+      "desconto": "13,01",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "31/01/2025",
+      "hora": "14:32",
+      "cliente": "Alice Simões",
+      "desconto": "5,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "31/01/2025",
+      "hora": "14:26",
+      "cliente": "Marcella Franklin",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "31/01/2025",
+      "hora": "14:16",
+      "cliente": "MARCELO MADEIRA",
+      "desconto": "29,85",
+      "origem": "neemo",
+      "tipo_pedido": "Delivery",
+      "atendente": ""
+    },
+    {
+      "data": "31/01/2025",
+      "hora": "14:05",
+      "cliente": "Janaina Pereira",
+      "desconto": "16,76",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "31/01/2025",
+      "hora": "14:05",
+      "cliente": "CAIO TELES",
+      "desconto": "15,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "31/01/2025",
+      "hora": "14:04",
+      "cliente": "Tatiane Alteiro Geleichman",
+      "desconto": "8,63",
+      "origem": "neemo",
+      "tipo_pedido": "Delivery",
+      "atendente": ""
+    },
+    {
+      "data": "31/01/2025",
+      "hora": "13:57",
+      "cliente": "ANA LÍVIA PROENÇA COSTA",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "31/01/2025",
+      "hora": "13:54",
+      "cliente": "DÉBORA BOARETTO",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "31/01/2025",
+      "hora": "13:48",
+      "cliente": "Vitor Coimbra",
+      "desconto": "16,76",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "31/01/2025",
+      "hora": "13:24",
+      "cliente": "BETTY BERTO",
+      "desconto": "1,00",
+      "origem": "WhatsApp",
+      "tipo_pedido": "Delivery",
+      "atendente": "Larissa Lira"
+    },
+    {
+      "data": "31/01/2025",
+      "hora": "13:14",
+      "cliente": "",
+      "desconto": "8,75",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "alex"
+    },
+    {
+      "data": "31/01/2025",
+      "hora": "12:25",
+      "cliente": "Mariana Do Rego Barros",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "31/01/2025",
+      "hora": "10:36",
+      "cliente": "Patricia  Matias",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "31/01/2025",
+      "hora": "09:24",
+      "cliente": "Vinicius Amorim",
+      "desconto": "18,85",
+      "origem": "neemo",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "30/01/2025",
+      "hora": "22:21",
+      "cliente": "mariana souza",
+      "desconto": "8,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "30/01/2025",
+      "hora": "22:18",
+      "cliente": "Luca Giordano",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "30/01/2025",
+      "hora": "22:11",
+      "cliente": "Gabriela Pessanha Alonso",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "30/01/2025",
+      "hora": "22:07",
+      "cliente": "THIAGO GOMES",
+      "desconto": "7,37",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "30/01/2025",
+      "hora": "22:01",
+      "cliente": "MARCY BRAUNE",
+      "desconto": "5,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "30/01/2025",
+      "hora": "21:59",
+      "cliente": "Thais aguiar",
+      "desconto": "5,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "30/01/2025",
+      "hora": "21:21",
+      "cliente": "CAIO COSTA",
+      "desconto": "5,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "30/01/2025",
+      "hora": "21:20",
+      "cliente": "GABRIELA BRIGANTI",
+      "desconto": "9,10",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "30/01/2025",
+      "hora": "20:59",
+      "cliente": "Jaina Mesquita ",
+      "desconto": "22,01",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "30/01/2025",
+      "hora": "20:20",
+      "cliente": "Carlos Henrique dos Reis",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "30/01/2025",
+      "hora": "19:25",
+      "cliente": "Alice Mendes",
+      "desconto": "23,15",
+      "origem": "neemo",
+      "tipo_pedido": "Delivery",
+      "atendente": ""
+    },
+    {
+      "data": "30/01/2025",
+      "hora": "18:37",
+      "cliente": "Marina Silva Telles",
+      "desconto": "23,65",
+      "origem": "neemo",
+      "tipo_pedido": "Delivery",
+      "atendente": ""
+    },
+    {
+      "data": "30/01/2025",
+      "hora": "18:24",
+      "cliente": "",
+      "desconto": "10,00",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "alex"
+    },
+    {
+      "data": "30/01/2025",
+      "hora": "17:40",
+      "cliente": "EDGAR SILVEIRA",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "30/01/2025",
+      "hora": "17:35",
+      "cliente": "Milena Nascimento",
+      "desconto": "9,19",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "30/01/2025",
+      "hora": "17:08",
+      "cliente": "Michelle Silveira Justino",
+      "desconto": "28,35",
+      "origem": "neemo",
+      "tipo_pedido": "Delivery",
+      "atendente": ""
+    },
+    {
+      "data": "30/01/2025",
+      "hora": "17:01",
+      "cliente": "VANESSA FAUSTO KLEIN",
+      "desconto": "5,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "30/01/2025",
+      "hora": "16:44",
+      "cliente": "BEATRIZ BIHARI",
+      "desconto": "5,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "30/01/2025",
+      "hora": "16:23",
+      "cliente": "VANESSA MENDONÇA",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "30/01/2025",
+      "hora": "16:22",
+      "cliente": "Roberta Antunes",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "30/01/2025",
+      "hora": "15:52",
+      "cliente": "Rosane Caruso ",
+      "desconto": "29,85",
+      "origem": "neemo",
+      "tipo_pedido": "Delivery",
+      "atendente": ""
+    },
+    {
+      "data": "30/01/2025",
+      "hora": "15:07",
+      "cliente": "Marcelle Vianna Cleto",
+      "desconto": "5,00",
+      "origem": "iFood",
+      "tipo_pedido": "Delivery",
+      "atendente": ""
+    },
+    {
+      "data": "30/01/2025",
+      "hora": "15:05",
+      "cliente": "Adhemar  Nunes Junior ",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Delivery",
+      "atendente": ""
+    },
+    {
+      "data": "30/01/2025",
+      "hora": "15:05",
+      "cliente": "Juliana Cunha",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Delivery",
+      "atendente": ""
+    },
+    {
+      "data": "30/01/2025",
+      "hora": "15:05",
+      "cliente": "Manoella Alves",
+      "desconto": "5,00",
+      "origem": "iFood",
+      "tipo_pedido": "Delivery",
+      "atendente": ""
+    },
+    {
+      "data": "30/01/2025",
+      "hora": "15:05",
+      "cliente": "ANA LETICIA",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Delivery",
+      "atendente": ""
+    },
+    {
+      "data": "30/01/2025",
+      "hora": "15:05",
+      "cliente": "VIVIANE HOLANDA CHAVES",
+      "desconto": "5,00",
+      "origem": "iFood",
+      "tipo_pedido": "Delivery",
+      "atendente": ""
+    },
+    {
+      "data": "30/01/2025",
+      "hora": "15:05",
+      "cliente": "Flavia Oliveira",
+      "desconto": "5,00",
+      "origem": "iFood",
+      "tipo_pedido": "Delivery",
+      "atendente": ""
+    },
+    {
+      "data": "30/01/2025",
+      "hora": "15:04",
+      "cliente": "Leticia Bognar",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Delivery",
+      "atendente": ""
+    },
+    {
+      "data": "30/01/2025",
+      "hora": "14:47",
+      "cliente": "Eduarda",
+      "desconto": "3,85",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "alex"
+    },
+    {
+      "data": "30/01/2025",
+      "hora": "14:46",
+      "cliente": "Rissa oliveira",
+      "desconto": "12,72",
+      "origem": "neemo",
+      "tipo_pedido": "Delivery",
+      "atendente": ""
+    },
+    {
+      "data": "30/01/2025",
+      "hora": "14:45",
+      "cliente": "Giliarde Ramalho da Silva",
+      "desconto": "12,50",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "alex"
+    },
+    {
+      "data": "30/01/2025",
+      "hora": "12:30",
+      "cliente": "RAQUEL FRANKLIN",
+      "desconto": "29,60",
+      "origem": "neemo",
+      "tipo_pedido": "Delivery",
+      "atendente": ""
+    },
+    {
+      "data": "30/01/2025",
+      "hora": "12:29",
+      "cliente": "Fabiola Penna",
+      "desconto": "37,35",
+      "origem": "neemo",
+      "tipo_pedido": "Delivery",
+      "atendente": ""
+    },
+    {
+      "data": "29/01/2025",
+      "hora": "16:20",
+      "cliente": "VITORIA MATIAS ",
+      "desconto": "5,45",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "alex"
+    },
+    {
+      "data": "29/01/2025",
+      "hora": "15:55",
+      "cliente": "Elisabeth  Kayat ",
+      "desconto": "7,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "29/01/2025",
+      "hora": "15:32",
+      "cliente": "Iashy",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "29/01/2025",
+      "hora": "15:20",
+      "cliente": "HAIZA",
+      "desconto": "7,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "29/01/2025",
+      "hora": "15:02",
+      "cliente": "THAÍS SATO",
+      "desconto": "8,62",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "29/01/2025",
+      "hora": "14:53",
+      "cliente": "VINICIUS COUTINHO",
+      "desconto": "7,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "29/01/2025",
+      "hora": "14:40",
+      "cliente": "Brena Augusta",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "29/01/2025",
+      "hora": "14:40",
+      "cliente": "Fernanda Mitsuya",
+      "desconto": "5,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "29/01/2025",
+      "hora": "14:28",
+      "cliente": "Tatiane Silva",
+      "desconto": "16,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "29/01/2025",
+      "hora": "14:07",
+      "cliente": "ISABELLA CHABU",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "29/01/2025",
+      "hora": "13:59",
+      "cliente": "Letícia De Oliveira",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "29/01/2025",
+      "hora": "13:39",
+      "cliente": "Fabricia Martinelli",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "29/01/2025",
+      "hora": "13:34",
+      "cliente": "Julia Rotstein Smith da Silva Costa",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "29/01/2025",
+      "hora": "13:20",
+      "cliente": "Thais Larosa",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "29/01/2025",
+      "hora": "13:14",
+      "cliente": "Agatha Lima do Amaral",
+      "desconto": "9,19",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "29/01/2025",
+      "hora": "12:48",
+      "cliente": "Renata",
+      "desconto": "28,35",
+      "origem": "neemo",
+      "tipo_pedido": "Delivery",
+      "atendente": ""
+    },
+    {
+      "data": "29/01/2025",
+      "hora": "12:44",
+      "cliente": "Julia Rotstein Smith da Silva Costa",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "29/01/2025",
+      "hora": "12:40",
+      "cliente": "THATIANE FARIAS DE CASTRO",
+      "desconto": "7,37",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "29/01/2025",
+      "hora": "08:51",
+      "cliente": "Maria Cecília Brandão ",
+      "desconto": "28,35",
+      "origem": "neemo",
+      "tipo_pedido": "Delivery",
+      "atendente": ""
+    },
+    {
+      "data": "29/01/2025",
+      "hora": "08:39",
+      "cliente": "Andressa Aguiar",
+      "desconto": "20,35",
+      "origem": "neemo",
+      "tipo_pedido": "Delivery",
+      "atendente": ""
+    },
+    {
+      "data": "28/01/2025",
+      "hora": "22:29",
+      "cliente": "Helena F",
+      "desconto": "7,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "28/01/2025",
+      "hora": "22:12",
+      "cliente": "Alana Rezende",
+      "desconto": "7,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "28/01/2025",
+      "hora": "21:38",
+      "cliente": "LUIZA VANZIN",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "28/01/2025",
+      "hora": "21:28",
+      "cliente": "Silvia Vaisburd ",
+      "desconto": "7,37",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "28/01/2025",
+      "hora": "21:15",
+      "cliente": "Luiz Fernando Graça Couto",
+      "desconto": "7,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "28/01/2025",
+      "hora": "20:36",
+      "cliente": "Lara Corrêa Nogueira",
+      "desconto": "7,50",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "28/01/2025",
+      "hora": "20:31",
+      "cliente": "Paula Freitas",
+      "desconto": "9,19",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "28/01/2025",
+      "hora": "19:46",
+      "cliente": "MARIANA RÊGO",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "28/01/2025",
+      "hora": "18:50",
+      "cliente": "fernanda",
+      "desconto": "53,75",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "eduarda"
+    },
+    {
+      "data": "28/01/2025",
+      "hora": "18:48",
+      "cliente": "MARCY BRAUNE",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "28/01/2025",
+      "hora": "18:40",
+      "cliente": "FÁBIO SCOVINO",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "28/01/2025",
+      "hora": "18:36",
+      "cliente": "ROSEMERE",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "28/01/2025",
+      "hora": "18:05",
+      "cliente": "THÁLITA MONTANHA",
+      "desconto": "9,19",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "28/01/2025",
+      "hora": "17:11",
+      "cliente": "Gabriela Busse Quaresma",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "28/01/2025",
+      "hora": "16:29",
+      "cliente": "Alice Klajman Agostino",
+      "desconto": "19,85",
+      "origem": "neemo",
+      "tipo_pedido": "Delivery",
+      "atendente": ""
+    },
+    {
+      "data": "28/01/2025",
+      "hora": "16:27",
+      "cliente": "Fernanda Flosi",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "28/01/2025",
+      "hora": "15:16",
+      "cliente": "THIAGO",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "28/01/2025",
+      "hora": "14:05",
+      "cliente": "Julio Sergio Dolce da Silva",
+      "desconto": "9,95",
+      "origem": "neemo",
+      "tipo_pedido": "Delivery",
+      "atendente": ""
+    },
+    {
+      "data": "28/01/2025",
+      "hora": "13:30",
+      "cliente": "MARCO AURÉLIO R. DOS SANTOS",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "28/01/2025",
+      "hora": "12:18",
+      "cliente": "Laíssa Victória De Abreu Alves ",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "28/01/2025",
+      "hora": "11:56",
+      "cliente": "NATÁLIA WINTER",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "27/01/2025",
+      "hora": "21:49",
+      "cliente": "Fernanda Fernandes",
+      "desconto": "26,85",
+      "origem": "neemo",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "27/01/2025",
+      "hora": "18:59",
+      "cliente": "Lívia Rozenbrah Rodrigues ",
+      "desconto": "19,85",
+      "origem": "neemo",
+      "tipo_pedido": "Delivery",
+      "atendente": ""
+    },
+    {
+      "data": "27/01/2025",
+      "hora": "18:58",
+      "cliente": "",
+      "desconto": "10,95",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "alex"
+    },
+    {
+      "data": "27/01/2025",
+      "hora": "18:57",
+      "cliente": "",
+      "desconto": "3,85",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "alex"
+    },
+    {
+      "data": "27/01/2025",
+      "hora": "18:45",
+      "cliente": "Pedro Ribeiro",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "27/01/2025",
+      "hora": "18:15",
+      "cliente": "Graziella Costa Farnese",
+      "desconto": "19,85",
+      "origem": "neemo",
+      "tipo_pedido": "Delivery",
+      "atendente": ""
+    },
+    {
+      "data": "27/01/2025",
+      "hora": "17:54",
+      "cliente": "Clara Ventorini",
+      "desconto": "9,99",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "27/01/2025",
+      "hora": "17:45",
+      "cliente": "Tathiane Nascimento ",
+      "desconto": "9,19",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "27/01/2025",
+      "hora": "16:53",
+      "cliente": "MERCEDES NETO",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "27/01/2025",
+      "hora": "16:52",
+      "cliente": "EDUARDO PRADO",
+      "desconto": "5,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "27/01/2025",
+      "hora": "16:27",
+      "cliente": "Elma Arimatéa",
+      "desconto": "5,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "27/01/2025",
+      "hora": "16:10",
+      "cliente": "Valesca Junqueira",
+      "desconto": "5,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "27/01/2025",
+      "hora": "15:48",
+      "cliente": "LAURA OLIVEIRA CASTRO",
+      "desconto": "254,25",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "Larissa Lira"
+    },
+    {
+      "data": "27/01/2025",
+      "hora": "15:28",
+      "cliente": "FOOD TO SAVE",
+      "desconto": "47,51",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "Larissa Lira"
+    },
+    {
+      "data": "27/01/2025",
+      "hora": "15:27",
+      "cliente": "FOOD TO SAVE",
+      "desconto": "51,51",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "Larissa Lira"
+    },
+    {
+      "data": "27/01/2025",
+      "hora": "15:26",
+      "cliente": "FOOD TO SAVE",
+      "desconto": "42,31",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "Larissa Lira"
+    },
+    {
+      "data": "27/01/2025",
+      "hora": "15:25",
+      "cliente": "FOOD TO SAVE",
+      "desconto": "52,61",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "Larissa Lira"
+    },
+    {
+      "data": "27/01/2025",
+      "hora": "15:21",
+      "cliente": "Kailane Olivera",
+      "desconto": "12,60",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "alex"
+    },
+    {
+      "data": "27/01/2025",
+      "hora": "15:14",
+      "cliente": "Fabiane Policarpo",
+      "desconto": "14,99",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "27/01/2025",
+      "hora": "14:51",
+      "cliente": "TAINÁ CARUSO TORRES",
+      "desconto": "9,76",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "27/01/2025",
+      "hora": "14:32",
+      "cliente": "Maria Elaine Altoe",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "27/01/2025",
+      "hora": "14:15",
+      "cliente": "LEONORA MARTINS BENVENUTO BERBARA",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "27/01/2025",
+      "hora": "14:15",
+      "cliente": "Dayane Da Silva Barbosa",
+      "desconto": "5,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "27/01/2025",
+      "hora": "14:14",
+      "cliente": "Luiz G S De Oliveira",
+      "desconto": "5,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "27/01/2025",
+      "hora": "12:52",
+      "cliente": "Rafael Ferreira Motta",
+      "desconto": "18,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "27/01/2025",
+      "hora": "12:47",
+      "cliente": "ACEPIPES",
+      "desconto": "76,05",
+      "origem": "WhatsApp",
+      "tipo_pedido": "Delivery",
+      "atendente": "Larissa Lira"
+    },
+    {
+      "data": "27/01/2025",
+      "hora": "10:41",
+      "cliente": "Marcela Freitas",
+      "desconto": "12,25",
+      "origem": "neemo",
+      "tipo_pedido": "Delivery",
+      "atendente": ""
+    },
+    {
+      "data": "26/01/2025",
+      "hora": "19:06",
+      "cliente": "ROSEMERE",
+      "desconto": "9,19",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "26/01/2025",
+      "hora": "18:25",
+      "cliente": "João Pedro Caetano",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "26/01/2025",
+      "hora": "17:52",
+      "cliente": "Renata Bueno",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "26/01/2025",
+      "hora": "17:39",
+      "cliente": "LARRY GUIMARAES LIMA",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "26/01/2025",
+      "hora": "17:11",
+      "cliente": "Carolina Morgado",
+      "desconto": "9,19",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "26/01/2025",
+      "hora": "16:46",
+      "cliente": "Claudia",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "26/01/2025",
+      "hora": "16:46",
+      "cliente": "CÉLIA Veríssimo",
+      "desconto": "8,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "26/01/2025",
+      "hora": "16:36",
+      "cliente": "Paulo Azevedo",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "26/01/2025",
+      "hora": "16:25",
+      "cliente": "DANDARAH SILVESTRE",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "26/01/2025",
+      "hora": "16:19",
+      "cliente": "Isabella Mombelli",
+      "desconto": "5,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "26/01/2025",
+      "hora": "16:19",
+      "cliente": "ANA LUIZA DE LIMA BARBOSA",
+      "desconto": "5,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "26/01/2025",
+      "hora": "16:18",
+      "cliente": "Lucho Uliana Montellano",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "26/01/2025",
+      "hora": "16:15",
+      "cliente": "Aline Franco",
+      "desconto": "9,19",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "26/01/2025",
+      "hora": "15:57",
+      "cliente": "EDSON SANTOS",
+      "desconto": "5,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "26/01/2025",
+      "hora": "15:47",
+      "cliente": "Natália Rodrigues",
+      "desconto": "5,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "26/01/2025",
+      "hora": "15:41",
+      "cliente": "Bruno Mortágua",
+      "desconto": "5,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "26/01/2025",
+      "hora": "15:12",
+      "cliente": "Bia Magalhães",
+      "desconto": "5,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "26/01/2025",
+      "hora": "15:07",
+      "cliente": "Leonardo Araujo",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "26/01/2025",
+      "hora": "15:06",
+      "cliente": "Fábio Uria Malveis",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "26/01/2025",
+      "hora": "14:57",
+      "cliente": "Andrea Grupilo",
+      "desconto": "7,35",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "26/01/2025",
+      "hora": "14:57",
+      "cliente": "Diogo Nunes",
+      "desconto": "5,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "26/01/2025",
+      "hora": "14:48",
+      "cliente": "Leonardo Salomão",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "26/01/2025",
+      "hora": "14:22",
+      "cliente": "JÚLIA FURTADO",
+      "desconto": "5,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "26/01/2025",
+      "hora": "14:20",
+      "cliente": "Lea Gomes",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "26/01/2025",
+      "hora": "14:18",
+      "cliente": "PAULO MARQUES",
+      "desconto": "5,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "26/01/2025",
+      "hora": "14:17",
+      "cliente": "Evelyn Grilli e Lucas de Thuin",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "26/01/2025",
+      "hora": "13:35",
+      "cliente": "Diogo Garcia",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "26/01/2025",
+      "hora": "11:53",
+      "cliente": "JE Mares Guia",
+      "desconto": "8,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "26/01/2025",
+      "hora": "11:25",
+      "cliente": "Micheli Morais",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "26/01/2025",
+      "hora": "10:03",
+      "cliente": "Helena Stein",
+      "desconto": "9,19",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "25/01/2025",
+      "hora": "22:04",
+      "cliente": "Geovana Pires",
+      "desconto": "7,50",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "25/01/2025",
+      "hora": "21:24",
+      "cliente": "GUSTAVO FARIAS",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "25/01/2025",
+      "hora": "20:53",
+      "cliente": "Renato Mendes bento ",
+      "desconto": "9,19",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "25/01/2025",
+      "hora": "20:45",
+      "cliente": "MONIQUE MAIA",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "25/01/2025",
+      "hora": "20:41",
+      "cliente": "Jonathan Mattos",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "25/01/2025",
+      "hora": "20:33",
+      "cliente": "Mario Ristovski",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "25/01/2025",
+      "hora": "20:02",
+      "cliente": "MARCELLA RAMOS KERTZMAN",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "25/01/2025",
+      "hora": "20:00",
+      "cliente": "Antonio Marcos Correia Lima",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "25/01/2025",
+      "hora": "19:59",
+      "cliente": "GABRIELE Montenegro ",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "25/01/2025",
+      "hora": "19:27",
+      "cliente": "Carla P de Carvalho",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "25/01/2025",
+      "hora": "19:27",
+      "cliente": "Luisa Figueiredo ",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "25/01/2025",
+      "hora": "18:52",
+      "cliente": "FLAVIO ANDRES MORENO",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "25/01/2025",
+      "hora": "18:39",
+      "cliente": "Mariana",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "25/01/2025",
+      "hora": "18:39",
+      "cliente": "Julia Abreu",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "25/01/2025",
+      "hora": "18:35",
+      "cliente": "VIVIANE CORTES",
+      "desconto": "8,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "25/01/2025",
+      "hora": "18:25",
+      "cliente": "ACEPIPES",
+      "desconto": "133,95",
+      "origem": "WhatsApp",
+      "tipo_pedido": "Delivery",
+      "atendente": "Larissa Lira"
+    },
+    {
+      "data": "25/01/2025",
+      "hora": "18:21",
+      "cliente": "",
+      "desconto": "4,40",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "alex"
+    },
+    {
+      "data": "25/01/2025",
+      "hora": "18:19",
+      "cliente": "Hélio ",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "25/01/2025",
+      "hora": "17:51",
+      "cliente": "JOANA",
+      "desconto": "9,99",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "25/01/2025",
+      "hora": "17:08",
+      "cliente": "luisa Oliveira",
+      "desconto": "11,76",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "25/01/2025",
+      "hora": "17:07",
+      "cliente": "LORENA DANTAS ",
+      "desconto": "10,95",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "alex"
+    },
+    {
+      "data": "25/01/2025",
+      "hora": "16:55",
+      "cliente": "Jorge Luis de Araujo Coelho",
+      "desconto": "5,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "25/01/2025",
+      "hora": "16:45",
+      "cliente": "YASMIN CUNHA",
+      "desconto": "5,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "25/01/2025",
+      "hora": "16:39",
+      "cliente": "Thaiane Khalil ",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "25/01/2025",
+      "hora": "16:36",
+      "cliente": "Cristiane De",
+      "desconto": "5,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "25/01/2025",
+      "hora": "16:33",
+      "cliente": "Ricardo Sousa",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "25/01/2025",
+      "hora": "16:27",
+      "cliente": "Vitória Araújo",
+      "desconto": "5,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "25/01/2025",
+      "hora": "16:26",
+      "cliente": "TAINÁ CARUSO TORRES",
+      "desconto": "5,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "25/01/2025",
+      "hora": "16:18",
+      "cliente": "Daniela Moreira",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "25/01/2025",
+      "hora": "15:45",
+      "cliente": "Mauricio Onoda ",
+      "desconto": "18,13",
+      "origem": "neemo",
+      "tipo_pedido": "Delivery",
+      "atendente": ""
+    },
+    {
+      "data": "25/01/2025",
+      "hora": "15:41",
+      "cliente": "VITORIA MATIAS ",
+      "desconto": "4,40",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "alex"
+    },
+    {
+      "data": "25/01/2025",
+      "hora": "15:04",
+      "cliente": "GIULLIA COQUITO",
+      "desconto": "5,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "25/01/2025",
+      "hora": "15:01",
+      "cliente": "LEONARDO BENZECRY ",
+      "desconto": "5,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "25/01/2025",
+      "hora": "14:53",
+      "cliente": "Luisa Berni",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "25/01/2025",
+      "hora": "14:26",
+      "cliente": "andrea damiani maia de andrade",
+      "desconto": "40,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "25/01/2025",
+      "hora": "14:18",
+      "cliente": "Elisa Soupin",
+      "desconto": "5,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "25/01/2025",
+      "hora": "14:17",
+      "cliente": "Larissa Lira ",
+      "desconto": "20,90",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "alex"
+    },
+    {
+      "data": "25/01/2025",
+      "hora": "14:16",
+      "cliente": "Thiago Gomes",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "25/01/2025",
+      "hora": "14:14",
+      "cliente": "KATIA",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "25/01/2025",
+      "hora": "13:34",
+      "cliente": "Gabriela Falcão Vasconcellos ",
+      "desconto": "10,75",
+      "origem": "neemo",
+      "tipo_pedido": "Delivery",
+      "atendente": ""
+    },
+    {
+      "data": "25/01/2025",
+      "hora": "12:44",
+      "cliente": "Alessandra  Filardy ",
+      "desconto": "9,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "25/01/2025",
+      "hora": "12:03",
+      "cliente": "Adriele Nascimento",
+      "desconto": "11,76",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "25/01/2025",
+      "hora": "12:01",
+      "cliente": "GIOVANNI BIANCHI",
+      "desconto": "9,19",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "25/01/2025",
+      "hora": "11:39",
+      "cliente": "Analu Albernaz Corrêa",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "25/01/2025",
+      "hora": "10:42",
+      "cliente": "VITORIA MATIAS ",
+      "desconto": "20,90",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "alex"
+    },
+    {
+      "data": "24/01/2025",
+      "hora": "22:12",
+      "cliente": "MATHEUS DUARTE",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "24/01/2025",
+      "hora": "21:39",
+      "cliente": "Julia Machado",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "24/01/2025",
+      "hora": "21:19",
+      "cliente": "YVES ASSIS ",
+      "desconto": "5,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "24/01/2025",
+      "hora": "21:13",
+      "cliente": "Virginia M R Magalhaes",
+      "desconto": "5,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "24/01/2025",
+      "hora": "20:41",
+      "cliente": "beatriz santos ",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "24/01/2025",
+      "hora": "20:36",
+      "cliente": "Ana Toros",
+      "desconto": "8,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "24/01/2025",
+      "hora": "19:29",
+      "cliente": "BAJA CALIFÓRNIA",
+      "desconto": "282,75",
+      "origem": "WhatsApp",
+      "tipo_pedido": "Balcão",
+      "atendente": "Larissa Lira"
+    },
+    {
+      "data": "24/01/2025",
+      "hora": "19:08",
+      "cliente": "Edir Cunha",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "24/01/2025",
+      "hora": "19:06",
+      "cliente": "Fundo Brasileiro para a Biodiversidade",
+      "desconto": "139,50",
+      "origem": "neemo",
+      "tipo_pedido": "Delivery",
+      "atendente": ""
+    },
+    {
+      "data": "24/01/2025",
+      "hora": "18:01",
+      "cliente": "Mauricio Sipmann",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "24/01/2025",
+      "hora": "16:30",
+      "cliente": "Vitor Bernard",
+      "desconto": "5,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "24/01/2025",
+      "hora": "16:25",
+      "cliente": "Adriana Tinoco Martins",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "24/01/2025",
+      "hora": "16:14",
+      "cliente": "THIAGO PONTES",
+      "desconto": "5,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "24/01/2025",
+      "hora": "15:54",
+      "cliente": "Luana Fittipaldi",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "24/01/2025",
+      "hora": "15:44",
+      "cliente": "Kailane Olivera",
+      "desconto": "3,85",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "alex"
+    },
+    {
+      "data": "24/01/2025",
+      "hora": "15:18",
+      "cliente": "Danielle Cavalcante",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "24/01/2025",
+      "hora": "14:33",
+      "cliente": "Alice Simões",
+      "desconto": "5,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "24/01/2025",
+      "hora": "14:22",
+      "cliente": "Janaina Camelo",
+      "desconto": "9,19",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "24/01/2025",
+      "hora": "14:04",
+      "cliente": "Victor Melo",
+      "desconto": "9,19",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "24/01/2025",
+      "hora": "13:55",
+      "cliente": "Kauam Labre",
+      "desconto": "9,19",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "24/01/2025",
+      "hora": "13:25",
+      "cliente": "Anne Machado",
+      "desconto": "9,19",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "24/01/2025",
+      "hora": "13:24",
+      "cliente": "ANDREA",
+      "desconto": "9,19",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "24/01/2025",
+      "hora": "13:00",
+      "cliente": "Bárbara Garcia",
+      "desconto": "7,50",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "24/01/2025",
+      "hora": "11:23",
+      "cliente": "FOOD TO SAVE",
+      "desconto": "43,91",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "Larissa Lira"
+    },
+    {
+      "data": "24/01/2025",
+      "hora": "11:20",
+      "cliente": "FOOD TO SAVE",
+      "desconto": "51,01",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "Larissa Lira"
+    },
+    {
+      "data": "24/01/2025",
+      "hora": "11:19",
+      "cliente": "FOOD TO SAVE",
+      "desconto": "51,01",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "Larissa Lira"
+    },
+    {
+      "data": "24/01/2025",
+      "hora": "11:19",
+      "cliente": "FOOD TO SAVE",
+      "desconto": "22,01",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "Larissa Lira"
+    },
+    {
+      "data": "24/01/2025",
+      "hora": "11:18",
+      "cliente": "FOOD TO SAVE",
+      "desconto": "43,91",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "Larissa Lira"
+    },
+    {
+      "data": "24/01/2025",
+      "hora": "10:56",
+      "cliente": "FOOD TO SAVE",
+      "desconto": "43,91",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "Larissa Lira"
+    },
+    {
+      "data": "24/01/2025",
+      "hora": "09:39",
+      "cliente": "Livia Ratton",
+      "desconto": "19,85",
+      "origem": "neemo",
+      "tipo_pedido": "Delivery",
+      "atendente": ""
+    },
+    {
+      "data": "23/01/2025",
+      "hora": "22:16",
+      "cliente": "Marcus Pereira",
+      "desconto": "8,62",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "23/01/2025",
+      "hora": "21:48",
+      "cliente": "Marcelo Neves",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "23/01/2025",
+      "hora": "21:10",
+      "cliente": "RAFAEL LASMAR",
+      "desconto": "5,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "23/01/2025",
+      "hora": "20:56",
+      "cliente": "Daniel Caldas Gaspar",
+      "desconto": "9,76",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "23/01/2025",
+      "hora": "19:34",
+      "cliente": "Larissa Barbosa ",
+      "desconto": "28,35",
+      "origem": "neemo",
+      "tipo_pedido": "Delivery",
+      "atendente": ""
+    },
+    {
+      "data": "23/01/2025",
+      "hora": "19:34",
+      "cliente": "Cristiane De",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "23/01/2025",
+      "hora": "19:16",
+      "cliente": "EDUARDO  GUIMARÃES",
+      "desconto": "9,76",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "23/01/2025",
+      "hora": "18:17",
+      "cliente": "Eduardo Piombini",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "23/01/2025",
+      "hora": "18:07",
+      "cliente": "Daiene Trugilho",
+      "desconto": "30,00",
+      "origem": "neemo",
+      "tipo_pedido": "Delivery",
+      "atendente": ""
+    },
+    {
+      "data": "23/01/2025",
+      "hora": "18:05",
+      "cliente": "Pedro Ribeiro",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "23/01/2025",
+      "hora": "18:00",
+      "cliente": "MARIA EDUARDA",
+      "desconto": "7,37",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "23/01/2025",
+      "hora": "17:38",
+      "cliente": "BRENDA CASTRO CÂMARA",
+      "desconto": "9,70",
+      "origem": "neemo",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "23/01/2025",
+      "hora": "17:26",
+      "cliente": "CLAUDIA RUIZ WANDERLEY",
+      "desconto": "9,19",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "23/01/2025",
+      "hora": "17:23",
+      "cliente": "ACEPIPES",
+      "desconto": "189,15",
+      "origem": "WhatsApp",
+      "tipo_pedido": "Delivery",
+      "atendente": "Larissa Lira"
+    },
+    {
+      "data": "23/01/2025",
+      "hora": "17:16",
+      "cliente": "Kailane Olivera",
+      "desconto": "12,50",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "alex"
+    },
+    {
+      "data": "23/01/2025",
+      "hora": "17:07",
+      "cliente": "PATRICIA",
+      "desconto": "19,85",
+      "origem": "neemo",
+      "tipo_pedido": "Delivery",
+      "atendente": ""
+    },
+    {
+      "data": "23/01/2025",
+      "hora": "17:02",
+      "cliente": "Ingrid Valério",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "23/01/2025",
+      "hora": "16:16",
+      "cliente": "Georgiana Peixoto",
+      "desconto": "5,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "23/01/2025",
+      "hora": "15:29",
+      "cliente": "Marina von Ranke",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "23/01/2025",
+      "hora": "14:50",
+      "cliente": "Ana Aguiar Ramos",
+      "desconto": "5,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "23/01/2025",
+      "hora": "13:10",
+      "cliente": "Micaely Krause",
+      "desconto": "8,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "23/01/2025",
+      "hora": "11:40",
+      "cliente": "Aline Lopes",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "23/01/2025",
+      "hora": "11:29",
+      "cliente": "Cristiana Daltro ",
+      "desconto": "8,00",
+      "origem": "neemo",
+      "tipo_pedido": "Delivery",
+      "atendente": ""
+    },
+    {
+      "data": "23/01/2025",
+      "hora": "11:13",
+      "cliente": "Patricia Monteiro de Castro Lima netto ",
+      "desconto": "98,90",
+      "origem": "neemo",
+      "tipo_pedido": "Delivery",
+      "atendente": ""
+    },
+    {
+      "data": "23/01/2025",
+      "hora": "10:53",
+      "cliente": "Lais Almeida",
+      "desconto": "8,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "23/01/2025",
+      "hora": "10:38",
+      "cliente": "Mariana Pedro Bom",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "23/01/2025",
+      "hora": "09:38",
+      "cliente": "Leidy Pitre Granados",
+      "desconto": "27,99",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "23/01/2025",
+      "hora": "08:31",
+      "cliente": "Kailane Olivera",
+      "desconto": "7,50",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "alex"
+    },
+    {
+      "data": "23/01/2025",
+      "hora": "07:16",
+      "cliente": "Amina Potter ",
+      "desconto": "27,85",
+      "origem": "neemo",
+      "tipo_pedido": "Delivery",
+      "atendente": ""
+    },
+    {
+      "data": "23/01/2025",
+      "hora": "01:42",
+      "cliente": "Thiago",
+      "desconto": "34,95",
+      "origem": "neemo",
+      "tipo_pedido": "Delivery",
+      "atendente": ""
+    },
+    {
+      "data": "22/01/2025",
+      "hora": "20:44",
+      "cliente": "Jeronimo Jose de Miranda Lopes",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "22/01/2025",
+      "hora": "20:16",
+      "cliente": "Isabela Anselmo Vieira",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "22/01/2025",
+      "hora": "19:38",
+      "cliente": "Mariana",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "22/01/2025",
+      "hora": "19:07",
+      "cliente": "Fabiana Delgado",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "22/01/2025",
+      "hora": "18:01",
+      "cliente": "Débora Pereira",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "22/01/2025",
+      "hora": "17:52",
+      "cliente": "FOOD TO SAVE",
+      "desconto": "49,91",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "Larissa Lira"
+    },
+    {
+      "data": "22/01/2025",
+      "hora": "17:51",
+      "cliente": "FOOD TO SAVE",
+      "desconto": "49,91",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "Larissa Lira"
+    },
+    {
+      "data": "22/01/2025",
+      "hora": "17:49",
+      "cliente": "FOOD TO SAVE",
+      "desconto": "51,01",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "Larissa Lira"
+    },
+    {
+      "data": "22/01/2025",
+      "hora": "17:48",
+      "cliente": "FOOD TO SAVE",
+      "desconto": "51,01",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "Larissa Lira"
+    },
+    {
+      "data": "22/01/2025",
+      "hora": "17:47",
+      "cliente": "FOOD TO SAVE",
+      "desconto": "112,51",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "Larissa Lira"
+    },
+    {
+      "data": "22/01/2025",
+      "hora": "17:46",
+      "cliente": "FOOD TO SAVE",
+      "desconto": "51,01",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "Larissa Lira"
+    },
+    {
+      "data": "22/01/2025",
+      "hora": "17:45",
+      "cliente": "FOOD TO SAVE",
+      "desconto": "51,01",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "Larissa Lira"
+    },
+    {
+      "data": "22/01/2025",
+      "hora": "17:45",
+      "cliente": "FOOD TO SAVE",
+      "desconto": "51,01",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "Larissa Lira"
+    },
+    {
+      "data": "22/01/2025",
+      "hora": "17:44",
+      "cliente": "FOOD TO SAVE",
+      "desconto": "51,01",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "Larissa Lira"
+    },
+    {
+      "data": "22/01/2025",
+      "hora": "16:58",
+      "cliente": "Luana Rodovalho",
+      "desconto": "25,45",
+      "origem": "neemo",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "22/01/2025",
+      "hora": "16:28",
+      "cliente": "Helayne Lourenço",
+      "desconto": "22,35",
+      "origem": "neemo",
+      "tipo_pedido": "Delivery",
+      "atendente": ""
+    },
+    {
+      "data": "22/01/2025",
+      "hora": "16:01",
+      "cliente": "ROSEMERE",
+      "desconto": "9,19",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "22/01/2025",
+      "hora": "15:51",
+      "cliente": "Elaine Zancanela",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "22/01/2025",
+      "hora": "15:41",
+      "cliente": "Lorrayne",
+      "desconto": "5,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "22/01/2025",
+      "hora": "15:35",
+      "cliente": "Daniely Castro",
+      "desconto": "5,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "22/01/2025",
+      "hora": "15:34",
+      "cliente": "Beatriz Barthem",
+      "desconto": "19,85",
+      "origem": "neemo",
+      "tipo_pedido": "Delivery",
+      "atendente": ""
+    },
+    {
+      "data": "22/01/2025",
+      "hora": "15:23",
+      "cliente": "Carol Selecto",
+      "desconto": "8,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "22/01/2025",
+      "hora": "15:21",
+      "cliente": "Beatriz Barros de Abreu",
+      "desconto": "10,47",
+      "origem": "neemo",
+      "tipo_pedido": "Delivery",
+      "atendente": ""
+    },
+    {
+      "data": "22/01/2025",
+      "hora": "15:01",
+      "cliente": "Pollyana Brito",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "22/01/2025",
+      "hora": "14:43",
+      "cliente": "Mirela Sobral",
+      "desconto": "11,76",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "22/01/2025",
+      "hora": "14:42",
+      "cliente": "Luana Bittencourt Aguiar Fernandes",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "22/01/2025",
+      "hora": "14:36",
+      "cliente": "brida oliveira",
+      "desconto": "5,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "22/01/2025",
+      "hora": "14:29",
+      "cliente": "Lara Corrêa Nogueira",
+      "desconto": "7,50",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "22/01/2025",
+      "hora": "14:12",
+      "cliente": "Laura ciribelli",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "22/01/2025",
+      "hora": "13:56",
+      "cliente": "VICTÓRIA",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "22/01/2025",
+      "hora": "13:54",
+      "cliente": "Julia L",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "22/01/2025",
+      "hora": "13:42",
+      "cliente": "Carolina de Brito Emilio e Fernandes",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "22/01/2025",
+      "hora": "13:25",
+      "cliente": "Tamara Barreto",
+      "desconto": "9,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "22/01/2025",
+      "hora": "12:37",
+      "cliente": "VINICIUS COUTINHO",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "22/01/2025",
+      "hora": "12:28",
+      "cliente": "FOOD TO SAVE",
+      "desconto": "46,71",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "Larissa Lira"
+    },
+    {
+      "data": "22/01/2025",
+      "hora": "12:27",
+      "cliente": "FOOD TO SAVE",
+      "desconto": "43,41",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "Larissa Lira"
+    },
+    {
+      "data": "22/01/2025",
+      "hora": "12:26",
+      "cliente": "FOOD TO SAVE",
+      "desconto": "40,41",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "Larissa Lira"
+    },
+    {
+      "data": "22/01/2025",
+      "hora": "12:25",
+      "cliente": "FOOD TO SAVE",
+      "desconto": "54,81",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "Larissa Lira"
+    },
+    {
+      "data": "22/01/2025",
+      "hora": "12:24",
+      "cliente": "FOOD TO SAVE",
+      "desconto": "53,21",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "Larissa Lira"
+    },
+    {
+      "data": "22/01/2025",
+      "hora": "12:24",
+      "cliente": "FOOD TO SAVE",
+      "desconto": "48,41",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "Larissa Lira"
+    },
+    {
+      "data": "22/01/2025",
+      "hora": "12:21",
+      "cliente": "FOOD TO SAVE",
+      "desconto": "48,41",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "Larissa Lira"
+    },
+    {
+      "data": "22/01/2025",
+      "hora": "12:19",
+      "cliente": "FOOD TO SAVE",
+      "desconto": "50,51",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "Larissa Lira"
+    },
+    {
+      "data": "22/01/2025",
+      "hora": "12:18",
+      "cliente": "FOOD TO SAVE",
+      "desconto": "42,71",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "Larissa Lira"
+    },
+    {
+      "data": "22/01/2025",
+      "hora": "12:17",
+      "cliente": "FOOD TO SAVE",
+      "desconto": "48,41",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "Larissa Lira"
+    },
+    {
+      "data": "22/01/2025",
+      "hora": "12:16",
+      "cliente": "FOOD TO SAVE",
+      "desconto": "48,41",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "Larissa Lira"
+    },
+    {
+      "data": "22/01/2025",
+      "hora": "12:15",
+      "cliente": "FOOD TO SAVE",
+      "desconto": "67,41",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "Larissa Lira"
+    },
+    {
+      "data": "22/01/2025",
+      "hora": "11:56",
+      "cliente": "Contatos Gabi",
+      "desconto": "11,76",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "22/01/2025",
+      "hora": "11:46",
+      "cliente": "Mônica Ribeiro Gonçalves de Moura ",
+      "desconto": "8,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "22/01/2025",
+      "hora": "10:55",
+      "cliente": "Omar Niño",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "22/01/2025",
+      "hora": "10:46",
+      "cliente": "Shenny da Silva Souza",
+      "desconto": "28,35",
+      "origem": "neemo",
+      "tipo_pedido": "Delivery",
+      "atendente": ""
+    },
+    {
+      "data": "22/01/2025",
+      "hora": "10:13",
+      "cliente": "Lizandra Dantas Ramos ",
+      "desconto": "3,75",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "alex"
+    },
+    {
+      "data": "22/01/2025",
+      "hora": "09:46",
+      "cliente": "Larissa Silva",
+      "desconto": "10,75",
+      "origem": "neemo",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "21/01/2025",
+      "hora": "22:24",
+      "cliente": "Matheus Ghanem",
+      "desconto": "11,40",
+      "origem": "neemo",
+      "tipo_pedido": "Delivery",
+      "atendente": ""
+    },
+    {
+      "data": "21/01/2025",
+      "hora": "21:20",
+      "cliente": "Letícia Tupinambá ",
+      "desconto": "5,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "21/01/2025",
+      "hora": "21:06",
+      "cliente": "Ana Carolina Lemos",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "21/01/2025",
+      "hora": "20:18",
+      "cliente": "Lidyane Liadja Souza Silva",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "21/01/2025",
+      "hora": "19:28",
+      "cliente": "João Marcello",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "21/01/2025",
+      "hora": "18:28",
+      "cliente": "ALINE BARRETO",
+      "desconto": "7,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "21/01/2025",
+      "hora": "17:59",
+      "cliente": "Marina",
+      "desconto": "20,35",
+      "origem": "neemo",
+      "tipo_pedido": "Delivery",
+      "atendente": ""
+    },
+    {
+      "data": "21/01/2025",
+      "hora": "17:47",
+      "cliente": "Leonardo Maximo",
+      "desconto": "16,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "21/01/2025",
+      "hora": "17:14",
+      "cliente": "Luciana de Jesus",
+      "desconto": "10,75",
+      "origem": "neemo",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "21/01/2025",
+      "hora": "17:09",
+      "cliente": "Leonardo Maximo",
+      "desconto": "16,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "21/01/2025",
+      "hora": "16:57",
+      "cliente": "Mayla Melo",
+      "desconto": "5,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "21/01/2025",
+      "hora": "16:57",
+      "cliente": "Rafael Glauber",
+      "desconto": "12,25",
+      "origem": "neemo",
+      "tipo_pedido": "Delivery",
+      "atendente": ""
+    },
+    {
+      "data": "21/01/2025",
+      "hora": "16:32",
+      "cliente": "Amanda Rosana",
+      "desconto": "9,56",
+      "origem": "neemo",
+      "tipo_pedido": "Delivery",
+      "atendente": ""
+    },
+    {
+      "data": "21/01/2025",
+      "hora": "16:26",
+      "cliente": "Marina Prado",
+      "desconto": "7,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "21/01/2025",
+      "hora": "16:20",
+      "cliente": "Bruna Papa",
+      "desconto": "9,19",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "21/01/2025",
+      "hora": "16:01",
+      "cliente": "Flavia de Marco",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "21/01/2025",
+      "hora": "15:18",
+      "cliente": "Laila",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "21/01/2025",
+      "hora": "15:14",
+      "cliente": "Pollyana Brito",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "21/01/2025",
+      "hora": "14:37",
+      "cliente": "WAGNER ZANON",
+      "desconto": "5,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "21/01/2025",
+      "hora": "14:26",
+      "cliente": "Jorge Silva",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "21/01/2025",
+      "hora": "14:18",
+      "cliente": "RAFAELLA NASCIMENTO ",
+      "desconto": "5,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "21/01/2025",
+      "hora": "13:49",
+      "cliente": "ANDREA",
+      "desconto": "9,19",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "21/01/2025",
+      "hora": "13:09",
+      "cliente": "Igor Salomão Teixeira ",
+      "desconto": "23,45",
+      "origem": "neemo",
+      "tipo_pedido": "Delivery",
+      "atendente": ""
+    },
+    {
+      "data": "21/01/2025",
+      "hora": "12:51",
+      "cliente": "Aline Molás",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "21/01/2025",
+      "hora": "12:46",
+      "cliente": "VITORIA MATIAS ",
+      "desconto": "15,45",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "alex"
+    },
+    {
+      "data": "21/01/2025",
+      "hora": "12:03",
+      "cliente": "Micaely Krause",
+      "desconto": "8,62",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "21/01/2025",
+      "hora": "10:49",
+      "cliente": "Clarissa de Souza",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "21/01/2025",
+      "hora": "10:04",
+      "cliente": "Justino Dantas",
+      "desconto": "7,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "20/01/2025",
+      "hora": "18:59",
+      "cliente": "IARA",
+      "desconto": "40,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "20/01/2025",
+      "hora": "18:56",
+      "cliente": "RAFAELLA FOLHADELLA BATTAGLIA ",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "20/01/2025",
+      "hora": "18:53",
+      "cliente": "Lissa Rebeschini Perche",
+      "desconto": "9,99",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "20/01/2025",
+      "hora": "18:39",
+      "cliente": "Adolfo Braucks",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "20/01/2025",
+      "hora": "18:38",
+      "cliente": "Adolfo Braucks",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "20/01/2025",
+      "hora": "18:26",
+      "cliente": "MARIANA PEDRINI",
+      "desconto": "5,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "20/01/2025",
+      "hora": "18:09",
+      "cliente": "Cristiane De",
+      "desconto": "9,19",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "20/01/2025",
+      "hora": "18:07",
+      "cliente": "Natalia Pila",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "20/01/2025",
+      "hora": "17:07",
+      "cliente": "gustavo britto",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "20/01/2025",
+      "hora": "16:18",
+      "cliente": "Kailane Olivera",
+      "desconto": "6,25",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "alex"
+    },
+    {
+      "data": "20/01/2025",
+      "hora": "16:13",
+      "cliente": "THAYNARA SANTOS",
+      "desconto": "8,75",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "alex"
+    },
+    {
+      "data": "20/01/2025",
+      "hora": "16:09",
+      "cliente": "Lilian Oliveira",
+      "desconto": "19,20",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "alex"
+    },
+    {
+      "data": "20/01/2025",
+      "hora": "16:05",
+      "cliente": "Estevão Lemuel",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "20/01/2025",
+      "hora": "16:04",
+      "cliente": "Ana Carolina Pereira Moraes e Oliveira",
+      "desconto": "5,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "20/01/2025",
+      "hora": "15:42",
+      "cliente": "JOAO ",
+      "desconto": "110,45",
+      "origem": "Outros",
+      "tipo_pedido": "Delivery",
+      "atendente": "Larissa Lira"
+    },
+    {
+      "data": "20/01/2025",
+      "hora": "14:57",
+      "cliente": "Natan Leal",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "20/01/2025",
+      "hora": "14:51",
+      "cliente": "Rafael Ferreira",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "20/01/2025",
+      "hora": "14:41",
+      "cliente": "Sebastião Cesar Assis Pereira ",
+      "desconto": "140,50",
+      "origem": "WhatsApp",
+      "tipo_pedido": "Delivery",
+      "atendente": "Larissa Lira"
+    },
+    {
+      "data": "20/01/2025",
+      "hora": "14:22",
+      "cliente": "Eleonara De cassia",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "20/01/2025",
+      "hora": "14:12",
+      "cliente": "Ana Luiza Santos Andrade",
+      "desconto": "14,75",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "alex"
+    },
+    {
+      "data": "20/01/2025",
+      "hora": "13:33",
+      "cliente": "RONIERI RIBEIRO BORGES",
+      "desconto": "5,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "20/01/2025",
+      "hora": "13:12",
+      "cliente": "",
+      "desconto": "5,45",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "alex"
+    },
+    {
+      "data": "20/01/2025",
+      "hora": "12:03",
+      "cliente": "Erika Tojeiro ",
+      "desconto": "20,35",
+      "origem": "neemo",
+      "tipo_pedido": "Delivery",
+      "atendente": ""
+    },
+    {
+      "data": "20/01/2025",
+      "hora": "11:20",
+      "cliente": "Pedro Viegas",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "20/01/2025",
+      "hora": "10:48",
+      "cliente": "FOOD TO SAVE",
+      "desconto": "51,61",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "Larissa Lira"
+    },
+    {
+      "data": "20/01/2025",
+      "hora": "10:47",
+      "cliente": "FOOD TO SAVE",
+      "desconto": "43,91",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "Larissa Lira"
+    },
+    {
+      "data": "20/01/2025",
+      "hora": "10:46",
+      "cliente": "FOOD TO SAVE",
+      "desconto": "39,11",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "Larissa Lira"
+    },
+    {
+      "data": "20/01/2025",
+      "hora": "10:45",
+      "cliente": "FOOD TO SAVE",
+      "desconto": "44,51",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "Larissa Lira"
+    },
+    {
+      "data": "20/01/2025",
+      "hora": "10:44",
+      "cliente": "FOOD TO SAVE",
+      "desconto": "41,31",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "Larissa Lira"
+    },
+    {
+      "data": "20/01/2025",
+      "hora": "10:33",
+      "cliente": "Barbara Borges",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "20/01/2025",
+      "hora": "09:17",
+      "cliente": "RAFAEL MOERBECK",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "19/01/2025",
+      "hora": "21:46",
+      "cliente": "Rafael ",
+      "desconto": "20,35",
+      "origem": "neemo",
+      "tipo_pedido": "Delivery",
+      "atendente": ""
+    },
+    {
+      "data": "19/01/2025",
+      "hora": "17:43",
+      "cliente": "SILVANA BRAGA",
+      "desconto": "7,50",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "19/01/2025",
+      "hora": "17:36",
+      "cliente": "Bianca Cardoso",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "19/01/2025",
+      "hora": "17:20",
+      "cliente": "Juliana Rodrigues Duarte Nogueira",
+      "desconto": "7,50",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "19/01/2025",
+      "hora": "17:01",
+      "cliente": "Lara Hannah Michelon",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "19/01/2025",
+      "hora": "16:59",
+      "cliente": "MARIA DO CARMO FERREIRA DOS SANTOS",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "19/01/2025",
+      "hora": "16:56",
+      "cliente": "Thiago Liberato",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "19/01/2025",
+      "hora": "16:24",
+      "cliente": "ELISANGELA",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "19/01/2025",
+      "hora": "16:23",
+      "cliente": "Felipe",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "19/01/2025",
+      "hora": "16:02",
+      "cliente": "Roberto Carvalho",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "19/01/2025",
+      "hora": "15:17",
+      "cliente": "SUZANE LIMA CONCEIÇÃO",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "19/01/2025",
+      "hora": "14:52",
+      "cliente": "CAMILA C.",
+      "desconto": "6,50",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "19/01/2025",
+      "hora": "14:40",
+      "cliente": "Tatiana Zacharias Valerio",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "19/01/2025",
+      "hora": "14:30",
+      "cliente": "LUCAS REIS MEFANO",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "19/01/2025",
+      "hora": "13:55",
+      "cliente": "Priscila  Annes Keunecke",
+      "desconto": "8,69",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "19/01/2025",
+      "hora": "12:50",
+      "cliente": "Diana Sobreira",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "19/01/2025",
+      "hora": "12:06",
+      "cliente": "Yvonne  Ribeiro",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "19/01/2025",
+      "hora": "11:41",
+      "cliente": "Rachel Facó",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "19/01/2025",
+      "hora": "10:19",
+      "cliente": "Andrea Alencar",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "18/01/2025",
+      "hora": "22:10",
+      "cliente": "Julio Cesar Santos Filgueiras",
+      "desconto": "8,12",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "18/01/2025",
+      "hora": "21:30",
+      "cliente": "RIANE WANZELER DE OLIVEIRA",
+      "desconto": "9,19",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "18/01/2025",
+      "hora": "21:16",
+      "cliente": "Ana Toros",
+      "desconto": "7,50",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "18/01/2025",
+      "hora": "20:40",
+      "cliente": "EDUARDA LAZARI",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "18/01/2025",
+      "hora": "20:23",
+      "cliente": "JÚLIA VILLELA MACHARETH",
+      "desconto": "9,19",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "18/01/2025",
+      "hora": "19:43",
+      "cliente": "Cristiane De",
+      "desconto": "9,19",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "18/01/2025",
+      "hora": "19:39",
+      "cliente": "JULIA ZANIN",
+      "desconto": "9,19",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "18/01/2025",
+      "hora": "18:29",
+      "cliente": "Felipe Menezes Mota Barbosa",
+      "desconto": "9,19",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "18/01/2025",
+      "hora": "18:28",
+      "cliente": "Maria Neves",
+      "desconto": "7,72",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "18/01/2025",
+      "hora": "18:19",
+      "cliente": "ALESSANDRA MONTEIRO",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "18/01/2025",
+      "hora": "17:31",
+      "cliente": "MERCEDES NETO",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "18/01/2025",
+      "hora": "16:59",
+      "cliente": "CÉLIA Veríssimo",
+      "desconto": "9,19",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "18/01/2025",
+      "hora": "16:31",
+      "cliente": "Nadia Pinheiro",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "18/01/2025",
+      "hora": "16:30",
+      "cliente": "Juliana Santos",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "18/01/2025",
+      "hora": "16:03",
+      "cliente": "Tatiana Silveira",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "18/01/2025",
+      "hora": "15:56",
+      "cliente": "EDSON SANTOS",
+      "desconto": "5,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "18/01/2025",
+      "hora": "15:48",
+      "cliente": "ACEPIPES",
+      "desconto": "152,10",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "cristiane"
+    },
+    {
+      "data": "18/01/2025",
+      "hora": "15:47",
+      "cliente": "Mariana Coutinho",
+      "desconto": "10,01",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "18/01/2025",
+      "hora": "15:36",
+      "cliente": "Bruno Mercuri Boaventura",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "18/01/2025",
+      "hora": "15:08",
+      "cliente": "Juliana Oliveira",
+      "desconto": "5,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "18/01/2025",
+      "hora": "14:11",
+      "cliente": "LEONARDO SOUZA",
+      "desconto": "5,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "18/01/2025",
+      "hora": "13:47",
+      "cliente": "beatriz lanzellotti",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "18/01/2025",
+      "hora": "13:35",
+      "cliente": "Vinícius  Carvalho Soares",
+      "desconto": "10,01",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "18/01/2025",
+      "hora": "13:34",
+      "cliente": "Gabriella Moraes",
+      "desconto": "8,11",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "18/01/2025",
+      "hora": "12:54",
+      "cliente": "Thiago Magalhães Pires",
+      "desconto": "20,35",
+      "origem": "neemo",
+      "tipo_pedido": "Delivery",
+      "atendente": ""
+    },
+    {
+      "data": "18/01/2025",
+      "hora": "12:09",
+      "cliente": "BAJA CALIFÓRNIA",
+      "desconto": "282,75",
+      "origem": "WhatsApp",
+      "tipo_pedido": "Balcão",
+      "atendente": "cristiane"
+    },
+    {
+      "data": "18/01/2025",
+      "hora": "11:40",
+      "cliente": "Higor Soares",
+      "desconto": "7,50",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "18/01/2025",
+      "hora": "11:24",
+      "cliente": "Renata",
+      "desconto": "19,85",
+      "origem": "neemo",
+      "tipo_pedido": "Delivery",
+      "atendente": ""
+    },
+    {
+      "data": "18/01/2025",
+      "hora": "10:09",
+      "cliente": "Marcela Lucius Alves de Almeida",
+      "desconto": "8,99",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "17/01/2025",
+      "hora": "21:57",
+      "cliente": "WENDEL ARAÚJO",
+      "desconto": "8,62",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "17/01/2025",
+      "hora": "21:40",
+      "cliente": "FABIANA",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "17/01/2025",
+      "hora": "21:13",
+      "cliente": "Harlan Ronald",
+      "desconto": "15,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "17/01/2025",
+      "hora": "20:47",
+      "cliente": "MARCELLE",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "17/01/2025",
+      "hora": "20:10",
+      "cliente": "GUILHERME",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "17/01/2025",
+      "hora": "19:14",
+      "cliente": "Caroline Bernardo",
+      "desconto": "40,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "17/01/2025",
+      "hora": "18:19",
+      "cliente": "João Augusto Lacerda",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "17/01/2025",
+      "hora": "18:02",
+      "cliente": "NATHALIA RABELO",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "17/01/2025",
+      "hora": "17:41",
+      "cliente": "Huang",
+      "desconto": "9,99",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "17/01/2025",
+      "hora": "17:28",
+      "cliente": "",
+      "desconto": "2,55",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "alex"
+    },
+    {
+      "data": "17/01/2025",
+      "hora": "17:22",
+      "cliente": "",
+      "desconto": "11,50",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "alex"
+    },
+    {
+      "data": "17/01/2025",
+      "hora": "17:06",
+      "cliente": "Ana Luiza Parente",
+      "desconto": "26,85",
+      "origem": "WhatsApp",
+      "tipo_pedido": "Delivery",
+      "atendente": "Larissa Lira"
+    },
+    {
+      "data": "17/01/2025",
+      "hora": "16:53",
+      "cliente": "ANA TERESA TEPEDINO",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "17/01/2025",
+      "hora": "16:05",
+      "cliente": "Mariana Couri",
+      "desconto": "5,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "17/01/2025",
+      "hora": "15:31",
+      "cliente": "AMANDA MELLO",
+      "desconto": "5,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "17/01/2025",
+      "hora": "15:23",
+      "cliente": "Mariana Quintela",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "17/01/2025",
+      "hora": "15:16",
+      "cliente": "JULIA RIBEIRO BABO",
+      "desconto": "5,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "17/01/2025",
+      "hora": "15:11",
+      "cliente": "Patricia Alves Ornellas",
+      "desconto": "5,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "17/01/2025",
+      "hora": "14:19",
+      "cliente": "ANNA MARINS",
+      "desconto": "5,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "17/01/2025",
+      "hora": "14:13",
+      "cliente": "SAMANTA MOREIRA",
+      "desconto": "5,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "17/01/2025",
+      "hora": "13:37",
+      "cliente": "Kailane Olivera",
+      "desconto": "6,50",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "alex"
+    },
+    {
+      "data": "17/01/2025",
+      "hora": "12:56",
+      "cliente": "ISADORA",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "17/01/2025",
+      "hora": "12:21",
+      "cliente": "Vanessa da cruz silva",
+      "desconto": "7,50",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "17/01/2025",
+      "hora": "11:45",
+      "cliente": "Isabela Dale Sucupira de Lemos",
+      "desconto": "28,35",
+      "origem": "neemo",
+      "tipo_pedido": "Delivery",
+      "atendente": ""
+    },
+    {
+      "data": "16/01/2025",
+      "hora": "18:34",
+      "cliente": "Hélio ",
+      "desconto": "9,19",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "16/01/2025",
+      "hora": "18:00",
+      "cliente": "ISABELLA CHABU",
+      "desconto": "7,50",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "16/01/2025",
+      "hora": "17:44",
+      "cliente": "LAIS MELLO",
+      "desconto": "17,51",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "16/01/2025",
+      "hora": "15:15",
+      "cliente": "Marcela de Azevedo Moreira ",
+      "desconto": "5,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "16/01/2025",
+      "hora": "15:12",
+      "cliente": "Christiano  Dos Santos Timbó",
+      "desconto": "14,01",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "16/01/2025",
+      "hora": "14:41",
+      "cliente": "silvia martin mompo",
+      "desconto": "5,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "16/01/2025",
+      "hora": "14:31",
+      "cliente": "LAURA OLIVEIRA CASTRO",
+      "desconto": "62,50",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "Larissa Lira"
+    },
+    {
+      "data": "16/01/2025",
+      "hora": "14:20",
+      "cliente": "Suse chelli",
+      "desconto": "5,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "16/01/2025",
+      "hora": "14:18",
+      "cliente": "Isabelle Guedes dos Santos Bianco",
+      "desconto": "19,85",
+      "origem": "neemo",
+      "tipo_pedido": "Delivery",
+      "atendente": ""
+    },
+    {
+      "data": "16/01/2025",
+      "hora": "13:57",
+      "cliente": "TERESA MOREIRA DA FONSECA",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "16/01/2025",
+      "hora": "13:45",
+      "cliente": "Hanna Kropfitsch",
+      "desconto": "20,35",
+      "origem": "neemo",
+      "tipo_pedido": "Delivery",
+      "atendente": ""
+    },
+    {
+      "data": "16/01/2025",
+      "hora": "13:42",
+      "cliente": "Ana Luiza Albuquerque",
+      "desconto": "7,50",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "16/01/2025",
+      "hora": "13:28",
+      "cliente": "GRACIELE OLIVEIRA",
+      "desconto": "7,99",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "16/01/2025",
+      "hora": "13:23",
+      "cliente": "Márcia Rossana Paixão Macedo ",
+      "desconto": "19,85",
+      "origem": "neemo",
+      "tipo_pedido": "Delivery",
+      "atendente": ""
+    },
+    {
+      "data": "16/01/2025",
+      "hora": "12:34",
+      "cliente": "Ricardo luiz Mello",
+      "desconto": "22,45",
+      "origem": "WhatsApp",
+      "tipo_pedido": "Delivery",
+      "atendente": "Larissa Lira"
+    },
+    {
+      "data": "16/01/2025",
+      "hora": "09:43",
+      "cliente": "Lizandra Dantas Ramos ",
+      "desconto": "4,40",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "alex"
+    },
+    {
+      "data": "15/01/2025",
+      "hora": "21:48",
+      "cliente": "Ana Paula",
+      "desconto": "21,85",
+      "origem": "neemo",
+      "tipo_pedido": "Delivery",
+      "atendente": ""
+    },
+    {
+      "data": "15/01/2025",
+      "hora": "21:36",
+      "cliente": "Valentina v.",
+      "desconto": "9,19",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "15/01/2025",
+      "hora": "20:51",
+      "cliente": "Valesca Junqueira",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "15/01/2025",
+      "hora": "20:45",
+      "cliente": "Cristiane De",
+      "desconto": "9,19",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "15/01/2025",
+      "hora": "20:38",
+      "cliente": "Ana Maria Alves Pinheiro",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "15/01/2025",
+      "hora": "20:24",
+      "cliente": "OTAVIO FREIRE",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "15/01/2025",
+      "hora": "19:58",
+      "cliente": "Lanna Ismério",
+      "desconto": "7,79",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "15/01/2025",
+      "hora": "19:04",
+      "cliente": "PEDRO HENRIQUE GAMA",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "15/01/2025",
+      "hora": "18:28",
+      "cliente": "Pedro Ribeiro",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "15/01/2025",
+      "hora": "18:20",
+      "cliente": "Tais Medeiros Brandão",
+      "desconto": "7,50",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "15/01/2025",
+      "hora": "18:01",
+      "cliente": "Eduarda",
+      "desconto": "153,00",
+      "origem": "Telefone",
+      "tipo_pedido": "Delivery",
+      "atendente": "Mogo"
+    },
+    {
+      "data": "15/01/2025",
+      "hora": "17:43",
+      "cliente": "Ana Paula Farina",
+      "desconto": "9,19",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "15/01/2025",
+      "hora": "17:32",
+      "cliente": "FOOD TO SAVE",
+      "desconto": "47,71",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "cristiane"
+    },
+    {
+      "data": "15/01/2025",
+      "hora": "17:24",
+      "cliente": "Anna luiza Pedroza",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "15/01/2025",
+      "hora": "17:07",
+      "cliente": "FOOD TO SAVE",
+      "desconto": "42,41",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "cristiane"
+    },
+    {
+      "data": "15/01/2025",
+      "hora": "17:04",
+      "cliente": "FOOD TO SAVE",
+      "desconto": "36,71",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "cristiane"
+    },
+    {
+      "data": "15/01/2025",
+      "hora": "16:56",
+      "cliente": "MARIANA",
+      "desconto": "5,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "15/01/2025",
+      "hora": "16:41",
+      "cliente": "Michelle Freddo",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "15/01/2025",
+      "hora": "16:34",
+      "cliente": "Maria lucia Ferreira santos",
+      "desconto": "5,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "15/01/2025",
+      "hora": "15:55",
+      "cliente": "VERÔNICA BAIA",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "15/01/2025",
+      "hora": "14:56",
+      "cliente": "Cristiane Nunes",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "15/01/2025",
+      "hora": "14:41",
+      "cliente": "Maria Luiza Dique de Souza",
+      "desconto": "8,26",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "15/01/2025",
+      "hora": "14:37",
+      "cliente": "FERNANDO PINTO",
+      "desconto": "5,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "15/01/2025",
+      "hora": "14:30",
+      "cliente": "WENDEL ARAÚJO",
+      "desconto": "8,62",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "15/01/2025",
+      "hora": "14:25",
+      "cliente": "CRISTIANE ARANTES",
+      "desconto": "8,75",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "15/01/2025",
+      "hora": "14:20",
+      "cliente": "MANU",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "15/01/2025",
+      "hora": "14:07",
+      "cliente": "Vitória Ribeiro",
+      "desconto": "9,19",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "15/01/2025",
+      "hora": "14:07",
+      "cliente": "Débora Assumpção",
+      "desconto": "7,50",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "15/01/2025",
+      "hora": "14:02",
+      "cliente": "Malu Selonk ",
+      "desconto": "5,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "15/01/2025",
+      "hora": "14:02",
+      "cliente": "",
+      "desconto": "8,25",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "alex"
+    },
+    {
+      "data": "15/01/2025",
+      "hora": "13:16",
+      "cliente": "Consuelo Rebelo",
+      "desconto": "9,51",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "15/01/2025",
+      "hora": "12:42",
+      "cliente": "Kailane Olivera",
+      "desconto": "3,85",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "alex"
+    },
+    {
+      "data": "15/01/2025",
+      "hora": "12:34",
+      "cliente": "Kailane Olivera",
+      "desconto": "6,25",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "alex"
+    },
+    {
+      "data": "14/01/2025",
+      "hora": "22:28",
+      "cliente": "Flavia Corrêa",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "14/01/2025",
+      "hora": "22:21",
+      "cliente": "Lalas Brito",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "14/01/2025",
+      "hora": "21:54",
+      "cliente": "ISABELA SANTILLI",
+      "desconto": "5,99",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "14/01/2025",
+      "hora": "21:36",
+      "cliente": "Flavia Mello",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "14/01/2025",
+      "hora": "21:22",
+      "cliente": "BEATRIZ BARBOSA DOS SANTOS",
+      "desconto": "7,50",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "14/01/2025",
+      "hora": "20:43",
+      "cliente": "Jessica Melloni Pedrosa",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "14/01/2025",
+      "hora": "20:39",
+      "cliente": "RIANE WANZELER DE OLIVEIRA",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "14/01/2025",
+      "hora": "19:08",
+      "cliente": "Renato Pentagna",
+      "desconto": "7,72",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "14/01/2025",
+      "hora": "18:17",
+      "cliente": "FOOD TO SAVE",
+      "desconto": "48,81",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "cristiane"
+    },
+    {
+      "data": "14/01/2025",
+      "hora": "18:17",
+      "cliente": "FOOD TO SAVE",
+      "desconto": "41,21",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "cristiane"
+    },
+    {
+      "data": "14/01/2025",
+      "hora": "18:16",
+      "cliente": "FOOD TO SAVE",
+      "desconto": "47,81",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "cristiane"
+    },
+    {
+      "data": "14/01/2025",
+      "hora": "18:15",
+      "cliente": "FOOD TO SAVE",
+      "desconto": "46,71",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "cristiane"
+    },
+    {
+      "data": "14/01/2025",
+      "hora": "18:12",
+      "cliente": "FOOD TO SAVE",
+      "desconto": "50,81",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "cristiane"
+    },
+    {
+      "data": "14/01/2025",
+      "hora": "18:11",
+      "cliente": "FOOD TO SAVE",
+      "desconto": "51,91",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "cristiane"
+    },
+    {
+      "data": "14/01/2025",
+      "hora": "18:09",
+      "cliente": "FOOD TO SAVE",
+      "desconto": "47,81",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "cristiane"
+    },
+    {
+      "data": "14/01/2025",
+      "hora": "18:08",
+      "cliente": "FOOD TO SAVE",
+      "desconto": "47,81",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "cristiane"
+    },
+    {
+      "data": "14/01/2025",
+      "hora": "17:41",
+      "cliente": "ACEPIPES",
+      "desconto": "130,35",
+      "origem": "WhatsApp",
+      "tipo_pedido": "Delivery",
+      "atendente": "cristiane"
+    },
+    {
+      "data": "14/01/2025",
+      "hora": "17:32",
+      "cliente": "Elisa Paiva",
+      "desconto": "11,19",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "14/01/2025",
+      "hora": "16:56",
+      "cliente": "VITORIA MATIAS ",
+      "desconto": "14,20",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "alex"
+    },
+    {
+      "data": "14/01/2025",
+      "hora": "15:13",
+      "cliente": "MARINA VIEIRA",
+      "desconto": "5,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "14/01/2025",
+      "hora": "15:12",
+      "cliente": "WANIA PINTO",
+      "desconto": "5,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "14/01/2025",
+      "hora": "14:38",
+      "cliente": "Joao Vitor Ribeiro",
+      "desconto": "5,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "14/01/2025",
+      "hora": "14:32",
+      "cliente": "Thaiane Valladão",
+      "desconto": "5,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "14/01/2025",
+      "hora": "14:03",
+      "cliente": "KATIA",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "14/01/2025",
+      "hora": "13:39",
+      "cliente": "KAREN LUZA",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "14/01/2025",
+      "hora": "13:34",
+      "cliente": "Cintia Cantilino",
+      "desconto": "14,01",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "14/01/2025",
+      "hora": "10:16",
+      "cliente": "GIOVANNA",
+      "desconto": "8,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "14/01/2025",
+      "hora": "09:04",
+      "cliente": "Luanna Gomes",
+      "desconto": "9,19",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "13/01/2025",
+      "hora": "17:21",
+      "cliente": "Wilson  Silva",
+      "desconto": "11,26",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "13/01/2025",
+      "hora": "17:05",
+      "cliente": "Tainara Vieira Aires",
+      "desconto": "4,06",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "13/01/2025",
+      "hora": "16:35",
+      "cliente": "FLAVIA MORETTI",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "13/01/2025",
+      "hora": "16:34",
+      "cliente": "Angélica  de Andrade Costa",
+      "desconto": "7,50",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "13/01/2025",
+      "hora": "16:27",
+      "cliente": "Fabio Luiz",
+      "desconto": "7,50",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "13/01/2025",
+      "hora": "15:45",
+      "cliente": "EDUARDO SILVA",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "13/01/2025",
+      "hora": "15:32",
+      "cliente": "Ana Karolyna",
+      "desconto": "11,26",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "13/01/2025",
+      "hora": "15:29",
+      "cliente": "IZABEL OLIVEIRA",
+      "desconto": "7,50",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "13/01/2025",
+      "hora": "14:22",
+      "cliente": "MARIANA ALVES",
+      "desconto": "10,50",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "13/01/2025",
+      "hora": "14:17",
+      "cliente": "Raiane Santos Da Silva",
+      "desconto": "19,85",
+      "origem": "neemo",
+      "tipo_pedido": "Delivery",
+      "atendente": ""
+    },
+    {
+      "data": "13/01/2025",
+      "hora": "14:14",
+      "cliente": "Luciana almeida ",
+      "desconto": "12,25",
+      "origem": "neemo",
+      "tipo_pedido": "Delivery",
+      "atendente": ""
+    },
+    {
+      "data": "13/01/2025",
+      "hora": "14:12",
+      "cliente": "Victor Oliveira",
+      "desconto": "7,50",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "13/01/2025",
+      "hora": "14:04",
+      "cliente": "Simone Rodrigues",
+      "desconto": "13,51",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "13/01/2025",
+      "hora": "13:28",
+      "cliente": "CLARISSA",
+      "desconto": "7,50",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "13/01/2025",
+      "hora": "11:56",
+      "cliente": "Kailane Olivera",
+      "desconto": "8,75",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "alex"
+    },
+    {
+      "data": "13/01/2025",
+      "hora": "10:16",
+      "cliente": "FÁTIMA GUERREIRO ",
+      "desconto": "23,65",
+      "origem": "neemo",
+      "tipo_pedido": "Delivery",
+      "atendente": ""
+    },
+    {
+      "data": "13/01/2025",
+      "hora": "09:06",
+      "cliente": "PAULA BLATT PIZZI",
+      "desconto": "8,75",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "12/01/2025",
+      "hora": "19:02",
+      "cliente": "Marina Tozzi",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "12/01/2025",
+      "hora": "19:00",
+      "cliente": "Ana Queiroz",
+      "desconto": "7,50",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "12/01/2025",
+      "hora": "18:49",
+      "cliente": "Ana Paula Seabra Fagundes",
+      "desconto": "25,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "12/01/2025",
+      "hora": "18:28",
+      "cliente": "lizandra oliveira",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "12/01/2025",
+      "hora": "18:08",
+      "cliente": "LUCIANA CORREA MEYER",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "12/01/2025",
+      "hora": "18:00",
+      "cliente": "YVES ASSIS ",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "12/01/2025",
+      "hora": "17:51",
+      "cliente": "Tais Medeiros Brandão",
+      "desconto": "7,50",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "12/01/2025",
+      "hora": "17:24",
+      "cliente": "maria eduarda matias roberto",
+      "desconto": "7,50",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "12/01/2025",
+      "hora": "16:59",
+      "cliente": "Felipe Ribeiro",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "12/01/2025",
+      "hora": "16:40",
+      "cliente": "Juliana Santos",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "12/01/2025",
+      "hora": "16:26",
+      "cliente": "Helena Stein",
+      "desconto": "9,19",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "12/01/2025",
+      "hora": "16:13",
+      "cliente": "Enzo Husti",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "12/01/2025",
+      "hora": "16:12",
+      "cliente": "RAMILLE",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "12/01/2025",
+      "hora": "15:32",
+      "cliente": "Isabella Santoro",
+      "desconto": "14,01",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "12/01/2025",
+      "hora": "15:06",
+      "cliente": "christiana",
+      "desconto": "5,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "12/01/2025",
+      "hora": "15:03",
+      "cliente": "AUGUSTO CESAR",
+      "desconto": "5,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "12/01/2025",
+      "hora": "14:57",
+      "cliente": "FERNANDA FRANCE",
+      "desconto": "8,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "12/01/2025",
+      "hora": "14:56",
+      "cliente": "Eurico Giuberti",
+      "desconto": "5,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "12/01/2025",
+      "hora": "14:44",
+      "cliente": "PATRICIA FERREIRA DA SILVA",
+      "desconto": "5,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "12/01/2025",
+      "hora": "14:28",
+      "cliente": "Yenier Torres",
+      "desconto": "18,85",
+      "origem": "neemo",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "12/01/2025",
+      "hora": "14:26",
+      "cliente": "MARIA CECILIA CHAVES",
+      "desconto": "5,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "12/01/2025",
+      "hora": "12:29",
+      "cliente": "Bianca Gomes",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "12/01/2025",
+      "hora": "11:42",
+      "cliente": "LUIZ EDUARDO",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "11/01/2025",
+      "hora": "21:55",
+      "cliente": "Cristiane De",
+      "desconto": "9,19",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "11/01/2025",
+      "hora": "21:43",
+      "cliente": "Sandra Wu",
+      "desconto": "9,19",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "11/01/2025",
+      "hora": "21:09",
+      "cliente": "KEVIN",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "11/01/2025",
+      "hora": "21:01",
+      "cliente": "Ronaldo Resende",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "11/01/2025",
+      "hora": "20:59",
+      "cliente": "GABRIELLA REVELLES BRANCACCIO",
+      "desconto": "7,50",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "11/01/2025",
+      "hora": "20:02",
+      "cliente": "Natasha R Bergottini",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "11/01/2025",
+      "hora": "19:54",
+      "cliente": "Débora Pereira",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "11/01/2025",
+      "hora": "19:48",
+      "cliente": "Luciana Saker",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "11/01/2025",
+      "hora": "19:06",
+      "cliente": "ROSA MARIA",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "11/01/2025",
+      "hora": "18:31",
+      "cliente": "Waleska Brito",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "11/01/2025",
+      "hora": "18:29",
+      "cliente": "FOOD TO SAVE",
+      "desconto": "46,81",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "cristiane"
+    },
+    {
+      "data": "11/01/2025",
+      "hora": "17:39",
+      "cliente": "flávia de castilho marques",
+      "desconto": "0,50",
+      "origem": "WhatsApp",
+      "tipo_pedido": "Delivery",
+      "atendente": "Larissa Lira"
+    },
+    {
+      "data": "11/01/2025",
+      "hora": "17:23",
+      "cliente": "Maria do Carmo Locio",
+      "desconto": "9,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "11/01/2025",
+      "hora": "17:23",
+      "cliente": "Kessia santos56",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "11/01/2025",
+      "hora": "17:23",
+      "cliente": "Maria Clara Maia",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "11/01/2025",
+      "hora": "17:22",
+      "cliente": "MONIQUE MAIA",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "11/01/2025",
+      "hora": "17:09",
+      "cliente": "FOOD TO SAVE",
+      "desconto": "58,31",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "cristiane"
+    },
+    {
+      "data": "11/01/2025",
+      "hora": "17:08",
+      "cliente": "Antonio Marcos Correia Lima",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "11/01/2025",
+      "hora": "17:06",
+      "cliente": "FOOD TO SAVE",
+      "desconto": "48,31",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "cristiane"
+    },
+    {
+      "data": "11/01/2025",
+      "hora": "17:05",
+      "cliente": "FOOD TO SAVE",
+      "desconto": "54,51",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "cristiane"
+    },
+    {
+      "data": "11/01/2025",
+      "hora": "17:03",
+      "cliente": "FOOD TO SAVE",
+      "desconto": "54,51",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "cristiane"
+    },
+    {
+      "data": "11/01/2025",
+      "hora": "17:01",
+      "cliente": "FOOD TO SAVE",
+      "desconto": "17,01",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "cristiane"
+    },
+    {
+      "data": "11/01/2025",
+      "hora": "16:55",
+      "cliente": "Kailane Olivera",
+      "desconto": "14,50",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "alex"
+    },
+    {
+      "data": "11/01/2025",
+      "hora": "16:42",
+      "cliente": "Claudia",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "11/01/2025",
+      "hora": "16:15",
+      "cliente": "Camilla Alves",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "11/01/2025",
+      "hora": "16:07",
+      "cliente": "Bianca Costa",
+      "desconto": "10,01",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "11/01/2025",
+      "hora": "15:41",
+      "cliente": "Suzana Magalhaes",
+      "desconto": "5,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "11/01/2025",
+      "hora": "15:34",
+      "cliente": "Matheus Spatti",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "11/01/2025",
+      "hora": "15:31",
+      "cliente": "Guilherme Conde",
+      "desconto": "5,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "11/01/2025",
+      "hora": "14:59",
+      "cliente": "MARIANA  Machado",
+      "desconto": "8,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "11/01/2025",
+      "hora": "14:19",
+      "cliente": "Giliarde Ramalho da Silva",
+      "desconto": "134,25",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "cristiane"
+    },
+    {
+      "data": "11/01/2025",
+      "hora": "14:10",
+      "cliente": "RAFAELLA NASCIMENTO ",
+      "desconto": "5,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "11/01/2025",
+      "hora": "14:08",
+      "cliente": "Tayana Mendes",
+      "desconto": "6,99",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "11/01/2025",
+      "hora": "14:01",
+      "cliente": "Betina Bak",
+      "desconto": "5,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "11/01/2025",
+      "hora": "12:26",
+      "cliente": "Luiza Alonso",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "11/01/2025",
+      "hora": "11:24",
+      "cliente": "Évila Nobre",
+      "desconto": "11,75",
+      "origem": "neemo",
+      "tipo_pedido": "Delivery",
+      "atendente": ""
+    },
+    {
+      "data": "10/01/2025",
+      "hora": "21:35",
+      "cliente": "DENISE CHUT",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "10/01/2025",
+      "hora": "21:28",
+      "cliente": "Fernanda farah",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "10/01/2025",
+      "hora": "21:15",
+      "cliente": "Mauricio Cunha Almeida",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "10/01/2025",
+      "hora": "21:09",
+      "cliente": "Eduarda Ogliari",
+      "desconto": "5,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "10/01/2025",
+      "hora": "20:25",
+      "cliente": "MELINA DA SILVA",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "10/01/2025",
+      "hora": "20:11",
+      "cliente": "Michele Mauricio",
+      "desconto": "8,25",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "10/01/2025",
+      "hora": "19:00",
+      "cliente": "Nathalia Meyohas",
+      "desconto": "9,99",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "10/01/2025",
+      "hora": "18:41",
+      "cliente": "PEDRO OLIVEIRA CASTRO ",
+      "desconto": "22,40",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "alex"
+    },
+    {
+      "data": "10/01/2025",
+      "hora": "18:41",
+      "cliente": "Paula Ströher",
+      "desconto": "8,11",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "10/01/2025",
+      "hora": "18:13",
+      "cliente": "Liliane Chueke",
+      "desconto": "14,01",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "10/01/2025",
+      "hora": "17:48",
+      "cliente": "",
+      "desconto": "10,00",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Mesa",
+      "atendente": "alex"
+    },
+    {
+      "data": "10/01/2025",
+      "hora": "17:05",
+      "cliente": "BAJA CALIFÓRNIA",
+      "desconto": "282,75",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "cristiane"
+    },
+    {
+      "data": "10/01/2025",
+      "hora": "16:52",
+      "cliente": "Mariana Couri",
+      "desconto": "5,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "10/01/2025",
+      "hora": "16:29",
+      "cliente": "FOOD TO SAVE",
+      "desconto": "46,81",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "cristiane"
+    },
+    {
+      "data": "10/01/2025",
+      "hora": "16:28",
+      "cliente": "FOOD TO SAVE",
+      "desconto": "43,81",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "cristiane"
+    },
+    {
+      "data": "10/01/2025",
+      "hora": "16:21",
+      "cliente": "FOOD TO SAVE",
+      "desconto": "52,01",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "cristiane"
+    },
+    {
+      "data": "10/01/2025",
+      "hora": "16:19",
+      "cliente": "FOOD TO SAVE",
+      "desconto": "52,01",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "cristiane"
+    },
+    {
+      "data": "10/01/2025",
+      "hora": "16:18",
+      "cliente": "BRUNA",
+      "desconto": "5,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "10/01/2025",
+      "hora": "16:13",
+      "cliente": "KARINA",
+      "desconto": "5,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "10/01/2025",
+      "hora": "16:10",
+      "cliente": "Amanda Sousa",
+      "desconto": "6,81",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "10/01/2025",
+      "hora": "15:50",
+      "cliente": "Kailane Olivera",
+      "desconto": "94,25",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "alex"
+    },
+    {
+      "data": "10/01/2025",
+      "hora": "15:49",
+      "cliente": "Maria Bernadete Silva",
+      "desconto": "18,85",
+      "origem": "neemo",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "10/01/2025",
+      "hora": "15:19",
+      "cliente": "Marjory Demaria Susin",
+      "desconto": "5,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "10/01/2025",
+      "hora": "15:13",
+      "cliente": "Jonas Dias",
+      "desconto": "17,01",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "10/01/2025",
+      "hora": "15:00",
+      "cliente": "Alice Simões",
+      "desconto": "5,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "10/01/2025",
+      "hora": "14:42",
+      "cliente": "Júlia Knaipp Seabra",
+      "desconto": "8,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "10/01/2025",
+      "hora": "14:30",
+      "cliente": "Rachel Cretton Rodrigues",
+      "desconto": "4,04",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "10/01/2025",
+      "hora": "14:14",
+      "cliente": "",
+      "desconto": "3,75",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "alex"
+    },
+    {
+      "data": "10/01/2025",
+      "hora": "13:51",
+      "cliente": "ACEPIPES",
+      "desconto": "56,55",
+      "origem": "WhatsApp",
+      "tipo_pedido": "Delivery",
+      "atendente": "Larissa Lira"
+    },
+    {
+      "data": "10/01/2025",
+      "hora": "13:47",
+      "cliente": "Mariana Pereira Pinto de Souza Lima",
+      "desconto": "26,85",
+      "origem": "WhatsApp",
+      "tipo_pedido": "Delivery",
+      "atendente": "Larissa Lira"
+    },
+    {
+      "data": "10/01/2025",
+      "hora": "11:00",
+      "cliente": "VANESSA",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "10/01/2025",
+      "hora": "10:29",
+      "cliente": "Giliarde Ramalho da Silva",
+      "desconto": "4,40",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "alex"
+    },
+    {
+      "data": "10/01/2025",
+      "hora": "02:45",
+      "cliente": "Rafaela Zaiden",
+      "desconto": "20,20",
+      "origem": "neemo",
+      "tipo_pedido": "Delivery",
+      "atendente": ""
+    },
+    {
+      "data": "09/01/2025",
+      "hora": "21:00",
+      "cliente": "JÚLIA VILLELA MACHARETH",
+      "desconto": "7,50",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "09/01/2025",
+      "hora": "20:51",
+      "cliente": "PATRICIA SANTANA ",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "09/01/2025",
+      "hora": "20:13",
+      "cliente": "Simone Ramos",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "09/01/2025",
+      "hora": "19:20",
+      "cliente": "JOAO ",
+      "desconto": "28,90",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "alex"
+    },
+    {
+      "data": "09/01/2025",
+      "hora": "19:17",
+      "cliente": "",
+      "desconto": "8,75",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "alex"
+    },
+    {
+      "data": "09/01/2025",
+      "hora": "19:07",
+      "cliente": "VITORIA MATIAS ",
+      "desconto": "42,25",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "alex"
+    },
+    {
+      "data": "09/01/2025",
+      "hora": "17:53",
+      "cliente": "Fabiana Carvalho",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "09/01/2025",
+      "hora": "16:54",
+      "cliente": "Miguel Augusto",
+      "desconto": "5,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "09/01/2025",
+      "hora": "16:43",
+      "cliente": "FOOD TO SAVE",
+      "desconto": "27,61",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "Larissa Lira"
+    },
+    {
+      "data": "09/01/2025",
+      "hora": "16:43",
+      "cliente": "FOOD TO SAVE",
+      "desconto": "23,71",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "Larissa Lira"
+    },
+    {
+      "data": "09/01/2025",
+      "hora": "16:42",
+      "cliente": "FOOD TO SAVE",
+      "desconto": "51,01",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "Larissa Lira"
+    },
+    {
+      "data": "09/01/2025",
+      "hora": "16:41",
+      "cliente": "FOOD TO SAVE",
+      "desconto": "44,01",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "Larissa Lira"
+    },
+    {
+      "data": "09/01/2025",
+      "hora": "16:41",
+      "cliente": "FOOD TO SAVE",
+      "desconto": "44,01",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "Larissa Lira"
+    },
+    {
+      "data": "09/01/2025",
+      "hora": "16:40",
+      "cliente": "FOOD TO SAVE",
+      "desconto": "58,61",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "Larissa Lira"
+    },
+    {
+      "data": "09/01/2025",
+      "hora": "16:39",
+      "cliente": "FOOD TO SAVE",
+      "desconto": "42,41",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "Larissa Lira"
+    },
+    {
+      "data": "09/01/2025",
+      "hora": "16:39",
+      "cliente": "FOOD TO SAVE",
+      "desconto": "45,61",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "Larissa Lira"
+    },
+    {
+      "data": "09/01/2025",
+      "hora": "16:38",
+      "cliente": "FOOD TO SAVE",
+      "desconto": "58,91",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "Larissa Lira"
+    },
+    {
+      "data": "09/01/2025",
+      "hora": "16:35",
+      "cliente": "FOOD TO SAVE",
+      "desconto": "40,21",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "Larissa Lira"
+    },
+    {
+      "data": "09/01/2025",
+      "hora": "16:35",
+      "cliente": "FOOD TO SAVE",
+      "desconto": "42,41",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "Larissa Lira"
+    },
+    {
+      "data": "09/01/2025",
+      "hora": "16:33",
+      "cliente": "FOOD TO SAVE",
+      "desconto": "54,41",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "Larissa Lira"
+    },
+    {
+      "data": "09/01/2025",
+      "hora": "16:31",
+      "cliente": "FOOD TO SAVE",
+      "desconto": "40,21",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "Larissa Lira"
+    },
+    {
+      "data": "09/01/2025",
+      "hora": "16:30",
+      "cliente": "Eva Walter",
+      "desconto": "7,50",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "09/01/2025",
+      "hora": "16:29",
+      "cliente": "",
+      "desconto": "15,45",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "alex"
+    },
+    {
+      "data": "09/01/2025",
+      "hora": "16:27",
+      "cliente": "Leticia Domingues Monteiro",
+      "desconto": "7,50",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "09/01/2025",
+      "hora": "16:07",
+      "cliente": "Micaely Krause",
+      "desconto": "7,50",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "09/01/2025",
+      "hora": "15:57",
+      "cliente": "FOOD TO SAVE",
+      "desconto": "50,01",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "Larissa Lira"
+    },
+    {
+      "data": "09/01/2025",
+      "hora": "15:55",
+      "cliente": "THAYNARA SANTOS",
+      "desconto": "8,25",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "alex"
+    },
+    {
+      "data": "09/01/2025",
+      "hora": "15:35",
+      "cliente": "Kailane Olivera",
+      "desconto": "6,00",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "alex"
+    },
+    {
+      "data": "09/01/2025",
+      "hora": "15:33",
+      "cliente": "CAMILA VILANOVA",
+      "desconto": "7,50",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "09/01/2025",
+      "hora": "15:33",
+      "cliente": "VITORIA MATIAS ",
+      "desconto": "15,35",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "alex"
+    },
+    {
+      "data": "09/01/2025",
+      "hora": "15:32",
+      "cliente": "ADA CRISTINA PONTES AGUIAR",
+      "desconto": "5,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "09/01/2025",
+      "hora": "15:07",
+      "cliente": "Helio Mauricio Valerio Da Costa",
+      "desconto": "5,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "09/01/2025",
+      "hora": "14:55",
+      "cliente": "DANIELLE GAMA BESSA BITES",
+      "desconto": "7,50",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "09/01/2025",
+      "hora": "14:31",
+      "cliente": "Alex Kalawatis",
+      "desconto": "7,50",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "09/01/2025",
+      "hora": "14:28",
+      "cliente": "Adriana Nascimento",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "09/01/2025",
+      "hora": "14:27",
+      "cliente": "JÉSSICA VIEIRA",
+      "desconto": "7,50",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "09/01/2025",
+      "hora": "14:21",
+      "cliente": "Gabri ela",
+      "desconto": "8,45",
+      "origem": "neemo",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "09/01/2025",
+      "hora": "14:10",
+      "cliente": "Stella Silva",
+      "desconto": "7,50",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "09/01/2025",
+      "hora": "14:06",
+      "cliente": "Tiago Freitas",
+      "desconto": "7,50",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "09/01/2025",
+      "hora": "13:54",
+      "cliente": "Júlia  Marini ",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "09/01/2025",
+      "hora": "10:26",
+      "cliente": "Victoria Idê Mendonça",
+      "desconto": "8,75",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "09/01/2025",
+      "hora": "09:33",
+      "cliente": "LENI BENEVIDES ",
+      "desconto": "13,75",
+      "origem": "neemo",
+      "tipo_pedido": "Delivery",
+      "atendente": ""
+    },
+    {
+      "data": "08/01/2025",
+      "hora": "21:53",
+      "cliente": "Thiago Rosadas",
+      "desconto": "7,50",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "08/01/2025",
+      "hora": "21:27",
+      "cliente": "CRISTINA_A_RJ@YAHOO.COM.BR",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "08/01/2025",
+      "hora": "21:12",
+      "cliente": "Alice Carvalho",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "08/01/2025",
+      "hora": "21:11",
+      "cliente": "FERNANDA",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "08/01/2025",
+      "hora": "21:03",
+      "cliente": "Claudia Schuffner",
+      "desconto": "7,50",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "08/01/2025",
+      "hora": "20:43",
+      "cliente": "Andreza Silva",
+      "desconto": "9,19",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "08/01/2025",
+      "hora": "20:16",
+      "cliente": "Rebeca Barreto Lima",
+      "desconto": "8,12",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "08/01/2025",
+      "hora": "19:10",
+      "cliente": "JOAO ",
+      "desconto": "9,20",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Comanda",
+      "atendente": "alex"
+    },
+    {
+      "data": "08/01/2025",
+      "hora": "18:56",
+      "cliente": "Caio Daniel Vidal",
+      "desconto": "9,19",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "08/01/2025",
+      "hora": "18:03",
+      "cliente": "Milena Vargas",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "08/01/2025",
+      "hora": "18:00",
+      "cliente": "PEDRO OLIVEIRA CASTRO ",
+      "desconto": "7,65",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "alex"
+    },
+    {
+      "data": "08/01/2025",
+      "hora": "17:52",
+      "cliente": "iury lima",
+      "desconto": "13,51",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "08/01/2025",
+      "hora": "17:45",
+      "cliente": "CAMILA LIPIANI",
+      "desconto": "9,19",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "08/01/2025",
+      "hora": "17:28",
+      "cliente": "Luciana Martins de Oliveira Severo da Costa",
+      "desconto": "7,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "08/01/2025",
+      "hora": "16:44",
+      "cliente": "NATHAN SANTOS DE SOUZA",
+      "desconto": "80,00",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "cristiane"
+    },
+    {
+      "data": "08/01/2025",
+      "hora": "15:13",
+      "cliente": "Fabiana Menezes",
+      "desconto": "5,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "08/01/2025",
+      "hora": "14:45",
+      "cliente": "Lilian Oliveira",
+      "desconto": "15,45",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "alex"
+    },
+    {
+      "data": "08/01/2025",
+      "hora": "14:43",
+      "cliente": "THAYNARA SANTOS",
+      "desconto": "8,75",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "alex"
+    },
+    {
+      "data": "08/01/2025",
+      "hora": "14:33",
+      "cliente": "ACEPIPES",
+      "desconto": "105,00",
+      "origem": "WhatsApp",
+      "tipo_pedido": "Delivery",
+      "atendente": "Larissa Lira"
+    },
+    {
+      "data": "08/01/2025",
+      "hora": "14:29",
+      "cliente": "Juliana  Paulino",
+      "desconto": "8,26",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "08/01/2025",
+      "hora": "14:21",
+      "cliente": "ANA LETICIA",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "08/01/2025",
+      "hora": "14:02",
+      "cliente": "Vitória Carvalho",
+      "desconto": "5,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "08/01/2025",
+      "hora": "13:36",
+      "cliente": "Ludmila Salgado",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "08/01/2025",
+      "hora": "13:13",
+      "cliente": "Jéssica Prates",
+      "desconto": "14,01",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "08/01/2025",
+      "hora": "12:50",
+      "cliente": "Fernanda  Barbosa",
+      "desconto": "8,62",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "08/01/2025",
+      "hora": "10:25",
+      "cliente": "Jéssica  Cruz",
+      "desconto": "8,11",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "07/01/2025",
+      "hora": "22:00",
+      "cliente": "CRISTINA_A_RJ@YAHOO.COM.BR",
+      "desconto": "8,11",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "07/01/2025",
+      "hora": "21:28",
+      "cliente": "Maria Clara Velloso",
+      "desconto": "9,19",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "07/01/2025",
+      "hora": "21:03",
+      "cliente": "Nicolas Oliveira",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "07/01/2025",
+      "hora": "20:44",
+      "cliente": "Dayane Da Silva Barbosa",
+      "desconto": "5,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "07/01/2025",
+      "hora": "20:33",
+      "cliente": "HENRIQUE CRISTIANO DA COSTA",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "07/01/2025",
+      "hora": "19:57",
+      "cliente": "Roberto Carvalho",
+      "desconto": "7,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "07/01/2025",
+      "hora": "18:56",
+      "cliente": "JOAO ",
+      "desconto": "32,10",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Comanda",
+      "atendente": "alex"
+    },
+    {
+      "data": "07/01/2025",
+      "hora": "18:28",
+      "cliente": "Mariana Casara",
+      "desconto": "9,99",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "07/01/2025",
+      "hora": "15:57",
+      "cliente": "ACEPIPES",
+      "desconto": "126,75",
+      "origem": "WhatsApp",
+      "tipo_pedido": "Delivery",
+      "atendente": "cristiane"
+    },
+    {
+      "data": "07/01/2025",
+      "hora": "14:49",
+      "cliente": "Wênia Silva",
+      "desconto": "7,50",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "07/01/2025",
+      "hora": "14:47",
+      "cliente": "Suse chelli",
+      "desconto": "9,99",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "07/01/2025",
+      "hora": "14:41",
+      "cliente": "tatianna silva",
+      "desconto": "14,01",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "07/01/2025",
+      "hora": "14:31",
+      "cliente": "MONIQUE JÚDICE",
+      "desconto": "23,95",
+      "origem": "neemo",
+      "tipo_pedido": "Delivery",
+      "atendente": ""
+    },
+    {
+      "data": "07/01/2025",
+      "hora": "13:48",
+      "cliente": "Alan Mourão",
+      "desconto": "10,01",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "07/01/2025",
+      "hora": "13:26",
+      "cliente": "Flávia Nascimento",
+      "desconto": "7,99",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "07/01/2025",
+      "hora": "13:19",
+      "cliente": "Ana Paula Oliveira ",
+      "desconto": "18,85",
+      "origem": "neemo",
+      "tipo_pedido": "Delivery",
+      "atendente": ""
+    },
+    {
+      "data": "07/01/2025",
+      "hora": "13:07",
+      "cliente": "PAULA BLATT PIZZI",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "07/01/2025",
+      "hora": "12:45",
+      "cliente": "THAYNARA SANTOS",
+      "desconto": "4,95",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "alex"
+    },
+    {
+      "data": "07/01/2025",
+      "hora": "12:00",
+      "cliente": "Kailane Olivera",
+      "desconto": "14,70",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "alex"
+    },
+    {
+      "data": "07/01/2025",
+      "hora": "10:42",
+      "cliente": "LUCIANA BOAL MARINHO COELHO",
+      "desconto": "21,85",
+      "origem": "neemo",
+      "tipo_pedido": "Delivery",
+      "atendente": ""
+    },
+    {
+      "data": "07/01/2025",
+      "hora": "09:33",
+      "cliente": "ACEPIPES",
+      "desconto": "478,65",
+      "origem": "WhatsApp",
+      "tipo_pedido": "Delivery",
+      "atendente": "cristiane"
+    },
+    {
+      "data": "06/01/2025",
+      "hora": "18:08",
+      "cliente": "Giselly Costa",
+      "desconto": "14,01",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "06/01/2025",
+      "hora": "17:58",
+      "cliente": "LAURA OLIVEIRA CASTRO",
+      "desconto": "201,75",
+      "origem": "Telefone",
+      "tipo_pedido": "Balcão",
+      "atendente": "Larissa Lira"
+    },
+    {
+      "data": "06/01/2025",
+      "hora": "16:41",
+      "cliente": "FOOD TO SAVE",
+      "desconto": "52,91",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "Larissa Lira"
+    },
+    {
+      "data": "06/01/2025",
+      "hora": "16:40",
+      "cliente": "FOOD TO SAVE",
+      "desconto": "56,01",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "Larissa Lira"
+    },
+    {
+      "data": "06/01/2025",
+      "hora": "16:38",
+      "cliente": "FOOD TO SAVE",
+      "desconto": "52,81",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "Larissa Lira"
+    },
+    {
+      "data": "06/01/2025",
+      "hora": "16:38",
+      "cliente": "FOOD TO SAVE",
+      "desconto": "53,31",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "Larissa Lira"
+    },
+    {
+      "data": "06/01/2025",
+      "hora": "16:36",
+      "cliente": "FOOD TO SAVE",
+      "desconto": "52,31",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "Larissa Lira"
+    },
+    {
+      "data": "06/01/2025",
+      "hora": "16:36",
+      "cliente": "FOOD TO SAVE",
+      "desconto": "54,31",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "Larissa Lira"
+    },
+    {
+      "data": "06/01/2025",
+      "hora": "15:56",
+      "cliente": "VITORIA MATIAS ",
+      "desconto": "4,40",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "alex"
+    },
+    {
+      "data": "06/01/2025",
+      "hora": "15:09",
+      "cliente": "Juliana Leipnitz",
+      "desconto": "5,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "06/01/2025",
+      "hora": "14:51",
+      "cliente": "Vítor Freitas",
+      "desconto": "5,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "06/01/2025",
+      "hora": "14:36",
+      "cliente": "Marília Sipriana",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "06/01/2025",
+      "hora": "14:19",
+      "cliente": "THAYNARA SANTOS",
+      "desconto": "5,45",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "alex"
+    },
+    {
+      "data": "06/01/2025",
+      "hora": "13:56",
+      "cliente": "CLARA SOARES",
+      "desconto": "17,99",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "05/01/2025",
+      "hora": "18:51",
+      "cliente": "JULIANA MENEZES",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "05/01/2025",
+      "hora": "18:20",
+      "cliente": "Dante Galileu Botelho de Sousa ",
+      "desconto": "9,19",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "05/01/2025",
+      "hora": "18:16",
+      "cliente": "Renata Santos",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "05/01/2025",
+      "hora": "18:02",
+      "cliente": "Christiana Buffara Martins",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "05/01/2025",
+      "hora": "17:54",
+      "cliente": "CRISTINA_A_RJ@YAHOO.COM.BR",
+      "desconto": "8,11",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "05/01/2025",
+      "hora": "17:50",
+      "cliente": "Maria Luiza Faraco Moura",
+      "desconto": "7,50",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "05/01/2025",
+      "hora": "17:44",
+      "cliente": "Felippe Campos",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "05/01/2025",
+      "hora": "17:40",
+      "cliente": "ANDRESSA GARBATO",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "05/01/2025",
+      "hora": "17:05",
+      "cliente": "Niandra Soares",
+      "desconto": "7,50",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "05/01/2025",
+      "hora": "16:40",
+      "cliente": "Laura Koiller Schnoor",
+      "desconto": "5,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "05/01/2025",
+      "hora": "16:30",
+      "cliente": "Luiza Castro",
+      "desconto": "5,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "05/01/2025",
+      "hora": "16:26",
+      "cliente": "Pedro Ivo Dias",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "05/01/2025",
+      "hora": "16:15",
+      "cliente": "Gabriela Queiroz ",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "05/01/2025",
+      "hora": "15:46",
+      "cliente": "VICTOR GASPAR",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "05/01/2025",
+      "hora": "15:03",
+      "cliente": "Clarissa Bandeira",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "05/01/2025",
+      "hora": "11:51",
+      "cliente": "FERNANDA BRAGA",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "05/01/2025",
+      "hora": "11:35",
+      "cliente": "Gil Fernandes",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "04/01/2025",
+      "hora": "21:46",
+      "cliente": "Beatriz Hersbach",
+      "desconto": "9,19",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "04/01/2025",
+      "hora": "21:44",
+      "cliente": "Thais",
+      "desconto": "15,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "04/01/2025",
+      "hora": "21:15",
+      "cliente": "JULIA ZANIN",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "04/01/2025",
+      "hora": "20:54",
+      "cliente": "Natalia Vanzillotta",
+      "desconto": "9,19",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "04/01/2025",
+      "hora": "20:53",
+      "cliente": "LEANDRO LOPES DE BARROS BUENO",
+      "desconto": "9,19",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "04/01/2025",
+      "hora": "19:37",
+      "cliente": "Felippe Campos",
+      "desconto": "9,19",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "04/01/2025",
+      "hora": "19:31",
+      "cliente": "Paulo Paulino",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "04/01/2025",
+      "hora": "17:45",
+      "cliente": "LUCIA ROSENBLATT",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "04/01/2025",
+      "hora": "17:45",
+      "cliente": "Pamella Lima",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "04/01/2025",
+      "hora": "16:57",
+      "cliente": "DANIEL LINHARES",
+      "desconto": "5,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "04/01/2025",
+      "hora": "16:42",
+      "cliente": "Manuella Faria",
+      "desconto": "5,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "04/01/2025",
+      "hora": "16:25",
+      "cliente": "Liandra Marques",
+      "desconto": "5,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "04/01/2025",
+      "hora": "16:24",
+      "cliente": "Carlos Cardoso",
+      "desconto": "21,12",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "04/01/2025",
+      "hora": "16:19",
+      "cliente": "Antonio Lins",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "04/01/2025",
+      "hora": "16:15",
+      "cliente": "Raphaela Salles",
+      "desconto": "5,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "04/01/2025",
+      "hora": "16:11",
+      "cliente": "Cristiane Pereira Costa",
+      "desconto": "4,40",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "cristiane"
+    },
+    {
+      "data": "04/01/2025",
+      "hora": "15:38",
+      "cliente": "BAJA CALIFÓRNIA",
+      "desconto": "169,65",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "cristiane"
+    },
+    {
+      "data": "04/01/2025",
+      "hora": "15:37",
+      "cliente": "ACEPIPES",
+      "desconto": "107,25",
+      "origem": "WhatsApp",
+      "tipo_pedido": "Delivery",
+      "atendente": "cristiane"
+    },
+    {
+      "data": "04/01/2025",
+      "hora": "15:24",
+      "cliente": "Andrea Domingos",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "04/01/2025",
+      "hora": "14:14",
+      "cliente": "TATIANA BATISTA",
+      "desconto": "9,19",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "04/01/2025",
+      "hora": "13:41",
+      "cliente": "Jayme Toledo",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "04/01/2025",
+      "hora": "13:35",
+      "cliente": "THAYNARA SANTOS",
+      "desconto": "3,85",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "alex"
+    },
+    {
+      "data": "04/01/2025",
+      "hora": "11:34",
+      "cliente": "THAYNARA SANTOS",
+      "desconto": "3,75",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "alex"
+    },
+    {
+      "data": "04/01/2025",
+      "hora": "10:48",
+      "cliente": "Leonardo werneck ",
+      "desconto": "27,85",
+      "origem": "neemo",
+      "tipo_pedido": "Delivery",
+      "atendente": ""
+    },
+    {
+      "data": "04/01/2025",
+      "hora": "10:09",
+      "cliente": "Junior Alli",
+      "desconto": "5,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "03/01/2025",
+      "hora": "21:44",
+      "cliente": "FRANCIELI PAGLIARIM",
+      "desconto": "9,19",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "03/01/2025",
+      "hora": "21:19",
+      "cliente": "MARCIA PONTE",
+      "desconto": "9,19",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "03/01/2025",
+      "hora": "20:37",
+      "cliente": "FELIPE ARRUDA",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "03/01/2025",
+      "hora": "18:27",
+      "cliente": "Simone Gedy T de Azambuja",
+      "desconto": "0,50",
+      "origem": "WhatsApp",
+      "tipo_pedido": "Delivery",
+      "atendente": "cristiane"
+    },
+    {
+      "data": "03/01/2025",
+      "hora": "16:42",
+      "cliente": "Ruiz Athayde",
+      "desconto": "7,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "03/01/2025",
+      "hora": "16:41",
+      "cliente": "bruno ynuie",
+      "desconto": "7,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "03/01/2025",
+      "hora": "16:16",
+      "cliente": "Valentina Simas Spiller",
+      "desconto": "13,51",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "03/01/2025",
+      "hora": "15:43",
+      "cliente": "Nair Azulay",
+      "desconto": "5,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "03/01/2025",
+      "hora": "14:28",
+      "cliente": "Renan Silva",
+      "desconto": "12,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "03/01/2025",
+      "hora": "14:19",
+      "cliente": "Natalia Roza",
+      "desconto": "10,01",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "03/01/2025",
+      "hora": "12:50",
+      "cliente": "Ana Cláudia Guimarães Castanheira Ribeiro",
+      "desconto": "10,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "03/01/2025",
+      "hora": "11:52",
+      "cliente": "Larissa Lira ",
+      "desconto": "15,45",
+      "origem": "Mogo Gourmet",
+      "tipo_pedido": "Balcão",
+      "atendente": "alex"
+    },
+    {
+      "data": "03/01/2025",
+      "hora": "11:07",
+      "cliente": "Letícia Biolchini",
+      "desconto": "20,01",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "03/01/2025",
+      "hora": "10:54",
+      "cliente": "Simone Gedy T de Azambuja",
+      "desconto": "0,50",
+      "origem": "WhatsApp",
+      "tipo_pedido": "Delivery",
+      "atendente": "Larissa Lira"
+    },
+    {
+      "data": "02/01/2025",
+      "hora": "23:00",
+      "cliente": "Flavia Martinez de Carvalho ",
+      "desconto": "19,85",
+      "origem": "neemo",
+      "tipo_pedido": "Delivery",
+      "atendente": ""
+    },
+    {
+      "data": "02/01/2025",
+      "hora": "21:48",
+      "cliente": "Lucas Pimenta",
+      "desconto": "16,76",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "02/01/2025",
+      "hora": "20:10",
+      "cliente": "Laura Williams",
+      "desconto": "10,50",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "02/01/2025",
+      "hora": "19:09",
+      "cliente": "Marcela Calixto",
+      "desconto": "8,18",
+      "origem": "neemo",
+      "tipo_pedido": "Delivery",
+      "atendente": ""
+    },
+    {
+      "data": "02/01/2025",
+      "hora": "19:04",
+      "cliente": "Ana Paula De Oliveira",
+      "desconto": "10,50",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "02/01/2025",
+      "hora": "17:14",
+      "cliente": "Tatiane Veiga",
+      "desconto": "13,51",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "02/01/2025",
+      "hora": "15:57",
+      "cliente": "Clara Catabriga Rocha",
+      "desconto": "7,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "02/01/2025",
+      "hora": "15:56",
+      "cliente": "Andressa Santucci Mileski",
+      "desconto": "5,00",
+      "origem": "iFood",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    },
+    {
+      "data": "02/01/2025",
+      "hora": "10:36",
+      "cliente": "Paula Ribeiro Scotelaro ",
+      "desconto": "26,85",
+      "origem": "neemo",
+      "tipo_pedido": "Balcão",
+      "atendente": ""
+    }
+  ]
+}

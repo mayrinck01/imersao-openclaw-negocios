@@ -1,0 +1,722 @@
+{
+  "periodo": {
+    "de": "01/06/2025",
+    "ate": "30/06/2025"
+  },
+  "total_produtos": 178,
+  "total_quantidade": "1.392",
+  "registros": [
+    {
+      "produto": "MORANGO - DELICIOSA NAKED F25",
+      "quantidade": "114,00"
+    },
+    {
+      "produto": "MORANGO - DELICIOSA NAKED F20",
+      "quantidade": "103,00"
+    },
+    {
+      "produto": "MORANGO - DELICIOSA NAKED F13",
+      "quantidade": "58,00"
+    },
+    {
+      "produto": "BRIG. C/ MORANGO TRADICIONAL",
+      "quantidade": "41,00"
+    },
+    {
+      "produto": "TENTACAO F25",
+      "quantidade": "36,00"
+    },
+    {
+      "produto": "ALEMA F22",
+      "quantidade": "24,00"
+    },
+    {
+      "produto": "BRIG. TRADICIONAL 25UN",
+      "quantidade": "24,00"
+    },
+    {
+      "produto": "FANTASIA F13",
+      "quantidade": "23,00"
+    },
+    {
+      "produto": "QUINDIM UN",
+      "quantidade": "22,00"
+    },
+    {
+      "produto": "TENTACAO F13",
+      "quantidade": "21,00"
+    },
+    {
+      "produto": "BOLO CENOURA F25",
+      "quantidade": "20,00"
+    },
+    {
+      "produto": "BRIG. APAIXONADOS 12UN",
+      "quantidade": "20,00"
+    },
+    {
+      "produto": "ALEMA F13",
+      "quantidade": "19,00"
+    },
+    {
+      "produto": "BOLO LARANJA F25",
+      "quantidade": "19,00"
+    },
+    {
+      "produto": "FANTASIA F25",
+      "quantidade": "19,00"
+    },
+    {
+      "produto": "BRIG. NINHO NUTELLA 12UN",
+      "quantidade": "16,00"
+    },
+    {
+      "produto": "BRIG. TRADICIONAL 12UN",
+      "quantidade": "16,00"
+    },
+    {
+      "produto": "MORANGO - FT DELICIOSA",
+      "quantidade": "15,00"
+    },
+    {
+      "produto": "TORTA FOGUEIRA F25",
+      "quantidade": "15,00"
+    },
+    {
+      "produto": "TORTA MOUSSE F13",
+      "quantidade": "15,00"
+    },
+    {
+      "produto": "NOVA SWEET DARK F25",
+      "quantidade": "14,00"
+    },
+    {
+      "produto": "BRIG. PRETO PRECIOSO 12UN",
+      "quantidade": "13,00"
+    },
+    {
+      "produto": "CHOCOBERRIES F20",
+      "quantidade": "13,00"
+    },
+    {
+      "produto": "CHOCOBERRIES F25",
+      "quantidade": "13,00"
+    },
+    {
+      "produto": "FT EMPADAO FRANGO",
+      "quantidade": "13,00"
+    },
+    {
+      "produto": "MERENGUE 200ML",
+      "quantidade": "13,00"
+    },
+    {
+      "produto": "RED VELVET F13",
+      "quantidade": "13,00"
+    },
+    {
+      "produto": "BEIJO MORANGO PRETO CX 06",
+      "quantidade": "12,00"
+    },
+    {
+      "produto": "BRIG. C/ MORANGO DARK",
+      "quantidade": "12,00"
+    },
+    {
+      "produto": "CROCANTE F25",
+      "quantidade": "12,00"
+    },
+    {
+      "produto": "DELICIA COCO F25",
+      "quantidade": "12,00"
+    },
+    {
+      "produto": "FT MARAVILHA ABACAXI",
+      "quantidade": "12,00"
+    },
+    {
+      "produto": "BRIG. DARK 12UN",
+      "quantidade": "11,00"
+    },
+    {
+      "produto": "RED VELVET F25",
+      "quantidade": "11,00"
+    },
+    {
+      "produto": "BRIG. BRULLE 12UN",
+      "quantidade": "10,00"
+    },
+    {
+      "produto": "BRIG. DOIS AMORES 12UN",
+      "quantidade": "10,00"
+    },
+    {
+      "produto": "BRIG. PRETO PRECIOSO 25UN",
+      "quantidade": "10,00"
+    },
+    {
+      "produto": "BRIG. SAO JOAO 25UN",
+      "quantidade": "10,00"
+    },
+    {
+      "produto": "DELICIA CAMADAS F13",
+      "quantidade": "10,00"
+    },
+    {
+      "produto": "EMILIA F13",
+      "quantidade": "10,00"
+    },
+    {
+      "produto": "EMILIA F25",
+      "quantidade": "10,00"
+    },
+    {
+      "produto": "PAO ITALIANO",
+      "quantidade": "10,00"
+    },
+    {
+      "produto": "QUICHE ALHO PORO F13",
+      "quantidade": "10,00"
+    },
+    {
+      "produto": "BRIG. BRANCO PRECIOSO 25UN",
+      "quantidade": "9,00"
+    },
+    {
+      "produto": "BRIG. SAO JOAO 12UN",
+      "quantidade": "9,00"
+    },
+    {
+      "produto": "QUICHE ALHO PORO F25",
+      "quantidade": "9,00"
+    },
+    {
+      "produto": "RED VELVET F20",
+      "quantidade": "9,00"
+    },
+    {
+      "produto": "BISC COOKIE SUICO 100GR",
+      "quantidade": "8,00"
+    },
+    {
+      "produto": "BOLIM LARANJA",
+      "quantidade": "8,00"
+    },
+    {
+      "produto": "BRIG. COCO QUEIMADO 12UN",
+      "quantidade": "8,00"
+    },
+    {
+      "produto": "BRIG. DARK 25UN",
+      "quantidade": "8,00"
+    },
+    {
+      "produto": "BRIG. DOIS AMORES 25UN",
+      "quantidade": "8,00"
+    },
+    {
+      "produto": "CHOCOBERRIES F13",
+      "quantidade": "8,00"
+    },
+    {
+      "produto": "DELICIA CAMADAS F25",
+      "quantidade": "8,00"
+    },
+    {
+      "produto": "ENCHARCADA COPO 180gr",
+      "quantidade": "8,00"
+    },
+    {
+      "produto": "BEIJO MORANGO BRANCO CX 06",
+      "quantidade": "7,00"
+    },
+    {
+      "produto": "BRIG. BEIJINHO 12UN",
+      "quantidade": "7,00"
+    },
+    {
+      "produto": "BRIG. CHURROS 12UN",
+      "quantidade": "7,00"
+    },
+    {
+      "produto": "EMPADAO FRANGO F25",
+      "quantidade": "7,00"
+    },
+    {
+      "produto": "FT TENTACAO",
+      "quantidade": "7,00"
+    },
+    {
+      "produto": "MARAVILHA ABACAXI F25",
+      "quantidade": "7,00"
+    },
+    {
+      "produto": "PET HAPPY",
+      "quantidade": "7,00"
+    },
+    {
+      "produto": "TORTA LIMAO F13",
+      "quantidade": "7,00"
+    },
+    {
+      "produto": "TORTINHA CHOCOLATE",
+      "quantidade": "7,00"
+    },
+    {
+      "produto": "VELA ESTRELA DOURADA 4UN",
+      "quantidade": "7,00"
+    },
+    {
+      "produto": "VULCAO DE AMOR",
+      "quantidade": "7,00"
+    },
+    {
+      "produto": "AURORA F25",
+      "quantidade": "6,00"
+    },
+    {
+      "produto": "BOLIM CENOURA C/ COBERTURA",
+      "quantidade": "6,00"
+    },
+    {
+      "produto": "BRIG. CHURROS 25UN",
+      "quantidade": "6,00"
+    },
+    {
+      "produto": "BRIG. PINGO DE EMILIA 12UN",
+      "quantidade": "6,00"
+    },
+    {
+      "produto": "EMPADAO FRANGO F13",
+      "quantidade": "6,00"
+    },
+    {
+      "produto": "FIOS DE OVOS 250GRS",
+      "quantidade": "6,00"
+    },
+    {
+      "produto": "MORANGO - DELICIOSA NAKED F30",
+      "quantidade": "6,00"
+    },
+    {
+      "produto": "QUEBRA NOZES F13",
+      "quantidade": "6,00"
+    },
+    {
+      "produto": "TORTA LIMAO F25",
+      "quantidade": "6,00"
+    },
+    {
+      "produto": "TORTINHA GOURMET MISTA FESTA CX",
+      "quantidade": "6,00"
+    },
+    {
+      "produto": "VULCAO DE NUTELLA",
+      "quantidade": "6,00"
+    },
+    {
+      "produto": "BANOFFE F13",
+      "quantidade": "5,00"
+    },
+    {
+      "produto": "BANOFFE F20",
+      "quantidade": "5,00"
+    },
+    {
+      "produto": "BOLO MILHO COM COCO F25",
+      "quantidade": "5,00"
+    },
+    {
+      "produto": "BRIG. CHOCOLATE BRANCO 12UN",
+      "quantidade": "5,00"
+    },
+    {
+      "produto": "BRIG. CHOCOLATE BRANCO 25UN",
+      "quantidade": "5,00"
+    },
+    {
+      "produto": "BRIG. NINHO NUTELLA 25UN",
+      "quantidade": "5,00"
+    },
+    {
+      "produto": "BRIG. PAÇOCA 25UN",
+      "quantidade": "5,00"
+    },
+    {
+      "produto": "CHEESECAKE F. VERM F25",
+      "quantidade": "5,00"
+    },
+    {
+      "produto": "TORTA FOGUEIRA F13",
+      "quantidade": "5,00"
+    },
+    {
+      "produto": "TORTINHA GOURMET CHOCO FESTA CX",
+      "quantidade": "5,00"
+    },
+    {
+      "produto": "AURORA F13",
+      "quantidade": "4,00"
+    },
+    {
+      "produto": "BOLO ARRAIA DE AMENDOIN F22",
+      "quantidade": "4,00"
+    },
+    {
+      "produto": "BRIG. BRANCO DIVERTIDO 12UN",
+      "quantidade": "4,00"
+    },
+    {
+      "produto": "BRIG. C/ MORANGO BRANCO",
+      "quantidade": "4,00"
+    },
+    {
+      "produto": "CHEESECAKE MORANGO F25",
+      "quantidade": "4,00"
+    },
+    {
+      "produto": "FONDUE NAMORADOS",
+      "quantidade": "4,00"
+    },
+    {
+      "produto": "FT FANTASIA",
+      "quantidade": "4,00"
+    },
+    {
+      "produto": "FT TORTA BANANA",
+      "quantidade": "4,00"
+    },
+    {
+      "produto": "QUICHE CEBOLA F13",
+      "quantidade": "4,00"
+    },
+    {
+      "produto": "TORTINHA GOURMET BABA FESTA CX",
+      "quantidade": "4,00"
+    },
+    {
+      "produto": "VELA VULCAO DOURADA",
+      "quantidade": "4,00"
+    },
+    {
+      "produto": "VULCAO CENOURA",
+      "quantidade": "4,00"
+    },
+    {
+      "produto": "AURORA ENFEITADA F25",
+      "quantidade": "3,00"
+    },
+    {
+      "produto": "BISC PALMIER 100GR",
+      "quantidade": "3,00"
+    },
+    {
+      "produto": "BOLIM MILHO",
+      "quantidade": "3,00"
+    },
+    {
+      "produto": "BRIG. BEIJINHO 25UN",
+      "quantidade": "3,00"
+    },
+    {
+      "produto": "BRIG. NOZES 12UN",
+      "quantidade": "3,00"
+    },
+    {
+      "produto": "BRIG. NOZES 25UN",
+      "quantidade": "3,00"
+    },
+    {
+      "produto": "BRIG. PAÇOCA 12UN",
+      "quantidade": "3,00"
+    },
+    {
+      "produto": "CALDA LARANJA 200GR",
+      "quantidade": "3,00"
+    },
+    {
+      "produto": "CHEESECAKE GOIABA F25",
+      "quantidade": "3,00"
+    },
+    {
+      "produto": "CROCANTE F13",
+      "quantidade": "3,00"
+    },
+    {
+      "produto": "DELICIA COCO F13",
+      "quantidade": "3,00"
+    },
+    {
+      "produto": "FT ALEMA",
+      "quantidade": "3,00"
+    },
+    {
+      "produto": "FT DELICIA CAMADAS",
+      "quantidade": "3,00"
+    },
+    {
+      "produto": "FT SWEET DARK",
+      "quantidade": "3,00"
+    },
+    {
+      "produto": "NOVA SWEET DARK F13",
+      "quantidade": "3,00"
+    },
+    {
+      "produto": "PUDIM POTE UN",
+      "quantidade": "3,00"
+    },
+    {
+      "produto": "QUICHE PRESUNTO F25",
+      "quantidade": "3,00"
+    },
+    {
+      "produto": "VELA PRATA NUMERO - 1",
+      "quantidade": "3,00"
+    },
+    {
+      "produto": "VULCAO DIVERTIDO",
+      "quantidade": "3,00"
+    },
+    {
+      "produto": "BISC GORGONZOLA 100GR",
+      "quantidade": "2,00"
+    },
+    {
+      "produto": "BISC QUEIJO PARMESAO 100GR",
+      "quantidade": "2,00"
+    },
+    {
+      "produto": "BRIG. BRANCO DIVERTIDO 25UN",
+      "quantidade": "2,00"
+    },
+    {
+      "produto": "BRIG. BRULLE 25UN",
+      "quantidade": "2,00"
+    },
+    {
+      "produto": "BRIG. C/ MORANGO PISTACHE",
+      "quantidade": "2,00"
+    },
+    {
+      "produto": "BRIG. CARAMELO 25UN",
+      "quantidade": "2,00"
+    },
+    {
+      "produto": "BRIG. MIX 12UN",
+      "quantidade": "2,00"
+    },
+    {
+      "produto": "BRIG. PINGO DE EMILIA 25UN",
+      "quantidade": "2,00"
+    },
+    {
+      "produto": "BRIG. PISTACHE 12UN",
+      "quantidade": "2,00"
+    },
+    {
+      "produto": "BRIG. PISTACHE 25UN",
+      "quantidade": "2,00"
+    },
+    {
+      "produto": "CAFE EM PO TASSINARI(ORO)",
+      "quantidade": "2,00"
+    },
+    {
+      "produto": "CALDA CHOC 200GR",
+      "quantidade": "2,00"
+    },
+    {
+      "produto": "CHEESECAKE F. VERM F13",
+      "quantidade": "2,00"
+    },
+    {
+      "produto": "CHOCONOZES F25",
+      "quantidade": "2,00"
+    },
+    {
+      "produto": "FT RED VELVET",
+      "quantidade": "2,00"
+    },
+    {
+      "produto": "FT TORTA LIMAO",
+      "quantidade": "2,00"
+    },
+    {
+      "produto": "MARAVILHA ABACAXI F13",
+      "quantidade": "2,00"
+    },
+    {
+      "produto": "QUEBRA NOZES F25",
+      "quantidade": "2,00"
+    },
+    {
+      "produto": "QUICHE CEBOLA F25",
+      "quantidade": "2,00"
+    },
+    {
+      "produto": "QUICHE PRESUNTO F13",
+      "quantidade": "2,00"
+    },
+    {
+      "produto": "TORTA BANANA F13",
+      "quantidade": "2,00"
+    },
+    {
+      "produto": "TORTA MOUSSE F25",
+      "quantidade": "2,00"
+    },
+    {
+      "produto": "TORTINHA BABA",
+      "quantidade": "2,00"
+    },
+    {
+      "produto": "VELA CORACAO 4UN",
+      "quantidade": "2,00"
+    },
+    {
+      "produto": "VELA ESPIRAL FINA ROSE 4UN",
+      "quantidade": "2,00"
+    },
+    {
+      "produto": "VELA FAISCA",
+      "quantidade": "2,00"
+    },
+    {
+      "produto": "VELA PARABENS NEON",
+      "quantidade": "2,00"
+    },
+    {
+      "produto": "VELA PRATA NUMERO - 0",
+      "quantidade": "2,00"
+    },
+    {
+      "produto": "VELA PRATA NUMERO - 8",
+      "quantidade": "2,00"
+    },
+    {
+      "produto": "VULCAO DE PACOCA",
+      "quantidade": "2,00"
+    },
+    {
+      "produto": "AURORA ENFEITADA F13",
+      "quantidade": "1,00"
+    },
+    {
+      "produto": "BOLIM CENOURA",
+      "quantidade": "1,00"
+    },
+    {
+      "produto": "BOLIM CHOCOLATE",
+      "quantidade": "1,00"
+    },
+    {
+      "produto": "BOLIM CHOCOLATE C/ COBERTURA",
+      "quantidade": "1,00"
+    },
+    {
+      "produto": "BRIG. CARAMELO 12UN",
+      "quantidade": "1,00"
+    },
+    {
+      "produto": "BRIG. COCO QUEIMADO 25UN",
+      "quantidade": "1,00"
+    },
+    {
+      "produto": "BRIG. NINHO DELICADO 25UN",
+      "quantidade": "1,00"
+    },
+    {
+      "produto": "COCA COLA",
+      "quantidade": "1,00"
+    },
+    {
+      "produto": "ENCHARCADA F25",
+      "quantidade": "1,00"
+    },
+    {
+      "produto": "FT AURORA",
+      "quantidade": "1,00"
+    },
+    {
+      "produto": "FT BANOFFEE",
+      "quantidade": "1,00"
+    },
+    {
+      "produto": "FT BOLO LARANJA",
+      "quantidade": "1,00"
+    },
+    {
+      "produto": "FT BOLO MILHO",
+      "quantidade": "1,00"
+    },
+    {
+      "produto": "FT CHEESECAKE MORANGO",
+      "quantidade": "1,00"
+    },
+    {
+      "produto": "FT CHOCOBERRIES",
+      "quantidade": "1,00"
+    },
+    {
+      "produto": "FT CROCANTE",
+      "quantidade": "1,00"
+    },
+    {
+      "produto": "FT DELICIA COCO",
+      "quantidade": "1,00"
+    },
+    {
+      "produto": "FT TORTA MOUSSE",
+      "quantidade": "1,00"
+    },
+    {
+      "produto": "PATE SECRETO 150GR",
+      "quantidade": "1,00"
+    },
+    {
+      "produto": "PAVLOVA F20",
+      "quantidade": "1,00"
+    },
+    {
+      "produto": "ROCAMBOLE LARANJA F25",
+      "quantidade": "1,00"
+    },
+    {
+      "produto": "TORTA COLORIDA F25",
+      "quantidade": "1,00"
+    },
+    {
+      "produto": "VELA DOURADA NUMERO - 1",
+      "quantidade": "1,00"
+    },
+    {
+      "produto": "VELA DOURADA NUMERO - 5",
+      "quantidade": "1,00"
+    },
+    {
+      "produto": "VELA DOURADA NUMERO - 7",
+      "quantidade": "1,00"
+    },
+    {
+      "produto": "VELA DOURADA NUMERO - 8",
+      "quantidade": "1,00"
+    },
+    {
+      "produto": "VELA DOURADA NUMERO - X",
+      "quantidade": "1,00"
+    },
+    {
+      "produto": "VELA PRATA NUMERO - 3",
+      "quantidade": "1,00"
+    },
+    {
+      "produto": "VELA VULCAO VERMELHA",
+      "quantidade": "1,00"
+    },
+    {
+      "produto": "VULCAO RED VELVET",
+      "quantidade": "1,00"
+    }
+  ]
+}

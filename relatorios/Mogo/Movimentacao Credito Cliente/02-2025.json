@@ -1,0 +1,44 @@
+{
+  "periodo": {
+    "de": "01/02/2025",
+    "ate": "28/02/2025"
+  },
+  "total_registros": 3,
+  "total_credito": "R$ 213,50",
+  "total_debito": "R$ 392,00",
+  "registros": [
+    {
+      "data": "26/02/2025",
+      "hora": "16:38:40",
+      "cliente": "MARIA DE JESUS PANTOJA DE MATOS",
+      "cpf": "79276113720",
+      "tipo": "Debito",
+      "descricao": "Pedido: 050420 (Delivery)",
+      "valor": "188,50",
+      "saldo": "0,00",
+      "financeiro": "Não selecionado"
+    },
+    {
+      "data": "19/02/2025",
+      "hora": "11:44:13",
+      "cliente": "Renata Couto da Silva",
+      "cpf": "02544897708",
+      "tipo": "Debito",
+      "descricao": "Pedido: 048998 (Delivery)",
+      "valor": "203,50",
+      "saldo": "- 203,50",
+      "financeiro": "Não selecionado"
+    },
+    {
+      "data": "19/02/2025",
+      "hora": "11:29:37",
+      "cliente": "Marisa de Lima Vianna",
+      "cpf": "60473533715",
+      "tipo": "Credito",
+      "descricao": "Pedido 048836 Site pago. ",
+      "valor": "213,50",
+      "saldo": "213,50",
+      "financeiro": "Não gerar financeiro"
+    }
+  ]
+}

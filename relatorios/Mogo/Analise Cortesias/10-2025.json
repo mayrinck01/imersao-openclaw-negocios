@@ -1,0 +1,99 @@
+{
+  "periodo": {
+    "de": "01/10/2025",
+    "ate": "31/10/2025"
+  },
+  "total_registros": 8,
+  "total_valor": "R$ 1.345,45",
+  "total_custo": "R$ 86,36",
+  "registros": [
+    {
+      "data": "31/10/2025",
+      "hora": "18:18:47",
+      "funcionario": "alex",
+      "cliente": "Juliana Fidelis Alves",
+      "telefone": "21968806550",
+      "valor": "12,45",
+      "custo": "3,69",
+      "motivo": "CORTESIA DADA PELA DONA LAURA",
+      "id": "112383"
+    },
+    {
+      "data": "28/10/2025",
+      "hora": "12:17:43",
+      "funcionario": "cristiane",
+      "cliente": "Flávia Calazans ",
+      "telefone": "31996869932",
+      "valor": "77,00",
+      "custo": "6,14",
+      "motivo": "De acordo com a cliente, o pedido foi entregue sem a caixinha de docinhos. ",
+      "id": "111423"
+    },
+    {
+      "data": "28/10/2025",
+      "hora": "12:05:53",
+      "funcionario": "cristiane",
+      "cliente": "DEBORAH MATHIAS",
+      "telefone": "21996003732",
+      "valor": "137,50",
+      "custo": "0,00",
+      "motivo": " A cliente expressou decepção com a experiência.",
+      "id": "111408"
+    },
+    {
+      "data": "22/10/2025",
+      "hora": "11:57:40",
+      "funcionario": "cristiane",
+      "cliente": "Sheila Bsstos",
+      "telefone": "21999713494",
+      "valor": "845,00",
+      "custo": "76,53",
+      "motivo": "Doação Anual para o bingo da Celpi (Dona Laura)  Vem retirar Sheila Bastos",
+      "id": "109980"
+    },
+    {
+      "data": "17/10/2025",
+      "hora": "12:30:15",
+      "funcionario": "eduarda",
+      "cliente": "MARCIA SCHIFFLER ",
+      "telefone": "21991209599",
+      "valor": "68,00",
+      "custo": "0,00",
+      "motivo": "Sorteio Falae",
+      "id": "108773"
+    },
+    {
+      "data": "15/10/2025",
+      "hora": "19:02:41",
+      "funcionario": "alex",
+      "cliente": "",
+      "telefone": "",
+      "valor": "13,50",
+      "custo": "0,00",
+      "motivo": "COPO SUJO",
+      "id": "108422"
+    },
+    {
+      "data": "02/10/2025",
+      "hora": "18:08:14",
+      "funcionario": "alex",
+      "cliente": "Thiago Magalhães Pires",
+      "telefone": "21995059593",
+      "valor": "84,50",
+      "custo": "0,00",
+      "motivo": "Sorteado pos venda cake",
+      "id": "105362"
+    },
+    {
+      "data": "01/10/2025",
+      "hora": "17:07:42",
+      "funcionario": "cristiane",
+      "cliente": "Victor da Maceno Faro",
+      "telefone": "21998739100",
+      "valor": "107,50",
+      "custo": "0,00",
+      "motivo": "Não foi possível usar o crédito na carteira por um bug. O MoGo foi notificado.",
+      "id": "105091"
+    }
+  ]
+}

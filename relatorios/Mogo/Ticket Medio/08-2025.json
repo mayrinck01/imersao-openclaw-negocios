@@ -1,0 +1,33 @@
+{
+  "periodo": {
+    "de": "01/08/2025",
+    "ate": "31/08/2025"
+  },
+  "tipo_data": "Pedido",
+  "registros": [
+    {
+      "tipo_pedido": "Comanda",
+      "quantidade": "9,00",
+      "total": "619,85",
+      "ticket_medio": "68,87"
+    },
+    {
+      "tipo_pedido": "Mesa",
+      "quantidade": "1.513,00",
+      "total": "88.082,66",
+      "ticket_medio": "58,22"
+    },
+    {
+      "tipo_pedido": "Entrega",
+      "quantidade": "3.953,00",
+      "total": "549.778,57",
+      "ticket_medio": "139,08"
+    },
+    {
+      "tipo_pedido": "Balcão",
+      "quantidade": "1.167,00",
+      "total": "74.593,00",
+      "ticket_medio": "63,92"
+    }
+  ]
+}

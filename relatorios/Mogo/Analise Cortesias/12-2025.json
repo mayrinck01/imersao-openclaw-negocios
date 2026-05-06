@@ -1,0 +1,209 @@
+{
+  "periodo": {
+    "de": "01/12/2025",
+    "ate": "31/12/2025"
+  },
+  "total_registros": 18,
+  "total_valor": "R$ 5.638,09",
+  "total_custo": "R$ 707,57",
+  "registros": [
+    {
+      "data": "27/12/2025",
+      "hora": "14:06:17",
+      "funcionario": "cristiane",
+      "cliente": "camila",
+      "telefone": "21992668212",
+      "valor": "89,00",
+      "custo": "4,79",
+      "motivo": "pedidu para seu aniversario 07/11 chegou todos danificado visualmente destruidos",
+      "id": "125982"
+    },
+    {
+      "data": "27/12/2025",
+      "hora": "11:53:26",
+      "funcionario": "alex",
+      "cliente": "Gustavo Abe Tetsuo",
+      "telefone": "61981725146",
+      "valor": "28,00",
+      "custo": "0,19",
+      "motivo": "Cortesia",
+      "id": "125958"
+    },
+    {
+      "data": "26/12/2025",
+      "hora": "16:31:26",
+      "funcionario": "cristiane",
+      "cliente": "Juan Pablo Machado de Almeida",
+      "telefone": "21979478074",
+      "valor": "80,00",
+      "custo": "0,00",
+      "motivo": "Cortesia (michel Rocha)",
+      "id": "125847"
+    },
+    {
+      "data": "26/12/2025",
+      "hora": "16:28:55",
+      "funcionario": "cristiane",
+      "cliente": "Daniele Silva Santos",
+      "telefone": "21965709258",
+      "valor": "335,00",
+      "custo": "33,24",
+      "motivo": "Cortesia (Michel Rocha)",
+      "id": "125845"
+    },
+    {
+      "data": "26/12/2025",
+      "hora": "16:27:11",
+      "funcionario": "cristiane",
+      "cliente": "Elisama da Silva Gomes",
+      "telefone": "21980068100",
+      "valor": "39,80",
+      "custo": "3,13",
+      "motivo": "Cortesia (Michel Rocha)",
+      "id": "125843"
+    },
+    {
+      "data": "26/12/2025",
+      "hora": "15:11:00",
+      "funcionario": "cristiane",
+      "cliente": "MARUZA PINHEIRO GUIMARÃES ",
+      "telefone": "21999933969",
+      "valor": "185,00",
+      "custo": "27,20",
+      "motivo": "pedido foientregue errado trouxe a quiche de volta hoje 26/12",
+      "id": "125813"
+    },
+    {
+      "data": "24/12/2025",
+      "hora": "16:30:07",
+      "funcionario": "alex",
+      "cliente": "",
+      "telefone": "",
+      "valor": "12,00",
+      "custo": "4,94",
+      "motivo": "erro na entrega ",
+      "id": "125677"
+    },
+    {
+      "data": "24/12/2025",
+      "hora": "15:44:19",
+      "funcionario": "cristiane",
+      "cliente": "MARIA CECILIA REGO MACEDO ",
+      "telefone": "21993841028",
+      "valor": "330,00",
+      "custo": "54,35",
+      "motivo": "Pedido feito por João",
+      "id": "125658"
+    },
+    {
+      "data": "22/12/2025",
+      "hora": "13:00:19",
+      "funcionario": "cristiane",
+      "cliente": "Basílica São João Batista da Lagoa",
+      "telefone": "",
+      "valor": "303,00",
+      "custo": "47,77",
+      "motivo": "Arescimo Doação Dona Laura",
+      "id": "124800"
+    },
+    {
+      "data": "18/12/2025",
+      "hora": "17:46:38",
+      "funcionario": "cristiane",
+      "cliente": "MARIA BEATRIZ SANSON",
+      "telefone": "21992919645",
+      "valor": "962,00",
+      "custo": "105,79",
+      "motivo": "Pedido feito por João",
+      "id": "123851"
+    },
+    {
+      "data": "15/12/2025",
+      "hora": "15:02:45",
+      "funcionario": "cristiane",
+      "cliente": "Basílica São João Batista da Lagoa",
+      "telefone": "",
+      "valor": "303,00",
+      "custo": "47,77",
+      "motivo": "Doação Dona Laura",
+      "id": "122888"
+    },
+    {
+      "data": "13/12/2025",
+      "hora": "16:06:45",
+      "funcionario": "cristiane",
+      "cliente": "Marcelo Lucena",
+      "telefone": "21981949909",
+      "valor": "222,00",
+      "custo": "41,21",
+      "motivo": "Retratação",
+      "id": "122492"
+    },
+    {
+      "data": "12/12/2025",
+      "hora": "16:12:37",
+      "funcionario": "cristiane",
+      "cliente": "IRMÃS CLARISSAS",
+      "telefone": "",
+      "valor": "891,00",
+      "custo": "126,18",
+      "motivo": "Doação Dona Laura",
+      "id": "122213"
+    },
+    {
+      "data": "12/12/2025",
+      "hora": "15:03:54",
+      "funcionario": "eduarda",
+      "cliente": "Ana Gabriela Mendes",
+      "telefone": "21999174054",
+      "valor": "120,00",
+      "custo": "7,55",
+      "motivo": "retratação parafuso no empadão",
+      "id": "122178"
+    },
+    {
+      "data": "08/12/2025",
+      "hora": "17:02:27",
+      "funcionario": "alex",
+      "cliente": "",
+      "telefone": "",
+      "valor": "213,29",
+      "custo": "20,68",
+      "motivo": "influencer",
+      "id": "121219"
+    },
+    {
+      "data": "06/12/2025",
+      "hora": "16:39:45",
+      "funcionario": "cristiane",
+      "cliente": "Paróquia Nossa Senhora da Esperança",
+      "telefone": "",
+      "valor": "530,00",
+      "custo": "91,71",
+      "motivo": "Doação Dona Laura",
+      "id": "120783"
+    },
+    {
+      "data": "05/12/2025",
+      "hora": "12:22:55",
+      "funcionario": "cristiane",
+      "cliente": "Obra do Berço",
+      "telefone": "21989093435",
+      "valor": "315,00",
+      "custo": "42,24",
+      "motivo": "Doação Dona Laura",
+      "id": "120339"
+    },
+    {
+      "data": "03/12/2025",
+      "hora": "17:27:29",
+      "funcionario": "cristiane",
+      "cliente": "João Carlos de Mayrinck",
+      "telefone": "21982835588",
+      "valor": "680,00",
+      "custo": "48,83",
+      "motivo": "Altorizado por João Mayrinck",
+      "id": "119978"
+    }
+  ]
+}

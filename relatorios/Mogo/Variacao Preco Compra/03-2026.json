@@ -3,8 +3,8 @@
     "de": "01/03/2026",
     "ate": "31/03/2026"
   },
-  "total_produtos": 205,
-  "produtos_com_variacao": 86,
+  "total_produtos": 212,
+  "produtos_com_variacao": 85,
   "registros": [
     {
       "produto": "(beb) Agua Mineral c/Gas 310ml (und)",
@@ -280,6 +280,19 @@
       "preco_compra": "1,12"
     },
     {
+      "produto": "(desc) Caixa M vitrine branca (und)",
+      "categoria": "Descartáveis / Embalagens",
+      "subcategoria": "Desc./Emb.",
+      "unidade": "Unidade medida padrão",
+      "preco_anterior": "4,88",
+      "preco_atual": "4,88",
+      "diferenca": "0,00",
+      "menor_preco": "4,88",
+      "maior_preco": "4,88",
+      "custo_medio": "4,88",
+      "preco_compra": "4,88"
+    },
+    {
       "produto": "(desc) Canudo Comum (und)",
       "categoria": "Descartáveis / Embalagens",
       "subcategoria": "Desc./Emb.",
@@ -397,6 +410,19 @@
       "preco_compra": "0,02"
     },
     {
+      "produto": "(desc) Forminha Caixeta (Petala) (und)",
+      "categoria": "Descartáveis / Embalagens",
+      "subcategoria": "Desc./Emb.",
+      "unidade": "Unidade medida padrão",
+      "preco_anterior": "0,06",
+      "preco_atual": "0,06",
+      "diferenca": "0,00",
+      "menor_preco": "0,06",
+      "maior_preco": "0,06",
+      "custo_medio": "0,06",
+      "preco_compra": "0,06"
+    },
+    {
       "produto": "(desc) Luva Latex (und)",
       "categoria": "Descartáveis / Embalagens",
       "subcategoria": "Desc./Emb.",
@@ -473,6 +499,19 @@
       "maior_preco": "29,90",
       "custo_medio": "0,00",
       "preco_compra": "0,00"
+    },
+    {
+      "produto": "(desc) Pote Quadrado Plastico com Tampa 220ml (und)",
+      "categoria": "Descartáveis / Embalagens",
+      "subcategoria": "Desc./Emb.",
+      "unidade": "Unidade medida padrão",
+      "preco_anterior": "1,08",
+      "preco_atual": "1,08",
+      "diferenca": "0,00",
+      "menor_preco": "1,08",
+      "maior_preco": "1,08",
+      "custo_medio": "1,09",
+      "preco_compra": "1,08"
     },
     {
       "produto": "(desc) Saco De Lixo 100 Lt (und)",
@@ -818,12 +857,12 @@
       "subcategoria": "Hortifruti",
       "unidade": "Kilo",
       "preco_anterior": "5,66",
-      "preco_atual": "7,61",
-      "diferenca": "34,45",
+      "preco_atual": "8,49",
+      "diferenca": "50,00",
       "menor_preco": "5,66",
-      "maior_preco": "7,76",
-      "custo_medio": "7,19",
-      "preco_compra": "7,61"
+      "maior_preco": "8,49",
+      "custo_medio": "7,54",
+      "preco_compra": "8,49"
     },
     {
       "produto": "(ins) Acucar Cristal (kg)",
@@ -924,9 +963,9 @@
       "preco_anterior": "28,80",
       "preco_atual": "28,80",
       "diferenca": "0,00",
-      "menor_preco": "28,80",
+      "menor_preco": "20,25",
       "maior_preco": "28,80",
-      "custo_medio": "27,16",
+      "custo_medio": "26,36",
       "preco_compra": "28,80"
     },
     {
@@ -935,12 +974,12 @@
       "subcategoria": "Hortifruti",
       "unidade": "Kilo",
       "preco_anterior": "18,75",
-      "preco_atual": "23,45",
-      "diferenca": "25,07",
+      "preco_atual": "24,19",
+      "diferenca": "29,03",
       "menor_preco": "7,36",
       "maior_preco": "25,10",
-      "custo_medio": "8,76",
-      "preco_compra": "23,45"
+      "custo_medio": "9,48",
+      "preco_compra": "24,19"
     },
     {
       "produto": "(ins) Alface Crespa (kg)",
@@ -948,12 +987,12 @@
       "subcategoria": "Hortifruti",
       "unidade": "Kilo",
       "preco_anterior": "11,57",
-      "preco_atual": "20,85",
-      "diferenca": "80,19",
+      "preco_atual": "31,45",
+      "diferenca": "171,76",
       "menor_preco": "11,57",
       "maior_preco": "32,80",
-      "custo_medio": "11,11",
-      "preco_compra": "20,85"
+      "custo_medio": "12,36",
+      "preco_compra": "31,45"
     },
     {
       "produto": "(ins) Alho Poro (kg)",
@@ -961,12 +1000,12 @@
       "subcategoria": "Hortifruti",
       "unidade": "Kilo",
       "preco_anterior": "23,78",
-      "preco_atual": "27,75",
-      "diferenca": "16,70",
-      "menor_preco": "21,67",
+      "preco_atual": "20,17",
+      "diferenca": "- 15,18",
+      "menor_preco": "19,12",
       "maior_preco": "27,75",
-      "custo_medio": "21,02",
-      "preco_compra": "27,75"
+      "custo_medio": "15,04",
+      "preco_compra": "20,17"
     },
     {
       "produto": "(ins) Amendoa Laminada (kg)",
@@ -987,12 +1026,12 @@
       "subcategoria": "Hortifruti",
       "unidade": "Kilo",
       "preco_anterior": "17,00",
-      "preco_atual": "144,23",
-      "diferenca": "748,42",
+      "preco_atual": "142,52",
+      "diferenca": "738,34",
       "menor_preco": "17,00",
       "maior_preco": "318,63",
-      "custo_medio": "52,74",
-      "preco_compra": "144,23"
+      "custo_medio": "50,83",
+      "preco_compra": "142,52"
     },
     {
       "produto": "(ins) Arroz Branco (kg)",
@@ -1021,6 +1060,19 @@
       "preco_compra": "45,80"
     },
     {
+      "produto": "(ins) Banana Prata (kg)",
+      "categoria": "Materia Prima",
+      "subcategoria": "Hortifruti",
+      "unidade": "Kilo",
+      "preco_anterior": "4,27",
+      "preco_atual": "4,10",
+      "diferenca": "- 4,00",
+      "menor_preco": "4,10",
+      "maior_preco": "4,27",
+      "custo_medio": "5,83",
+      "preco_compra": "4,10"
+    },
+    {
       "produto": "(ins) Batata Doce (kg)",
       "categoria": "Materia Prima",
       "subcategoria": "Alimentação Funcionário",
@@ -1039,12 +1091,25 @@
       "subcategoria": "Hortifruti",
       "unidade": "Kilo",
       "preco_anterior": "3,74",
-      "preco_atual": "2,67",
-      "diferenca": "- 28,78",
+      "preco_atual": "3,74",
+      "diferenca": "0,00",
       "menor_preco": "2,67",
-      "maior_preco": "3,74",
-      "custo_medio": "1,92",
-      "preco_compra": "2,67"
+      "maior_preco": "4,74",
+      "custo_medio": "2,14",
+      "preco_compra": "3,74"
+    },
+    {
+      "produto": "(ins) Beterraba (kg)",
+      "categoria": "Materia Prima",
+      "subcategoria": "Hortifruti",
+      "unidade": "Kilo",
+      "preco_anterior": "1,99",
+      "preco_atual": "1,99",
+      "diferenca": "0,00",
+      "menor_preco": "1,99",
+      "maior_preco": "1,99",
+      "custo_medio": "1,97",
+      "preco_compra": "1,99"
     },
     {
       "produto": "(ins) Bicarbonato de Sodio (kg)",
@@ -1234,12 +1299,12 @@
       "subcategoria": "Hortifruti",
       "unidade": "Kilo",
       "preco_anterior": "2,71",
-      "preco_atual": "2,86",
-      "diferenca": "5,48",
+      "preco_atual": "2,62",
+      "diferenca": "- 3,23",
       "menor_preco": "2,62",
-      "maior_preco": "3,23",
-      "custo_medio": "2,64",
-      "preco_compra": "2,86"
+      "maior_preco": "5,32",
+      "custo_medio": "2,97",
+      "preco_compra": "2,62"
     },
     {
       "produto": "(ins) Cebolinha (kg)",
@@ -1247,12 +1312,12 @@
       "subcategoria": "Hortifruti",
       "unidade": "Unidade medida padrão",
       "preco_anterior": "13,00",
-      "preco_atual": "13,00",
-      "diferenca": "0,00",
-      "menor_preco": "13,00",
+      "preco_atual": "10,13",
+      "diferenca": "- 22,12",
+      "menor_preco": "9,60",
       "maior_preco": "13,00",
-      "custo_medio": "9,21",
-      "preco_compra": "13,00"
+      "custo_medio": "9,58",
+      "preco_compra": "10,13"
     },
     {
       "produto": "(ins) Cenoura Fresca (kg)",
@@ -1260,21 +1325,21 @@
       "subcategoria": "Hortifruti",
       "unidade": "Kilo",
       "preco_anterior": "3,31",
-      "preco_atual": "5,78",
-      "diferenca": "74,55",
-      "menor_preco": "3,27",
-      "maior_preco": "5,78",
-      "custo_medio": "3,88",
-      "preco_compra": "5,78"
+      "preco_atual": "9,00",
+      "diferenca": "171,93",
+      "menor_preco": "3,22",
+      "maior_preco": "9,00",
+      "custo_medio": "4,37",
+      "preco_compra": "9,00"
     },
     {
       "produto": "(ins) Chá Twinings (Cx10 x 1,8gr) (und)",
       "categoria": "Materia Prima",
       "subcategoria": "Mercearia",
       "unidade": "Unidade medida padrão",
-      "preco_anterior": "13,06",
+      "preco_anterior": "13,35",
       "preco_atual": "13,36",
-      "diferenca": "2,23",
+      "diferenca": "0,01",
       "menor_preco": "12,05",
       "maior_preco": "14,32",
       "custo_medio": "5,02",
@@ -1454,9 +1519,9 @@
       "categoria": "Materia Prima",
       "subcategoria": "Laticínios",
       "unidade": "Kilo",
-      "preco_anterior": "37,90",
+      "preco_anterior": "32,15",
       "preco_atual": "33,10",
-      "diferenca": "- 12,68",
+      "diferenca": "2,95",
       "menor_preco": "32,15",
       "maior_preco": "37,90",
       "custo_medio": "32,60",
@@ -1819,8 +1884,8 @@
       "subcategoria": "Hortifruti",
       "unidade": "Unidade medida padrão",
       "preco_anterior": "15,00",
-      "preco_atual": "21,80",
-      "diferenca": "45,33",
+      "preco_atual": "15,00",
+      "diferenca": "0,00",
       "menor_preco": "15,00",
       "maior_preco": "21,80",
       "custo_medio": "0,00",
@@ -1845,12 +1910,12 @@
       "subcategoria": "Hortifruti",
       "unidade": "Kilo",
       "preco_anterior": "3,64",
-      "preco_atual": "2,91",
-      "diferenca": "- 20,02",
+      "preco_atual": "3,46",
+      "diferenca": "- 4,99",
       "menor_preco": "2,91",
       "maior_preco": "3,90",
-      "custo_medio": "3,72",
-      "preco_compra": "2,91"
+      "custo_medio": "3,74",
+      "preco_compra": "3,46"
     },
     {
       "produto": "(ins) Leite Condensado Integral (kg)",
@@ -1912,9 +1977,9 @@
       "preco_anterior": "3,73",
       "preco_atual": "3,73",
       "diferenca": "0,00",
-      "menor_preco": "3,73",
+      "menor_preco": "3,54",
       "maior_preco": "3,73",
-      "custo_medio": "4,58",
+      "custo_medio": "4,19",
       "preco_compra": "3,73"
     },
     {
@@ -1942,6 +2007,19 @@
       "maior_preco": "17,97",
       "custo_medio": "17,79",
       "preco_compra": "17,97"
+    },
+    {
+      "produto": "(ins) Louro (kg)",
+      "categoria": "Materia Prima",
+      "subcategoria": "Hortifruti",
+      "unidade": "Kilo",
+      "preco_anterior": "49,90",
+      "preco_atual": "49,90",
+      "diferenca": "0,00",
+      "menor_preco": "49,90",
+      "maior_preco": "49,90",
+      "custo_medio": "54,90",
+      "preco_compra": "49,90"
     },
     {
       "produto": "(ins) Macarrão (kg)",
@@ -1975,12 +2053,12 @@
       "subcategoria": "Hortifruti",
       "unidade": "Unidade medida padrão",
       "preco_anterior": "31,30",
-      "preco_atual": "37,50",
-      "diferenca": "19,81",
+      "preco_atual": "31,30",
+      "diferenca": "0,00",
       "menor_preco": "31,30",
-      "maior_preco": "37,50",
-      "custo_medio": "34,60",
-      "preco_compra": "37,50"
+      "maior_preco": "45,00",
+      "custo_medio": "34,43",
+      "preco_compra": "31,30"
     },
     {
       "produto": "(ins) Manteiga Sem Sal (kg)",
@@ -2026,13 +2104,13 @@
       "categoria": "Materia Prima",
       "subcategoria": "Confeitos ",
       "unidade": "Kilo",
-      "preco_anterior": "39,13",
-      "preco_atual": "26,98",
-      "diferenca": "- 31,06",
+      "preco_anterior": "26,98",
+      "preco_atual": "39,13",
+      "diferenca": "45,05",
       "menor_preco": "26,98",
       "maior_preco": "39,13",
-      "custo_medio": "32,19",
-      "preco_compra": "26,98"
+      "custo_medio": "39,13",
+      "preco_compra": "39,13"
     },
     {
       "produto": "(ins) Micanga Branca (kg)",
@@ -2109,7 +2187,7 @@
       "diferenca": "15,64",
       "menor_preco": "23,16",
       "maior_preco": "32,58",
-      "custo_medio": "25,59",
+      "custo_medio": "25,64",
       "preco_compra": "28,36"
     },
     {
@@ -2287,12 +2365,12 @@
       "subcategoria": "Hortifruti",
       "unidade": "Kilo",
       "preco_anterior": "3,27",
-      "preco_atual": "6,80",
-      "diferenca": "108,16",
+      "preco_atual": "3,27",
+      "diferenca": "0,10",
       "menor_preco": "3,27",
       "maior_preco": "6,80",
-      "custo_medio": "3,86",
-      "preco_compra": "6,80"
+      "custo_medio": "3,72",
+      "preco_compra": "3,27"
     },
     {
       "produto": "(ins) Pimentão (kg)",
@@ -2300,12 +2378,12 @@
       "subcategoria": "Hortifruti",
       "unidade": "Unidade medida padrão",
       "preco_anterior": "7,24",
-      "preco_atual": "7,91",
-      "diferenca": "9,28",
+      "preco_atual": "8,90",
+      "diferenca": "22,97",
       "menor_preco": "7,24",
-      "maior_preco": "7,91",
-      "custo_medio": "7,53",
-      "preco_compra": "7,91"
+      "maior_preco": "8,90",
+      "custo_medio": "7,83",
+      "preco_compra": "8,90"
     },
     {
       "produto": "(ins) Polpa De Tomate (kg)",
@@ -2338,9 +2416,9 @@
       "categoria": "Materia Prima",
       "subcategoria": "Laticínios",
       "unidade": "Kilo",
-      "preco_anterior": "52,42",
+      "preco_anterior": "27,99",
       "preco_atual": "35,99",
-      "diferenca": "- 31,34",
+      "diferenca": "28,59",
       "menor_preco": "27,99",
       "maior_preco": "59,89",
       "custo_medio": "39,69",
@@ -2365,12 +2443,12 @@
       "subcategoria": "Hortifruti",
       "unidade": "Kilo",
       "preco_anterior": "18,80",
-      "preco_atual": "19,25",
-      "diferenca": "2,39",
+      "preco_atual": "35,29",
+      "diferenca": "87,74",
       "menor_preco": "18,80",
-      "maior_preco": "28,00",
-      "custo_medio": "14,38",
-      "preco_compra": "19,25"
+      "maior_preco": "35,29",
+      "custo_medio": "16,54",
+      "preco_compra": "35,29"
     },
     {
       "produto": "(ins) Sal Refinado (kg)",
@@ -2391,12 +2469,12 @@
       "subcategoria": "Hortifruti",
       "unidade": "Unidade medida padrão",
       "preco_anterior": "39,00",
-      "preco_atual": "19,50",
-      "diferenca": "- 50,00",
+      "preco_atual": "39,00",
+      "diferenca": "0,00",
       "menor_preco": "19,50",
-      "maior_preco": "39,00",
-      "custo_medio": "20,46",
-      "preco_compra": "19,50"
+      "maior_preco": "40,50",
+      "custo_medio": "23,64",
+      "preco_compra": "39,00"
     },
     {
       "produto": "(ins) Sorvete Tapioca Artesanal (kg)",
@@ -2443,12 +2521,25 @@
       "subcategoria": "Hortifruti",
       "unidade": "Kilo",
       "preco_anterior": "8,75",
-      "preco_atual": "13,07",
-      "diferenca": "49,33",
-      "menor_preco": "8,75",
+      "preco_atual": "11,25",
+      "diferenca": "28,57",
+      "menor_preco": "7,63",
       "maior_preco": "13,07",
-      "custo_medio": "8,55",
-      "preco_compra": "13,07"
+      "custo_medio": "8,74",
+      "preco_compra": "11,25"
+    },
+    {
+      "produto": "(ins) Tomate Italiano Fresco (kg)",
+      "categoria": "Materia Prima",
+      "subcategoria": "Hortifruti",
+      "unidade": "Kilo",
+      "preco_anterior": "6,93",
+      "preco_atual": "13,42",
+      "diferenca": "93,57",
+      "menor_preco": "6,93",
+      "maior_preco": "13,42",
+      "custo_medio": "8,13",
+      "preco_compra": "13,42"
     },
     {
       "produto": "(ins) Tomate Salada Freco (kg)",
@@ -2456,12 +2547,12 @@
       "subcategoria": "Hortifruti",
       "unidade": "Kilo",
       "preco_anterior": "7,21",
-      "preco_atual": "7,82",
-      "diferenca": "8,51",
-      "menor_preco": "7,21",
-      "maior_preco": "7,82",
-      "custo_medio": "6,79",
-      "preco_compra": "7,82"
+      "preco_atual": "12,38",
+      "diferenca": "71,67",
+      "menor_preco": "6,39",
+      "maior_preco": "12,38",
+      "custo_medio": "7,61",
+      "preco_compra": "12,38"
     },
     {
       "produto": "(ins) Tomilho (kg)",

@@ -1,0 +1,44 @@
+{
+  "periodo": {
+    "de": "01/01/2025",
+    "ate": "31/01/2025"
+  },
+  "total_registros": 3,
+  "total_valor": "R$ 122,30",
+  "total_custo": "R$ 0,00",
+  "registros": [
+    {
+      "data": "30/01/2025",
+      "hora": "16:04:25",
+      "funcionario": "Larissa Lira",
+      "cliente": "Ana Aguiar Ramos",
+      "telefone": "08007051020",
+      "valor": "29,00",
+      "custo": "0,00",
+      "motivo": "",
+      "id": "48949"
+    },
+    {
+      "data": "23/01/2025",
+      "hora": "16:48:04",
+      "funcionario": "alex",
+      "cliente": "",
+      "telefone": "",
+      "valor": "17,40",
+      "custo": "0,00",
+      "motivo": "",
+      "id": "47907"
+    },
+    {
+      "data": "10/01/2025",
+      "hora": "18:55:43",
+      "funcionario": "alex",
+      "cliente": "",
+      "telefone": "",
+      "valor": "75,90",
+      "custo": "0,00",
+      "motivo": "",
+      "id": "45879"
+    }
+  ]
+}

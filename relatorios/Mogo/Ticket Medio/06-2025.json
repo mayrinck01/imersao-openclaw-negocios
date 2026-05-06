@@ -1,0 +1,27 @@
+{
+  "periodo": {
+    "de": "01/06/2025",
+    "ate": "30/06/2025"
+  },
+  "tipo_data": "Pedido",
+  "registros": [
+    {
+      "tipo_pedido": "Mesa",
+      "quantidade": "1.273,00",
+      "total": "72.731,25",
+      "ticket_medio": "57,13"
+    },
+    {
+      "tipo_pedido": "Entrega",
+      "quantidade": "2.679,00",
+      "total": "402.142,50",
+      "ticket_medio": "150,11"
+    },
+    {
+      "tipo_pedido": "Balcão",
+      "quantidade": "828,00",
+      "total": "51.199,95",
+      "ticket_medio": "61,84"
+    }
+  ]
+}

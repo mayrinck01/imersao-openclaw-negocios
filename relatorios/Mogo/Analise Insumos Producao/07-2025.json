@@ -1,0 +1,522 @@
+{
+  "periodo": {
+    "de": "01/07/2025",
+    "ate": "31/07/2025"
+  },
+  "total_registros": 57,
+  "registros": [
+    {
+      "data": "28/07/2025",
+      "hora": "19:01:47",
+      "produto_produzido": "(prod) Calda Morango do Amor (kg)",
+      "insumo": "(ins) Glucose (kg)",
+      "qtde": "0,150",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "28/07/2025",
+      "hora": "19:01:47",
+      "produto_produzido": "(prod) Calda Morango do Amor (kg)",
+      "insumo": "(ins) Acucar Refinado (kg)",
+      "qtde": "0,400",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "28/07/2025",
+      "hora": "19:01:47",
+      "produto_produzido": "(prod) Calda Morango do Amor (kg)",
+      "insumo": "(ins) Corante Gel Vermelho 25gr (kg)",
+      "qtde": "0,010",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "28/07/2025",
+      "hora": "19:01:47",
+      "produto_produzido": "(prod) Calda Morango do Amor (kg)",
+      "insumo": "(ins) Vinagre Alc Colorido (lt)",
+      "qtde": "0,010",
+      "unidade": "Lt",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "28/07/2025",
+      "hora": "19:01:46",
+      "produto_produzido": "(prod) Morango do Amor (un)",
+      "insumo": "(prod) Massa Brigadeiro Branco (kg)",
+      "qtde": "0,900",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "28/07/2025",
+      "hora": "19:01:46",
+      "produto_produzido": "(prod) Morango do Amor (un)",
+      "insumo": "(prod) Calda Morango do Amor (kg)",
+      "qtde": "0,380",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "28/07/2025",
+      "hora": "19:01:46",
+      "produto_produzido": "(prod) Morango do Amor (un)",
+      "insumo": "(ins) Morango Fresco (kg)",
+      "qtde": "0,380",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/07/2025",
+      "hora": "15:51:13",
+      "produto_produzido": "(prod) Batido Bolo Amendoin (kg)",
+      "insumo": "(ins) Leite Integral (lt)",
+      "qtde": "0,200",
+      "unidade": "Lt",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/07/2025",
+      "hora": "15:51:13",
+      "produto_produzido": "(prod) Batido Bolo Amendoin (kg)",
+      "insumo": "(ins) Farofa de Amendoim (kg)",
+      "qtde": "0,200",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/07/2025",
+      "hora": "15:51:13",
+      "produto_produzido": "(prod) Batido Bolo Amendoin (kg)",
+      "insumo": "(ins) Fermento Em Pó (kg)",
+      "qtde": "0,010",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/07/2025",
+      "hora": "15:51:13",
+      "produto_produzido": "(prod) Batido Bolo Amendoin (kg)",
+      "insumo": "(ins) Farinha De Trigo (kg)",
+      "qtde": "0,350",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/07/2025",
+      "hora": "15:51:13",
+      "produto_produzido": "(prod) Batido Bolo Amendoin (kg)",
+      "insumo": "(ins) Ovos Jumbo Branco (und)",
+      "qtde": "4,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/07/2025",
+      "hora": "15:51:13",
+      "produto_produzido": "(prod) Batido Bolo Amendoin (kg)",
+      "insumo": "(ins) Acucar Refinado (kg)",
+      "qtde": "0,350",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/07/2025",
+      "hora": "15:51:13",
+      "produto_produzido": "(prod) Batido Bolo Amendoin (kg)",
+      "insumo": "(ins) Oleo De Soja (lt)",
+      "qtde": "0,200",
+      "unidade": "Lt",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "10/07/2025",
+      "hora": "18:33:14",
+      "produto_produzido": "(prod) Recheio Cheescake (kg)",
+      "insumo": "(ins) Ovos Jumbo Branco (und)",
+      "qtde": "5,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "10/07/2025",
+      "hora": "18:33:14",
+      "produto_produzido": "(prod) Recheio Cheescake (kg)",
+      "insumo": "(ins) Essencia De Baunilha (lt)",
+      "qtde": "0,010",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "10/07/2025",
+      "hora": "18:33:14",
+      "produto_produzido": "(prod) Recheio Cheescake (kg)",
+      "insumo": "(ins) Acucar Refinado (kg)",
+      "qtde": "0,200",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "10/07/2025",
+      "hora": "18:33:14",
+      "produto_produzido": "(prod) Recheio Cheescake (kg)",
+      "insumo": "(ins) Cream Cheese (kg)",
+      "qtde": "0,660",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "10/07/2025",
+      "hora": "18:31:08",
+      "produto_produzido": "(prod) Cheescake F25 (un)",
+      "insumo": "(desc) Caixa Cake Torta 29,5 X 29,5 X 5,5 Micro (und)",
+      "qtde": "1,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "10/07/2025",
+      "hora": "18:31:08",
+      "produto_produzido": "(prod) Cheescake F25 (un)",
+      "insumo": "(prod) Base Cheescake F25 (un)",
+      "qtde": "1,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "10/07/2025",
+      "hora": "18:31:08",
+      "produto_produzido": "(prod) Cheescake F25 (un)",
+      "insumo": "(desc) Disco Cake 29 Micro (und)",
+      "qtde": "1,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "10/07/2025",
+      "hora": "18:31:08",
+      "produto_produzido": "(prod) Cheescake F25 (un)",
+      "insumo": "(prod) Recheio Cheescake (kg)",
+      "qtde": "1,110",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "10/07/2025",
+      "hora": "18:30:21",
+      "produto_produzido": "(prod) Base Cheescake F25 (un)",
+      "insumo": "(prod) Base Cheescake (kg)",
+      "qtde": "0,310",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "10/07/2025",
+      "hora": "18:29:08",
+      "produto_produzido": "(prod) Cheescake F13 (un)",
+      "insumo": "(prod) Base Cheescake F13 (un)",
+      "qtde": "1,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "10/07/2025",
+      "hora": "18:29:08",
+      "produto_produzido": "(prod) Cheescake F13 (un)",
+      "insumo": "(desc) Caixa Cake Torta 17,5 X 17,5 X 9 Micro (und)",
+      "qtde": "1,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "10/07/2025",
+      "hora": "18:29:08",
+      "produto_produzido": "(prod) Cheescake F13 (un)",
+      "insumo": "(desc) Disco Cake 17 Micro (und)",
+      "qtde": "1,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "10/07/2025",
+      "hora": "18:29:08",
+      "produto_produzido": "(prod) Cheescake F13 (un)",
+      "insumo": "(prod) Recheio Cheescake (kg)",
+      "qtde": "0,370",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "10/07/2025",
+      "hora": "18:27:21",
+      "produto_produzido": "(prod) Base Cheescake F13 (un)",
+      "insumo": "(prod) Base Cheescake (kg)",
+      "qtde": "0,100",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "10/07/2025",
+      "hora": "18:25:32",
+      "produto_produzido": "(prod) Base Cheescake (kg)",
+      "insumo": "(ins) Manteiga Sem Sal (kg)",
+      "qtde": "0,080",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "10/07/2025",
+      "hora": "18:25:32",
+      "produto_produzido": "(prod) Base Cheescake (kg)",
+      "insumo": "(ins) Acucar Mascavo (kg)",
+      "qtde": "0,050",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "10/07/2025",
+      "hora": "18:25:32",
+      "produto_produzido": "(prod) Base Cheescake (kg)",
+      "insumo": "(prod) Farinha Biscoito Maisena (kg)",
+      "qtde": "0,180",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "10/07/2025",
+      "hora": "16:06:09",
+      "produto_produzido": "(prod) Recheio Cheescake (kg)",
+      "insumo": "(ins) Ovos Jumbo Branco (und)",
+      "qtde": "10,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "10/07/2025",
+      "hora": "16:06:09",
+      "produto_produzido": "(prod) Recheio Cheescake (kg)",
+      "insumo": "(ins) Essencia De Baunilha (lt)",
+      "qtde": "0,010",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "10/07/2025",
+      "hora": "16:06:09",
+      "produto_produzido": "(prod) Recheio Cheescake (kg)",
+      "insumo": "(ins) Acucar Refinado (kg)",
+      "qtde": "0,400",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "10/07/2025",
+      "hora": "16:06:09",
+      "produto_produzido": "(prod) Recheio Cheescake (kg)",
+      "insumo": "(ins) Cream Cheese (kg)",
+      "qtde": "1,320",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "10/07/2025",
+      "hora": "16:06:07",
+      "produto_produzido": "(prod) Cheescake F25 (un)",
+      "insumo": "(prod) Base Cheescake F25 (un)",
+      "qtde": "1,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "10/07/2025",
+      "hora": "16:06:07",
+      "produto_produzido": "(prod) Cheescake F25 (un)",
+      "insumo": "(desc) Caixa Cake Torta 29,5 X 29,5 X 9 Micro (und)",
+      "qtde": "1,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "10/07/2025",
+      "hora": "16:06:07",
+      "produto_produzido": "(prod) Cheescake F25 (un)",
+      "insumo": "(desc) Disco Cake 29 Micro (und)",
+      "qtde": "1,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "10/07/2025",
+      "hora": "16:06:07",
+      "produto_produzido": "(prod) Cheescake F25 (un)",
+      "insumo": "(prod) Recheio Cheescake (kg)",
+      "qtde": "1,120",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "10/07/2025",
+      "hora": "16:06:04",
+      "produto_produzido": "(prod) Cheescake F13 (un)",
+      "insumo": "(prod) Base Cheescake F13 (un)",
+      "qtde": "3,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "10/07/2025",
+      "hora": "16:06:04",
+      "produto_produzido": "(prod) Cheescake F13 (un)",
+      "insumo": "(desc) Caixa Cake Torta 17,5 X 17,5 X 9 Micro (und)",
+      "qtde": "3,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "10/07/2025",
+      "hora": "16:06:04",
+      "produto_produzido": "(prod) Cheescake F13 (un)",
+      "insumo": "(desc) Disco Cake 17 Micro (und)",
+      "qtde": "3,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "10/07/2025",
+      "hora": "16:06:04",
+      "produto_produzido": "(prod) Cheescake F13 (un)",
+      "insumo": "(prod) Recheio Cheescake (kg)",
+      "qtde": "1,110",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "10/07/2025",
+      "hora": "15:59:38",
+      "produto_produzido": "(prod) Base Cheescake (kg)",
+      "insumo": "(ins) Manteiga Sem Sal (kg)",
+      "qtde": "0,160",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "10/07/2025",
+      "hora": "15:59:38",
+      "produto_produzido": "(prod) Base Cheescake (kg)",
+      "insumo": "(ins) Acucar Mascavo (kg)",
+      "qtde": "0,100",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "10/07/2025",
+      "hora": "15:59:38",
+      "produto_produzido": "(prod) Base Cheescake (kg)",
+      "insumo": "(prod) Farinha Biscoito Maisena (kg)",
+      "qtde": "0,360",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "10/07/2025",
+      "hora": "15:59:38",
+      "produto_produzido": "(prod) Base Cheescake F25 (un)",
+      "insumo": "(prod) Base Cheescake (kg)",
+      "qtde": "0,310",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "10/07/2025",
+      "hora": "15:59:37",
+      "produto_produzido": "(prod) Base Cheescake F13 (un)",
+      "insumo": "(prod) Base Cheescake (kg)",
+      "qtde": "0,310",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "10/07/2025",
+      "hora": "15:49:32",
+      "produto_produzido": "(prod) Base Cheescake (kg)",
+      "insumo": "(ins) Canela Em Po (kg)",
+      "qtde": "0,002",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "10/07/2025",
+      "hora": "15:49:32",
+      "produto_produzido": "(prod) Base Cheescake (kg)",
+      "insumo": "(ins) Manteiga Sem Sal (kg)",
+      "qtde": "0,080",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "10/07/2025",
+      "hora": "15:49:32",
+      "produto_produzido": "(prod) Base Cheescake (kg)",
+      "insumo": "(ins) Acucar Mascavo (kg)",
+      "qtde": "0,050",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "10/07/2025",
+      "hora": "15:49:32",
+      "produto_produzido": "(prod) Base Cheescake (kg)",
+      "insumo": "(prod) Farinha Biscoito Maisena (kg)",
+      "qtde": "0,180",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "08/07/2025",
+      "hora": "12:37:17",
+      "produto_produzido": "(prod) Batido Quindao (kg)",
+      "insumo": "(ins) Glucose (kg)",
+      "qtde": "0,040",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "08/07/2025",
+      "hora": "12:37:17",
+      "produto_produzido": "(prod) Batido Quindao (kg)",
+      "insumo": "(beb) Agua de Coco 300ml (und)",
+      "qtde": "1,330",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "08/07/2025",
+      "hora": "12:37:17",
+      "produto_produzido": "(prod) Batido Quindao (kg)",
+      "insumo": "(ins) Coco Ralado Seco (kg)",
+      "qtde": "0,200",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "08/07/2025",
+      "hora": "12:37:17",
+      "produto_produzido": "(prod) Batido Quindao (kg)",
+      "insumo": "(ins) Ovos Jumbo Branco (und)",
+      "qtde": "21,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "08/07/2025",
+      "hora": "12:37:17",
+      "produto_produzido": "(prod) Batido Quindao (kg)",
+      "insumo": "(ins) Acucar Refinado (kg)",
+      "qtde": "0,650",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    }
+  ]
+}

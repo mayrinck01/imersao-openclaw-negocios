@@ -1,0 +1,163 @@
+{
+  "periodo": {
+    "de": "01/07/2025",
+    "ate": "31/07/2025"
+  },
+  "total_registros": 17,
+  "custo_total": "R$ 344,35",
+  "registros": [
+    {
+      "data": "28/07/2025",
+      "hora": "19:01:48",
+      "produto": "(prod) Calda Morango do Amor (kg)",
+      "qtde": "0,400",
+      "custo_unit": "12,59",
+      "custo_total": "5,03",
+      "turno": "Produção"
+    },
+    {
+      "data": "28/07/2025",
+      "hora": "19:01:47",
+      "produto": "(prod) Morango do Amor (un)",
+      "qtde": "15,000",
+      "custo_unit": "1,90",
+      "custo_total": "28,44",
+      "turno": "Produção"
+    },
+    {
+      "data": "17/07/2025",
+      "hora": "15:51:15",
+      "produto": "(prod) Batido Bolo Amendoin (kg)",
+      "qtde": "1,600",
+      "custo_unit": "8,15",
+      "custo_total": "13,04",
+      "turno": "Produção"
+    },
+    {
+      "data": "10/07/2025",
+      "hora": "18:33:15",
+      "produto": "(prod) Recheio Cheescake (kg)",
+      "qtde": "1,120",
+      "custo_unit": "21,85",
+      "custo_total": "24,47",
+      "turno": "Produção"
+    },
+    {
+      "data": "10/07/2025",
+      "hora": "18:31:09",
+      "produto": "(prod) Cheescake F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "40,67",
+      "custo_total": "40,67",
+      "turno": "Produção"
+    },
+    {
+      "data": "10/07/2025",
+      "hora": "18:30:22",
+      "produto": "(prod) Base Cheescake F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "6,98",
+      "custo_total": "6,98",
+      "turno": "Produção"
+    },
+    {
+      "data": "10/07/2025",
+      "hora": "18:29:08",
+      "produto": "(prod) Cheescake F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "16,26",
+      "custo_total": "16,26",
+      "turno": "Produção"
+    },
+    {
+      "data": "10/07/2025",
+      "hora": "18:27:21",
+      "produto": "(prod) Base Cheescake F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "2,25",
+      "custo_total": "2,25",
+      "turno": "Produção"
+    },
+    {
+      "data": "10/07/2025",
+      "hora": "18:25:33",
+      "produto": "(prod) Base Cheescake (kg)",
+      "qtde": "0,310",
+      "custo_unit": "22,50",
+      "custo_total": "6,98",
+      "turno": "Produção"
+    },
+    {
+      "data": "10/07/2025",
+      "hora": "16:06:10",
+      "produto": "(prod) Recheio Cheescake (kg)",
+      "qtde": "2,240",
+      "custo_unit": "21,77",
+      "custo_total": "48,76",
+      "turno": "Produção"
+    },
+    {
+      "data": "10/07/2025",
+      "hora": "16:06:07",
+      "produto": "(prod) Cheescake F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "37,72",
+      "custo_total": "37,72",
+      "turno": "Produção"
+    },
+    {
+      "data": "10/07/2025",
+      "hora": "16:06:05",
+      "produto": "(prod) Cheescake F13 (un)",
+      "qtde": "3,000",
+      "custo_unit": "15,67",
+      "custo_total": "47,00",
+      "turno": "Produção"
+    },
+    {
+      "data": "10/07/2025",
+      "hora": "15:59:39",
+      "produto": "(prod) Base Cheescake (kg)",
+      "qtde": "0,620",
+      "custo_unit": "22,50",
+      "custo_total": "13,95",
+      "turno": "Produção"
+    },
+    {
+      "data": "10/07/2025",
+      "hora": "15:59:38",
+      "produto": "(prod) Base Cheescake F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "7,03",
+      "custo_total": "7,03",
+      "turno": "Produção"
+    },
+    {
+      "data": "10/07/2025",
+      "hora": "15:59:38",
+      "produto": "(prod) Base Cheescake F13 (un)",
+      "qtde": "3,000",
+      "custo_unit": "2,34",
+      "custo_total": "7,03",
+      "turno": "Produção"
+    },
+    {
+      "data": "10/07/2025",
+      "hora": "15:49:33",
+      "produto": "(prod) Base Cheescake (kg)",
+      "qtde": "0,312",
+      "custo_unit": "22,68",
+      "custo_total": "7,08",
+      "turno": "Produção"
+    },
+    {
+      "data": "08/07/2025",
+      "hora": "12:37:18",
+      "produto": "(prod) Batido Quindao (kg)",
+      "qtde": "1,440",
+      "custo_unit": "21,98",
+      "custo_total": "31,66",
+      "turno": "Produção"
+    }
+  ]
+}

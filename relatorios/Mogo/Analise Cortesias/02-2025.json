@@ -1,0 +1,33 @@
+{
+  "periodo": {
+    "de": "01/02/2025",
+    "ate": "28/02/2025"
+  },
+  "total_registros": 2,
+  "total_valor": "R$ 298,51",
+  "total_custo": "R$ 0,00",
+  "registros": [
+    {
+      "data": "14/02/2025",
+      "hora": "18:25:47",
+      "funcionario": "Larissa Lira",
+      "cliente": "San Chef",
+      "telefone": "2199925",
+      "valor": "298,50",
+      "custo": "0,00",
+      "motivo": "",
+      "id": "51699"
+    },
+    {
+      "data": "14/02/2025",
+      "hora": "16:41:54",
+      "funcionario": "Larissa Lira",
+      "cliente": "Marcos Vinicius",
+      "telefone": "",
+      "valor": "0,01",
+      "custo": "0,00",
+      "motivo": "",
+      "id": "51653"
+    }
+  ]
+}

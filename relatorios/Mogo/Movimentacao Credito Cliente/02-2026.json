@@ -1,0 +1,66 @@
+{
+  "periodo": {
+    "de": "01/02/2026",
+    "ate": "28/02/2026"
+  },
+  "total_registros": 5,
+  "total_credito": "R$ 36,80",
+  "total_debito": "R$ 425,59",
+  "registros": [
+    {
+      "data": "27/02/2026",
+      "hora": "17:59:32",
+      "cliente": "Felipe Castro (Jornalista)",
+      "cpf": "07836630722",
+      "tipo": "Debito",
+      "descricao": "Pedido: 018755 (Delivery)",
+      "valor": "330,00",
+      "saldo": "374,31",
+      "financeiro": "Não selecionado"
+    },
+    {
+      "data": "24/02/2026",
+      "hora": "18:36:38",
+      "cliente": "Felipe Castro (Jornalista)",
+      "cpf": "07836630722",
+      "tipo": "Debito",
+      "descricao": "Pedido: 017958 (Mesa: 11)",
+      "valor": "36,85",
+      "saldo": "704,31",
+      "financeiro": "Não selecionado"
+    },
+    {
+      "data": "24/02/2026",
+      "hora": "09:45:31",
+      "cliente": "CRISTINA VACCARI MANGHI DE CARVALHO",
+      "cpf": "02045628728",
+      "tipo": "Credito",
+      "descricao": "TORTINHA DE BABA",
+      "valor": "21,80",
+      "saldo": "21,80",
+      "financeiro": "Não gerar financeiro"
+    },
+    {
+      "data": "18/02/2026",
+      "hora": "11:48:10",
+      "cliente": "Amanda Rodrigues Pereira Palhares ",
+      "cpf": "13007703760",
+      "tipo": "Credito",
+      "descricao": "Endereço ",
+      "valor": "15,00",
+      "saldo": "15,00",
+      "financeiro": "Não gerar financeiro"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "19:17:52",
+      "cliente": "Felipe Castro (Jornalista)",
+      "cpf": "07836630722",
+      "tipo": "Debito",
+      "descricao": "Pedido: 014232 (Mesa: 11)",
+      "valor": "58,74",
+      "saldo": "741,16",
+      "financeiro": "Não selecionado"
+    }
+  ]
+}

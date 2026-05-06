@@ -1,0 +1,55 @@
+{
+  "periodo": {
+    "de": "01/11/2025",
+    "ate": "30/11/2025"
+  },
+  "total_registros": 4,
+  "total_valor": "R$ 625,00",
+  "total_custo": "R$ 135,61",
+  "registros": [
+    {
+      "data": "29/11/2025",
+      "hora": "09:25:55",
+      "funcionario": "cristiane",
+      "cliente": "Giselli Lessa Lopard",
+      "telefone": "21994169703",
+      "valor": "125,00",
+      "custo": "82,41",
+      "motivo": "produto errado",
+      "id": "119059"
+    },
+    {
+      "data": "20/11/2025",
+      "hora": "12:13:05",
+      "funcionario": "cristiane",
+      "cliente": "Eliana F Lewkowicz ",
+      "telefone": "21999594883",
+      "valor": "52,00",
+      "custo": "4,09",
+      "motivo": "Fazer a troca pedido entregue em 19/11 os docinhos não estava bom!! Esfarelando!! ",
+      "id": "116998"
+    },
+    {
+      "data": "10/11/2025",
+      "hora": "15:51:46",
+      "funcionario": "cristiane",
+      "cliente": "Obra do Berço",
+      "telefone": "21989093435",
+      "valor": "300,00",
+      "custo": "42,24",
+      "motivo": "Doação",
+      "id": "114673"
+    },
+    {
+      "data": "10/11/2025",
+      "hora": "10:22:09",
+      "funcionario": "cristiane",
+      "cliente": "DAISE CORTEZ GORI",
+      "telefone": "21991221116",
+      "valor": "148,00",
+      "custo": "6,87",
+      "motivo": "produto errado",
+      "id": "114584"
+    }
+  ]
+}

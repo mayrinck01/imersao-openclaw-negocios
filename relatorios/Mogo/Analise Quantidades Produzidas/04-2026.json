@@ -1,0 +1,64 @@
+{
+  "periodo": {
+    "de": "01/04/2026",
+    "ate": "30/04/2026"
+  },
+  "total_registros": 6,
+  "custo_total": "R$ 476,93",
+  "registros": [
+    {
+      "data": "20/04/2026",
+      "hora": "14:43:04",
+      "produto": "(prod) Bombons Degustação - Dia das Maes 2026 (8 un)",
+      "qtde": "1,000",
+      "custo_unit": "9,86",
+      "custo_total": "9,86",
+      "turno": "Geral"
+    },
+    {
+      "data": "20/04/2026",
+      "hora": "10:47:07",
+      "produto": "(prod) Brigadeiros - Dia das Maes 2026 (cx12un)",
+      "qtde": "1,000",
+      "custo_unit": "11,04",
+      "custo_total": "11,04",
+      "turno": "Geral"
+    },
+    {
+      "data": "20/04/2026",
+      "hora": "10:39:01",
+      "produto": "(prod) Torta Mousse Chocolate F25 - Dia das Maes 2026 (un)",
+      "qtde": "1,000",
+      "custo_unit": "53,43",
+      "custo_total": "53,43",
+      "turno": "Geral"
+    },
+    {
+      "data": "15/04/2026",
+      "hora": "17:48:38",
+      "produto": "(prod) Alema F22 (un)",
+      "qtde": "1,000",
+      "custo_unit": "45,85",
+      "custo_total": "45,85",
+      "turno": "Geral"
+    },
+    {
+      "data": "15/04/2026",
+      "hora": "17:48:31",
+      "produto": "(prod) Semi Alema F22 (un)",
+      "qtde": "1,000",
+      "custo_unit": "37,27",
+      "custo_total": "37,27",
+      "turno": "Geral"
+    },
+    {
+      "data": "15/04/2026",
+      "hora": "17:48:25",
+      "produto": "(prod) Creme de Alema (kg)",
+      "qtde": "10,730",
+      "custo_unit": "29,77",
+      "custo_total": "319,48",
+      "turno": "Geral"
+    }
+  ]
+}

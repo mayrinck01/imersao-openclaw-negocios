@@ -1,0 +1,132 @@
+{
+  "periodo": {
+    "de": "01/06/2025",
+    "ate": "30/06/2025"
+  },
+  "total_registros": 11,
+  "total_credito": "R$ 4.724,00",
+  "total_debito": "R$ 492,84",
+  "registros": [
+    {
+      "data": "28/06/2025",
+      "hora": "18:13:33",
+      "cliente": "Ana Lins",
+      "cpf": "",
+      "tipo": "Debito",
+      "descricao": "Pedido: 072174 (Delivery)",
+      "valor": "198,50",
+      "saldo": "0,00",
+      "financeiro": "Não selecionado"
+    },
+    {
+      "data": "28/06/2025",
+      "hora": "18:10:54",
+      "cliente": "Ana Lins",
+      "cpf": "",
+      "tipo": "Credito",
+      "descricao": "Delicia em Camadas 25 +taxa de entrega ",
+      "valor": "198,50",
+      "saldo": "198,50",
+      "financeiro": "Não gerar financeiro"
+    },
+    {
+      "data": "24/06/2025",
+      "hora": "18:40:32",
+      "cliente": "Felipe Castro (Jornalista)",
+      "cpf": "07836630722",
+      "tipo": "Debito",
+      "descricao": "Pedido: 073136 (Mesa: 16)",
+      "valor": "21,34",
+      "saldo": "3.978,66",
+      "financeiro": "Não selecionado"
+    },
+    {
+      "data": "24/06/2025",
+      "hora": "18:35:18",
+      "cliente": "Felipe Castro (Jornalista)",
+      "cpf": "07836630722",
+      "tipo": "Credito",
+      "descricao": "PERMUTA 4MIL",
+      "valor": "4.000,00",
+      "saldo": "4.000,00",
+      "financeiro": "Não gerar financeiro"
+    },
+    {
+      "data": "19/06/2025",
+      "hora": "11:05:54",
+      "cliente": "Clara lins",
+      "cpf": "13591948780",
+      "tipo": "Credito",
+      "descricao": "Valor do ped: 203,50 valor cobrado 278,50",
+      "valor": "75,00",
+      "saldo": "75,00",
+      "financeiro": "Não gerar financeiro"
+    },
+    {
+      "data": "14/06/2025",
+      "hora": "16:29:53",
+      "cliente": "Andrea Pedroza ",
+      "cpf": "13051145742",
+      "tipo": "Debito",
+      "descricao": "Pedido: 071267 (Delivery)",
+      "valor": "84,50",
+      "saldo": "0,00",
+      "financeiro": "Não selecionado"
+    },
+    {
+      "data": "10/06/2025",
+      "hora": "15:14:38",
+      "cliente": "Andrea Pedroza ",
+      "cpf": "13051145742",
+      "tipo": "Credito",
+      "descricao": "Aurora aro 13",
+      "valor": "84,50",
+      "saldo": "84,50",
+      "financeiro": "Não gerar financeiro"
+    },
+    {
+      "data": "07/06/2025",
+      "hora": "14:42:04",
+      "cliente": "Neusa Tamaio",
+      "cpf": "10546934803",
+      "tipo": "Debito",
+      "descricao": "Pedido: 069087 (Delivery)",
+      "valor": "188,50",
+      "saldo": "0,00",
+      "financeiro": "Não selecionado"
+    },
+    {
+      "data": "05/06/2025",
+      "hora": "18:12:21",
+      "cliente": "DEBORAH MATHIAS",
+      "cpf": "",
+      "tipo": "Credito",
+      "descricao": "Cheescake Aro 20",
+      "valor": "144,50",
+      "saldo": "144,50",
+      "financeiro": "Não gerar financeiro"
+    },
+    {
+      "data": "02/06/2025",
+      "hora": "17:23:50",
+      "cliente": "Lilian Fernandes Turlão",
+      "cpf": "13066198740",
+      "tipo": "Credito",
+      "descricao": "PEDIDO 068091 RETRATAÇÃO ",
+      "valor": "33,00",
+      "saldo": "33,00",
+      "financeiro": "Não gerar financeiro"
+    },
+    {
+      "data": "02/06/2025",
+      "hora": "17:13:07",
+      "cliente": "Neusa Tamaio",
+      "cpf": "10546934803",
+      "tipo": "Credito",
+      "descricao": "PEDIDO 068344 RETRATAÇÃO",
+      "valor": "188,50",
+      "saldo": "188,50",
+      "financeiro": "Não gerar financeiro"
+    }
+  ]
+}

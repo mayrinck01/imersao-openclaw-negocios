@@ -1,0 +1,16 @@
+BACKFILL_START months=1 scripts=1 total=1 result=/root/workspaces/cake-brain/relatorios/Mogo/exports/mogo-backfill-dia5-20260505-073718.jsonl
+
+MONTH_START 2026-01 fake_now=2026-02-05
+RUN 1/1 2026-01 mogo-ticket-medio.py
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Ticket Médio: 01/01/2026 a 31/01/2026...
+Registros: 4
+Excel salvo: /root/workspaces/cake-brain/relatorios/Mogo/Ticket Medio/01-2026.xlsx
+JSON salvo: /root/workspaces/cake-brain/relatorios/Mogo/Ticket Medio/01-2026.json
+✅ Email enviado para joao@cakeco.com.br
+DONE 1/1 2026-01 mogo-ticket-medio.py status=ok duration=3.0s
+BACKFILL_DONE total=1 errors=0 result=/root/workspaces/cake-brain/relatorios/Mogo/exports/mogo-backfill-dia5-20260505-073718.jsonl
+EXIT:0

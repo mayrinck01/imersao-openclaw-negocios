@@ -1,0 +1,176 @@
+{
+  "periodo": {
+    "de": "01/07/2025",
+    "ate": "31/07/2025"
+  },
+  "total_registros": 15,
+  "total_credito": "R$ 1.172,90",
+  "total_debito": "R$ 903,53",
+  "registros": [
+    {
+      "data": "26/07/2025",
+      "hora": "18:20:55",
+      "cliente": "LUCIA MARIA BARROS DE SÁ",
+      "cpf": "",
+      "tipo": "Credito",
+      "descricao": "Pagamento em Cheque ",
+      "valor": "46,50",
+      "saldo": "46,50",
+      "financeiro": "Não gerar financeiro"
+    },
+    {
+      "data": "25/07/2025",
+      "hora": "18:41:55",
+      "cliente": "Elizabeth Lins",
+      "cpf": "09946681714",
+      "tipo": "Debito",
+      "descricao": "Pedido: 080050 (Delivery)",
+      "valor": "387,00",
+      "saldo": "13,50",
+      "financeiro": "Não selecionado"
+    },
+    {
+      "data": "25/07/2025",
+      "hora": "18:30:27",
+      "cliente": "Ana Beatriz Rodrigues de Brito  ",
+      "cpf": "",
+      "tipo": "Debito",
+      "descricao": "Pedido: 080040 (Delivery)",
+      "valor": "122,50",
+      "saldo": "0,00",
+      "financeiro": "Não selecionado"
+    },
+    {
+      "data": "25/07/2025",
+      "hora": "18:28:56",
+      "cliente": "Ana Beatriz Rodrigues de Brito  ",
+      "cpf": "",
+      "tipo": "Credito",
+      "descricao": "Delícia de coco",
+      "valor": "122,50",
+      "saldo": "122,50",
+      "financeiro": "Não gerar financeiro"
+    },
+    {
+      "data": "22/07/2025",
+      "hora": "15:35:30",
+      "cliente": "Beatriz Almeida dos Anjos",
+      "cpf": "15304535774",
+      "tipo": "Debito",
+      "descricao": "Pedido: 078818 (Delivery)",
+      "valor": "16,50",
+      "saldo": "0,00",
+      "financeiro": "Não selecionado"
+    },
+    {
+      "data": "22/07/2025",
+      "hora": "12:01:19",
+      "cliente": "Patrícia Braun ",
+      "cpf": "52902056087",
+      "tipo": "Credito",
+      "descricao": "Merengue",
+      "valor": "20,00",
+      "saldo": "20,00",
+      "financeiro": "Não gerar financeiro"
+    },
+    {
+      "data": "17/07/2025",
+      "hora": "16:24:10",
+      "cliente": "MARILDA OLIVEIRA ",
+      "cpf": "34772081704",
+      "tipo": "Debito",
+      "descricao": "Pedido: 077848 (Delivery)",
+      "valor": "21,90",
+      "saldo": "0,00",
+      "financeiro": "Não selecionado"
+    },
+    {
+      "data": "17/07/2025",
+      "hora": "16:21:00",
+      "cliente": "MARILDA OLIVEIRA ",
+      "cpf": "34772081704",
+      "tipo": "Credito",
+      "descricao": "Comprou fatia de torta Abacaxi 12/07 e o abacaxi ruim",
+      "valor": "21,90",
+      "saldo": "21,90",
+      "financeiro": "Não gerar financeiro"
+    },
+    {
+      "data": "17/07/2025",
+      "hora": "14:48:19",
+      "cliente": "Beatriz Almeida dos Anjos",
+      "cpf": "15304535774",
+      "tipo": "Credito",
+      "descricao": "Pedido 77416",
+      "valor": "16,50",
+      "saldo": "16,50",
+      "financeiro": "Não gerar financeiro"
+    },
+    {
+      "data": "14/07/2025",
+      "hora": "16:46:30",
+      "cliente": "Cynthia Ozon Boghossian",
+      "cpf": "01649775709",
+      "tipo": "Credito",
+      "descricao": "Retratação red f25 estragada - experiencia ruim na troca",
+      "valor": "268,50",
+      "saldo": "268,50",
+      "financeiro": "Não gerar financeiro"
+    },
+    {
+      "data": "12/07/2025",
+      "hora": "11:55:51",
+      "cliente": "Isabela Braga ",
+      "cpf": "01101681780",
+      "tipo": "Debito",
+      "descricao": "Pedido: 076811 (Delivery)",
+      "valor": "203,50",
+      "saldo": "0,00",
+      "financeiro": "Não selecionado"
+    },
+    {
+      "data": "08/07/2025",
+      "hora": "14:40:18",
+      "cliente": "Vitor Máximo ",
+      "cpf": "14210682730",
+      "tipo": "Credito",
+      "descricao": "retratação bolinho pet",
+      "valor": "8,00",
+      "saldo": "8,00",
+      "financeiro": "Não gerar financeiro"
+    },
+    {
+      "data": "08/07/2025",
+      "hora": "14:38:37",
+      "cliente": "Miguel Angelo Campagnac Rabello ",
+      "cpf": "80885179749",
+      "tipo": "Credito",
+      "descricao": "retratação torta mousse mole/caída",
+      "valor": "268,50",
+      "saldo": "268,50",
+      "financeiro": "Não gerar financeiro"
+    },
+    {
+      "data": "03/07/2025",
+      "hora": "17:05:15",
+      "cliente": "Felipe Castro (Jornalista)",
+      "cpf": "07836630722",
+      "tipo": "Debito",
+      "descricao": "Pedido: 075028 (Mesa: 15)",
+      "valor": "152,13",
+      "saldo": "3.826,53",
+      "financeiro": "Não selecionado"
+    },
+    {
+      "data": "03/07/2025",
+      "hora": "15:50:36",
+      "cliente": "Elizabeth Lins",
+      "cpf": "09946681714",
+      "tipo": "Credito",
+      "descricao": "Pedido entregue com valor 74368",
+      "valor": "400,50",
+      "saldo": "400,50",
+      "financeiro": "Não gerar financeiro"
+    }
+  ]
+}

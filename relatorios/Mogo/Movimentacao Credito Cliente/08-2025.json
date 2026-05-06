@@ -1,0 +1,308 @@
+{
+  "periodo": {
+    "de": "01/08/2025",
+    "ate": "31/08/2025"
+  },
+  "total_registros": 27,
+  "total_credito": "R$ 936,10",
+  "total_debito": "R$ 1.453,09",
+  "registros": [
+    {
+      "data": "30/08/2025",
+      "hora": "13:08:20",
+      "cliente": "Felipe Castro (Jornalista)",
+      "cpf": "07836630722",
+      "tipo": "Debito",
+      "descricao": "Pedido: 089621 (Mesa: 12)",
+      "valor": "40,30",
+      "saldo": "3.406,04",
+      "financeiro": "Não selecionado"
+    },
+    {
+      "data": "28/08/2025",
+      "hora": "22:15:32",
+      "cliente": "Renata",
+      "cpf": "05641000728",
+      "tipo": "Debito",
+      "descricao": "Pedido: 089215 (Delivery)",
+      "valor": "15,00",
+      "saldo": "0,00",
+      "financeiro": "Não selecionado"
+    },
+    {
+      "data": "28/08/2025",
+      "hora": "17:39:41",
+      "cliente": "FERNANDA PRESTES TAFT",
+      "cpf": "10789826780",
+      "tipo": "Debito",
+      "descricao": "Pedido: 089233 (Balcão)",
+      "valor": "15,00",
+      "saldo": "0,00",
+      "financeiro": "Não selecionado"
+    },
+    {
+      "data": "28/08/2025",
+      "hora": "17:32:53",
+      "cliente": "FERNANDA PRESTES TAFT",
+      "cpf": "10789826780",
+      "tipo": "Credito",
+      "descricao": "Taxa de entrega",
+      "valor": "15,00",
+      "saldo": "15,00",
+      "financeiro": "Não gerar financeiro"
+    },
+    {
+      "data": "28/08/2025",
+      "hora": "17:10:51",
+      "cliente": "Renata",
+      "cpf": "05641000728",
+      "tipo": "Credito",
+      "descricao": "Mudança de taxa de entrega",
+      "valor": "15,00",
+      "saldo": "15,00",
+      "financeiro": "Não gerar financeiro"
+    },
+    {
+      "data": "27/08/2025",
+      "hora": "16:32:44",
+      "cliente": "RENATA CURI HAUEGEN",
+      "cpf": "00538243694",
+      "tipo": "Debito",
+      "descricao": "Pedido: 088938 (Delivery)",
+      "valor": "268,50",
+      "saldo": "0,00",
+      "financeiro": "Não selecionado"
+    },
+    {
+      "data": "25/08/2025",
+      "hora": "12:48:42",
+      "cliente": "Marcelo Lucena",
+      "cpf": "92617344720",
+      "tipo": "Credito",
+      "descricao": "retratação deliciosa f20",
+      "valor": "188,50",
+      "saldo": "188,50",
+      "financeiro": "Não gerar financeiro"
+    },
+    {
+      "data": "25/08/2025",
+      "hora": "12:30:15",
+      "cliente": "Galt Capital Consultoria de Investimentos LTDA",
+      "cpf": "09175140000175",
+      "tipo": "Debito",
+      "descricao": "Pedido: 088115 (Delivery)",
+      "valor": "188,50",
+      "saldo": "0,00",
+      "financeiro": "Não selecionado"
+    },
+    {
+      "data": "23/08/2025",
+      "hora": "18:34:27",
+      "cliente": "Felipe Castro (Jornalista)",
+      "cpf": "07836630722",
+      "tipo": "Debito",
+      "descricao": "Pedido: 088095 (Mesa: 12)",
+      "valor": "21,34",
+      "saldo": "3.446,34",
+      "financeiro": "Não selecionado"
+    },
+    {
+      "data": "23/08/2025",
+      "hora": "17:43:47",
+      "cliente": "Galt Capital Consultoria de Investimentos LTDA",
+      "cpf": "09175140000175",
+      "tipo": "Credito",
+      "descricao": "Delicia Crocante (pedido 081045) 31/07 (retratação de outra ",
+      "valor": "188,50",
+      "saldo": "188,50",
+      "financeiro": "Não gerar financeiro"
+    },
+    {
+      "data": "21/08/2025",
+      "hora": "16:40:24",
+      "cliente": "Katya Goldenstein ",
+      "cpf": "97513946787",
+      "tipo": "Credito",
+      "descricao": "Crédito referente ao pagamento a mais dos pedidos",
+      "valor": "123,50",
+      "saldo": "123,50",
+      "financeiro": "Não gerar financeiro"
+    },
+    {
+      "data": "21/08/2025",
+      "hora": "11:06:52",
+      "cliente": "Daniela Romão",
+      "cpf": "07194147769",
+      "tipo": "Credito",
+      "descricao": "Pagaou a taxa de entrega, decidiu retirar na loja o pedido",
+      "valor": "10,00",
+      "saldo": "10,00",
+      "financeiro": "Não gerar financeiro"
+    },
+    {
+      "data": "20/08/2025",
+      "hora": "16:39:38",
+      "cliente": "laura schnoor",
+      "cpf": "10715440713",
+      "tipo": "Debito",
+      "descricao": "Pedido: 087326 (Delivery)",
+      "valor": "10,00",
+      "saldo": "0,00",
+      "financeiro": "Não selecionado"
+    },
+    {
+      "data": "20/08/2025",
+      "hora": "16:37:36",
+      "cliente": "laura schnoor",
+      "cpf": "10715440713",
+      "tipo": "Credito",
+      "descricao": "Conseguimos entregar Se se preferir retira tx de credito",
+      "valor": "10,00",
+      "saldo": "10,00",
+      "financeiro": "Não gerar financeiro"
+    },
+    {
+      "data": "14/08/2025",
+      "hora": "17:29:35",
+      "cliente": "Patrícia Braun ",
+      "cpf": "52902056087",
+      "tipo": "Debito",
+      "descricao": "Pedido: 085903 (Mesa: 10)",
+      "valor": "20,00",
+      "saldo": "0,00",
+      "financeiro": "Não selecionado"
+    },
+    {
+      "data": "12/08/2025",
+      "hora": "11:47:47",
+      "cliente": "Ana Teresa Serpa Schirmer",
+      "cpf": "83019014700",
+      "tipo": "Credito",
+      "descricao": "Retratação 082172",
+      "valor": "33,00",
+      "saldo": "33,00",
+      "financeiro": "Não gerar financeiro"
+    },
+    {
+      "data": "11/08/2025",
+      "hora": "18:45:34",
+      "cliente": "CLAUDIA MAYA",
+      "cpf": "83185887700",
+      "tipo": "Credito",
+      "descricao": "Retratação 084688",
+      "valor": "84,50",
+      "saldo": "84,50",
+      "financeiro": "Não gerar financeiro"
+    },
+    {
+      "data": "11/08/2025",
+      "hora": "11:42:24",
+      "cliente": "Felipe Castro (Jornalista)",
+      "cpf": "07836630722",
+      "tipo": "Debito",
+      "descricao": "Pedido: 085052 (Delivery)",
+      "valor": "349,50",
+      "saldo": "3.467,68",
+      "financeiro": "Não selecionado"
+    },
+    {
+      "data": "09/08/2025",
+      "hora": "17:16:50",
+      "cliente": " Ana Paula Vianna quintal ",
+      "cpf": "03545781704",
+      "tipo": "Credito",
+      "descricao": "Taxa de entrega ",
+      "valor": "15,00",
+      "saldo": "15,00",
+      "financeiro": "Não gerar financeiro"
+    },
+    {
+      "data": "08/08/2025",
+      "hora": "13:53:03",
+      "cliente": "carmem",
+      "cpf": "08723620781",
+      "tipo": "Debito",
+      "descricao": "Pedido: 084154 (Delivery)",
+      "valor": "188,50",
+      "saldo": "0,00",
+      "financeiro": "Não selecionado"
+    },
+    {
+      "data": "08/08/2025",
+      "hora": "11:18:47",
+      "cliente": "Yana Croce Ferreira de Carvalho",
+      "cpf": "12482465788",
+      "tipo": "Debito",
+      "descricao": "Pedido: 084062 (Delivery)",
+      "valor": "15,00",
+      "saldo": "6,00",
+      "financeiro": "Não selecionado"
+    },
+    {
+      "data": "05/08/2025",
+      "hora": "15:57:17",
+      "cliente": "Felipe Castro (Jornalista)",
+      "cpf": "07836630722",
+      "tipo": "Debito",
+      "descricao": "Pedido: 083254 (Mesa: 11)",
+      "valor": "9,35",
+      "saldo": "3.817,18",
+      "financeiro": "Não selecionado"
+    },
+    {
+      "data": "04/08/2025",
+      "hora": "11:59:26",
+      "cliente": "Lívia Amaral",
+      "cpf": "",
+      "tipo": "Debito",
+      "descricao": "Pedido: 082886 (Delivery)",
+      "valor": "43,60",
+      "saldo": "0,00",
+      "financeiro": "Não selecionado"
+    },
+    {
+      "data": "04/08/2025",
+      "hora": "11:51:36",
+      "cliente": "Lívia Amaral",
+      "cpf": "",
+      "tipo": "Credito",
+      "descricao": "PEDIDO FALTANDO 082557",
+      "valor": "43,60",
+      "saldo": "43,60",
+      "financeiro": "Não gerar financeiro"
+    },
+    {
+      "data": "02/08/2025",
+      "hora": "19:30:50",
+      "cliente": "carmem",
+      "cpf": "08723620781",
+      "tipo": "Credito",
+      "descricao": "CHOCOBERRIES  25",
+      "valor": "188,50",
+      "saldo": "188,50",
+      "financeiro": "Não gerar financeiro"
+    },
+    {
+      "data": "02/08/2025",
+      "hora": "17:51:13",
+      "cliente": "Yana Croce Ferreira de Carvalho",
+      "cpf": "12482465788",
+      "tipo": "Credito",
+      "descricao": "Retratação fatia ",
+      "valor": "21,00",
+      "saldo": "21,00",
+      "financeiro": "Não gerar financeiro"
+    },
+    {
+      "data": "01/08/2025",
+      "hora": "10:10:12",
+      "cliente": "Cynthia Ozon Boghossian",
+      "cpf": "01649775709",
+      "tipo": "Debito",
+      "descricao": "Pedido: 082072 (Delivery)",
+      "valor": "268,50",
+      "saldo": "0,00",
+      "financeiro": "Não selecionado"
+    }
+  ]
+}

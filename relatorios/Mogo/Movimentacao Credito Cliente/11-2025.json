@@ -1,0 +1,121 @@
+{
+  "periodo": {
+    "de": "01/11/2025",
+    "ate": "30/11/2025"
+  },
+  "total_registros": 10,
+  "total_credito": "R$ 245,00",
+  "total_debito": "R$ 799,55",
+  "registros": [
+    {
+      "data": "29/11/2025",
+      "hora": "14:13:29",
+      "cliente": "Maria luiza",
+      "cpf": "50450379787",
+      "tipo": "Debito",
+      "descricao": "Pedido: 000675 (Balcão)",
+      "valor": "11,00",
+      "saldo": "0,00",
+      "financeiro": "Não selecionado"
+    },
+    {
+      "data": "29/11/2025",
+      "hora": "14:10:47",
+      "cliente": "Maria luiza",
+      "cpf": "50450379787",
+      "tipo": "Credito",
+      "descricao": "credito de R$ 11,00",
+      "valor": "11,00",
+      "saldo": "11,00",
+      "financeiro": "Não gerar financeiro"
+    },
+    {
+      "data": "27/11/2025",
+      "hora": "16:48:33",
+      "cliente": "Lucia Helena Mugayar Guedes Wambier",
+      "cpf": "49124781720",
+      "tipo": "Debito",
+      "descricao": "Pedido: 000148 (Delivery)",
+      "valor": "20,00",
+      "saldo": "0,00",
+      "financeiro": "Não selecionado"
+    },
+    {
+      "data": "25/11/2025",
+      "hora": "19:03:04",
+      "cliente": "Felipe Castro (Jornalista)",
+      "cpf": "07836630722",
+      "tipo": "Debito",
+      "descricao": "Pedido: 108685 (Mesa: 09)",
+      "valor": "33,50",
+      "saldo": "1.027,95",
+      "financeiro": "Não selecionado"
+    },
+    {
+      "data": "21/11/2025",
+      "hora": "13:12:11",
+      "cliente": "Felipe Castro (Jornalista)",
+      "cpf": "07836630722",
+      "tipo": "Debito",
+      "descricao": "Pedido: 107814 (Mesa: 11)",
+      "valor": "46,20",
+      "saldo": "1.061,45",
+      "financeiro": "Não selecionado"
+    },
+    {
+      "data": "17/11/2025",
+      "hora": "17:46:07",
+      "cliente": "Carla Del Guercio",
+      "cpf": "14483239759",
+      "tipo": "Debito",
+      "descricao": "Pedido: 106369 (Delivery)",
+      "valor": "214,00",
+      "saldo": "0,00",
+      "financeiro": "Não selecionado"
+    },
+    {
+      "data": "17/11/2025",
+      "hora": "14:50:58",
+      "cliente": "Carla Del Guercio",
+      "cpf": "14483239759",
+      "tipo": "Credito",
+      "descricao": "PIX FEITO 14/11/2025",
+      "valor": "214,00",
+      "saldo": "214,00",
+      "financeiro": "Não gerar financeiro"
+    },
+    {
+      "data": "14/11/2025",
+      "hora": "09:21:11",
+      "cliente": "Felipe Castro (Jornalista)",
+      "cpf": "07836630722",
+      "tipo": "Debito",
+      "descricao": "Pedido: 105377 (Delivery)",
+      "valor": "438,00",
+      "saldo": "1.107,65",
+      "financeiro": "Não selecionado"
+    },
+    {
+      "data": "13/11/2025",
+      "hora": "17:43:16",
+      "cliente": "Felipe Castro (Jornalista)",
+      "cpf": "07836630722",
+      "tipo": "Debito",
+      "descricao": "Pedido: 106131 (Mesa: 13)",
+      "valor": "36,85",
+      "saldo": "1.545,65",
+      "financeiro": "Não selecionado"
+    },
+    {
+      "data": "10/11/2025",
+      "hora": "15:58:34",
+      "cliente": "Lucia Helena Mugayar Guedes Wambier",
+      "cpf": "49124781720",
+      "tipo": "Credito",
+      "descricao": "Alteração da taxa de entrega de R$ 30,00 para  R$ 10,00",
+      "valor": "20,00",
+      "saldo": "20,00",
+      "financeiro": "Não gerar financeiro"
+    }
+  ]
+}

@@ -1,0 +1,280 @@
+{"script": "mogo-faturamento-detalhado.py", "year": 2026, "month": 1, "status": "skipped_existing", "error": "", "duration_s": 0.0, "files": ["/root/workspaces/cake-brain/relatorios/Mogo/Faturamento Detalhado/01-2026.xlsx", "/root/workspaces/cake-brain/relatorios/Mogo/Faturamento Detalhado/01-2026.json"]}
+{"script": "mogo-venda-nota-assinada.py", "year": 2026, "month": 1, "status": "skipped_existing", "error": "", "duration_s": 0.0, "files": ["/root/workspaces/cake-brain/relatorios/Mogo/Venda em Nota Assinada/2026-01-venda-nota-assinada.xlsx"]}
+{"script": "mogo-ticket-medio.py", "year": 2026, "month": 1, "status": "skipped_existing", "error": "", "duration_s": 0.0, "files": ["/root/workspaces/cake-brain/relatorios/Mogo/Ticket Medio/01-2026.xlsx", "/root/workspaces/cake-brain/relatorios/Mogo/Ticket Medio/01-2026.json"]}
+{"script": "mogo-vendas-analitico.py", "year": 2026, "month": 1, "status": "skipped_existing", "error": "", "duration_s": 0.0, "files": ["/root/workspaces/cake-brain/relatorios/Mogo/Vendas Analitico/01-2026.xlsx", "/root/workspaces/cake-brain/relatorios/Mogo/Vendas Analitico/01-2026.json"]}
+{"script": "mogo-vendas-sintetico.py", "year": 2026, "month": 1, "status": "skipped_existing", "error": "", "duration_s": 0.0, "files": ["/root/workspaces/cake-brain/relatorios/Mogo/Vendas Sintetico/01-2026.xlsx", "/root/workspaces/cake-brain/relatorios/Mogo/Vendas Sintetico/01-2026.json"]}
+{"script": "mogo-vendas-adicionais.py", "year": 2026, "month": 1, "status": "skipped_existing", "error": "", "duration_s": 0.0, "files": ["/root/workspaces/cake-brain/relatorios/Mogo/Vendas Adicionais/01-2026.xlsx", "/root/workspaces/cake-brain/relatorios/Mogo/Vendas Adicionais/01-2026.json"]}
+{"script": "mogo-lucratividade-produto.py", "year": 2026, "month": 1, "status": "skipped_existing", "error": "", "duration_s": 0.0, "files": ["/root/workspaces/cake-brain/relatorios/Mogo/Lucratividade Produto/01-2026.xlsx", "/root/workspaces/cake-brain/relatorios/Mogo/Lucratividade Produto/01-2026.json"]}
+{"script": "mogo-descontos-concedidos.py", "year": 2026, "month": 1, "status": "skipped_existing", "error": "", "duration_s": 0.0, "files": ["/root/workspaces/cake-brain/relatorios/Mogo/Descontos Concedidos/01-2026.xlsx", "/root/workspaces/cake-brain/relatorios/Mogo/Descontos Concedidos/01-2026.json"]}
+{"script": "mogo-movimentacao-credito-cliente.py", "year": 2026, "month": 1, "status": "skipped_existing", "error": "", "duration_s": 0.0, "files": ["/root/workspaces/cake-brain/relatorios/Mogo/Movimentacao Credito Cliente/01-2026.xlsx", "/root/workspaces/cake-brain/relatorios/Mogo/Movimentacao Credito Cliente/01-2026.json"]}
+{"script": "mogo-taxa-servico.py", "year": 2026, "month": 1, "status": "skipped_existing", "error": "", "duration_s": 0.0, "files": ["/root/workspaces/cake-brain/relatorios/Mogo/Taxa Servico/01-2026.xlsx", "/root/workspaces/cake-brain/relatorios/Mogo/Taxa Servico/01-2026.json"]}
+{"script": "mogo-analise-cortesias.py", "year": 2026, "month": 1, "status": "skipped_existing", "error": "", "duration_s": 0.0, "files": ["/root/workspaces/cake-brain/relatorios/Mogo/Analise Cortesias/01-2026.xlsx", "/root/workspaces/cake-brain/relatorios/Mogo/Analise Cortesias/01-2026.json"]}
+{"script": "mogo-lancamentos-pedidos.py", "year": 2026, "month": 1, "status": "skipped_existing", "error": "", "duration_s": 0.0, "files": ["/root/workspaces/cake-brain/relatorios/Mogo/Lancamentos Pedidos/01-2026.xlsx", "/root/workspaces/cake-brain/relatorios/Mogo/Lancamentos Pedidos/01-2026.json"]}
+{"script": "mogo-historico-pagamento.py", "year": 2026, "month": 1, "status": "skipped_existing", "error": "", "duration_s": 0.0, "files": ["/root/workspaces/cake-brain/relatorios/Mogo/Historico Pagamento/01-2026.xlsx", "/root/workspaces/cake-brain/relatorios/Mogo/Historico Pagamento/01-2026.json"]}
+{"script": "mogo-entradas-xml-detalhado.py", "year": 2026, "month": 1, "status": "skipped_existing", "error": "", "duration_s": 0.0, "files": ["/root/workspaces/cake-brain/relatorios/Mogo/Entradas XML Detalhado/01-2026.xlsx", "/root/workspaces/cake-brain/relatorios/Mogo/Entradas XML Detalhado/01-2026.json"]}
+{"script": "mogo-compra-produtos.py", "year": 2026, "month": 1, "status": "skipped_existing", "error": "", "duration_s": 0.0, "files": ["/root/workspaces/cake-brain/relatorios/Mogo/Compra Produtos/01-2026.xlsx", "/root/workspaces/cake-brain/relatorios/Mogo/Compra Produtos/01-2026.json"]}
+{"script": "mogo-variacao-preco-compra.py", "year": 2026, "month": 1, "status": "skipped_existing", "error": "", "duration_s": 0.0, "files": ["/root/workspaces/cake-brain/relatorios/Mogo/Variacao Preco Compra/01-2026.xlsx", "/root/workspaces/cake-brain/relatorios/Mogo/Variacao Preco Compra/01-2026.json"]}
+{"script": "mogo-analise-quantidades-produzidas.py", "year": 2026, "month": 1, "status": "skipped_existing", "error": "", "duration_s": 0.0, "files": ["/root/workspaces/cake-brain/relatorios/Mogo/Analise Quantidades Produzidas/01-2026.xlsx", "/root/workspaces/cake-brain/relatorios/Mogo/Analise Quantidades Produzidas/01-2026.json"]}
+{"script": "mogo-analise-insumos-producao.py", "year": 2026, "month": 1, "status": "skipped_existing", "error": "", "duration_s": 0.0, "files": ["/root/workspaces/cake-brain/relatorios/Mogo/Analise Insumos Producao/01-2026.xlsx", "/root/workspaces/cake-brain/relatorios/Mogo/Analise Insumos Producao/01-2026.json"]}
+{"script": "mogo-analise-cadastro-clientes.py", "year": 2026, "month": 1, "status": "skipped_existing", "error": "", "duration_s": 0.0, "files": ["/root/workspaces/cake-brain/relatorios/Mogo/Analise Cadastro Clientes/01-2026.xlsx", "/root/workspaces/cake-brain/relatorios/Mogo/Analise Cadastro Clientes/01-2026.json"]}
+{"script": "mogo-itens-vendidos-agendamento.py", "year": 2026, "month": 1, "status": "skipped_existing", "error": "", "duration_s": 0.0, "files": ["/root/workspaces/cake-brain/relatorios/Mogo/Itens Vendidos Agendamento/01-2026.xlsx", "/root/workspaces/cake-brain/relatorios/Mogo/Itens Vendidos Agendamento/01-2026.json"]}
+{"script": "mogo-faturamento-detalhado.py", "year": 2026, "month": 2, "status": "skipped_existing", "error": "", "duration_s": 0.0, "files": ["/root/workspaces/cake-brain/relatorios/Mogo/Faturamento Detalhado/02-2026.xlsx", "/root/workspaces/cake-brain/relatorios/Mogo/Faturamento Detalhado/02-2026.json"]}
+{"script": "mogo-venda-nota-assinada.py", "year": 2026, "month": 2, "status": "skipped_existing", "error": "", "duration_s": 0.0, "files": ["/root/workspaces/cake-brain/relatorios/Mogo/Venda em Nota Assinada/2026-02-venda-nota-assinada.xlsx"]}
+{"script": "mogo-ticket-medio.py", "year": 2026, "month": 2, "status": "skipped_existing", "error": "", "duration_s": 0.0, "files": ["/root/workspaces/cake-brain/relatorios/Mogo/Ticket Medio/02-2026.xlsx", "/root/workspaces/cake-brain/relatorios/Mogo/Ticket Medio/02-2026.json"]}
+{"script": "mogo-vendas-analitico.py", "year": 2026, "month": 2, "status": "ok", "error": "", "duration_s": 215.7}
+{"script": "mogo-vendas-sintetico.py", "year": 2026, "month": 2, "status": "ok", "error": "", "duration_s": 3.4}
+{"script": "mogo-vendas-adicionais.py", "year": 2026, "month": 2, "status": "ok", "error": "", "duration_s": 4.1}
+{"script": "mogo-lucratividade-produto.py", "year": 2026, "month": 2, "status": "ok", "error": "", "duration_s": 12.1}
+{"script": "mogo-descontos-concedidos.py", "year": 2026, "month": 2, "status": "ok", "error": "", "duration_s": 8.6}
+{"script": "mogo-movimentacao-credito-cliente.py", "year": 2026, "month": 2, "status": "ok", "error": "", "duration_s": 0.4}
+{"script": "mogo-taxa-servico.py", "year": 2026, "month": 2, "status": "ok", "error": "", "duration_s": 37.5}
+{"script": "mogo-analise-cortesias.py", "year": 2026, "month": 2, "status": "ok", "error": "", "duration_s": 0.8}
+{"script": "mogo-lancamentos-pedidos.py", "year": 2026, "month": 2, "status": "ok", "error": "", "duration_s": 187.0}
+{"script": "mogo-historico-pagamento.py", "year": 2026, "month": 2, "status": "ok", "error": "", "duration_s": 75.1}
+{"script": "mogo-entradas-xml-detalhado.py", "year": 2026, "month": 2, "status": "ok", "error": "", "duration_s": 4.4}
+{"script": "mogo-compra-produtos.py", "year": 2026, "month": 2, "status": "ok", "error": "", "duration_s": 10.2}
+{"script": "mogo-variacao-preco-compra.py", "year": 2026, "month": 2, "status": "ok", "error": "", "duration_s": 3.4}
+{"script": "mogo-analise-quantidades-produzidas.py", "year": 2026, "month": 2, "status": "ok", "error": "", "duration_s": 1.3}
+{"script": "mogo-analise-insumos-producao.py", "year": 2026, "month": 2, "status": "ok", "error": "", "duration_s": 1.9}
+{"script": "mogo-analise-cadastro-clientes.py", "year": 2026, "month": 2, "status": "ok", "error": "", "duration_s": 18.1}
+{"script": "mogo-itens-vendidos-agendamento.py", "year": 2026, "month": 2, "status": "ok", "error": "", "duration_s": 1.9}
+{"script": "mogo-faturamento-detalhado.py", "year": 2025, "month": 1, "status": "ok", "error": "", "duration_s": 27.9}
+{"script": "mogo-venda-nota-assinada.py", "year": 2025, "month": 1, "status": "ok", "error": "", "duration_s": 2.4}
+{"script": "mogo-ticket-medio.py", "year": 2025, "month": 1, "status": "ok", "error": "", "duration_s": 6.1}
+{"script": "mogo-vendas-analitico.py", "year": 2025, "month": 1, "status": "ok", "error": "", "duration_s": 133.9}
+{"script": "mogo-vendas-sintetico.py", "year": 2025, "month": 1, "status": "ok", "error": "", "duration_s": 3.7}
+{"script": "mogo-vendas-adicionais.py", "year": 2025, "month": 1, "status": "ok", "error": "", "duration_s": 2.9}
+{"script": "mogo-lucratividade-produto.py", "year": 2025, "month": 1, "status": "ok", "error": "", "duration_s": 2.3}
+{"script": "mogo-descontos-concedidos.py", "year": 2025, "month": 1, "status": "ok", "error": "", "duration_s": 5.6}
+{"script": "mogo-movimentacao-credito-cliente.py", "year": 2025, "month": 1, "status": "ok", "error": "", "duration_s": 3.9}
+{"script": "mogo-taxa-servico.py", "year": 2025, "month": 1, "status": "ok", "error": "", "duration_s": 34.8}
+{"script": "mogo-analise-cortesias.py", "year": 2025, "month": 1, "status": "ok", "error": "", "duration_s": 0.8}
+{"script": "mogo-lancamentos-pedidos.py", "year": 2025, "month": 1, "status": "ok", "error": "", "duration_s": 130.2}
+{"script": "mogo-historico-pagamento.py", "year": 2025, "month": 1, "status": "ok", "error": "", "duration_s": 54.9}
+{"script": "mogo-entradas-xml-detalhado.py", "year": 2025, "month": 1, "status": "ok", "error": "", "duration_s": 3.5}
+{"script": "mogo-compra-produtos.py", "year": 2025, "month": 1, "status": "ok", "error": "", "duration_s": 9.2}
+{"script": "mogo-variacao-preco-compra.py", "year": 2025, "month": 1, "status": "ok", "error": "", "duration_s": 2.8}
+{"script": "mogo-analise-quantidades-produzidas.py", "year": 2025, "month": 1, "status": "ok", "error": "", "duration_s": 1.3}
+{"script": "mogo-analise-insumos-producao.py", "year": 2025, "month": 1, "status": "ok", "error": "", "duration_s": 1.3}
+{"script": "mogo-analise-cadastro-clientes.py", "year": 2025, "month": 1, "status": "ok", "error": "", "duration_s": 15.2}
+{"script": "mogo-itens-vendidos-agendamento.py", "year": 2025, "month": 1, "status": "ok", "error": "", "duration_s": 1.7}
+{"script": "mogo-faturamento-detalhado.py", "year": 2025, "month": 2, "status": "ok", "error": "", "duration_s": 26.8}
+{"script": "mogo-venda-nota-assinada.py", "year": 2025, "month": 2, "status": "ok", "error": "", "duration_s": 2.5}
+{"script": "mogo-ticket-medio.py", "year": 2025, "month": 2, "status": "ok", "error": "", "duration_s": 6.3}
+{"script": "mogo-vendas-analitico.py", "year": 2025, "month": 2, "status": "ok", "error": "", "duration_s": 133.1}
+{"script": "mogo-vendas-sintetico.py", "year": 2025, "month": 2, "status": "ok", "error": "", "duration_s": 3.2}
+{"script": "mogo-vendas-adicionais.py", "year": 2025, "month": 2, "status": "ok", "error": "", "duration_s": 2.5}
+{"script": "mogo-lucratividade-produto.py", "year": 2025, "month": 2, "status": "ok", "error": "", "duration_s": 2.1}
+{"script": "mogo-descontos-concedidos.py", "year": 2025, "month": 2, "status": "ok", "error": "", "duration_s": 8.8}
+{"script": "mogo-movimentacao-credito-cliente.py", "year": 2025, "month": 2, "status": "ok", "error": "", "duration_s": 0.4}
+{"script": "mogo-taxa-servico.py", "year": 2025, "month": 2, "status": "ok", "error": "", "duration_s": 42.7}
+{"script": "mogo-analise-cortesias.py", "year": 2025, "month": 2, "status": "ok", "error": "", "duration_s": 0.8}
+{"script": "mogo-lancamentos-pedidos.py", "year": 2025, "month": 2, "status": "ok", "error": "", "duration_s": 323.7}
+{"script": "mogo-historico-pagamento.py", "year": 2025, "month": 2, "status": "ok", "error": "", "duration_s": 80.4}
+{"script": "mogo-entradas-xml-detalhado.py", "year": 2025, "month": 2, "status": "ok", "error": "", "duration_s": 32.2}
+{"script": "mogo-compra-produtos.py", "year": 2025, "month": 2, "status": "ok", "error": "", "duration_s": 13.4}
+{"script": "mogo-variacao-preco-compra.py", "year": 2025, "month": 2, "status": "ok", "error": "", "duration_s": 3.3}
+{"script": "mogo-analise-quantidades-produzidas.py", "year": 2025, "month": 2, "status": "ok", "error": "", "duration_s": 1.9}
+{"script": "mogo-analise-insumos-producao.py", "year": 2025, "month": 2, "status": "ok", "error": "", "duration_s": 1.6}
+{"script": "mogo-analise-cadastro-clientes.py", "year": 2025, "month": 2, "status": "ok", "error": "", "duration_s": 15.1}
+{"script": "mogo-itens-vendidos-agendamento.py", "year": 2025, "month": 2, "status": "ok", "error": "", "duration_s": 1.1}
+{"script": "mogo-faturamento-detalhado.py", "year": 2025, "month": 3, "status": "ok", "error": "", "duration_s": 35.9}
+{"script": "mogo-venda-nota-assinada.py", "year": 2025, "month": 3, "status": "ok", "error": "", "duration_s": 1.5}
+{"script": "mogo-ticket-medio.py", "year": 2025, "month": 3, "status": "ok", "error": "", "duration_s": 6.0}
+{"script": "mogo-vendas-analitico.py", "year": 2025, "month": 3, "status": "ok", "error": "", "duration_s": 141.2}
+{"script": "mogo-vendas-sintetico.py", "year": 2025, "month": 3, "status": "ok", "error": "", "duration_s": 3.4}
+{"script": "mogo-vendas-adicionais.py", "year": 2025, "month": 3, "status": "ok", "error": "", "duration_s": 2.7}
+{"script": "mogo-lucratividade-produto.py", "year": 2025, "month": 3, "status": "ok", "error": "", "duration_s": 2.2}
+{"script": "mogo-descontos-concedidos.py", "year": 2025, "month": 3, "status": "ok", "error": "", "duration_s": 7.3}
+{"script": "mogo-movimentacao-credito-cliente.py", "year": 2025, "month": 3, "status": "ok", "error": "", "duration_s": 0.4}
+{"script": "mogo-taxa-servico.py", "year": 2025, "month": 3, "status": "ok", "error": "", "duration_s": 40.5}
+{"script": "mogo-analise-cortesias.py", "year": 2025, "month": 3, "status": "ok", "error": "", "duration_s": 0.8}
+{"script": "mogo-lancamentos-pedidos.py", "year": 2025, "month": 3, "status": "ok", "error": "", "duration_s": 155.8}
+{"script": "mogo-historico-pagamento.py", "year": 2025, "month": 3, "status": "ok", "error": "", "duration_s": 70.6}
+{"script": "mogo-entradas-xml-detalhado.py", "year": 2025, "month": 3, "status": "ok", "error": "", "duration_s": 4.2}
+{"script": "mogo-compra-produtos.py", "year": 2025, "month": 3, "status": "ok", "error": "", "duration_s": 9.7}
+{"script": "mogo-variacao-preco-compra.py", "year": 2025, "month": 3, "status": "ok", "error": "", "duration_s": 3.3}
+{"script": "mogo-analise-quantidades-produzidas.py", "year": 2025, "month": 3, "status": "ok", "error": "", "duration_s": 1.1}
+{"script": "mogo-analise-insumos-producao.py", "year": 2025, "month": 3, "status": "ok", "error": "", "duration_s": 1.3}
+{"script": "mogo-analise-cadastro-clientes.py", "year": 2025, "month": 3, "status": "ok", "error": "", "duration_s": 21.5}
+{"script": "mogo-itens-vendidos-agendamento.py", "year": 2025, "month": 3, "status": "ok", "error": "", "duration_s": 1.4}
+{"script": "mogo-faturamento-detalhado.py", "year": 2025, "month": 4, "status": "ok", "error": "", "duration_s": 33.5}
+{"script": "mogo-venda-nota-assinada.py", "year": 2025, "month": 4, "status": "ok", "error": "", "duration_s": 1.6}
+{"script": "mogo-ticket-medio.py", "year": 2025, "month": 4, "status": "ok", "error": "", "duration_s": 5.5}
+{"script": "mogo-vendas-analitico.py", "year": 2025, "month": 4, "status": "ok", "error": "", "duration_s": 145.7}
+{"script": "mogo-vendas-sintetico.py", "year": 2025, "month": 4, "status": "ok", "error": "", "duration_s": 3.4}
+{"script": "mogo-vendas-adicionais.py", "year": 2025, "month": 4, "status": "ok", "error": "", "duration_s": 3.0}
+{"script": "mogo-lucratividade-produto.py", "year": 2025, "month": 4, "status": "ok", "error": "", "duration_s": 2.5}
+{"script": "mogo-descontos-concedidos.py", "year": 2025, "month": 4, "status": "ok", "error": "", "duration_s": 8.1}
+{"script": "mogo-movimentacao-credito-cliente.py", "year": 2025, "month": 4, "status": "ok", "error": "", "duration_s": 0.4}
+{"script": "mogo-taxa-servico.py", "year": 2025, "month": 4, "status": "ok", "error": "", "duration_s": 36.0}
+{"script": "mogo-analise-cortesias.py", "year": 2025, "month": 4, "status": "ok", "error": "", "duration_s": 0.9}
+{"script": "mogo-lancamentos-pedidos.py", "year": 2025, "month": 4, "status": "ok", "error": "", "duration_s": 167.4}
+{"script": "mogo-historico-pagamento.py", "year": 2025, "month": 4, "status": "ok", "error": "", "duration_s": 80.6}
+{"script": "mogo-entradas-xml-detalhado.py", "year": 2025, "month": 4, "status": "ok", "error": "", "duration_s": 5.3}
+{"script": "mogo-compra-produtos.py", "year": 2025, "month": 4, "status": "ok", "error": "", "duration_s": 11.4}
+{"script": "mogo-variacao-preco-compra.py", "year": 2025, "month": 4, "status": "ok", "error": "", "duration_s": 3.1}
+{"script": "mogo-analise-quantidades-produzidas.py", "year": 2025, "month": 4, "status": "ok", "error": "", "duration_s": 1.1}
+{"script": "mogo-analise-insumos-producao.py", "year": 2025, "month": 4, "status": "ok", "error": "", "duration_s": 1.3}
+{"script": "mogo-analise-cadastro-clientes.py", "year": 2025, "month": 4, "status": "ok", "error": "", "duration_s": 17.3}
+{"script": "mogo-itens-vendidos-agendamento.py", "year": 2025, "month": 4, "status": "ok", "error": "", "duration_s": 1.2}
+{"script": "mogo-faturamento-detalhado.py", "year": 2025, "month": 5, "status": "ok", "error": "", "duration_s": 45.3}
+{"script": "mogo-venda-nota-assinada.py", "year": 2025, "month": 5, "status": "ok", "error": "", "duration_s": 2.5}
+{"script": "mogo-ticket-medio.py", "year": 2025, "month": 5, "status": "ok", "error": "", "duration_s": 6.5}
+{"script": "mogo-vendas-analitico.py", "year": 2025, "month": 5, "status": "ok", "error": "", "duration_s": 182.6}
+{"script": "mogo-vendas-sintetico.py", "year": 2025, "month": 5, "status": "ok", "error": "", "duration_s": 4.3}
+{"script": "mogo-vendas-adicionais.py", "year": 2025, "month": 5, "status": "ok", "error": "", "duration_s": 3.0}
+{"script": "mogo-lucratividade-produto.py", "year": 2025, "month": 5, "status": "ok", "error": "", "duration_s": 2.7}
+{"script": "mogo-descontos-concedidos.py", "year": 2025, "month": 5, "status": "ok", "error": "", "duration_s": 9.1}
+{"script": "mogo-movimentacao-credito-cliente.py", "year": 2025, "month": 5, "status": "ok", "error": "", "duration_s": 0.5}
+{"script": "mogo-taxa-servico.py", "year": 2025, "month": 5, "status": "ok", "error": "", "duration_s": 51.0}
+{"script": "mogo-analise-cortesias.py", "year": 2025, "month": 5, "status": "ok", "error": "", "duration_s": 0.8}
+{"script": "mogo-lancamentos-pedidos.py", "year": 2025, "month": 5, "status": "ok", "error": "", "duration_s": 194.1}
+{"script": "mogo-historico-pagamento.py", "year": 2025, "month": 5, "status": "ok", "error": "", "duration_s": 88.4}
+{"script": "mogo-entradas-xml-detalhado.py", "year": 2025, "month": 5, "status": "ok", "error": "", "duration_s": 5.2}
+{"script": "mogo-compra-produtos.py", "year": 2025, "month": 5, "status": "ok", "error": "", "duration_s": 12.2}
+{"script": "mogo-variacao-preco-compra.py", "year": 2025, "month": 5, "status": "ok", "error": "", "duration_s": 3.1}
+{"script": "mogo-analise-quantidades-produzidas.py", "year": 2025, "month": 5, "status": "ok", "error": "", "duration_s": 1.1}
+{"script": "mogo-analise-insumos-producao.py", "year": 2025, "month": 5, "status": "ok", "error": "", "duration_s": 1.9}
+{"script": "mogo-analise-cadastro-clientes.py", "year": 2025, "month": 5, "status": "ok", "error": "", "duration_s": 18.9}
+{"script": "mogo-itens-vendidos-agendamento.py", "year": 2025, "month": 5, "status": "ok", "error": "", "duration_s": 1.3}
+{"script": "mogo-faturamento-detalhado.py", "year": 2025, "month": 6, "status": "ok", "error": "", "duration_s": 35.8}
+{"script": "mogo-venda-nota-assinada.py", "year": 2025, "month": 6, "status": "ok", "error": "", "duration_s": 0.9}
+{"script": "mogo-ticket-medio.py", "year": 2025, "month": 6, "status": "ok", "error": "", "duration_s": 5.8}
+{"script": "mogo-vendas-analitico.py", "year": 2025, "month": 6, "status": "error", "error": "JSONDecodeError: Expecting value: line 4 column 1 (char 6)", "duration_s": 6.0}
+{"script": "mogo-vendas-sintetico.py", "year": 2025, "month": 6, "status": "error", "error": "SystemExit(1)", "duration_s": 0.3}
+{"script": "mogo-vendas-adicionais.py", "year": 2025, "month": 6, "status": "error", "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)", "duration_s": 0.3}
+{"script": "mogo-lucratividade-produto.py", "year": 2025, "month": 6, "status": "error", "error": "SystemExit(1)", "duration_s": 0.3}
+{"script": "mogo-descontos-concedidos.py", "year": 2025, "month": 6, "status": "error", "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)", "duration_s": 0.3}
+{"script": "mogo-movimentacao-credito-cliente.py", "year": 2025, "month": 6, "status": "ok", "error": "", "duration_s": 2.4}
+{"script": "mogo-taxa-servico.py", "year": 2025, "month": 6, "status": "error", "error": "JSONDecodeError: Expecting value: line 4 column 1 (char 6)", "duration_s": 32.6}
+{"script": "mogo-analise-cortesias.py", "year": 2025, "month": 6, "status": "error", "error": "SystemExit(1)", "duration_s": 0.3}
+{"script": "mogo-lancamentos-pedidos.py", "year": 2025, "month": 6, "status": "ok", "error": "", "duration_s": 2.1}
+{"script": "mogo-historico-pagamento.py", "year": 2025, "month": 6, "status": "ok", "error": "", "duration_s": 1.5}
+{"script": "mogo-entradas-xml-detalhado.py", "year": 2025, "month": 6, "status": "error", "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)", "duration_s": 0.3}
+{"script": "mogo-compra-produtos.py", "year": 2025, "month": 6, "status": "error", "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)", "duration_s": 0.3}
+{"script": "mogo-variacao-preco-compra.py", "year": 2025, "month": 6, "status": "error", "error": "SystemExit(1)", "duration_s": 0.3}
+{"script": "mogo-analise-quantidades-produzidas.py", "year": 2025, "month": 6, "status": "error", "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)", "duration_s": 0.3}
+{"script": "mogo-analise-insumos-producao.py", "year": 2025, "month": 6, "status": "error", "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)", "duration_s": 0.3}
+{"script": "mogo-analise-cadastro-clientes.py", "year": 2025, "month": 6, "status": "error", "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)", "duration_s": 0.3}
+{"script": "mogo-itens-vendidos-agendamento.py", "year": 2025, "month": 6, "status": "error", "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)", "duration_s": 0.3}
+{"script": "mogo-faturamento-detalhado.py", "year": 2025, "month": 7, "status": "ok", "error": "", "duration_s": 34.5}
+{"script": "mogo-venda-nota-assinada.py", "year": 2025, "month": 7, "status": "error", "error": "SystemExit(1)", "duration_s": 0.3}
+{"script": "mogo-ticket-medio.py", "year": 2025, "month": 7, "status": "error", "error": "SystemExit(1)", "duration_s": 0.3}
+{"script": "mogo-vendas-analitico.py", "year": 2025, "month": 7, "status": "error", "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)", "duration_s": 0.3}
+{"script": "mogo-vendas-sintetico.py", "year": 2025, "month": 7, "status": "error", "error": "SystemExit(1)", "duration_s": 0.3}
+{"script": "mogo-vendas-adicionais.py", "year": 2025, "month": 7, "status": "error", "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)", "duration_s": 0.3}
+{"script": "mogo-lucratividade-produto.py", "year": 2025, "month": 7, "status": "error", "error": "SystemExit(1)", "duration_s": 0.3}
+{"script": "mogo-descontos-concedidos.py", "year": 2025, "month": 7, "status": "error", "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)", "duration_s": 0.3}
+{"script": "mogo-movimentacao-credito-cliente.py", "year": 2025, "month": 7, "status": "error", "error": "SystemExit(1)", "duration_s": 0.3}
+{"script": "mogo-taxa-servico.py", "year": 2025, "month": 7, "status": "error", "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)", "duration_s": 0.3}
+{"script": "mogo-analise-cortesias.py", "year": 2025, "month": 7, "status": "error", "error": "SystemExit(1)", "duration_s": 0.3}
+{"script": "mogo-lancamentos-pedidos.py", "year": 2025, "month": 7, "status": "ok", "error": "", "duration_s": 1.5}
+{"script": "mogo-historico-pagamento.py", "year": 2025, "month": 7, "status": "ok", "error": "", "duration_s": 1.5}
+{"script": "mogo-entradas-xml-detalhado.py", "year": 2025, "month": 7, "status": "ok", "error": "", "duration_s": 9.8}
+{"script": "mogo-compra-produtos.py", "year": 2025, "month": 7, "status": "error", "error": "JSONDecodeError: Expecting value: line 4 column 1 (char 6)", "duration_s": 0.9}
+{"script": "mogo-variacao-preco-compra.py", "year": 2025, "month": 7, "status": "error", "error": "SystemExit(1)", "duration_s": 0.3}
+{"script": "mogo-analise-quantidades-produzidas.py", "year": 2025, "month": 7, "status": "error", "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)", "duration_s": 0.3}
+{"script": "mogo-analise-insumos-producao.py", "year": 2025, "month": 7, "status": "error", "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)", "duration_s": 0.3}
+{"script": "mogo-analise-cadastro-clientes.py", "year": 2025, "month": 7, "status": "error", "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)", "duration_s": 0.3}
+{"script": "mogo-itens-vendidos-agendamento.py", "year": 2025, "month": 7, "status": "error", "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)", "duration_s": 0.3}
+{"script": "mogo-faturamento-detalhado.py", "year": 2025, "month": 8, "status": "ok", "error": "", "duration_s": 35.3}
+{"script": "mogo-venda-nota-assinada.py", "year": 2025, "month": 8, "status": "error", "error": "SystemExit(1)", "duration_s": 0.3}
+{"script": "mogo-ticket-medio.py", "year": 2025, "month": 8, "status": "error", "error": "SystemExit(1)", "duration_s": 0.3}
+{"script": "mogo-vendas-analitico.py", "year": 2025, "month": 8, "status": "error", "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)", "duration_s": 0.3}
+{"script": "mogo-vendas-sintetico.py", "year": 2025, "month": 8, "status": "error", "error": "SystemExit(1)", "duration_s": 0.3}
+{"script": "mogo-vendas-adicionais.py", "year": 2025, "month": 8, "status": "error", "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)", "duration_s": 0.3}
+{"script": "mogo-lucratividade-produto.py", "year": 2025, "month": 8, "status": "error", "error": "SystemExit(1)", "duration_s": 0.3}
+{"script": "mogo-descontos-concedidos.py", "year": 2025, "month": 8, "status": "error", "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)", "duration_s": 0.3}
+{"script": "mogo-movimentacao-credito-cliente.py", "year": 2025, "month": 8, "status": "error", "error": "SystemExit(1)", "duration_s": 0.3}
+{"script": "mogo-taxa-servico.py", "year": 2025, "month": 8, "status": "error", "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)", "duration_s": 0.3}
+{"script": "mogo-analise-cortesias.py", "year": 2025, "month": 8, "status": "error", "error": "SystemExit(1)", "duration_s": 0.3}
+{"script": "mogo-lancamentos-pedidos.py", "year": 2025, "month": 8, "status": "ok", "error": "", "duration_s": 1.5}
+{"script": "mogo-historico-pagamento.py", "year": 2025, "month": 8, "status": "ok", "error": "", "duration_s": 1.5}
+{"script": "mogo-entradas-xml-detalhado.py", "year": 2025, "month": 8, "status": "error", "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)", "duration_s": 0.3}
+{"script": "mogo-compra-produtos.py", "year": 2025, "month": 8, "status": "error", "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)", "duration_s": 0.3}
+{"script": "mogo-variacao-preco-compra.py", "year": 2025, "month": 8, "status": "error", "error": "SystemExit(1)", "duration_s": 0.3}
+{"script": "mogo-analise-quantidades-produzidas.py", "year": 2025, "month": 8, "status": "error", "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)", "duration_s": 0.3}
+{"script": "mogo-analise-insumos-producao.py", "year": 2025, "month": 8, "status": "error", "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)", "duration_s": 0.3}
+{"script": "mogo-analise-cadastro-clientes.py", "year": 2025, "month": 8, "status": "error", "error": "JSONDecodeError: Expecting value: line 4 column 1 (char 6)", "duration_s": 14.1}
+{"script": "mogo-itens-vendidos-agendamento.py", "year": 2025, "month": 8, "status": "error", "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)", "duration_s": 0.3}
+{"script": "mogo-faturamento-detalhado.py", "year": 2025, "month": 9, "status": "ok", "error": "", "duration_s": 35.2}
+{"script": "mogo-venda-nota-assinada.py", "year": 2025, "month": 9, "status": "error", "error": "SystemExit(1)", "duration_s": 0.3}
+{"script": "mogo-ticket-medio.py", "year": 2025, "month": 9, "status": "error", "error": "SystemExit(1)", "duration_s": 0.3}
+{"script": "mogo-vendas-analitico.py", "year": 2025, "month": 9, "status": "error", "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)", "duration_s": 0.3}
+{"script": "mogo-vendas-sintetico.py", "year": 2025, "month": 9, "status": "error", "error": "SystemExit(1)", "duration_s": 0.3}
+{"script": "mogo-vendas-adicionais.py", "year": 2025, "month": 9, "status": "error", "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)", "duration_s": 0.3}
+{"script": "mogo-lucratividade-produto.py", "year": 2025, "month": 9, "status": "error", "error": "SystemExit(1)", "duration_s": 0.4}
+{"script": "mogo-descontos-concedidos.py", "year": 2025, "month": 9, "status": "error", "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)", "duration_s": 0.3}
+{"script": "mogo-movimentacao-credito-cliente.py", "year": 2025, "month": 9, "status": "error", "error": "SystemExit(1)", "duration_s": 0.3}
+{"script": "mogo-taxa-servico.py", "year": 2025, "month": 9, "status": "error", "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)", "duration_s": 0.3}
+{"script": "mogo-analise-cortesias.py", "year": 2025, "month": 9, "status": "error", "error": "SystemExit(1)", "duration_s": 0.3}
+{"script": "mogo-lancamentos-pedidos.py", "year": 2025, "month": 9, "status": "ok", "error": "", "duration_s": 1.5}
+{"script": "mogo-historico-pagamento.py", "year": 2025, "month": 9, "status": "ok", "error": "", "duration_s": 1.5}
+{"script": "mogo-entradas-xml-detalhado.py", "year": 2025, "month": 9, "status": "error", "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)", "duration_s": 0.3}
+{"script": "mogo-compra-produtos.py", "year": 2025, "month": 9, "status": "error", "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)", "duration_s": 0.3}
+{"script": "mogo-variacao-preco-compra.py", "year": 2025, "month": 9, "status": "error", "error": "SystemExit(1)", "duration_s": 0.3}
+{"script": "mogo-analise-quantidades-produzidas.py", "year": 2025, "month": 9, "status": "error", "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)", "duration_s": 0.3}
+{"script": "mogo-analise-insumos-producao.py", "year": 2025, "month": 9, "status": "error", "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)", "duration_s": 0.3}
+{"script": "mogo-analise-cadastro-clientes.py", "year": 2025, "month": 9, "status": "error", "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)", "duration_s": 0.3}
+{"script": "mogo-itens-vendidos-agendamento.py", "year": 2025, "month": 9, "status": "error", "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)", "duration_s": 0.3}
+{"script": "mogo-faturamento-detalhado.py", "year": 2025, "month": 10, "status": "ok", "error": "", "duration_s": 34.5}
+{"script": "mogo-venda-nota-assinada.py", "year": 2025, "month": 10, "status": "error", "error": "SystemExit(1)", "duration_s": 0.3}
+{"script": "mogo-ticket-medio.py", "year": 2025, "month": 10, "status": "error", "error": "SystemExit(1)", "duration_s": 0.3}
+{"script": "mogo-vendas-analitico.py", "year": 2025, "month": 10, "status": "error", "error": "JSONDecodeError: Expecting value: line 4 column 1 (char 6)", "duration_s": 7.6}
+{"script": "mogo-vendas-sintetico.py", "year": 2025, "month": 10, "status": "error", "error": "SystemExit(1)", "duration_s": 0.3}
+{"script": "mogo-vendas-adicionais.py", "year": 2025, "month": 10, "status": "error", "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)", "duration_s": 0.3}
+{"script": "mogo-lucratividade-produto.py", "year": 2025, "month": 10, "status": "error", "error": "SystemExit(1)", "duration_s": 0.3}
+{"script": "mogo-descontos-concedidos.py", "year": 2025, "month": 10, "status": "error", "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)", "duration_s": 0.3}
+{"script": "mogo-movimentacao-credito-cliente.py", "year": 2025, "month": 10, "status": "error", "error": "SystemExit(1)", "duration_s": 0.3}
+{"script": "mogo-taxa-servico.py", "year": 2025, "month": 10, "status": "error", "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)", "duration_s": 0.3}
+{"script": "mogo-analise-cortesias.py", "year": 2025, "month": 10, "status": "error", "error": "SystemExit(1)", "duration_s": 0.3}
+{"script": "mogo-lancamentos-pedidos.py", "year": 2025, "month": 10, "status": "ok", "error": "", "duration_s": 1.5}
+{"script": "mogo-historico-pagamento.py", "year": 2025, "month": 10, "status": "ok", "error": "", "duration_s": 1.5}
+{"script": "mogo-entradas-xml-detalhado.py", "year": 2025, "month": 10, "status": "error", "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)", "duration_s": 0.3}
+{"script": "mogo-compra-produtos.py", "year": 2025, "month": 10, "status": "error", "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)", "duration_s": 0.3}
+{"script": "mogo-variacao-preco-compra.py", "year": 2025, "month": 10, "status": "error", "error": "SystemExit(1)", "duration_s": 0.3}
+{"script": "mogo-analise-quantidades-produzidas.py", "year": 2025, "month": 10, "status": "error", "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)", "duration_s": 0.3}
+{"script": "mogo-analise-insumos-producao.py", "year": 2025, "month": 10, "status": "error", "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)", "duration_s": 0.3}
+{"script": "mogo-analise-cadastro-clientes.py", "year": 2025, "month": 10, "status": "error", "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)", "duration_s": 0.3}
+{"script": "mogo-itens-vendidos-agendamento.py", "year": 2025, "month": 10, "status": "error", "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)", "duration_s": 0.3}
+{"script": "mogo-faturamento-detalhado.py", "year": 2025, "month": 11, "status": "ok", "error": "", "duration_s": 34.5}
+{"script": "mogo-venda-nota-assinada.py", "year": 2025, "month": 11, "status": "error", "error": "SystemExit(1)", "duration_s": 0.3}
+{"script": "mogo-ticket-medio.py", "year": 2025, "month": 11, "status": "error", "error": "SystemExit(1)", "duration_s": 0.3}
+{"script": "mogo-vendas-analitico.py", "year": 2025, "month": 11, "status": "error", "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)", "duration_s": 0.3}
+{"script": "mogo-vendas-sintetico.py", "year": 2025, "month": 11, "status": "error", "error": "SystemExit(1)", "duration_s": 0.3}
+{"script": "mogo-vendas-adicionais.py", "year": 2025, "month": 11, "status": "error", "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)", "duration_s": 0.3}
+{"script": "mogo-lucratividade-produto.py", "year": 2025, "month": 11, "status": "error", "error": "SystemExit(1)", "duration_s": 0.3}
+{"script": "mogo-descontos-concedidos.py", "year": 2025, "month": 11, "status": "error", "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)", "duration_s": 0.3}
+{"script": "mogo-movimentacao-credito-cliente.py", "year": 2025, "month": 11, "status": "ok", "error": "", "duration_s": 2.7}
+{"script": "mogo-taxa-servico.py", "year": 2025, "month": 11, "status": "error", "error": "JSONDecodeError: Expecting value: line 4 column 1 (char 6)", "duration_s": 17.3}
+{"script": "mogo-analise-cortesias.py", "year": 2025, "month": 11, "status": "error", "error": "SystemExit(1)", "duration_s": 0.3}
+{"script": "mogo-lancamentos-pedidos.py", "year": 2025, "month": 11, "status": "ok", "error": "", "duration_s": 1.5}
+{"script": "mogo-historico-pagamento.py", "year": 2025, "month": 11, "status": "ok", "error": "", "duration_s": 1.5}
+{"script": "mogo-entradas-xml-detalhado.py", "year": 2025, "month": 11, "status": "error", "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)", "duration_s": 0.3}
+{"script": "mogo-compra-produtos.py", "year": 2025, "month": 11, "status": "error", "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)", "duration_s": 0.3}
+{"script": "mogo-variacao-preco-compra.py", "year": 2025, "month": 11, "status": "error", "error": "SystemExit(1)", "duration_s": 0.3}
+{"script": "mogo-analise-quantidades-produzidas.py", "year": 2025, "month": 11, "status": "error", "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)", "duration_s": 0.3}
+{"script": "mogo-analise-insumos-producao.py", "year": 2025, "month": 11, "status": "error", "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)", "duration_s": 0.3}
+{"script": "mogo-analise-cadastro-clientes.py", "year": 2025, "month": 11, "status": "error", "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)", "duration_s": 0.3}
+{"script": "mogo-itens-vendidos-agendamento.py", "year": 2025, "month": 11, "status": "error", "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)", "duration_s": 0.3}
+{"script": "mogo-faturamento-detalhado.py", "year": 2025, "month": 12, "status": "ok", "error": "", "duration_s": 34.5}
+{"script": "mogo-venda-nota-assinada.py", "year": 2025, "month": 12, "status": "error", "error": "SystemExit(1)", "duration_s": 0.3}
+{"script": "mogo-ticket-medio.py", "year": 2025, "month": 12, "status": "error", "error": "SystemExit(1)", "duration_s": 0.3}
+{"script": "mogo-vendas-analitico.py", "year": 2025, "month": 12, "status": "error", "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)", "duration_s": 0.3}
+{"script": "mogo-vendas-sintetico.py", "year": 2025, "month": 12, "status": "error", "error": "SystemExit(1)", "duration_s": 0.3}
+{"script": "mogo-vendas-adicionais.py", "year": 2025, "month": 12, "status": "error", "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)", "duration_s": 0.3}
+{"script": "mogo-lucratividade-produto.py", "year": 2025, "month": 12, "status": "error", "error": "SystemExit(1)", "duration_s": 0.3}
+{"script": "mogo-descontos-concedidos.py", "year": 2025, "month": 12, "status": "error", "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)", "duration_s": 0.3}
+{"script": "mogo-movimentacao-credito-cliente.py", "year": 2025, "month": 12, "status": "error", "error": "SystemExit(1)", "duration_s": 0.3}
+{"script": "mogo-taxa-servico.py", "year": 2025, "month": 12, "status": "error", "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)", "duration_s": 0.3}
+{"script": "mogo-analise-cortesias.py", "year": 2025, "month": 12, "status": "error", "error": "SystemExit(1)", "duration_s": 0.3}
+{"script": "mogo-lancamentos-pedidos.py", "year": 2025, "month": 12, "status": "ok", "error": "", "duration_s": 1.5}
+{"script": "mogo-historico-pagamento.py", "year": 2025, "month": 12, "status": "ok", "error": "", "duration_s": 1.5}
+{"script": "mogo-entradas-xml-detalhado.py", "year": 2025, "month": 12, "status": "ok", "error": "", "duration_s": 6.9}
+{"script": "mogo-compra-produtos.py", "year": 2025, "month": 12, "status": "error", "error": "JSONDecodeError: Expecting value: line 4 column 1 (char 6)", "duration_s": 6.6}
+{"script": "mogo-variacao-preco-compra.py", "year": 2025, "month": 12, "status": "error", "error": "SystemExit(1)", "duration_s": 0.3}
+{"script": "mogo-analise-quantidades-produzidas.py", "year": 2025, "month": 12, "status": "error", "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)", "duration_s": 0.3}
+{"script": "mogo-analise-insumos-producao.py", "year": 2025, "month": 12, "status": "error", "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)", "duration_s": 0.3}
+{"script": "mogo-analise-cadastro-clientes.py", "year": 2025, "month": 12, "status": "error", "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)", "duration_s": 0.3}
+{"script": "mogo-itens-vendidos-agendamento.py", "year": 2025, "month": 12, "status": "error", "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)", "duration_s": 0.3}

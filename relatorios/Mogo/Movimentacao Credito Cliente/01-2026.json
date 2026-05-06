@@ -1,0 +1,77 @@
+{
+  "periodo": {
+    "de": "01/01/2026",
+    "ate": "31/01/2026"
+  },
+  "total_registros": 6,
+  "total_credito": "R$ 30,00",
+  "total_debito": "R$ 255,20",
+  "registros": [
+    {
+      "data": "20/01/2026",
+      "hora": "18:39:04",
+      "cliente": "Felipe Castro (Jornalista)",
+      "cpf": "07836630722",
+      "tipo": "Debito",
+      "descricao": "Pedido: 011017 (Mesa: 15)",
+      "valor": "36,85",
+      "saldo": "799,90",
+      "financeiro": "Não selecionado"
+    },
+    {
+      "data": "20/01/2026",
+      "hora": "16:50:47",
+      "cliente": "Gustavo Cavalcanti",
+      "cpf": "10286112426",
+      "tipo": "Debito",
+      "descricao": "Pedido: 010975 (Delivery)",
+      "valor": "54,00",
+      "saldo": "0,00",
+      "financeiro": "Não selecionado"
+    },
+    {
+      "data": "13/01/2026",
+      "hora": "18:43:13",
+      "cliente": "Felipe Castro (Jornalista)",
+      "cpf": "07836630722",
+      "tipo": "Debito",
+      "descricao": "Pedido: 009679 (Mesa: 11)",
+      "valor": "36,85",
+      "saldo": "836,75",
+      "financeiro": "Não selecionado"
+    },
+    {
+      "data": "13/01/2026",
+      "hora": "15:34:01",
+      "cliente": "Mellissa Büchi",
+      "cpf": "05213771700",
+      "tipo": "Debito",
+      "descricao": "Pedido: 009621 (Delivery)",
+      "valor": "107,50",
+      "saldo": "0,00",
+      "financeiro": "Não selecionado"
+    },
+    {
+      "data": "03/01/2026",
+      "hora": "11:15:52",
+      "cliente": "Nathália Regina Alves Dourado",
+      "cpf": "40581106865",
+      "tipo": "Debito",
+      "descricao": "Pedido: 007885 (Delivery)",
+      "valor": "20,00",
+      "saldo": "10,00",
+      "financeiro": "Não selecionado"
+    },
+    {
+      "data": "03/01/2026",
+      "hora": "11:08:34",
+      "cliente": "Nathália Regina Alves Dourado",
+      "cpf": "40581106865",
+      "tipo": "Credito",
+      "descricao": "Fez 02 pedido no site para o mesmo endereço.",
+      "valor": "30,00",
+      "saldo": "30,00",
+      "financeiro": "Não gerar financeiro"
+    }
+  ]
+}

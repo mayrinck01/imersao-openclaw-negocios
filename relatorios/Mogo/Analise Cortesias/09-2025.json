@@ -1,0 +1,99 @@
+{
+  "periodo": {
+    "de": "01/09/2025",
+    "ate": "30/09/2025"
+  },
+  "total_registros": 8,
+  "total_valor": "R$ 1.950,50",
+  "total_custo": "R$ 75,21",
+  "registros": [
+    {
+      "data": "30/09/2025",
+      "hora": "11:32:52",
+      "funcionario": "cristiane",
+      "cliente": "Esther Simão Melul de Souza Lage",
+      "telefone": "21996494612",
+      "valor": "13,00",
+      "custo": "0,00",
+      "motivo": "Cliente pediu um mimo, fez uma compra grande, eduarda liberol a vela faisca",
+      "id": "104755"
+    },
+    {
+      "data": "23/09/2025",
+      "hora": "17:36:36",
+      "funcionario": "alex",
+      "cliente": "KATIA ABREU",
+      "telefone": "21991381091",
+      "valor": "10,00",
+      "custo": "0,00",
+      "motivo": "",
+      "id": "103235"
+    },
+    {
+      "data": "20/09/2025",
+      "hora": "10:21:46",
+      "funcionario": "alex",
+      "cliente": "",
+      "telefone": "",
+      "valor": "18,00",
+      "custo": "0,00",
+      "motivo": "",
+      "id": "102493"
+    },
+    {
+      "data": "16/09/2025",
+      "hora": "17:42:22",
+      "funcionario": "cristiane",
+      "cliente": "Sr e Srª Antonio Macedo",
+      "telefone": "",
+      "valor": "117,50",
+      "custo": "22,28",
+      "motivo": "",
+      "id": "101570"
+    },
+    {
+      "data": "09/09/2025",
+      "hora": "18:14:19",
+      "funcionario": "cristiane",
+      "cliente": "Obra do Berço",
+      "telefone": "21989093435",
+      "valor": "468,50",
+      "custo": "0,00",
+      "motivo": "",
+      "id": "99797"
+    },
+    {
+      "data": "09/09/2025",
+      "hora": "11:02:28",
+      "funcionario": "cristiane",
+      "cliente": "Paroquia Santa Margarida Maria",
+      "telefone": "",
+      "valor": "650,00",
+      "custo": "10,89",
+      "motivo": "",
+      "id": "99654"
+    },
+    {
+      "data": "06/09/2025",
+      "hora": "11:50:29",
+      "funcionario": "cristiane",
+      "cliente": "IRMÃS CLARISSAS",
+      "telefone": "",
+      "valor": "603,50",
+      "custo": "42,04",
+      "motivo": "",
+      "id": "99027"
+    },
+    {
+      "data": "06/09/2025",
+      "hora": "11:49:31",
+      "funcionario": "cristiane",
+      "cliente": "Irmã Terezinha (Clarissas)",
+      "telefone": "2122743147",
+      "valor": "70,00",
+      "custo": "0,00",
+      "motivo": "",
+      "id": "99026"
+    }
+  ]
+}

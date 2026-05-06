@@ -1,0 +1,143 @@
+{
+  "periodo": {
+    "de": "01/05/2025",
+    "ate": "31/05/2025"
+  },
+  "total_registros": 12,
+  "total_valor": "R$ 2.978,30",
+  "total_custo": "R$ 33,62",
+  "registros": [
+    {
+      "data": "31/05/2025",
+      "hora": "14:36:58",
+      "funcionario": "alex",
+      "cliente": "Jayme de Paula Filho",
+      "telefone": "21999967816",
+      "valor": "155,00",
+      "custo": "0,00",
+      "motivo": "",
+      "id": "73642"
+    },
+    {
+      "data": "29/05/2025",
+      "hora": "11:49:52",
+      "funcionario": "alex",
+      "cliente": "Ramiles Sotelo ",
+      "telefone": "",
+      "valor": "155,00",
+      "custo": "0,00",
+      "motivo": "",
+      "id": "73028"
+    },
+    {
+      "data": "27/05/2025",
+      "hora": "13:41:14",
+      "funcionario": "JOAO ",
+      "cliente": "",
+      "telefone": "",
+      "valor": "33,00",
+      "custo": "0,00",
+      "motivo": "",
+      "id": "72627"
+    },
+    {
+      "data": "16/05/2025",
+      "hora": "18:13:41",
+      "funcionario": "cristiane",
+      "cliente": "Escola Domestica de Nossa Senhora do Amparo",
+      "telefone": "",
+      "valor": "1.144,00",
+      "custo": "16,81",
+      "motivo": "",
+      "id": "70581"
+    },
+    {
+      "data": "12/05/2025",
+      "hora": "16:08:09",
+      "funcionario": "Larissa Lira",
+      "cliente": "Andrea Gariglio",
+      "telefone": "21997591220",
+      "valor": "62,50",
+      "custo": "0,00",
+      "motivo": "",
+      "id": "69738"
+    },
+    {
+      "data": "12/05/2025",
+      "hora": "16:07:43",
+      "funcionario": "Larissa Lira",
+      "cliente": "Daniel Félix",
+      "telefone": "21976262968",
+      "valor": "62,50",
+      "custo": "0,00",
+      "motivo": "",
+      "id": "69737"
+    },
+    {
+      "data": "10/05/2025",
+      "hora": "14:13:47",
+      "funcionario": "cristiane",
+      "cliente": "MARIA BEATRIZ SANSON",
+      "telefone": "21992919645",
+      "valor": "65,00",
+      "custo": "0,00",
+      "motivo": "",
+      "id": "69173"
+    },
+    {
+      "data": "09/05/2025",
+      "hora": "15:29:22",
+      "funcionario": "alex",
+      "cliente": "",
+      "telefone": "",
+      "valor": "25,00",
+      "custo": "0,00",
+      "motivo": "",
+      "id": "68834"
+    },
+    {
+      "data": "09/05/2025",
+      "hora": "13:20:30",
+      "funcionario": "alex",
+      "cliente": "",
+      "telefone": "",
+      "valor": "19,80",
+      "custo": "0,00",
+      "motivo": "",
+      "id": "68759"
+    },
+    {
+      "data": "02/05/2025",
+      "hora": "15:26:21",
+      "funcionario": "cristiane",
+      "cliente": "Obra do Berço",
+      "telefone": "21989093435",
+      "valor": "390,00",
+      "custo": "0,00",
+      "motivo": "",
+      "id": "67208"
+    },
+    {
+      "data": "01/05/2025",
+      "hora": "13:26:03",
+      "funcionario": "cristiane",
+      "cliente": "IRMÃS CLARISSAS",
+      "telefone": "",
+      "valor": "712,00",
+      "custo": "16,81",
+      "motivo": "",
+      "id": "66918"
+    },
+    {
+      "data": "01/05/2025",
+      "hora": "13:25:48",
+      "funcionario": "cristiane",
+      "cliente": "Irmã Terezinha (Clarissas)",
+      "telefone": "2122743147",
+      "valor": "154,50",
+      "custo": "0,00",
+      "motivo": "",
+      "id": "66917"
+    }
+  ]
+}

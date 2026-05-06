@@ -1,0 +1,242 @@
+{
+  "periodo": {
+    "de": "01/01/2026",
+    "ate": "31/01/2026"
+  },
+  "total_registros": 21,
+  "total_valor": "R$ 1.375,30",
+  "total_custo": "R$ 149,86",
+  "registros": [
+    {
+      "data": "31/01/2026",
+      "hora": "16:02:44",
+      "funcionario": "Juliana Fidelis Alvez",
+      "cliente": "IRMÃS CLARISSAS",
+      "telefone": "",
+      "valor": "891,00",
+      "custo": "117,41",
+      "motivo": "Presente de Dona Laura",
+      "id": "132688"
+    },
+    {
+      "data": "28/01/2026",
+      "hora": "18:17:09",
+      "funcionario": "alex",
+      "cliente": "",
+      "telefone": "",
+      "valor": "16,30",
+      "custo": "0,00",
+      "motivo": "CONSUMO CONFEITEIRO SICAO",
+      "id": "131965"
+    },
+    {
+      "data": "26/01/2026",
+      "hora": "13:32:23",
+      "funcionario": "eduarda",
+      "cliente": "MARIA CECILIA REGO MACEDO ",
+      "telefone": "21993841028",
+      "valor": "140,00",
+      "custo": "20,17",
+      "motivo": "maria cecilia rego macedo",
+      "id": "131469"
+    },
+    {
+      "data": "24/01/2026",
+      "hora": "15:41:42",
+      "funcionario": "Juliana Fidelis Alvez",
+      "cliente": "Monica jimenez",
+      "telefone": "21991962628",
+      "valor": "37,00",
+      "custo": "2,77",
+      "motivo": "Olá, Monica! Parabéns! Você foi sorteada no Pós-Venda da Cake! 🎉",
+      "id": "131116"
+    },
+    {
+      "data": "22/01/2026",
+      "hora": "14:00:17",
+      "funcionario": "eduarda",
+      "cliente": "Lycia Braz Moreira",
+      "telefone": "21991610383",
+      "valor": "67,00",
+      "custo": "2,77",
+      "motivo": "sorteio falae",
+      "id": "130564"
+    },
+    {
+      "data": "21/01/2026",
+      "hora": "14:58:22",
+      "funcionario": "eduarda",
+      "cliente": "Renato Lira ",
+      "telefone": "21985008090",
+      "valor": "74,00",
+      "custo": "6,74",
+      "motivo": "retratação brigadeiros enviados errado anteriormente",
+      "id": "130374"
+    },
+    {
+      "data": "16/01/2026",
+      "hora": "10:09:11",
+      "funcionario": "eduarda",
+      "cliente": "Marcio Queiroz",
+      "telefone": "21971556808",
+      "valor": "10,00",
+      "custo": "0,00",
+      "motivo": "retratação torta danificada que não trocou, mimo",
+      "id": "129259"
+    },
+    {
+      "data": "07/01/2026",
+      "hora": "14:25:42",
+      "funcionario": "Mogo",
+      "cliente": "Morená Zugliani",
+      "telefone": "21996379347",
+      "valor": "10,00",
+      "custo": "0,00",
+      "motivo": "A PEDIDOS DE DUDA VIANNA",
+      "id": "127671"
+    },
+    {
+      "data": "07/01/2026",
+      "hora": "14:25:20",
+      "funcionario": "Mogo",
+      "cliente": "Maria Eduarda da Fonseca Passos Bittencourt",
+      "telefone": "21992979795",
+      "valor": "10,00",
+      "custo": "0,00",
+      "motivo": "A PEDIDOS DE DUDA VIANNA",
+      "id": "127670"
+    },
+    {
+      "data": "07/01/2026",
+      "hora": "14:21:56",
+      "funcionario": "Mogo",
+      "cliente": "Margareth Mathias bovi",
+      "telefone": "21991382124",
+      "valor": "10,00",
+      "custo": "0,00",
+      "motivo": "A PEDIDOS DE DUDA VIANNA",
+      "id": "127669"
+    },
+    {
+      "data": "07/01/2026",
+      "hora": "14:12:23",
+      "funcionario": "eduarda",
+      "cliente": "marcelo brykman",
+      "telefone": "21992192420",
+      "valor": "10,00",
+      "custo": "0,00",
+      "motivo": "retratação fim de ano",
+      "id": "127668"
+    },
+    {
+      "data": "07/01/2026",
+      "hora": "14:10:53",
+      "funcionario": "eduarda",
+      "cliente": "Nicole Froio ",
+      "telefone": "21980933683",
+      "valor": "10,00",
+      "custo": "0,00",
+      "motivo": "retratação fim de ano",
+      "id": "127667"
+    },
+    {
+      "data": "07/01/2026",
+      "hora": "14:10:00",
+      "funcionario": "eduarda",
+      "cliente": "Andrea Pinheiro Dias",
+      "telefone": "21987774667",
+      "valor": "10,00",
+      "custo": "0,00",
+      "motivo": "retratação fim de ano",
+      "id": "127665"
+    },
+    {
+      "data": "07/01/2026",
+      "hora": "14:09:31",
+      "funcionario": "eduarda",
+      "cliente": "Cristiane Mucci ",
+      "telefone": "21986631383",
+      "valor": "10,00",
+      "custo": "0,00",
+      "motivo": "retratação fim de ano",
+      "id": "127664"
+    },
+    {
+      "data": "07/01/2026",
+      "hora": "14:08:56",
+      "funcionario": "eduarda",
+      "cliente": "Rebeca de Mendonça Lima",
+      "telefone": "92981270583",
+      "valor": "10,00",
+      "custo": "0,00",
+      "motivo": "retratação fim de ano",
+      "id": "127663"
+    },
+    {
+      "data": "07/01/2026",
+      "hora": "14:07:41",
+      "funcionario": "eduarda",
+      "cliente": "Ludmila Camargo",
+      "telefone": "21980267812",
+      "valor": "10,00",
+      "custo": "0,00",
+      "motivo": "retratação fim de ano",
+      "id": "127662"
+    },
+    {
+      "data": "07/01/2026",
+      "hora": "14:06:57",
+      "funcionario": "eduarda",
+      "cliente": "VILMA TARDIN",
+      "telefone": "21989395399",
+      "valor": "10,00",
+      "custo": "0,00",
+      "motivo": "retratação fim de ano",
+      "id": "127661"
+    },
+    {
+      "data": "07/01/2026",
+      "hora": "14:06:12",
+      "funcionario": "eduarda",
+      "cliente": "Gimelly Ribeiro Barreto ",
+      "telefone": "21999742333",
+      "valor": "10,00",
+      "custo": "0,00",
+      "motivo": "retratação fim de ano",
+      "id": "127660"
+    },
+    {
+      "data": "07/01/2026",
+      "hora": "14:05:10",
+      "funcionario": "eduarda",
+      "cliente": "Carla Falcao",
+      "telefone": "21985861977",
+      "valor": "10,00",
+      "custo": "0,00",
+      "motivo": "retratação fim de ano",
+      "id": "127659"
+    },
+    {
+      "data": "07/01/2026",
+      "hora": "14:04:07",
+      "funcionario": "eduarda",
+      "cliente": "Fernanda Brandão ",
+      "telefone": "21996673313",
+      "valor": "10,00",
+      "custo": "0,00",
+      "motivo": "retratação fim de ano",
+      "id": "127658"
+    },
+    {
+      "data": "07/01/2026",
+      "hora": "14:02:39",
+      "funcionario": "eduarda",
+      "cliente": "Sebastiao Santana ",
+      "telefone": "21997850990",
+      "valor": "10,00",
+      "custo": "0,00",
+      "motivo": "retratação fim de ano",
+      "id": "127657"
+    }
+  ]
+}

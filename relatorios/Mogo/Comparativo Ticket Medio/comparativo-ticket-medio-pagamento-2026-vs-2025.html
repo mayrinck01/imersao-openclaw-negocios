@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Comparativo Ticket Médio 2026 vs 2025</title>
+  <style>
+    :root { --bg:#f4f6f8; --card:#fff; --ink:#1f2937; --muted:#6b7280; --line:#e5e7eb; --green:#15803d; --green-soft:#dcfce7; --red:#b91c1c; --red-soft:#fee2e2; --amber:#92400e; --amber-soft:#fef3c7; }
+    * { box-sizing:border-box; } body { margin:0; background:var(--bg); color:var(--ink); font-family:Arial,Helvetica,sans-serif; }
+    .wrap { max-width:1280px; margin:0 auto; padding:24px; }
+    .hero { background:linear-gradient(135deg,#0f172a,#1d4ed8); color:#fff; border-radius:20px; padding:28px 32px; box-shadow:0 20px 50px rgba(15,23,42,.18); }
+    .hero h1 { margin:8px 0 10px; font-size:34px; line-height:1.1; } .hero p { margin:0; opacity:.92; line-height:1.6; max-width:900px; }
+    .badges { display:flex; flex-wrap:wrap; gap:10px; margin-top:18px; } .badge { background:rgba(255,255,255,.14); border:1px solid rgba(255,255,255,.16); padding:8px 12px; border-radius:999px; font-size:13px; }
+    .grid { display:grid; gap:16px; margin-top:18px; } .cards { grid-template-columns:repeat(4,minmax(0,1fr)); } .two-col { display:grid; grid-template-columns:1.1fr .9fr; gap:16px; }
+    .card { background:var(--card); border-radius:18px; padding:20px 22px; box-shadow:0 10px 30px rgba(17,24,39,.06); } h2 { margin:0 0 14px; font-size:24px; } .section { margin-top:18px; }
+    .card h3 { margin:0 0 8px; font-size:14px; color:var(--muted); font-weight:700; text-transform:uppercase; letter-spacing:.04em; } .metric { font-size:34px; font-weight:800; margin:0 0 4px; } .sub { color:var(--muted); font-size:14px; line-height:1.5; }
+    .pill { display:inline-block; padding:6px 10px; border-radius:999px; font-size:13px; font-weight:700; margin-top:10px; } .positive { color:var(--green); background:var(--green-soft); } .negative { color:var(--red); background:var(--red-soft); } .neutral { color:var(--amber); background:var(--amber-soft); }
+    table { width:100%; border-collapse:collapse; font-size:14px; } th,td { border-bottom:1px solid var(--line); padding:10px 12px; text-align:left; vertical-align:top; } th { background:#f8fafc; font-size:12px; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); } tr:last-child td { border-bottom:none; } .right { text-align:right; }
+    .barrow { display:grid; grid-template-columns:110px 1fr 110px; gap:10px; align-items:center; margin:10px 0; } .barstack { background:#e5e7eb; border-radius:999px; overflow:hidden; height:12px; } .bar.curr { background:linear-gradient(90deg,#2563eb,#60a5fa); height:12px; } .bar.prev { background:#94a3b8; height:12px; }
+    .insight { background:#f8fafc; border:1px solid var(--line); border-radius:14px; padding:14px 16px; margin-bottom:10px; } .insight strong { display:block; margin-bottom:4px; } .small { font-size:12px; color:var(--muted); } .footer { margin-top:18px; color:var(--muted); font-size:12px; line-height:1.6; }
+    @media (max-width:980px) { .cards,.two-col { grid-template-columns:1fr; } .barrow { grid-template-columns:1fr; } .right { text-align:left; } }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="hero">
+      <div style="font-size:13px; letter-spacing:.08em; text-transform:uppercase; opacity:.8;">Cake &amp; Co • Mogo • Ticket Médio</div>
+      <h1>Comparativo 2026 vs 2025 — mesmo período</h1>
+      <p>Relatório comparando <strong>01/01/2026 a 23/04/2026</strong> contra <strong>01/01/2025 a 23/04/2025</strong>, replicando o mesmo modelo validado na tela do Mogo enviada pelo Zão.</p>
+      <div class="badges">
+        <span class="badge">Modelo: Ticket Médio</span>
+        <span class="badge">Filtro replicado: TipoData=0</span>
+        <span class="badge">2026: R$ 2.340.968,33</span>
+        <span class="badge">2025: R$ 1.661.649,37</span>
+      </div>
+    </section>
+
+    <section class="grid cards section">
+      <div class="card"><h3>Faturamento 2026</h3><div class="metric">R$ 2.340.968,33</div><div class="sub">19.353 vendas • Ticket médio R$ 120,96</div></div>
+      <div class="card"><h3>Faturamento 2025</h3><div class="metric">R$ 1.661.649,37</div><div class="sub">15.803 vendas • Ticket médio R$ 105,15</div></div>
+      <div class="card"><h3>Delta de faturamento</h3><div class="metric">R$ 679.318,96</div><div class="pill positive">+40,9%</div><div class="sub">Variação absoluta e percentual do período.</div></div>
+      <div class="card"><h3>Delta de ticket médio</h3><div class="metric">R$ 15,81</div><div class="pill positive">+15,0%</div><div class="sub">Quantidade: 3.550 • +22,5%</div></div>
+    </section>
+
+    <section class="two-col section">
+      <div class="card">
+        <h2>Resumo executivo</h2>
+        <div class="insight"><strong>Faturamento</strong>R$ 2.340.968,33 em 2026 vs R$ 1.661.649,37 em 2025, variação de <strong>+40,9%</strong>.</div>
+        <div class="insight"><strong>Ticket médio</strong>R$ 120,96 em 2026 vs R$ 105,15 em 2025, variação de <strong>+15,0%</strong>.</div>
+        <div class="insight"><strong>Melhor mês em ganho absoluto</strong>Março adicionou R$ 236.645,75 vs o mesmo mês de 2025.</div>
+        <div class="insight"><strong>Canal que mais puxou crescimento</strong>Entrega cresceu R$ 599.068,88 vs 2025.</div>
+        <div class="insight"><strong>Ponto de atenção</strong>Comanda teve variação de R$ -1.512,53 vs 2025.</div>
+      </div>
+      <div class="card"><h2>Leitura rápida por mês</h2><div class="barrow">
+          <div><strong>Janeiro</strong><div class="small">01/01–31/01</div></div>
+          <div>
+            <div class="small">2026 R$ 515.300,75</div>
+            <div class="barstack"><div class="bar curr" style="width:74.0%"></div></div>
+            <div class="small" style="margin-top:6px;">2025 R$ 385.640,20</div>
+            <div class="barstack"><div class="bar prev" style="width:55.4%"></div></div>
+          </div>
+          <div class="right"><strong class="positive">+33,6%</strong><div class="small">Δ R$ 129.660,55</div></div>
+        </div><div class="barrow">
+          <div><strong>Fevereiro</strong><div class="small">01/02–28/02</div></div>
+          <div>
+            <div class="small">2026 R$ 565.384,40</div>
+            <div class="barstack"><div class="bar curr" style="width:81.2%"></div></div>
+            <div class="small" style="margin-top:6px;">2025 R$ 403.969,96</div>
+            <div class="barstack"><div class="bar prev" style="width:58.0%"></div></div>
+          </div>
+          <div class="right"><strong class="positive">+40,0%</strong><div class="small">Δ R$ 161.414,44</div></div>
+        </div><div class="barrow">
+          <div><strong>Março</strong><div class="small">01/03–31/03</div></div>
+          <div>
+            <div class="small">2026 R$ 696.175,13</div>
+            <div class="barstack"><div class="bar curr" style="width:100.0%"></div></div>
+            <div class="small" style="margin-top:6px;">2025 R$ 459.529,38</div>
+            <div class="barstack"><div class="bar prev" style="width:66.0%"></div></div>
+          </div>
+          <div class="right"><strong class="positive">+51,5%</strong><div class="small">Δ R$ 236.645,75</div></div>
+        </div><div class="barrow">
+          <div><strong>Abril</strong><div class="small">01/04–23/04</div></div>
+          <div>
+            <div class="small">2026 R$ 564.108,05</div>
+            <div class="barstack"><div class="bar curr" style="width:81.0%"></div></div>
+            <div class="small" style="margin-top:6px;">2025 R$ 412.509,83</div>
+            <div class="barstack"><div class="bar prev" style="width:59.3%"></div></div>
+          </div>
+          <div class="right"><strong class="positive">+36,8%</strong><div class="small">Δ R$ 151.598,22</div></div>
+        </div></div>
+    </section>
+
+    <section class="card section">
+      <h2>Comparativo mês a mês</h2>
+      <table>
+        <thead><tr><th>Mês</th><th class="right">2025</th><th class="right">2026</th><th class="right">Δ Fat.</th><th class="right">Δ %</th><th class="right">Qtd 2025</th><th class="right">Qtd 2026</th><th class="right">Ticket 2025</th><th class="right">Ticket 2026</th></tr></thead>
+        <tbody><tr>
+          <td><strong>Janeiro</strong><div class="small">2025: 01/01/2025 a 31/01/2025<br/>2026: 01/01/2026 a 31/01/2026</div></td>
+          <td class="right">R$ 385.640,20</td>
+          <td class="right">R$ 515.300,75</td>
+          <td class="right">R$ 129.660,55</td>
+          <td class="right"><span class="pill positive">+33,6%</span></td>
+          <td class="right">3.705</td>
+          <td class="right">4.513</td>
+          <td class="right">R$ 104,09</td>
+          <td class="right">R$ 114,18</td>
+        </tr><tr>
+          <td><strong>Fevereiro</strong><div class="small">2025: 01/02/2025 a 28/02/2025<br/>2026: 01/02/2026 a 28/02/2026</div></td>
+          <td class="right">R$ 403.969,96</td>
+          <td class="right">R$ 565.384,40</td>
+          <td class="right">R$ 161.414,44</td>
+          <td class="right"><span class="pill positive">+40,0%</span></td>
+          <td class="right">3.926</td>
+          <td class="right">4.750</td>
+          <td class="right">R$ 102,90</td>
+          <td class="right">R$ 119,03</td>
+        </tr><tr>
+          <td><strong>Março</strong><div class="small">2025: 01/03/2025 a 31/03/2025<br/>2026: 01/03/2026 a 31/03/2026</div></td>
+          <td class="right">R$ 459.529,38</td>
+          <td class="right">R$ 696.175,13</td>
+          <td class="right">R$ 236.645,75</td>
+          <td class="right"><span class="pill positive">+51,5%</span></td>
+          <td class="right">4.546</td>
+          <td class="right">5.828</td>
+          <td class="right">R$ 101,08</td>
+          <td class="right">R$ 119,45</td>
+        </tr><tr>
+          <td><strong>Abril</strong><div class="small">2025: 01/04/2025 a 23/04/2025<br/>2026: 01/04/2026 a 23/04/2026</div></td>
+          <td class="right">R$ 412.509,83</td>
+          <td class="right">R$ 564.108,05</td>
+          <td class="right">R$ 151.598,22</td>
+          <td class="right"><span class="pill positive">+36,8%</span></td>
+          <td class="right">3.626</td>
+          <td class="right">4.262</td>
+          <td class="right">R$ 113,76</td>
+          <td class="right">R$ 132,36</td>
+        </tr></tbody>
+      </table>
+    </section>
+
+    <section class="card section">
+      <h2>Comparativo por canal — período total</h2>
+      <table>
+        <thead><tr><th>Canal</th><th class="right">Fat. 2025</th><th class="right">Fat. 2026</th><th class="right">Δ Fat.</th><th class="right">Δ %</th><th class="right">Qtd 2025</th><th class="right">Qtd 2026</th><th class="right">Ticket 2025</th><th class="right">Ticket 2026</th></tr></thead>
+        <tbody><tr>
+          <td><strong>Entrega</strong></td>
+          <td class="right">R$ 1.261.016,55</td>
+          <td class="right">R$ 1.860.085,43</td>
+          <td class="right">R$ 599.068,88</td>
+          <td class="right"><span class="pill positive">+47,5%</span></td>
+          <td class="right">8.997</td>
+          <td class="right">11.915</td>
+          <td class="right">R$ 140,16</td>
+          <td class="right">R$ 156,11</td>
+        </tr><tr>
+          <td><strong>Mesa</strong></td>
+          <td class="right">R$ 229.173,40</td>
+          <td class="right">R$ 292.380,01</td>
+          <td class="right">R$ 63.206,61</td>
+          <td class="right"><span class="pill positive">+27,6%</span></td>
+          <td class="right">4.184</td>
+          <td class="right">4.631</td>
+          <td class="right">R$ 54,77</td>
+          <td class="right">R$ 63,14</td>
+        </tr><tr>
+          <td><strong>Balcão</strong></td>
+          <td class="right">R$ 169.589,01</td>
+          <td class="right">R$ 188.145,01</td>
+          <td class="right">R$ 18.556,00</td>
+          <td class="right"><span class="pill positive">+10,9%</span></td>
+          <td class="right">2.576</td>
+          <td class="right">2.803</td>
+          <td class="right">R$ 65,83</td>
+          <td class="right">R$ 67,12</td>
+        </tr><tr>
+          <td><strong>Comanda</strong></td>
+          <td class="right">R$ 1.870,41</td>
+          <td class="right">R$ 357,88</td>
+          <td class="right">R$ -1.512,53</td>
+          <td class="right"><span class="pill negative">-80,9%</span></td>
+          <td class="right">46</td>
+          <td class="right">4</td>
+          <td class="right">R$ 40,66</td>
+          <td class="right">R$ 89,47</td>
+        </tr></tbody>
+      </table>
+    </section>
+
+    <section class="card section"><h2>Barras por canal — 2025 vs 2026</h2><div class="barrow">
+          <div><strong>Entrega</strong></div>
+          <div>
+            <div class="small">2026 R$ 1.860.085,43</div>
+            <div class="barstack"><div class="bar curr" style="width:100.0%"></div></div>
+            <div class="small" style="margin-top:6px;">2025 R$ 1.261.016,55</div>
+            <div class="barstack"><div class="bar prev" style="width:67.8%"></div></div>
+          </div>
+          <div class="right"><strong class="positive">+47,5%</strong><div class="small">Δ R$ 599.068,88</div></div>
+        </div><div class="barrow">
+          <div><strong>Mesa</strong></div>
+          <div>
+            <div class="small">2026 R$ 292.380,01</div>
+            <div class="barstack"><div class="bar curr" style="width:15.7%"></div></div>
+            <div class="small" style="margin-top:6px;">2025 R$ 229.173,40</div>
+            <div class="barstack"><div class="bar prev" style="width:12.3%"></div></div>
+          </div>
+          <div class="right"><strong class="positive">+27,6%</strong><div class="small">Δ R$ 63.206,61</div></div>
+        </div><div class="barrow">
+          <div><strong>Balcão</strong></div>
+          <div>
+            <div class="small">2026 R$ 188.145,01</div>
+            <div class="barstack"><div class="bar curr" style="width:10.1%"></div></div>
+            <div class="small" style="margin-top:6px;">2025 R$ 169.589,01</div>
+            <div class="barstack"><div class="bar prev" style="width:9.1%"></div></div>
+          </div>
+          <div class="right"><strong class="positive">+10,9%</strong><div class="small">Δ R$ 18.556,00</div></div>
+        </div><div class="barrow">
+          <div><strong>Comanda</strong></div>
+          <div>
+            <div class="small">2026 R$ 357,88</div>
+            <div class="barstack"><div class="bar curr" style="width:0.0%"></div></div>
+            <div class="small" style="margin-top:6px;">2025 R$ 1.870,41</div>
+            <div class="barstack"><div class="bar prev" style="width:0.1%"></div></div>
+          </div>
+          <div class="right"><strong class="negative">-80,9%</strong><div class="small">Δ R$ -1.512,53</div></div>
+        </div></section>
+
+    <section class="card section">
+      <h2>Detalhe por canal — Janeiro</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Canal</th>
+            <th class="right">Fat. 2025</th>
+            <th class="right">Fat. 2026</th>
+            <th class="right">Δ Fat.</th>
+            <th class="right">Qtd 2025</th>
+            <th class="right">Qtd 2026</th>
+            <th class="right">Ticket 2025</th>
+            <th class="right">Ticket 2026</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+                <td><strong>Balcão</strong></td>
+                <td class="right">R$ 40.853,40</td>
+                <td class="right">R$ 43.259,90</td>
+                <td class="right">R$ 2.406,50</td>
+                <td class="right">627</td>
+                <td class="right">681</td>
+                <td class="right">R$ 65,16</td>
+                <td class="right">R$ 63,52</td>
+            </tr><tr>
+                <td><strong>Comanda</strong></td>
+                <td class="right">R$ 82,60</td>
+                <td class="right">R$ 218,02</td>
+                <td class="right">R$ 135,42</td>
+                <td class="right">2</td>
+                <td class="right">3</td>
+                <td class="right">R$ 41,30</td>
+                <td class="right">R$ 72,67</td>
+            </tr><tr>
+                <td><strong>Entrega</strong></td>
+                <td class="right">R$ 288.287,35</td>
+                <td class="right">R$ 396.061,42</td>
+                <td class="right">R$ 107.774,07</td>
+                <td class="right">2.022</td>
+                <td class="right">2.675</td>
+                <td class="right">R$ 142,58</td>
+                <td class="right">R$ 148,06</td>
+            </tr><tr>
+                <td><strong>Mesa</strong></td>
+                <td class="right">R$ 56.416,85</td>
+                <td class="right">R$ 75.761,41</td>
+                <td class="right">R$ 19.344,56</td>
+                <td class="right">1.054</td>
+                <td class="right">1.154</td>
+                <td class="right">R$ 53,53</td>
+                <td class="right">R$ 65,65</td>
+            </tr>
+        </tbody>
+      </table>
+    </section><section class="card section">
+      <h2>Detalhe por canal — Fevereiro</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Canal</th>
+            <th class="right">Fat. 2025</th>
+            <th class="right">Fat. 2026</th>
+            <th class="right">Δ Fat.</th>
+            <th class="right">Qtd 2025</th>
+            <th class="right">Qtd 2026</th>
+            <th class="right">Ticket 2025</th>
+            <th class="right">Ticket 2026</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+                <td><strong>Balcão</strong></td>
+                <td class="right">R$ 44.031,88</td>
+                <td class="right">R$ 44.048,35</td>
+                <td class="right">R$ 16,47</td>
+                <td class="right">644</td>
+                <td class="right">693</td>
+                <td class="right">R$ 68,37</td>
+                <td class="right">R$ 63,56</td>
+            </tr><tr>
+                <td><strong>Comanda</strong></td>
+                <td class="right">R$ 722,78</td>
+                <td class="right">R$ 0,00</td>
+                <td class="right">R$ -722,78</td>
+                <td class="right">12</td>
+                <td class="right">0</td>
+                <td class="right">R$ 60,23</td>
+                <td class="right">R$ 0,00</td>
+            </tr><tr>
+                <td><strong>Entrega</strong></td>
+                <td class="right">R$ 296.649,95</td>
+                <td class="right">R$ 449.947,44</td>
+                <td class="right">R$ 153.297,49</td>
+                <td class="right">2.119</td>
+                <td class="right">2.959</td>
+                <td class="right">R$ 140,00</td>
+                <td class="right">R$ 152,06</td>
+            </tr><tr>
+                <td><strong>Mesa</strong></td>
+                <td class="right">R$ 62.565,35</td>
+                <td class="right">R$ 71.388,61</td>
+                <td class="right">R$ 8.823,26</td>
+                <td class="right">1.151</td>
+                <td class="right">1.098</td>
+                <td class="right">R$ 54,36</td>
+                <td class="right">R$ 65,02</td>
+            </tr>
+        </tbody>
+      </table>
+    </section><section class="card section">
+      <h2>Detalhe por canal — Março</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Canal</th>
+            <th class="right">Fat. 2025</th>
+            <th class="right">Fat. 2026</th>
+            <th class="right">Δ Fat.</th>
+            <th class="right">Qtd 2025</th>
+            <th class="right">Qtd 2026</th>
+            <th class="right">Ticket 2025</th>
+            <th class="right">Ticket 2026</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+                <td><strong>Balcão</strong></td>
+                <td class="right">R$ 47.000,58</td>
+                <td class="right">R$ 49.949,11</td>
+                <td class="right">R$ 2.948,53</td>
+                <td class="right">741</td>
+                <td class="right">799</td>
+                <td class="right">R$ 63,43</td>
+                <td class="right">R$ 62,52</td>
+            </tr><tr>
+                <td><strong>Comanda</strong></td>
+                <td class="right">R$ 753,92</td>
+                <td class="right">R$ 0,00</td>
+                <td class="right">R$ -753,92</td>
+                <td class="right">25</td>
+                <td class="right">0</td>
+                <td class="right">R$ 30,16</td>
+                <td class="right">R$ 0,00</td>
+            </tr><tr>
+                <td><strong>Entrega</strong></td>
+                <td class="right">R$ 348.907,80</td>
+                <td class="right">R$ 560.566,74</td>
+                <td class="right">R$ 211.658,94</td>
+                <td class="right">2.653</td>
+                <td class="right">3.587</td>
+                <td class="right">R$ 131,51</td>
+                <td class="right">R$ 156,28</td>
+            </tr><tr>
+                <td><strong>Mesa</strong></td>
+                <td class="right">R$ 62.867,08</td>
+                <td class="right">R$ 85.659,28</td>
+                <td class="right">R$ 22.792,20</td>
+                <td class="right">1.127</td>
+                <td class="right">1.442</td>
+                <td class="right">R$ 55,78</td>
+                <td class="right">R$ 59,40</td>
+            </tr>
+        </tbody>
+      </table>
+    </section><section class="card section">
+      <h2>Detalhe por canal — Abril</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Canal</th>
+            <th class="right">Fat. 2025</th>
+            <th class="right">Fat. 2026</th>
+            <th class="right">Δ Fat.</th>
+            <th class="right">Qtd 2025</th>
+            <th class="right">Qtd 2026</th>
+            <th class="right">Ticket 2025</th>
+            <th class="right">Ticket 2026</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+                <td><strong>Balcão</strong></td>
+                <td class="right">R$ 37.703,15</td>
+                <td class="right">R$ 50.887,65</td>
+                <td class="right">R$ 13.184,50</td>
+                <td class="right">564</td>
+                <td class="right">630</td>
+                <td class="right">R$ 66,85</td>
+                <td class="right">R$ 80,77</td>
+            </tr><tr>
+                <td><strong>Comanda</strong></td>
+                <td class="right">R$ 311,11</td>
+                <td class="right">R$ 139,86</td>
+                <td class="right">R$ -171,25</td>
+                <td class="right">7</td>
+                <td class="right">1</td>
+                <td class="right">R$ 44,44</td>
+                <td class="right">R$ 139,86</td>
+            </tr><tr>
+                <td><strong>Entrega</strong></td>
+                <td class="right">R$ 327.171,45</td>
+                <td class="right">R$ 453.509,83</td>
+                <td class="right">R$ 126.338,38</td>
+                <td class="right">2.203</td>
+                <td class="right">2.694</td>
+                <td class="right">R$ 148,51</td>
+                <td class="right">R$ 168,34</td>
+            </tr><tr>
+                <td><strong>Mesa</strong></td>
+                <td class="right">R$ 47.324,12</td>
+                <td class="right">R$ 59.570,71</td>
+                <td class="right">R$ 12.246,59</td>
+                <td class="right">852</td>
+                <td class="right">937</td>
+                <td class="right">R$ 55,55</td>
+                <td class="right">R$ 63,58</td>
+            </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="footer">
+      <div>Arquivo HTML gerado automaticamente a partir do endpoint do Mogo <code>BuscaDadosRelatorioDinamico</code>, relatório <code>codRelatorio=37</code> (Ticket Médio).</div>
+      <div>Observação técnica: o parâmetro reproduzido que bateu exatamente com o modelo da tela foi <code>TipoData=0</code>.</div>
+      <div>Arquivo de apoio JSON: /root/.openclaw/workspace/relatorios/Mogo/Comparativo Ticket Medio/comparativo-ticket-medio-pagamento-2026-vs-2025.json</div>
+    </section>
+  </div>
+</body>
+</html>

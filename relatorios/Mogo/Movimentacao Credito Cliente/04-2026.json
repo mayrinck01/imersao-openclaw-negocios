@@ -1,0 +1,154 @@
+{
+  "periodo": {
+    "de": "01/04/2026",
+    "ate": "30/04/2026"
+  },
+  "total_registros": 13,
+  "total_credito": "R$ 532,80",
+  "total_debito": "R$ 620,97",
+  "registros": [
+    {
+      "data": "27/04/2026",
+      "hora": "13:54:02",
+      "cliente": "Felipe Castro (Jornalista)",
+      "cpf": "07836630722",
+      "tipo": "Debito",
+      "descricao": "Pedido: 031800 (Balcão)",
+      "valor": "42,50",
+      "saldo": "99,64",
+      "financeiro": "Não selecionado"
+    },
+    {
+      "data": "22/04/2026",
+      "hora": "17:51:56",
+      "cliente": "Felipe Castro (Jornalista)",
+      "cpf": "07836630722",
+      "tipo": "Debito",
+      "descricao": "Pedido: 030879 (Mesa: 11)",
+      "valor": "39,38",
+      "saldo": "142,14",
+      "financeiro": "Não selecionado"
+    },
+    {
+      "data": "17/04/2026",
+      "hora": "18:20:08",
+      "cliente": "Felipe Castro (Jornalista)",
+      "cpf": "07836630722",
+      "tipo": "Debito",
+      "descricao": "Pedido: 029925 (Mesa: 215)",
+      "valor": "27,39",
+      "saldo": "181,52",
+      "financeiro": "Não selecionado"
+    },
+    {
+      "data": "16/04/2026",
+      "hora": "17:30:52",
+      "cliente": "Felipe Castro (Jornalista)",
+      "cpf": "07836630722",
+      "tipo": "Debito",
+      "descricao": "Pedido: 029607 (Mesa: 12)",
+      "valor": "51,70",
+      "saldo": "208,91",
+      "financeiro": "Não selecionado"
+    },
+    {
+      "data": "09/04/2026",
+      "hora": "12:09:43",
+      "cliente": "Maria Gabriela Koblitz",
+      "cpf": "02873657782",
+      "tipo": "Debito",
+      "descricao": "Pedido: 027405 (Delivery)",
+      "valor": "124,00",
+      "saldo": "0,00",
+      "financeiro": "Não selecionado"
+    },
+    {
+      "data": "09/04/2026",
+      "hora": "12:07:21",
+      "cliente": "Maria Gabriela Koblitz",
+      "cpf": "02873657782",
+      "tipo": "Credito",
+      "descricao": "Bolo de cenoura F30 ( 027405)",
+      "valor": "124,00",
+      "saldo": "124,00",
+      "financeiro": "Não gerar financeiro"
+    },
+    {
+      "data": "09/04/2026",
+      "hora": "10:20:45",
+      "cliente": "Cleci Carvalho ",
+      "cpf": "95662960704",
+      "tipo": "Credito",
+      "descricao": "Deliciosa 13 02 brigadeiros Morango 26163",
+      "valor": "150,80",
+      "saldo": "150,80",
+      "financeiro": "Não gerar financeiro"
+    },
+    {
+      "data": "04/04/2026",
+      "hora": "12:29:44",
+      "cliente": "Felipe Castro (Jornalista)",
+      "cpf": "07836630722",
+      "tipo": "Debito",
+      "descricao": "Pedido: 026985 (Balcão)",
+      "valor": "40,00",
+      "saldo": "260,61",
+      "financeiro": "Não selecionado"
+    },
+    {
+      "data": "02/04/2026",
+      "hora": "15:31:10",
+      "cliente": "VERA VIEIRA",
+      "cpf": "",
+      "tipo": "Debito",
+      "descricao": "Pedido: 025878 (Delivery)",
+      "valor": "221,00",
+      "saldo": "0,00",
+      "financeiro": "Não selecionado"
+    },
+    {
+      "data": "02/04/2026",
+      "hora": "15:29:10",
+      "cliente": "VERA VIEIRA",
+      "cpf": "",
+      "tipo": "Credito",
+      "descricao": "TROCOU PEDIDO 25878",
+      "valor": "10,00",
+      "saldo": "221,00",
+      "financeiro": "Não gerar financeiro"
+    },
+    {
+      "data": "02/04/2026",
+      "hora": "15:26:32",
+      "cliente": "VERA VIEIRA",
+      "cpf": "",
+      "tipo": "Credito",
+      "descricao": "TROCOU PEDIDO 25878",
+      "valor": "211,00",
+      "saldo": "211,00",
+      "financeiro": "Não gerar financeiro"
+    },
+    {
+      "data": "02/04/2026",
+      "hora": "15:04:20",
+      "cliente": "Clara lins",
+      "cpf": "13591948780",
+      "tipo": "Debito",
+      "descricao": "Pedido: 026530 (Delivery)",
+      "valor": "75,00",
+      "saldo": "0,00",
+      "financeiro": "Não selecionado"
+    },
+    {
+      "data": "01/04/2026",
+      "hora": "16:29:59",
+      "cliente": "José André Cavalcanti da Silva",
+      "cpf": "91984211404",
+      "tipo": "Credito",
+      "descricao": "01 Cx com 12 brigadeiros",
+      "valor": "37,00",
+      "saldo": "37,00",
+      "financeiro": "Não gerar financeiro"
+    }
+  ]
+}

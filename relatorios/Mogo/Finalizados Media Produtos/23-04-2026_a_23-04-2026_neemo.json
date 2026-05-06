@@ -1,0 +1,271 @@
+{
+  "filtro": {
+    "data_de": "23/04/2026",
+    "data_ate": "23/04/2026",
+    "tipo_data": "Pedido",
+    "origem": "Neemo"
+  },
+  "resumo_mensal": [
+    {
+      "mes": "04/2026",
+      "pedidos": 9,
+      "produtos_totais": 26.0,
+      "media_produtos_por_pedido": 2.888888888888889,
+      "linhas_itens": 23,
+      "valor_total": 1190.86,
+      "ticket_medio": 132.31777777777776
+    },
+    {
+      "mes": "TOTAL",
+      "pedidos": 9,
+      "produtos_totais": 26.0,
+      "media_produtos_por_pedido": 2.888888888888889,
+      "linhas_itens": 23,
+      "valor_total": 1190.86,
+      "ticket_medio": 132.31777777777776
+    }
+  ],
+  "pedidos": [
+    {
+      "mes": "04/2026",
+      "numero_pedido": "031150",
+      "pedido_id": 144647,
+      "data_pedido": "23/04/2026",
+      "data_entrega": "",
+      "cliente": "Andressa Bianco",
+      "origem": "Neemo",
+      "valor_final": 67.95,
+      "produtos_no_pedido": 3.0,
+      "linhas_itens": 3,
+      "itens": [
+        {
+          "produto": "FT SWEET DARK",
+          "quantidade": 1.0,
+          "valor_total": 30.0
+        },
+        {
+          "produto": "MORANGO - FT DELICIOSA",
+          "quantidade": 1.0,
+          "valor_total": 35.5
+        },
+        {
+          "produto": "Taxa de entrega",
+          "quantidade": 1.0,
+          "valor_total": 10.0
+        }
+      ]
+    },
+    {
+      "mes": "04/2026",
+      "numero_pedido": "031125",
+      "pedido_id": 144622,
+      "data_pedido": "23/04/2026",
+      "data_entrega": "",
+      "cliente": "Gianna Sa",
+      "origem": "Neemo",
+      "valor_final": 92.4,
+      "produtos_no_pedido": 3.0,
+      "linhas_itens": 3,
+      "itens": [
+        {
+          "produto": "FT MARAVILHA ABACAXI",
+          "quantidade": 1.0,
+          "valor_total": 26.9
+        },
+        {
+          "produto": "MORANGO - FT DELICIOSA",
+          "quantidade": 1.0,
+          "valor_total": 35.5
+        },
+        {
+          "produto": "Taxa de entrega",
+          "quantidade": 1.0,
+          "valor_total": 30.0
+        }
+      ]
+    },
+    {
+      "mes": "04/2026",
+      "numero_pedido": "031119",
+      "pedido_id": 144616,
+      "data_pedido": "23/04/2026",
+      "data_entrega": "23/04/2026",
+      "cliente": "Cesar",
+      "origem": "Neemo",
+      "valor_final": 231.0,
+      "produtos_no_pedido": 2.0,
+      "linhas_itens": 2,
+      "itens": [
+        {
+          "produto": "Taxa de entrega",
+          "quantidade": 1.0,
+          "valor_total": 15.0
+        },
+        {
+          "produto": "TORTA BANANA F22",
+          "quantidade": 1.0,
+          "valor_total": 216.0
+        }
+      ]
+    },
+    {
+      "mes": "04/2026",
+      "numero_pedido": "031112",
+      "pedido_id": 144609,
+      "data_pedido": "23/04/2026",
+      "data_entrega": "",
+      "cliente": "TATIANA LOPONTE SABACK",
+      "origem": "Neemo",
+      "valor_final": 222.0,
+      "produtos_no_pedido": 2.0,
+      "linhas_itens": 2,
+      "itens": [
+        {
+          "produto": "Taxa de entrega",
+          "quantidade": 1.0,
+          "valor_total": 10.0
+        },
+        {
+          "produto": "TORTA LIMAO F25",
+          "quantidade": 1.0,
+          "valor_total": 212.0
+        }
+      ]
+    },
+    {
+      "mes": "04/2026",
+      "numero_pedido": "031102",
+      "pedido_id": 144599,
+      "data_pedido": "23/04/2026",
+      "data_entrega": "",
+      "cliente": "Carla Zamith",
+      "origem": "Neemo",
+      "valor_final": 63.8,
+      "produtos_no_pedido": 3.0,
+      "linhas_itens": 2,
+      "itens": [
+        {
+          "produto": "FT TORTA LIMAO",
+          "quantidade": 2.0,
+          "valor_total": 53.8
+        },
+        {
+          "produto": "Taxa de entrega",
+          "quantidade": 1.0,
+          "valor_total": 10.0
+        }
+      ]
+    },
+    {
+      "mes": "04/2026",
+      "numero_pedido": "031098",
+      "pedido_id": 144595,
+      "data_pedido": "23/04/2026",
+      "data_entrega": "",
+      "cliente": "Guilherme Henrique Schuetz",
+      "origem": "Neemo",
+      "valor_final": 95.0,
+      "produtos_no_pedido": 2.0,
+      "linhas_itens": 2,
+      "itens": [
+        {
+          "produto": "EMPADAO FRANGO F13",
+          "quantidade": 1.0,
+          "valor_total": 80.0
+        },
+        {
+          "produto": "Taxa de entrega",
+          "quantidade": 1.0,
+          "valor_total": 15.0
+        }
+      ]
+    },
+    {
+      "mes": "04/2026",
+      "numero_pedido": "031068",
+      "pedido_id": 144565,
+      "data_pedido": "23/04/2026",
+      "data_entrega": "",
+      "cliente": "ISABELA",
+      "origem": "Neemo",
+      "valor_final": 154.2,
+      "produtos_no_pedido": 6.0,
+      "linhas_itens": 4,
+      "itens": [
+        {
+          "produto": "BOLIM CHOCOLATE C/ COBERTURA GRD (300GR)",
+          "quantidade": 1.0,
+          "valor_total": 37.5
+        },
+        {
+          "produto": "Taxa de entrega",
+          "quantidade": 1.0,
+          "valor_total": 10.0
+        },
+        {
+          "produto": "TORTINHA GOURMET CHOCO FESTA CX",
+          "quantidade": 1.0,
+          "valor_total": 47.0
+        },
+        {
+          "produto": "VULCAO CENOURA",
+          "quantidade": 3.0,
+          "valor_total": 59.7
+        }
+      ]
+    },
+    {
+      "mes": "04/2026",
+      "numero_pedido": "031066",
+      "pedido_id": 144563,
+      "data_pedido": "23/04/2026",
+      "data_entrega": "",
+      "cliente": "Adalberto Santos de Jesus Junior",
+      "origem": "Neemo",
+      "valor_final": 61.11,
+      "produtos_no_pedido": 3.0,
+      "linhas_itens": 3,
+      "itens": [
+        {
+          "produto": "FT CHOCOBERRIES",
+          "quantidade": 1.0,
+          "valor_total": 33.0
+        },
+        {
+          "produto": "Taxa de entrega",
+          "quantidade": 1.0,
+          "valor_total": 15.0
+        },
+        {
+          "produto": "VULCAO CENOURA",
+          "quantidade": 1.0,
+          "valor_total": 19.9
+        }
+      ]
+    },
+    {
+      "mes": "04/2026",
+      "numero_pedido": "031047",
+      "pedido_id": 144544,
+      "data_pedido": "23/04/2026",
+      "data_entrega": "23/04/2026",
+      "cliente": "Natalia Dierings",
+      "origem": "Neemo",
+      "valor_final": 203.4,
+      "produtos_no_pedido": 2.0,
+      "linhas_itens": 2,
+      "itens": [
+        {
+          "produto": "CHOCOBERRIES F20",
+          "quantidade": 1.0,
+          "valor_total": 211.0
+        },
+        {
+          "produto": "Taxa de entrega",
+          "quantidade": 1.0,
+          "valor_total": 15.0
+        }
+      ]
+    }
+  ]
+}

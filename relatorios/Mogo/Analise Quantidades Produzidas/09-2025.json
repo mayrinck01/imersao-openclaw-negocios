@@ -1,0 +1,6301 @@
+{
+  "periodo": {
+    "de": "01/09/2025",
+    "ate": "30/09/2025"
+  },
+  "total_registros": 699,
+  "custo_total": "R$ 28.340,29",
+  "registros": [
+    {
+      "data": "30/09/2025",
+      "hora": "17:33:33",
+      "produto": "(prod) Brigadeiro da Alegria cx12 (un)",
+      "qtde": "1,000",
+      "custo_unit": "8,02",
+      "custo_total": "8,02",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "30/09/2025",
+      "hora": "17:33:26",
+      "produto": "(prod) Brigadeiro Precioso Preto (un)",
+      "qtde": "6,000",
+      "custo_unit": "0,41",
+      "custo_total": "2,45",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "30/09/2025",
+      "hora": "17:33:25",
+      "produto": "(prod) Brigadeiro Precioso Branco (un)",
+      "qtde": "6,000",
+      "custo_unit": "0,42",
+      "custo_total": "2,51",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "30/09/2025",
+      "hora": "17:31:44",
+      "produto": "(prod) Brigadeiro da Alegria cx12 (un)",
+      "qtde": "1,000",
+      "custo_unit": "4,96",
+      "custo_total": "4,96",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "30/09/2025",
+      "hora": "17:31:37",
+      "produto": "(prod) Brigadeiro Precioso Preto (un)",
+      "qtde": "6,000",
+      "custo_unit": "0,41",
+      "custo_total": "2,45",
+      "turno": "Produção"
+    },
+    {
+      "data": "30/09/2025",
+      "hora": "17:31:36",
+      "produto": "(prod) Brigadeiro Precioso Branco (un)",
+      "qtde": "6,000",
+      "custo_unit": "0,42",
+      "custo_total": "2,51",
+      "turno": "Produção"
+    },
+    {
+      "data": "30/09/2025",
+      "hora": "17:28:51",
+      "produto": "(prod) Brigadeiro da Alegria cx12 (un)",
+      "qtde": "1,000",
+      "custo_unit": "5,78",
+      "custo_total": "5,78",
+      "turno": "Produção"
+    },
+    {
+      "data": "30/09/2025",
+      "hora": "17:27:40",
+      "produto": "(prod) Brigadeiro da Alegria cx12 (un)",
+      "qtde": "1,000",
+      "custo_unit": "5,78",
+      "custo_total": "5,78",
+      "turno": "Produção"
+    },
+    {
+      "data": "30/09/2025",
+      "hora": "17:24:13",
+      "produto": "(prod) Bolo Ingles Arco-Iris Chocolate(un)",
+      "qtde": "1,000",
+      "custo_unit": "11,43",
+      "custo_total": "11,43",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "30/09/2025",
+      "hora": "17:24:06",
+      "produto": "(prod) Bolo Chocolate Cobertura Inglês (un)",
+      "qtde": "1,000",
+      "custo_unit": "9,57",
+      "custo_total": "9,57",
+      "turno": "Produção"
+    },
+    {
+      "data": "30/09/2025",
+      "hora": "17:21:24",
+      "produto": "(prod) Vulcao Tesouro Escondido (un)",
+      "qtde": "1,000",
+      "custo_unit": "5,18",
+      "custo_total": "5,18",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "30/09/2025",
+      "hora": "17:21:14",
+      "produto": "(prod) Batido Vulcao Cenoura (un)",
+      "qtde": "1,000",
+      "custo_unit": "0,50",
+      "custo_total": "0,50",
+      "turno": "Produção"
+    },
+    {
+      "data": "30/09/2025",
+      "hora": "17:15:55",
+      "produto": "(prod) Torta Magica de Chocolate F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "38,95",
+      "custo_total": "38,95",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "30/09/2025",
+      "hora": "17:15:53",
+      "produto": "(prod) Torta Magica de Chocolate F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "17,56",
+      "custo_total": "17,56",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "30/09/2025",
+      "hora": "17:15:42",
+      "produto": "(prod) Semi Tentacao/Emilia F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "33,76",
+      "custo_total": "33,76",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "30/09/2025",
+      "hora": "17:15:41",
+      "produto": "(prod) Semi Tentacao/Emilia F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "15,14",
+      "custo_total": "15,14",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "29/09/2025",
+      "hora": "20:28:24",
+      "produto": "(prod) Deliciosa F30 (un)",
+      "qtde": "1,000",
+      "custo_unit": "92,27",
+      "custo_total": "92,27",
+      "turno": "Produção"
+    },
+    {
+      "data": "29/09/2025",
+      "hora": "20:28:22",
+      "produto": "(prod) Deliciosa F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "54,35",
+      "custo_total": "54,35",
+      "turno": "Produção"
+    },
+    {
+      "data": "29/09/2025",
+      "hora": "20:28:21",
+      "produto": "(prod) Deliciosa F20 (un)",
+      "qtde": "1,000",
+      "custo_unit": "28,29",
+      "custo_total": "28,29",
+      "turno": "Produção"
+    },
+    {
+      "data": "29/09/2025",
+      "hora": "20:28:20",
+      "produto": "(prod) Deliciosa F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "22,26",
+      "custo_total": "22,26",
+      "turno": "Produção"
+    },
+    {
+      "data": "29/09/2025",
+      "hora": "20:27:09",
+      "produto": "(prod) Semi Deliciosa F30 (un)",
+      "qtde": "1,000",
+      "custo_unit": "76,51",
+      "custo_total": "76,51",
+      "turno": "Produção"
+    },
+    {
+      "data": "29/09/2025",
+      "hora": "20:27:07",
+      "produto": "(prod) Semi Deliciosa F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "45,73",
+      "custo_total": "45,73",
+      "turno": "Produção"
+    },
+    {
+      "data": "29/09/2025",
+      "hora": "20:27:06",
+      "produto": "(prod) Semi Deliciosa F20 (un)",
+      "qtde": "1,000",
+      "custo_unit": "23,74",
+      "custo_total": "23,74",
+      "turno": "Produção"
+    },
+    {
+      "data": "29/09/2025",
+      "hora": "20:27:05",
+      "produto": "(prod) Semi Deliciosa F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "19,03",
+      "custo_total": "19,03",
+      "turno": "Produção"
+    },
+    {
+      "data": "29/09/2025",
+      "hora": "20:25:09",
+      "produto": "(prod) Merengue (kg)",
+      "qtde": "10,000",
+      "custo_unit": "8,77",
+      "custo_total": "87,73",
+      "turno": "Produção"
+    },
+    {
+      "data": "29/09/2025",
+      "hora": "20:23:25",
+      "produto": "(prod) Deliciosa F30 (un)",
+      "qtde": "1,000",
+      "custo_unit": "92,27",
+      "custo_total": "92,27",
+      "turno": "Produção"
+    },
+    {
+      "data": "29/09/2025",
+      "hora": "20:23:23",
+      "produto": "(prod) Deliciosa F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "54,35",
+      "custo_total": "54,35",
+      "turno": "Produção"
+    },
+    {
+      "data": "29/09/2025",
+      "hora": "20:23:22",
+      "produto": "(prod) Deliciosa F20 (un)",
+      "qtde": "1,000",
+      "custo_unit": "28,29",
+      "custo_total": "28,29",
+      "turno": "Produção"
+    },
+    {
+      "data": "29/09/2025",
+      "hora": "20:23:20",
+      "produto": "(prod) Deliciosa F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "22,26",
+      "custo_total": "22,26",
+      "turno": "Produção"
+    },
+    {
+      "data": "29/09/2025",
+      "hora": "20:22:17",
+      "produto": "(prod) Semi Deliciosa F30 (un)",
+      "qtde": "1,000",
+      "custo_unit": "76,51",
+      "custo_total": "76,51",
+      "turno": "Produção"
+    },
+    {
+      "data": "29/09/2025",
+      "hora": "20:22:16",
+      "produto": "(prod) Semi Deliciosa F20 (un)",
+      "qtde": "1,000",
+      "custo_unit": "23,74",
+      "custo_total": "23,74",
+      "turno": "Produção"
+    },
+    {
+      "data": "29/09/2025",
+      "hora": "20:22:15",
+      "produto": "(prod) Semi Deliciosa F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "45,73",
+      "custo_total": "45,73",
+      "turno": "Produção"
+    },
+    {
+      "data": "29/09/2025",
+      "hora": "20:22:14",
+      "produto": "(prod) Semi Deliciosa F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "19,03",
+      "custo_total": "19,03",
+      "turno": "Produção"
+    },
+    {
+      "data": "29/09/2025",
+      "hora": "20:18:59",
+      "produto": "(prod) Semi Acabada Deliciosa F25 (un)",
+      "qtde": "2,000",
+      "custo_unit": "43,09",
+      "custo_total": "86,19",
+      "turno": "Produção"
+    },
+    {
+      "data": "29/09/2025",
+      "hora": "20:18:57",
+      "produto": "(prod) Semi Acabada Deliciosa F20 (un)",
+      "qtde": "2,000",
+      "custo_unit": "21,55",
+      "custo_total": "43,10",
+      "turno": "Produção"
+    },
+    {
+      "data": "29/09/2025",
+      "hora": "20:18:56",
+      "produto": "(prod) Semi Acabada Deliciosa F13 (un)",
+      "qtde": "2,000",
+      "custo_unit": "17,72",
+      "custo_total": "35,43",
+      "turno": "Produção"
+    },
+    {
+      "data": "29/09/2025",
+      "hora": "20:17:52",
+      "produto": "(prod) Batido Semi Pronta Deliciosa F25 (un)",
+      "qtde": "2,000",
+      "custo_unit": "17,97",
+      "custo_total": "35,94",
+      "turno": "Produção"
+    },
+    {
+      "data": "29/09/2025",
+      "hora": "20:17:51",
+      "produto": "(prod) Batido Semi Pronta Deliciosa F20 (un)",
+      "qtde": "2,000",
+      "custo_unit": "12,94",
+      "custo_total": "25,89",
+      "turno": "Produção"
+    },
+    {
+      "data": "29/09/2025",
+      "hora": "20:17:50",
+      "produto": "(prod) Batido Semi Pronta Deliciosa F13 (un)",
+      "qtde": "2,000",
+      "custo_unit": "4,54",
+      "custo_total": "9,09",
+      "turno": "Produção"
+    },
+    {
+      "data": "29/09/2025",
+      "hora": "20:15:51",
+      "produto": "(prod) Creme Cake Patisserie (kg)",
+      "qtde": "87,800",
+      "custo_unit": "15,84",
+      "custo_total": "1.390,73",
+      "turno": "Produção"
+    },
+    {
+      "data": "29/09/2025",
+      "hora": "20:14:34",
+      "produto": "(prod) Batido Sino Nozes (un)",
+      "qtde": "10,000",
+      "custo_unit": "14,67",
+      "custo_total": "146,66",
+      "turno": "Produção"
+    },
+    {
+      "data": "29/09/2025",
+      "hora": "20:14:33",
+      "produto": "(prod) Batido Tortinha Baba Festa Semi (un)",
+      "qtde": "10,000",
+      "custo_unit": "0,10",
+      "custo_total": "1,03",
+      "turno": "Produção"
+    },
+    {
+      "data": "29/09/2025",
+      "hora": "20:14:32",
+      "produto": "(prod) Batido Tortinha Baba Balcao Semi (un)",
+      "qtde": "10,000",
+      "custo_unit": "0,14",
+      "custo_total": "1,38",
+      "turno": "Produção"
+    },
+    {
+      "data": "29/09/2025",
+      "hora": "20:09:23",
+      "produto": "(prod) Quiche Presunto F9 (un)",
+      "qtde": "1,000",
+      "custo_unit": "1,13",
+      "custo_total": "1,13",
+      "turno": "Produção"
+    },
+    {
+      "data": "29/09/2025",
+      "hora": "20:09:22",
+      "produto": "(prod) Quiche Presunto F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "34,51",
+      "custo_total": "34,51",
+      "turno": "Produção"
+    },
+    {
+      "data": "29/09/2025",
+      "hora": "20:09:21",
+      "produto": "(prod) Quiche Presunto F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "1,41",
+      "custo_total": "1,41",
+      "turno": "Produção"
+    },
+    {
+      "data": "29/09/2025",
+      "hora": "20:09:20",
+      "produto": "(prod) Quiche Cebola F9 (un)",
+      "qtde": "1,000",
+      "custo_unit": "1,18",
+      "custo_total": "1,18",
+      "turno": "Produção"
+    },
+    {
+      "data": "29/09/2025",
+      "hora": "20:09:19",
+      "produto": "(prod) Quiche Cebola F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "24,94",
+      "custo_total": "24,94",
+      "turno": "Produção"
+    },
+    {
+      "data": "29/09/2025",
+      "hora": "20:09:17",
+      "produto": "(prod) Quiche Cebola F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "1,35",
+      "custo_total": "1,35",
+      "turno": "Produção"
+    },
+    {
+      "data": "29/09/2025",
+      "hora": "20:09:16",
+      "produto": "(prod) Quiche Alho Poro F9 (un)",
+      "qtde": "1,000",
+      "custo_unit": "1,28",
+      "custo_total": "1,28",
+      "turno": "Produção"
+    },
+    {
+      "data": "29/09/2025",
+      "hora": "20:09:15",
+      "produto": "(prod) Quiche Alho Poro F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "27,16",
+      "custo_total": "27,16",
+      "turno": "Produção"
+    },
+    {
+      "data": "29/09/2025",
+      "hora": "20:09:13",
+      "produto": "(prod) Quiche Alho Poro F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "1,48",
+      "custo_total": "1,48",
+      "turno": "Produção"
+    },
+    {
+      "data": "29/09/2025",
+      "hora": "20:07:21",
+      "produto": "(prod) Base Quiche F9 (un)",
+      "qtde": "10,000",
+      "custo_unit": "0,30",
+      "custo_total": "2,98",
+      "turno": "Produção"
+    },
+    {
+      "data": "29/09/2025",
+      "hora": "20:07:21",
+      "produto": "(prod) Base Quiche F25 (un)",
+      "qtde": "10,000",
+      "custo_unit": "2,61",
+      "custo_total": "26,05",
+      "turno": "Produção"
+    },
+    {
+      "data": "29/09/2025",
+      "hora": "20:07:20",
+      "produto": "(prod) Base Quiche F13 (un)",
+      "qtde": "10,000",
+      "custo_unit": "0,37",
+      "custo_total": "3,72",
+      "turno": "Produção"
+    },
+    {
+      "data": "29/09/2025",
+      "hora": "20:06:38",
+      "produto": "(prod) Massa Salgada (kg)",
+      "qtde": "47,700",
+      "custo_unit": "7,44",
+      "custo_total": "355,06",
+      "turno": "Produção"
+    },
+    {
+      "data": "29/09/2025",
+      "hora": "20:06:05",
+      "produto": "(prod) Base Quiche F9 (un)",
+      "qtde": "10,000",
+      "custo_unit": "0,30",
+      "custo_total": "2,98",
+      "turno": "Produção"
+    },
+    {
+      "data": "29/09/2025",
+      "hora": "20:06:04",
+      "produto": "(prod) Base Quiche F25 (un)",
+      "qtde": "10,000",
+      "custo_unit": "2,61",
+      "custo_total": "26,05",
+      "turno": "Produção"
+    },
+    {
+      "data": "29/09/2025",
+      "hora": "20:06:04",
+      "produto": "(prod) Base Quiche F13 (un)",
+      "qtde": "10,000",
+      "custo_unit": "0,37",
+      "custo_total": "3,72",
+      "turno": "Produção"
+    },
+    {
+      "data": "29/09/2025",
+      "hora": "20:04:10",
+      "produto": "(prod) Recheio Quiche Cebola (kg)",
+      "qtde": "11,000",
+      "custo_unit": "9,88",
+      "custo_total": "108,66",
+      "turno": "Produção"
+    },
+    {
+      "data": "29/09/2025",
+      "hora": "20:04:08",
+      "produto": "(prod) Recheio Quiche Alho Poro (kg)",
+      "qtde": "11,000",
+      "custo_unit": "12,47",
+      "custo_total": "137,18",
+      "turno": "Produção"
+    },
+    {
+      "data": "29/09/2025",
+      "hora": "20:04:06",
+      "produto": "(prod) Recheio Quiche Presunto (kg)",
+      "qtde": "15,500",
+      "custo_unit": "20,79",
+      "custo_total": "322,22",
+      "turno": "Produção"
+    },
+    {
+      "data": "29/09/2025",
+      "hora": "20:01:12",
+      "produto": "(prod) Batido Bolim Pet (kg)",
+      "qtde": "8,400",
+      "custo_unit": "8,44",
+      "custo_total": "70,92",
+      "turno": "Produção"
+    },
+    {
+      "data": "29/09/2025",
+      "hora": "19:57:13",
+      "produto": "(prod) Batido Vulcao Red (un)",
+      "qtde": "1,000",
+      "custo_unit": "0,55",
+      "custo_total": "0,55",
+      "turno": "Produção"
+    },
+    {
+      "data": "29/09/2025",
+      "hora": "19:57:13",
+      "produto": "(prod) Batido Vulcao Chocolate (un)",
+      "qtde": "1,000",
+      "custo_unit": "0,99",
+      "custo_total": "0,99",
+      "turno": "Produção"
+    },
+    {
+      "data": "29/09/2025",
+      "hora": "19:57:12",
+      "produto": "(prod) Batido Vulcao Amendoin (un)",
+      "qtde": "1,000",
+      "custo_unit": "0,65",
+      "custo_total": "0,65",
+      "turno": "Produção"
+    },
+    {
+      "data": "29/09/2025",
+      "hora": "19:56:06",
+      "produto": "(prod) Batido Vulcao Cenoura (un)",
+      "qtde": "1,000",
+      "custo_unit": "0,50",
+      "custo_total": "0,50",
+      "turno": "Produção"
+    },
+    {
+      "data": "29/09/2025",
+      "hora": "19:54:35",
+      "produto": "(prod) Bolo Cenoura Cobertura Ingles (un)",
+      "qtde": "1,000",
+      "custo_unit": "7,26",
+      "custo_total": "7,26",
+      "turno": "Produção"
+    },
+    {
+      "data": "29/09/2025",
+      "hora": "19:54:33",
+      "produto": "(prod) Bolo Cenoura Ingles (un)",
+      "qtde": "1,000",
+      "custo_unit": "3,24",
+      "custo_total": "3,24",
+      "turno": "Produção"
+    },
+    {
+      "data": "29/09/2025",
+      "hora": "19:54:32",
+      "produto": "(prod) Bolo Cenoura F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "18,64",
+      "custo_total": "18,64",
+      "turno": "Produção"
+    },
+    {
+      "data": "29/09/2025",
+      "hora": "19:52:22",
+      "produto": "(prod) Batido Bolo Cenoura (kg)",
+      "qtde": "20,000",
+      "custo_unit": "6,26",
+      "custo_total": "125,18",
+      "turno": "Produção"
+    },
+    {
+      "data": "29/09/2025",
+      "hora": "19:05:22",
+      "produto": "(prod) Batido Bolo amendoin F22 (un)",
+      "qtde": "1,000",
+      "custo_unit": "6,52",
+      "custo_total": "6,52",
+      "turno": "Produção"
+    },
+    {
+      "data": "29/09/2025",
+      "hora": "19:04:19",
+      "produto": "(prod) Batido Bolo Amendoin (kg)",
+      "qtde": "16,000",
+      "custo_unit": "8,15",
+      "custo_total": "130,41",
+      "turno": "Produção"
+    },
+    {
+      "data": "29/09/2025",
+      "hora": "18:55:31",
+      "produto": "(prod) Batido Red Velvet F30 (un)",
+      "qtde": "1,000",
+      "custo_unit": "13,85",
+      "custo_total": "13,85",
+      "turno": "Produção"
+    },
+    {
+      "data": "29/09/2025",
+      "hora": "18:55:30",
+      "produto": "(prod) Batido Red Velvet F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "6,93",
+      "custo_total": "6,93",
+      "turno": "Produção"
+    },
+    {
+      "data": "29/09/2025",
+      "hora": "18:55:29",
+      "produto": "(prod) Batido Red Velvet F22 (un)",
+      "qtde": "1,000",
+      "custo_unit": "5,54",
+      "custo_total": "5,54",
+      "turno": "Produção"
+    },
+    {
+      "data": "29/09/2025",
+      "hora": "18:55:29",
+      "produto": "(prod) Batido Red Velvet F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "2,08",
+      "custo_total": "2,08",
+      "turno": "Produção"
+    },
+    {
+      "data": "29/09/2025",
+      "hora": "18:55:28",
+      "produto": "(prod) Batido Red Velvet F20 (un)",
+      "qtde": "1,000",
+      "custo_unit": "4,85",
+      "custo_total": "4,85",
+      "turno": "Produção"
+    },
+    {
+      "data": "29/09/2025",
+      "hora": "18:54:39",
+      "produto": "(prod) Batido Red Velvet (kg)",
+      "qtde": "59,000",
+      "custo_unit": "6,93",
+      "custo_total": "408,56",
+      "turno": "Produção"
+    },
+    {
+      "data": "29/09/2025",
+      "hora": "18:51:42",
+      "produto": "(prod) Batido Nega Maluca F30 (un)",
+      "qtde": "1,000",
+      "custo_unit": "24,82",
+      "custo_total": "24,82",
+      "turno": "Produção"
+    },
+    {
+      "data": "29/09/2025",
+      "hora": "18:51:41",
+      "produto": "(prod) Batido Nega Maluca F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "14,89",
+      "custo_total": "14,89",
+      "turno": "Produção"
+    },
+    {
+      "data": "29/09/2025",
+      "hora": "18:51:40",
+      "produto": "(prod) Batido Nega Maluca F20 (un)",
+      "qtde": "1,000",
+      "custo_unit": "7,45",
+      "custo_total": "7,45",
+      "turno": "Produção"
+    },
+    {
+      "data": "29/09/2025",
+      "hora": "18:51:40",
+      "produto": "(prod) Batido Nega Maluca F14 (un)",
+      "qtde": "1,000",
+      "custo_unit": "3,72",
+      "custo_total": "3,72",
+      "turno": "Produção"
+    },
+    {
+      "data": "29/09/2025",
+      "hora": "18:51:39",
+      "produto": "(prod) Batido Nega Maluca F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "3,10",
+      "custo_total": "3,10",
+      "turno": "Produção"
+    },
+    {
+      "data": "29/09/2025",
+      "hora": "18:50:08",
+      "produto": "(prod) Batido Nega Maluca (kg)",
+      "qtde": "12,000",
+      "custo_unit": "12,41",
+      "custo_total": "148,94",
+      "turno": "Produção"
+    },
+    {
+      "data": "29/09/2025",
+      "hora": "18:49:44",
+      "produto": "(prod) Batido Nozes F30 (un)",
+      "qtde": "1,000",
+      "custo_unit": "33,52",
+      "custo_total": "33,52",
+      "turno": "Produção"
+    },
+    {
+      "data": "29/09/2025",
+      "hora": "18:49:43",
+      "produto": "(prod) Batido Choconozes F30 (un)",
+      "qtde": "1,000",
+      "custo_unit": "28,55",
+      "custo_total": "28,55",
+      "turno": "Produção"
+    },
+    {
+      "data": "29/09/2025",
+      "hora": "18:49:43",
+      "produto": "(prod) Batido Nozes F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "16,76",
+      "custo_total": "16,76",
+      "turno": "Produção"
+    },
+    {
+      "data": "29/09/2025",
+      "hora": "18:49:42",
+      "produto": "(prod) Batido Nozes F22 (un)",
+      "qtde": "1,000",
+      "custo_unit": "14,67",
+      "custo_total": "14,67",
+      "turno": "Produção"
+    },
+    {
+      "data": "29/09/2025",
+      "hora": "18:49:42",
+      "produto": "(prod) Batido Nozes F20 (un)",
+      "qtde": "1,000",
+      "custo_unit": "12,57",
+      "custo_total": "12,57",
+      "turno": "Produção"
+    },
+    {
+      "data": "29/09/2025",
+      "hora": "18:49:41",
+      "produto": "(prod) Batido Nozes F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "4,61",
+      "custo_total": "4,61",
+      "turno": "Produção"
+    },
+    {
+      "data": "29/09/2025",
+      "hora": "18:47:11",
+      "produto": "(prod) Batido de Nozes (kg)",
+      "qtde": "52,400",
+      "custo_unit": "20,95",
+      "custo_total": "1.097,87",
+      "turno": "Produção"
+    },
+    {
+      "data": "29/09/2025",
+      "hora": "18:43:00",
+      "produto": "(prod) Batido Choconozes F30 (un)",
+      "qtde": "1,000",
+      "custo_unit": "28,55",
+      "custo_total": "28,55",
+      "turno": "Produção"
+    },
+    {
+      "data": "29/09/2025",
+      "hora": "18:43:00",
+      "produto": "(prod) Batido Choconozes F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "16,99",
+      "custo_total": "16,99",
+      "turno": "Produção"
+    },
+    {
+      "data": "29/09/2025",
+      "hora": "18:42:59",
+      "produto": "(prod) Batido Choconozes F22 (un)",
+      "qtde": "1,000",
+      "custo_unit": "10,88",
+      "custo_total": "10,88",
+      "turno": "Produção"
+    },
+    {
+      "data": "29/09/2025",
+      "hora": "18:42:58",
+      "produto": "(prod) Batido Choconozes F20 (un)",
+      "qtde": "1,000",
+      "custo_unit": "8,56",
+      "custo_total": "8,56",
+      "turno": "Produção"
+    },
+    {
+      "data": "29/09/2025",
+      "hora": "18:42:58",
+      "produto": "(prod) Batido Choconozes F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "4,08",
+      "custo_total": "4,08",
+      "turno": "Produção"
+    },
+    {
+      "data": "29/09/2025",
+      "hora": "18:41:52",
+      "produto": "(prod) Batido Choconozes (kg)",
+      "qtde": "12,500",
+      "custo_unit": "13,59",
+      "custo_total": "169,93",
+      "turno": "Produção"
+    },
+    {
+      "data": "29/09/2025",
+      "hora": "18:41:05",
+      "produto": "(prod) Batido Preto F30 (un)",
+      "qtde": "1,000",
+      "custo_unit": "14,01",
+      "custo_total": "14,01",
+      "turno": "Produção"
+    },
+    {
+      "data": "29/09/2025",
+      "hora": "18:41:05",
+      "produto": "(prod) Batido Preto F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "7,19",
+      "custo_total": "7,19",
+      "turno": "Produção"
+    },
+    {
+      "data": "29/09/2025",
+      "hora": "18:41:04",
+      "produto": "(prod) Batido Preto F22 (un)",
+      "qtde": "1,000",
+      "custo_unit": "5,98",
+      "custo_total": "5,98",
+      "turno": "Produção"
+    },
+    {
+      "data": "29/09/2025",
+      "hora": "18:41:04",
+      "produto": "(prod) Batido Preto F20 (un)",
+      "qtde": "1,000",
+      "custo_unit": "4,67",
+      "custo_total": "4,67",
+      "turno": "Produção"
+    },
+    {
+      "data": "29/09/2025",
+      "hora": "18:41:03",
+      "produto": "(prod) Batido Preto F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "1,68",
+      "custo_total": "1,68",
+      "turno": "Produção"
+    },
+    {
+      "data": "29/09/2025",
+      "hora": "18:40:00",
+      "produto": "(prod) Batido Chocolate (kg)",
+      "qtde": "58,900",
+      "custo_unit": "9,34",
+      "custo_total": "550,13",
+      "turno": "Produção"
+    },
+    {
+      "data": "29/09/2025",
+      "hora": "18:38:58",
+      "produto": "(prod) Batido Branco F30 (un)",
+      "qtde": "1,000",
+      "custo_unit": "10,32",
+      "custo_total": "10,32",
+      "turno": "Produção"
+    },
+    {
+      "data": "29/09/2025",
+      "hora": "18:38:58",
+      "produto": "(prod) Batido Branco F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "5,30",
+      "custo_total": "5,30",
+      "turno": "Produção"
+    },
+    {
+      "data": "29/09/2025",
+      "hora": "18:38:57",
+      "produto": "(prod) Batido Branco F22 (un)",
+      "qtde": "1,000",
+      "custo_unit": "4,40",
+      "custo_total": "4,40",
+      "turno": "Produção"
+    },
+    {
+      "data": "29/09/2025",
+      "hora": "18:38:57",
+      "produto": "(prod) Batido Branco F20 (un)",
+      "qtde": "1,000",
+      "custo_unit": "3,44",
+      "custo_total": "3,44",
+      "turno": "Produção"
+    },
+    {
+      "data": "29/09/2025",
+      "hora": "18:38:56",
+      "produto": "(prod) Batido Branco F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "1,38",
+      "custo_total": "1,38",
+      "turno": "Produção"
+    },
+    {
+      "data": "29/09/2025",
+      "hora": "18:35:31",
+      "produto": "(prod) Batido Branco (kg)",
+      "qtde": "53,900",
+      "custo_unit": "6,88",
+      "custo_total": "370,88",
+      "turno": "Produção"
+    },
+    {
+      "data": "29/09/2025",
+      "hora": "18:29:39",
+      "produto": "(prod) Baba de Moca Grossa (kg)",
+      "qtde": "9,700",
+      "custo_unit": "16,94",
+      "custo_total": "164,30",
+      "turno": "Produção"
+    },
+    {
+      "data": "29/09/2025",
+      "hora": "18:29:09",
+      "produto": "(prod) Baba de Moca Fina (kg)",
+      "qtde": "9,620",
+      "custo_unit": "13,61",
+      "custo_total": "130,95",
+      "turno": "Produção"
+    },
+    {
+      "data": "26/09/2025",
+      "hora": "12:06:40",
+      "produto": "(prod) Pote Calda Chocolate 250gr (un)",
+      "qtde": "1,000",
+      "custo_unit": "5,01",
+      "custo_total": "5,01",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "26/09/2025",
+      "hora": "12:06:39",
+      "produto": "(prod) Pote Calda Chocolate 100gr (un)",
+      "qtde": "1,000",
+      "custo_unit": "2,48",
+      "custo_total": "2,48",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "25/09/2025",
+      "hora": "18:26:39",
+      "produto": "(prod) Merengue Pote 250gr (un)",
+      "qtde": "1,000",
+      "custo_unit": "3,63",
+      "custo_total": "3,63",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "25/09/2025",
+      "hora": "18:26:03",
+      "produto": "(prod) Merengue (kg)",
+      "qtde": "5,000",
+      "custo_unit": "8,77",
+      "custo_total": "43,87",
+      "turno": "Produção"
+    },
+    {
+      "data": "25/09/2025",
+      "hora": "16:26:39",
+      "produto": "(prod) Tortinha Choc Balcao (un)",
+      "qtde": "1,000",
+      "custo_unit": "2,59",
+      "custo_total": "2,59",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "25/09/2025",
+      "hora": "16:22:47",
+      "produto": "(prod) Fondue Namorados (un)",
+      "qtde": "1,000",
+      "custo_unit": "24,16",
+      "custo_total": "24,16",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "25/09/2025",
+      "hora": "16:21:59",
+      "produto": "(prod) Fondue (un)",
+      "qtde": "1,000",
+      "custo_unit": "12,13",
+      "custo_total": "12,13",
+      "turno": "Embalagens"
+    },
+    {
+      "data": "25/09/2025",
+      "hora": "16:17:03",
+      "produto": "(prod) Pavlova F20 (un)",
+      "qtde": "1,000",
+      "custo_unit": "28,31",
+      "custo_total": "28,31",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "25/09/2025",
+      "hora": "16:03:24",
+      "produto": "(prod) Calda Laranja 250gr (un)",
+      "qtde": "1,000",
+      "custo_unit": "3,27",
+      "custo_total": "3,27",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "25/09/2025",
+      "hora": "16:03:24",
+      "produto": "(prod) Calda Laranja 100gr (un)",
+      "qtde": "1,000",
+      "custo_unit": "1,78",
+      "custo_total": "1,78",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "25/09/2025",
+      "hora": "16:03:17",
+      "produto": "(prod) Calda Laranja (kg)",
+      "qtde": "2,500",
+      "custo_unit": "9,90",
+      "custo_total": "24,75",
+      "turno": "Produção"
+    },
+    {
+      "data": "25/09/2025",
+      "hora": "15:39:47",
+      "produto": "(prod) Gelada Coco Queimado F20 (un)",
+      "qtde": "1,000",
+      "custo_unit": "33,47",
+      "custo_total": "33,47",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "25/09/2025",
+      "hora": "15:39:46",
+      "produto": "(prod) Semi Gelada Coco Queimado F20 (un)",
+      "qtde": "1,000",
+      "custo_unit": "29,52",
+      "custo_total": "29,52",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "25/09/2025",
+      "hora": "15:39:03",
+      "produto": "(prod) Semi Gelada Coco Queimado F20 (un)",
+      "qtde": "1,000",
+      "custo_unit": "29,52",
+      "custo_total": "29,52",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "25/09/2025",
+      "hora": "15:10:47",
+      "produto": "(prod) Tortinha Baba Caixa 6 (un)",
+      "qtde": "1,000",
+      "custo_unit": "7,43",
+      "custo_total": "7,43",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "25/09/2025",
+      "hora": "15:07:59",
+      "produto": "(prod) Tortinha Baba Festa (un)",
+      "qtde": "1,000",
+      "custo_unit": "0,80",
+      "custo_total": "0,80",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "25/09/2025",
+      "hora": "15:07:58",
+      "produto": "(prod) Tortinha Baba Balcao (un)",
+      "qtde": "1,000",
+      "custo_unit": "1,79",
+      "custo_total": "1,79",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "25/09/2025",
+      "hora": "15:07:10",
+      "produto": "(prod) Tortinha Baba Balcao Semi (un)",
+      "qtde": "1,000",
+      "custo_unit": "0,65",
+      "custo_total": "0,65",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "25/09/2025",
+      "hora": "15:07:09",
+      "produto": "(prod) Tortinha Baba Festa Semi (un)",
+      "qtde": "1,000",
+      "custo_unit": "0,41",
+      "custo_total": "0,41",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "25/09/2025",
+      "hora": "15:04:50",
+      "produto": "(prod) Batido Tortinha Baba Festa Semi (un)",
+      "qtde": "1,000",
+      "custo_unit": "0,07",
+      "custo_total": "0,07",
+      "turno": "Produção"
+    },
+    {
+      "data": "25/09/2025",
+      "hora": "15:04:49",
+      "produto": "(prod) Batido Tortinha Baba Balcao Semi (un)",
+      "qtde": "1,000",
+      "custo_unit": "0,14",
+      "custo_total": "0,14",
+      "turno": "Produção"
+    },
+    {
+      "data": "25/09/2025",
+      "hora": "14:47:45",
+      "produto": "(prod) Tortinha Baba Festa Semi (un)",
+      "qtde": "1,000",
+      "custo_unit": "0,41",
+      "custo_total": "0,41",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "25/09/2025",
+      "hora": "13:08:02",
+      "produto": "(prod) Tortinha Baba Festa (un)",
+      "qtde": "5,000",
+      "custo_unit": "19,18",
+      "custo_total": "95,90",
+      "turno": "Produção"
+    },
+    {
+      "data": "25/09/2025",
+      "hora": "13:08:00",
+      "produto": "(prod) Tortinha Baba Balcao (un)",
+      "qtde": "5,000",
+      "custo_unit": "19,50",
+      "custo_total": "97,48",
+      "turno": "Produção"
+    },
+    {
+      "data": "25/09/2025",
+      "hora": "13:07:49",
+      "produto": "(prod) Batido Tortinha Baba Festa Semi (un)",
+      "qtde": "5,000",
+      "custo_unit": "0,10",
+      "custo_total": "0,48",
+      "turno": "Produção"
+    },
+    {
+      "data": "25/09/2025",
+      "hora": "13:07:49",
+      "produto": "(prod) Batido Tortinha Baba Balcao Semi (un)",
+      "qtde": "5,000",
+      "custo_unit": "0,14",
+      "custo_total": "0,69",
+      "turno": "Produção"
+    },
+    {
+      "data": "25/09/2025",
+      "hora": "13:07:41",
+      "produto": "(prod) Batido Tortinha Baba Balcao Semi (un)",
+      "qtde": "5,000",
+      "custo_unit": "0,14",
+      "custo_total": "0,69",
+      "turno": "Produção"
+    },
+    {
+      "data": "25/09/2025",
+      "hora": "13:07:41",
+      "produto": "(prod) Batido Tortinha Baba Festa Semi (un)",
+      "qtde": "20,000",
+      "custo_unit": "0,10",
+      "custo_total": "2,06",
+      "turno": "Produção"
+    },
+    {
+      "data": "25/09/2025",
+      "hora": "13:07:29",
+      "produto": "(prod) Batido Branco (kg)",
+      "qtde": "5,390",
+      "custo_unit": "6,88",
+      "custo_total": "37,09",
+      "turno": "Produção"
+    },
+    {
+      "data": "25/09/2025",
+      "hora": "12:59:54",
+      "produto": "(prod) Tortinha Choc Festa (un)",
+      "qtde": "1,000",
+      "custo_unit": "0,89",
+      "custo_total": "0,89",
+      "turno": "Produção"
+    },
+    {
+      "data": "25/09/2025",
+      "hora": "12:58:58",
+      "produto": "(prod) Tortinha Choc Festa Semi (un)",
+      "qtde": "1,000",
+      "custo_unit": "0,52",
+      "custo_total": "0,52",
+      "turno": "Produção"
+    },
+    {
+      "data": "25/09/2025",
+      "hora": "12:57:47",
+      "produto": "(prod) Tortinhas Mimos de Mãe - Dia das Maes 2026 (6 un)",
+      "qtde": "1,000",
+      "custo_unit": "9,03",
+      "custo_total": "9,03",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "25/09/2025",
+      "hora": "12:56:32",
+      "produto": "(prod) Tortinha Choc Balcao (un)",
+      "qtde": "1,000",
+      "custo_unit": "2,59",
+      "custo_total": "2,59",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "25/09/2025",
+      "hora": "12:55:19",
+      "produto": "(prod) Tortinha Choc Balcao Semi (un)",
+      "qtde": "1,000",
+      "custo_unit": "1,17",
+      "custo_total": "1,17",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "25/09/2025",
+      "hora": "12:53:11",
+      "produto": "(prod) Tortinha Choc Balcao Semi (un)",
+      "qtde": "1.440,000",
+      "custo_unit": "0,02",
+      "custo_total": "26,03",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "25/09/2025",
+      "hora": "12:53:10",
+      "produto": "(prod) Tortinha Choc Festa (un)",
+      "qtde": "20,000",
+      "custo_unit": "1,07",
+      "custo_total": "21,34",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "25/09/2025",
+      "hora": "12:47:42",
+      "produto": "(prod) Tortinha Choc Balcao Semi (un)",
+      "qtde": "360,000",
+      "custo_unit": "0,02",
+      "custo_total": "6,47",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "25/09/2025",
+      "hora": "12:47:41",
+      "produto": "(prod) Tortinha Baba Festa Semi (un)",
+      "qtde": "5,000",
+      "custo_unit": "0,37",
+      "custo_total": "1,84",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "25/09/2025",
+      "hora": "12:46:38",
+      "produto": "(prod) Nova Cobertura de Brigadeiro (kg)",
+      "qtde": "7,600",
+      "custo_unit": "19,84",
+      "custo_total": "150,81",
+      "turno": "Produção"
+    },
+    {
+      "data": "25/09/2025",
+      "hora": "12:44:45",
+      "produto": "(prod) Tortinha Choc Balcao Semi (un)",
+      "qtde": "72,000",
+      "custo_unit": "0,02",
+      "custo_total": "1,16",
+      "turno": "Produção"
+    },
+    {
+      "data": "25/09/2025",
+      "hora": "12:44:44",
+      "produto": "(prod) Tortinha Choc Festa (un)",
+      "qtde": "1,000",
+      "custo_unit": "0,91",
+      "custo_total": "0,91",
+      "turno": "Produção"
+    },
+    {
+      "data": "25/09/2025",
+      "hora": "12:41:19",
+      "produto": "(prod) Tortinha Choc Balcao Semi (un)",
+      "qtde": "72,000",
+      "custo_unit": "0,02",
+      "custo_total": "1,16",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "25/09/2025",
+      "hora": "12:37:13",
+      "produto": "(prod) Tortinhas Mimos de Mãe - Dia das Maes 2026 (6 un)",
+      "qtde": "1,000",
+      "custo_unit": "118,62",
+      "custo_total": "118,62",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "25/09/2025",
+      "hora": "12:37:04",
+      "produto": "(prod) Tortinha Choc Festa (un)",
+      "qtde": "1,000",
+      "custo_unit": "19,33",
+      "custo_total": "19,33",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "25/09/2025",
+      "hora": "12:37:03",
+      "produto": "(prod) Tortinha Choc Balcao (un)",
+      "qtde": "1,000",
+      "custo_unit": "19,86",
+      "custo_total": "19,86",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "25/09/2025",
+      "hora": "12:36:48",
+      "produto": "(prod) Tortinha Choc Balcao Semi (un)",
+      "qtde": "1.440,000",
+      "custo_unit": "0,02",
+      "custo_total": "26,00",
+      "turno": "Produção"
+    },
+    {
+      "data": "25/09/2025",
+      "hora": "12:36:47",
+      "produto": "(prod) Tortinha Choc Festa Semi (un)",
+      "qtde": "50,000",
+      "custo_unit": "0,54",
+      "custo_total": "27,12",
+      "turno": "Produção"
+    },
+    {
+      "data": "25/09/2025",
+      "hora": "12:36:38",
+      "produto": "(prod) Batido Nega Maluca (kg)",
+      "qtde": "6,000",
+      "custo_unit": "12,38",
+      "custo_total": "74,29",
+      "turno": "Produção"
+    },
+    {
+      "data": "25/09/2025",
+      "hora": "12:27:21",
+      "produto": "(prod) Pate Secreto 180gr (un)",
+      "qtde": "1,000",
+      "custo_unit": "9,31",
+      "custo_total": "9,31",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "25/09/2025",
+      "hora": "12:21:37",
+      "produto": "(prod) Pate Secreto 300gr (un)",
+      "qtde": "1,000",
+      "custo_unit": "12,51",
+      "custo_total": "12,51",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "25/09/2025",
+      "hora": "12:18:34",
+      "produto": "(prod) Pate Figado Galinha (kg)",
+      "qtde": "4,500",
+      "custo_unit": "22,78",
+      "custo_total": "102,50",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "25/09/2025",
+      "hora": "11:41:34",
+      "produto": "(prod) Bolo Pascoa Cenoura Inglês (un)",
+      "qtde": "1,000",
+      "custo_unit": "7,06",
+      "custo_total": "7,06",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "25/09/2025",
+      "hora": "11:41:32",
+      "produto": "(prod) Bolo Pascoa Chocolate Inglês (un)",
+      "qtde": "1,000",
+      "custo_unit": "8,17",
+      "custo_total": "8,17",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "25/09/2025",
+      "hora": "11:39:30",
+      "produto": "(prod) Bolo Cenoura Ingles (un)",
+      "qtde": "2,000",
+      "custo_unit": "3,24",
+      "custo_total": "6,47",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "25/09/2025",
+      "hora": "11:39:29",
+      "produto": "(prod) Bolo Chocolate Ingles (un)",
+      "qtde": "2,000",
+      "custo_unit": "5,38",
+      "custo_total": "10,77",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "25/09/2025",
+      "hora": "11:14:58",
+      "produto": "(prod) Vulcao Pascoa Chocolate (un)",
+      "qtde": "1,000",
+      "custo_unit": "3,48",
+      "custo_total": "3,48",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "25/09/2025",
+      "hora": "11:10:29",
+      "produto": "(prod) Vulcao Pascoa Cenoura (un)",
+      "qtde": "1,000",
+      "custo_unit": "4,79",
+      "custo_total": "4,79",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "25/09/2025",
+      "hora": "11:09:53",
+      "produto": "(prod) Batido Vulcao Cenoura (un)",
+      "qtde": "1,000",
+      "custo_unit": "0,50",
+      "custo_total": "0,50",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "25/09/2025",
+      "hora": "11:09:07",
+      "produto": "(prod) Vulcao Pascoa Chocolate (un)",
+      "qtde": "1,000",
+      "custo_unit": "2,83",
+      "custo_total": "2,83",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "25/09/2025",
+      "hora": "11:08:33",
+      "produto": "(prod) Batido Vulcao Chocolate (un)",
+      "qtde": "3,000",
+      "custo_unit": "0,99",
+      "custo_total": "2,97",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "25/09/2025",
+      "hora": "11:07:20",
+      "produto": "(prod) Torta Pascoa Chocolate F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "47,45",
+      "custo_total": "47,45",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "25/09/2025",
+      "hora": "11:07:19",
+      "produto": "(prod) Torta Pascoa Chocolate F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "22,67",
+      "custo_total": "22,67",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "25/09/2025",
+      "hora": "11:06:23",
+      "produto": "(prod) Semi Tentacao/Emilia F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "15,14",
+      "custo_total": "15,14",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "25/09/2025",
+      "hora": "11:06:22",
+      "produto": "(prod) Semi Tentacao/Emilia F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "33,75",
+      "custo_total": "33,75",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "24/09/2025",
+      "hora": "18:14:01",
+      "produto": "(prod) Geleia Morango 250gr (un)",
+      "qtde": "1,000",
+      "custo_unit": "6,49",
+      "custo_total": "6,49",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "24/09/2025",
+      "hora": "18:13:59",
+      "produto": "(prod) Geleia Morango 100gr (un)",
+      "qtde": "1,000",
+      "custo_unit": "3,07",
+      "custo_total": "3,07",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "24/09/2025",
+      "hora": "18:13:58",
+      "produto": "(prod) Geleia Goiaba 250gr (un)",
+      "qtde": "1,000",
+      "custo_unit": "3,91",
+      "custo_total": "3,91",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "24/09/2025",
+      "hora": "18:13:56",
+      "produto": "(prod) Geleia Goiaba 100gr (un)",
+      "qtde": "1,000",
+      "custo_unit": "2,04",
+      "custo_total": "2,04",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "24/09/2025",
+      "hora": "18:13:55",
+      "produto": "(prod) Geleia Frutas Vermelhas 250gr (un)",
+      "qtde": "1,000",
+      "custo_unit": "8,55",
+      "custo_total": "8,55",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "24/09/2025",
+      "hora": "18:13:54",
+      "produto": "(prod) Geleia Frutas Vermelhas 100gr (un)",
+      "qtde": "1,000",
+      "custo_unit": "3,90",
+      "custo_total": "3,90",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "24/09/2025",
+      "hora": "18:13:52",
+      "produto": "(prod) Geleia Damasco 250gr (un)",
+      "qtde": "1,000",
+      "custo_unit": "5,90",
+      "custo_total": "5,90",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "24/09/2025",
+      "hora": "18:13:50",
+      "produto": "(prod) Geleia Damasco 100gr (un)",
+      "qtde": "1,000",
+      "custo_unit": "2,83",
+      "custo_total": "2,83",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "24/09/2025",
+      "hora": "17:05:56",
+      "produto": "(prod) Geleia Damasco (kg)",
+      "qtde": "4,600",
+      "custo_unit": "20,43",
+      "custo_total": "93,97",
+      "turno": "Produção"
+    },
+    {
+      "data": "24/09/2025",
+      "hora": "17:05:56",
+      "produto": "(prod) Geleia Goiaba (kg)",
+      "qtde": "3,900",
+      "custo_unit": "12,47",
+      "custo_total": "48,63",
+      "turno": "Produção"
+    },
+    {
+      "data": "24/09/2025",
+      "hora": "17:05:55",
+      "produto": "(prod) Geleia Frutas Vermelhas (kg)",
+      "qtde": "3,900",
+      "custo_unit": "31,05",
+      "custo_total": "121,09",
+      "turno": "Produção"
+    },
+    {
+      "data": "24/09/2025",
+      "hora": "17:05:55",
+      "produto": "(prod) Geleia Morango (kg)",
+      "qtde": "4,050",
+      "custo_unit": "22,80",
+      "custo_total": "92,34",
+      "turno": "Produção"
+    },
+    {
+      "data": "24/09/2025",
+      "hora": "16:04:17",
+      "produto": "(prod) Bombom de Uva (un)",
+      "qtde": "1,000",
+      "custo_unit": "0,74",
+      "custo_total": "0,74",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "24/09/2025",
+      "hora": "16:04:16",
+      "produto": "(prod) Bombom de Morango (un)",
+      "qtde": "1,000",
+      "custo_unit": "1,10",
+      "custo_total": "1,10",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "24/09/2025",
+      "hora": "16:02:49",
+      "produto": "(prod) Brigadeiro Morango Tradicional (un)",
+      "qtde": "1,000",
+      "custo_unit": "1,56",
+      "custo_total": "1,56",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "24/09/2025",
+      "hora": "16:02:48",
+      "produto": "(prod) Brigadeiro Morango Pistache (un)",
+      "qtde": "1,000",
+      "custo_unit": "2,89",
+      "custo_total": "2,89",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "24/09/2025",
+      "hora": "16:02:47",
+      "produto": "(prod) Brigadeiro Morango Dark (un)",
+      "qtde": "1,000",
+      "custo_unit": "2,16",
+      "custo_total": "2,16",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "24/09/2025",
+      "hora": "16:02:46",
+      "produto": "(prod) Brigadeiro Morango Brulle (un)",
+      "qtde": "1,000",
+      "custo_unit": "2,89",
+      "custo_total": "2,89",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "24/09/2025",
+      "hora": "16:02:45",
+      "produto": "(prod) Brigadeiro Morango Branco (un)",
+      "qtde": "1,000",
+      "custo_unit": "2,10",
+      "custo_total": "2,10",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "24/09/2025",
+      "hora": "15:58:14",
+      "produto": "(prod) Brigadeiro Pistache (un)",
+      "qtde": "1,000",
+      "custo_unit": "1,78",
+      "custo_total": "1,78",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "24/09/2025",
+      "hora": "15:58:13",
+      "produto": "(prod) Brigadeiro Churros (un)",
+      "qtde": "1,000",
+      "custo_unit": "0,19",
+      "custo_total": "0,19",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "24/09/2025",
+      "hora": "15:58:11",
+      "produto": "(prod) Brigadeiro Ninho C/Nutella (un)",
+      "qtde": "1,000",
+      "custo_unit": "0,19",
+      "custo_total": "0,19",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "24/09/2025",
+      "hora": "15:58:10",
+      "produto": "(prod) Brigadeiro Precioso Branco (un)",
+      "qtde": "1,000",
+      "custo_unit": "0,52",
+      "custo_total": "0,52",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "24/09/2025",
+      "hora": "15:58:10",
+      "produto": "(prod) Brigadeiro Precioso Preto (un)",
+      "qtde": "1,000",
+      "custo_unit": "0,45",
+      "custo_total": "0,45",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "24/09/2025",
+      "hora": "15:58:09",
+      "produto": "(prod) Brigadeiro Nozes (un)",
+      "qtde": "1,000",
+      "custo_unit": "0,75",
+      "custo_total": "0,75",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "24/09/2025",
+      "hora": "15:58:08",
+      "produto": "(prod) Brigadeiro Pingo de Emilia (un)",
+      "qtde": "1,000",
+      "custo_unit": "0,57",
+      "custo_total": "0,57",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "24/09/2025",
+      "hora": "15:58:07",
+      "produto": "(prod) Brigadeiro Dois Amores (un)",
+      "qtde": "1,000",
+      "custo_unit": "0,34",
+      "custo_total": "0,34",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "24/09/2025",
+      "hora": "15:58:06",
+      "produto": "(prod) Brigadeiro Divertido (un)",
+      "qtde": "1,000",
+      "custo_unit": "0,46",
+      "custo_total": "0,46",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "24/09/2025",
+      "hora": "15:58:05",
+      "produto": "(prod) Brigadeiro Dark (un)",
+      "qtde": "1,000",
+      "custo_unit": "0,99",
+      "custo_total": "0,99",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "24/09/2025",
+      "hora": "15:58:04",
+      "produto": "(prod) Brigadeiro Chocolate Branco (un)",
+      "qtde": "1,000",
+      "custo_unit": "0,98",
+      "custo_total": "0,98",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "24/09/2025",
+      "hora": "15:58:02",
+      "produto": "(prod) Brigadeiro Caramelo (un)",
+      "qtde": "1,000",
+      "custo_unit": "0,89",
+      "custo_total": "0,89",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "24/09/2025",
+      "hora": "15:58:01",
+      "produto": "(prod) Brigadeiro Brulle (un)",
+      "qtde": "1,000",
+      "custo_unit": "0,29",
+      "custo_total": "0,29",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "24/09/2025",
+      "hora": "15:58:00",
+      "produto": "(prod) Brigadeiro Tradicional (un)",
+      "qtde": "1,000",
+      "custo_unit": "0,40",
+      "custo_total": "0,40",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "24/09/2025",
+      "hora": "15:57:58",
+      "produto": "(prod) Brigadeiro Beijinho (un)",
+      "qtde": "1,000",
+      "custo_unit": "0,25",
+      "custo_total": "0,25",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "24/09/2025",
+      "hora": "15:45:56",
+      "produto": "(prod) Nova Massa Brigadeiro Branco (kg)",
+      "qtde": "7,100",
+      "custo_unit": "18,32",
+      "custo_total": "130,06",
+      "turno": "Produção"
+    },
+    {
+      "data": "24/09/2025",
+      "hora": "15:45:55",
+      "produto": "(prod) Nova Massa Brigadeiro Preto (kg)",
+      "qtde": "9,930",
+      "custo_unit": "15,47",
+      "custo_total": "153,63",
+      "turno": "Produção"
+    },
+    {
+      "data": "24/09/2025",
+      "hora": "15:44:39",
+      "produto": "(prod) Massa Brigadeiro Preto (kg)",
+      "qtde": "6,200",
+      "custo_unit": "16,78",
+      "custo_total": "104,04",
+      "turno": "Produção"
+    },
+    {
+      "data": "24/09/2025",
+      "hora": "15:44:38",
+      "produto": "(prod) Massa Brigadeiro Pistache (kg)",
+      "qtde": "5,100",
+      "custo_unit": "41,82",
+      "custo_total": "213,26",
+      "turno": "Produção"
+    },
+    {
+      "data": "24/09/2025",
+      "hora": "15:44:37",
+      "produto": "(prod) Massa Brigadeiro Nozes (kg)",
+      "qtde": "5,100",
+      "custo_unit": "22,87",
+      "custo_total": "116,62",
+      "turno": "Produção"
+    },
+    {
+      "data": "24/09/2025",
+      "hora": "15:44:36",
+      "produto": "(prod) Massa Brigadeiro Ninho (kg)",
+      "qtde": "5,250",
+      "custo_unit": "19,32",
+      "custo_total": "101,42",
+      "turno": "Produção"
+    },
+    {
+      "data": "24/09/2025",
+      "hora": "15:44:35",
+      "produto": "(prod) Massa Brigadeiro Brulle (kg)",
+      "qtde": "3,600",
+      "custo_unit": "22,86",
+      "custo_total": "82,31",
+      "turno": "Produção"
+    },
+    {
+      "data": "24/09/2025",
+      "hora": "15:44:34",
+      "produto": "(prod) Massa Brigadeiro Branco (kg)",
+      "qtde": "7,100",
+      "custo_unit": "12,96",
+      "custo_total": "92,00",
+      "turno": "Produção"
+    },
+    {
+      "data": "24/09/2025",
+      "hora": "15:44:34",
+      "produto": "(prod) Massa Brigadeiro Beijinho (kg)",
+      "qtde": "4,100",
+      "custo_unit": "19,40",
+      "custo_total": "79,55",
+      "turno": "Produção"
+    },
+    {
+      "data": "24/09/2025",
+      "hora": "15:15:29",
+      "produto": "(prod) Italianinho (un)",
+      "qtde": "1,000",
+      "custo_unit": "1,26",
+      "custo_total": "1,26",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "24/09/2025",
+      "hora": "15:14:41",
+      "produto": "(prod) Pao Italiano (un)",
+      "qtde": "1,000",
+      "custo_unit": "0,30",
+      "custo_total": "0,30",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "24/09/2025",
+      "hora": "15:13:20",
+      "produto": "(prod) Doguinho (un)",
+      "qtde": "1,000",
+      "custo_unit": "0,61",
+      "custo_total": "0,61",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "24/09/2025",
+      "hora": "15:12:41",
+      "produto": "(prod) Massa Pao Italiano (kg)",
+      "qtde": "3,580",
+      "custo_unit": "7,43",
+      "custo_total": "26,59",
+      "turno": "Produção"
+    },
+    {
+      "data": "24/09/2025",
+      "hora": "14:58:43",
+      "produto": "(prod) Empadao Frango F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "34,31",
+      "custo_total": "34,31",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "24/09/2025",
+      "hora": "14:57:01",
+      "produto": "(prod) Empadao Frango F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "15,27",
+      "custo_total": "15,27",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "24/09/2025",
+      "hora": "14:56:53",
+      "produto": "(prod) Recheio de Frango (kg)",
+      "qtde": "7,500",
+      "custo_unit": "12,40",
+      "custo_total": "92,97",
+      "turno": "Produção"
+    },
+    {
+      "data": "24/09/2025",
+      "hora": "13:01:27",
+      "produto": "(prod) Quiche Presunto F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "34,55",
+      "custo_total": "34,55",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "24/09/2025",
+      "hora": "13:01:26",
+      "produto": "(prod) Quiche Presunto F9 (un)",
+      "qtde": "1,000",
+      "custo_unit": "1,13",
+      "custo_total": "1,13",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "24/09/2025",
+      "hora": "13:01:24",
+      "produto": "(prod) Quiche Presunto F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "1,41",
+      "custo_total": "1,41",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "24/09/2025",
+      "hora": "13:01:15",
+      "produto": "(prod) Base Quiche F9 (un)",
+      "qtde": "1,000",
+      "custo_unit": "0,30",
+      "custo_total": "0,30",
+      "turno": "Produção"
+    },
+    {
+      "data": "24/09/2025",
+      "hora": "13:01:15",
+      "produto": "(prod) Base Quiche F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "2,61",
+      "custo_total": "2,61",
+      "turno": "Produção"
+    },
+    {
+      "data": "24/09/2025",
+      "hora": "13:01:14",
+      "produto": "(prod) Base Quiche F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "0,37",
+      "custo_total": "0,37",
+      "turno": "Produção"
+    },
+    {
+      "data": "24/09/2025",
+      "hora": "13:01:06",
+      "produto": "(prod) Recheio Quiche Presunto (kg)",
+      "qtde": "1,550",
+      "custo_unit": "20,82",
+      "custo_total": "32,27",
+      "turno": "Produção"
+    },
+    {
+      "data": "24/09/2025",
+      "hora": "12:41:49",
+      "produto": "(prod) Quiche Alho Poro F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "27,24",
+      "custo_total": "27,24",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "24/09/2025",
+      "hora": "12:41:48",
+      "produto": "(prod) Quiche Alho Poro F9 (un)",
+      "qtde": "1,000",
+      "custo_unit": "1,29",
+      "custo_total": "1,29",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "24/09/2025",
+      "hora": "12:41:47",
+      "produto": "(prod) Quiche Alho Poro F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "1,49",
+      "custo_total": "1,49",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "24/09/2025",
+      "hora": "12:41:36",
+      "produto": "(prod) Base Quiche F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "2,61",
+      "custo_total": "2,61",
+      "turno": "Produção"
+    },
+    {
+      "data": "24/09/2025",
+      "hora": "12:41:34",
+      "produto": "(prod) Base Quiche F9 (un)",
+      "qtde": "1,000",
+      "custo_unit": "0,30",
+      "custo_total": "0,30",
+      "turno": "Produção"
+    },
+    {
+      "data": "24/09/2025",
+      "hora": "12:41:34",
+      "produto": "(prod) Base Quiche F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "0,37",
+      "custo_total": "0,37",
+      "turno": "Produção"
+    },
+    {
+      "data": "24/09/2025",
+      "hora": "12:41:17",
+      "produto": "(prod) Recheio Quiche Alho Poro (kg)",
+      "qtde": "2,200",
+      "custo_unit": "12,54",
+      "custo_total": "27,59",
+      "turno": "Produção"
+    },
+    {
+      "data": "24/09/2025",
+      "hora": "12:34:31",
+      "produto": "(prod) Quiche Cebola F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "24,94",
+      "custo_total": "24,94",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "24/09/2025",
+      "hora": "12:32:32",
+      "produto": "(prod) Base Quiche F9 (un)",
+      "qtde": "1,000",
+      "custo_unit": "0,30",
+      "custo_total": "0,30",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "24/09/2025",
+      "hora": "12:32:30",
+      "produto": "(prod) Quiche Cebola F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "17,51",
+      "custo_total": "17,51",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "24/09/2025",
+      "hora": "12:32:27",
+      "produto": "(prod) Quiche Cebola F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "1,35",
+      "custo_total": "1,35",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "24/09/2025",
+      "hora": "12:31:20",
+      "produto": "(prod) Base Quiche F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "2,61",
+      "custo_total": "2,61",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "24/09/2025",
+      "hora": "12:31:20",
+      "produto": "(prod) Base Quiche F9 (un)",
+      "qtde": "1,000",
+      "custo_unit": "0,30",
+      "custo_total": "0,30",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "24/09/2025",
+      "hora": "12:31:20",
+      "produto": "(prod) Base Quiche F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "0,37",
+      "custo_total": "0,37",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "24/09/2025",
+      "hora": "12:31:13",
+      "produto": "(prod) Massa Salgada (kg)",
+      "qtde": "4,770",
+      "custo_unit": "7,44",
+      "custo_total": "35,51",
+      "turno": "Produção"
+    },
+    {
+      "data": "24/09/2025",
+      "hora": "12:31:04",
+      "produto": "(prod) Recheio Quiche Cebola (kg)",
+      "qtde": "2,200",
+      "custo_unit": "9,88",
+      "custo_total": "21,73",
+      "turno": "Produção"
+    },
+    {
+      "data": "23/09/2025",
+      "hora": "16:52:00",
+      "produto": "(prod) Aurora Enfeitada F30 (un)",
+      "qtde": "1,000",
+      "custo_unit": "46,47",
+      "custo_total": "46,47",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "23/09/2025",
+      "hora": "16:51:59",
+      "produto": "(prod) Aurora Enfeitada F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "25,86",
+      "custo_total": "25,86",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "23/09/2025",
+      "hora": "16:51:58",
+      "produto": "(prod) Aurora Enfeitada F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "11,47",
+      "custo_total": "11,47",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "23/09/2025",
+      "hora": "16:51:10",
+      "produto": "(prod) Semi Aurora/Aurora Enfeitada F30 (un)",
+      "qtde": "1,000",
+      "custo_unit": "41,20",
+      "custo_total": "41,20",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "23/09/2025",
+      "hora": "16:51:09",
+      "produto": "(prod) Semi Aurora/Aurora Enfeitada F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "22,53",
+      "custo_total": "22,53",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "23/09/2025",
+      "hora": "16:51:08",
+      "produto": "(prod) Semi Aurora/Aurora Enfeitada F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "10,59",
+      "custo_total": "10,59",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "23/09/2025",
+      "hora": "15:59:17",
+      "produto": "(prod) Quebra Nozes F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "46,79",
+      "custo_total": "46,79",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "23/09/2025",
+      "hora": "15:58:13",
+      "produto": "(prod) Semi Quebra Nozes F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "33,44",
+      "custo_total": "33,44",
+      "turno": "Produção"
+    },
+    {
+      "data": "23/09/2025",
+      "hora": "15:41:27",
+      "produto": "(prod) Sino Nozes Natal 2025 (un)",
+      "qtde": "1,000",
+      "custo_unit": "45,10",
+      "custo_total": "45,10",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "23/09/2025",
+      "hora": "15:40:49",
+      "produto": "(prod) Semi Sino Nozes (un)",
+      "qtde": "1,000",
+      "custo_unit": "31,38",
+      "custo_total": "31,38",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "23/09/2025",
+      "hora": "15:40:01",
+      "produto": "(prod) Batido Sino Nozes (un)",
+      "qtde": "1,000",
+      "custo_unit": "14,37",
+      "custo_total": "14,37",
+      "turno": "Produção"
+    },
+    {
+      "data": "23/09/2025",
+      "hora": "15:25:09",
+      "produto": "(prod) Fios de Ovos Pote 250gr (un)",
+      "qtde": "1,000",
+      "custo_unit": "7,25",
+      "custo_total": "7,25",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "23/09/2025",
+      "hora": "15:23:22",
+      "produto": "(prod) Calda Fios de Ovos (kg)",
+      "qtde": "1,000",
+      "custo_unit": "8,03",
+      "custo_total": "8,03",
+      "turno": "Produção"
+    },
+    {
+      "data": "23/09/2025",
+      "hora": "15:22:24",
+      "produto": "(prod) Fios de Ovos (kg)",
+      "qtde": "1,000",
+      "custo_unit": "32,30",
+      "custo_total": "32,30",
+      "turno": "Produção"
+    },
+    {
+      "data": "23/09/2025",
+      "hora": "15:20:18",
+      "produto": "(prod) Fios de Ovos (kg)",
+      "qtde": "1.000,000",
+      "custo_unit": "0,03",
+      "custo_total": "32,30",
+      "turno": "Produção"
+    },
+    {
+      "data": "23/09/2025",
+      "hora": "15:03:46",
+      "produto": "(prod) Bolo Amendoin F22 (un)",
+      "qtde": "1,000",
+      "custo_unit": "23,73",
+      "custo_total": "23,73",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "23/09/2025",
+      "hora": "15:02:54",
+      "produto": "(prod) Semi Bolo Amendoin F22 (un)",
+      "qtde": "1,000",
+      "custo_unit": "15,46",
+      "custo_total": "15,46",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "23/09/2025",
+      "hora": "15:02:03",
+      "produto": "(prod) Batido Bolo amendoin F22 (un)",
+      "qtde": "1,000",
+      "custo_unit": "6,52",
+      "custo_total": "6,52",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "23/09/2025",
+      "hora": "15:00:22",
+      "produto": "(prod) Bolo Amendoin F22 (un)",
+      "qtde": "1,000",
+      "custo_unit": "23,95",
+      "custo_total": "23,95",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "23/09/2025",
+      "hora": "14:59:50",
+      "produto": "(prod) Semi Bolo Amendoin F22 (un)",
+      "qtde": "1,000",
+      "custo_unit": "15,68",
+      "custo_total": "15,68",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "23/09/2025",
+      "hora": "14:58:40",
+      "produto": "(prod) Batido Bolo Amendoin (kg)",
+      "qtde": "1,600",
+      "custo_unit": "8,15",
+      "custo_total": "13,04",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "23/09/2025",
+      "hora": "14:56:41",
+      "produto": "(prod) Bolim Vulcao Divertido (un)",
+      "qtde": "1,000",
+      "custo_unit": "3,13",
+      "custo_total": "3,13",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "23/09/2025",
+      "hora": "14:56:39",
+      "produto": "(prod) Bolim Vulcao Red (un)",
+      "qtde": "1,000",
+      "custo_unit": "7,72",
+      "custo_total": "7,72",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "23/09/2025",
+      "hora": "14:56:38",
+      "produto": "(prod) Bolim Vulcao Cenoura (un)",
+      "qtde": "1,000",
+      "custo_unit": "7,61",
+      "custo_total": "7,61",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "23/09/2025",
+      "hora": "14:56:37",
+      "produto": "(prod) Bolim Vulcao C/Nutella (un)",
+      "qtde": "1,000",
+      "custo_unit": "4,06",
+      "custo_total": "4,06",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "23/09/2025",
+      "hora": "14:54:58",
+      "produto": "(prod) Bolim Pet (un)",
+      "qtde": "1,000",
+      "custo_unit": "0,95",
+      "custo_total": "0,95",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "23/09/2025",
+      "hora": "14:50:48",
+      "produto": "(prod) Bolim Pet (un)",
+      "qtde": "1,000",
+      "custo_unit": "0,95",
+      "custo_total": "0,95",
+      "turno": "Produção"
+    },
+    {
+      "data": "23/09/2025",
+      "hora": "14:33:21",
+      "produto": "(prod) Red Velvet F30 (un)",
+      "qtde": "1,000",
+      "custo_unit": "95,90",
+      "custo_total": "95,90",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "23/09/2025",
+      "hora": "14:33:20",
+      "produto": "(prod) Red Velvet F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "66,64",
+      "custo_total": "66,64",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "23/09/2025",
+      "hora": "14:33:18",
+      "produto": "(prod) Red Velvet F20 (un)",
+      "qtde": "1,000",
+      "custo_unit": "43,35",
+      "custo_total": "43,35",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "23/09/2025",
+      "hora": "14:33:16",
+      "produto": "(prod) Red Velvet F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "25,36",
+      "custo_total": "25,36",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "23/09/2025",
+      "hora": "14:31:45",
+      "produto": "(prod) Semi Red Velvet F30 (un)",
+      "qtde": "1,000",
+      "custo_unit": "68,24",
+      "custo_total": "68,24",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "23/09/2025",
+      "hora": "14:31:44",
+      "produto": "(prod) Semi Red Velvet F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "52,31",
+      "custo_total": "52,31",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "23/09/2025",
+      "hora": "14:31:42",
+      "produto": "(prod) Semi Red Velvet F20 (un)",
+      "qtde": "1,000",
+      "custo_unit": "32,90",
+      "custo_total": "32,90",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "23/09/2025",
+      "hora": "14:31:41",
+      "produto": "(prod) Semi Red Velvet F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "18,52",
+      "custo_total": "18,52",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "23/09/2025",
+      "hora": "14:30:10",
+      "produto": "(prod) Recheio Red Velvet (kg)",
+      "qtde": "7,400",
+      "custo_unit": "26,45",
+      "custo_total": "195,69",
+      "turno": "Produção"
+    },
+    {
+      "data": "23/09/2025",
+      "hora": "14:29:17",
+      "produto": "(prod) Batido Red Velvet F22 (un)",
+      "qtde": "1,000",
+      "custo_unit": "5,53",
+      "custo_total": "5,53",
+      "turno": "Produção"
+    },
+    {
+      "data": "23/09/2025",
+      "hora": "14:28:24",
+      "produto": "(prod) Batido Red Velvet F30 (un)",
+      "qtde": "1,000",
+      "custo_unit": "13,82",
+      "custo_total": "13,82",
+      "turno": "Produção"
+    },
+    {
+      "data": "23/09/2025",
+      "hora": "14:28:23",
+      "produto": "(prod) Batido Red Velvet F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "6,91",
+      "custo_total": "6,91",
+      "turno": "Produção"
+    },
+    {
+      "data": "23/09/2025",
+      "hora": "14:28:23",
+      "produto": "(prod) Batido Red Velvet F20 (un)",
+      "qtde": "1,000",
+      "custo_unit": "4,84",
+      "custo_total": "4,84",
+      "turno": "Produção"
+    },
+    {
+      "data": "23/09/2025",
+      "hora": "14:28:22",
+      "produto": "(prod) Batido Red Velvet F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "2,07",
+      "custo_total": "2,07",
+      "turno": "Produção"
+    },
+    {
+      "data": "23/09/2025",
+      "hora": "14:27:05",
+      "produto": "(prod) Batido Red Velvet (kg)",
+      "qtde": "5,900",
+      "custo_unit": "6,91",
+      "custo_total": "40,76",
+      "turno": "Produção"
+    },
+    {
+      "data": "23/09/2025",
+      "hora": "14:22:35",
+      "produto": "(prod) Batido Red Velvet (kg)",
+      "qtde": "5,900",
+      "custo_unit": "6,88",
+      "custo_total": "40,60",
+      "turno": "Produção"
+    },
+    {
+      "data": "23/09/2025",
+      "hora": "13:38:34",
+      "produto": "(prod) Bolo Cenoura Ingles (un)",
+      "qtde": "1,000",
+      "custo_unit": "3,24",
+      "custo_total": "3,24",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "23/09/2025",
+      "hora": "13:38:33",
+      "produto": "(prod) Bolo Cenoura F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "18,64",
+      "custo_total": "18,64",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "23/09/2025",
+      "hora": "13:38:31",
+      "produto": "(prod) Bolo Cenoura Cobertura Ingles (un)",
+      "qtde": "1,000",
+      "custo_unit": "7,09",
+      "custo_total": "7,09",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "23/09/2025",
+      "hora": "13:37:17",
+      "produto": "(prod) Batido Bolo Cenoura (kg)",
+      "qtde": "2,000",
+      "custo_unit": "6,26",
+      "custo_total": "12,52",
+      "turno": "Produção"
+    },
+    {
+      "data": "23/09/2025",
+      "hora": "13:24:23",
+      "produto": "(prod) Bolo Laranja Ingles (un)",
+      "qtde": "1,000",
+      "custo_unit": "3,82",
+      "custo_total": "3,82",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "23/09/2025",
+      "hora": "13:24:23",
+      "produto": "(prod) Bolo Laranja F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "15,32",
+      "custo_total": "15,32",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "23/09/2025",
+      "hora": "13:23:07",
+      "produto": "(prod) Batido Bolo Laranja (kg)",
+      "qtde": "5,220",
+      "custo_unit": "7,16",
+      "custo_total": "37,40",
+      "turno": "Produção"
+    },
+    {
+      "data": "23/09/2025",
+      "hora": "13:07:38",
+      "produto": "(prod) Charcada Pote Vidro 180gr (un)",
+      "qtde": "1,000",
+      "custo_unit": "8,05",
+      "custo_total": "8,05",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "23/09/2025",
+      "hora": "13:07:37",
+      "produto": "(prod) Charcada Pote 700gr (un)",
+      "qtde": "1,000",
+      "custo_unit": "25,12",
+      "custo_total": "25,12",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "23/09/2025",
+      "hora": "13:07:35",
+      "produto": "(prod) Charcada Pote 1400gr (un)",
+      "qtde": "1,000",
+      "custo_unit": "45,95",
+      "custo_total": "45,95",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "23/09/2025",
+      "hora": "13:07:34",
+      "produto": "(prod) Charcada Pote 100gr (un)",
+      "qtde": "1,000",
+      "custo_unit": "1,71",
+      "custo_total": "1,71",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "23/09/2025",
+      "hora": "13:07:21",
+      "produto": "(prod) Charcada (kg)",
+      "qtde": "3,300",
+      "custo_unit": "15,46",
+      "custo_total": "51,01",
+      "turno": "Produção"
+    },
+    {
+      "data": "23/09/2025",
+      "hora": "11:41:01",
+      "produto": "(prod) Quindim 60gr (un)",
+      "qtde": "1,000",
+      "custo_unit": "1,30",
+      "custo_total": "1,30",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "23/09/2025",
+      "hora": "11:40:23",
+      "produto": "(prod) Quindim (kg)",
+      "qtde": "2,280",
+      "custo_unit": "20,69",
+      "custo_total": "47,16",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "23/09/2025",
+      "hora": "11:37:49",
+      "produto": "(prod) Quindim 60gr (un)",
+      "qtde": "1,000",
+      "custo_unit": "1,07",
+      "custo_total": "1,07",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "23/09/2025",
+      "hora": "11:36:53",
+      "produto": "(prod) Quindim (kg)",
+      "qtde": "2,280",
+      "custo_unit": "16,81",
+      "custo_total": "38,33",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "23/09/2025",
+      "hora": "11:13:38",
+      "produto": "(prod) Torta Mousse Chocolate F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "51,90",
+      "custo_total": "51,90",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "23/09/2025",
+      "hora": "11:13:36",
+      "produto": "(prod) Torta Mousse Chocolate F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "20,19",
+      "custo_total": "20,19",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "23/09/2025",
+      "hora": "11:12:25",
+      "produto": "(prod) Semi Torta Mousse Chocolate F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "32,97",
+      "custo_total": "32,97",
+      "turno": "Produção"
+    },
+    {
+      "data": "23/09/2025",
+      "hora": "11:12:24",
+      "produto": "(prod) Semi Torta Mousse Chocolate F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "9,27",
+      "custo_total": "9,27",
+      "turno": "Produção"
+    },
+    {
+      "data": "23/09/2025",
+      "hora": "11:11:14",
+      "produto": "(prod) Base Torta Mousse Chocolate F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "10,30",
+      "custo_total": "10,30",
+      "turno": "Produção"
+    },
+    {
+      "data": "23/09/2025",
+      "hora": "11:11:14",
+      "produto": "(prod) Base Torta Mousse Chocolate F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "2,06",
+      "custo_total": "2,06",
+      "turno": "Produção"
+    },
+    {
+      "data": "23/09/2025",
+      "hora": "11:09:50",
+      "produto": "(prod) Recheio Torta Mousse Chocolate (kg)",
+      "qtde": "19,540",
+      "custo_unit": "20,61",
+      "custo_total": "402,63",
+      "turno": "Produção"
+    },
+    {
+      "data": "22/09/2025",
+      "hora": "19:07:34",
+      "produto": "(prod) Maravilha Abacaxi F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "51,99",
+      "custo_total": "51,99",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "22/09/2025",
+      "hora": "19:07:33",
+      "produto": "(prod) Maravilha Abacaxi F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "20,56",
+      "custo_total": "20,56",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "22/09/2025",
+      "hora": "19:07:13",
+      "produto": "(prod) Semi Maravilha Abacaxi F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "43,15",
+      "custo_total": "43,15",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "22/09/2025",
+      "hora": "19:07:11",
+      "produto": "(prod) Semi Maravilha Abacaxi F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "17,15",
+      "custo_total": "17,15",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "22/09/2025",
+      "hora": "19:07:02",
+      "produto": "(prod) Semi Acabada Maravilha Abacaxi F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "39,64",
+      "custo_total": "39,64",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "22/09/2025",
+      "hora": "19:07:01",
+      "produto": "(prod) Semi Acabada Maravilha Abacaxi F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "15,40",
+      "custo_total": "15,40",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "22/09/2025",
+      "hora": "17:22:59",
+      "produto": "(prod) Crocante F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "36,86",
+      "custo_total": "36,86",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "22/09/2025",
+      "hora": "17:22:58",
+      "produto": "(prod) Crocante F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "16,77",
+      "custo_total": "16,77",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "22/09/2025",
+      "hora": "17:21:23",
+      "produto": "(prod) Semi Crocante F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "33,97",
+      "custo_total": "33,97",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "22/09/2025",
+      "hora": "17:21:21",
+      "produto": "(prod) Semi Crocante F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "16,05",
+      "custo_total": "16,05",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "22/09/2025",
+      "hora": "17:20:14",
+      "produto": "(prod) Semi Acabada Crocante F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "27,04",
+      "custo_total": "27,04",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "22/09/2025",
+      "hora": "17:20:12",
+      "produto": "(prod) Semi Acabada Crocante F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "12,48",
+      "custo_total": "12,48",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "22/09/2025",
+      "hora": "16:55:29",
+      "produto": "(prod) Colorida F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "61,98",
+      "custo_total": "61,98",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "22/09/2025",
+      "hora": "16:54:46",
+      "produto": "(prod) Semi Colorida F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "35,50",
+      "custo_total": "35,50",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "22/09/2025",
+      "hora": "16:53:55",
+      "produto": "(prod) Semi Pronta Colorida F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "21,25",
+      "custo_total": "21,25",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "22/09/2025",
+      "hora": "16:49:58",
+      "produto": "(prod) Colorida F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "54,50",
+      "custo_total": "54,50",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "22/09/2025",
+      "hora": "16:49:56",
+      "produto": "(prod) Colorida F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "25,36",
+      "custo_total": "25,36",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "22/09/2025",
+      "hora": "16:49:21",
+      "produto": "(prod) Semi Colorida F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "28,02",
+      "custo_total": "28,02",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "22/09/2025",
+      "hora": "16:49:20",
+      "produto": "(prod) Semi Colorida F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "16,84",
+      "custo_total": "16,84",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "22/09/2025",
+      "hora": "16:48:26",
+      "produto": "(prod) Semi Pronta Colorida F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "13,77",
+      "custo_total": "13,77",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "22/09/2025",
+      "hora": "16:48:25",
+      "produto": "(prod) Semi Pronta Colorida F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "11,14",
+      "custo_total": "11,14",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "22/09/2025",
+      "hora": "16:46:59",
+      "produto": "(prod) Batido Preto F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "7,19",
+      "custo_total": "7,19",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "22/09/2025",
+      "hora": "16:46:58",
+      "produto": "(prod) Batido Preto F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "1,68",
+      "custo_total": "1,68",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "22/09/2025",
+      "hora": "16:45:03",
+      "produto": "(prod) Batido Chocolate (kg)",
+      "qtde": "5,890",
+      "custo_unit": "9,33",
+      "custo_total": "54,97",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "22/09/2025",
+      "hora": "16:30:20",
+      "produto": "(prod) Choconozes F30 (un)",
+      "qtde": "1,000",
+      "custo_unit": "95,74",
+      "custo_total": "95,74",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "22/09/2025",
+      "hora": "16:30:18",
+      "produto": "(prod) Choconozes F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "49,48",
+      "custo_total": "49,48",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "22/09/2025",
+      "hora": "16:30:16",
+      "produto": "(prod) Choconozes F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "19,63",
+      "custo_total": "19,63",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "22/09/2025",
+      "hora": "16:29:56",
+      "produto": "(prod) Semi Choconozes F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "46,25",
+      "custo_total": "46,25",
+      "turno": "Produção"
+    },
+    {
+      "data": "22/09/2025",
+      "hora": "16:29:55",
+      "produto": "(prod) Semi Choconozes F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "19,11",
+      "custo_total": "19,11",
+      "turno": "Produção"
+    },
+    {
+      "data": "22/09/2025",
+      "hora": "16:29:25",
+      "produto": "(prod) Semi Acabada Choconozes F30 (un)",
+      "qtde": "1,000",
+      "custo_unit": "75,48",
+      "custo_total": "75,48",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "22/09/2025",
+      "hora": "16:29:23",
+      "produto": "(prod) Semi Acabada Choconozes F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "39,32",
+      "custo_total": "39,32",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "22/09/2025",
+      "hora": "16:29:21",
+      "produto": "(prod) Semi Acabada Choconozes F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "15,55",
+      "custo_total": "15,55",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "22/09/2025",
+      "hora": "16:18:54",
+      "produto": "(prod) Batido Nega Maluca F30 (un)",
+      "qtde": "1,000",
+      "custo_unit": "24,76",
+      "custo_total": "24,76",
+      "turno": "Produção"
+    },
+    {
+      "data": "22/09/2025",
+      "hora": "16:18:53",
+      "produto": "(prod) Batido Nega Maluca F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "14,86",
+      "custo_total": "14,86",
+      "turno": "Produção"
+    },
+    {
+      "data": "22/09/2025",
+      "hora": "16:18:53",
+      "produto": "(prod) Batido Nega Maluca F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "3,10",
+      "custo_total": "3,10",
+      "turno": "Produção"
+    },
+    {
+      "data": "22/09/2025",
+      "hora": "16:16:42",
+      "produto": "(prod) Calda Chocolate (kg)",
+      "qtde": "9,280",
+      "custo_unit": "13,15",
+      "custo_total": "122,01",
+      "turno": "Produção"
+    },
+    {
+      "data": "22/09/2025",
+      "hora": "16:16:41",
+      "produto": "(prod) Creme Cake Patisserie (kg)",
+      "qtde": "8,780",
+      "custo_unit": "15,83",
+      "custo_total": "139,02",
+      "turno": "Produção"
+    },
+    {
+      "data": "22/09/2025",
+      "hora": "16:16:40",
+      "produto": "(prod) Batido Nega Maluca (kg)",
+      "qtde": "6,000",
+      "custo_unit": "12,38",
+      "custo_total": "74,29",
+      "turno": "Produção"
+    },
+    {
+      "data": "22/09/2025",
+      "hora": "15:36:09",
+      "produto": "(prod) Torta Limao F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "29,46",
+      "custo_total": "29,46",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "22/09/2025",
+      "hora": "15:36:08",
+      "produto": "(prod) Torta Limao F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "10,91",
+      "custo_total": "10,91",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "22/09/2025",
+      "hora": "15:34:48",
+      "produto": "(prod) Mousse de Limao (kg)",
+      "qtde": "2,080",
+      "custo_unit": "15,66",
+      "custo_total": "32,57",
+      "turno": "Produção"
+    },
+    {
+      "data": "22/09/2025",
+      "hora": "15:27:17",
+      "produto": "(prod) Mousse de Limao (kg)",
+      "qtde": "2,076",
+      "custo_unit": "15,41",
+      "custo_total": "32,00",
+      "turno": "Produção"
+    },
+    {
+      "data": "22/09/2025",
+      "hora": "15:19:00",
+      "produto": "(prod) Base Torta Limao F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "2,57",
+      "custo_total": "2,57",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "22/09/2025",
+      "hora": "15:19:00",
+      "produto": "(prod) Base Torta Limao F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "0,64",
+      "custo_total": "0,64",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "22/09/2025",
+      "hora": "15:15:24",
+      "produto": "(prod) Massa Doce (LIMAO) (kg)",
+      "qtde": "6,150",
+      "custo_unit": "6,42",
+      "custo_total": "39,51",
+      "turno": "Produção"
+    },
+    {
+      "data": "22/09/2025",
+      "hora": "15:10:32",
+      "produto": "(prod) Quindao F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "40,25",
+      "custo_total": "40,25",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "22/09/2025",
+      "hora": "15:10:31",
+      "produto": "(prod) Batido Quindao (kg)",
+      "qtde": "1,460",
+      "custo_unit": "21,79",
+      "custo_total": "31,81",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "22/09/2025",
+      "hora": "15:06:40",
+      "produto": "(prod) Banoffee F20 (un)",
+      "qtde": "1,000",
+      "custo_unit": "33,00",
+      "custo_total": "33,00",
+      "turno": "Embalagens"
+    },
+    {
+      "data": "22/09/2025",
+      "hora": "15:06:39",
+      "produto": "(prod) Banoffee F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "19,51",
+      "custo_total": "19,51",
+      "turno": "Embalagens"
+    },
+    {
+      "data": "22/09/2025",
+      "hora": "15:05:22",
+      "produto": "(prod) Semi Banoffee F20 (un)",
+      "qtde": "1,000",
+      "custo_unit": "27,94",
+      "custo_total": "27,94",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "22/09/2025",
+      "hora": "15:05:21",
+      "produto": "(prod) Semi Banoffee F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "16,25",
+      "custo_total": "16,25",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "22/09/2025",
+      "hora": "15:04:47",
+      "produto": "(prod) Semi Banoffee F20 (un)",
+      "qtde": "1,000",
+      "custo_unit": "27,94",
+      "custo_total": "27,94",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "22/09/2025",
+      "hora": "15:04:45",
+      "produto": "(prod) Semi Banoffee F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "16,25",
+      "custo_total": "16,25",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "22/09/2025",
+      "hora": "15:01:39",
+      "produto": "(prod) Semi Acabada Banoffee F20 (un)",
+      "qtde": "1,000",
+      "custo_unit": "23,51",
+      "custo_total": "23,51",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "22/09/2025",
+      "hora": "15:01:37",
+      "produto": "(prod) Semi Acabada Banoffee F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "13,59",
+      "custo_total": "13,59",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "22/09/2025",
+      "hora": "14:59:13",
+      "produto": "(prod) Semi Acabada Banoffee F20 (un)",
+      "qtde": "1,000",
+      "custo_unit": "23,51",
+      "custo_total": "23,51",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "22/09/2025",
+      "hora": "14:59:12",
+      "produto": "(prod) Semi Acabada Banoffee F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "13,59",
+      "custo_total": "13,59",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "22/09/2025",
+      "hora": "14:49:33",
+      "produto": "(prod) Torta Banana F22 (un)",
+      "qtde": "1,000",
+      "custo_unit": "34,83",
+      "custo_total": "34,83",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "22/09/2025",
+      "hora": "14:49:20",
+      "produto": "(prod) Torta Banana F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "13,33",
+      "custo_total": "13,33",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "22/09/2025",
+      "hora": "14:47:52",
+      "produto": "(prod) Base Suspiro F20 (un)",
+      "qtde": "1,000",
+      "custo_unit": "1,58",
+      "custo_total": "1,58",
+      "turno": "Produção"
+    },
+    {
+      "data": "22/09/2025",
+      "hora": "14:47:51",
+      "produto": "(prod) Base Suspiro F30 (un)",
+      "qtde": "1,000",
+      "custo_unit": "4,39",
+      "custo_total": "4,39",
+      "turno": "Produção"
+    },
+    {
+      "data": "22/09/2025",
+      "hora": "14:47:51",
+      "produto": "(prod) Base Suspiro F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "2,19",
+      "custo_total": "2,19",
+      "turno": "Produção"
+    },
+    {
+      "data": "22/09/2025",
+      "hora": "14:47:50",
+      "produto": "(prod) Base Suspiro F22 (un)",
+      "qtde": "1,000",
+      "custo_unit": "1,76",
+      "custo_total": "1,76",
+      "turno": "Produção"
+    },
+    {
+      "data": "22/09/2025",
+      "hora": "14:47:50",
+      "produto": "(prod) Base Suspiro F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "0,44",
+      "custo_total": "0,44",
+      "turno": "Produção"
+    },
+    {
+      "data": "22/09/2025",
+      "hora": "14:46:27",
+      "produto": "(prod) Merengue (kg)",
+      "qtde": "10,000",
+      "custo_unit": "8,77",
+      "custo_total": "87,73",
+      "turno": "Produção"
+    },
+    {
+      "data": "22/09/2025",
+      "hora": "14:41:04",
+      "produto": "(prod) Chocoberries F20 (un)",
+      "qtde": "1,000",
+      "custo_unit": "45,95",
+      "custo_total": "45,95",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "22/09/2025",
+      "hora": "14:40:01",
+      "produto": "(prod) Semi Chocoberries F20 (un)",
+      "qtde": "1,000",
+      "custo_unit": "32,83",
+      "custo_total": "32,83",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "22/09/2025",
+      "hora": "14:39:10",
+      "produto": "(prod) Chocoberries F30 (un)",
+      "qtde": "1,000",
+      "custo_unit": "114,47",
+      "custo_total": "114,47",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "22/09/2025",
+      "hora": "14:39:07",
+      "produto": "(prod) Chocoberries F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "64,68",
+      "custo_total": "64,68",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "22/09/2025",
+      "hora": "14:39:05",
+      "produto": "(prod) Chocoberries F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "28,09",
+      "custo_total": "28,09",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "22/09/2025",
+      "hora": "14:37:03",
+      "produto": "(prod) Semi Chocoberries F30 (un)",
+      "qtde": "1,000",
+      "custo_unit": "81,78",
+      "custo_total": "81,78",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "22/09/2025",
+      "hora": "14:37:01",
+      "produto": "(prod) Semi Chocoberries F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "48,84",
+      "custo_total": "48,84",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "22/09/2025",
+      "hora": "14:36:59",
+      "produto": "(prod) Semi Chocoberries F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "18,84",
+      "custo_total": "18,84",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "22/09/2025",
+      "hora": "12:56:10",
+      "produto": "(prod) Batido Nega Maluca F22 (un)",
+      "qtde": "1,000",
+      "custo_unit": "9,91",
+      "custo_total": "9,91",
+      "turno": "Produção"
+    },
+    {
+      "data": "22/09/2025",
+      "hora": "12:56:10",
+      "produto": "(prod) Batido Nega Maluca F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "3,10",
+      "custo_total": "3,10",
+      "turno": "Produção"
+    },
+    {
+      "data": "22/09/2025",
+      "hora": "12:56:09",
+      "produto": "(prod) Batido Nega Maluca F30 (un)",
+      "qtde": "1,000",
+      "custo_unit": "24,76",
+      "custo_total": "24,76",
+      "turno": "Produção"
+    },
+    {
+      "data": "22/09/2025",
+      "hora": "12:56:09",
+      "produto": "(prod) Batido Nega Maluca F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "14,86",
+      "custo_total": "14,86",
+      "turno": "Produção"
+    },
+    {
+      "data": "22/09/2025",
+      "hora": "12:56:08",
+      "produto": "(prod) Batido Nega Maluca F14 (un)",
+      "qtde": "1,000",
+      "custo_unit": "3,71",
+      "custo_total": "3,71",
+      "turno": "Produção"
+    },
+    {
+      "data": "22/09/2025",
+      "hora": "12:47:06",
+      "produto": "(prod) Batido Nega Maluca (kg)",
+      "qtde": "6,000",
+      "custo_unit": "12,38",
+      "custo_total": "74,29",
+      "turno": "Produção"
+    },
+    {
+      "data": "22/09/2025",
+      "hora": "12:07:15",
+      "produto": "(prod) Batido Nega Maluca (kg)",
+      "qtde": "2,400",
+      "custo_unit": "12,41",
+      "custo_total": "29,78",
+      "turno": "Produção"
+    },
+    {
+      "data": "22/09/2025",
+      "hora": "11:33:58",
+      "produto": "(prod) Bolo Milho Ingles (un)",
+      "qtde": "1,000",
+      "custo_unit": "8,53",
+      "custo_total": "8,53",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "22/09/2025",
+      "hora": "11:33:57",
+      "produto": "(prod) Batido Bolo Milho (kg)",
+      "qtde": "1,610",
+      "custo_unit": "17,14",
+      "custo_total": "27,60",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "22/09/2025",
+      "hora": "11:32:48",
+      "produto": "(prod) Bolo Milho F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "26,67",
+      "custo_total": "26,67",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "22/09/2025",
+      "hora": "11:32:47",
+      "produto": "(prod) Batido Bolo Milho (kg)",
+      "qtde": "1,610",
+      "custo_unit": "17,14",
+      "custo_total": "27,60",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "22/09/2025",
+      "hora": "11:16:05",
+      "produto": "(prod) Rocambole Laranja (un)",
+      "qtde": "1,000",
+      "custo_unit": "27,05",
+      "custo_total": "27,05",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "22/09/2025",
+      "hora": "11:14:58",
+      "produto": "(prod) Semi Rocambole Laranja (un)",
+      "qtde": "1,000",
+      "custo_unit": "16,45",
+      "custo_total": "16,45",
+      "turno": "Produção"
+    },
+    {
+      "data": "22/09/2025",
+      "hora": "11:13:24",
+      "produto": "(prod) Batido Rocambole Laranja (kg)",
+      "qtde": "1,840",
+      "custo_unit": "8,65",
+      "custo_total": "15,91",
+      "turno": "Produção"
+    },
+    {
+      "data": "22/09/2025",
+      "hora": "11:08:00",
+      "produto": "(prod) Rocambole Laranja (un)",
+      "qtde": "1,000",
+      "custo_unit": "38,47",
+      "custo_total": "38,47",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "22/09/2025",
+      "hora": "11:07:48",
+      "produto": "(prod) Semi Rocambole Laranja (un)",
+      "qtde": "1,000",
+      "custo_unit": "27,87",
+      "custo_total": "27,87",
+      "turno": "Produção"
+    },
+    {
+      "data": "22/09/2025",
+      "hora": "11:07:47",
+      "produto": "(prod) Batido Rocambole Laranja (kg)",
+      "qtde": "1,840",
+      "custo_unit": "8,65",
+      "custo_total": "15,91",
+      "turno": "Produção"
+    },
+    {
+      "data": "22/09/2025",
+      "hora": "11:03:01",
+      "produto": "(prod) Nova Sweet Dark F30 (un)",
+      "qtde": "1,000",
+      "custo_unit": "71,53",
+      "custo_total": "71,53",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "22/09/2025",
+      "hora": "11:02:52",
+      "produto": "(prod) Semi Nova Sweet Dark F30 (un)",
+      "qtde": "1,000",
+      "custo_unit": "52,32",
+      "custo_total": "52,32",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "22/09/2025",
+      "hora": "11:02:50",
+      "produto": "(prod) Batido Preto F30 (un)",
+      "qtde": "1,000",
+      "custo_unit": "14,00",
+      "custo_total": "14,00",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "22/09/2025",
+      "hora": "10:58:51",
+      "produto": "(prod) Nova Sweet Dark F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "47,42",
+      "custo_total": "47,42",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "22/09/2025",
+      "hora": "10:57:46",
+      "produto": "(prod) Nova Sweet Dark F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "18,73",
+      "custo_total": "18,73",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "22/09/2025",
+      "hora": "10:57:44",
+      "produto": "(prod) Semi Nova Sweet Dark F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "33,16",
+      "custo_total": "33,16",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "22/09/2025",
+      "hora": "10:57:43",
+      "produto": "(prod) Batido Preto F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "7,19",
+      "custo_total": "7,19",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "22/09/2025",
+      "hora": "10:53:20",
+      "produto": "(prod) Nova Sweet Dark F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "24,25",
+      "custo_total": "24,25",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "22/09/2025",
+      "hora": "10:50:23",
+      "produto": "(prod) Nova Sweet Dark F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "12,48",
+      "custo_total": "12,48",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "22/09/2025",
+      "hora": "10:50:22",
+      "produto": "(prod) Semi Nova Sweet Dark F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "14,94",
+      "custo_total": "14,94",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "22/09/2025",
+      "hora": "10:50:20",
+      "produto": "(prod) Calda Chocolate (kg)",
+      "qtde": "9,280",
+      "custo_unit": "13,15",
+      "custo_total": "122,01",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "22/09/2025",
+      "hora": "10:50:20",
+      "produto": "(prod) Batido Preto F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "1,68",
+      "custo_total": "1,68",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "22/09/2025",
+      "hora": "10:50:19",
+      "produto": "(prod) Batido Chocolate (kg)",
+      "qtde": "5,890",
+      "custo_unit": "9,33",
+      "custo_total": "54,97",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "19:16:42",
+      "produto": "(prod) Fantasia F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "40,62",
+      "custo_total": "40,62",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "19:15:53",
+      "produto": "(prod) Semi Fantasia F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "32,84",
+      "custo_total": "32,84",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "19:15:47",
+      "produto": "(prod) Batido Preto F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "7,19",
+      "custo_total": "7,19",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "19:14:20",
+      "produto": "(prod) Fantasia F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "16,08",
+      "custo_total": "16,08",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "19:12:41",
+      "produto": "(prod) Fantasia F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "20,79",
+      "custo_total": "20,79",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "19:12:39",
+      "produto": "(prod) Semi Fantasia F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "13,37",
+      "custo_total": "13,37",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "19:12:37",
+      "produto": "(prod) Batido Preto F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "1,68",
+      "custo_total": "1,68",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "19:00:38",
+      "produto": "(prod) Emilia F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "42,58",
+      "custo_total": "42,58",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "18:58:46",
+      "produto": "(prod) Tentacao F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "37,36",
+      "custo_total": "37,36",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "18:57:21",
+      "produto": "(prod) Tentacao F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "3,61",
+      "custo_total": "3,61",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "18:55:57",
+      "produto": "(prod) Semi Tentacao/Emilia F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "33,75",
+      "custo_total": "33,75",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "18:54:02",
+      "produto": "(prod) Semi Acabada Tentacao/Emilia F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "25,03",
+      "custo_total": "25,03",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "18:49:57",
+      "produto": "(prod) Tentacao F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "16,40",
+      "custo_total": "16,40",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "18:48:13",
+      "produto": "(prod) Semi Tentacao/Emilia F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "15,14",
+      "custo_total": "15,14",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "18:39:45",
+      "produto": "(prod) Tentacao F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "12,84",
+      "custo_total": "12,84",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "18:38:36",
+      "produto": "(prod) Semi Tentacao/Emilia F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "15,04",
+      "custo_total": "15,04",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "18:38:35",
+      "produto": "(prod) Semi Acabada Tentacao/Emilia F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "11,57",
+      "custo_total": "11,57",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "18:36:33",
+      "produto": "(prod) Batido Preto F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "1,68",
+      "custo_total": "1,68",
+      "turno": "Produção"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "18:33:28",
+      "produto": "(prod) anulado Semi Acabada Tentacao F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "18,83",
+      "custo_total": "18,83",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "18:33:27",
+      "produto": "(prod) Calda Chocolate (kg)",
+      "qtde": "9,280",
+      "custo_unit": "13,15",
+      "custo_total": "122,01",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "18:33:26",
+      "produto": "(prod) Batido Preto F25 (un)",
+      "qtde": "2,000",
+      "custo_unit": "7,19",
+      "custo_total": "14,37",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "18:33:25",
+      "produto": "(prod) Batido Chocolate (kg)",
+      "qtde": "5,890",
+      "custo_unit": "9,33",
+      "custo_total": "54,97",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "18:30:51",
+      "produto": "(prod) Semi Tentacao/Emilia F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "36,75",
+      "custo_total": "36,75",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "18:30:50",
+      "produto": "(prod) anulado Semi Acabada Tentacao F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "18,83",
+      "custo_total": "18,83",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "17:33:29",
+      "produto": "(prod) anulado Semi Acabada Tentacao F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "18,83",
+      "custo_total": "18,83",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "17:31:32",
+      "produto": "(prod) anulado Semi Acabada Tentacao F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "18,83",
+      "custo_total": "18,83",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "17:28:56",
+      "produto": "(prod) Semi Tentacao/Emilia F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "36,75",
+      "custo_total": "36,75",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "17:27:40",
+      "produto": "(prod) Emilia F30 (un)",
+      "qtde": "1,000",
+      "custo_unit": "78,36",
+      "custo_total": "78,36",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "17:26:49",
+      "produto": "(prod) Semi Tentacao/Emilia F30 (un)",
+      "qtde": "1,000",
+      "custo_unit": "58,94",
+      "custo_total": "58,94",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "17:25:45",
+      "produto": "(prod) Semi Acabada Tentacao/Emilia F30 (un)",
+      "qtde": "1,000",
+      "custo_unit": "47,05",
+      "custo_total": "47,05",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "17:25:44",
+      "produto": "(prod) Batido Preto F30 (un)",
+      "qtde": "1,000",
+      "custo_unit": "14,00",
+      "custo_total": "14,00",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "17:21:34",
+      "produto": "(prod) anulado Semi Acabada Tentacao F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "18,83",
+      "custo_total": "18,83",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "17:20:36",
+      "produto": "(prod) anulado Semi Acabada Tentacao F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "18,83",
+      "custo_total": "18,83",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "17:20:34",
+      "produto": "(prod) Calda Chocolate (kg)",
+      "qtde": "9,280",
+      "custo_unit": "13,15",
+      "custo_total": "122,01",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "17:20:33",
+      "produto": "(prod) Batido Preto F25 (un)",
+      "qtde": "2,000",
+      "custo_unit": "7,19",
+      "custo_total": "14,37",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "17:20:32",
+      "produto": "(prod) Batido Chocolate (kg)",
+      "qtde": "5,890",
+      "custo_unit": "9,33",
+      "custo_total": "54,97",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "17:18:07",
+      "produto": "(prod) anulado Semi Acabada Tentacao F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "18,83",
+      "custo_total": "18,83",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "17:18:06",
+      "produto": "(prod) Batido Preto F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "7,19",
+      "custo_total": "7,19",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "17:16:56",
+      "produto": "(prod) Calda Chocolate (kg)",
+      "qtde": "9,280",
+      "custo_unit": "13,15",
+      "custo_total": "122,01",
+      "turno": "Produção"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "17:16:55",
+      "produto": "(prod) Nova Cobertura de Brigadeiro (kg)",
+      "qtde": "7,600",
+      "custo_unit": "19,81",
+      "custo_total": "150,56",
+      "turno": "Produção"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "17:14:50",
+      "produto": "(prod) Emilia F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "45,57",
+      "custo_total": "45,57",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "17:13:55",
+      "produto": "(prod) Calda Chocolate (kg)",
+      "qtde": "9,280",
+      "custo_unit": "13,15",
+      "custo_total": "122,01",
+      "turno": "Produção"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "17:12:28",
+      "produto": "(prod) anulado Semi Acabada Tentacao F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "18,83",
+      "custo_total": "18,83",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "17:10:27",
+      "produto": "(prod) anulado Semi Acabada Tentacao F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "18,83",
+      "custo_total": "18,83",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "17:10:26",
+      "produto": "(prod) Batido Chocolate (kg)",
+      "qtde": "5,890",
+      "custo_unit": "9,33",
+      "custo_total": "54,97",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "17:07:49",
+      "produto": "(prod) anulado Semi Acabada Tentacao F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "18,83",
+      "custo_total": "18,83",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "17:07:06",
+      "produto": "(prod) Semi Tentacao/Emilia F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "36,75",
+      "custo_total": "36,75",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "17:05:19",
+      "produto": "(prod) Emilia F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "36,86",
+      "custo_total": "36,86",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "17:05:18",
+      "produto": "(prod) Semi Tentacao/Emilia F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "36,75",
+      "custo_total": "36,75",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "17:05:17",
+      "produto": "(prod) anulado Semi Acabada Tentacao F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "18,83",
+      "custo_total": "18,83",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "17:05:16",
+      "produto": "(prod) Batido Preto F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "7,19",
+      "custo_total": "7,19",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "17:00:34",
+      "produto": "(prod) Emilia F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "18,48",
+      "custo_total": "18,48",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "16:58:34",
+      "produto": "(prod) Emilia F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "14,91",
+      "custo_total": "14,91",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "16:58:33",
+      "produto": "(prod) Semi Tentacao/Emilia F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "14,95",
+      "custo_total": "14,95",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "16:58:32",
+      "produto": "(prod) Semi Acabada Tentacao/Emilia F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "11,47",
+      "custo_total": "11,47",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "16:58:31",
+      "produto": "(prod) Calda Chocolate (kg)",
+      "qtde": "9,280",
+      "custo_unit": "13,15",
+      "custo_total": "122,01",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "16:58:30",
+      "produto": "(prod) Batido Preto F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "1,68",
+      "custo_total": "1,68",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "16:58:29",
+      "produto": "(prod) Batido Chocolate (kg)",
+      "qtde": "5,890",
+      "custo_unit": "9,33",
+      "custo_total": "54,97",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "16:47:12",
+      "produto": "(prod) Calda Negra (kg)",
+      "qtde": "3,200",
+      "custo_unit": "20,84",
+      "custo_total": "66,68",
+      "turno": "Produção"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "16:47:12",
+      "produto": "(prod) Nova Cobertura de Brigadeiro (kg)",
+      "qtde": "7,600",
+      "custo_unit": "19,81",
+      "custo_total": "150,56",
+      "turno": "Produção"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "16:47:11",
+      "produto": "(prod) Recheio de Frango (kg)",
+      "qtde": "7,500",
+      "custo_unit": "12,39",
+      "custo_total": "92,90",
+      "turno": "Produção"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "16:47:09",
+      "produto": "(prod) Recheio de Banana (kg)",
+      "qtde": "14,000",
+      "custo_unit": "8,86",
+      "custo_total": "124,05",
+      "turno": "Produção"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "16:47:08",
+      "produto": "(prod) Recheio Crocante (kg)",
+      "qtde": "6,400",
+      "custo_unit": "14,43",
+      "custo_total": "92,37",
+      "turno": "Produção"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "16:47:08",
+      "produto": "(prod) Recheio Abacaxi (kg)",
+      "qtde": "5,200",
+      "custo_unit": "30,53",
+      "custo_total": "158,76",
+      "turno": "Produção"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "16:47:07",
+      "produto": "(prod) Batido Preto F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "1,56",
+      "custo_total": "1,56",
+      "turno": "Produção"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "16:47:06",
+      "produto": "(prod) Batido Chocolate (kg)",
+      "qtde": "5,890",
+      "custo_unit": "9,33",
+      "custo_total": "54,97",
+      "turno": "Produção"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "16:25:52",
+      "produto": "(prod) Recheio Damasco (kg)",
+      "qtde": "9,000",
+      "custo_unit": "23,05",
+      "custo_total": "207,45",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "16:25:52",
+      "produto": "(prod) Recheio Ameixa (kg)",
+      "qtde": "3,200",
+      "custo_unit": "19,09",
+      "custo_total": "61,10",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "16:25:51",
+      "produto": "(prod) Batido Branco (kg)",
+      "qtde": "5,390",
+      "custo_unit": "6,88",
+      "custo_total": "37,09",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "16:22:39",
+      "produto": "(prod) Recheio Damasco (kg)",
+      "qtde": "9,000",
+      "custo_unit": "23,05",
+      "custo_total": "207,45",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "16:22:38",
+      "produto": "(prod) Recheio Ameixa (kg)",
+      "qtde": "3,200",
+      "custo_unit": "19,09",
+      "custo_total": "61,10",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "16:22:37",
+      "produto": "(prod) Batido Branco F13 (un)",
+      "qtde": "2,000",
+      "custo_unit": "1,38",
+      "custo_total": "2,75",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "16:22:37",
+      "produto": "(prod) Batido Branco (kg)",
+      "qtde": "5,390",
+      "custo_unit": "6,88",
+      "custo_total": "37,09",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "15:56:59",
+      "produto": "(prod) Quebra Nozes F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "16,94",
+      "custo_total": "16,94",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "15:56:57",
+      "produto": "(prod) Quebra Nozes F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "37,24",
+      "custo_total": "37,24",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "15:56:56",
+      "produto": "(prod) Quebra Nozes F30 (un)",
+      "qtde": "1,000",
+      "custo_unit": "64,94",
+      "custo_total": "64,94",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "15:54:18",
+      "produto": "(prod) Quebra Nozes F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "37,24",
+      "custo_total": "37,24",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "15:54:17",
+      "produto": "(prod) Semi Quebra Nozes F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "27,71",
+      "custo_total": "27,71",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "15:54:15",
+      "produto": "(prod) Batido Nozes F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "16,43",
+      "custo_total": "16,43",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "15:45:37",
+      "produto": "(prod) Quebra Nozes F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "20,03",
+      "custo_total": "20,03",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "15:45:35",
+      "produto": "(prod) Semi Quebra Nozes F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "11,69",
+      "custo_total": "11,69",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "15:45:34",
+      "produto": "(prod) Batido Nozes F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "4,52",
+      "custo_total": "4,52",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "15:45:34",
+      "produto": "(prod) Batido de Nozes (kg)",
+      "qtde": "5,240",
+      "custo_unit": "20,53",
+      "custo_total": "107,59",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "15:34:47",
+      "produto": "(prod) Deliciosa F30 (un)",
+      "qtde": "1,000",
+      "custo_unit": "95,17",
+      "custo_total": "95,17",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "15:34:46",
+      "produto": "(prod) Merengue (kg)",
+      "qtde": "5,000",
+      "custo_unit": "8,77",
+      "custo_total": "43,87",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "15:34:45",
+      "produto": "(prod) Semi Deliciosa F30 (un)",
+      "qtde": "1,000",
+      "custo_unit": "76,68",
+      "custo_total": "76,68",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "15:34:43",
+      "produto": "(prod) Batido Branco F30 (un)",
+      "qtde": "1,000",
+      "custo_unit": "10,32",
+      "custo_total": "10,32",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "15:34:43",
+      "produto": "(prod) Batido Branco (kg)",
+      "qtde": "5,390",
+      "custo_unit": "6,88",
+      "custo_total": "37,09",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "15:14:13",
+      "produto": "(prod) Deliciosa F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "56,40",
+      "custo_total": "56,40",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "15:13:15",
+      "produto": "(prod) Semi Deliciosa F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "47,73",
+      "custo_total": "47,73",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "15:11:37",
+      "produto": "(prod) Deliciosa F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "90,10",
+      "custo_total": "90,10",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "15:08:53",
+      "produto": "(prod) Deliciosa F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "65,13",
+      "custo_total": "65,13",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "15:08:52",
+      "produto": "(prod) Semi Deliciosa F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "81,44",
+      "custo_total": "81,44",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "15:08:51",
+      "produto": "(prod) Merengue (kg)",
+      "qtde": "1,000",
+      "custo_unit": "8,77",
+      "custo_total": "8,77",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "15:08:50",
+      "produto": "(prod) Semi Acabada Deliciosa F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "45,10",
+      "custo_total": "45,10",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "15:08:48",
+      "produto": "(prod) Batido Semi Pronta Deliciosa F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "17,97",
+      "custo_total": "17,97",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "15:08:48",
+      "produto": "(prod) Batido Branco F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "5,30",
+      "custo_total": "5,30",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "14:58:53",
+      "produto": "(prod) Deliciosa F20 (un)",
+      "qtde": "1,000",
+      "custo_unit": "28,43",
+      "custo_total": "28,43",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "14:57:06",
+      "produto": "(prod) Semi Deliciosa F20 (un)",
+      "qtde": "1,000",
+      "custo_unit": "23,86",
+      "custo_total": "23,86",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "14:57:05",
+      "produto": "(prod) Merengue (kg)",
+      "qtde": "2,000",
+      "custo_unit": "8,77",
+      "custo_total": "17,55",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "14:57:05",
+      "produto": "(prod) Semi Acabada Deliciosa F20 (un)",
+      "qtde": "1,000",
+      "custo_unit": "21,62",
+      "custo_total": "21,62",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "14:57:04",
+      "produto": "(prod) Batido Semi Pronta Deliciosa F20 (un)",
+      "qtde": "1,000",
+      "custo_unit": "12,94",
+      "custo_total": "12,94",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "14:57:03",
+      "produto": "(prod) Batido Branco F20 (un)",
+      "qtde": "1,000",
+      "custo_unit": "3,44",
+      "custo_total": "3,44",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "14:57:01",
+      "produto": "(prod) Batido Branco (kg)",
+      "qtde": "5,390",
+      "custo_unit": "6,88",
+      "custo_total": "37,09",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "14:51:00",
+      "produto": "(prod) Deliciosa F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "22,75",
+      "custo_total": "22,75",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "14:49:37",
+      "produto": "(prod) Semi Deliciosa F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "19,51",
+      "custo_total": "19,51",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "14:22:13",
+      "produto": "(prod) Deliciosa F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "36,82",
+      "custo_total": "36,82",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "14:17:48",
+      "produto": "(prod) Deliciosa F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "23,81",
+      "custo_total": "23,81",
+      "turno": "Embalagens"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "14:17:47",
+      "produto": "(prod) Semi Deliciosa F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "33,58",
+      "custo_total": "33,58",
+      "turno": "Embalagens"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "14:17:46",
+      "produto": "(prod) Merengue (kg)",
+      "qtde": "1,000",
+      "custo_unit": "8,77",
+      "custo_total": "8,77",
+      "turno": "Embalagens"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "14:17:45",
+      "produto": "(prod) Semi Acabada Deliciosa F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "18,20",
+      "custo_total": "18,20",
+      "turno": "Embalagens"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "14:17:44",
+      "produto": "(prod) Batido Semi Pronta Deliciosa F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "4,99",
+      "custo_total": "4,99",
+      "turno": "Embalagens"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "14:17:43",
+      "produto": "(prod) Creme Cake Patisserie (kg)",
+      "qtde": "8,780",
+      "custo_unit": "15,83",
+      "custo_total": "139,02",
+      "turno": "Embalagens"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "14:17:42",
+      "produto": "(prod) Batido Branco F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "1,38",
+      "custo_total": "1,38",
+      "turno": "Embalagens"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "14:17:42",
+      "produto": "(prod) Batido Branco (kg)",
+      "qtde": "5,390",
+      "custo_unit": "6,88",
+      "custo_total": "37,09",
+      "turno": "Embalagens"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "14:09:18",
+      "produto": "(prod) Cheescake F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "50,08",
+      "custo_total": "50,08",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "14:09:17",
+      "produto": "(prod) Semi Cheescake F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "32,70",
+      "custo_total": "32,70",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "14:09:16",
+      "produto": "(prod) Recheio Cheescake (kg)",
+      "qtde": "1,120",
+      "custo_unit": "21,99",
+      "custo_total": "24,63",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "14:09:15",
+      "produto": "(prod) Base Cheescake F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "7,02",
+      "custo_total": "7,02",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "14:09:15",
+      "produto": "(prod) Base Cheescake (kg)",
+      "qtde": "0,310",
+      "custo_unit": "22,63",
+      "custo_total": "7,02",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "14:06:21",
+      "produto": "(prod) Semi Cheescake F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "10,77",
+      "custo_total": "10,77",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "14:06:21",
+      "produto": "(prod) Recheio Cheescake (kg)",
+      "qtde": "1,120",
+      "custo_unit": "21,99",
+      "custo_total": "24,63",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "14:06:19",
+      "produto": "(prod) Base Banoffee F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "4,17",
+      "custo_total": "4,17",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "14:06:18",
+      "produto": "(prod) Base Cheescake (kg)",
+      "qtde": "0,310",
+      "custo_unit": "22,63",
+      "custo_total": "7,02",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "14:01:27",
+      "produto": "(prod) Alema F30 (un)",
+      "qtde": "1,000",
+      "custo_unit": "82,06",
+      "custo_total": "82,06",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "14:00:24",
+      "produto": "(prod) Alema F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "19,52",
+      "custo_total": "19,52",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "13:54:56",
+      "produto": "(prod) Alema F30 (un)",
+      "qtde": "1,000",
+      "custo_unit": "37,23",
+      "custo_total": "37,23",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "13:54:55",
+      "produto": "(prod) Alema F22 (un)",
+      "qtde": "2,000",
+      "custo_unit": "48,84",
+      "custo_total": "97,68",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "13:54:53",
+      "produto": "(prod) Alema F13 (un)",
+      "qtde": "12,000",
+      "custo_unit": "6,71",
+      "custo_total": "80,49",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "13:54:51",
+      "produto": "(prod) Semi Alema F30 (un)",
+      "qtde": "1,000",
+      "custo_unit": "72,85",
+      "custo_total": "72,85",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "13:54:50",
+      "produto": "(prod) Semi Alema F22 (un)",
+      "qtde": "2,000",
+      "custo_unit": "36,93",
+      "custo_total": "73,85",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "13:54:50",
+      "produto": "(prod) Semi Alema F13 (un)",
+      "qtde": "12,000",
+      "custo_unit": "12,81",
+      "custo_total": "153,74",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "13:54:49",
+      "produto": "(prod) Creme de Alema (kg)",
+      "qtde": "10,730",
+      "custo_unit": "29,20",
+      "custo_total": "313,34",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "13:54:48",
+      "produto": "(prod) Calda Chocolate Alema (kg)",
+      "qtde": "9,000",
+      "custo_unit": "16,88",
+      "custo_total": "151,96",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "12:44:14",
+      "produto": "(prod) Delicia Coco F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "14,77",
+      "custo_total": "14,77",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "12:41:00",
+      "produto": "(prod) Delicia Coco F30 (un)",
+      "qtde": "1,000",
+      "custo_unit": "72,26",
+      "custo_total": "72,26",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "12:39:59",
+      "produto": "(prod) Delicia Coco F30 (un)",
+      "qtde": "1,000",
+      "custo_unit": "20,99",
+      "custo_total": "20,99",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "12:39:57",
+      "produto": "(prod) Semi Delicia Coco F30 (un)",
+      "qtde": "1,000",
+      "custo_unit": "67,56",
+      "custo_total": "67,56",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "12:39:56",
+      "produto": "(prod) Merengue (kg)",
+      "qtde": "6,000",
+      "custo_unit": "8,77",
+      "custo_total": "52,64",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "12:39:54",
+      "produto": "(prod) Semi Acabada Delicia Coco F30 (un)",
+      "qtde": "1,000",
+      "custo_unit": "62,29",
+      "custo_total": "62,29",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "12:39:52",
+      "produto": "(prod) Batido Branco F30 (un)",
+      "qtde": "1,000",
+      "custo_unit": "10,32",
+      "custo_total": "10,32",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "12:39:52",
+      "produto": "(prod) Batido Branco (kg)",
+      "qtde": "5,390",
+      "custo_unit": "6,88",
+      "custo_total": "37,09",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "12:36:31",
+      "produto": "(prod) Deliciosa F30 (un)",
+      "qtde": "1,000",
+      "custo_unit": "95,17",
+      "custo_total": "95,17",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "12:36:29",
+      "produto": "(prod) Semi Deliciosa F30 (un)",
+      "qtde": "1,000",
+      "custo_unit": "79,36",
+      "custo_total": "79,36",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "12:36:27",
+      "produto": "(prod) Merengue (kg)",
+      "qtde": "5,000",
+      "custo_unit": "8,77",
+      "custo_total": "43,87",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "12:32:21",
+      "produto": "(prod) Delicia Coco F30 (un)",
+      "qtde": "1,000",
+      "custo_unit": "20,99",
+      "custo_total": "20,99",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "12:32:19",
+      "produto": "(prod) Semi Deliciosa F30 (un)",
+      "qtde": "1,000",
+      "custo_unit": "79,36",
+      "custo_total": "79,36",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "12:32:16",
+      "produto": "(prod) Merengue (kg)",
+      "qtde": "2,000",
+      "custo_unit": "8,77",
+      "custo_total": "17,55",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "12:32:16",
+      "produto": "(prod) Semi Acabada Delicia Coco F30 (un)",
+      "qtde": "1,000",
+      "custo_unit": "62,29",
+      "custo_total": "62,29",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "12:28:56",
+      "produto": "(prod) Delicia Coco F30 (un)",
+      "qtde": "1,000",
+      "custo_unit": "20,99",
+      "custo_total": "20,99",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "12:28:55",
+      "produto": "(prod) Delicia Coco F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "14,77",
+      "custo_total": "14,77",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "12:18:41",
+      "produto": "(prod) Delicia Coco F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "6,27",
+      "custo_total": "6,27",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "12:18:40",
+      "produto": "(prod) Semi Delicia Coco F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "13,59",
+      "custo_total": "13,59",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "12:18:40",
+      "produto": "(prod) Merengue (kg)",
+      "qtde": "2,000",
+      "custo_unit": "8,77",
+      "custo_total": "17,55",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "12:18:39",
+      "produto": "(prod) Semi Acabada Delicia Coco F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "12,72",
+      "custo_total": "12,72",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "12:18:37",
+      "produto": "(prod) Batido Branco F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "1,38",
+      "custo_total": "1,38",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "12:18:36",
+      "produto": "(prod) Batido Branco (kg)",
+      "qtde": "5,390",
+      "custo_unit": "6,88",
+      "custo_total": "37,09",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "12:14:49",
+      "produto": "(prod) Delicia Coco F30 (un)",
+      "qtde": "1,000",
+      "custo_unit": "20,99",
+      "custo_total": "20,99",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "12:13:36",
+      "produto": "(prod) Delicia Coco F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "39,67",
+      "custo_total": "39,67",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "12:05:45",
+      "produto": "(prod) Semi Delicia Coco F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "34,96",
+      "custo_total": "34,96",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "12:05:44",
+      "produto": "(prod) Merengue (kg)",
+      "qtde": "2,000",
+      "custo_unit": "8,77",
+      "custo_total": "17,55",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "12:05:43",
+      "produto": "(prod) Semi Acabada Delicia Coco F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "31,45",
+      "custo_total": "31,45",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "12:05:42",
+      "produto": "(prod) Batido Branco F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "5,30",
+      "custo_total": "5,30",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "12:05:41",
+      "produto": "(prod) Batido Branco (kg)",
+      "qtde": "5,390",
+      "custo_unit": "6,88",
+      "custo_total": "37,09",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "11:39:51",
+      "produto": "(prod) Delicia Coco F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "19,24",
+      "custo_total": "19,24",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "11:39:50",
+      "produto": "(prod) Semi Delicia Coco F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "34,96",
+      "custo_total": "34,96",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "11:39:49",
+      "produto": "(prod) Merengue (kg)",
+      "qtde": "2,000",
+      "custo_unit": "8,77",
+      "custo_total": "17,55",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "11:39:48",
+      "produto": "(prod) Semi Acabada Delicia Coco F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "31,45",
+      "custo_total": "31,45",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "11:39:47",
+      "produto": "(prod) Batido Branco F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "5,30",
+      "custo_total": "5,30",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "11:39:46",
+      "produto": "(prod) Batido Branco (kg)",
+      "qtde": "5,390",
+      "custo_unit": "6,88",
+      "custo_total": "37,09",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "11:35:52",
+      "produto": "(prod) Semi Deliciosa F30 (un)",
+      "qtde": "1,000",
+      "custo_unit": "79,36",
+      "custo_total": "79,36",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "11:35:51",
+      "produto": "(prod) Merengue (kg)",
+      "qtde": "5,000",
+      "custo_unit": "8,77",
+      "custo_total": "43,87",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "11:30:56",
+      "produto": "(prod) Delicia Coco F30 (un)",
+      "qtde": "1,000",
+      "custo_unit": "15,73",
+      "custo_total": "15,73",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "11:30:55",
+      "produto": "(prod) Delicia Coco F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "15,73",
+      "custo_total": "15,73",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "11:30:54",
+      "produto": "(prod) Delicia Coco F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "5,39",
+      "custo_total": "5,39",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "11:30:54",
+      "produto": "(prod) Merengue (kg)",
+      "qtde": "4,000",
+      "custo_unit": "8,77",
+      "custo_total": "35,09",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "11:30:53",
+      "produto": "(prod) Semi Delicia Coco F30 (un)",
+      "qtde": "1,000",
+      "custo_unit": "16,28",
+      "custo_total": "16,28",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "11:30:52",
+      "produto": "(prod) Semi Delicia Coco F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "14,53",
+      "custo_total": "14,53",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "11:30:51",
+      "produto": "(prod) Semi Delicia Coco F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "5,09",
+      "custo_total": "5,09",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "11:30:50",
+      "produto": "(prod) Semi Acabada Delicia Coco F30 (un)",
+      "qtde": "1,000",
+      "custo_unit": "62,29",
+      "custo_total": "62,29",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "11:30:48",
+      "produto": "(prod) Semi Acabada Delicia Coco F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "31,45",
+      "custo_total": "31,45",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "11:30:46",
+      "produto": "(prod) Semi Acabada Delicia Coco F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "12,72",
+      "custo_total": "12,72",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "11:30:45",
+      "produto": "(prod) Batido Branco F30 (un)",
+      "qtde": "1,000",
+      "custo_unit": "10,32",
+      "custo_total": "10,32",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "11:30:44",
+      "produto": "(prod) Batido Branco F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "5,30",
+      "custo_total": "5,30",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "11:30:43",
+      "produto": "(prod) Batido Branco F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "1,38",
+      "custo_total": "1,38",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "11:30:43",
+      "produto": "(prod) Batido Branco (kg)",
+      "qtde": "5,390",
+      "custo_unit": "6,88",
+      "custo_total": "37,09",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "11:17:07",
+      "produto": "(prod) Aurora F30 (un)",
+      "qtde": "1,000",
+      "custo_unit": "51,62",
+      "custo_total": "51,62",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "11:17:05",
+      "produto": "(prod) Aurora F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "12,22",
+      "custo_total": "12,22",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "11:14:37",
+      "produto": "(prod) Aurora F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "29,55",
+      "custo_total": "29,55",
+      "turno": "Produção"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "11:14:35",
+      "produto": "(prod) Merengue (kg)",
+      "qtde": "6,000",
+      "custo_unit": "8,77",
+      "custo_total": "52,64",
+      "turno": "Produção"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "11:04:14",
+      "produto": "(prod) Aurora F30 (un)",
+      "qtde": "1,000",
+      "custo_unit": "14,45",
+      "custo_total": "14,45",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "11:04:13",
+      "produto": "(prod) Aurora F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "10,13",
+      "custo_total": "10,13",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "11:04:12",
+      "produto": "(prod) Aurora F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "3,41",
+      "custo_total": "3,41",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "11:04:11",
+      "produto": "(prod) Semi Aurora/Aurora Enfeitada F30 (un)",
+      "qtde": "1,000",
+      "custo_unit": "38,82",
+      "custo_total": "38,82",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "11:04:10",
+      "produto": "(prod) Semi Aurora/Aurora Enfeitada F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "20,93",
+      "custo_total": "20,93",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "11:04:09",
+      "produto": "(prod) Semi Aurora/Aurora Enfeitada F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "10,18",
+      "custo_total": "10,18",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "11:04:08",
+      "produto": "(prod) Baba de Moca Grossa (kg)",
+      "qtde": "9,700",
+      "custo_unit": "16,94",
+      "custo_total": "164,32",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "11:04:07",
+      "produto": "(prod) Baba de Moca Fina (kg)",
+      "qtde": "9,620",
+      "custo_unit": "13,61",
+      "custo_total": "130,97",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "11:04:05",
+      "produto": "(prod) Batido Branco F30 (un)",
+      "qtde": "2,000",
+      "custo_unit": "10,31",
+      "custo_total": "20,62",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "11:04:05",
+      "produto": "(prod) Batido Branco F13 (un)",
+      "qtde": "2,000",
+      "custo_unit": "1,37",
+      "custo_total": "2,75",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "11:04:04",
+      "produto": "(prod) Batido Branco F25 (un)",
+      "qtde": "2,000",
+      "custo_unit": "5,29",
+      "custo_total": "10,58",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "19/09/2025",
+      "hora": "11:04:03",
+      "produto": "(prod) Batido Branco (kg)",
+      "qtde": "5,390",
+      "custo_unit": "6,88",
+      "custo_total": "37,09",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "18/09/2025",
+      "hora": "19:18:24",
+      "produto": "(prod) Alema F22 (un)",
+      "qtde": "10,000",
+      "custo_unit": "46,25",
+      "custo_total": "462,47",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "18/09/2025",
+      "hora": "19:18:22",
+      "produto": "(prod) Semi Alema F22 (un)",
+      "qtde": "10,000",
+      "custo_unit": "37,69",
+      "custo_total": "376,92",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "18/09/2025",
+      "hora": "19:18:21",
+      "produto": "(prod) Creme de Alema (kg)",
+      "qtde": "10,730",
+      "custo_unit": "29,20",
+      "custo_total": "313,34",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "18/09/2025",
+      "hora": "19:18:21",
+      "produto": "(prod) Calda Chocolate Alema (kg)",
+      "qtde": "9,000",
+      "custo_unit": "16,85",
+      "custo_total": "151,66",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "11/09/2025",
+      "hora": "16:48:17",
+      "produto": "(prod) Banoffee F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "19,46",
+      "custo_total": "19,46",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "11/09/2025",
+      "hora": "16:48:16",
+      "produto": "(prod) Banoffee F20 (un)",
+      "qtde": "1,000",
+      "custo_unit": "32,88",
+      "custo_total": "32,88",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "11/09/2025",
+      "hora": "16:45:04",
+      "produto": "(prod) Semi Banoffee F20 (un)",
+      "qtde": "1,000",
+      "custo_unit": "27,82",
+      "custo_total": "27,82",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "11/09/2025",
+      "hora": "16:45:03",
+      "produto": "(prod) Semi Banoffee F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "16,20",
+      "custo_total": "16,20",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "11/09/2025",
+      "hora": "16:42:40",
+      "produto": "(prod) Semi Acabada Banoffee F20 (un)",
+      "qtde": "1,000",
+      "custo_unit": "23,39",
+      "custo_total": "23,39",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "11/09/2025",
+      "hora": "16:42:39",
+      "produto": "(prod) Semi Acabada Banoffee F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "13,54",
+      "custo_total": "13,54",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "11/09/2025",
+      "hora": "16:35:21",
+      "produto": "(prod) Base Banoffee F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "4,17",
+      "custo_total": "4,17",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "11/09/2025",
+      "hora": "16:35:21",
+      "produto": "(prod) Base Banoffee F20 (un)",
+      "qtde": "1,000",
+      "custo_unit": "7,41",
+      "custo_total": "7,41",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "11/09/2025",
+      "hora": "16:33:06",
+      "produto": "(prod) Banoffee Base (kg)",
+      "qtde": "9,600",
+      "custo_unit": "23,17",
+      "custo_total": "222,41",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "11/09/2025",
+      "hora": "15:42:44",
+      "produto": "(prod) Semi Choconozes F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "13,46",
+      "custo_total": "13,46",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "11/09/2025",
+      "hora": "15:42:43",
+      "produto": "(prod) Semi Choconozes F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "10,19",
+      "custo_total": "10,19",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "11/09/2025",
+      "hora": "15:42:42",
+      "produto": "(prod) Semi Acabada Choconozes F30 (un)",
+      "qtde": "1,000",
+      "custo_unit": "59,36",
+      "custo_total": "59,36",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "11/09/2025",
+      "hora": "15:42:40",
+      "produto": "(prod) Semi Acabada Choconozes F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "32,32",
+      "custo_total": "32,32",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "11/09/2025",
+      "hora": "15:42:39",
+      "produto": "(prod) Semi Acabada Choconozes F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "19,09",
+      "custo_total": "19,09",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "11/09/2025",
+      "hora": "15:42:37",
+      "produto": "(prod) Choconozes F30 (un)",
+      "qtde": "1,000",
+      "custo_unit": "26,63",
+      "custo_total": "26,63",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "11/09/2025",
+      "hora": "15:42:35",
+      "produto": "(prod) Choconozes F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "16,99",
+      "custo_total": "16,99",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "11/09/2025",
+      "hora": "15:42:33",
+      "produto": "(prod) Choconozes F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "53,91",
+      "custo_total": "53,91",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "11/09/2025",
+      "hora": "15:42:32",
+      "produto": "(prod) Batido Choconozes F30 (un)",
+      "qtde": "1,000",
+      "custo_unit": "24,89",
+      "custo_total": "24,89",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "11/09/2025",
+      "hora": "15:42:32",
+      "produto": "(prod) Batido Choconozes F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "14,81",
+      "custo_total": "14,81",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "11/09/2025",
+      "hora": "15:42:31",
+      "produto": "(prod) Batido Choconozes F22 (un)",
+      "qtde": "1,000",
+      "custo_unit": "9,48",
+      "custo_total": "9,48",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "11/09/2025",
+      "hora": "15:42:30",
+      "produto": "(prod) Batido Choconozes F20 (un)",
+      "qtde": "1,000",
+      "custo_unit": "7,47",
+      "custo_total": "7,47",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "11/09/2025",
+      "hora": "15:42:29",
+      "produto": "(prod) Batido Choconozes F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "3,56",
+      "custo_total": "3,56",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "11/09/2025",
+      "hora": "15:42:29",
+      "produto": "(prod) Batido Choconozes (kg)",
+      "qtde": "7,500",
+      "custo_unit": "13,59",
+      "custo_total": "101,89",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "10/09/2025",
+      "hora": "18:46:37",
+      "produto": "(prod) Banoffee F20 (un)",
+      "qtde": "1,000",
+      "custo_unit": "5,06",
+      "custo_total": "5,06",
+      "turno": "Produção"
+    },
+    {
+      "data": "10/09/2025",
+      "hora": "18:46:36",
+      "produto": "(prod) Banoffee F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "3,43",
+      "custo_total": "3,43",
+      "turno": "Produção"
+    },
+    {
+      "data": "10/09/2025",
+      "hora": "18:46:35",
+      "produto": "(prod) Semi Banoffee F20 (un)",
+      "qtde": "1,000",
+      "custo_unit": "4,43",
+      "custo_total": "4,43",
+      "turno": "Produção"
+    },
+    {
+      "data": "10/09/2025",
+      "hora": "18:46:34",
+      "produto": "(prod) Semi Banoffee F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "2,66",
+      "custo_total": "2,66",
+      "turno": "Produção"
+    },
+    {
+      "data": "10/09/2025",
+      "hora": "18:46:33",
+      "produto": "(prod) Semi Acabada Banoffee F20 (un)",
+      "qtde": "1,000",
+      "custo_unit": "40,09",
+      "custo_total": "40,09",
+      "turno": "Produção"
+    },
+    {
+      "data": "10/09/2025",
+      "hora": "18:46:32",
+      "produto": "(prod) Semi Acabada Banoffee F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "34,14",
+      "custo_total": "34,14",
+      "turno": "Produção"
+    },
+    {
+      "data": "10/09/2025",
+      "hora": "18:46:31",
+      "produto": "(prod) Base Banoffee F20 (un)",
+      "qtde": "1,000",
+      "custo_unit": "7,74",
+      "custo_total": "7,74",
+      "turno": "Produção"
+    },
+    {
+      "data": "10/09/2025",
+      "hora": "18:46:30",
+      "produto": "(prod) Base Banoffee F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "4,35",
+      "custo_total": "4,35",
+      "turno": "Produção"
+    },
+    {
+      "data": "10/09/2025",
+      "hora": "18:46:29",
+      "produto": "(prod) Banoffee Base (kg)",
+      "qtde": "0,960",
+      "custo_unit": "23,16",
+      "custo_total": "22,24",
+      "turno": "Produção"
+    },
+    {
+      "data": "10/09/2025",
+      "hora": "17:46:07",
+      "produto": "(prod) Suspiro de Merengue (kg)",
+      "qtde": "5,000",
+      "custo_unit": "10,26",
+      "custo_total": "51,30",
+      "turno": "Produção"
+    },
+    {
+      "data": "10/09/2025",
+      "hora": "17:46:07",
+      "produto": "(prod) Base Suspiro F30 (un)",
+      "qtde": "1,000",
+      "custo_unit": "5,13",
+      "custo_total": "5,13",
+      "turno": "Produção"
+    },
+    {
+      "data": "10/09/2025",
+      "hora": "17:46:06",
+      "produto": "(prod) Base Suspiro F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "2,57",
+      "custo_total": "2,57",
+      "turno": "Produção"
+    },
+    {
+      "data": "10/09/2025",
+      "hora": "17:46:06",
+      "produto": "(prod) Base Suspiro F22 (un)",
+      "qtde": "1,000",
+      "custo_unit": "2,05",
+      "custo_total": "2,05",
+      "turno": "Produção"
+    },
+    {
+      "data": "10/09/2025",
+      "hora": "17:46:05",
+      "produto": "(prod) Base Suspiro F20 (un)",
+      "qtde": "1,000",
+      "custo_unit": "1,85",
+      "custo_total": "1,85",
+      "turno": "Produção"
+    },
+    {
+      "data": "10/09/2025",
+      "hora": "17:46:05",
+      "produto": "(prod) Base Suspiro F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "0,51",
+      "custo_total": "0,51",
+      "turno": "Produção"
+    },
+    {
+      "data": "10/09/2025",
+      "hora": "14:48:00",
+      "produto": "(prod) Fantasia F30 (un)",
+      "qtde": "1,000",
+      "custo_unit": "15,03",
+      "custo_total": "15,03",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "10/09/2025",
+      "hora": "14:47:59",
+      "produto": "(prod) Fantasia F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "9,59",
+      "custo_total": "9,59",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "10/09/2025",
+      "hora": "14:47:57",
+      "produto": "(prod) Fantasia F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "4,06",
+      "custo_total": "4,06",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "10/09/2025",
+      "hora": "14:47:56",
+      "produto": "(prod) Semi Fantasia F30 (un)",
+      "qtde": "1,000",
+      "custo_unit": "49,52",
+      "custo_total": "49,52",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "10/09/2025",
+      "hora": "14:47:55",
+      "produto": "(prod) Semi Fantasia F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "31,10",
+      "custo_total": "31,10",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "10/09/2025",
+      "hora": "14:47:53",
+      "produto": "(prod) Semi Fantasia F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "18,08",
+      "custo_total": "18,08",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "10/09/2025",
+      "hora": "12:35:03",
+      "produto": "(prod) Delicia Camadas F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "11,65",
+      "custo_total": "11,65",
+      "turno": "Produção"
+    },
+    {
+      "data": "10/09/2025",
+      "hora": "12:34:59",
+      "produto": "(prod) Delicia Camadas F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "26,48",
+      "custo_total": "26,48",
+      "turno": "Produção"
+    },
+    {
+      "data": "10/09/2025",
+      "hora": "12:12:35",
+      "produto": "(prod) Semi Quebra Nozes F30 (un)",
+      "qtde": "1,000",
+      "custo_unit": "36,08",
+      "custo_total": "36,08",
+      "turno": "Produção"
+    },
+    {
+      "data": "10/09/2025",
+      "hora": "12:12:33",
+      "produto": "(prod) Semi Sino Nozes (un)",
+      "qtde": "1,000",
+      "custo_unit": "21,83",
+      "custo_total": "21,83",
+      "turno": "Produção"
+    },
+    {
+      "data": "10/09/2025",
+      "hora": "12:12:31",
+      "produto": "(prod) Semi Quebra Nozes F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "14,78",
+      "custo_total": "14,78",
+      "turno": "Produção"
+    },
+    {
+      "data": "10/09/2025",
+      "hora": "12:12:30",
+      "produto": "(prod) Quebra Nozes F30 (un)",
+      "qtde": "1,000",
+      "custo_unit": "36,86",
+      "custo_total": "36,86",
+      "turno": "Produção"
+    },
+    {
+      "data": "10/09/2025",
+      "hora": "12:12:27",
+      "produto": "(prod) Quebra Nozes F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "23,71",
+      "custo_total": "23,71",
+      "turno": "Produção"
+    },
+    {
+      "data": "10/09/2025",
+      "hora": "12:12:24",
+      "produto": "(prod) Quebra Nozes F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "9,93",
+      "custo_total": "9,93",
+      "turno": "Produção"
+    },
+    {
+      "data": "10/09/2025",
+      "hora": "12:12:23",
+      "produto": "(prod) Batido Nozes F30 (un)",
+      "qtde": "1,000",
+      "custo_unit": "21,41",
+      "custo_total": "21,41",
+      "turno": "Produção"
+    },
+    {
+      "data": "10/09/2025",
+      "hora": "12:12:22",
+      "produto": "(prod) Batido Nozes F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "10,70",
+      "custo_total": "10,70",
+      "turno": "Produção"
+    },
+    {
+      "data": "10/09/2025",
+      "hora": "12:12:22",
+      "produto": "(prod) Batido Nozes F22 (un)",
+      "qtde": "1,000",
+      "custo_unit": "9,37",
+      "custo_total": "9,37",
+      "turno": "Produção"
+    },
+    {
+      "data": "10/09/2025",
+      "hora": "12:12:22",
+      "produto": "(prod) Batido Nozes F20 (un)",
+      "qtde": "1,000",
+      "custo_unit": "8,03",
+      "custo_total": "8,03",
+      "turno": "Produção"
+    },
+    {
+      "data": "10/09/2025",
+      "hora": "12:12:21",
+      "produto": "(prod) Batido Nozes F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "2,94",
+      "custo_total": "2,94",
+      "turno": "Produção"
+    },
+    {
+      "data": "10/09/2025",
+      "hora": "12:12:21",
+      "produto": "(prod) Batido de Nozes (kg)",
+      "qtde": "5,240",
+      "custo_unit": "20,53",
+      "custo_total": "107,59",
+      "turno": "Produção"
+    },
+    {
+      "data": "10/09/2025",
+      "hora": "11:21:56",
+      "produto": "(prod) Semi Deliciosa F30 (un)",
+      "qtde": "1,000",
+      "custo_unit": "79,47",
+      "custo_total": "79,47",
+      "turno": "Produção"
+    },
+    {
+      "data": "10/09/2025",
+      "hora": "11:21:52",
+      "produto": "(prod) Semi Deliciosa F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "56,47",
+      "custo_total": "56,47",
+      "turno": "Produção"
+    },
+    {
+      "data": "10/09/2025",
+      "hora": "11:21:51",
+      "produto": "(prod) Semi Deliciosa F20 (un)",
+      "qtde": "1,000",
+      "custo_unit": "40,93",
+      "custo_total": "40,93",
+      "turno": "Produção"
+    },
+    {
+      "data": "10/09/2025",
+      "hora": "11:21:50",
+      "produto": "(prod) Semi Deliciosa F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "20,57",
+      "custo_total": "20,57",
+      "turno": "Produção"
+    },
+    {
+      "data": "10/09/2025",
+      "hora": "11:21:49",
+      "produto": "(prod) Semi Acabada Deliciosa F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "78,80",
+      "custo_total": "78,80",
+      "turno": "Produção"
+    },
+    {
+      "data": "10/09/2025",
+      "hora": "11:21:47",
+      "produto": "(prod) Semi Acabada Deliciosa F20 (un)",
+      "qtde": "1,000",
+      "custo_unit": "21,67",
+      "custo_total": "21,67",
+      "turno": "Produção"
+    },
+    {
+      "data": "10/09/2025",
+      "hora": "11:21:46",
+      "produto": "(prod) Semi Acabada Deliciosa F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "32,26",
+      "custo_total": "32,26",
+      "turno": "Produção"
+    },
+    {
+      "data": "10/09/2025",
+      "hora": "11:21:43",
+      "produto": "(prod) Deliciosa F30 (un)",
+      "qtde": "1,000",
+      "custo_unit": "69,99",
+      "custo_total": "69,99",
+      "turno": "Produção"
+    },
+    {
+      "data": "10/09/2025",
+      "hora": "11:21:40",
+      "produto": "(prod) Deliciosa F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "62,09",
+      "custo_total": "62,09",
+      "turno": "Produção"
+    },
+    {
+      "data": "10/09/2025",
+      "hora": "11:21:36",
+      "produto": "(prod) Deliciosa F20 (un)",
+      "qtde": "1,000",
+      "custo_unit": "42,95",
+      "custo_total": "42,95",
+      "turno": "Produção"
+    },
+    {
+      "data": "10/09/2025",
+      "hora": "11:21:32",
+      "produto": "(prod) Deliciosa F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "22,28",
+      "custo_total": "22,28",
+      "turno": "Produção"
+    },
+    {
+      "data": "10/09/2025",
+      "hora": "11:21:31",
+      "produto": "(prod) Batido Semi Pronta Deliciosa F25 (un)",
+      "qtde": "1,000",
+      "custo_unit": "19,75",
+      "custo_total": "19,75",
+      "turno": "Produção"
+    },
+    {
+      "data": "10/09/2025",
+      "hora": "11:21:31",
+      "produto": "(prod) Batido Semi Pronta Deliciosa F20 (un)",
+      "qtde": "1,000",
+      "custo_unit": "14,28",
+      "custo_total": "14,28",
+      "turno": "Produção"
+    },
+    {
+      "data": "10/09/2025",
+      "hora": "11:21:30",
+      "produto": "(prod) Batido Semi Pronta Deliciosa F13 (un)",
+      "qtde": "1,000",
+      "custo_unit": "4,99",
+      "custo_total": "4,99",
+      "turno": "Produção"
+    },
+    {
+      "data": "09/09/2025",
+      "hora": "15:55:56",
+      "produto": "(prod) Batido Branco (kg)",
+      "qtde": "53,900",
+      "custo_unit": "6,87",
+      "custo_total": "370,40",
+      "turno": "Produção"
+    },
+    {
+      "data": "09/09/2025",
+      "hora": "15:53:20",
+      "produto": "(prod) Batido Branco (kg)",
+      "qtde": "5,390",
+      "custo_unit": "6,87",
+      "custo_total": "37,04",
+      "turno": "Produção"
+    },
+    {
+      "data": "09/09/2025",
+      "hora": "14:29:50",
+      "produto": "(prod) Recheio de Banana (kg)",
+      "qtde": "14,000",
+      "custo_unit": "8,86",
+      "custo_total": "124,03",
+      "turno": "Produção"
+    }
+  ]
+}

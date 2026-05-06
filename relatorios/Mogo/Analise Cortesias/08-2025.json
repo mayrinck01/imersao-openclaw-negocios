@@ -1,0 +1,176 @@
+{
+  "periodo": {
+    "de": "01/08/2025",
+    "ate": "31/08/2025"
+  },
+  "total_registros": 15,
+  "total_valor": "R$ 1.999,00",
+  "total_custo": "R$ 167,25",
+  "registros": [
+    {
+      "data": "30/08/2025",
+      "hora": "11:25:43",
+      "funcionario": "alex",
+      "cliente": "Luka Rebello",
+      "telefone": "08007118080",
+      "valor": "219,90",
+      "custo": "0,00",
+      "motivo": "",
+      "id": "97241"
+    },
+    {
+      "data": "29/08/2025",
+      "hora": "18:54:47",
+      "funcionario": "alex",
+      "cliente": "",
+      "telefone": "",
+      "valor": "32,70",
+      "custo": "0,00",
+      "motivo": "",
+      "id": "97124"
+    },
+    {
+      "data": "28/08/2025",
+      "hora": "11:32:13",
+      "funcionario": "cristiane",
+      "cliente": "MARIA CECILIA REGO MACEDO ",
+      "telefone": "21993841028",
+      "valor": "178,60",
+      "custo": "0,00",
+      "motivo": "",
+      "id": "96669"
+    },
+    {
+      "data": "26/08/2025",
+      "hora": "12:33:16",
+      "funcionario": "alex",
+      "cliente": "Erika Raquel da Silva Macedo",
+      "telefone": "21992594238",
+      "valor": "188,50",
+      "custo": "39,09",
+      "motivo": "",
+      "id": "96141"
+    },
+    {
+      "data": "21/08/2025",
+      "hora": "16:07:23",
+      "funcionario": "cristiane",
+      "cliente": "MARIA CECILIA REGO MACEDO ",
+      "telefone": "21993841028",
+      "valor": "146,80",
+      "custo": "0,00",
+      "motivo": "",
+      "id": "95075"
+    },
+    {
+      "data": "20/08/2025",
+      "hora": "18:07:09",
+      "funcionario": "cristiane",
+      "cliente": "Clarissa nascimento",
+      "telefone": "21988644774",
+      "valor": "28,50",
+      "custo": "0,00",
+      "motivo": "",
+      "id": "94838"
+    },
+    {
+      "data": "15/08/2025",
+      "hora": "18:52:07",
+      "funcionario": "cristiane",
+      "cliente": "MARIA CECILIA REGO MACEDO ",
+      "telefone": "21993841028",
+      "valor": "90,00",
+      "custo": "0,00",
+      "motivo": "",
+      "id": "93660"
+    },
+    {
+      "data": "14/08/2025",
+      "hora": "15:12:05",
+      "funcionario": "alex",
+      "cliente": "Mariana moreira Nutricionista ",
+      "telefone": "21974960468",
+      "valor": "57,00",
+      "custo": "0,00",
+      "motivo": "",
+      "id": "93213"
+    },
+    {
+      "data": "12/08/2025",
+      "hora": "12:05:38",
+      "funcionario": "Larissa Lira",
+      "cliente": "Adriana Mendes de araujo",
+      "telefone": "21988217688",
+      "valor": "33,00",
+      "custo": "0,00",
+      "motivo": "",
+      "id": "92564"
+    },
+    {
+      "data": "09/08/2025",
+      "hora": "12:06:05",
+      "funcionario": "Larissa Lira",
+      "cliente": "LAURA OLIVEIRA CASTRO",
+      "telefone": "21991466344",
+      "valor": "254,50",
+      "custo": "39,09",
+      "motivo": "",
+      "id": "91647"
+    },
+    {
+      "data": "08/08/2025",
+      "hora": "17:49:30",
+      "funcionario": "cristiane",
+      "cliente": "Paróquia Nossa Senhora da Esperança",
+      "telefone": "",
+      "valor": "84,50",
+      "custo": "0,00",
+      "motivo": "",
+      "id": "91427"
+    },
+    {
+      "data": "05/08/2025",
+      "hora": "12:52:58",
+      "funcionario": "cristiane",
+      "cliente": "Maria Gabriela Rodrigues da Silva Pedreira",
+      "telefone": "21971989039",
+      "valor": "235,00",
+      "custo": "39,09",
+      "motivo": "",
+      "id": "90146"
+    },
+    {
+      "data": "04/08/2025",
+      "hora": "17:36:26",
+      "funcionario": "Larissa Lira",
+      "cliente": "Paróquia Nossa Senhora da Esperança",
+      "telefone": "",
+      "valor": "195,00",
+      "custo": "10,89",
+      "motivo": "",
+      "id": "90029"
+    },
+    {
+      "data": "04/08/2025",
+      "hora": "16:06:25",
+      "funcionario": "Larissa Lira",
+      "cliente": "Flavia Masa",
+      "telefone": "21981297657",
+      "valor": "35,00",
+      "custo": "0,00",
+      "motivo": "",
+      "id": "89990"
+    },
+    {
+      "data": "04/08/2025",
+      "hora": "10:12:24",
+      "funcionario": "Larissa Lira",
+      "cliente": "Yasmim França da Costa ",
+      "telefone": "21981334607",
+      "valor": "220,00",
+      "custo": "39,09",
+      "motivo": "",
+      "id": "89857"
+    }
+  ]
+}

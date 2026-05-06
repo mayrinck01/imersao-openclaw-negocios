@@ -1,0 +1,132 @@
+{
+  "periodo": {
+    "de": "01/12/2025",
+    "ate": "31/12/2025"
+  },
+  "total_registros": 11,
+  "total_credito": "R$ 1.420,50",
+  "total_debito": "R$ 1.388,85",
+  "registros": [
+    {
+      "data": "23/12/2025",
+      "hora": "12:19:03",
+      "cliente": "ELIZABETH RIBEIRO MARQUES GOMES",
+      "cpf": "",
+      "tipo": "Debito",
+      "descricao": "Pedido: 004117 (Delivery)",
+      "valor": "487,00",
+      "saldo": "0,00",
+      "financeiro": "Não selecionado"
+    },
+    {
+      "data": "23/12/2025",
+      "hora": "12:15:31",
+      "cliente": "ELIZABETH RIBEIRO MARQUES GOMES",
+      "cpf": "",
+      "tipo": "Debito",
+      "descricao": "Pedido: 006272 (Delivery)",
+      "valor": "119,00",
+      "saldo": "487,00",
+      "financeiro": "Não selecionado"
+    },
+    {
+      "data": "23/12/2025",
+      "hora": "12:00:33",
+      "cliente": "Gustavo Cavalcanti",
+      "cpf": "10286112426",
+      "tipo": "Credito",
+      "descricao": "enviou um camafeu de presente e presenteada não estava em ca",
+      "valor": "54,00",
+      "saldo": "54,00",
+      "financeiro": "Não gerar financeiro"
+    },
+    {
+      "data": "23/12/2025",
+      "hora": "11:25:47",
+      "cliente": "ELIZABETH RIBEIRO MARQUES GOMES",
+      "cpf": "",
+      "tipo": "Credito",
+      "descricao": "Desmenbrou o Pedido",
+      "valor": "606,00",
+      "saldo": "606,00",
+      "financeiro": "Não gerar financeiro"
+    },
+    {
+      "data": "23/12/2025",
+      "hora": "09:23:33",
+      "cliente": "Regina Miranda",
+      "cpf": "15296784120",
+      "tipo": "Debito",
+      "descricao": "Pedido: 001821 (Delivery)",
+      "valor": "628,50",
+      "saldo": "0,00",
+      "financeiro": "Não selecionado"
+    },
+    {
+      "data": "23/12/2025",
+      "hora": "09:16:21",
+      "cliente": "Regina Miranda",
+      "cpf": "15296784120",
+      "tipo": "Credito",
+      "descricao": "",
+      "valor": "628,50",
+      "saldo": "628,50",
+      "financeiro": "Não gerar financeiro"
+    },
+    {
+      "data": "22/12/2025",
+      "hora": "17:44:16",
+      "cliente": "Felipe Castro (Jornalista)",
+      "cpf": "07836630722",
+      "tipo": "Debito",
+      "descricao": "Pedido: 006011 (Delivery)",
+      "valor": "84,00",
+      "saldo": "873,60",
+      "financeiro": "Não selecionado"
+    },
+    {
+      "data": "22/12/2025",
+      "hora": "17:31:18",
+      "cliente": "Felipe Castro (Jornalista)",
+      "cpf": "07836630722",
+      "tipo": "Debito",
+      "descricao": "Pedido: 006154 (Mesa: 11)",
+      "valor": "36,85",
+      "saldo": "957,60",
+      "financeiro": "Não selecionado"
+    },
+    {
+      "data": "20/12/2025",
+      "hora": "17:37:26",
+      "cliente": "Andréa vianna",
+      "cpf": "83948660778",
+      "tipo": "Credito",
+      "descricao": "Valor do pedido ( 5260)  112,00  / valor pago 163,00",
+      "valor": "51,00",
+      "saldo": "51,00",
+      "financeiro": "Não gerar financeiro"
+    },
+    {
+      "data": "05/12/2025",
+      "hora": "18:21:56",
+      "cliente": "Felipe Castro (Jornalista)",
+      "cpf": "07836630722",
+      "tipo": "Debito",
+      "descricao": "Pedido: 001985 (Mesa: 212)",
+      "valor": "33,50",
+      "saldo": "994,45",
+      "financeiro": "Não selecionado"
+    },
+    {
+      "data": "01/12/2025",
+      "hora": "14:23:48",
+      "cliente": "ANA LUCIA LINS E SILVA",
+      "cpf": "09929952721",
+      "tipo": "Credito",
+      "descricao": "Pedidos 000930 / 933   entrega 24-12",
+      "valor": "81,00",
+      "saldo": "81,00",
+      "financeiro": "Não gerar financeiro"
+    }
+  ]
+}

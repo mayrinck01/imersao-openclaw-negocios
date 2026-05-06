@@ -1,0 +1,121 @@
+{
+  "periodo": {
+    "de": "01/07/2025",
+    "ate": "31/07/2025"
+  },
+  "total_registros": 10,
+  "total_valor": "R$ 1.895,15",
+  "total_custo": "R$ 102,91",
+  "registros": [
+    {
+      "data": "29/07/2025",
+      "hora": "17:35:26",
+      "funcionario": "cristiane",
+      "cliente": "Sandra Xavier Gentile de Mello",
+      "telefone": "21993631030",
+      "valor": "25,00",
+      "custo": "0,00",
+      "motivo": "",
+      "id": "88017"
+    },
+    {
+      "data": "28/07/2025",
+      "hora": "16:29:12",
+      "funcionario": "cristiane",
+      "cliente": "MARIA CECILIA REGO MACEDO ",
+      "telefone": "21993841028",
+      "valor": "115,00",
+      "custo": "0,00",
+      "motivo": "",
+      "id": "87587"
+    },
+    {
+      "data": "26/07/2025",
+      "hora": "09:58:55",
+      "funcionario": "cristiane",
+      "cliente": "Beatriz Braz",
+      "telefone": "21987593800",
+      "valor": "50,00",
+      "custo": "0,00",
+      "motivo": "",
+      "id": "86669"
+    },
+    {
+      "data": "11/07/2025",
+      "hora": "10:59:24",
+      "funcionario": "cristiane",
+      "cliente": "Obra do Berço",
+      "telefone": "21989093435",
+      "valor": "455,00",
+      "custo": "10,89",
+      "motivo": "",
+      "id": "82468"
+    },
+    {
+      "data": "10/07/2025",
+      "hora": "14:45:14",
+      "funcionario": "cristiane",
+      "cliente": "Irmã Terezinha (Clarissas)",
+      "telefone": "2122743147",
+      "valor": "85,00",
+      "custo": "0,00",
+      "motivo": "",
+      "id": "82297"
+    },
+    {
+      "data": "10/07/2025",
+      "hora": "14:44:41",
+      "funcionario": "cristiane",
+      "cliente": "IRMÃS CLARISSAS",
+      "telefone": "",
+      "valor": "792,00",
+      "custo": "81,13",
+      "motivo": "",
+      "id": "82294"
+    },
+    {
+      "data": "09/07/2025",
+      "hora": "18:51:54",
+      "funcionario": "alex",
+      "cliente": "SARA VIEIRA DE BRITO LIRA ( influencer ) ",
+      "telefone": "",
+      "valor": "227,00",
+      "custo": "0,00",
+      "motivo": "",
+      "id": "82184"
+    },
+    {
+      "data": "05/07/2025",
+      "hora": "09:37:15",
+      "funcionario": "cristiane",
+      "cliente": "Paróquia Nossa Senhora da Esperança",
+      "telefone": "",
+      "valor": "130,00",
+      "custo": "10,89",
+      "motivo": "",
+      "id": "81104"
+    },
+    {
+      "data": "03/07/2025",
+      "hora": "18:38:02",
+      "funcionario": "alex",
+      "cliente": "",
+      "telefone": "",
+      "valor": "7,50",
+      "custo": "0,00",
+      "motivo": "",
+      "id": "80783"
+    },
+    {
+      "data": "03/07/2025",
+      "hora": "17:14:18",
+      "funcionario": "alex",
+      "cliente": "",
+      "telefone": "",
+      "valor": "8,65",
+      "custo": "0,00",
+      "motivo": "",
+      "id": "80748"
+    }
+  ]
+}

@@ -1,0 +1,3133 @@
+SESSION=mogo-backfill-retry-20260505-090820
+STARTED_AT=2026-05-05T09:08:20-03:00
+MONTHS=2026-01,2026-02,2025-01,2025-02,2025-03,2025-04,2025-05,2025-06,2025-07,2025-08,2025-09,2025-10,2025-11,2025-12
+BACKFILL_START months=14 scripts=20 total=280 result=/root/workspaces/cake-brain/relatorios/Mogo/exports/mogo-backfill-dia5-20260505-090820.jsonl
+
+MONTH_START 2026-01 fake_now=2026-02-05
+SKIP 1/280 2026-01 mogo-faturamento-detalhado.py existing=healthy
+DONE 1/280 2026-01 mogo-faturamento-detalhado.py status=skipped_existing duration=0.0s
+SKIP 2/280 2026-01 mogo-venda-nota-assinada.py existing=healthy
+DONE 2/280 2026-01 mogo-venda-nota-assinada.py status=skipped_existing duration=0.0s
+SKIP 3/280 2026-01 mogo-ticket-medio.py existing=healthy
+DONE 3/280 2026-01 mogo-ticket-medio.py status=skipped_existing duration=0.0s
+SKIP 4/280 2026-01 mogo-vendas-analitico.py existing=healthy
+DONE 4/280 2026-01 mogo-vendas-analitico.py status=skipped_existing duration=0.0s
+SKIP 5/280 2026-01 mogo-vendas-sintetico.py existing=healthy
+DONE 5/280 2026-01 mogo-vendas-sintetico.py status=skipped_existing duration=0.0s
+SKIP 6/280 2026-01 mogo-vendas-adicionais.py existing=healthy
+DONE 6/280 2026-01 mogo-vendas-adicionais.py status=skipped_existing duration=0.0s
+SKIP 7/280 2026-01 mogo-lucratividade-produto.py existing=healthy
+DONE 7/280 2026-01 mogo-lucratividade-produto.py status=skipped_existing duration=0.0s
+SKIP 8/280 2026-01 mogo-descontos-concedidos.py existing=healthy
+DONE 8/280 2026-01 mogo-descontos-concedidos.py status=skipped_existing duration=0.0s
+SKIP 9/280 2026-01 mogo-movimentacao-credito-cliente.py existing=healthy
+DONE 9/280 2026-01 mogo-movimentacao-credito-cliente.py status=skipped_existing duration=0.0s
+SKIP 10/280 2026-01 mogo-taxa-servico.py existing=healthy
+DONE 10/280 2026-01 mogo-taxa-servico.py status=skipped_existing duration=0.0s
+SKIP 11/280 2026-01 mogo-analise-cortesias.py existing=healthy
+DONE 11/280 2026-01 mogo-analise-cortesias.py status=skipped_existing duration=0.0s
+SKIP 12/280 2026-01 mogo-lancamentos-pedidos.py existing=healthy
+DONE 12/280 2026-01 mogo-lancamentos-pedidos.py status=skipped_existing duration=0.0s
+SKIP 13/280 2026-01 mogo-historico-pagamento.py existing=healthy
+DONE 13/280 2026-01 mogo-historico-pagamento.py status=skipped_existing duration=0.0s
+SKIP 14/280 2026-01 mogo-entradas-xml-detalhado.py existing=healthy
+DONE 14/280 2026-01 mogo-entradas-xml-detalhado.py status=skipped_existing duration=0.0s
+SKIP 15/280 2026-01 mogo-compra-produtos.py existing=healthy
+DONE 15/280 2026-01 mogo-compra-produtos.py status=skipped_existing duration=0.0s
+SKIP 16/280 2026-01 mogo-variacao-preco-compra.py existing=healthy
+DONE 16/280 2026-01 mogo-variacao-preco-compra.py status=skipped_existing duration=0.0s
+SKIP 17/280 2026-01 mogo-analise-quantidades-produzidas.py existing=healthy
+DONE 17/280 2026-01 mogo-analise-quantidades-produzidas.py status=skipped_existing duration=0.0s
+SKIP 18/280 2026-01 mogo-analise-insumos-producao.py existing=healthy
+DONE 18/280 2026-01 mogo-analise-insumos-producao.py status=skipped_existing duration=0.0s
+SKIP 19/280 2026-01 mogo-analise-cadastro-clientes.py existing=healthy
+DONE 19/280 2026-01 mogo-analise-cadastro-clientes.py status=skipped_existing duration=0.0s
+SKIP 20/280 2026-01 mogo-itens-vendidos-agendamento.py existing=healthy
+DONE 20/280 2026-01 mogo-itens-vendidos-agendamento.py status=skipped_existing duration=0.0s
+
+MONTH_START 2026-02 fake_now=2026-03-05
+SKIP 21/280 2026-02 mogo-faturamento-detalhado.py existing=healthy
+DONE 21/280 2026-02 mogo-faturamento-detalhado.py status=skipped_existing duration=0.0s
+SKIP 22/280 2026-02 mogo-venda-nota-assinada.py existing=healthy
+DONE 22/280 2026-02 mogo-venda-nota-assinada.py status=skipped_existing duration=0.0s
+SKIP 23/280 2026-02 mogo-ticket-medio.py existing=healthy
+DONE 23/280 2026-02 mogo-ticket-medio.py status=skipped_existing duration=0.0s
+SKIP 24/280 2026-02 mogo-vendas-analitico.py existing=healthy
+DONE 24/280 2026-02 mogo-vendas-analitico.py status=skipped_existing duration=0.0s
+SKIP 25/280 2026-02 mogo-vendas-sintetico.py existing=healthy
+DONE 25/280 2026-02 mogo-vendas-sintetico.py status=skipped_existing duration=0.0s
+SKIP 26/280 2026-02 mogo-vendas-adicionais.py existing=healthy
+DONE 26/280 2026-02 mogo-vendas-adicionais.py status=skipped_existing duration=0.0s
+SKIP 27/280 2026-02 mogo-lucratividade-produto.py existing=healthy
+DONE 27/280 2026-02 mogo-lucratividade-produto.py status=skipped_existing duration=0.0s
+SKIP 28/280 2026-02 mogo-descontos-concedidos.py existing=healthy
+DONE 28/280 2026-02 mogo-descontos-concedidos.py status=skipped_existing duration=0.0s
+SKIP 29/280 2026-02 mogo-movimentacao-credito-cliente.py existing=healthy
+DONE 29/280 2026-02 mogo-movimentacao-credito-cliente.py status=skipped_existing duration=0.0s
+SKIP 30/280 2026-02 mogo-taxa-servico.py existing=healthy
+DONE 30/280 2026-02 mogo-taxa-servico.py status=skipped_existing duration=0.0s
+SKIP 31/280 2026-02 mogo-analise-cortesias.py existing=healthy
+DONE 31/280 2026-02 mogo-analise-cortesias.py status=skipped_existing duration=0.0s
+SKIP 32/280 2026-02 mogo-lancamentos-pedidos.py existing=healthy
+DONE 32/280 2026-02 mogo-lancamentos-pedidos.py status=skipped_existing duration=0.0s
+SKIP 33/280 2026-02 mogo-historico-pagamento.py existing=healthy
+DONE 33/280 2026-02 mogo-historico-pagamento.py status=skipped_existing duration=0.0s
+SKIP 34/280 2026-02 mogo-entradas-xml-detalhado.py existing=healthy
+DONE 34/280 2026-02 mogo-entradas-xml-detalhado.py status=skipped_existing duration=0.0s
+SKIP 35/280 2026-02 mogo-compra-produtos.py existing=healthy
+DONE 35/280 2026-02 mogo-compra-produtos.py status=skipped_existing duration=0.0s
+SKIP 36/280 2026-02 mogo-variacao-preco-compra.py existing=healthy
+DONE 36/280 2026-02 mogo-variacao-preco-compra.py status=skipped_existing duration=0.0s
+SKIP 37/280 2026-02 mogo-analise-quantidades-produzidas.py existing=healthy
+DONE 37/280 2026-02 mogo-analise-quantidades-produzidas.py status=skipped_existing duration=0.0s
+SKIP 38/280 2026-02 mogo-analise-insumos-producao.py existing=healthy
+DONE 38/280 2026-02 mogo-analise-insumos-producao.py status=skipped_existing duration=0.0s
+SKIP 39/280 2026-02 mogo-analise-cadastro-clientes.py existing=healthy
+DONE 39/280 2026-02 mogo-analise-cadastro-clientes.py status=skipped_existing duration=0.0s
+SKIP 40/280 2026-02 mogo-itens-vendidos-agendamento.py existing=healthy
+DONE 40/280 2026-02 mogo-itens-vendidos-agendamento.py status=skipped_existing duration=0.0s
+
+MONTH_START 2025-01 fake_now=2025-02-05
+SKIP 41/280 2025-01 mogo-faturamento-detalhado.py existing=healthy
+DONE 41/280 2025-01 mogo-faturamento-detalhado.py status=skipped_existing duration=0.0s
+SKIP 42/280 2025-01 mogo-venda-nota-assinada.py existing=healthy
+DONE 42/280 2025-01 mogo-venda-nota-assinada.py status=skipped_existing duration=0.0s
+SKIP 43/280 2025-01 mogo-ticket-medio.py existing=healthy
+DONE 43/280 2025-01 mogo-ticket-medio.py status=skipped_existing duration=0.0s
+SKIP 44/280 2025-01 mogo-vendas-analitico.py existing=healthy
+DONE 44/280 2025-01 mogo-vendas-analitico.py status=skipped_existing duration=0.0s
+SKIP 45/280 2025-01 mogo-vendas-sintetico.py existing=healthy
+DONE 45/280 2025-01 mogo-vendas-sintetico.py status=skipped_existing duration=0.0s
+SKIP 46/280 2025-01 mogo-vendas-adicionais.py existing=healthy
+DONE 46/280 2025-01 mogo-vendas-adicionais.py status=skipped_existing duration=0.0s
+SKIP 47/280 2025-01 mogo-lucratividade-produto.py existing=healthy
+DONE 47/280 2025-01 mogo-lucratividade-produto.py status=skipped_existing duration=0.0s
+SKIP 48/280 2025-01 mogo-descontos-concedidos.py existing=healthy
+DONE 48/280 2025-01 mogo-descontos-concedidos.py status=skipped_existing duration=0.0s
+SKIP 49/280 2025-01 mogo-movimentacao-credito-cliente.py existing=healthy
+DONE 49/280 2025-01 mogo-movimentacao-credito-cliente.py status=skipped_existing duration=0.0s
+SKIP 50/280 2025-01 mogo-taxa-servico.py existing=healthy
+DONE 50/280 2025-01 mogo-taxa-servico.py status=skipped_existing duration=0.0s
+SKIP 51/280 2025-01 mogo-analise-cortesias.py existing=healthy
+DONE 51/280 2025-01 mogo-analise-cortesias.py status=skipped_existing duration=0.0s
+SKIP 52/280 2025-01 mogo-lancamentos-pedidos.py existing=healthy
+DONE 52/280 2025-01 mogo-lancamentos-pedidos.py status=skipped_existing duration=0.0s
+SKIP 53/280 2025-01 mogo-historico-pagamento.py existing=healthy
+DONE 53/280 2025-01 mogo-historico-pagamento.py status=skipped_existing duration=0.0s
+SKIP 54/280 2025-01 mogo-entradas-xml-detalhado.py existing=healthy
+DONE 54/280 2025-01 mogo-entradas-xml-detalhado.py status=skipped_existing duration=0.0s
+SKIP 55/280 2025-01 mogo-compra-produtos.py existing=healthy
+DONE 55/280 2025-01 mogo-compra-produtos.py status=skipped_existing duration=0.0s
+SKIP 56/280 2025-01 mogo-variacao-preco-compra.py existing=healthy
+DONE 56/280 2025-01 mogo-variacao-preco-compra.py status=skipped_existing duration=0.0s
+RUN 57/280 2025-01 mogo-analise-quantidades-produzidas.py
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Análise de Quantidades Produzidas: 01/01/2025 a 31/01/2025...
+Total de registros: 0
+  Lote 1: 0 (total: 0)
+Total carregado: 0
+Nenhum dado encontrado.
+DONE 57/280 2025-01 mogo-analise-quantidades-produzidas.py status=ok duration=4.0s
+RUN 58/280 2025-01 mogo-analise-insumos-producao.py
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Análise de Insumos Gastos na Produção: 01/01/2025 a 31/01/2025...
+Total de registros: 0
+  Lote 1: 0 (total: 0)
+Total carregado: 0
+Nenhum dado encontrado.
+DONE 58/280 2025-01 mogo-analise-insumos-producao.py status=ok duration=3.2s
+SKIP 59/280 2025-01 mogo-analise-cadastro-clientes.py existing=healthy
+DONE 59/280 2025-01 mogo-analise-cadastro-clientes.py status=skipped_existing duration=0.0s
+SKIP 60/280 2025-01 mogo-itens-vendidos-agendamento.py existing=healthy
+DONE 60/280 2025-01 mogo-itens-vendidos-agendamento.py status=skipped_existing duration=0.0s
+
+MONTH_START 2025-02 fake_now=2025-03-05
+SKIP 61/280 2025-02 mogo-faturamento-detalhado.py existing=healthy
+DONE 61/280 2025-02 mogo-faturamento-detalhado.py status=skipped_existing duration=0.0s
+SKIP 62/280 2025-02 mogo-venda-nota-assinada.py existing=healthy
+DONE 62/280 2025-02 mogo-venda-nota-assinada.py status=skipped_existing duration=0.0s
+SKIP 63/280 2025-02 mogo-ticket-medio.py existing=healthy
+DONE 63/280 2025-02 mogo-ticket-medio.py status=skipped_existing duration=0.0s
+SKIP 64/280 2025-02 mogo-vendas-analitico.py existing=healthy
+DONE 64/280 2025-02 mogo-vendas-analitico.py status=skipped_existing duration=0.0s
+SKIP 65/280 2025-02 mogo-vendas-sintetico.py existing=healthy
+DONE 65/280 2025-02 mogo-vendas-sintetico.py status=skipped_existing duration=0.0s
+SKIP 66/280 2025-02 mogo-vendas-adicionais.py existing=healthy
+DONE 66/280 2025-02 mogo-vendas-adicionais.py status=skipped_existing duration=0.0s
+SKIP 67/280 2025-02 mogo-lucratividade-produto.py existing=healthy
+DONE 67/280 2025-02 mogo-lucratividade-produto.py status=skipped_existing duration=0.0s
+SKIP 68/280 2025-02 mogo-descontos-concedidos.py existing=healthy
+DONE 68/280 2025-02 mogo-descontos-concedidos.py status=skipped_existing duration=0.0s
+SKIP 69/280 2025-02 mogo-movimentacao-credito-cliente.py existing=healthy
+DONE 69/280 2025-02 mogo-movimentacao-credito-cliente.py status=skipped_existing duration=0.0s
+SKIP 70/280 2025-02 mogo-taxa-servico.py existing=healthy
+DONE 70/280 2025-02 mogo-taxa-servico.py status=skipped_existing duration=0.0s
+SKIP 71/280 2025-02 mogo-analise-cortesias.py existing=healthy
+DONE 71/280 2025-02 mogo-analise-cortesias.py status=skipped_existing duration=0.0s
+SKIP 72/280 2025-02 mogo-lancamentos-pedidos.py existing=healthy
+DONE 72/280 2025-02 mogo-lancamentos-pedidos.py status=skipped_existing duration=0.0s
+SKIP 73/280 2025-02 mogo-historico-pagamento.py existing=healthy
+DONE 73/280 2025-02 mogo-historico-pagamento.py status=skipped_existing duration=0.0s
+SKIP 74/280 2025-02 mogo-entradas-xml-detalhado.py existing=healthy
+DONE 74/280 2025-02 mogo-entradas-xml-detalhado.py status=skipped_existing duration=0.0s
+SKIP 75/280 2025-02 mogo-compra-produtos.py existing=healthy
+DONE 75/280 2025-02 mogo-compra-produtos.py status=skipped_existing duration=0.0s
+SKIP 76/280 2025-02 mogo-variacao-preco-compra.py existing=healthy
+DONE 76/280 2025-02 mogo-variacao-preco-compra.py status=skipped_existing duration=0.0s
+SKIP 77/280 2025-02 mogo-analise-quantidades-produzidas.py existing=healthy
+DONE 77/280 2025-02 mogo-analise-quantidades-produzidas.py status=skipped_existing duration=0.0s
+SKIP 78/280 2025-02 mogo-analise-insumos-producao.py existing=healthy
+DONE 78/280 2025-02 mogo-analise-insumos-producao.py status=skipped_existing duration=0.0s
+SKIP 79/280 2025-02 mogo-analise-cadastro-clientes.py existing=healthy
+DONE 79/280 2025-02 mogo-analise-cadastro-clientes.py status=skipped_existing duration=0.0s
+SKIP 80/280 2025-02 mogo-itens-vendidos-agendamento.py existing=healthy
+DONE 80/280 2025-02 mogo-itens-vendidos-agendamento.py status=skipped_existing duration=0.0s
+
+MONTH_START 2025-03 fake_now=2025-04-05
+SKIP 81/280 2025-03 mogo-faturamento-detalhado.py existing=healthy
+DONE 81/280 2025-03 mogo-faturamento-detalhado.py status=skipped_existing duration=0.0s
+SKIP 82/280 2025-03 mogo-venda-nota-assinada.py existing=healthy
+DONE 82/280 2025-03 mogo-venda-nota-assinada.py status=skipped_existing duration=0.0s
+SKIP 83/280 2025-03 mogo-ticket-medio.py existing=healthy
+DONE 83/280 2025-03 mogo-ticket-medio.py status=skipped_existing duration=0.0s
+SKIP 84/280 2025-03 mogo-vendas-analitico.py existing=healthy
+DONE 84/280 2025-03 mogo-vendas-analitico.py status=skipped_existing duration=0.0s
+SKIP 85/280 2025-03 mogo-vendas-sintetico.py existing=healthy
+DONE 85/280 2025-03 mogo-vendas-sintetico.py status=skipped_existing duration=0.0s
+SKIP 86/280 2025-03 mogo-vendas-adicionais.py existing=healthy
+DONE 86/280 2025-03 mogo-vendas-adicionais.py status=skipped_existing duration=0.0s
+SKIP 87/280 2025-03 mogo-lucratividade-produto.py existing=healthy
+DONE 87/280 2025-03 mogo-lucratividade-produto.py status=skipped_existing duration=0.0s
+SKIP 88/280 2025-03 mogo-descontos-concedidos.py existing=healthy
+DONE 88/280 2025-03 mogo-descontos-concedidos.py status=skipped_existing duration=0.0s
+SKIP 89/280 2025-03 mogo-movimentacao-credito-cliente.py existing=healthy
+DONE 89/280 2025-03 mogo-movimentacao-credito-cliente.py status=skipped_existing duration=0.0s
+SKIP 90/280 2025-03 mogo-taxa-servico.py existing=healthy
+DONE 90/280 2025-03 mogo-taxa-servico.py status=skipped_existing duration=0.0s
+SKIP 91/280 2025-03 mogo-analise-cortesias.py existing=healthy
+DONE 91/280 2025-03 mogo-analise-cortesias.py status=skipped_existing duration=0.0s
+SKIP 92/280 2025-03 mogo-lancamentos-pedidos.py existing=healthy
+DONE 92/280 2025-03 mogo-lancamentos-pedidos.py status=skipped_existing duration=0.0s
+SKIP 93/280 2025-03 mogo-historico-pagamento.py existing=healthy
+DONE 93/280 2025-03 mogo-historico-pagamento.py status=skipped_existing duration=0.0s
+SKIP 94/280 2025-03 mogo-entradas-xml-detalhado.py existing=healthy
+DONE 94/280 2025-03 mogo-entradas-xml-detalhado.py status=skipped_existing duration=0.0s
+SKIP 95/280 2025-03 mogo-compra-produtos.py existing=healthy
+DONE 95/280 2025-03 mogo-compra-produtos.py status=skipped_existing duration=0.0s
+SKIP 96/280 2025-03 mogo-variacao-preco-compra.py existing=healthy
+DONE 96/280 2025-03 mogo-variacao-preco-compra.py status=skipped_existing duration=0.0s
+RUN 97/280 2025-03 mogo-analise-quantidades-produzidas.py
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Análise de Quantidades Produzidas: 01/03/2025 a 31/03/2025...
+Total de registros: 0
+  Lote 1: 0 (total: 0)
+Total carregado: 0
+Nenhum dado encontrado.
+DONE 97/280 2025-03 mogo-analise-quantidades-produzidas.py status=ok duration=3.0s
+RUN 98/280 2025-03 mogo-analise-insumos-producao.py
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Análise de Insumos Gastos na Produção: 01/03/2025 a 31/03/2025...
+Total de registros: 0
+  Lote 1: 0 (total: 0)
+Total carregado: 0
+Nenhum dado encontrado.
+DONE 98/280 2025-03 mogo-analise-insumos-producao.py status=ok duration=3.1s
+SKIP 99/280 2025-03 mogo-analise-cadastro-clientes.py existing=healthy
+DONE 99/280 2025-03 mogo-analise-cadastro-clientes.py status=skipped_existing duration=0.0s
+SKIP 100/280 2025-03 mogo-itens-vendidos-agendamento.py existing=healthy
+DONE 100/280 2025-03 mogo-itens-vendidos-agendamento.py status=skipped_existing duration=0.0s
+
+MONTH_START 2025-04 fake_now=2025-05-05
+SKIP 101/280 2025-04 mogo-faturamento-detalhado.py existing=healthy
+DONE 101/280 2025-04 mogo-faturamento-detalhado.py status=skipped_existing duration=0.0s
+SKIP 102/280 2025-04 mogo-venda-nota-assinada.py existing=healthy
+DONE 102/280 2025-04 mogo-venda-nota-assinada.py status=skipped_existing duration=0.0s
+SKIP 103/280 2025-04 mogo-ticket-medio.py existing=healthy
+DONE 103/280 2025-04 mogo-ticket-medio.py status=skipped_existing duration=0.0s
+SKIP 104/280 2025-04 mogo-vendas-analitico.py existing=healthy
+DONE 104/280 2025-04 mogo-vendas-analitico.py status=skipped_existing duration=0.0s
+SKIP 105/280 2025-04 mogo-vendas-sintetico.py existing=healthy
+DONE 105/280 2025-04 mogo-vendas-sintetico.py status=skipped_existing duration=0.0s
+SKIP 106/280 2025-04 mogo-vendas-adicionais.py existing=healthy
+DONE 106/280 2025-04 mogo-vendas-adicionais.py status=skipped_existing duration=0.0s
+SKIP 107/280 2025-04 mogo-lucratividade-produto.py existing=healthy
+DONE 107/280 2025-04 mogo-lucratividade-produto.py status=skipped_existing duration=0.0s
+SKIP 108/280 2025-04 mogo-descontos-concedidos.py existing=healthy
+DONE 108/280 2025-04 mogo-descontos-concedidos.py status=skipped_existing duration=0.0s
+SKIP 109/280 2025-04 mogo-movimentacao-credito-cliente.py existing=healthy
+DONE 109/280 2025-04 mogo-movimentacao-credito-cliente.py status=skipped_existing duration=0.0s
+SKIP 110/280 2025-04 mogo-taxa-servico.py existing=healthy
+DONE 110/280 2025-04 mogo-taxa-servico.py status=skipped_existing duration=0.0s
+SKIP 111/280 2025-04 mogo-analise-cortesias.py existing=healthy
+DONE 111/280 2025-04 mogo-analise-cortesias.py status=skipped_existing duration=0.0s
+SKIP 112/280 2025-04 mogo-lancamentos-pedidos.py existing=healthy
+DONE 112/280 2025-04 mogo-lancamentos-pedidos.py status=skipped_existing duration=0.0s
+SKIP 113/280 2025-04 mogo-historico-pagamento.py existing=healthy
+DONE 113/280 2025-04 mogo-historico-pagamento.py status=skipped_existing duration=0.0s
+SKIP 114/280 2025-04 mogo-entradas-xml-detalhado.py existing=healthy
+DONE 114/280 2025-04 mogo-entradas-xml-detalhado.py status=skipped_existing duration=0.0s
+SKIP 115/280 2025-04 mogo-compra-produtos.py existing=healthy
+DONE 115/280 2025-04 mogo-compra-produtos.py status=skipped_existing duration=0.0s
+SKIP 116/280 2025-04 mogo-variacao-preco-compra.py existing=healthy
+DONE 116/280 2025-04 mogo-variacao-preco-compra.py status=skipped_existing duration=0.0s
+SKIP 117/280 2025-04 mogo-analise-quantidades-produzidas.py existing=healthy
+DONE 117/280 2025-04 mogo-analise-quantidades-produzidas.py status=skipped_existing duration=0.0s
+SKIP 118/280 2025-04 mogo-analise-insumos-producao.py existing=healthy
+DONE 118/280 2025-04 mogo-analise-insumos-producao.py status=skipped_existing duration=0.0s
+SKIP 119/280 2025-04 mogo-analise-cadastro-clientes.py existing=healthy
+DONE 119/280 2025-04 mogo-analise-cadastro-clientes.py status=skipped_existing duration=0.0s
+SKIP 120/280 2025-04 mogo-itens-vendidos-agendamento.py existing=healthy
+DONE 120/280 2025-04 mogo-itens-vendidos-agendamento.py status=skipped_existing duration=0.0s
+
+MONTH_START 2025-05 fake_now=2025-06-05
+SKIP 121/280 2025-05 mogo-faturamento-detalhado.py existing=healthy
+DONE 121/280 2025-05 mogo-faturamento-detalhado.py status=skipped_existing duration=0.0s
+SKIP 122/280 2025-05 mogo-venda-nota-assinada.py existing=healthy
+DONE 122/280 2025-05 mogo-venda-nota-assinada.py status=skipped_existing duration=0.0s
+SKIP 123/280 2025-05 mogo-ticket-medio.py existing=healthy
+DONE 123/280 2025-05 mogo-ticket-medio.py status=skipped_existing duration=0.0s
+SKIP 124/280 2025-05 mogo-vendas-analitico.py existing=healthy
+DONE 124/280 2025-05 mogo-vendas-analitico.py status=skipped_existing duration=0.0s
+SKIP 125/280 2025-05 mogo-vendas-sintetico.py existing=healthy
+DONE 125/280 2025-05 mogo-vendas-sintetico.py status=skipped_existing duration=0.0s
+SKIP 126/280 2025-05 mogo-vendas-adicionais.py existing=healthy
+DONE 126/280 2025-05 mogo-vendas-adicionais.py status=skipped_existing duration=0.0s
+SKIP 127/280 2025-05 mogo-lucratividade-produto.py existing=healthy
+DONE 127/280 2025-05 mogo-lucratividade-produto.py status=skipped_existing duration=0.0s
+SKIP 128/280 2025-05 mogo-descontos-concedidos.py existing=healthy
+DONE 128/280 2025-05 mogo-descontos-concedidos.py status=skipped_existing duration=0.0s
+SKIP 129/280 2025-05 mogo-movimentacao-credito-cliente.py existing=healthy
+DONE 129/280 2025-05 mogo-movimentacao-credito-cliente.py status=skipped_existing duration=0.0s
+SKIP 130/280 2025-05 mogo-taxa-servico.py existing=healthy
+DONE 130/280 2025-05 mogo-taxa-servico.py status=skipped_existing duration=0.0s
+SKIP 131/280 2025-05 mogo-analise-cortesias.py existing=healthy
+DONE 131/280 2025-05 mogo-analise-cortesias.py status=skipped_existing duration=0.0s
+SKIP 132/280 2025-05 mogo-lancamentos-pedidos.py existing=healthy
+DONE 132/280 2025-05 mogo-lancamentos-pedidos.py status=skipped_existing duration=0.0s
+SKIP 133/280 2025-05 mogo-historico-pagamento.py existing=healthy
+DONE 133/280 2025-05 mogo-historico-pagamento.py status=skipped_existing duration=0.0s
+SKIP 134/280 2025-05 mogo-entradas-xml-detalhado.py existing=healthy
+DONE 134/280 2025-05 mogo-entradas-xml-detalhado.py status=skipped_existing duration=0.0s
+SKIP 135/280 2025-05 mogo-compra-produtos.py existing=healthy
+DONE 135/280 2025-05 mogo-compra-produtos.py status=skipped_existing duration=0.0s
+SKIP 136/280 2025-05 mogo-variacao-preco-compra.py existing=healthy
+DONE 136/280 2025-05 mogo-variacao-preco-compra.py status=skipped_existing duration=0.0s
+RUN 137/280 2025-05 mogo-analise-quantidades-produzidas.py
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Análise de Quantidades Produzidas: 01/05/2025 a 31/05/2025...
+Total de registros: 0
+  Lote 1: 0 (total: 0)
+Total carregado: 0
+Nenhum dado encontrado.
+DONE 137/280 2025-05 mogo-analise-quantidades-produzidas.py status=ok duration=2.9s
+RUN 138/280 2025-05 mogo-analise-insumos-producao.py
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Análise de Insumos Gastos na Produção: 01/05/2025 a 31/05/2025...
+Total de registros: 0
+  Lote 1: 0 (total: 0)
+Total carregado: 0
+Nenhum dado encontrado.
+DONE 138/280 2025-05 mogo-analise-insumos-producao.py status=ok duration=3.7s
+SKIP 139/280 2025-05 mogo-analise-cadastro-clientes.py existing=healthy
+DONE 139/280 2025-05 mogo-analise-cadastro-clientes.py status=skipped_existing duration=0.0s
+SKIP 140/280 2025-05 mogo-itens-vendidos-agendamento.py existing=healthy
+DONE 140/280 2025-05 mogo-itens-vendidos-agendamento.py status=skipped_existing duration=0.0s
+
+MONTH_START 2025-06 fake_now=2025-07-05
+SKIP 141/280 2025-06 mogo-faturamento-detalhado.py existing=healthy
+DONE 141/280 2025-06 mogo-faturamento-detalhado.py status=skipped_existing duration=0.0s
+SKIP 142/280 2025-06 mogo-venda-nota-assinada.py existing=healthy
+DONE 142/280 2025-06 mogo-venda-nota-assinada.py status=skipped_existing duration=0.0s
+SKIP 143/280 2025-06 mogo-ticket-medio.py existing=healthy
+DONE 143/280 2025-06 mogo-ticket-medio.py status=skipped_existing duration=0.0s
+RUN 144/280 2025-06 mogo-vendas-analitico.py
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Vendas Analítico: 01/06/2025 a 30/06/2025...
+Total de registros: 14269
+  Lote 1: 2000 registros (total: 2000)
+  Lote 2: 2000 registros (total: 4000)
+  Lote 3: 2000 registros (total: 6000)
+  Lote 4: 2000 registros (total: 8000)
+  Lote 5: 2000 registros (total: 10000)
+  Lote 6: 2000 registros (total: 12000)
+  Lote 7: 2000 registros (total: 14000)
+  Lote 8: 269 registros (total: 14269)
+Total carregado: 14269
+Excel salvo: /root/workspaces/cake-brain/relatorios/Mogo/Vendas Analitico/06-2025.xlsx
+JSON salvo: /root/workspaces/cake-brain/relatorios/Mogo/Vendas Analitico/06-2025.json
+✅ Email enviado para joao@cakeco.com.br
+DONE 144/280 2025-06 mogo-vendas-analitico.py status=ok duration=179.2s
+RUN 145/280 2025-06 mogo-vendas-sintetico.py
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Vendas Sintético: 01/06/2025 a 30/06/2025...
+Registros: 365
+Excel salvo: /root/workspaces/cake-brain/relatorios/Mogo/Vendas Sintetico/06-2025.xlsx
+JSON salvo: /root/workspaces/cake-brain/relatorios/Mogo/Vendas Sintetico/06-2025.json
+✅ Email enviado para joao@cakeco.com.br
+DONE 145/280 2025-06 mogo-vendas-sintetico.py status=ok duration=5.6s
+RUN 146/280 2025-06 mogo-vendas-adicionais.py
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Vendas de Adicionais: 01/06/2025 a 30/06/2025...
+Total de registros: 286
+  Lote 1: 286 registros (total: 286)
+Total carregado: 286
+Excel salvo: /root/workspaces/cake-brain/relatorios/Mogo/Vendas Adicionais/06-2025.xlsx
+JSON salvo: /root/workspaces/cake-brain/relatorios/Mogo/Vendas Adicionais/06-2025.json
+✅ Email enviado para joao@cakeco.com.br
+DONE 146/280 2025-06 mogo-vendas-adicionais.py status=ok duration=5.2s
+RUN 147/280 2025-06 mogo-lucratividade-produto.py
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Lucratividade por Produto: 01/06/2025 a 30/06/2025...
+Registros: 365
+Excel salvo: /root/workspaces/cake-brain/relatorios/Mogo/Lucratividade Produto/06-2025.xlsx
+JSON salvo: /root/workspaces/cake-brain/relatorios/Mogo/Lucratividade Produto/06-2025.json
+✅ Email enviado para joao@cakeco.com.br
+DONE 147/280 2025-06 mogo-lucratividade-produto.py status=ok duration=4.2s
+RUN 148/280 2025-06 mogo-descontos-concedidos.py
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Descontos Concedidos: 01/06/2025 a 30/06/2025...
+Total de registros: 1222
+  Lote 1: 1222 registros (total: 1222)
+Total carregado: 1222
+Excel salvo: /root/workspaces/cake-brain/relatorios/Mogo/Descontos Concedidos/06-2025.xlsx
+JSON salvo: /root/workspaces/cake-brain/relatorios/Mogo/Descontos Concedidos/06-2025.json
+✅ Email enviado para joao@cakeco.com.br
+DONE 148/280 2025-06 mogo-descontos-concedidos.py status=ok duration=11.2s
+SKIP 149/280 2025-06 mogo-movimentacao-credito-cliente.py existing=healthy
+DONE 149/280 2025-06 mogo-movimentacao-credito-cliente.py status=skipped_existing duration=0.0s
+RUN 150/280 2025-06 mogo-taxa-servico.py
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Taxa de Serviço: 01/06/2025 a 30/06/2025...
+Total de registros: 5717
+  Lote 1: 2000 registros (total: 2000)
+  Lote 2: 2000 registros (total: 4000)
+  Lote 3: 1717 registros (total: 5717)
+Total carregado: 5717
+Excel salvo: /root/workspaces/cake-brain/relatorios/Mogo/Taxa Servico/06-2025.xlsx
+JSON salvo: /root/workspaces/cake-brain/relatorios/Mogo/Taxa Servico/06-2025.json
+✅ Email enviado para joao@cakeco.com.br
+DONE 150/280 2025-06 mogo-taxa-servico.py status=ok duration=50.6s
+RUN 151/280 2025-06 mogo-analise-cortesias.py
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Análise de Cortesias: 01/06/2025 a 30/06/2025...
+Registros: 10
+Excel salvo: /root/workspaces/cake-brain/relatorios/Mogo/Analise Cortesias/06-2025.xlsx
+JSON salvo: /root/workspaces/cake-brain/relatorios/Mogo/Analise Cortesias/06-2025.json
+✅ Email enviado para joao@cakeco.com.br
+DONE 151/280 2025-06 mogo-analise-cortesias.py status=ok duration=2.9s
+RUN 152/280 2025-06 mogo-lancamentos-pedidos.py
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Lançamentos de Pedidos: 01/06/2025 a 30/06/2025...
+  01/06/2025–07/06/2025 lote 1: 3546 | total semana: 3546
+  08/06/2025–14/06/2025 lote 1: 3569 | total semana: 3569
+  15/06/2025–21/06/2025 lote 1: 3372 | total semana: 3372
+  22/06/2025–28/06/2025 lote 1: 3472 | total semana: 3472
+  29/06/2025–30/06/2025 lote 1: 790 | total semana: 790
+Total carregado: 14749
+Excel salvo: /root/workspaces/cake-brain/relatorios/Mogo/Lancamentos Pedidos/06-2025.xlsx
+JSON salvo: /root/workspaces/cake-brain/relatorios/Mogo/Lancamentos Pedidos/06-2025.json
+✅ Email enviado para joao@cakeco.com.br
+DONE 152/280 2025-06 mogo-lancamentos-pedidos.py status=ok duration=199.9s
+RUN 153/280 2025-06 mogo-historico-pagamento.py
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Histórico de Pagamento: 01/06/2025 a 30/06/2025...
+  01/06/2025–07/06/2025 lote 1: 1526 | total semana: 1526
+  08/06/2025–14/06/2025 lote 1: 1520 | total semana: 1520
+  15/06/2025–21/06/2025 lote 1: 1336 | total semana: 1336
+  22/06/2025–28/06/2025 lote 1: 1452 | total semana: 1452
+  29/06/2025–30/06/2025 lote 1: 332 | total semana: 332
+Total carregado: 6166
+Excel salvo: /root/workspaces/cake-brain/relatorios/Mogo/Historico Pagamento/06-2025.xlsx
+JSON salvo: /root/workspaces/cake-brain/relatorios/Mogo/Historico Pagamento/06-2025.json
+✅ Email enviado para joao@cakeco.com.br
+DONE 153/280 2025-06 mogo-historico-pagamento.py status=ok duration=79.8s
+RUN 154/280 2025-06 mogo-entradas-xml-detalhado.py
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Entradas XML Detalhado: 01/06/2025 a 30/06/2025...
+Total de registros: 408
+  Lote 1: 408 (total: 408)
+Total carregado: 408
+Excel salvo: /root/workspaces/cake-brain/relatorios/Mogo/Entradas XML Detalhado/06-2025.xlsx
+JSON salvo: /root/workspaces/cake-brain/relatorios/Mogo/Entradas XML Detalhado/06-2025.json
+✅ Email enviado para joao@cakeco.com.br
+DONE 154/280 2025-06 mogo-entradas-xml-detalhado.py status=ok duration=7.9s
+RUN 155/280 2025-06 mogo-compra-produtos.py
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Compra de Produtos: 01/06/2025 a 30/06/2025...
+Total de registros: 479
+  Lote 1: 479 (total: 479)
+Total carregado: 479
+Excel salvo: /root/workspaces/cake-brain/relatorios/Mogo/Compra Produtos/06-2025.xlsx
+JSON salvo: /root/workspaces/cake-brain/relatorios/Mogo/Compra Produtos/06-2025.json
+✅ Email enviado para joao@cakeco.com.br
+DONE 155/280 2025-06 mogo-compra-produtos.py status=ok duration=13.7s
+RUN 156/280 2025-06 mogo-variacao-preco-compra.py
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Variação do Preço de Compra: 01/06/2025 a 30/06/2025...
+Registros: 195
+Excel salvo: /root/workspaces/cake-brain/relatorios/Mogo/Variacao Preco Compra/06-2025.xlsx
+JSON salvo: /root/workspaces/cake-brain/relatorios/Mogo/Variacao Preco Compra/06-2025.json
+✅ Email enviado para joao@cakeco.com.br
+DONE 156/280 2025-06 mogo-variacao-preco-compra.py status=ok duration=5.5s
+RUN 157/280 2025-06 mogo-analise-quantidades-produzidas.py
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Análise de Quantidades Produzidas: 01/06/2025 a 30/06/2025...
+Total de registros: 4
+  Lote 1: 4 (total: 4)
+Total carregado: 4
+Excel salvo: /root/workspaces/cake-brain/relatorios/Mogo/Analise Quantidades Produzidas/06-2025.xlsx
+JSON salvo: /root/workspaces/cake-brain/relatorios/Mogo/Analise Quantidades Produzidas/06-2025.json
+✅ Email enviado para joao@cakeco.com.br
+DONE 157/280 2025-06 mogo-analise-quantidades-produzidas.py status=ok duration=3.2s
+RUN 158/280 2025-06 mogo-analise-insumos-producao.py
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Análise de Insumos Gastos na Produção: 01/06/2025 a 30/06/2025...
+Total de registros: 14
+  Lote 1: 14 (total: 14)
+Total carregado: 14
+Excel salvo: /root/workspaces/cake-brain/relatorios/Mogo/Analise Insumos Producao/06-2025.xlsx
+JSON salvo: /root/workspaces/cake-brain/relatorios/Mogo/Analise Insumos Producao/06-2025.json
+✅ Email enviado para joao@cakeco.com.br
+DONE 158/280 2025-06 mogo-analise-insumos-producao.py status=ok duration=3.6s
+RUN 159/280 2025-06 mogo-analise-cadastro-clientes.py
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Análise de Cadastro de Clientes: 01/06/2025 a 30/06/2025...
+Total de registros: 1039
+  Lote 1: 1039 (total: 1039)
+Total carregado: 1039
+Excel salvo: /root/workspaces/cake-brain/relatorios/Mogo/Analise Cadastro Clientes/06-2025.xlsx
+JSON salvo: /root/workspaces/cake-brain/relatorios/Mogo/Analise Cadastro Clientes/06-2025.json
+✅ Email enviado para joao@cakeco.com.br
+DONE 159/280 2025-06 mogo-analise-cadastro-clientes.py status=ok duration=19.0s
+RUN 160/280 2025-06 mogo-itens-vendidos-agendamento.py
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Itens Vendidos por Agendamento: 01/06/2025 a 30/06/2025...
+Total de registros: 178
+  Lote 1: 178 (total: 178)
+Total carregado: 178
+Excel salvo: /root/workspaces/cake-brain/relatorios/Mogo/Itens Vendidos Agendamento/06-2025.xlsx
+JSON salvo: /root/workspaces/cake-brain/relatorios/Mogo/Itens Vendidos Agendamento/06-2025.json
+✅ Email enviado para joao@cakeco.com.br
+DONE 160/280 2025-06 mogo-itens-vendidos-agendamento.py status=ok duration=3.3s
+
+MONTH_START 2025-07 fake_now=2025-08-05
+RUN 161/280 2025-07 mogo-faturamento-detalhado.py
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Faturamento Detalhado: 01/07/2025 a 31/07/2025...
+  01/07/2025–07/07/2025 lote 1: 1614 registros (acumulado: 1614 | total semana: 1614)
+  08/07/2025–14/07/2025 lote 1: 1426 registros (acumulado: 3040 | total semana: 1426)
+  15/07/2025–21/07/2025 lote 1: 1537 registros (acumulado: 4577 | total semana: 1537)
+  22/07/2025–28/07/2025 lote 1: 2000 registros (acumulado: 6577 | total semana: 2682)
+  22/07/2025–28/07/2025 lote 2: 682 registros (acumulado: 7259 | total semana: 2682)
+  29/07/2025–31/07/2025 lote 1: 1148 registros (acumulado: 8407 | total semana: 1148)
+Total carregado: 8407
+Excel salvo: /root/workspaces/cake-brain/relatorios/Mogo/Faturamento Detalhado/07-2025.xlsx
+JSON salvo: /root/workspaces/cake-brain/relatorios/Mogo/Faturamento Detalhado/07-2025.json
+✅ Email enviado para joao@cakeco.com.br
+DONE 161/280 2025-07 mogo-faturamento-detalhado.py status=ok duration=54.7s
+RUN 162/280 2025-07 mogo-venda-nota-assinada.py
+Venda em Nota Assinada: 01/07/2025 → 31/07/2025
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Buscando Contas a Receber...
+Total registros: 221
+Venda em nota assinada (descrição): 221 registros
+Venda em nota assinada (emissão validada): 221 registros
+Excel salvo: /root/workspaces/cake-brain/relatorios/Mogo/Venda em Nota Assinada/2025-07-venda-nota-assinada.xlsx
+✅ Email enviado para joao@cakeco.com.br
+
+✅ Relatório concluído
+DONE 162/280 2025-07 mogo-venda-nota-assinada.py status=ok duration=3.2s
+RUN 163/280 2025-07 mogo-ticket-medio.py
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Ticket Médio: 01/07/2025 a 31/07/2025...
+Registros: 3
+Excel salvo: /root/workspaces/cake-brain/relatorios/Mogo/Ticket Medio/07-2025.xlsx
+JSON salvo: /root/workspaces/cake-brain/relatorios/Mogo/Ticket Medio/07-2025.json
+✅ Email enviado para joao@cakeco.com.br
+DONE 163/280 2025-07 mogo-ticket-medio.py status=ok duration=8.0s
+RUN 164/280 2025-07 mogo-vendas-analitico.py
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Vendas Analítico: 01/07/2025 a 31/07/2025...
+Total de registros: 19050
+  Lote 1: 2000 registros (total: 2000)
+  Lote 2: 2000 registros (total: 4000)
+  Lote 3: 2000 registros (total: 6000)
+  Lote 4: 2000 registros (total: 8000)
+  Lote 5: 2000 registros (total: 10000)
+  Lote 6: 2000 registros (total: 12000)
+  Lote 7: 2000 registros (total: 14000)
+  Lote 8: 2000 registros (total: 16000)
+  Lote 9: 2000 registros (total: 18000)
+  Lote 10: 1050 registros (total: 19050)
+Total carregado: 19050
+Excel salvo: /root/workspaces/cake-brain/relatorios/Mogo/Vendas Analitico/07-2025.xlsx
+JSON salvo: /root/workspaces/cake-brain/relatorios/Mogo/Vendas Analitico/07-2025.json
+✅ Email enviado para joao@cakeco.com.br
+DONE 164/280 2025-07 mogo-vendas-analitico.py status=ok duration=273.6s
+RUN 165/280 2025-07 mogo-vendas-sintetico.py
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Vendas Sintético: 01/07/2025 a 31/07/2025...
+Registros: 370
+Excel salvo: /root/workspaces/cake-brain/relatorios/Mogo/Vendas Sintetico/07-2025.xlsx
+JSON salvo: /root/workspaces/cake-brain/relatorios/Mogo/Vendas Sintetico/07-2025.json
+✅ Email enviado para joao@cakeco.com.br
+DONE 165/280 2025-07 mogo-vendas-sintetico.py status=ok duration=5.5s
+RUN 166/280 2025-07 mogo-vendas-adicionais.py
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Vendas de Adicionais: 01/07/2025 a 31/07/2025...
+Total de registros: 379
+  Lote 1: 379 registros (total: 379)
+Total carregado: 379
+Excel salvo: /root/workspaces/cake-brain/relatorios/Mogo/Vendas Adicionais/07-2025.xlsx
+JSON salvo: /root/workspaces/cake-brain/relatorios/Mogo/Vendas Adicionais/07-2025.json
+✅ Email enviado para joao@cakeco.com.br
+DONE 166/280 2025-07 mogo-vendas-adicionais.py status=ok duration=5.6s
+RUN 167/280 2025-07 mogo-lucratividade-produto.py
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Lucratividade por Produto: 01/07/2025 a 31/07/2025...
+Registros: 367
+Excel salvo: /root/workspaces/cake-brain/relatorios/Mogo/Lucratividade Produto/07-2025.xlsx
+JSON salvo: /root/workspaces/cake-brain/relatorios/Mogo/Lucratividade Produto/07-2025.json
+✅ Email enviado para joao@cakeco.com.br
+DONE 167/280 2025-07 mogo-lucratividade-produto.py status=ok duration=4.5s
+RUN 168/280 2025-07 mogo-descontos-concedidos.py
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Descontos Concedidos: 01/07/2025 a 31/07/2025...
+Total de registros: 2070
+  Lote 1: 2000 registros (total: 2000)
+  Lote 2: 70 registros (total: 2070)
+Total carregado: 2070
+Excel salvo: /root/workspaces/cake-brain/relatorios/Mogo/Descontos Concedidos/07-2025.xlsx
+JSON salvo: /root/workspaces/cake-brain/relatorios/Mogo/Descontos Concedidos/07-2025.json
+✅ Email enviado para joao@cakeco.com.br
+DONE 168/280 2025-07 mogo-descontos-concedidos.py status=ok duration=16.8s
+RUN 169/280 2025-07 mogo-movimentacao-credito-cliente.py
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Movimentação Crédito Cliente: 01/07/2025 a 31/07/2025...
+Registros: 15
+Excel salvo: /root/workspaces/cake-brain/relatorios/Mogo/Movimentacao Credito Cliente/07-2025.xlsx
+JSON salvo: /root/workspaces/cake-brain/relatorios/Mogo/Movimentacao Credito Cliente/07-2025.json
+✅ Email enviado para joao@cakeco.com.br
+DONE 169/280 2025-07 mogo-movimentacao-credito-cliente.py status=ok duration=2.4s
+RUN 170/280 2025-07 mogo-taxa-servico.py
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Taxa de Serviço: 01/07/2025 a 31/07/2025...
+Total de registros: 6883
+  Lote 1: 2000 registros (total: 2000)
+  Lote 2: 2000 registros (total: 4000)
+  Lote 3: 2000 registros (total: 6000)
+  Lote 4: 883 registros (total: 6883)
+Total carregado: 6883
+Excel salvo: /root/workspaces/cake-brain/relatorios/Mogo/Taxa Servico/07-2025.xlsx
+JSON salvo: /root/workspaces/cake-brain/relatorios/Mogo/Taxa Servico/07-2025.json
+✅ Email enviado para joao@cakeco.com.br
+DONE 170/280 2025-07 mogo-taxa-servico.py status=ok duration=53.2s
+RUN 171/280 2025-07 mogo-analise-cortesias.py
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Análise de Cortesias: 01/07/2025 a 31/07/2025...
+Registros: 10
+Excel salvo: /root/workspaces/cake-brain/relatorios/Mogo/Analise Cortesias/07-2025.xlsx
+JSON salvo: /root/workspaces/cake-brain/relatorios/Mogo/Analise Cortesias/07-2025.json
+✅ Email enviado para joao@cakeco.com.br
+DONE 171/280 2025-07 mogo-analise-cortesias.py status=ok duration=4.5s
+RUN 172/280 2025-07 mogo-lancamentos-pedidos.py
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Lançamentos de Pedidos: 01/07/2025 a 31/07/2025...
+  01/07/2025–07/07/2025 lote 1: 3841 | total semana: 3841
+  08/07/2025–14/07/2025 lote 1: 3551 | total semana: 3551
+  15/07/2025–21/07/2025 lote 1: 3632 | total semana: 3632
+  22/07/2025–28/07/2025 lote 1: 6410 | total semana: 6410
+  29/07/2025–31/07/2025 lote 1: 2571 | total semana: 2571
+Total carregado: 20005
+Excel salvo: /root/workspaces/cake-brain/relatorios/Mogo/Lancamentos Pedidos/07-2025.xlsx
+JSON salvo: /root/workspaces/cake-brain/relatorios/Mogo/Lancamentos Pedidos/07-2025.json
+✅ Email enviado para joao@cakeco.com.br
+DONE 172/280 2025-07 mogo-lancamentos-pedidos.py status=ok duration=261.0s
+RUN 173/280 2025-07 mogo-historico-pagamento.py
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Histórico de Pagamento: 01/07/2025 a 31/07/2025...
+  01/07/2025–07/07/2025 lote 1: 1646 | total semana: 1646
+  08/07/2025–14/07/2025 lote 1: 1517 | total semana: 1517
+  15/07/2025–21/07/2025 lote 1: 1513 | total semana: 1513
+  22/07/2025–28/07/2025 lote 1: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 2: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 3: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 4: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 5: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 6: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 7: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 8: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 9: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 10: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 11: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 12: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 13: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 14: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 15: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 16: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 17: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 18: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 19: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 20: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 21: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 22: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 23: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 24: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 25: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 26: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 27: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 28: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 29: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 30: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 31: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 32: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 33: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 34: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 35: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 36: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 37: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 38: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 39: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 40: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 41: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 42: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 43: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 44: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 45: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 46: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 47: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 48: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 49: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 50: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 51: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 52: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 53: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 54: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 55: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 56: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 57: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 58: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 59: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 60: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 61: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 62: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 63: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 64: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 65: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 66: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 67: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 68: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 69: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 70: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 71: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 72: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 73: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 74: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 75: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 76: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 77: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 78: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 79: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 80: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 81: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 82: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 83: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 84: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 85: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 86: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 87: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 88: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 89: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 90: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 91: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 92: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 93: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 94: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 95: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 96: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 97: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 98: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 99: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 100: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 101: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 102: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 103: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 104: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 105: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 106: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 107: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 108: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 109: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 110: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 111: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 112: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 113: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 114: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 115: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 116: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 117: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 118: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 119: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 120: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 121: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 122: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 123: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 124: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 125: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 126: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 127: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 128: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 129: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 130: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 131: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 132: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 133: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 134: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 135: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 136: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 137: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 138: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 139: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 140: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 141: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 142: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 143: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 144: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 145: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 146: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 147: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 148: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 149: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 150: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 151: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 152: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 153: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 154: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 155: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 156: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 157: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 158: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 159: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 160: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 161: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 162: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 163: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 164: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 165: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 166: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 167: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 168: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 169: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 170: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 171: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 172: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 173: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 174: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 175: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 176: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 177: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 178: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 179: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 180: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 181: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 182: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 183: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 184: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 185: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 186: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 187: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 188: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 189: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 190: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 191: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 192: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 193: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 194: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 195: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 196: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 197: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 198: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 199: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 200: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 201: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 202: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 203: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 204: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 205: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 206: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 207: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 208: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 209: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 210: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 211: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 212: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 213: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 214: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 215: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 216: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 217: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 218: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 219: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 220: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 221: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 222: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 223: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 224: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 225: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 226: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 227: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 228: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 229: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 230: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 231: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 232: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 233: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 234: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 235: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 236: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 237: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 238: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 239: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 240: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 241: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 242: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 243: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 244: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 245: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 246: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 247: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 248: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 249: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 250: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 251: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 252: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 253: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 254: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 255: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 256: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 257: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 258: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 259: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 260: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 261: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 262: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 263: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 264: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 265: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 266: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 267: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 268: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 269: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 270: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 271: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 272: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 273: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 274: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 275: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 276: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 277: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 278: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 279: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 280: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 281: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 282: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 283: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 284: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 285: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 286: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 287: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 288: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 289: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 290: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 291: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 292: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 293: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 294: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 295: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 296: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 297: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 298: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 299: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 300: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 301: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 302: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 303: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 304: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 305: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 306: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 307: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 308: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 309: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 310: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 311: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 312: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 313: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 314: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 315: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 316: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 317: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 318: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 319: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 320: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 321: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 322: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 323: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 324: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 325: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 326: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 327: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 328: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 329: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 330: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 331: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 332: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 333: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 334: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 335: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 336: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 337: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 338: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 339: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 340: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 341: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 342: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 343: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 344: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 345: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 346: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 347: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 348: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 349: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 350: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 351: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 352: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 353: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 354: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 355: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 356: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 357: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 358: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 359: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 360: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 361: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 362: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 363: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 364: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 365: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 366: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 367: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 368: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 369: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 370: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 371: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 372: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 373: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 374: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 375: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 376: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 377: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 378: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 379: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 380: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 381: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 382: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 383: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 384: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 385: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 386: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 387: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 388: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 389: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 390: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 391: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 392: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 393: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 394: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 395: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 396: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 397: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 398: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 399: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 400: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 401: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 402: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 403: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 404: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 405: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 406: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 407: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 408: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 409: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 410: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 411: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 412: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 413: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 414: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 415: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 416: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 417: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 418: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 419: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 420: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 421: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 422: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 423: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 424: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 425: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 426: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 427: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 428: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 429: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 430: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 431: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 432: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 433: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 434: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 435: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 436: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 437: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 438: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 439: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 440: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 441: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 442: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 443: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 444: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 445: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 446: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 447: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 448: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 449: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 450: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 451: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 452: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 453: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 454: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 455: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 456: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 457: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 458: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 459: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 460: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 461: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 462: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 463: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 464: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 465: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 466: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 467: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 468: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 469: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 470: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 471: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 472: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 473: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 474: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 475: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 476: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 477: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 478: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 479: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 480: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 481: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 482: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 483: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 484: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 485: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 486: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 487: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 488: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 489: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 490: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 491: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 492: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 493: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 494: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 495: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 496: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 497: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 498: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 499: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 500: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 501: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 502: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 503: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 504: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 505: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 506: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 507: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 508: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 509: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 510: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 511: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 512: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 513: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 514: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 515: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 516: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 517: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 518: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 519: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 520: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 521: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 522: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 523: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 524: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 525: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 526: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 527: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 528: 2804 | total semana: 2804Traceback (most recent call last):
+  File "/root/workspaces/cake-brain/automacoes/scripts/mogo-backfill-historico-dia5.py", line 184, in run_one
+    runpy.run_path(str(script_path), run_name='__main__')
+  File "<frozen runpy>", line 286, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "/root/workspaces/cake-brain/automacoes/scripts/mogo-historico-pagamento.py", line 154, in <module>
+    ws.cell(row=r_idx, column=c_idx, value=reg.get(col_key, '') or '')
+  File "/usr/local/lib/python3.12/dist-packages/openpyxl/worksheet/worksheet.py", line 244, in cell
+    cell = self._get_cell(row, column)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/openpyxl/worksheet/worksheet.py", line 257, in _get_cell
+    raise ValueError(f"Row numbers must be between 1 and 1048576. Row number supplied was {row}")
+ValueError: Row numbers must be between 1 and 1048576. Row number supplied was 1048577
+
+  22/07/2025–28/07/2025 lote 529: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 530: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 531: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 532: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 533: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 534: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 535: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 536: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 537: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 538: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 539: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 540: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 541: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 542: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 543: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 544: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 545: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 546: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 547: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 548: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 549: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 550: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 551: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 552: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 553: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 554: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 555: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 556: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 557: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 558: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 559: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 560: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 561: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 562: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 563: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 564: 2804 | total semana: 2804
+  22/07/2025–28/07/2025 lote 565: 2804 | total semana: 2804
+  ERRO semana 22/07/2025: HTTPSConnectionPool(host='app3.mogogourmet.com.br', port=443): Read timed out.
+  29/07/2025–31/07/2025 lote 1: 1165 | total semana: 1165
+Total carregado: 1590101
+DONE 173/280 2025-07 mogo-historico-pagamento.py status=error duration=23513.6s
+SKIP 174/280 2025-07 mogo-entradas-xml-detalhado.py existing=healthy
+DONE 174/280 2025-07 mogo-entradas-xml-detalhado.py status=skipped_existing duration=0.0s
+RUN 175/280 2025-07 mogo-compra-produtos.py
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Compra de Produtos: 01/07/2025 a 31/07/2025...
+Total de registros: 497
+  Lote 1: 497 (total: 497)
+Total carregado: 497
+Excel salvo: /root/workspaces/cake-brain/relatorios/Mogo/Compra Produtos/07-2025.xlsx
+JSON salvo: /root/workspaces/cake-brain/relatorios/Mogo/Compra Produtos/07-2025.json
+✅ Email enviado para joao@cakeco.com.br
+DONE 175/280 2025-07 mogo-compra-produtos.py status=ok duration=15.3s
+RUN 176/280 2025-07 mogo-variacao-preco-compra.py
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Variação do Preço de Compra: 01/07/2025 a 31/07/2025...
+Registros: 198
+Excel salvo: /root/workspaces/cake-brain/relatorios/Mogo/Variacao Preco Compra/07-2025.xlsx
+JSON salvo: /root/workspaces/cake-brain/relatorios/Mogo/Variacao Preco Compra/07-2025.json
+✅ Email enviado para joao@cakeco.com.br
+DONE 176/280 2025-07 mogo-variacao-preco-compra.py status=ok duration=7.4s
+RUN 177/280 2025-07 mogo-analise-quantidades-produzidas.py
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Análise de Quantidades Produzidas: 01/07/2025 a 31/07/2025...
+Total de registros: 17
+  Lote 1: 17 (total: 17)
+Total carregado: 17
+Excel salvo: /root/workspaces/cake-brain/relatorios/Mogo/Analise Quantidades Produzidas/07-2025.xlsx
+JSON salvo: /root/workspaces/cake-brain/relatorios/Mogo/Analise Quantidades Produzidas/07-2025.json
+✅ Email enviado para joao@cakeco.com.br
+DONE 177/280 2025-07 mogo-analise-quantidades-produzidas.py status=ok duration=3.2s
+RUN 178/280 2025-07 mogo-analise-insumos-producao.py
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Análise de Insumos Gastos na Produção: 01/07/2025 a 31/07/2025...
+Total de registros: 57
+  Lote 1: 57 (total: 57)
+Total carregado: 57
+Excel salvo: /root/workspaces/cake-brain/relatorios/Mogo/Analise Insumos Producao/07-2025.xlsx
+JSON salvo: /root/workspaces/cake-brain/relatorios/Mogo/Analise Insumos Producao/07-2025.json
+✅ Email enviado para joao@cakeco.com.br
+DONE 178/280 2025-07 mogo-analise-insumos-producao.py status=ok duration=3.6s
+RUN 179/280 2025-07 mogo-analise-cadastro-clientes.py
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Análise de Cadastro de Clientes: 01/07/2025 a 31/07/2025...
+Total de registros: 1731
+  Lote 1: 1731 (total: 1731)
+Total carregado: 1731
+Excel salvo: /root/workspaces/cake-brain/relatorios/Mogo/Analise Cadastro Clientes/07-2025.xlsx
+JSON salvo: /root/workspaces/cake-brain/relatorios/Mogo/Analise Cadastro Clientes/07-2025.json
+✅ Email enviado para joao@cakeco.com.br
+DONE 179/280 2025-07 mogo-analise-cadastro-clientes.py status=ok duration=28.5s
+RUN 180/280 2025-07 mogo-itens-vendidos-agendamento.py
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Itens Vendidos por Agendamento: 01/07/2025 a 31/07/2025...
+Total de registros: 184
+  Lote 1: 184 (total: 184)
+Total carregado: 184
+Excel salvo: /root/workspaces/cake-brain/relatorios/Mogo/Itens Vendidos Agendamento/07-2025.xlsx
+JSON salvo: /root/workspaces/cake-brain/relatorios/Mogo/Itens Vendidos Agendamento/07-2025.json
+✅ Email enviado para joao@cakeco.com.br
+DONE 180/280 2025-07 mogo-itens-vendidos-agendamento.py status=ok duration=4.7s
+
+MONTH_START 2025-08 fake_now=2025-09-05
+RUN 181/280 2025-08 mogo-faturamento-detalhado.py
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Faturamento Detalhado: 01/08/2025 a 31/08/2025...
+  01/08/2025–07/08/2025 lote 1: 2000 registros (acumulado: 2000 | total semana: 2087)
+  01/08/2025–07/08/2025 lote 2: 87 registros (acumulado: 2087 | total semana: 2087)
+  08/08/2025–14/08/2025 lote 1: 2000 registros (acumulado: 4087 | total semana: 2153)
+  08/08/2025–14/08/2025 lote 2: 153 registros (acumulado: 4240 | total semana: 2153)
+  15/08/2025–21/08/2025 lote 1: 1735 registros (acumulado: 5975 | total semana: 1735)
+  22/08/2025–28/08/2025 lote 1: 1628 registros (acumulado: 7603 | total semana: 1628)
+  29/08/2025–31/08/2025 lote 1: 763 registros (acumulado: 8366 | total semana: 763)
+Total carregado: 8366
+Excel salvo: /root/workspaces/cake-brain/relatorios/Mogo/Faturamento Detalhado/08-2025.xlsx
+JSON salvo: /root/workspaces/cake-brain/relatorios/Mogo/Faturamento Detalhado/08-2025.json
+✅ Email enviado para joao@cakeco.com.br
+DONE 181/280 2025-08 mogo-faturamento-detalhado.py status=ok duration=68.8s
+RUN 182/280 2025-08 mogo-venda-nota-assinada.py
+Venda em Nota Assinada: 01/08/2025 → 31/08/2025
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Buscando Contas a Receber...
+Total registros: 246
+Venda em nota assinada (descrição): 246 registros
+Venda em nota assinada (emissão validada): 246 registros
+Excel salvo: /root/workspaces/cake-brain/relatorios/Mogo/Venda em Nota Assinada/2025-08-venda-nota-assinada.xlsx
+✅ Email enviado para joao@cakeco.com.br
+
+✅ Relatório concluído
+DONE 182/280 2025-08 mogo-venda-nota-assinada.py status=ok duration=4.6s
+RUN 183/280 2025-08 mogo-ticket-medio.py
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Ticket Médio: 01/08/2025 a 31/08/2025...
+Registros: 4
+Excel salvo: /root/workspaces/cake-brain/relatorios/Mogo/Ticket Medio/08-2025.xlsx
+JSON salvo: /root/workspaces/cake-brain/relatorios/Mogo/Ticket Medio/08-2025.json
+✅ Email enviado para joao@cakeco.com.br
+DONE 183/280 2025-08 mogo-ticket-medio.py status=ok duration=9.5s
+RUN 184/280 2025-08 mogo-vendas-analitico.py
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Vendas Analítico: 01/08/2025 a 31/08/2025...
+Total de registros: 19642
+  Lote 1: 2000 registros (total: 2000)
+  Lote 2: 2000 registros (total: 4000)
+  Lote 3: 2000 registros (total: 6000)
+  Lote 4: 2000 registros (total: 8000)
+  Lote 5: 2000 registros (total: 10000)
+  Lote 6: 2000 registros (total: 12000)
+  Lote 7: 2000 registros (total: 14000)
+  Lote 8: 2000 registros (total: 16000)
+  Lote 9: 2000 registros (total: 18000)
+  Lote 10: 1642 registros (total: 19642)
+Total carregado: 19642
+Excel salvo: /root/workspaces/cake-brain/relatorios/Mogo/Vendas Analitico/08-2025.xlsx
+JSON salvo: /root/workspaces/cake-brain/relatorios/Mogo/Vendas Analitico/08-2025.json
+✅ Email enviado para joao@cakeco.com.br
+DONE 184/280 2025-08 mogo-vendas-analitico.py status=ok duration=278.5s
+RUN 185/280 2025-08 mogo-vendas-sintetico.py
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Vendas Sintético: 01/08/2025 a 31/08/2025...
+Registros: 360
+Excel salvo: /root/workspaces/cake-brain/relatorios/Mogo/Vendas Sintetico/08-2025.xlsx
+JSON salvo: /root/workspaces/cake-brain/relatorios/Mogo/Vendas Sintetico/08-2025.json
+✅ Email enviado para joao@cakeco.com.br
+DONE 185/280 2025-08 mogo-vendas-sintetico.py status=ok duration=22.2s
+RUN 186/280 2025-08 mogo-vendas-adicionais.py
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Vendas de Adicionais: 01/08/2025 a 31/08/2025...
+Total de registros: 330
+  Lote 1: 330 registros (total: 330)
+Total carregado: 330
+Excel salvo: /root/workspaces/cake-brain/relatorios/Mogo/Vendas Adicionais/08-2025.xlsx
+JSON salvo: /root/workspaces/cake-brain/relatorios/Mogo/Vendas Adicionais/08-2025.json
+✅ Email enviado para joao@cakeco.com.br
+DONE 186/280 2025-08 mogo-vendas-adicionais.py status=ok duration=39.7s
+RUN 187/280 2025-08 mogo-lucratividade-produto.py
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Lucratividade por Produto: 01/08/2025 a 31/08/2025...
+Registros: 359
+Excel salvo: /root/workspaces/cake-brain/relatorios/Mogo/Lucratividade Produto/08-2025.xlsx
+JSON salvo: /root/workspaces/cake-brain/relatorios/Mogo/Lucratividade Produto/08-2025.json
+✅ Email enviado para joao@cakeco.com.br
+DONE 187/280 2025-08 mogo-lucratividade-produto.py status=ok duration=15.1s
+RUN 188/280 2025-08 mogo-descontos-concedidos.py
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Descontos Concedidos: 01/08/2025 a 31/08/2025...
+Total de registros: 1706
+  Lote 1: 1706 registros (total: 1706)
+Total carregado: 1706
+Excel salvo: /root/workspaces/cake-brain/relatorios/Mogo/Descontos Concedidos/08-2025.xlsx
+JSON salvo: /root/workspaces/cake-brain/relatorios/Mogo/Descontos Concedidos/08-2025.json
+✅ Email enviado para joao@cakeco.com.br
+DONE 188/280 2025-08 mogo-descontos-concedidos.py status=ok duration=14.6s
+RUN 189/280 2025-08 mogo-movimentacao-credito-cliente.py
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Movimentação Crédito Cliente: 01/08/2025 a 31/08/2025...
+Registros: 27
+Excel salvo: /root/workspaces/cake-brain/relatorios/Mogo/Movimentacao Credito Cliente/08-2025.xlsx
+JSON salvo: /root/workspaces/cake-brain/relatorios/Mogo/Movimentacao Credito Cliente/08-2025.json
+✅ Email enviado para joao@cakeco.com.br
+DONE 189/280 2025-08 mogo-movimentacao-credito-cliente.py status=ok duration=2.5s
+RUN 190/280 2025-08 mogo-taxa-servico.py
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Taxa de Serviço: 01/08/2025 a 31/08/2025...
+Total de registros: 6802
+  Lote 1: 2000 registros (total: 2000)
+  Lote 2: 2000 registros (total: 4000)
+  Lote 3: 2000 registros (total: 6000)
+  Lote 4: 802 registros (total: 6802)
+Total carregado: 6802
+Excel salvo: /root/workspaces/cake-brain/relatorios/Mogo/Taxa Servico/08-2025.xlsx
+JSON salvo: /root/workspaces/cake-brain/relatorios/Mogo/Taxa Servico/08-2025.json
+✅ Email enviado para joao@cakeco.com.br
+DONE 190/280 2025-08 mogo-taxa-servico.py status=ok duration=64.0s
+RUN 191/280 2025-08 mogo-analise-cortesias.py
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Análise de Cortesias: 01/08/2025 a 31/08/2025...
+Registros: 15
+Excel salvo: /root/workspaces/cake-brain/relatorios/Mogo/Analise Cortesias/08-2025.xlsx
+JSON salvo: /root/workspaces/cake-brain/relatorios/Mogo/Analise Cortesias/08-2025.json
+✅ Email enviado para joao@cakeco.com.br
+DONE 191/280 2025-08 mogo-analise-cortesias.py status=ok duration=2.9s
+RUN 192/280 2025-08 mogo-lancamentos-pedidos.py
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Lançamentos de Pedidos: 01/08/2025 a 31/08/2025...
+  01/08/2025–07/08/2025 lote 1: 5153 | total semana: 5153
+  08/08/2025–14/08/2025 lote 1: 5205 | total semana: 5205
+  15/08/2025–21/08/2025 lote 1: 4260 | total semana: 4260
+  22/08/2025–28/08/2025 lote 1: 4114 | total semana: 4114
+  29/08/2025–31/08/2025 lote 1: 1969 | total semana: 1969
+Total carregado: 20701
+Excel salvo: /root/workspaces/cake-brain/relatorios/Mogo/Lancamentos Pedidos/08-2025.xlsx
+JSON salvo: /root/workspaces/cake-brain/relatorios/Mogo/Lancamentos Pedidos/08-2025.json
+✅ Email enviado para joao@cakeco.com.br
+DONE 192/280 2025-08 mogo-lancamentos-pedidos.py status=ok duration=328.3s
+RUN 193/280 2025-08 mogo-historico-pagamento.py
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Histórico de Pagamento: 01/08/2025 a 31/08/2025...
+  01/08/2025–07/08/2025 lote 1: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 2: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 3: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 4: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 5: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 6: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 7: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 8: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 9: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 10: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 11: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 12: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 13: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 14: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 15: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 16: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 17: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 18: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 19: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 20: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 21: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 22: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 23: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 24: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 25: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 26: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 27: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 28: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 29: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 30: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 31: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 32: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 33: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 34: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 35: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 36: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 37: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 38: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 39: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 40: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 41: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 42: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 43: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 44: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 45: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 46: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 47: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 48: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 49: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 50: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 51: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 52: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 53: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 54: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 55: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 56: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 57: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 58: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 59: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 60: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 61: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 62: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 63: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 64: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 65: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 66: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 67: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 68: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 69: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 70: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 71: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 72: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 73: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 74: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 75: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 76: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 77: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 78: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 79: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 80: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 81: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 82: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 83: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 84: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 85: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 86: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 87: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 88: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 89: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 90: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 91: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 92: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 93: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 94: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 95: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 96: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 97: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 98: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 99: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 100: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 101: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 102: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 103: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 104: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 105: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 106: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 107: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 108: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 109: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 110: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 111: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 112: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 113: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 114: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 115: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 116: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 117: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 118: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 119: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 120: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 121: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 122: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 123: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 124: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 125: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 126: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 127: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 128: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 129: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 130: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 131: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 132: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 133: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 134: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 135: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 136: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 137: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 138: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 139: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 140: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 141: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 142: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 143: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 144: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 145: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 146: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 147: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 148: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 149: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 150: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 151: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 152: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 153: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 154: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 155: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 156: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 157: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 158: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 159: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 160: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 161: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 162: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 163: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 164: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 165: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 166: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 167: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 168: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 169: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 170: 2191 | total semana: 2191
+  01/08/2025–07/08/2025 lote 171: 2191 | total semana: 2191
+  ERRO semana 01/08/2025: Expecting value: line 4 column 1 (char 6)
+  ERRO semana 08/08/2025: Expecting value: line 1 column 1 (char 0)
+  ERRO semana 15/08/2025: Expecting value: line 1 column 1 (char 0)
+  ERRO semana 22/08/2025: Expecting value: line 1 column 1 (char 0)
+  ERRO semana 29/08/2025: Expecting value: line 1 column 1 (char 0)
+Total carregado: 374661
+Excel salvo: /root/workspaces/cake-brain/relatorios/Mogo/Historico Pagamento/08-2025.xlsx
+JSON salvo: /root/workspaces/cake-brain/relatorios/Mogo/Historico Pagamento/08-2025.json
+✅ Email enviado para joao@cakeco.com.br
+DONE 193/280 2025-08 mogo-historico-pagamento.py status=ok duration=4909.9s
+RUN 194/280 2025-08 mogo-entradas-xml-detalhado.py
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Entradas XML Detalhado: 01/08/2025 a 31/08/2025...
+Total de registros: 433
+  Lote 1: 433 (total: 433)
+Total carregado: 433
+Excel salvo: /root/workspaces/cake-brain/relatorios/Mogo/Entradas XML Detalhado/08-2025.xlsx
+JSON salvo: /root/workspaces/cake-brain/relatorios/Mogo/Entradas XML Detalhado/08-2025.json
+✅ Email enviado para joao@cakeco.com.br
+DONE 194/280 2025-08 mogo-entradas-xml-detalhado.py status=ok duration=8.6s
+RUN 195/280 2025-08 mogo-compra-produtos.py
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Compra de Produtos: 01/08/2025 a 31/08/2025...
+Total de registros: 502
+  Lote 1: 502 (total: 502)
+Total carregado: 502
+Excel salvo: /root/workspaces/cake-brain/relatorios/Mogo/Compra Produtos/08-2025.xlsx
+JSON salvo: /root/workspaces/cake-brain/relatorios/Mogo/Compra Produtos/08-2025.json
+✅ Email enviado para joao@cakeco.com.br
+DONE 195/280 2025-08 mogo-compra-produtos.py status=ok duration=19.6s
+RUN 196/280 2025-08 mogo-variacao-preco-compra.py
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Variação do Preço de Compra: 01/08/2025 a 31/08/2025...
+Registros: 189
+Excel salvo: /root/workspaces/cake-brain/relatorios/Mogo/Variacao Preco Compra/08-2025.xlsx
+JSON salvo: /root/workspaces/cake-brain/relatorios/Mogo/Variacao Preco Compra/08-2025.json
+✅ Email enviado para joao@cakeco.com.br
+DONE 196/280 2025-08 mogo-variacao-preco-compra.py status=ok duration=5.6s
+RUN 197/280 2025-08 mogo-analise-quantidades-produzidas.py
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Análise de Quantidades Produzidas: 01/08/2025 a 31/08/2025...
+Total de registros: 0
+  Lote 1: 0 (total: 0)
+Total carregado: 0
+Nenhum dado encontrado.
+DONE 197/280 2025-08 mogo-analise-quantidades-produzidas.py status=ok duration=4.1s
+RUN 198/280 2025-08 mogo-analise-insumos-producao.py
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Análise de Insumos Gastos na Produção: 01/08/2025 a 31/08/2025...
+Total de registros: 0
+  Lote 1: 0 (total: 0)
+Total carregado: 0
+Nenhum dado encontrado.
+DONE 198/280 2025-08 mogo-analise-insumos-producao.py status=ok duration=4.2s
+RUN 199/280 2025-08 mogo-analise-cadastro-clientes.py
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/dist-packages/requests/models.py", line 976, in json
+    return complexjson.loads(self.text, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 4 column 1 (char 6)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/workspaces/cake-brain/automacoes/scripts/mogo-backfill-historico-dia5.py", line 184, in run_one
+    runpy.run_path(str(script_path), run_name='__main__')
+  File "<frozen runpy>", line 286, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "/root/workspaces/cake-brain/automacoes/scripts/mogo-analise-cadastro-clientes.py", line 73, in <module>
+    rows = r.json().get('rows') or []
+           ^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/requests/models.py", line 980, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 4 column 1 (char 6)
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Análise de Cadastro de Clientes: 01/08/2025 a 31/08/2025...
+Total de registros: 1539
+DONE 199/280 2025-08 mogo-analise-cadastro-clientes.py status=error duration=13.6s
+RUN 200/280 2025-08 mogo-itens-vendidos-agendamento.py
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Itens Vendidos por Agendamento: 01/08/2025 a 31/08/2025...
+Total de registros: 168
+  Lote 1: 168 (total: 168)
+Total carregado: 168
+Excel salvo: /root/workspaces/cake-brain/relatorios/Mogo/Itens Vendidos Agendamento/08-2025.xlsx
+JSON salvo: /root/workspaces/cake-brain/relatorios/Mogo/Itens Vendidos Agendamento/08-2025.json
+✅ Email enviado para joao@cakeco.com.br
+DONE 200/280 2025-08 mogo-itens-vendidos-agendamento.py status=ok duration=3.4s
+
+MONTH_START 2025-09 fake_now=2025-10-05
+RUN 201/280 2025-09 mogo-faturamento-detalhado.py
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Faturamento Detalhado: 01/09/2025 a 30/09/2025...
+  01/09/2025–07/09/2025 lote 1: 1709 registros (acumulado: 1709 | total semana: 1709)
+  08/09/2025–14/09/2025 lote 1: 1687 registros (acumulado: 3396 | total semana: 1687)
+  Retry 1/3 15/09/2025–21/09/2025 lote 1...
+  Retry 2/3 15/09/2025–21/09/2025 lote 1...
+  ERRO 15/09/2025–21/09/2025 lote 1: Expecting value: line 1 column 1 (char 0)
+  15/09/2025–21/09/2025 lote 1: 0 registros (acumulado: 3396 | total semana: 0)
+  Retry 1/3 22/09/2025–28/09/2025 lote 1...
+  Retry 2/3 22/09/2025–28/09/2025 lote 1...
+  ERRO 22/09/2025–28/09/2025 lote 1: Expecting value: line 1 column 1 (char 0)
+  22/09/2025–28/09/2025 lote 1: 0 registros (acumulado: 3396 | total semana: 0)
+  Retry 1/3 29/09/2025–30/09/2025 lote 1...
+  Retry 2/3 29/09/2025–30/09/2025 lote 1...
+  ERRO 29/09/2025–30/09/2025 lote 1: Expecting value: line 1 column 1 (char 0)
+  29/09/2025–30/09/2025 lote 1: 0 registros (acumulado: 3396 | total semana: 0)
+Total carregado: 3396
+Excel salvo: /root/workspaces/cake-brain/relatorios/Mogo/Faturamento Detalhado/09-2025.xlsx
+JSON salvo: /root/workspaces/cake-brain/relatorios/Mogo/Faturamento Detalhado/09-2025.json
+✅ Email enviado para joao@cakeco.com.br
+DONE 201/280 2025-09 mogo-faturamento-detalhado.py status=ok duration=63.7s
+RUN 202/280 2025-09 mogo-venda-nota-assinada.py
+Venda em Nota Assinada: 01/09/2025 → 30/09/2025
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Buscando Contas a Receber...
+Total registros: 277
+Venda em nota assinada (descrição): 277 registros
+Venda em nota assinada (emissão validada): 277 registros
+Excel salvo: /root/workspaces/cake-brain/relatorios/Mogo/Venda em Nota Assinada/2025-09-venda-nota-assinada.xlsx
+✅ Email enviado para joao@cakeco.com.br
+
+✅ Relatório concluído
+DONE 202/280 2025-09 mogo-venda-nota-assinada.py status=ok duration=3.8s
+RUN 203/280 2025-09 mogo-ticket-medio.py
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Ticket Médio: 01/09/2025 a 30/09/2025...
+Registros: 3
+Excel salvo: /root/workspaces/cake-brain/relatorios/Mogo/Ticket Medio/09-2025.xlsx
+JSON salvo: /root/workspaces/cake-brain/relatorios/Mogo/Ticket Medio/09-2025.json
+✅ Email enviado para joao@cakeco.com.br
+DONE 203/280 2025-09 mogo-ticket-medio.py status=ok duration=7.8s
+RUN 204/280 2025-09 mogo-vendas-analitico.py
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/dist-packages/requests/models.py", line 976, in json
+    return complexjson.loads(self.text, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 4 column 1 (char 6)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/workspaces/cake-brain/automacoes/scripts/mogo-backfill-historico-dia5.py", line 184, in run_one
+    runpy.run_path(str(script_path), run_name='__main__')
+  File "<frozen runpy>", line 286, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "/root/workspaces/cake-brain/automacoes/scripts/mogo-vendas-analitico.py", line 81, in <module>
+    d = r.json()
+        ^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/requests/models.py", line 980, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 4 column 1 (char 6)
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Vendas Analítico: 01/09/2025 a 30/09/2025...
+Total de registros: 16872
+  Lote 1: 2000 registros (total: 2000)
+DONE 204/280 2025-09 mogo-vendas-analitico.py status=error duration=43.3s
+RUN 205/280 2025-09 mogo-vendas-sintetico.py
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Vendas Sintético: 01/09/2025 a 30/09/2025...
+Registros: 361
+Excel salvo: /root/workspaces/cake-brain/relatorios/Mogo/Vendas Sintetico/09-2025.xlsx
+JSON salvo: /root/workspaces/cake-brain/relatorios/Mogo/Vendas Sintetico/09-2025.json
+✅ Email enviado para joao@cakeco.com.br
+DONE 205/280 2025-09 mogo-vendas-sintetico.py status=ok duration=6.1s
+RUN 206/280 2025-09 mogo-vendas-adicionais.py
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Vendas de Adicionais: 01/09/2025 a 30/09/2025...
+Total de registros: 330
+  Lote 1: 330 registros (total: 330)
+Total carregado: 330
+Excel salvo: /root/workspaces/cake-brain/relatorios/Mogo/Vendas Adicionais/09-2025.xlsx
+JSON salvo: /root/workspaces/cake-brain/relatorios/Mogo/Vendas Adicionais/09-2025.json
+✅ Email enviado para joao@cakeco.com.br
+DONE 206/280 2025-09 mogo-vendas-adicionais.py status=ok duration=5.3s
+RUN 207/280 2025-09 mogo-lucratividade-produto.py
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Lucratividade por Produto: 01/09/2025 a 30/09/2025...
+Registros: 356
+Excel salvo: /root/workspaces/cake-brain/relatorios/Mogo/Lucratividade Produto/09-2025.xlsx
+JSON salvo: /root/workspaces/cake-brain/relatorios/Mogo/Lucratividade Produto/09-2025.json
+✅ Email enviado para joao@cakeco.com.br
+DONE 207/280 2025-09 mogo-lucratividade-produto.py status=ok duration=5.1s
+RUN 208/280 2025-09 mogo-descontos-concedidos.py
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Descontos Concedidos: 01/09/2025 a 30/09/2025...
+Total de registros: 1383
+  Lote 1: 1383 registros (total: 1383)
+Total carregado: 1383
+Excel salvo: /root/workspaces/cake-brain/relatorios/Mogo/Descontos Concedidos/09-2025.xlsx
+JSON salvo: /root/workspaces/cake-brain/relatorios/Mogo/Descontos Concedidos/09-2025.json
+✅ Email enviado para joao@cakeco.com.br
+DONE 208/280 2025-09 mogo-descontos-concedidos.py status=ok duration=13.4s
+RUN 209/280 2025-09 mogo-movimentacao-credito-cliente.py
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Movimentação Crédito Cliente: 01/09/2025 a 30/09/2025...
+Registros: 21
+Excel salvo: /root/workspaces/cake-brain/relatorios/Mogo/Movimentacao Credito Cliente/09-2025.xlsx
+JSON salvo: /root/workspaces/cake-brain/relatorios/Mogo/Movimentacao Credito Cliente/09-2025.json
+✅ Email enviado para joao@cakeco.com.br
+DONE 209/280 2025-09 mogo-movimentacao-credito-cliente.py status=ok duration=2.4s
+RUN 210/280 2025-09 mogo-taxa-servico.py
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Taxa de Serviço: 01/09/2025 a 30/09/2025...
+Total de registros: 6321
+  Lote 1: 2000 registros (total: 2000)
+  Lote 2: 2000 registros (total: 4000)
+  Lote 3: 2000 registros (total: 6000)
+  Lote 4: 321 registros (total: 6321)
+Total carregado: 6321
+Excel salvo: /root/workspaces/cake-brain/relatorios/Mogo/Taxa Servico/09-2025.xlsx
+JSON salvo: /root/workspaces/cake-brain/relatorios/Mogo/Taxa Servico/09-2025.json
+✅ Email enviado para joao@cakeco.com.br
+DONE 210/280 2025-09 mogo-taxa-servico.py status=ok duration=55.6s
+RUN 211/280 2025-09 mogo-analise-cortesias.py
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Análise de Cortesias: 01/09/2025 a 30/09/2025...
+Registros: 8
+Excel salvo: /root/workspaces/cake-brain/relatorios/Mogo/Analise Cortesias/09-2025.xlsx
+JSON salvo: /root/workspaces/cake-brain/relatorios/Mogo/Analise Cortesias/09-2025.json
+✅ Email enviado para joao@cakeco.com.br
+DONE 211/280 2025-09 mogo-analise-cortesias.py status=ok duration=2.9s
+RUN 212/280 2025-09 mogo-lancamentos-pedidos.py
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Lançamentos de Pedidos: 01/09/2025 a 30/09/2025...
+  01/09/2025–07/09/2025 lote 1: 4253 | total semana: 4253
+  ERRO semana 08/09/2025: Expecting value: line 4 column 1 (char 6)
+  ERRO semana 15/09/2025: Expecting value: line 1 column 1 (char 0)
+  ERRO semana 22/09/2025: Expecting value: line 1 column 1 (char 0)
+  ERRO semana 29/09/2025: Expecting value: line 1 column 1 (char 0)
+Total carregado: 4253
+Excel salvo: /root/workspaces/cake-brain/relatorios/Mogo/Lancamentos Pedidos/09-2025.xlsx
+JSON salvo: /root/workspaces/cake-brain/relatorios/Mogo/Lancamentos Pedidos/09-2025.json
+✅ Email enviado para joao@cakeco.com.br
+DONE 212/280 2025-09 mogo-lancamentos-pedidos.py status=ok duration=66.5s
+RUN 213/280 2025-09 mogo-historico-pagamento.py
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Histórico de Pagamento: 01/09/2025 a 30/09/2025...
+  01/09/2025–07/09/2025 lote 1: 1754 | total semana: 1754
+  ERRO semana 08/09/2025: Expecting value: line 4 column 1 (char 6)
+  ERRO semana 15/09/2025: Expecting value: line 1 column 1 (char 0)
+  ERRO semana 22/09/2025: Expecting value: line 1 column 1 (char 0)
+  ERRO semana 29/09/2025: Expecting value: line 1 column 1 (char 0)
+Total carregado: 1754
+Excel salvo: /root/workspaces/cake-brain/relatorios/Mogo/Historico Pagamento/09-2025.xlsx
+JSON salvo: /root/workspaces/cake-brain/relatorios/Mogo/Historico Pagamento/09-2025.json
+✅ Email enviado para joao@cakeco.com.br
+DONE 213/280 2025-09 mogo-historico-pagamento.py status=ok duration=30.2s
+RUN 214/280 2025-09 mogo-entradas-xml-detalhado.py
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Entradas XML Detalhado: 01/09/2025 a 30/09/2025...
+Total de registros: 422
+  Lote 1: 422 (total: 422)
+Total carregado: 422
+Excel salvo: /root/workspaces/cake-brain/relatorios/Mogo/Entradas XML Detalhado/09-2025.xlsx
+JSON salvo: /root/workspaces/cake-brain/relatorios/Mogo/Entradas XML Detalhado/09-2025.json
+✅ Email enviado para joao@cakeco.com.br
+DONE 214/280 2025-09 mogo-entradas-xml-detalhado.py status=ok duration=9.8s
+RUN 215/280 2025-09 mogo-compra-produtos.py
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Compra de Produtos: 01/09/2025 a 30/09/2025...
+Total de registros: 462
+  Lote 1: 462 (total: 462)
+Total carregado: 462
+Excel salvo: /root/workspaces/cake-brain/relatorios/Mogo/Compra Produtos/09-2025.xlsx
+JSON salvo: /root/workspaces/cake-brain/relatorios/Mogo/Compra Produtos/09-2025.json
+✅ Email enviado para joao@cakeco.com.br
+DONE 215/280 2025-09 mogo-compra-produtos.py status=ok duration=15.4s
+RUN 216/280 2025-09 mogo-variacao-preco-compra.py
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Variação do Preço de Compra: 01/09/2025 a 30/09/2025...
+Registros: 181
+Excel salvo: /root/workspaces/cake-brain/relatorios/Mogo/Variacao Preco Compra/09-2025.xlsx
+JSON salvo: /root/workspaces/cake-brain/relatorios/Mogo/Variacao Preco Compra/09-2025.json
+✅ Email enviado para joao@cakeco.com.br
+DONE 216/280 2025-09 mogo-variacao-preco-compra.py status=ok duration=5.4s
+RUN 217/280 2025-09 mogo-analise-quantidades-produzidas.py
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Análise de Quantidades Produzidas: 01/09/2025 a 30/09/2025...
+Total de registros: 699
+  Lote 1: 699 (total: 699)
+Total carregado: 699
+Excel salvo: /root/workspaces/cake-brain/relatorios/Mogo/Analise Quantidades Produzidas/09-2025.xlsx
+JSON salvo: /root/workspaces/cake-brain/relatorios/Mogo/Analise Quantidades Produzidas/09-2025.json
+✅ Email enviado para joao@cakeco.com.br
+DONE 217/280 2025-09 mogo-analise-quantidades-produzidas.py status=ok duration=7.6s
+RUN 218/280 2025-09 mogo-analise-insumos-producao.py
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Análise de Insumos Gastos na Produção: 01/09/2025 a 30/09/2025...
+Total de registros: 2132
+  Lote 1: 2000 (total: 2000)
+  Lote 2: 132 (total: 2132)
+Total carregado: 2132
+Excel salvo: /root/workspaces/cake-brain/relatorios/Mogo/Analise Insumos Producao/09-2025.xlsx
+JSON salvo: /root/workspaces/cake-brain/relatorios/Mogo/Analise Insumos Producao/09-2025.json
+✅ Email enviado para joao@cakeco.com.br
+DONE 218/280 2025-09 mogo-analise-insumos-producao.py status=ok duration=15.9s
+RUN 219/280 2025-09 mogo-analise-cadastro-clientes.py
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Análise de Cadastro de Clientes: 01/09/2025 a 30/09/2025...
+Total de registros: 1046
+  Lote 1: 1046 (total: 1046)
+Total carregado: 1046
+Excel salvo: /root/workspaces/cake-brain/relatorios/Mogo/Analise Cadastro Clientes/09-2025.xlsx
+JSON salvo: /root/workspaces/cake-brain/relatorios/Mogo/Analise Cadastro Clientes/09-2025.json
+✅ Email enviado para joao@cakeco.com.br
+DONE 219/280 2025-09 mogo-analise-cadastro-clientes.py status=ok duration=18.9s
+RUN 220/280 2025-09 mogo-itens-vendidos-agendamento.py
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Itens Vendidos por Agendamento: 01/09/2025 a 30/09/2025...
+Total de registros: 162
+  Lote 1: 162 (total: 162)
+Total carregado: 162
+Excel salvo: /root/workspaces/cake-brain/relatorios/Mogo/Itens Vendidos Agendamento/09-2025.xlsx
+JSON salvo: /root/workspaces/cake-brain/relatorios/Mogo/Itens Vendidos Agendamento/09-2025.json
+✅ Email enviado para joao@cakeco.com.br
+DONE 220/280 2025-09 mogo-itens-vendidos-agendamento.py status=ok duration=3.8s
+
+MONTH_START 2025-10 fake_now=2025-11-05
+RUN 221/280 2025-10 mogo-faturamento-detalhado.py
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Faturamento Detalhado: 01/10/2025 a 31/10/2025...
+  01/10/2025–07/10/2025 lote 1: 1495 registros (acumulado: 1495 | total semana: 1495)
+  08/10/2025–14/10/2025 lote 1: 1580 registros (acumulado: 3075 | total semana: 1580)
+  15/10/2025–21/10/2025 lote 1: 1619 registros (acumulado: 4694 | total semana: 1619)
+  22/10/2025–28/10/2025 lote 1: 1509 registros (acumulado: 6203 | total semana: 1509)
+  29/10/2025–31/10/2025 lote 1: 867 registros (acumulado: 7070 | total semana: 867)
+Total carregado: 7070
+Excel salvo: /root/workspaces/cake-brain/relatorios/Mogo/Faturamento Detalhado/10-2025.xlsx
+JSON salvo: /root/workspaces/cake-brain/relatorios/Mogo/Faturamento Detalhado/10-2025.json
+✅ Email enviado para joao@cakeco.com.br
+DONE 221/280 2025-10 mogo-faturamento-detalhado.py status=ok duration=62.1s
+RUN 222/280 2025-10 mogo-venda-nota-assinada.py
+Venda em Nota Assinada: 01/10/2025 → 31/10/2025
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Buscando Contas a Receber...
+Total registros: 259
+Venda em nota assinada (descrição): 259 registros
+Venda em nota assinada (emissão validada): 259 registros
+Excel salvo: /root/workspaces/cake-brain/relatorios/Mogo/Venda em Nota Assinada/2025-10-venda-nota-assinada.xlsx
+✅ Email enviado para joao@cakeco.com.br
+
+✅ Relatório concluído
+DONE 222/280 2025-10 mogo-venda-nota-assinada.py status=ok duration=4.1s
+RUN 223/280 2025-10 mogo-ticket-medio.py
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Ticket Médio: 01/10/2025 a 31/10/2025...
+Registros: 3
+Excel salvo: /root/workspaces/cake-brain/relatorios/Mogo/Ticket Medio/10-2025.xlsx
+JSON salvo: /root/workspaces/cake-brain/relatorios/Mogo/Ticket Medio/10-2025.json
+✅ Email enviado para joao@cakeco.com.br
+DONE 223/280 2025-10 mogo-ticket-medio.py status=ok duration=11.2s
+RUN 224/280 2025-10 mogo-vendas-analitico.py
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/dist-packages/requests/models.py", line 976, in json
+    return complexjson.loads(self.text, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 4 column 1 (char 6)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/workspaces/cake-brain/automacoes/scripts/mogo-backfill-historico-dia5.py", line 184, in run_one
+    runpy.run_path(str(script_path), run_name='__main__')
+  File "<frozen runpy>", line 286, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "/root/workspaces/cake-brain/automacoes/scripts/mogo-vendas-analitico.py", line 81, in <module>
+    d = r.json()
+        ^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/requests/models.py", line 980, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 4 column 1 (char 6)
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Vendas Analítico: 01/10/2025 a 31/10/2025...
+Total de registros: 16151
+  Lote 1: 2000 registros (total: 2000)
+DONE 224/280 2025-10 mogo-vendas-analitico.py status=error duration=37.3s
+RUN 225/280 2025-10 mogo-vendas-sintetico.py
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Vendas Sintético: 01/10/2025 a 31/10/2025...
+Registros: 367
+Excel salvo: /root/workspaces/cake-brain/relatorios/Mogo/Vendas Sintetico/10-2025.xlsx
+JSON salvo: /root/workspaces/cake-brain/relatorios/Mogo/Vendas Sintetico/10-2025.json
+✅ Email enviado para joao@cakeco.com.br
+DONE 225/280 2025-10 mogo-vendas-sintetico.py status=ok duration=5.5s
+RUN 226/280 2025-10 mogo-vendas-adicionais.py
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Vendas de Adicionais: 01/10/2025 a 31/10/2025...
+Total de registros: 342
+  Lote 1: 342 registros (total: 342)
+Total carregado: 342
+Excel salvo: /root/workspaces/cake-brain/relatorios/Mogo/Vendas Adicionais/10-2025.xlsx
+JSON salvo: /root/workspaces/cake-brain/relatorios/Mogo/Vendas Adicionais/10-2025.json
+✅ Email enviado para joao@cakeco.com.br
+DONE 226/280 2025-10 mogo-vendas-adicionais.py status=ok duration=5.5s
+RUN 227/280 2025-10 mogo-lucratividade-produto.py
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Lucratividade por Produto: 01/10/2025 a 31/10/2025...
+Registros: 367
+Excel salvo: /root/workspaces/cake-brain/relatorios/Mogo/Lucratividade Produto/10-2025.xlsx
+JSON salvo: /root/workspaces/cake-brain/relatorios/Mogo/Lucratividade Produto/10-2025.json
+✅ Email enviado para joao@cakeco.com.br
+DONE 227/280 2025-10 mogo-lucratividade-produto.py status=ok duration=6.6s
+RUN 228/280 2025-10 mogo-descontos-concedidos.py
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Descontos Concedidos: 01/10/2025 a 31/10/2025...
+Total de registros: 1621
+  Lote 1: 1621 registros (total: 1621)
+Total carregado: 1621
+Excel salvo: /root/workspaces/cake-brain/relatorios/Mogo/Descontos Concedidos/10-2025.xlsx
+JSON salvo: /root/workspaces/cake-brain/relatorios/Mogo/Descontos Concedidos/10-2025.json
+✅ Email enviado para joao@cakeco.com.br
+DONE 228/280 2025-10 mogo-descontos-concedidos.py status=ok duration=14.9s
+RUN 229/280 2025-10 mogo-movimentacao-credito-cliente.py
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Movimentação Crédito Cliente: 01/10/2025 a 31/10/2025...
+Registros: 19
+Excel salvo: /root/workspaces/cake-brain/relatorios/Mogo/Movimentacao Credito Cliente/10-2025.xlsx
+JSON salvo: /root/workspaces/cake-brain/relatorios/Mogo/Movimentacao Credito Cliente/10-2025.json
+✅ Email enviado para joao@cakeco.com.br
+DONE 229/280 2025-10 mogo-movimentacao-credito-cliente.py status=ok duration=3.1s
+RUN 230/280 2025-10 mogo-taxa-servico.py
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/dist-packages/requests/models.py", line 976, in json
+    return complexjson.loads(self.text, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 4 column 1 (char 6)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/workspaces/cake-brain/automacoes/scripts/mogo-backfill-historico-dia5.py", line 184, in run_one
+    runpy.run_path(str(script_path), run_name='__main__')
+  File "<frozen runpy>", line 286, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "/root/workspaces/cake-brain/automacoes/scripts/mogo-taxa-servico.py", line 84, in <module>
+    rows = r.json().get('rows') or []
+           ^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/requests/models.py", line 980, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 4 column 1 (char 6)
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Taxa de Serviço: 01/10/2025 a 31/10/2025...
+Total de registros: 6729
+DONE 230/280 2025-10 mogo-taxa-servico.py status=error duration=7.4s
+RUN 231/280 2025-10 mogo-analise-cortesias.py
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Análise de Cortesias: 01/10/2025 a 31/10/2025...
+Registros: 8
+Excel salvo: /root/workspaces/cake-brain/relatorios/Mogo/Analise Cortesias/10-2025.xlsx
+JSON salvo: /root/workspaces/cake-brain/relatorios/Mogo/Analise Cortesias/10-2025.json
+✅ Email enviado para joao@cakeco.com.br
+DONE 231/280 2025-10 mogo-analise-cortesias.py status=ok duration=3.0s
+RUN 232/280 2025-10 mogo-lancamentos-pedidos.py
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Lançamentos de Pedidos: 01/10/2025 a 31/10/2025...
+  01/10/2025–07/10/2025 lote 1: 3854 | total semana: 3854
+  ERRO semana 08/10/2025: Expecting value: line 4 column 1 (char 6)
+  ERRO semana 15/10/2025: Expecting value: line 1 column 1 (char 0)
+  ERRO semana 22/10/2025: Expecting value: line 1 column 1 (char 0)
+  ERRO semana 29/10/2025: Expecting value: line 1 column 1 (char 0)
+Total carregado: 3854
+Excel salvo: /root/workspaces/cake-brain/relatorios/Mogo/Lancamentos Pedidos/10-2025.xlsx
+JSON salvo: /root/workspaces/cake-brain/relatorios/Mogo/Lancamentos Pedidos/10-2025.json
+✅ Email enviado para joao@cakeco.com.br
+DONE 232/280 2025-10 mogo-lancamentos-pedidos.py status=ok duration=55.8s
+RUN 233/280 2025-10 mogo-historico-pagamento.py
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Histórico de Pagamento: 01/10/2025 a 31/10/2025...
+  01/10/2025–07/10/2025 lote 1: 1578 | total semana: 1578
+  08/10/2025–14/10/2025 lote 1: 1636 | total semana: 1636
+  ERRO semana 15/10/2025: Expecting value: line 4 column 1 (char 6)
+  ERRO semana 22/10/2025: Expecting value: line 1 column 1 (char 0)
+  ERRO semana 29/10/2025: Expecting value: line 1 column 1 (char 0)
+Total carregado: 3214
+Excel salvo: /root/workspaces/cake-brain/relatorios/Mogo/Historico Pagamento/10-2025.xlsx
+JSON salvo: /root/workspaces/cake-brain/relatorios/Mogo/Historico Pagamento/10-2025.json
+✅ Email enviado para joao@cakeco.com.br
+DONE 233/280 2025-10 mogo-historico-pagamento.py status=ok duration=53.1s
+RUN 234/280 2025-10 mogo-entradas-xml-detalhado.py
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/dist-packages/requests/models.py", line 976, in json
+    return complexjson.loads(self.text, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 4 column 1 (char 6)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/workspaces/cake-brain/automacoes/scripts/mogo-backfill-historico-dia5.py", line 184, in run_one
+    runpy.run_path(str(script_path), run_name='__main__')
+  File "<frozen runpy>", line 286, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "/root/workspaces/cake-brain/automacoes/scripts/mogo-entradas-xml-detalhado.py", line 61, in <module>
+    total_records = int(r_test.json().get('records', 0))
+                        ^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/requests/models.py", line 980, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 4 column 1 (char 6)
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Entradas XML Detalhado: 01/10/2025 a 31/10/2025...
+DONE 234/280 2025-10 mogo-entradas-xml-detalhado.py status=error duration=4.9s
+RUN 235/280 2025-10 mogo-compra-produtos.py
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Compra de Produtos: 01/10/2025 a 31/10/2025...
+Total de registros: 547
+  Lote 1: 547 (total: 547)
+Total carregado: 547
+Excel salvo: /root/workspaces/cake-brain/relatorios/Mogo/Compra Produtos/10-2025.xlsx
+JSON salvo: /root/workspaces/cake-brain/relatorios/Mogo/Compra Produtos/10-2025.json
+✅ Email enviado para joao@cakeco.com.br
+DONE 235/280 2025-10 mogo-compra-produtos.py status=ok duration=14.7s
+RUN 236/280 2025-10 mogo-variacao-preco-compra.py
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Variação do Preço de Compra: 01/10/2025 a 31/10/2025...
+Registros: 216
+Excel salvo: /root/workspaces/cake-brain/relatorios/Mogo/Variacao Preco Compra/10-2025.xlsx
+JSON salvo: /root/workspaces/cake-brain/relatorios/Mogo/Variacao Preco Compra/10-2025.json
+✅ Email enviado para joao@cakeco.com.br
+DONE 236/280 2025-10 mogo-variacao-preco-compra.py status=ok duration=5.9s
+RUN 237/280 2025-10 mogo-analise-quantidades-produzidas.py
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Análise de Quantidades Produzidas: 01/10/2025 a 31/10/2025...
+Total de registros: 74
+  Lote 1: 74 (total: 74)
+Total carregado: 74
+Excel salvo: /root/workspaces/cake-brain/relatorios/Mogo/Analise Quantidades Produzidas/10-2025.xlsx
+JSON salvo: /root/workspaces/cake-brain/relatorios/Mogo/Analise Quantidades Produzidas/10-2025.json
+✅ Email enviado para joao@cakeco.com.br
+DONE 237/280 2025-10 mogo-analise-quantidades-produzidas.py status=ok duration=4.1s
+RUN 238/280 2025-10 mogo-analise-insumos-producao.py
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Análise de Insumos Gastos na Produção: 01/10/2025 a 31/10/2025...
+Total de registros: 249
+  Lote 1: 249 (total: 249)
+Total carregado: 249
+Excel salvo: /root/workspaces/cake-brain/relatorios/Mogo/Analise Insumos Producao/10-2025.xlsx
+JSON salvo: /root/workspaces/cake-brain/relatorios/Mogo/Analise Insumos Producao/10-2025.json
+✅ Email enviado para joao@cakeco.com.br
+DONE 238/280 2025-10 mogo-analise-insumos-producao.py status=ok duration=5.2s
+RUN 239/280 2025-10 mogo-analise-cadastro-clientes.py
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Análise de Cadastro de Clientes: 01/10/2025 a 31/10/2025...
+Total de registros: 1095
+  Lote 1: 1095 (total: 1095)
+Total carregado: 1095
+Excel salvo: /root/workspaces/cake-brain/relatorios/Mogo/Analise Cadastro Clientes/10-2025.xlsx
+JSON salvo: /root/workspaces/cake-brain/relatorios/Mogo/Analise Cadastro Clientes/10-2025.json
+✅ Email enviado para joao@cakeco.com.br
+DONE 239/280 2025-10 mogo-analise-cadastro-clientes.py status=ok duration=18.3s
+RUN 240/280 2025-10 mogo-itens-vendidos-agendamento.py
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Itens Vendidos por Agendamento: 01/10/2025 a 31/10/2025...
+Total de registros: 186
+  Lote 1: 186 (total: 186)
+Total carregado: 186
+Excel salvo: /root/workspaces/cake-brain/relatorios/Mogo/Itens Vendidos Agendamento/10-2025.xlsx
+JSON salvo: /root/workspaces/cake-brain/relatorios/Mogo/Itens Vendidos Agendamento/10-2025.json
+✅ Email enviado para joao@cakeco.com.br
+DONE 240/280 2025-10 mogo-itens-vendidos-agendamento.py status=ok duration=3.2s
+
+MONTH_START 2025-11 fake_now=2025-12-05
+RUN 241/280 2025-11 mogo-faturamento-detalhado.py
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Faturamento Detalhado: 01/11/2025 a 30/11/2025...
+  01/11/2025–07/11/2025 lote 1: 1656 registros (acumulado: 1656 | total semana: 1656)
+  Retry 1/3 08/11/2025–14/11/2025 lote 1...
+  Retry 2/3 08/11/2025–14/11/2025 lote 1...
+  ERRO 08/11/2025–14/11/2025 lote 1: Expecting value: line 1 column 1 (char 0)
+  08/11/2025–14/11/2025 lote 1: 0 registros (acumulado: 1656 | total semana: 0)
+  Retry 1/3 15/11/2025–21/11/2025 lote 1...
+  Retry 2/3 15/11/2025–21/11/2025 lote 1...
+  ERRO 15/11/2025–21/11/2025 lote 1: Expecting value: line 1 column 1 (char 0)
+  15/11/2025–21/11/2025 lote 1: 0 registros (acumulado: 1656 | total semana: 0)
+  Retry 1/3 22/11/2025–28/11/2025 lote 1...
+  Retry 2/3 22/11/2025–28/11/2025 lote 1...
+  ERRO 22/11/2025–28/11/2025 lote 1: Expecting value: line 1 column 1 (char 0)
+  22/11/2025–28/11/2025 lote 1: 0 registros (acumulado: 1656 | total semana: 0)
+  Retry 1/3 29/11/2025–30/11/2025 lote 1...
+  Retry 2/3 29/11/2025–30/11/2025 lote 1...
+  ERRO 29/11/2025–30/11/2025 lote 1: Expecting value: line 1 column 1 (char 0)
+  29/11/2025–30/11/2025 lote 1: 0 registros (acumulado: 1656 | total semana: 0)
+Total carregado: 1656
+Excel salvo: /root/workspaces/cake-brain/relatorios/Mogo/Faturamento Detalhado/11-2025.xlsx
+JSON salvo: /root/workspaces/cake-brain/relatorios/Mogo/Faturamento Detalhado/11-2025.json
+✅ Email enviado para joao@cakeco.com.br
+DONE 241/280 2025-11 mogo-faturamento-detalhado.py status=ok duration=46.8s
+RUN 242/280 2025-11 mogo-venda-nota-assinada.py
+Venda em Nota Assinada: 01/11/2025 → 30/11/2025
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Buscando Contas a Receber...
+Total registros: 208
+Venda em nota assinada (descrição): 208 registros
+Venda em nota assinada (emissão validada): 208 registros
+Excel salvo: /root/workspaces/cake-brain/relatorios/Mogo/Venda em Nota Assinada/2025-11-venda-nota-assinada.xlsx
+✅ Email enviado para joao@cakeco.com.br
+
+✅ Relatório concluído
+DONE 242/280 2025-11 mogo-venda-nota-assinada.py status=ok duration=5.2s
+RUN 243/280 2025-11 mogo-ticket-medio.py
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Ticket Médio: 01/11/2025 a 30/11/2025...
+Registros: 4
+Excel salvo: /root/workspaces/cake-brain/relatorios/Mogo/Ticket Medio/11-2025.xlsx
+JSON salvo: /root/workspaces/cake-brain/relatorios/Mogo/Ticket Medio/11-2025.json
+✅ Email enviado para joao@cakeco.com.br
+DONE 243/280 2025-11 mogo-ticket-medio.py status=ok duration=8.4s
+RUN 244/280 2025-11 mogo-vendas-analitico.py
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/dist-packages/requests/models.py", line 976, in json
+    return complexjson.loads(self.text, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 4 column 1 (char 6)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/workspaces/cake-brain/automacoes/scripts/mogo-backfill-historico-dia5.py", line 184, in run_one
+    runpy.run_path(str(script_path), run_name='__main__')
+  File "<frozen runpy>", line 286, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "/root/workspaces/cake-brain/automacoes/scripts/mogo-vendas-analitico.py", line 81, in <module>
+    d = r.json()
+        ^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/requests/models.py", line 980, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 4 column 1 (char 6)
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Vendas Analítico: 01/11/2025 a 30/11/2025...
+Total de registros: 15081
+DONE 244/280 2025-11 mogo-vendas-analitico.py status=error duration=8.5s
+RUN 245/280 2025-11 mogo-vendas-sintetico.py
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Vendas Sintético: 01/11/2025 a 30/11/2025...
+Registros: 372
+Excel salvo: /root/workspaces/cake-brain/relatorios/Mogo/Vendas Sintetico/11-2025.xlsx
+JSON salvo: /root/workspaces/cake-brain/relatorios/Mogo/Vendas Sintetico/11-2025.json
+✅ Email enviado para joao@cakeco.com.br
+DONE 245/280 2025-11 mogo-vendas-sintetico.py status=ok duration=7.4s
+RUN 246/280 2025-11 mogo-vendas-adicionais.py
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Vendas de Adicionais: 01/11/2025 a 30/11/2025...
+Total de registros: 412
+  Lote 1: 412 registros (total: 412)
+Total carregado: 412
+Excel salvo: /root/workspaces/cake-brain/relatorios/Mogo/Vendas Adicionais/11-2025.xlsx
+JSON salvo: /root/workspaces/cake-brain/relatorios/Mogo/Vendas Adicionais/11-2025.json
+✅ Email enviado para joao@cakeco.com.br
+DONE 246/280 2025-11 mogo-vendas-adicionais.py status=ok duration=7.4s
+RUN 247/280 2025-11 mogo-lucratividade-produto.py
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Lucratividade por Produto: 01/11/2025 a 30/11/2025...
+Registros: 364
+Excel salvo: /root/workspaces/cake-brain/relatorios/Mogo/Lucratividade Produto/11-2025.xlsx
+JSON salvo: /root/workspaces/cake-brain/relatorios/Mogo/Lucratividade Produto/11-2025.json
+✅ Email enviado para joao@cakeco.com.br
+DONE 247/280 2025-11 mogo-lucratividade-produto.py status=ok duration=5.0s
+RUN 248/280 2025-11 mogo-descontos-concedidos.py
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Descontos Concedidos: 01/11/2025 a 30/11/2025...
+Total de registros: 1475
+  Lote 1: 1475 registros (total: 1475)
+Total carregado: 1475
+Excel salvo: /root/workspaces/cake-brain/relatorios/Mogo/Descontos Concedidos/11-2025.xlsx
+JSON salvo: /root/workspaces/cake-brain/relatorios/Mogo/Descontos Concedidos/11-2025.json
+✅ Email enviado para joao@cakeco.com.br
+DONE 248/280 2025-11 mogo-descontos-concedidos.py status=ok duration=12.9s
+SKIP 249/280 2025-11 mogo-movimentacao-credito-cliente.py existing=healthy
+DONE 249/280 2025-11 mogo-movimentacao-credito-cliente.py status=skipped_existing duration=0.0s
+RUN 250/280 2025-11 mogo-taxa-servico.py
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/dist-packages/requests/models.py", line 976, in json
+    return complexjson.loads(self.text, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 4 column 1 (char 6)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/workspaces/cake-brain/automacoes/scripts/mogo-backfill-historico-dia5.py", line 184, in run_one
+    runpy.run_path(str(script_path), run_name='__main__')
+  File "<frozen runpy>", line 286, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "/root/workspaces/cake-brain/automacoes/scripts/mogo-taxa-servico.py", line 84, in <module>
+    rows = r.json().get('rows') or []
+           ^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/requests/models.py", line 980, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 4 column 1 (char 6)
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Taxa de Serviço: 01/11/2025 a 30/11/2025...
+Total de registros: 5803
+  Lote 1: 2000 registros (total: 2000)
+  Lote 2: 2000 registros (total: 4000)
+DONE 250/280 2025-11 mogo-taxa-servico.py status=error duration=39.0s
+RUN 251/280 2025-11 mogo-analise-cortesias.py
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Análise de Cortesias: 01/11/2025 a 30/11/2025...
+Registros: 4
+Excel salvo: /root/workspaces/cake-brain/relatorios/Mogo/Analise Cortesias/11-2025.xlsx
+JSON salvo: /root/workspaces/cake-brain/relatorios/Mogo/Analise Cortesias/11-2025.json
+✅ Email enviado para joao@cakeco.com.br
+DONE 251/280 2025-11 mogo-analise-cortesias.py status=ok duration=8.4s
+RUN 252/280 2025-11 mogo-lancamentos-pedidos.py
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Lançamentos de Pedidos: 01/11/2025 a 30/11/2025...
+  01/11/2025–07/11/2025 lote 1: 3811 | total semana: 3811
+  ERRO semana 08/11/2025: Expecting value: line 4 column 1 (char 6)
+  ERRO semana 15/11/2025: Expecting value: line 1 column 1 (char 0)
+  ERRO semana 22/11/2025: Expecting value: line 1 column 1 (char 0)
+  ERRO semana 29/11/2025: Expecting value: line 1 column 1 (char 0)
+Total carregado: 3811
+Excel salvo: /root/workspaces/cake-brain/relatorios/Mogo/Lancamentos Pedidos/11-2025.xlsx
+JSON salvo: /root/workspaces/cake-brain/relatorios/Mogo/Lancamentos Pedidos/11-2025.json
+✅ Email enviado para joao@cakeco.com.br
+DONE 252/280 2025-11 mogo-lancamentos-pedidos.py status=ok duration=67.0s
+RUN 253/280 2025-11 mogo-historico-pagamento.py
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Histórico de Pagamento: 01/11/2025 a 30/11/2025...
+  01/11/2025–07/11/2025 lote 1: 1709 | total semana: 1709
+  08/11/2025–14/11/2025 lote 1: 1635 | total semana: 1635
+  ERRO semana 15/11/2025: Expecting value: line 4 column 1 (char 6)
+  ERRO semana 22/11/2025: Expecting value: line 1 column 1 (char 0)
+  ERRO semana 29/11/2025: Expecting value: line 1 column 1 (char 0)
+Total carregado: 3344
+Excel salvo: /root/workspaces/cake-brain/relatorios/Mogo/Historico Pagamento/11-2025.xlsx
+JSON salvo: /root/workspaces/cake-brain/relatorios/Mogo/Historico Pagamento/11-2025.json
+✅ Email enviado para joao@cakeco.com.br
+DONE 253/280 2025-11 mogo-historico-pagamento.py status=ok duration=60.0s
+RUN 254/280 2025-11 mogo-entradas-xml-detalhado.py
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Entradas XML Detalhado: 01/11/2025 a 30/11/2025...
+Total de registros: 411
+  Lote 1: 411 (total: 411)
+Total carregado: 411
+Excel salvo: /root/workspaces/cake-brain/relatorios/Mogo/Entradas XML Detalhado/11-2025.xlsx
+JSON salvo: /root/workspaces/cake-brain/relatorios/Mogo/Entradas XML Detalhado/11-2025.json
+✅ Email enviado para joao@cakeco.com.br
+DONE 254/280 2025-11 mogo-entradas-xml-detalhado.py status=ok duration=11.2s
+RUN 255/280 2025-11 mogo-compra-produtos.py
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Compra de Produtos: 01/11/2025 a 30/11/2025...
+Total de registros: 472
+  Lote 1: 472 (total: 472)
+Total carregado: 472
+Excel salvo: /root/workspaces/cake-brain/relatorios/Mogo/Compra Produtos/11-2025.xlsx
+JSON salvo: /root/workspaces/cake-brain/relatorios/Mogo/Compra Produtos/11-2025.json
+✅ Email enviado para joao@cakeco.com.br
+DONE 255/280 2025-11 mogo-compra-produtos.py status=ok duration=14.9s
+RUN 256/280 2025-11 mogo-variacao-preco-compra.py
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Variação do Preço de Compra: 01/11/2025 a 30/11/2025...
+Registros: 202
+Excel salvo: /root/workspaces/cake-brain/relatorios/Mogo/Variacao Preco Compra/11-2025.xlsx
+JSON salvo: /root/workspaces/cake-brain/relatorios/Mogo/Variacao Preco Compra/11-2025.json
+✅ Email enviado para joao@cakeco.com.br
+DONE 256/280 2025-11 mogo-variacao-preco-compra.py status=ok duration=5.4s
+RUN 257/280 2025-11 mogo-analise-quantidades-produzidas.py
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/dist-packages/requests/models.py", line 976, in json
+    return complexjson.loads(self.text, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 4 column 1 (char 6)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/workspaces/cake-brain/automacoes/scripts/mogo-backfill-historico-dia5.py", line 184, in run_one
+    runpy.run_path(str(script_path), run_name='__main__')
+  File "<frozen runpy>", line 286, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "/root/workspaces/cake-brain/automacoes/scripts/mogo-analise-quantidades-produzidas.py", line 53, in <module>
+    total_records = int(r_test.json().get('records', 0))
+                        ^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/requests/models.py", line 980, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 4 column 1 (char 6)
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Análise de Quantidades Produzidas: 01/11/2025 a 30/11/2025...
+DONE 257/280 2025-11 mogo-analise-quantidades-produzidas.py status=error duration=2.8s
+RUN 258/280 2025-11 mogo-analise-insumos-producao.py
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Análise de Insumos Gastos na Produção: 01/11/2025 a 30/11/2025...
+Total de registros: 124
+  Lote 1: 124 (total: 124)
+Total carregado: 124
+Excel salvo: /root/workspaces/cake-brain/relatorios/Mogo/Analise Insumos Producao/11-2025.xlsx
+JSON salvo: /root/workspaces/cake-brain/relatorios/Mogo/Analise Insumos Producao/11-2025.json
+✅ Email enviado para joao@cakeco.com.br
+DONE 258/280 2025-11 mogo-analise-insumos-producao.py status=ok duration=3.9s
+RUN 259/280 2025-11 mogo-analise-cadastro-clientes.py
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Análise de Cadastro de Clientes: 01/11/2025 a 30/11/2025...
+Total de registros: 944
+  Lote 1: 944 (total: 944)
+Total carregado: 944
+Excel salvo: /root/workspaces/cake-brain/relatorios/Mogo/Analise Cadastro Clientes/11-2025.xlsx
+JSON salvo: /root/workspaces/cake-brain/relatorios/Mogo/Analise Cadastro Clientes/11-2025.json
+✅ Email enviado para joao@cakeco.com.br
+DONE 259/280 2025-11 mogo-analise-cadastro-clientes.py status=ok duration=19.6s
+RUN 260/280 2025-11 mogo-itens-vendidos-agendamento.py
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Itens Vendidos por Agendamento: 01/11/2025 a 30/11/2025...
+Total de registros: 178
+  Lote 1: 178 (total: 178)
+Total carregado: 178
+Excel salvo: /root/workspaces/cake-brain/relatorios/Mogo/Itens Vendidos Agendamento/11-2025.xlsx
+JSON salvo: /root/workspaces/cake-brain/relatorios/Mogo/Itens Vendidos Agendamento/11-2025.json
+✅ Email enviado para joao@cakeco.com.br
+DONE 260/280 2025-11 mogo-itens-vendidos-agendamento.py status=ok duration=4.2s
+
+MONTH_START 2025-12 fake_now=2026-01-05
+RUN 261/280 2025-12 mogo-faturamento-detalhado.py
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+ERRO Etapa 3: cookie .ASPXAUTH não recebido (200) | URL: https://app3.mogogourmet.com.br/Account/UrlDominio
+  Cookies recebidos: ['MeuFiscal']
+DONE 261/280 2025-12 mogo-faturamento-detalhado.py status=error duration=2.5s
+RUN 262/280 2025-12 mogo-venda-nota-assinada.py
+Venda em Nota Assinada: 01/12/2025 → 31/12/2025
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Buscando Contas a Receber...
+Total registros: 275
+Venda em nota assinada (descrição): 275 registros
+Venda em nota assinada (emissão validada): 275 registros
+Excel salvo: /root/workspaces/cake-brain/relatorios/Mogo/Venda em Nota Assinada/2025-12-venda-nota-assinada.xlsx
+✅ Email enviado para joao@cakeco.com.br
+
+✅ Relatório concluído
+DONE 262/280 2025-12 mogo-venda-nota-assinada.py status=ok duration=5.0s
+RUN 263/280 2025-12 mogo-ticket-medio.py
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Ticket Médio: 01/12/2025 a 31/12/2025...
+Registros: 4
+Excel salvo: /root/workspaces/cake-brain/relatorios/Mogo/Ticket Medio/12-2025.xlsx
+JSON salvo: /root/workspaces/cake-brain/relatorios/Mogo/Ticket Medio/12-2025.json
+✅ Email enviado para joao@cakeco.com.br
+DONE 263/280 2025-12 mogo-ticket-medio.py status=ok duration=9.0s
+RUN 264/280 2025-12 mogo-vendas-analitico.py
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/dist-packages/requests/models.py", line 976, in json
+    return complexjson.loads(self.text, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 4 column 1 (char 6)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/workspaces/cake-brain/automacoes/scripts/mogo-backfill-historico-dia5.py", line 184, in run_one
+    runpy.run_path(str(script_path), run_name='__main__')
+  File "<frozen runpy>", line 286, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "/root/workspaces/cake-brain/automacoes/scripts/mogo-vendas-analitico.py", line 81, in <module>
+    d = r.json()
+        ^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/requests/models.py", line 980, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 4 column 1 (char 6)
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Vendas Analítico: 01/12/2025 a 31/12/2025...
+Total de registros: 16155
+  Lote 1: 2000 registros (total: 2000)
+DONE 264/280 2025-12 mogo-vendas-analitico.py status=error duration=33.9s
+RUN 265/280 2025-12 mogo-vendas-sintetico.py
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Vendas Sintético: 01/12/2025 a 31/12/2025...
+Registros: 366
+Excel salvo: /root/workspaces/cake-brain/relatorios/Mogo/Vendas Sintetico/12-2025.xlsx
+JSON salvo: /root/workspaces/cake-brain/relatorios/Mogo/Vendas Sintetico/12-2025.json
+✅ Email enviado para joao@cakeco.com.br
+DONE 265/280 2025-12 mogo-vendas-sintetico.py status=ok duration=5.7s
+RUN 266/280 2025-12 mogo-vendas-adicionais.py
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Vendas de Adicionais: 01/12/2025 a 31/12/2025...
+Total de registros: 349
+  Lote 1: 349 registros (total: 349)
+Total carregado: 349
+Excel salvo: /root/workspaces/cake-brain/relatorios/Mogo/Vendas Adicionais/12-2025.xlsx
+JSON salvo: /root/workspaces/cake-brain/relatorios/Mogo/Vendas Adicionais/12-2025.json
+✅ Email enviado para joao@cakeco.com.br
+DONE 266/280 2025-12 mogo-vendas-adicionais.py status=ok duration=6.5s
+RUN 267/280 2025-12 mogo-lucratividade-produto.py
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Lucratividade por Produto: 01/12/2025 a 31/12/2025...
+Registros: 364
+Excel salvo: /root/workspaces/cake-brain/relatorios/Mogo/Lucratividade Produto/12-2025.xlsx
+JSON salvo: /root/workspaces/cake-brain/relatorios/Mogo/Lucratividade Produto/12-2025.json
+✅ Email enviado para joao@cakeco.com.br
+DONE 267/280 2025-12 mogo-lucratividade-produto.py status=ok duration=5.4s
+RUN 268/280 2025-12 mogo-descontos-concedidos.py
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Descontos Concedidos: 01/12/2025 a 31/12/2025...
+Total de registros: 1400
+  Lote 1: 1400 registros (total: 1400)
+Total carregado: 1400
+Excel salvo: /root/workspaces/cake-brain/relatorios/Mogo/Descontos Concedidos/12-2025.xlsx
+JSON salvo: /root/workspaces/cake-brain/relatorios/Mogo/Descontos Concedidos/12-2025.json
+✅ Email enviado para joao@cakeco.com.br
+DONE 268/280 2025-12 mogo-descontos-concedidos.py status=ok duration=13.2s
+RUN 269/280 2025-12 mogo-movimentacao-credito-cliente.py
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Movimentação Crédito Cliente: 01/12/2025 a 31/12/2025...
+Registros: 11
+Excel salvo: /root/workspaces/cake-brain/relatorios/Mogo/Movimentacao Credito Cliente/12-2025.xlsx
+JSON salvo: /root/workspaces/cake-brain/relatorios/Mogo/Movimentacao Credito Cliente/12-2025.json
+✅ Email enviado para joao@cakeco.com.br
+DONE 269/280 2025-12 mogo-movimentacao-credito-cliente.py status=ok duration=2.4s
+RUN 270/280 2025-12 mogo-taxa-servico.py
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/dist-packages/requests/models.py", line 976, in json
+    return complexjson.loads(self.text, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 4 column 1 (char 6)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/workspaces/cake-brain/automacoes/scripts/mogo-backfill-historico-dia5.py", line 184, in run_one
+    runpy.run_path(str(script_path), run_name='__main__')
+  File "<frozen runpy>", line 286, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "/root/workspaces/cake-brain/automacoes/scripts/mogo-taxa-servico.py", line 84, in <module>
+    rows = r.json().get('rows') or []
+           ^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/requests/models.py", line 980, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 4 column 1 (char 6)
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Taxa de Serviço: 01/12/2025 a 31/12/2025...
+Total de registros: 5849
+  Lote 1: 2000 registros (total: 2000)
+DONE 270/280 2025-12 mogo-taxa-servico.py status=error duration=21.3s
+RUN 271/280 2025-12 mogo-analise-cortesias.py
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Análise de Cortesias: 01/12/2025 a 31/12/2025...
+Registros: 18
+Excel salvo: /root/workspaces/cake-brain/relatorios/Mogo/Analise Cortesias/12-2025.xlsx
+JSON salvo: /root/workspaces/cake-brain/relatorios/Mogo/Analise Cortesias/12-2025.json
+✅ Email enviado para joao@cakeco.com.br
+DONE 271/280 2025-12 mogo-analise-cortesias.py status=ok duration=2.9s
+RUN 272/280 2025-12 mogo-lancamentos-pedidos.py
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Lançamentos de Pedidos: 01/12/2025 a 31/12/2025...
+  01/12/2025–07/12/2025 lote 1: 3659 | total semana: 3659
+  ERRO semana 08/12/2025: Expecting value: line 4 column 1 (char 6)
+  ERRO semana 15/12/2025: Expecting value: line 1 column 1 (char 0)
+  ERRO semana 22/12/2025: Expecting value: line 1 column 1 (char 0)
+  ERRO semana 29/12/2025: Expecting value: line 1 column 1 (char 0)
+Total carregado: 3659
+Excel salvo: /root/workspaces/cake-brain/relatorios/Mogo/Lancamentos Pedidos/12-2025.xlsx
+JSON salvo: /root/workspaces/cake-brain/relatorios/Mogo/Lancamentos Pedidos/12-2025.json
+✅ Email enviado para joao@cakeco.com.br
+DONE 272/280 2025-12 mogo-lancamentos-pedidos.py status=ok duration=56.0s
+RUN 273/280 2025-12 mogo-historico-pagamento.py
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Histórico de Pagamento: 01/12/2025 a 31/12/2025...
+  01/12/2025–07/12/2025 lote 1: 1591 | total semana: 1591
+  ERRO semana 08/12/2025: Expecting value: line 4 column 1 (char 6)
+  ERRO semana 15/12/2025: Expecting value: line 1 column 1 (char 0)
+  ERRO semana 22/12/2025: Expecting value: line 1 column 1 (char 0)
+  ERRO semana 29/12/2025: Expecting value: line 1 column 1 (char 0)
+Total carregado: 1591
+Excel salvo: /root/workspaces/cake-brain/relatorios/Mogo/Historico Pagamento/12-2025.xlsx
+JSON salvo: /root/workspaces/cake-brain/relatorios/Mogo/Historico Pagamento/12-2025.json
+✅ Email enviado para joao@cakeco.com.br
+DONE 273/280 2025-12 mogo-historico-pagamento.py status=ok duration=21.9s
+SKIP 274/280 2025-12 mogo-entradas-xml-detalhado.py existing=healthy
+DONE 274/280 2025-12 mogo-entradas-xml-detalhado.py status=skipped_existing duration=0.0s
+RUN 275/280 2025-12 mogo-compra-produtos.py
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Compra de Produtos: 01/12/2025 a 31/12/2025...
+Total de registros: 459
+  Lote 1: 459 (total: 459)
+Total carregado: 459
+Excel salvo: /root/workspaces/cake-brain/relatorios/Mogo/Compra Produtos/12-2025.xlsx
+JSON salvo: /root/workspaces/cake-brain/relatorios/Mogo/Compra Produtos/12-2025.json
+✅ Email enviado para joao@cakeco.com.br
+DONE 275/280 2025-12 mogo-compra-produtos.py status=ok duration=17.2s
+RUN 276/280 2025-12 mogo-variacao-preco-compra.py
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Variação do Preço de Compra: 01/12/2025 a 31/12/2025...
+Registros: 192
+Excel salvo: /root/workspaces/cake-brain/relatorios/Mogo/Variacao Preco Compra/12-2025.xlsx
+JSON salvo: /root/workspaces/cake-brain/relatorios/Mogo/Variacao Preco Compra/12-2025.json
+✅ Email enviado para joao@cakeco.com.br
+DONE 276/280 2025-12 mogo-variacao-preco-compra.py status=ok duration=5.3s
+RUN 277/280 2025-12 mogo-analise-quantidades-produzidas.py
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Análise de Quantidades Produzidas: 01/12/2025 a 31/12/2025...
+Total de registros: 0
+  Lote 1: 0 (total: 0)
+Total carregado: 0
+Nenhum dado encontrado.
+DONE 277/280 2025-12 mogo-analise-quantidades-produzidas.py status=ok duration=3.3s
+RUN 278/280 2025-12 mogo-analise-insumos-producao.py
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Análise de Insumos Gastos na Produção: 01/12/2025 a 31/12/2025...
+Total de registros: 0
+  Lote 1: 0 (total: 0)
+Total carregado: 0
+Nenhum dado encontrado.
+DONE 278/280 2025-12 mogo-analise-insumos-producao.py status=ok duration=4.3s
+RUN 279/280 2025-12 mogo-analise-cadastro-clientes.py
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Análise de Cadastro de Clientes: 01/12/2025 a 31/12/2025...
+Total de registros: 1180
+  Lote 1: 1180 (total: 1180)
+Total carregado: 1180
+Excel salvo: /root/workspaces/cake-brain/relatorios/Mogo/Analise Cadastro Clientes/12-2025.xlsx
+JSON salvo: /root/workspaces/cake-brain/relatorios/Mogo/Analise Cadastro Clientes/12-2025.json
+✅ Email enviado para joao@cakeco.com.br
+DONE 279/280 2025-12 mogo-analise-cadastro-clientes.py status=ok duration=19.3s
+RUN 280/280 2025-12 mogo-itens-vendidos-agendamento.py
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Itens Vendidos por Agendamento: 01/12/2025 a 31/12/2025...
+Total de registros: 190
+  Lote 1: 190 (total: 190)
+Total carregado: 190
+Excel salvo: /root/workspaces/cake-brain/relatorios/Mogo/Itens Vendidos Agendamento/12-2025.xlsx
+JSON salvo: /root/workspaces/cake-brain/relatorios/Mogo/Itens Vendidos Agendamento/12-2025.json
+✅ Email enviado para joao@cakeco.com.br
+DONE 280/280 2025-12 mogo-itens-vendidos-agendamento.py status=ok duration=5.0s
+BACKFILL_DONE total=280 errors=12 result=/root/workspaces/cake-brain/relatorios/Mogo/exports/mogo-backfill-dia5-20260505-090820.jsonl
+BACKFILL_EXIT=1
+FINISHED_AT=2026-05-05T18:01:37-03:00
+EXIT:1

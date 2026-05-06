@@ -1,0 +1,423 @@
+{
+  "periodo": {
+    "de": "01/02/2025",
+    "ate": "28/02/2025"
+  },
+  "total_registros": 46,
+  "registros": [
+    {
+      "data": "18/02/2025",
+      "hora": "17:26:56",
+      "produto_produzido": "(prod) Alema F22 (un)",
+      "insumo": "(desc) Cinta De Acetato 7Cm (m)",
+      "qtde": "1,000",
+      "unidade": "M",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "18/02/2025",
+      "hora": "17:26:56",
+      "produto_produzido": "(prod) Alema F22 (un)",
+      "insumo": "(desc) Disco Cake 24 Micro (und)",
+      "qtde": "1,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "18/02/2025",
+      "hora": "17:26:56",
+      "produto_produzido": "(prod) Alema F22 (un)",
+      "insumo": "(prod) Calda Chocolate Alema (kg)",
+      "qtde": "0,250",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "18/02/2025",
+      "hora": "17:26:56",
+      "produto_produzido": "(prod) Alema F22 (un)",
+      "insumo": "(ins) Biscoito Maisena (kg)",
+      "qtde": "0,400",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "18/02/2025",
+      "hora": "17:26:56",
+      "produto_produzido": "(prod) Alema F22 (un)",
+      "insumo": "(prod) Creme de Alema (kg)",
+      "qtde": "1,000",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "18/02/2025",
+      "hora": "17:20:50",
+      "produto_produzido": "(prod) Creme de Alema (kg)",
+      "insumo": "(prod) Creme de Leite Nestle s/soro (kg)",
+      "qtde": "4,900",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "18/02/2025",
+      "hora": "17:20:50",
+      "produto_produzido": "(prod) Creme de Alema (kg)",
+      "insumo": "(ins) Ovos Jumbo Branco (und)",
+      "qtde": "30,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "18/02/2025",
+      "hora": "17:20:50",
+      "produto_produzido": "(prod) Creme de Alema (kg)",
+      "insumo": "(ins) Manteiga Sem Sal (kg)",
+      "qtde": "2,000",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "18/02/2025",
+      "hora": "17:20:50",
+      "produto_produzido": "(prod) Creme de Alema (kg)",
+      "insumo": "(ins) Acucar Refinado (kg)",
+      "qtde": "2,500",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "18/02/2025",
+      "hora": "17:00:55",
+      "produto_produzido": "(prod) Alema F22 (un)",
+      "insumo": "(desc) Cinta De Acetato 7Cm (m)",
+      "qtde": "17,000",
+      "unidade": "M",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "18/02/2025",
+      "hora": "17:00:55",
+      "produto_produzido": "(prod) Alema F22 (un)",
+      "insumo": "(desc) Disco Cake 24 Micro (und)",
+      "qtde": "17,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "18/02/2025",
+      "hora": "17:00:55",
+      "produto_produzido": "(prod) Alema F22 (un)",
+      "insumo": "(prod) Calda Chocolate Alema (kg)",
+      "qtde": "4,250",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "18/02/2025",
+      "hora": "17:00:55",
+      "produto_produzido": "(prod) Alema F22 (un)",
+      "insumo": "(ins) Biscoito Maisena (kg)",
+      "qtde": "6,800",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "18/02/2025",
+      "hora": "17:00:55",
+      "produto_produzido": "(prod) Alema F22 (un)",
+      "insumo": "(prod) Creme de Alema (kg)",
+      "qtde": "1,700",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "18/02/2025",
+      "hora": "11:40:38",
+      "produto_produzido": "(prod) Creme de Alema (kg)",
+      "insumo": "(prod) Creme de Leite Nestle s/soro (kg)",
+      "qtde": "4,900",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "18/02/2025",
+      "hora": "11:40:38",
+      "produto_produzido": "(prod) Creme de Alema (kg)",
+      "insumo": "(ins) Ovos Jumbo Branco (und)",
+      "qtde": "30,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "18/02/2025",
+      "hora": "11:40:38",
+      "produto_produzido": "(prod) Creme de Alema (kg)",
+      "insumo": "(ins) Manteiga Sem Sal (kg)",
+      "qtde": "2,000",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "18/02/2025",
+      "hora": "11:40:38",
+      "produto_produzido": "(prod) Creme de Alema (kg)",
+      "insumo": "(ins) Acucar Refinado (kg)",
+      "qtde": "2,500",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "10/02/2025",
+      "hora": "16:56:47",
+      "produto_produzido": "(prod) Calda Chocolate Alema (kg)",
+      "insumo": "(ins) Margarina (kg)",
+      "qtde": "2,000",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "10/02/2025",
+      "hora": "16:56:47",
+      "produto_produzido": "(prod) Calda Chocolate Alema (kg)",
+      "insumo": "(ins) Nescau (kg)",
+      "qtde": "24,000",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "10/02/2025",
+      "hora": "16:56:46",
+      "produto_produzido": "(prod) Creme de Alema (kg)",
+      "insumo": "(prod) Creme de Leite Nestle s/soro (kg)",
+      "qtde": "83,300",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "10/02/2025",
+      "hora": "16:56:46",
+      "produto_produzido": "(prod) Creme de Alema (kg)",
+      "insumo": "(ins) Ovos Jumbo Branco (und)",
+      "qtde": "510,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "10/02/2025",
+      "hora": "16:56:46",
+      "produto_produzido": "(prod) Creme de Alema (kg)",
+      "insumo": "(ins) Manteiga Sem Sal (kg)",
+      "qtde": "34,000",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "10/02/2025",
+      "hora": "16:56:46",
+      "produto_produzido": "(prod) Creme de Alema (kg)",
+      "insumo": "(ins) Acucar Refinado (kg)",
+      "qtde": "42,500",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "10/02/2025",
+      "hora": "16:56:45",
+      "produto_produzido": "(prod) Alema F22 (un)",
+      "insumo": "(desc) Cinta De Acetato 7Cm (m)",
+      "qtde": "17,000",
+      "unidade": "M",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "10/02/2025",
+      "hora": "16:56:45",
+      "produto_produzido": "(prod) Alema F22 (un)",
+      "insumo": "(desc) Disco Cake 24 Micro (und)",
+      "qtde": "17,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "10/02/2025",
+      "hora": "16:56:45",
+      "produto_produzido": "(prod) Alema F22 (un)",
+      "insumo": "(prod) Calda Chocolate Alema (kg)",
+      "qtde": "4,250",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "10/02/2025",
+      "hora": "16:56:45",
+      "produto_produzido": "(prod) Alema F22 (un)",
+      "insumo": "(ins) Biscoito Maisena (kg)",
+      "qtde": "6,800",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "10/02/2025",
+      "hora": "16:56:45",
+      "produto_produzido": "(prod) Alema F22 (un)",
+      "insumo": "(prod) Creme de Alema (kg)",
+      "qtde": "17,000",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "10/02/2025",
+      "hora": "16:29:47",
+      "produto_produzido": "(prod) Nova Cobertura de Brigadeiro (kg)",
+      "insumo": "(ins) Soro De Doce De Leite (kg)",
+      "qtde": "2,800",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "10/02/2025",
+      "hora": "16:29:47",
+      "produto_produzido": "(prod) Nova Cobertura de Brigadeiro (kg)",
+      "insumo": "(ins) Leite Condensado (kg)",
+      "qtde": "84,000",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "10/02/2025",
+      "hora": "16:29:47",
+      "produto_produzido": "(prod) Nova Cobertura de Brigadeiro (kg)",
+      "insumo": "(ins) Choc. Em Po 50% (kg)",
+      "qtde": "11,900",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "10/02/2025",
+      "hora": "16:29:46",
+      "produto_produzido": "(prod) Recheio Torta Mousse Chocolate (kg)",
+      "insumo": "(ins) Choc. Em Po 50% (kg)",
+      "qtde": "110,000",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "10/02/2025",
+      "hora": "16:29:46",
+      "produto_produzido": "(prod) Recheio Torta Mousse Chocolate (kg)",
+      "insumo": "(ins) Manteiga Sem Sal (kg)",
+      "qtde": "89,250",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "10/02/2025",
+      "hora": "16:29:46",
+      "produto_produzido": "(prod) Recheio Torta Mousse Chocolate (kg)",
+      "insumo": "(ins) Ovos Jumbo Branco (und)",
+      "qtde": "3.600,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "10/02/2025",
+      "hora": "16:29:46",
+      "produto_produzido": "(prod) Recheio Torta Mousse Chocolate (kg)",
+      "insumo": "(ins) Acucar Refinado (kg)",
+      "qtde": "89,250",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "10/02/2025",
+      "hora": "16:29:45",
+      "produto_produzido": "(prod) Torta Mousse Chocolate F25 (un)",
+      "insumo": "(desc) Caixa Cake Torta 29,5 X 29,5 X 9 Micro (und)",
+      "qtde": "16,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "10/02/2025",
+      "hora": "16:29:45",
+      "produto_produzido": "(prod) Torta Mousse Chocolate F25 (un)",
+      "insumo": "(desc) Disco Cake 29 Micro (und)",
+      "qtde": "16,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "10/02/2025",
+      "hora": "16:29:45",
+      "produto_produzido": "(prod) Torta Mousse Chocolate F25 (un)",
+      "insumo": "(ins) Cobertura Chocolate Meio Amargo (Barra) (kg)",
+      "qtde": "0,800",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "10/02/2025",
+      "hora": "16:29:45",
+      "produto_produzido": "(prod) Torta Mousse Chocolate F25 (un)",
+      "insumo": "(prod) Nova Cobertura de Brigadeiro (kg)",
+      "qtde": "7,520",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "10/02/2025",
+      "hora": "16:29:45",
+      "produto_produzido": "(prod) Torta Mousse Chocolate F25 (un)",
+      "insumo": "(prod) Recheio Torta Mousse Chocolate (kg)",
+      "qtde": "25,600",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "10/02/2025",
+      "hora": "16:22:21",
+      "produto_produzido": "(prod) Torta Mousse Chocolate F25 (un)",
+      "insumo": "(desc) Caixa Cake Torta 29,5 X 29,5 X 9 Micro (und)",
+      "qtde": "16,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "10/02/2025",
+      "hora": "16:22:21",
+      "produto_produzido": "(prod) Torta Mousse Chocolate F25 (un)",
+      "insumo": "(desc) Disco Cake 29 Micro (und)",
+      "qtde": "16,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "10/02/2025",
+      "hora": "16:22:21",
+      "produto_produzido": "(prod) Torta Mousse Chocolate F25 (un)",
+      "insumo": "(ins) Cobertura Chocolate Meio Amargo (Barra) (kg)",
+      "qtde": "0,800",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "10/02/2025",
+      "hora": "16:22:21",
+      "produto_produzido": "(prod) Torta Mousse Chocolate F25 (un)",
+      "insumo": "(prod) Nova Cobertura de Brigadeiro (kg)",
+      "qtde": "7,520",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "10/02/2025",
+      "hora": "16:22:21",
+      "produto_produzido": "(prod) Torta Mousse Chocolate F25 (un)",
+      "insumo": "(prod) Recheio Torta Mousse Chocolate (kg)",
+      "qtde": "25,600",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "periodo": {
+    "de": "01/03/2025",
+    "ate": "31/03/2025"
+  },
+  "total_registros": 7,
+  "total_valor": "R$ 373,67",
+  "total_custo": "R$ 43,82",
+  "registros": [
+    {
+      "data": "20/03/2025",
+      "hora": "10:58:33",
+      "funcionario": "cristiane",
+      "cliente": " Maria Christina Sanson",
+      "telefone": "21981257680",
+      "valor": "203,50",
+      "custo": "43,82",
+      "motivo": "",
+      "id": "58763"
+    },
+    {
+      "data": "18/03/2025",
+      "hora": "15:53:16",
+      "funcionario": "Mogo",
+      "cliente": "Fernando H. Silveira Neto",
+      "telefone": "21988152880",
+      "valor": "0,01",
+      "custo": "0,00",
+      "motivo": "",
+      "id": "58450"
+    },
+    {
+      "data": "16/03/2025",
+      "hora": "15:52:35",
+      "funcionario": "JOAO ",
+      "cliente": "Marta Cruz",
+      "telefone": "21994966292",
+      "valor": "99,50",
+      "custo": "0,00",
+      "motivo": "",
+      "id": "58128"
+    },
+    {
+      "data": "15/03/2025",
+      "hora": "16:05:40",
+      "funcionario": "cristiane",
+      "cliente": "Karina Magalhaes",
+      "telefone": "21969442512",
+      "valor": "0,01",
+      "custo": "0,00",
+      "motivo": "",
+      "id": "57933"
+    },
+    {
+      "data": "08/03/2025",
+      "hora": "11:40:27",
+      "funcionario": "alex",
+      "cliente": "LAURA OLIVEIRA CASTRO",
+      "telefone": "21991466344",
+      "valor": "20,75",
+      "custo": "0,00",
+      "motivo": "",
+      "id": "56318"
+    },
+    {
+      "data": "08/03/2025",
+      "hora": "11:38:48",
+      "funcionario": "alex",
+      "cliente": "JOAO ",
+      "telefone": "",
+      "valor": "33,00",
+      "custo": "0,00",
+      "motivo": "",
+      "id": "56316"
+    },
+    {
+      "data": "07/03/2025",
+      "hora": "19:23:04",
+      "funcionario": "alex",
+      "cliente": "",
+      "telefone": "",
+      "valor": "16,90",
+      "custo": "0,00",
+      "motivo": "",
+      "id": "56242"
+    }
+  ]
+}

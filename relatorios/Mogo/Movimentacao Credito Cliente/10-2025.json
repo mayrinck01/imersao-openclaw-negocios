@@ -1,0 +1,220 @@
+{
+  "periodo": {
+    "de": "01/10/2025",
+    "ate": "31/10/2025"
+  },
+  "total_registros": 19,
+  "total_credito": "R$ 307,50",
+  "total_debito": "R$ 874,00",
+  "registros": [
+    {
+      "data": "31/10/2025",
+      "hora": "15:10:02",
+      "cliente": "Felipe Castro (Jornalista)",
+      "cpf": "07836630722",
+      "tipo": "Debito",
+      "descricao": "Pedido: 103335 (Mesa: 11)",
+      "valor": "46,20",
+      "saldo": "1.582,50",
+      "financeiro": "Não selecionado"
+    },
+    {
+      "data": "28/10/2025",
+      "hora": "12:05:52",
+      "cliente": "DEBORAH MATHIAS",
+      "cpf": "",
+      "tipo": "Debito",
+      "descricao": "Pedido: 102586 (Delivery)",
+      "valor": "144,50",
+      "saldo": "0,00",
+      "financeiro": "Não selecionado"
+    },
+    {
+      "data": "24/10/2025",
+      "hora": "11:42:17",
+      "cliente": "Ângela Christino del Pino",
+      "cpf": "80557635004",
+      "tipo": "Credito",
+      "descricao": "Era entrega / Agora vem buscar",
+      "valor": "10,00",
+      "saldo": "10,00",
+      "financeiro": "Não gerar financeiro"
+    },
+    {
+      "data": "22/10/2025",
+      "hora": "10:45:25",
+      "cliente": "Felipe Castro (Jornalista)",
+      "cpf": "07836630722",
+      "tipo": "Debito",
+      "descricao": "Pedido: 101312 (Delivery)",
+      "valor": "203,50",
+      "saldo": "1.628,70",
+      "financeiro": "Não selecionado"
+    },
+    {
+      "data": "15/10/2025",
+      "hora": "18:43:04",
+      "cliente": "Felipe Castro (Jornalista)",
+      "cpf": "07836630722",
+      "tipo": "Debito",
+      "descricao": "Pedido: 099934 (Mesa: 10)",
+      "valor": "19,40",
+      "saldo": "1.832,20",
+      "financeiro": "Não selecionado"
+    },
+    {
+      "data": "15/10/2025",
+      "hora": "14:31:10",
+      "cliente": "Ana Clara Mayrinck",
+      "cpf": "14991075793",
+      "tipo": "Credito",
+      "descricao": "Valor pago a mais",
+      "valor": "5,00",
+      "saldo": "5,00",
+      "financeiro": "Não gerar financeiro"
+    },
+    {
+      "data": "14/10/2025",
+      "hora": "17:07:25",
+      "cliente": "Marli Gomes Leal  ",
+      "cpf": "",
+      "tipo": "Credito",
+      "descricao": "Pedio entregue sem a vela encomendada 098660",
+      "valor": "13,00",
+      "saldo": "13,00",
+      "financeiro": "Não gerar financeiro"
+    },
+    {
+      "data": "14/10/2025",
+      "hora": "15:30:52",
+      "cliente": "Glaucia Delgado",
+      "cpf": "76011755704",
+      "tipo": "Credito",
+      "descricao": "mim 01 cx com 12 Brig  Entrega a dta errada o pedido  098472",
+      "valor": "33,00",
+      "saldo": "33,00",
+      "financeiro": "Não gerar financeiro"
+    },
+    {
+      "data": "11/10/2025",
+      "hora": "18:55:14",
+      "cliente": "Felipe Castro (Jornalista)",
+      "cpf": "07836630722",
+      "tipo": "Debito",
+      "descricao": "Pedido: 099091 (Mesa: 15)",
+      "valor": "37,50",
+      "saldo": "1.851,60",
+      "financeiro": "Não selecionado"
+    },
+    {
+      "data": "11/10/2025",
+      "hora": "16:04:51",
+      "cliente": "BARBARA CERRANTE",
+      "cpf": "",
+      "tipo": "Debito",
+      "descricao": "Pedido: 099186 (Delivery)",
+      "valor": "188,50",
+      "saldo": "0,00",
+      "financeiro": "Não selecionado"
+    },
+    {
+      "data": "11/10/2025",
+      "hora": "15:25:35",
+      "cliente": "BARBARA CERRANTE",
+      "cpf": "",
+      "tipo": "Credito",
+      "descricao": "Torta Fantansia",
+      "valor": "188,50",
+      "saldo": "188,50",
+      "financeiro": "Não gerar financeiro"
+    },
+    {
+      "data": "11/10/2025",
+      "hora": "10:05:51",
+      "cliente": "Lorena Campos Rachello",
+      "cpf": "08453566666",
+      "tipo": "Debito",
+      "descricao": "Pedido: 099025 (Balcão)",
+      "valor": "10,00",
+      "saldo": "0,00",
+      "financeiro": "Não selecionado"
+    },
+    {
+      "data": "11/10/2025",
+      "hora": "10:00:08",
+      "cliente": "Lorena Campos Rachello",
+      "cpf": "08453566666",
+      "tipo": "Credito",
+      "descricao": "Taxa de entrega",
+      "valor": "10,00",
+      "saldo": "10,00",
+      "financeiro": "Não gerar financeiro"
+    },
+    {
+      "data": "09/10/2025",
+      "hora": "16:33:26",
+      "cliente": "Felipe Castro (Jornalista)",
+      "cpf": "07836630722",
+      "tipo": "Debito",
+      "descricao": "Pedido: 098461 (Delivery)",
+      "valor": "158,00",
+      "saldo": "1.889,10",
+      "financeiro": "Não selecionado"
+    },
+    {
+      "data": "07/10/2025",
+      "hora": "16:42:04",
+      "cliente": "Mariana Pezzini ",
+      "cpf": "01407230131",
+      "tipo": "Debito",
+      "descricao": "Pedido: 098192 (Balcão)",
+      "valor": "18,00",
+      "saldo": "0,00",
+      "financeiro": "Não selecionado"
+    },
+    {
+      "data": "07/10/2025",
+      "hora": "16:35:42",
+      "cliente": "Mariana Pezzini ",
+      "cpf": "01407230131",
+      "tipo": "Credito",
+      "descricao": "Pedido 98060",
+      "valor": "18,00",
+      "saldo": "18,00",
+      "financeiro": "Não gerar financeiro"
+    },
+    {
+      "data": "07/10/2025",
+      "hora": "15:16:17",
+      "cliente": "Susana Gonçalves Arraes",
+      "cpf": "94034834749",
+      "tipo": "Credito",
+      "descricao": " retratação  deliciosa",
+      "valor": "30,00",
+      "saldo": "30,00",
+      "financeiro": "Não gerar financeiro"
+    },
+    {
+      "data": "04/10/2025",
+      "hora": "18:14:57",
+      "cliente": "Felipe Castro (Jornalista)",
+      "cpf": "07836630722",
+      "tipo": "Debito",
+      "descricao": "Pedido: 097618 (Mesa: 14)",
+      "valor": "37,50",
+      "saldo": "2.047,10",
+      "financeiro": "Não selecionado"
+    },
+    {
+      "data": "02/10/2025",
+      "hora": "18:14:44",
+      "cliente": "Felipe Castro (Jornalista)",
+      "cpf": "07836630722",
+      "tipo": "Debito",
+      "descricao": "Pedido: 097159 (Mesa: 11)",
+      "valor": "10,90",
+      "saldo": "2.084,60",
+      "financeiro": "Não selecionado"
+    }
+  ]
+}

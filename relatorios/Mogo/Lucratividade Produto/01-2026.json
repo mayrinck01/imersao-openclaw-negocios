@@ -1,0 +1,3430 @@
+{
+  "periodo": {
+    "de": "01/01/2026",
+    "ate": "31/01/2026"
+  },
+  "total_produtos": 342,
+  "faturamento_total": "R$ 477.571,64",
+  "registros": [
+    {
+      "produto": "AD AMENDOAS",
+      "quantidade": "6,000",
+      "valor_unit": "2,50",
+      "valor_total": "15,00",
+      "custo_medio": "0,00",
+      "grupo": "REFEIÇÃO",
+      "subgrupo": "Saladas",
+      "cod_produto": "199"
+    },
+    {
+      "produto": "AD CENOURA RALADA",
+      "quantidade": "1,000",
+      "valor_unit": "2,00",
+      "valor_total": "2,00",
+      "custo_medio": "0,00",
+      "grupo": "REFEIÇÃO",
+      "subgrupo": "Saladas",
+      "cod_produto": "1260"
+    },
+    {
+      "produto": "AD GELEIA FRUTAS VERMELHA",
+      "quantidade": "3,000",
+      "valor_unit": "4,00",
+      "valor_total": "12,00",
+      "custo_medio": "0,00",
+      "grupo": "PORÇÃO",
+      "subgrupo": "Adicional Geleia",
+      "cod_produto": "173"
+    },
+    {
+      "produto": "AD GELEIA MORANGO",
+      "quantidade": "1,000",
+      "valor_unit": "3,00",
+      "valor_total": "3,00",
+      "custo_medio": "0,00",
+      "grupo": "PORÇÃO",
+      "subgrupo": "Adicional Geleia",
+      "cod_produto": "175"
+    },
+    {
+      "produto": "AD LEITE",
+      "quantidade": "4,000",
+      "valor_unit": "6,00",
+      "valor_total": "24,00",
+      "custo_medio": "0,00",
+      "grupo": "BEBIDAS LACTEAS",
+      "subgrupo": "Adicional",
+      "cod_produto": "25"
+    },
+    {
+      "produto": "AD MANTEIGA",
+      "quantidade": "3,000",
+      "valor_unit": "2,25",
+      "valor_total": "6,75",
+      "custo_medio": "0,00",
+      "grupo": "PORÇÃO",
+      "subgrupo": "Adicionais",
+      "cod_produto": "907"
+    },
+    {
+      "produto": "AD MUSSARELA",
+      "quantidade": "3,000",
+      "valor_unit": "6,00",
+      "valor_total": "18,00",
+      "custo_medio": "0,00",
+      "grupo": "PORÇÃO",
+      "subgrupo": "Adicionais",
+      "cod_produto": "171"
+    },
+    {
+      "produto": "AD PALMITO",
+      "quantidade": "2,000",
+      "valor_unit": "2,50",
+      "valor_total": "5,00",
+      "custo_medio": "0,00",
+      "grupo": "REFEIÇÃO",
+      "subgrupo": "Saladas",
+      "cod_produto": "1264"
+    },
+    {
+      "produto": "AD PISTACHE",
+      "quantidade": "1,000",
+      "valor_unit": "2,50",
+      "valor_total": "2,50",
+      "custo_medio": "0,00",
+      "grupo": "REFEIÇÃO",
+      "subgrupo": "Saladas",
+      "cod_produto": "201"
+    },
+    {
+      "produto": "AD QUEIJO PARMESAO",
+      "quantidade": "6,000",
+      "valor_unit": "2,50",
+      "valor_total": "15,00",
+      "custo_medio": "0,00",
+      "grupo": "REFEIÇÃO",
+      "subgrupo": "Saladas",
+      "cod_produto": "200"
+    },
+    {
+      "produto": "AGUA GASOSA",
+      "quantidade": "232,000",
+      "valor_unit": "6,51",
+      "valor_total": "1.510,95",
+      "custo_medio": "341,04",
+      "grupo": "BEBIDAS FRIAS",
+      "subgrupo": "Águas",
+      "cod_produto": "1"
+    },
+    {
+      "produto": "AGUA NATURAL",
+      "quantidade": "213,000",
+      "valor_unit": "6,51",
+      "valor_total": "1.388,42",
+      "custo_medio": "300,33",
+      "grupo": "BEBIDAS FRIAS",
+      "subgrupo": "Águas",
+      "cod_produto": "2"
+    },
+    {
+      "produto": "AGUA TONICA",
+      "quantidade": "3,000",
+      "valor_unit": "7,50",
+      "valor_total": "22,50",
+      "custo_medio": "10,17",
+      "grupo": "BEBIDAS FRIAS",
+      "subgrupo": "Refrigerantes",
+      "cod_produto": "9"
+    },
+    {
+      "produto": "AGUA TONICA ZERO",
+      "quantidade": "1,000",
+      "valor_unit": "8,77",
+      "valor_total": "8,77",
+      "custo_medio": "3,39",
+      "grupo": "BEBIDAS FRIAS",
+      "subgrupo": "Refrigerantes",
+      "cod_produto": "1267"
+    },
+    {
+      "produto": "ALEMA F13",
+      "quantidade": "57,000",
+      "valor_unit": "117,36",
+      "valor_total": "6.669,00",
+      "custo_medio": "1.112,67",
+      "grupo": "TORTA",
+      "subgrupo": "Torta F13",
+      "cod_produto": "224"
+    },
+    {
+      "produto": "ALEMA F22",
+      "quantidade": "50,000",
+      "valor_unit": "234,13",
+      "valor_total": "11.470,50",
+      "custo_medio": "2.445,68",
+      "grupo": "TORTA",
+      "subgrupo": "Torta F22",
+      "cod_produto": "253"
+    },
+    {
+      "produto": "AURORA ENFEITADA F25",
+      "quantidade": "1,000",
+      "valor_unit": "237,00",
+      "valor_total": "237,00",
+      "custo_medio": "25,86",
+      "grupo": "TORTA",
+      "subgrupo": "Torta F25",
+      "cod_produto": "254"
+    },
+    {
+      "produto": "AURORA F13",
+      "quantidade": "8,000",
+      "valor_unit": "108,49",
+      "valor_total": "855,40",
+      "custo_medio": "86,24",
+      "grupo": "TORTA",
+      "subgrupo": "Torta F13",
+      "cod_produto": "226"
+    },
+    {
+      "produto": "AURORA F25",
+      "quantidade": "7,000",
+      "valor_unit": "214,00",
+      "valor_total": "1.498,00",
+      "custo_medio": "149,14",
+      "grupo": "TORTA",
+      "subgrupo": "Torta F25",
+      "cod_produto": "255"
+    },
+    {
+      "produto": "BANOFFE F13",
+      "quantidade": "13,000",
+      "valor_unit": "133,79",
+      "valor_total": "1.739,20",
+      "custo_medio": "183,82",
+      "grupo": "TORTA",
+      "subgrupo": "Torta F13",
+      "cod_produto": "227"
+    },
+    {
+      "produto": "BANOFFE F20",
+      "quantidade": "11,000",
+      "valor_unit": "243,57",
+      "valor_total": "2.679,30",
+      "custo_medio": "260,15",
+      "grupo": "TORTA",
+      "subgrupo": "Torta F20",
+      "cod_produto": "245"
+    },
+    {
+      "produto": "BISC COOKIE SUICO 100GR",
+      "quantidade": "45,000",
+      "valor_unit": "13,13",
+      "valor_total": "585,00",
+      "custo_medio": "224,55",
+      "grupo": "MERCEARIA",
+      "subgrupo": "Biscoitos Ind",
+      "cod_produto": "177"
+    },
+    {
+      "produto": "BISC GOIABINHA 100GR",
+      "quantidade": "18,000",
+      "valor_unit": "18,67",
+      "valor_total": "336,00",
+      "custo_medio": "88,74",
+      "grupo": "MERCEARIA",
+      "subgrupo": "Biscoitos Ind",
+      "cod_produto": "661"
+    },
+    {
+      "produto": "BISC GORGONZOLA 100GR",
+      "quantidade": "19,000",
+      "valor_unit": "12,00",
+      "valor_total": "228,00",
+      "custo_medio": "96,90",
+      "grupo": "MERCEARIA",
+      "subgrupo": "Biscoitos Ind",
+      "cod_produto": "906"
+    },
+    {
+      "produto": "BISC PALMIER 100GR",
+      "quantidade": "48,000",
+      "valor_unit": "14,44",
+      "valor_total": "681,00",
+      "custo_medio": "237,12",
+      "grupo": "MERCEARIA",
+      "subgrupo": "Biscoitos Ind",
+      "cod_produto": "179"
+    },
+    {
+      "produto": "BISC QUEIJO PARMESAO 100GR",
+      "quantidade": "28,000",
+      "valor_unit": "13,03",
+      "valor_total": "366,00",
+      "custo_medio": "139,16",
+      "grupo": "MERCEARIA",
+      "subgrupo": "Biscoitos Ind",
+      "cod_produto": "180"
+    },
+    {
+      "produto": "BOLIM CHOCOLATE C/ COBERTURA GRD (300GR)",
+      "quantidade": "22,000",
+      "valor_unit": "40,50",
+      "valor_total": "894,00",
+      "custo_medio": "224,72",
+      "grupo": "BOLO",
+      "subgrupo": "Bolo Inglês",
+      "cod_produto": "1715"
+    },
+    {
+      "produto": "BOLIM DE CENROURA C/ COBERTURA GRD (300GR)",
+      "quantidade": "31,000",
+      "valor_unit": "43,25",
+      "valor_total": "1.346,50",
+      "custo_medio": "222,27",
+      "grupo": "BOLO",
+      "subgrupo": "Bolo Inglês",
+      "cod_produto": "1714"
+    },
+    {
+      "produto": "BOLIM DE CENROURA GRD (300GR)",
+      "quantidade": "13,000",
+      "valor_unit": "26,92",
+      "valor_total": "350,00",
+      "custo_medio": "46,12",
+      "grupo": "BOLO",
+      "subgrupo": "Bolo Inglês",
+      "cod_produto": "1711"
+    },
+    {
+      "produto": "BOLIM DE CHOCOLATE GRD (300GR)",
+      "quantidade": "25,000",
+      "valor_unit": "25,04",
+      "valor_total": "643,00",
+      "custo_medio": "126,90",
+      "grupo": "BOLO",
+      "subgrupo": "Bolo Inglês",
+      "cod_produto": "1712"
+    },
+    {
+      "produto": "BOLIM DE LARANJA GRD (300GR)",
+      "quantidade": "37,000",
+      "valor_unit": "28,00",
+      "valor_total": "1.038,00",
+      "custo_medio": "0,00",
+      "grupo": "BOLO",
+      "subgrupo": "Bolo Inglês",
+      "cod_produto": "1713"
+    },
+    {
+      "produto": "BOLO CENOURA F25",
+      "quantidade": "21,000",
+      "valor_unit": "81,50",
+      "valor_total": "1.711,50",
+      "custo_medio": "484,63",
+      "grupo": "BOLO",
+      "subgrupo": "F25 Bolo",
+      "cod_produto": "59"
+    },
+    {
+      "produto": "BOLO CENOURA F30",
+      "quantidade": "2,000",
+      "valor_unit": "124,00",
+      "valor_total": "248,00",
+      "custo_medio": "0,00",
+      "grupo": "BOLO",
+      "subgrupo": "F25 Bolo",
+      "cod_produto": "683"
+    },
+    {
+      "produto": "BOLO LARANJA F25",
+      "quantidade": "18,000",
+      "valor_unit": "80,42",
+      "valor_total": "1.447,50",
+      "custo_medio": "365,86",
+      "grupo": "BOLO",
+      "subgrupo": "F25 Bolo",
+      "cod_produto": "60"
+    },
+    {
+      "produto": "BOLO MILHO COM COCO F25",
+      "quantidade": "6,000",
+      "valor_unit": "75,00",
+      "valor_total": "450,00",
+      "custo_medio": "121,80",
+      "grupo": "BOLO",
+      "subgrupo": "F25 Bolo",
+      "cod_produto": "625"
+    },
+    {
+      "produto": "BOMBOM DE NOZES MIX CX6",
+      "quantidade": "2,000",
+      "valor_unit": "46,75",
+      "valor_total": "93,50",
+      "custo_medio": "9,28",
+      "grupo": "DOCES",
+      "subgrupo": "Bombom/Fondant",
+      "cod_produto": "1841"
+    },
+    {
+      "produto": "BRIG. ABRE ALAS 12UN",
+      "quantidade": "4,000",
+      "valor_unit": "84,90",
+      "valor_total": "339,60",
+      "custo_medio": "24,56",
+      "grupo": "BRIGADEIRO",
+      "subgrupo": "CX 12 UN",
+      "cod_produto": "1898"
+    },
+    {
+      "produto": "BRIG. BEIJINHO 01UN",
+      "quantidade": "2,000",
+      "valor_unit": "4,50",
+      "valor_total": "9,00",
+      "custo_medio": "0,81",
+      "grupo": "BRIGADEIRO",
+      "subgrupo": "Unitário",
+      "cod_produto": "134"
+    },
+    {
+      "produto": "BRIG. BEIJINHO 12UN",
+      "quantidade": "3,000",
+      "valor_unit": "37,00",
+      "valor_total": "111,00",
+      "custo_medio": "22,18",
+      "grupo": "BRIGADEIRO",
+      "subgrupo": "CX 12 UN",
+      "cod_produto": "100"
+    },
+    {
+      "produto": "BRIG. BEIJINHO 25UN",
+      "quantidade": "7,000",
+      "valor_unit": "74,00",
+      "valor_total": "518,00",
+      "custo_medio": "96,04",
+      "grupo": "BRIGADEIRO",
+      "subgrupo": "CX 25 UN",
+      "cod_produto": "116"
+    },
+    {
+      "produto": "BRIG. BRANCO DIVERTIDO 01UN",
+      "quantidade": "1,000",
+      "valor_unit": "4,50",
+      "valor_total": "4,50",
+      "custo_medio": "0,43",
+      "grupo": "BRIGADEIRO",
+      "subgrupo": "Unitário",
+      "cod_produto": "140"
+    },
+    {
+      "produto": "BRIG. BRANCO DIVERTIDO 02UN",
+      "quantidade": "1,000",
+      "valor_unit": "8,00",
+      "valor_total": "8,00",
+      "custo_medio": "1,93",
+      "grupo": "BRIGADEIRO",
+      "subgrupo": "CX 02 UN",
+      "cod_produto": "74"
+    },
+    {
+      "produto": "BRIG. BRANCO DIVERTIDO 12UN",
+      "quantidade": "5,000",
+      "valor_unit": "37,00",
+      "valor_total": "185,00",
+      "custo_medio": "35,37",
+      "grupo": "BRIGADEIRO",
+      "subgrupo": "CX 12 UN",
+      "cod_produto": "106"
+    },
+    {
+      "produto": "BRIG. BRANCO DIVERTIDO 25UN",
+      "quantidade": "3,000",
+      "valor_unit": "74,00",
+      "valor_total": "222,00",
+      "custo_medio": "39,12",
+      "grupo": "BRIGADEIRO",
+      "subgrupo": "CX 25 UN",
+      "cod_produto": "122"
+    },
+    {
+      "produto": "BRIG. BRANCO PRECIOSO 01UN",
+      "quantidade": "2,000",
+      "valor_unit": "4,50",
+      "valor_total": "9,00",
+      "custo_medio": "0,92",
+      "grupo": "BRIGADEIRO",
+      "subgrupo": "Unitário",
+      "cod_produto": "135"
+    },
+    {
+      "produto": "BRIG. BRANCO PRECIOSO 04UN",
+      "quantidade": "2,000",
+      "valor_unit": "15,00",
+      "valor_total": "30,00",
+      "custo_medio": "4,31",
+      "grupo": "BRIGADEIRO",
+      "subgrupo": "CX 04 UN",
+      "cod_produto": "85"
+    },
+    {
+      "produto": "BRIG. BRANCO PRECIOSO 25UN",
+      "quantidade": "3,000",
+      "valor_unit": "74,00",
+      "valor_total": "222,00",
+      "custo_medio": "41,17",
+      "grupo": "BRIGADEIRO",
+      "subgrupo": "CX 25 UN",
+      "cod_produto": "117"
+    },
+    {
+      "produto": "BRIG. BRULLE 01UN",
+      "quantidade": "4,000",
+      "valor_unit": "4,50",
+      "valor_total": "18,00",
+      "custo_medio": "1,70",
+      "grupo": "BRIGADEIRO",
+      "subgrupo": "Unitário",
+      "cod_produto": "136"
+    },
+    {
+      "produto": "BRIG. BRULLE 02UN",
+      "quantidade": "1,000",
+      "valor_unit": "8,00",
+      "valor_total": "8,00",
+      "custo_medio": "1,95",
+      "grupo": "BRIGADEIRO",
+      "subgrupo": "CX 02 UN",
+      "cod_produto": "70"
+    },
+    {
+      "produto": "BRIG. BRULLE 04UN",
+      "quantidade": "1,000",
+      "valor_unit": "15,00",
+      "valor_total": "15,00",
+      "custo_medio": "2,63",
+      "grupo": "BRIGADEIRO",
+      "subgrupo": "CX 04 UN",
+      "cod_produto": "86"
+    },
+    {
+      "produto": "BRIG. BRULLE 12UN",
+      "quantidade": "1,000",
+      "valor_unit": "37,00",
+      "valor_total": "37,00",
+      "custo_medio": "7,14",
+      "grupo": "BRIGADEIRO",
+      "subgrupo": "CX 12 UN",
+      "cod_produto": "102"
+    },
+    {
+      "produto": "BRIG. BRULLE 25UN",
+      "quantidade": "1,000",
+      "valor_unit": "74,00",
+      "valor_total": "74,00",
+      "custo_medio": "13,20",
+      "grupo": "BRIGADEIRO",
+      "subgrupo": "CX 25 UN",
+      "cod_produto": "118"
+    },
+    {
+      "produto": "BRIG. C/ MORANGO BRANCO",
+      "quantidade": "97,000",
+      "valor_unit": "14,64",
+      "valor_total": "1.449,10",
+      "custo_medio": "203,32",
+      "grupo": "BRIGADEIRO",
+      "subgrupo": "Recheado",
+      "cod_produto": "693"
+    },
+    {
+      "produto": "BRIG. C/ MORANGO BRULEE",
+      "quantidade": "71,000",
+      "valor_unit": "20,57",
+      "valor_total": "1.475,60",
+      "custo_medio": "82,50",
+      "grupo": "BRIGADEIRO",
+      "subgrupo": "Recheado",
+      "cod_produto": "1708"
+    },
+    {
+      "produto": "BRIG. C/ MORANGO DARK",
+      "quantidade": "168,000",
+      "valor_unit": "14,34",
+      "valor_total": "2.462,40",
+      "custo_medio": "362,51",
+      "grupo": "BRIGADEIRO",
+      "subgrupo": "Recheado",
+      "cod_produto": "694"
+    },
+    {
+      "produto": "BRIG. C/ MORANGO PISTACHE",
+      "quantidade": "33,000",
+      "valor_unit": "18,63",
+      "valor_total": "614,00",
+      "custo_medio": "114,52",
+      "grupo": "BRIGADEIRO",
+      "subgrupo": "Recheado",
+      "cod_produto": "1327"
+    },
+    {
+      "produto": "BRIG. C/ MORANGO TRADICIONAL",
+      "quantidade": "364,000",
+      "valor_unit": "15,09",
+      "valor_total": "5.555,60",
+      "custo_medio": "437,33",
+      "grupo": "BRIGADEIRO",
+      "subgrupo": "Recheado",
+      "cod_produto": "133"
+    },
+    {
+      "produto": "BRIG. CARAMELO 12UN",
+      "quantidade": "3,000",
+      "valor_unit": "37,00",
+      "valor_total": "111,00",
+      "custo_medio": "18,23",
+      "grupo": "BRIGADEIRO",
+      "subgrupo": "CX 12 UN",
+      "cod_produto": "1330"
+    },
+    {
+      "produto": "BRIG. CARAMELO 25UN",
+      "quantidade": "1,000",
+      "valor_unit": "74,00",
+      "valor_total": "74,00",
+      "custo_medio": "10,86",
+      "grupo": "BRIGADEIRO",
+      "subgrupo": "CX 25 UN",
+      "cod_produto": "1331"
+    },
+    {
+      "produto": "BRIG. CHOCOLATE BRANCO 01UN",
+      "quantidade": "1,000",
+      "valor_unit": "4,50",
+      "valor_total": "4,50",
+      "custo_medio": "0,75",
+      "grupo": "BRIGADEIRO",
+      "subgrupo": "Unitário",
+      "cod_produto": "137"
+    },
+    {
+      "produto": "BRIG. CHOCOLATE BRANCO 02UN",
+      "quantidade": "1,000",
+      "valor_unit": "8,00",
+      "valor_total": "8,00",
+      "custo_medio": "2,61",
+      "grupo": "BRIGADEIRO",
+      "subgrupo": "CX 02 UN",
+      "cod_produto": "71"
+    },
+    {
+      "produto": "BRIG. CHOCOLATE BRANCO 12UN",
+      "quantidade": "2,000",
+      "valor_unit": "37,00",
+      "valor_total": "74,00",
+      "custo_medio": "22,28",
+      "grupo": "BRIGADEIRO",
+      "subgrupo": "CX 12 UN",
+      "cod_produto": "103"
+    },
+    {
+      "produto": "BRIG. CHOCOLATE BRANCO 25UN",
+      "quantidade": "3,000",
+      "valor_unit": "74,00",
+      "valor_total": "222,00",
+      "custo_medio": "64,47",
+      "grupo": "BRIGADEIRO",
+      "subgrupo": "CX 25 UN",
+      "cod_produto": "119"
+    },
+    {
+      "produto": "BRIG. CHURROS 01UN",
+      "quantidade": "7,000",
+      "valor_unit": "4,50",
+      "valor_total": "31,50",
+      "custo_medio": "3,21",
+      "grupo": "BRIGADEIRO",
+      "subgrupo": "Unitário",
+      "cod_produto": "138"
+    },
+    {
+      "produto": "BRIG. CHURROS 02UN",
+      "quantidade": "3,000",
+      "valor_unit": "8,00",
+      "valor_total": "24,00",
+      "custo_medio": "5,48",
+      "grupo": "BRIGADEIRO",
+      "subgrupo": "CX 02 UN",
+      "cod_produto": "72"
+    },
+    {
+      "produto": "BRIG. CHURROS 04UN",
+      "quantidade": "3,000",
+      "valor_unit": "15,00",
+      "valor_total": "45,00",
+      "custo_medio": "7,97",
+      "grupo": "BRIGADEIRO",
+      "subgrupo": "CX 04 UN",
+      "cod_produto": "88"
+    },
+    {
+      "produto": "BRIG. CHURROS 12UN",
+      "quantidade": "4,000",
+      "valor_unit": "37,00",
+      "valor_total": "148,00",
+      "custo_medio": "30,20",
+      "grupo": "BRIGADEIRO",
+      "subgrupo": "CX 12 UN",
+      "cod_produto": "104"
+    },
+    {
+      "produto": "BRIG. CHURROS 25UN",
+      "quantidade": "7,000",
+      "valor_unit": "74,00",
+      "valor_total": "518,00",
+      "custo_medio": "98,28",
+      "grupo": "BRIGADEIRO",
+      "subgrupo": "CX 25 UN",
+      "cod_produto": "120"
+    },
+    {
+      "produto": "BRIG. COCO QUEIMADO 12UN",
+      "quantidade": "2,000",
+      "valor_unit": "37,00",
+      "valor_total": "74,00",
+      "custo_medio": "14,72",
+      "grupo": "BRIGADEIRO",
+      "subgrupo": "CX 12 UN",
+      "cod_produto": "945"
+    },
+    {
+      "produto": "BRIG. COCO QUEIMADO 25UN",
+      "quantidade": "2,000",
+      "valor_unit": "74,00",
+      "valor_total": "148,00",
+      "custo_medio": "27,35",
+      "grupo": "BRIGADEIRO",
+      "subgrupo": "CX 25 UN",
+      "cod_produto": "944"
+    },
+    {
+      "produto": "BRIG. DA PROSPERIDADE 12UN",
+      "quantidade": "4,000",
+      "valor_unit": "63,25",
+      "valor_total": "253,00",
+      "custo_medio": "53,76",
+      "grupo": "ESPECIAL",
+      "subgrupo": "DOCINHOS",
+      "cod_produto": "1839"
+    },
+    {
+      "produto": "BRIG. DARK 01UN",
+      "quantidade": "31,000",
+      "valor_unit": "4,50",
+      "valor_total": "139,50",
+      "custo_medio": "22,67",
+      "grupo": "BRIGADEIRO",
+      "subgrupo": "Unitário",
+      "cod_produto": "139"
+    },
+    {
+      "produto": "BRIG. DARK 02UN",
+      "quantidade": "8,000",
+      "valor_unit": "8,00",
+      "valor_total": "64,00",
+      "custo_medio": "20,01",
+      "grupo": "BRIGADEIRO",
+      "subgrupo": "CX 02 UN",
+      "cod_produto": "73"
+    },
+    {
+      "produto": "BRIG. DARK 04UN",
+      "quantidade": "10,000",
+      "valor_unit": "15,00",
+      "valor_total": "150,00",
+      "custo_medio": "38,52",
+      "grupo": "BRIGADEIRO",
+      "subgrupo": "CX 04 UN",
+      "cod_produto": "89"
+    },
+    {
+      "produto": "BRIG. DARK 12UN",
+      "quantidade": "9,000",
+      "valor_unit": "37,00",
+      "valor_total": "333,00",
+      "custo_medio": "98,13",
+      "grupo": "BRIGADEIRO",
+      "subgrupo": "CX 12 UN",
+      "cod_produto": "105"
+    },
+    {
+      "produto": "BRIG. DARK 25UN",
+      "quantidade": "11,000",
+      "valor_unit": "74,00",
+      "valor_total": "814,00",
+      "custo_medio": "232,03",
+      "grupo": "BRIGADEIRO",
+      "subgrupo": "CX 25 UN",
+      "cod_produto": "121"
+    },
+    {
+      "produto": "BRIG. DOIS AMORES 01UN",
+      "quantidade": "4,000",
+      "valor_unit": "4,50",
+      "valor_total": "18,00",
+      "custo_medio": "1,38",
+      "grupo": "BRIGADEIRO",
+      "subgrupo": "Unitário",
+      "cod_produto": "141"
+    },
+    {
+      "produto": "BRIG. DOIS AMORES 02UN",
+      "quantidade": "4,000",
+      "valor_unit": "8,00",
+      "valor_total": "32,00",
+      "custo_medio": "6,87",
+      "grupo": "BRIGADEIRO",
+      "subgrupo": "CX 02 UN",
+      "cod_produto": "75"
+    },
+    {
+      "produto": "BRIG. DOIS AMORES 04UN",
+      "quantidade": "2,000",
+      "valor_unit": "15,00",
+      "valor_total": "30,00",
+      "custo_medio": "4,85",
+      "grupo": "BRIGADEIRO",
+      "subgrupo": "CX 04 UN",
+      "cod_produto": "91"
+    },
+    {
+      "produto": "BRIG. DOIS AMORES 12UN",
+      "quantidade": "6,000",
+      "valor_unit": "37,00",
+      "valor_total": "222,00",
+      "custo_medio": "35,38",
+      "grupo": "BRIGADEIRO",
+      "subgrupo": "CX 12 UN",
+      "cod_produto": "107"
+    },
+    {
+      "produto": "BRIG. DOIS AMORES 25UN",
+      "quantidade": "11,000",
+      "valor_unit": "74,00",
+      "valor_total": "814,00",
+      "custo_medio": "117,10",
+      "grupo": "BRIGADEIRO",
+      "subgrupo": "CX 25 UN",
+      "cod_produto": "123"
+    },
+    {
+      "produto": "BRIG. MIX 12UN",
+      "quantidade": "1,000",
+      "valor_unit": "38,00",
+      "valor_total": "38,00",
+      "custo_medio": "0,00",
+      "grupo": "BRIGADEIRO",
+      "subgrupo": "CX 12 UN",
+      "cod_produto": "108"
+    },
+    {
+      "produto": "BRIG. MIX 25UN",
+      "quantidade": "4,000",
+      "valor_unit": "76,00",
+      "valor_total": "304,00",
+      "custo_medio": "0,00",
+      "grupo": "BRIGADEIRO",
+      "subgrupo": "CX 25 UN",
+      "cod_produto": "1692"
+    },
+    {
+      "produto": "BRIG. NINHO DELICADO 01UN",
+      "quantidade": "1,000",
+      "valor_unit": "4,50",
+      "valor_total": "4,50",
+      "custo_medio": "0,44",
+      "grupo": "BRIGADEIRO",
+      "subgrupo": "Unitário",
+      "cod_produto": "142"
+    },
+    {
+      "produto": "BRIG. NINHO NUTELLA 01UN",
+      "quantidade": "7,000",
+      "valor_unit": "4,50",
+      "valor_total": "31,50",
+      "custo_medio": "4,03",
+      "grupo": "BRIGADEIRO",
+      "subgrupo": "Unitário",
+      "cod_produto": "143"
+    },
+    {
+      "produto": "BRIG. NINHO NUTELLA 04UN",
+      "quantidade": "1,000",
+      "valor_unit": "15,00",
+      "valor_total": "15,00",
+      "custo_medio": "3,24",
+      "grupo": "BRIGADEIRO",
+      "subgrupo": "CX 04 UN",
+      "cod_produto": "94"
+    },
+    {
+      "produto": "BRIG. NINHO NUTELLA 12UN",
+      "quantidade": "6,000",
+      "valor_unit": "37,00",
+      "valor_total": "222,00",
+      "custo_medio": "53,88",
+      "grupo": "BRIGADEIRO",
+      "subgrupo": "CX 12 UN",
+      "cod_produto": "110"
+    },
+    {
+      "produto": "BRIG. NINHO NUTELLA 25UN",
+      "quantidade": "5,000",
+      "valor_unit": "74,00",
+      "valor_total": "370,00",
+      "custo_medio": "85,05",
+      "grupo": "BRIGADEIRO",
+      "subgrupo": "CX 25 UN",
+      "cod_produto": "126"
+    },
+    {
+      "produto": "BRIG. NOZES 04UN",
+      "quantidade": "1,000",
+      "valor_unit": "20,00",
+      "valor_total": "20,00",
+      "custo_medio": "3,47",
+      "grupo": "BRIGADEIRO",
+      "subgrupo": "CX 04 UN",
+      "cod_produto": "95"
+    },
+    {
+      "produto": "BRIG. NOZES 12UN",
+      "quantidade": "1,000",
+      "valor_unit": "55,00",
+      "valor_total": "55,00",
+      "custo_medio": "9,66",
+      "grupo": "BRIGADEIRO",
+      "subgrupo": "CX 12 UN",
+      "cod_produto": "111"
+    },
+    {
+      "produto": "BRIG. NOZES 25UN",
+      "quantidade": "3,000",
+      "valor_unit": "90,00",
+      "valor_total": "270,00",
+      "custo_medio": "55,31",
+      "grupo": "BRIGADEIRO",
+      "subgrupo": "CX 25 UN",
+      "cod_produto": "127"
+    },
+    {
+      "produto": "BRIG. PINGO DE EMILIA 01UN",
+      "quantidade": "6,000",
+      "valor_unit": "4,50",
+      "valor_total": "27,00",
+      "custo_medio": "3,41",
+      "grupo": "BRIGADEIRO",
+      "subgrupo": "Unitário",
+      "cod_produto": "148"
+    },
+    {
+      "produto": "BRIG. PINGO DE EMILIA 02UN",
+      "quantidade": "3,000",
+      "valor_unit": "8,00",
+      "valor_total": "24,00",
+      "custo_medio": "6,84",
+      "grupo": "BRIGADEIRO",
+      "subgrupo": "CX 02 UN",
+      "cod_produto": "83"
+    },
+    {
+      "produto": "BRIG. PINGO DE EMILIA 04UN",
+      "quantidade": "2,000",
+      "valor_unit": "15,00",
+      "valor_total": "30,00",
+      "custo_medio": "6,65",
+      "grupo": "BRIGADEIRO",
+      "subgrupo": "CX 04 UN",
+      "cod_produto": "99"
+    },
+    {
+      "produto": "BRIG. PINGO DE EMILIA 25UN",
+      "quantidade": "3,000",
+      "valor_unit": "74,00",
+      "valor_total": "222,00",
+      "custo_medio": "50,64",
+      "grupo": "BRIGADEIRO",
+      "subgrupo": "CX 25 UN",
+      "cod_produto": "131"
+    },
+    {
+      "produto": "BRIG. PISTACHE 01UN",
+      "quantidade": "26,000",
+      "valor_unit": "6,00",
+      "valor_total": "156,00",
+      "custo_medio": "29,28",
+      "grupo": "BRIGADEIRO",
+      "subgrupo": "Unitário",
+      "cod_produto": "145"
+    },
+    {
+      "produto": "BRIG. PISTACHE 02UN",
+      "quantidade": "1,000",
+      "valor_unit": "11,00",
+      "valor_total": "11,00",
+      "custo_medio": "3,99",
+      "grupo": "BRIGADEIRO",
+      "subgrupo": "CX 02 UN",
+      "cod_produto": "80"
+    },
+    {
+      "produto": "BRIG. PISTACHE 04UN",
+      "quantidade": "1,000",
+      "valor_unit": "20,00",
+      "valor_total": "20,00",
+      "custo_medio": "6,71",
+      "grupo": "BRIGADEIRO",
+      "subgrupo": "CX 04 UN",
+      "cod_produto": "96"
+    },
+    {
+      "produto": "BRIG. PISTACHE 12UN",
+      "quantidade": "1,000",
+      "valor_unit": "55,00",
+      "valor_total": "55,00",
+      "custo_medio": "15,61",
+      "grupo": "BRIGADEIRO",
+      "subgrupo": "CX 12 UN",
+      "cod_produto": "112"
+    },
+    {
+      "produto": "BRIG. PRETO PRECIOSO 12UN",
+      "quantidade": "1,000",
+      "valor_unit": "37,00",
+      "valor_total": "37,00",
+      "custo_medio": "6,57",
+      "grupo": "BRIGADEIRO",
+      "subgrupo": "CX 12 UN",
+      "cod_produto": "113"
+    },
+    {
+      "produto": "BRIG. PRETO PRECIOSO 25UN",
+      "quantidade": "2,000",
+      "valor_unit": "74,00",
+      "valor_total": "148,00",
+      "custo_medio": "24,02",
+      "grupo": "BRIGADEIRO",
+      "subgrupo": "CX 25 UN",
+      "cod_produto": "129"
+    },
+    {
+      "produto": "BRIG. TRADICIONAL 01UN",
+      "quantidade": "49,000",
+      "valor_unit": "4,50",
+      "valor_total": "220,50",
+      "custo_medio": "18,71",
+      "grupo": "BRIGADEIRO",
+      "subgrupo": "Unitário",
+      "cod_produto": "147"
+    },
+    {
+      "produto": "BRIG. TRADICIONAL 02UN",
+      "quantidade": "14,000",
+      "valor_unit": "8,00",
+      "valor_total": "112,00",
+      "custo_medio": "25,98",
+      "grupo": "BRIGADEIRO",
+      "subgrupo": "CX 02 UN",
+      "cod_produto": "82"
+    },
+    {
+      "produto": "BRIG. TRADICIONAL 04UN",
+      "quantidade": "67,000",
+      "valor_unit": "15,00",
+      "valor_total": "1.005,00",
+      "custo_medio": "165,14",
+      "grupo": "BRIGADEIRO",
+      "subgrupo": "CX 04 UN",
+      "cod_produto": "98"
+    },
+    {
+      "produto": "BRIG. TRADICIONAL 12UN",
+      "quantidade": "21,000",
+      "valor_unit": "37,00",
+      "valor_total": "777,00",
+      "custo_medio": "138,23",
+      "grupo": "BRIGADEIRO",
+      "subgrupo": "CX 12 UN",
+      "cod_produto": "114"
+    },
+    {
+      "produto": "BRIG. TRADICIONAL 25UN",
+      "quantidade": "21,000",
+      "valor_unit": "74,00",
+      "valor_total": "1.554,00",
+      "custo_medio": "251,67",
+      "grupo": "BRIGADEIRO",
+      "subgrupo": "CX 25 UN",
+      "cod_produto": "130"
+    },
+    {
+      "produto": "CACHORRINHO",
+      "quantidade": "56,000",
+      "valor_unit": "7,50",
+      "valor_total": "420,00",
+      "custo_medio": "34,33",
+      "grupo": "SANDUICHES",
+      "subgrupo": "Forno",
+      "cod_produto": "218"
+    },
+    {
+      "produto": "CAFE AFFOGATO",
+      "quantidade": "4,000",
+      "valor_unit": "17,50",
+      "valor_total": "70,00",
+      "custo_medio": "32,58",
+      "grupo": "BEBIDAS FRIAS",
+      "subgrupo": "Café Drink",
+      "cod_produto": "3"
+    },
+    {
+      "produto": "CAFE C/ CREME",
+      "quantidade": "29,000",
+      "valor_unit": "9,90",
+      "valor_total": "287,10",
+      "custo_medio": "0,00",
+      "grupo": "BEBIDAS QUENTES",
+      "subgrupo": "Café Drink Quente",
+      "cod_produto": "35"
+    },
+    {
+      "produto": "CAFE CARIOCA",
+      "quantidade": "54,000",
+      "valor_unit": "8,50",
+      "valor_total": "459,00",
+      "custo_medio": "0,00",
+      "grupo": "BEBIDAS QUENTES",
+      "subgrupo": "Café",
+      "cod_produto": "27"
+    },
+    {
+      "produto": "CAFE COADO",
+      "quantidade": "173,000",
+      "valor_unit": "10,50",
+      "valor_total": "1.816,50",
+      "custo_medio": "0,00",
+      "grupo": "BEBIDAS QUENTES",
+      "subgrupo": "Café",
+      "cod_produto": "28"
+    },
+    {
+      "produto": "CAFE DA VOVO",
+      "quantidade": "7,000",
+      "valor_unit": "18,50",
+      "valor_total": "129,50",
+      "custo_medio": "0,00",
+      "grupo": "BEBIDAS QUENTES",
+      "subgrupo": "Café Drink Quente",
+      "cod_produto": "36"
+    },
+    {
+      "produto": "CAFE DUPLO",
+      "quantidade": "33,000",
+      "valor_unit": "16,90",
+      "valor_total": "557,70",
+      "custo_medio": "0,00",
+      "grupo": "BEBIDAS QUENTES",
+      "subgrupo": "Café",
+      "cod_produto": "29"
+    },
+    {
+      "produto": "CAFE EM PO TASSINARI(ORO)",
+      "quantidade": "3,000",
+      "valor_unit": "42,00",
+      "valor_total": "126,00",
+      "custo_medio": "78,75",
+      "grupo": "MERCEARIA",
+      "subgrupo": "Cafes",
+      "cod_produto": "184"
+    },
+    {
+      "produto": "CAFE EXPR DESCAF PEQ",
+      "quantidade": "16,000",
+      "valor_unit": "9,50",
+      "valor_total": "152,00",
+      "custo_medio": "60,80",
+      "grupo": "BEBIDAS QUENTES",
+      "subgrupo": "Café",
+      "cod_produto": "31"
+    },
+    {
+      "produto": "CAFE EXPRESSO",
+      "quantidade": "430,000",
+      "valor_unit": "8,50",
+      "valor_total": "3.655,00",
+      "custo_medio": "571,60",
+      "grupo": "BEBIDAS QUENTES",
+      "subgrupo": "Café",
+      "cod_produto": "32"
+    },
+    {
+      "produto": "CAFE EXPRESSO C BRIG. GRD",
+      "quantidade": "2,000",
+      "valor_unit": "17,50",
+      "valor_total": "35,00",
+      "custo_medio": "0,00",
+      "grupo": "BEBIDAS QUENTES",
+      "subgrupo": "Café Drink Quente",
+      "cod_produto": "43"
+    },
+    {
+      "produto": "CAFE EXPRESSO C/ BRIG. PEQ",
+      "quantidade": "34,000",
+      "valor_unit": "10,90",
+      "valor_total": "370,60",
+      "custo_medio": "0,00",
+      "grupo": "BEBIDAS QUENTES",
+      "subgrupo": "Café Drink Quente",
+      "cod_produto": "44"
+    },
+    {
+      "produto": "CAFE PINGADO",
+      "quantidade": "23,000",
+      "valor_unit": "8,50",
+      "valor_total": "195,50",
+      "custo_medio": "0,00",
+      "grupo": "BEBIDAS QUENTES",
+      "subgrupo": "Café Drink Quente",
+      "cod_produto": "38"
+    },
+    {
+      "produto": "CAFE PRENSA FRANC. DUPLO",
+      "quantidade": "8,000",
+      "valor_unit": "15,50",
+      "valor_total": "124,00",
+      "custo_medio": "0,00",
+      "grupo": "BEBIDAS QUENTES",
+      "subgrupo": "Café",
+      "cod_produto": "33"
+    },
+    {
+      "produto": "CAFE VIENENSE GDR",
+      "quantidade": "8,000",
+      "valor_unit": "18,50",
+      "valor_total": "148,00",
+      "custo_medio": "0,00",
+      "grupo": "BEBIDAS FRIAS",
+      "subgrupo": "Café Drink",
+      "cod_produto": "4"
+    },
+    {
+      "produto": "CALDA CHOC 200GR",
+      "quantidade": "13,000",
+      "valor_unit": "36,55",
+      "valor_total": "478,00",
+      "custo_medio": "0,00",
+      "grupo": "CALDAS E COBERTURAS",
+      "subgrupo": "Chocolate",
+      "cod_produto": "155"
+    },
+    {
+      "produto": "CALDA LARANJA 200GR",
+      "quantidade": "5,000",
+      "valor_unit": "24,80",
+      "valor_total": "124,00",
+      "custo_medio": "0,00",
+      "grupo": "CALDAS E COBERTURAS",
+      "subgrupo": "Laranja",
+      "cod_produto": "161"
+    },
+    {
+      "produto": "CAMAFEU NOZES CHOCOLATE CX 6UN",
+      "quantidade": "11,000",
+      "valor_unit": "54,00",
+      "valor_total": "594,00",
+      "custo_medio": "90,74",
+      "grupo": "ESPECIAL",
+      "subgrupo": "DOCINHOS",
+      "cod_produto": "1845"
+    },
+    {
+      "produto": "CAMAFEU NOZES MIX CX 6UN",
+      "quantidade": "11,000",
+      "valor_unit": "52,09",
+      "valor_total": "646,00",
+      "custo_medio": "82,99",
+      "grupo": "ESPECIAL",
+      "subgrupo": "DOCINHOS",
+      "cod_produto": "1238"
+    },
+    {
+      "produto": "CAPUCCINO DESCAF. GRD",
+      "quantidade": "3,000",
+      "valor_unit": "14,20",
+      "valor_total": "42,60",
+      "custo_medio": "0,00",
+      "grupo": "BEBIDAS QUENTES",
+      "subgrupo": "Café Drink Quente",
+      "cod_produto": "41"
+    },
+    {
+      "produto": "CAPUCCINO GRD",
+      "quantidade": "93,000",
+      "valor_unit": "13,50",
+      "valor_total": "1.255,50",
+      "custo_medio": "0,00",
+      "grupo": "BEBIDAS QUENTES",
+      "subgrupo": "Café Drink Quente",
+      "cod_produto": "39"
+    },
+    {
+      "produto": "CAPUCCINO PEQ",
+      "quantidade": "72,000",
+      "valor_unit": "9,90",
+      "valor_total": "712,80",
+      "custo_medio": "0,00",
+      "grupo": "BEBIDAS QUENTES",
+      "subgrupo": "Café Drink Quente",
+      "cod_produto": "40"
+    },
+    {
+      "produto": "CHA GELADO",
+      "quantidade": "7,000",
+      "valor_unit": "13,50",
+      "valor_total": "94,50",
+      "custo_medio": "3,48",
+      "grupo": "BEBIDAS FRIAS",
+      "subgrupo": "Chá",
+      "cod_produto": "5"
+    },
+    {
+      "produto": "CHA QUENTE",
+      "quantidade": "14,000",
+      "valor_unit": "13,50",
+      "valor_total": "189,00",
+      "custo_medio": "0,00",
+      "grupo": "BEBIDAS QUENTES",
+      "subgrupo": "Chá Quente",
+      "cod_produto": "52"
+    },
+    {
+      "produto": "CHANTILLY A PARTE",
+      "quantidade": "2,000",
+      "valor_unit": "3,00",
+      "valor_total": "6,00",
+      "custo_medio": "0,00",
+      "grupo": "CALDAS E COBERTURAS",
+      "subgrupo": "Chantilly",
+      "cod_produto": "152"
+    },
+    {
+      "produto": "CHEESECAKE F. VERM F13",
+      "quantidade": "11,000",
+      "valor_unit": "115,54",
+      "valor_total": "1.270,95",
+      "custo_medio": "216,86",
+      "grupo": "TORTA",
+      "subgrupo": "Torta F13",
+      "cod_produto": "228"
+    },
+    {
+      "produto": "CHEESECAKE F. VERM F25",
+      "quantidade": "2,000",
+      "valor_unit": "243,25",
+      "valor_total": "486,50",
+      "custo_medio": "101,33",
+      "grupo": "TORTA",
+      "subgrupo": "Torta F25",
+      "cod_produto": "246"
+    },
+    {
+      "produto": "CHEESECAKE GOIABA F13",
+      "quantidade": "1,000",
+      "valor_unit": "94,00",
+      "valor_total": "94,00",
+      "custo_medio": "17,86",
+      "grupo": "TORTA",
+      "subgrupo": "Torta F13",
+      "cod_produto": "631"
+    },
+    {
+      "produto": "CHEESECAKE GOIABA F25",
+      "quantidade": "1,000",
+      "valor_unit": "212,00",
+      "valor_total": "212,00",
+      "custo_medio": "46,02",
+      "grupo": "TORTA",
+      "subgrupo": "Torta F25",
+      "cod_produto": "632"
+    },
+    {
+      "produto": "CHEESECAKE MORANGO F13",
+      "quantidade": "3,000",
+      "valor_unit": "116,57",
+      "valor_total": "349,70",
+      "custo_medio": "56,67",
+      "grupo": "TORTA",
+      "subgrupo": "Torta F13",
+      "cod_produto": "1412"
+    },
+    {
+      "produto": "CHEESECAKE MORANGO F25",
+      "quantidade": "4,000",
+      "valor_unit": "243,25",
+      "valor_total": "986,00",
+      "custo_medio": "196,62",
+      "grupo": "TORTA",
+      "subgrupo": "Torta F25",
+      "cod_produto": "1411"
+    },
+    {
+      "produto": "CHOC QUENTE GRD",
+      "quantidade": "5,000",
+      "valor_unit": "15,50",
+      "valor_total": "77,50",
+      "custo_medio": "0,00",
+      "grupo": "BEBIDAS LACTEAS",
+      "subgrupo": "Achocolatados",
+      "cod_produto": "20"
+    },
+    {
+      "produto": "CHOC QUENTE PEQ",
+      "quantidade": "9,000",
+      "valor_unit": "9,90",
+      "valor_total": "89,10",
+      "custo_medio": "0,00",
+      "grupo": "BEBIDAS LACTEAS",
+      "subgrupo": "Achocolatados",
+      "cod_produto": "21"
+    },
+    {
+      "produto": "CHOCOBERRIES F13",
+      "quantidade": "39,000",
+      "valor_unit": "146,66",
+      "valor_total": "5.820,50",
+      "custo_medio": "1.043,11",
+      "grupo": "TORTA",
+      "subgrupo": "Torta F13",
+      "cod_produto": "229"
+    },
+    {
+      "produto": "CHOCOBERRIES F20",
+      "quantidade": "29,000",
+      "valor_unit": "235,55",
+      "valor_total": "6.954,15",
+      "custo_medio": "1.266,36",
+      "grupo": "TORTA",
+      "subgrupo": "Torta F20",
+      "cod_produto": "247"
+    },
+    {
+      "produto": "CHOCOBERRIES F25",
+      "quantidade": "24,000",
+      "valor_unit": "316,39",
+      "valor_total": "7.889,30",
+      "custo_medio": "1.479,40",
+      "grupo": "TORTA",
+      "subgrupo": "Torta F25",
+      "cod_produto": "634"
+    },
+    {
+      "produto": "CHOCOLATE CREMOSO",
+      "quantidade": "8,000",
+      "valor_unit": "17,50",
+      "valor_total": "140,00",
+      "custo_medio": "0,00",
+      "grupo": "BEBIDAS LACTEAS",
+      "subgrupo": "Achocolatados",
+      "cod_produto": "22"
+    },
+    {
+      "produto": "CHOCOLATE GELADO",
+      "quantidade": "8,000",
+      "valor_unit": "15,50",
+      "valor_total": "124,00",
+      "custo_medio": "0,00",
+      "grupo": "BEBIDAS LACTEAS",
+      "subgrupo": "Achocolatados",
+      "cod_produto": "23"
+    },
+    {
+      "produto": "CHOCONOZES F13",
+      "quantidade": "7,000",
+      "valor_unit": "157,86",
+      "valor_total": "1.105,00",
+      "custo_medio": "240,94",
+      "grupo": "ESPECIAL",
+      "subgrupo": "Torta Natal",
+      "cod_produto": "1220"
+    },
+    {
+      "produto": "CHOCONOZES F25",
+      "quantidade": "6,000",
+      "valor_unit": "353,33",
+      "valor_total": "2.120,00",
+      "custo_medio": "199,44",
+      "grupo": "ESPECIAL",
+      "subgrupo": "Torta Natal",
+      "cod_produto": "248"
+    },
+    {
+      "produto": "COCA COLA",
+      "quantidade": "66,000",
+      "valor_unit": "7,73",
+      "valor_total": "515,32",
+      "custo_medio": "228,36",
+      "grupo": "BEBIDAS FRIAS",
+      "subgrupo": "Refrigerantes",
+      "cod_produto": "10"
+    },
+    {
+      "produto": "COCA COLA ZERO",
+      "quantidade": "119,000",
+      "valor_unit": "7,69",
+      "valor_total": "922,98",
+      "custo_medio": "408,17",
+      "grupo": "BEBIDAS FRIAS",
+      "subgrupo": "Refrigerantes",
+      "cod_produto": "11"
+    },
+    {
+      "produto": "COMBO 01 CAFE DA MANHA",
+      "quantidade": "4,000",
+      "valor_unit": "32,00",
+      "valor_total": "128,00",
+      "custo_medio": "0,00",
+      "grupo": "CAFÉ DA MANHÃ",
+      "subgrupo": "Combo",
+      "cod_produto": "149"
+    },
+    {
+      "produto": "COMBO 02 CAFE DA MANHA",
+      "quantidade": "4,000",
+      "valor_unit": "70,00",
+      "valor_total": "280,00",
+      "custo_medio": "0,00",
+      "grupo": "CAFÉ DA MANHÃ",
+      "subgrupo": "Combo",
+      "cod_produto": "150"
+    },
+    {
+      "produto": "COMBO 03 CAFE DA MANHA",
+      "quantidade": "8,000",
+      "valor_unit": "78,00",
+      "valor_total": "624,00",
+      "custo_medio": "0,00",
+      "grupo": "CAFÉ DA MANHÃ",
+      "subgrupo": "Combo",
+      "cod_produto": "151"
+    },
+    {
+      "produto": "CROCANTE F13",
+      "quantidade": "18,000",
+      "valor_unit": "122,28",
+      "valor_total": "2.201,00",
+      "custo_medio": "301,83",
+      "grupo": "TORTA",
+      "subgrupo": "Torta F13",
+      "cod_produto": "1332"
+    },
+    {
+      "produto": "CROCANTE F25",
+      "quantidade": "8,000",
+      "valor_unit": "238,46",
+      "valor_total": "1.907,65",
+      "custo_medio": "290,75",
+      "grupo": "TORTA",
+      "subgrupo": "Torta F25",
+      "cod_produto": "1333"
+    },
+    {
+      "produto": "DELICIA CAMADAS F13",
+      "quantidade": "12,000",
+      "valor_unit": "114,50",
+      "valor_total": "1.373,95",
+      "custo_medio": "139,80",
+      "grupo": "TORTA",
+      "subgrupo": "Torta F13",
+      "cod_produto": "230"
+    },
+    {
+      "produto": "DELICIA CAMADAS F25",
+      "quantidade": "7,000",
+      "valor_unit": "210,00",
+      "valor_total": "1.470,00",
+      "custo_medio": "218,66",
+      "grupo": "TORTA",
+      "subgrupo": "Torta F25",
+      "cod_produto": "257"
+    },
+    {
+      "produto": "DELICIA COCO F13",
+      "quantidade": "28,000",
+      "valor_unit": "119,46",
+      "valor_total": "3.345,00",
+      "custo_medio": "413,57",
+      "grupo": "TORTA",
+      "subgrupo": "Torta F13",
+      "cod_produto": "231"
+    },
+    {
+      "produto": "DELICIA COCO F25",
+      "quantidade": "24,000",
+      "valor_unit": "229,14",
+      "valor_total": "5.499,30",
+      "custo_medio": "952,06",
+      "grupo": "TORTA",
+      "subgrupo": "Torta F25",
+      "cod_produto": "258"
+    },
+    {
+      "produto": "EMBALAGEM FATIA",
+      "quantidade": "75,000",
+      "valor_unit": "2,00",
+      "valor_total": "150,00",
+      "custo_medio": "0,00",
+      "grupo": "PAPELARIA",
+      "subgrupo": "Embalagem",
+      "cod_produto": "186"
+    },
+    {
+      "produto": "EMILIA F13",
+      "quantidade": "25,000",
+      "valor_unit": "133,80",
+      "valor_total": "3.358,00",
+      "custo_medio": "463,04",
+      "grupo": "TORTA",
+      "subgrupo": "Torta F13",
+      "cod_produto": "233"
+    },
+    {
+      "produto": "EMILIA F25",
+      "quantidade": "14,000",
+      "valor_unit": "233,73",
+      "valor_total": "3.346,20",
+      "custo_medio": "602,81",
+      "grupo": "TORTA",
+      "subgrupo": "Torta F25",
+      "cod_produto": "260"
+    },
+    {
+      "produto": "EMPADAO FRANGO F13",
+      "quantidade": "10,000",
+      "valor_unit": "94,45",
+      "valor_total": "944,50",
+      "custo_medio": "151,10",
+      "grupo": "TORTA SALGADA",
+      "subgrupo": "Salgada F13",
+      "cod_produto": "297"
+    },
+    {
+      "produto": "EMPADAO FRANGO F25",
+      "quantidade": "15,000",
+      "valor_unit": "190,86",
+      "valor_total": "2.850,00",
+      "custo_medio": "511,29",
+      "grupo": "TORTA SALGADA",
+      "subgrupo": "Salgada F25",
+      "cod_produto": "298"
+    },
+    {
+      "produto": "ENCHARCADA COPO 180gr",
+      "quantidade": "15,000",
+      "valor_unit": "40,50",
+      "valor_total": "612,00",
+      "custo_medio": "120,66",
+      "grupo": "ESPECIALIDADES DE OVOS",
+      "subgrupo": "Individual",
+      "cod_produto": "167"
+    },
+    {
+      "produto": "ENCHARCADA F13",
+      "quantidade": "1,000",
+      "valor_unit": "145,00",
+      "valor_total": "145,00",
+      "custo_medio": "25,12",
+      "grupo": "ESPECIALIDADES DE OVOS",
+      "subgrupo": "F13",
+      "cod_produto": "165"
+    },
+    {
+      "produto": "ESPRESSO TONICA",
+      "quantidade": "1,000",
+      "valor_unit": "20,00",
+      "valor_total": "20,00",
+      "custo_medio": "3,39",
+      "grupo": "BEBIDAS FRIAS",
+      "subgrupo": "Café Drink",
+      "cod_produto": "1268"
+    },
+    {
+      "produto": "FANTASIA F13",
+      "quantidade": "36,000",
+      "valor_unit": "113,07",
+      "valor_total": "3.980,00",
+      "custo_medio": "576,52",
+      "grupo": "TORTA",
+      "subgrupo": "Torta F13",
+      "cod_produto": "234"
+    },
+    {
+      "produto": "FANTASIA F25",
+      "quantidade": "19,000",
+      "valor_unit": "228,96",
+      "valor_total": "4.498,20",
+      "custo_medio": "485,43",
+      "grupo": "TORTA",
+      "subgrupo": "Torta F25",
+      "cod_produto": "261"
+    },
+    {
+      "produto": "FESTIVA - DELICIA DE COCO F25",
+      "quantidade": "1,000",
+      "valor_unit": "260,00",
+      "valor_total": "260,00",
+      "custo_medio": "39,67",
+      "grupo": "ESPECIAL",
+      "subgrupo": "Dia Das Mães",
+      "cod_produto": "1221"
+    },
+    {
+      "produto": "FESTIVA - DELICIOSA DE MORANGO F20",
+      "quantidade": "3,000",
+      "valor_unit": "294,00",
+      "valor_total": "882,00",
+      "custo_medio": "123,62",
+      "grupo": "TORTA",
+      "subgrupo": "Torta F20",
+      "cod_produto": "1832"
+    },
+    {
+      "produto": "FESTIVA - TENTACAO F25",
+      "quantidade": "1,000",
+      "valor_unit": "258,00",
+      "valor_total": "258,00",
+      "custo_medio": "37,36",
+      "grupo": "ESPECIALIDADES DE OVOS",
+      "subgrupo": "F25",
+      "cod_produto": "1222"
+    },
+    {
+      "produto": "FIOS DE OVOS 250GRS",
+      "quantidade": "16,000",
+      "valor_unit": "52,93",
+      "valor_total": "853,50",
+      "custo_medio": "115,96",
+      "grupo": "ESPECIALIDADES DE OVOS",
+      "subgrupo": "Unitários",
+      "cod_produto": "169"
+    },
+    {
+      "produto": "FRUTA DA ESTACAO",
+      "quantidade": "3,000",
+      "valor_unit": "7,00",
+      "valor_total": "21,00",
+      "custo_medio": "0,00",
+      "grupo": "CAFÉ DA MANHÃ",
+      "subgrupo": "FRUTAS",
+      "cod_produto": "1188"
+    },
+    {
+      "produto": "FT ALEMA",
+      "quantidade": "223,000",
+      "valor_unit": "29,08",
+      "valor_total": "6.600,40",
+      "custo_medio": "1.197,97",
+      "grupo": "TORTA",
+      "subgrupo": "Torta Fatia",
+      "cod_produto": "274"
+    },
+    {
+      "produto": "FT AURORA",
+      "quantidade": "93,000",
+      "valor_unit": "29,13",
+      "valor_total": "2.733,70",
+      "custo_medio": "417,15",
+      "grupo": "TORTA",
+      "subgrupo": "Torta Fatia",
+      "cod_produto": "275"
+    },
+    {
+      "produto": "FT BANOFFEE",
+      "quantidade": "16,000",
+      "valor_unit": "26,90",
+      "valor_total": "430,40",
+      "custo_medio": "70,50",
+      "grupo": "TORTA",
+      "subgrupo": "Torta Fatia",
+      "cod_produto": "276"
+    },
+    {
+      "produto": "FT BOLO CENOURA",
+      "quantidade": "127,000",
+      "valor_unit": "9,90",
+      "valor_total": "1.257,30",
+      "custo_medio": "227,10",
+      "grupo": "BOLO",
+      "subgrupo": "Fatias",
+      "cod_produto": "61"
+    },
+    {
+      "produto": "FT BOLO LARANJA",
+      "quantidade": "131,000",
+      "valor_unit": "9,90",
+      "valor_total": "1.296,90",
+      "custo_medio": "222,81",
+      "grupo": "BOLO",
+      "subgrupo": "Fatias",
+      "cod_produto": "62"
+    },
+    {
+      "produto": "FT BOLO MILHO",
+      "quantidade": "44,000",
+      "valor_unit": "9,90",
+      "valor_total": "435,60",
+      "custo_medio": "111,65",
+      "grupo": "BOLO",
+      "subgrupo": "Fatias",
+      "cod_produto": "652"
+    },
+    {
+      "produto": "FT CHEESECAKE DAMASCO",
+      "quantidade": "2,000",
+      "valor_unit": "30,00",
+      "valor_total": "60,00",
+      "custo_medio": "12,50",
+      "grupo": "TORTA",
+      "subgrupo": "Torta Fatia",
+      "cod_produto": "1416"
+    },
+    {
+      "produto": "FT CHEESECAKE FRTS VERM.",
+      "quantidade": "40,000",
+      "valor_unit": "30,85",
+      "valor_total": "1.249,00",
+      "custo_medio": "260,67",
+      "grupo": "TORTA",
+      "subgrupo": "Torta Fatia",
+      "cod_produto": "277"
+    },
+    {
+      "produto": "FT CHEESECAKE GOIABA",
+      "quantidade": "38,000",
+      "valor_unit": "28,70",
+      "valor_total": "1.094,00",
+      "custo_medio": "229,99",
+      "grupo": "TORTA",
+      "subgrupo": "Torta Fatia",
+      "cod_produto": "629"
+    },
+    {
+      "produto": "FT CHEESECAKE MORANGO",
+      "quantidade": "34,000",
+      "valor_unit": "28,34",
+      "valor_total": "953,80",
+      "custo_medio": "1.503,20",
+      "grupo": "TORTA",
+      "subgrupo": "Torta Fatia",
+      "cod_produto": "1415"
+    },
+    {
+      "produto": "FT CHOCOBERRIES",
+      "quantidade": "82,000",
+      "valor_unit": "33,76",
+      "valor_total": "2.812,50",
+      "custo_medio": "667,21",
+      "grupo": "TORTA",
+      "subgrupo": "Torta Fatia",
+      "cod_produto": "278"
+    },
+    {
+      "produto": "FT CHOCONOZES",
+      "quantidade": "55,000",
+      "valor_unit": "33,94",
+      "valor_total": "1.886,25",
+      "custo_medio": "265,64",
+      "grupo": "ESPECIAL",
+      "subgrupo": "Torta Natal",
+      "cod_produto": "1237"
+    },
+    {
+      "produto": "FT CROCANTE",
+      "quantidade": "116,000",
+      "valor_unit": "32,06",
+      "valor_total": "3.750,40",
+      "custo_medio": "422,62",
+      "grupo": "TORTA",
+      "subgrupo": "Torta Fatia",
+      "cod_produto": "1334"
+    },
+    {
+      "produto": "FT DELICIA CAMADAS",
+      "quantidade": "45,000",
+      "valor_unit": "27,83",
+      "valor_total": "1.267,90",
+      "custo_medio": "204,55",
+      "grupo": "TORTA",
+      "subgrupo": "Torta Fatia",
+      "cod_produto": "280"
+    },
+    {
+      "produto": "FT DELICIA COCO",
+      "quantidade": "118,000",
+      "valor_unit": "30,33",
+      "valor_total": "3.621,60",
+      "custo_medio": "639,20",
+      "grupo": "TORTA",
+      "subgrupo": "Torta Fatia",
+      "cod_produto": "279"
+    },
+    {
+      "produto": "FT EMILIA",
+      "quantidade": "61,000",
+      "valor_unit": "30,19",
+      "valor_total": "1.848,00",
+      "custo_medio": "347,61",
+      "grupo": "TORTA",
+      "subgrupo": "Torta Fatia",
+      "cod_produto": "282"
+    },
+    {
+      "produto": "FT EMPADAO FRANGO",
+      "quantidade": "168,000",
+      "valor_unit": "20,78",
+      "valor_total": "3.515,70",
+      "custo_medio": "815,92",
+      "grupo": "TORTA SALGADA",
+      "subgrupo": "Fatia Salgada",
+      "cod_produto": "301"
+    },
+    {
+      "produto": "FT FANTASIA",
+      "quantidade": "88,000",
+      "valor_unit": "29,09",
+      "valor_total": "2.584,00",
+      "custo_medio": "348,57",
+      "grupo": "TORTA",
+      "subgrupo": "Torta Fatia",
+      "cod_produto": "283"
+    },
+    {
+      "produto": "FT MARAVILHA ABACAXI",
+      "quantidade": "97,000",
+      "valor_unit": "28,41",
+      "valor_total": "2.810,90",
+      "custo_medio": "676,60",
+      "grupo": "TORTA",
+      "subgrupo": "Torta Fatia",
+      "cod_produto": "284"
+    },
+    {
+      "produto": "FT QUEBRA NOZES",
+      "quantidade": "63,000",
+      "valor_unit": "32,00",
+      "valor_total": "2.041,50",
+      "custo_medio": "319,73",
+      "grupo": "TORTA",
+      "subgrupo": "Torta Fatia",
+      "cod_produto": "286"
+    },
+    {
+      "produto": "FT RED VELVET",
+      "quantidade": "97,000",
+      "valor_unit": "34,10",
+      "valor_total": "3.334,75",
+      "custo_medio": "828,85",
+      "grupo": "TORTA",
+      "subgrupo": "Torta Fatia",
+      "cod_produto": "287"
+    },
+    {
+      "produto": "FT ROCAMBOLE LARANJA",
+      "quantidade": "25,000",
+      "valor_unit": "29,14",
+      "valor_total": "724,10",
+      "custo_medio": "87,66",
+      "grupo": "TORTA",
+      "subgrupo": "Torta Fatia",
+      "cod_produto": "288"
+    },
+    {
+      "produto": "FT SWEET DARK",
+      "quantidade": "243,000",
+      "valor_unit": "32,23",
+      "valor_total": "7.927,50",
+      "custo_medio": "1.200,88",
+      "grupo": "TORTA",
+      "subgrupo": "Torta Fatia",
+      "cod_produto": "289"
+    },
+    {
+      "produto": "FT TENTACAO",
+      "quantidade": "313,000",
+      "valor_unit": "31,68",
+      "valor_total": "10.011,90",
+      "custo_medio": "1.620,01",
+      "grupo": "TORTA",
+      "subgrupo": "Torta Fatia",
+      "cod_produto": "290"
+    },
+    {
+      "produto": "FT TORTA BANANA",
+      "quantidade": "39,000",
+      "valor_unit": "29,38",
+      "valor_total": "1.164,00",
+      "custo_medio": "192,39",
+      "grupo": "TORTA",
+      "subgrupo": "Torta Fatia",
+      "cod_produto": "291"
+    },
+    {
+      "produto": "FT TORTA LIMAO",
+      "quantidade": "167,000",
+      "valor_unit": "27,52",
+      "valor_total": "4.656,71",
+      "custo_medio": "731,51",
+      "grupo": "TORTA",
+      "subgrupo": "Torta Fatia",
+      "cod_produto": "292"
+    },
+    {
+      "produto": "FT TORTA MOUSSE",
+      "quantidade": "142,000",
+      "valor_unit": "35,19",
+      "valor_total": "5.034,75",
+      "custo_medio": "920,41",
+      "grupo": "TORTA",
+      "subgrupo": "Torta Fatia",
+      "cod_produto": "293"
+    },
+    {
+      "produto": "GELATO ARTESANAL BAULINHA AFRICANA BOLA",
+      "quantidade": "6,000",
+      "valor_unit": "15,00",
+      "valor_total": "90,00",
+      "custo_medio": "0,00",
+      "grupo": "SORVETES",
+      "subgrupo": "Sorvete",
+      "cod_produto": "1176"
+    },
+    {
+      "produto": "GELATO ARTESANAL TAPIOCA BOLA",
+      "quantidade": "13,000",
+      "valor_unit": "15,00",
+      "valor_total": "195,00",
+      "custo_medio": "0,00",
+      "grupo": "SORVETES",
+      "subgrupo": "Sorvete",
+      "cod_produto": "1177"
+    },
+    {
+      "produto": "GELEIA FRUT VER 200GR",
+      "quantidade": "3,000",
+      "valor_unit": "28,00",
+      "valor_total": "84,00",
+      "custo_medio": "0,00",
+      "grupo": "CALDAS E COBERTURAS",
+      "subgrupo": "Geleia",
+      "cod_produto": "156"
+    },
+    {
+      "produto": "GELEIA GOIABA 200GR",
+      "quantidade": "2,000",
+      "valor_unit": "28,00",
+      "valor_total": "56,00",
+      "custo_medio": "0,00",
+      "grupo": "CALDAS E COBERTURAS",
+      "subgrupo": "Geleia",
+      "cod_produto": "157"
+    },
+    {
+      "produto": "GELEIA MORANGO 200GR",
+      "quantidade": "5,000",
+      "valor_unit": "27,60",
+      "valor_total": "138,00",
+      "custo_medio": "0,00",
+      "grupo": "CALDAS E COBERTURAS",
+      "subgrupo": "Geleia",
+      "cod_produto": "158"
+    },
+    {
+      "produto": "GUARANA",
+      "quantidade": "12,000",
+      "valor_unit": "7,79",
+      "valor_total": "93,81",
+      "custo_medio": "38,28",
+      "grupo": "BEBIDAS FRIAS",
+      "subgrupo": "Refrigerantes",
+      "cod_produto": "12"
+    },
+    {
+      "produto": "GUARANA ZERO",
+      "quantidade": "35,000",
+      "valor_unit": "7,56",
+      "valor_total": "265,04",
+      "custo_medio": "112,00",
+      "grupo": "BEBIDAS FRIAS",
+      "subgrupo": "Refrigerantes",
+      "cod_produto": "13"
+    },
+    {
+      "produto": "GUIRLANDA DE NATAL",
+      "quantidade": "1,000",
+      "valor_unit": "168,00",
+      "valor_total": "168,00",
+      "custo_medio": "26,29",
+      "grupo": "ESPECIAL",
+      "subgrupo": "Torta Natal",
+      "cod_produto": "295"
+    },
+    {
+      "produto": "IF BRIG. BEIJINHO",
+      "quantidade": "13,000",
+      "valor_unit": "0,00",
+      "valor_total": "641,70",
+      "custo_medio": "0,00",
+      "grupo": "BRIGADEIRO",
+      "subgrupo": "Brigadeiro Ifood",
+      "cod_produto": "376"
+    },
+    {
+      "produto": "IF BRIG. BRANCO DIVERTIDO",
+      "quantidade": "22,000",
+      "valor_unit": "0,00",
+      "valor_total": "985,80",
+      "custo_medio": "0,00",
+      "grupo": "BRIGADEIRO",
+      "subgrupo": "Brigadeiro Ifood",
+      "cod_produto": "382"
+    },
+    {
+      "produto": "IF BRIG. BRANCO PRECIOSO",
+      "quantidade": "8,000",
+      "valor_unit": "0,00",
+      "valor_total": "385,20",
+      "custo_medio": "0,00",
+      "grupo": "BRIGADEIRO",
+      "subgrupo": "Brigadeiro Ifood",
+      "cod_produto": "377"
+    },
+    {
+      "produto": "IF BRIG. BRULLE",
+      "quantidade": "26,000",
+      "valor_unit": "0,00",
+      "valor_total": "1.283,40",
+      "custo_medio": "0,00",
+      "grupo": "BRIGADEIRO",
+      "subgrupo": "Brigadeiro Ifood",
+      "cod_produto": "378"
+    },
+    {
+      "produto": "IF BRIG. CHOCOLATE BRANCO",
+      "quantidade": "10,000",
+      "valor_unit": "0,00",
+      "valor_total": "429,00",
+      "custo_medio": "0,00",
+      "grupo": "BRIGADEIRO",
+      "subgrupo": "Brigadeiro Ifood",
+      "cod_produto": "379"
+    },
+    {
+      "produto": "IF BRIG. CHURROS",
+      "quantidade": "2,000",
+      "valor_unit": "0,00",
+      "valor_total": "85,80",
+      "custo_medio": "0,00",
+      "grupo": "BRIGADEIRO",
+      "subgrupo": "Brigadeiro Ifood",
+      "cod_produto": "380"
+    },
+    {
+      "produto": "IF BRIG. DARK",
+      "quantidade": "51,000",
+      "valor_unit": "0,00",
+      "valor_total": "2.355,90",
+      "custo_medio": "521,95",
+      "grupo": "BRIGADEIRO",
+      "subgrupo": "Brigadeiro Ifood",
+      "cod_produto": "381"
+    },
+    {
+      "produto": "IF BRIG. DOIS AMORES",
+      "quantidade": "25,000",
+      "valor_unit": "0,00",
+      "valor_total": "1.156,50",
+      "custo_medio": "0,00",
+      "grupo": "BRIGADEIRO",
+      "subgrupo": "Brigadeiro Ifood",
+      "cod_produto": "383"
+    },
+    {
+      "produto": "IF BRIG. PINGO DE EMILIA",
+      "quantidade": "19,000",
+      "valor_unit": "0,00",
+      "valor_total": "983,10",
+      "custo_medio": "0,00",
+      "grupo": "BRIGADEIRO",
+      "subgrupo": "Brigadeiro Ifood",
+      "cod_produto": "391"
+    },
+    {
+      "produto": "IF BRIG. PISTACHE",
+      "quantidade": "2,000",
+      "valor_unit": "0,00",
+      "valor_total": "170,80",
+      "custo_medio": "0,00",
+      "grupo": "BRIGADEIRO",
+      "subgrupo": "Brigadeiro Ifood",
+      "cod_produto": "388"
+    },
+    {
+      "produto": "IF BRIG. PRETO PRECIOSO",
+      "quantidade": "38,000",
+      "valor_unit": "0,00",
+      "valor_total": "1.756,20",
+      "custo_medio": "0,00",
+      "grupo": "BRIGADEIRO",
+      "subgrupo": "Brigadeiro Ifood",
+      "cod_produto": "389"
+    },
+    {
+      "produto": "IF BRIG. TRADICIONAL",
+      "quantidade": "64,000",
+      "valor_unit": "0,00",
+      "valor_total": "3.333,60",
+      "custo_medio": "0,00",
+      "grupo": "BRIGADEIRO",
+      "subgrupo": "Brigadeiro Ifood",
+      "cod_produto": "390"
+    },
+    {
+      "produto": "IF VELA DOURADA NUMERO",
+      "quantidade": "31,000",
+      "valor_unit": "0,00",
+      "valor_total": "778,00",
+      "custo_medio": "209,81",
+      "grupo": "PAPELARIA",
+      "subgrupo": "Vela",
+      "cod_produto": "1650"
+    },
+    {
+      "produto": "IF VELA PRATA NUMERO",
+      "quantidade": "11,000",
+      "valor_unit": "0,00",
+      "valor_total": "240,00",
+      "custo_medio": "89,42",
+      "grupo": "PAPELARIA",
+      "subgrupo": "Vela",
+      "cod_produto": "1649"
+    },
+    {
+      "produto": "LIMONADA SUICA",
+      "quantidade": "22,000",
+      "valor_unit": "15,50",
+      "valor_total": "341,00",
+      "custo_medio": "0,00",
+      "grupo": "BEBIDAS FRIAS",
+      "subgrupo": "Suco Natural",
+      "cod_produto": "14"
+    },
+    {
+      "produto": "MACCHIADO DUPLO",
+      "quantidade": "3,000",
+      "valor_unit": "16,90",
+      "valor_total": "50,70",
+      "custo_medio": "0,00",
+      "grupo": "BEBIDAS QUENTES",
+      "subgrupo": "Café Drink Quente",
+      "cod_produto": "46"
+    },
+    {
+      "produto": "MACCHIATO PEQ",
+      "quantidade": "20,000",
+      "valor_unit": "8,50",
+      "valor_total": "170,00",
+      "custo_medio": "0,00",
+      "grupo": "BEBIDAS QUENTES",
+      "subgrupo": "Café Drink Quente",
+      "cod_produto": "47"
+    },
+    {
+      "produto": "MARAVILHA ABACAXI F13",
+      "quantidade": "13,000",
+      "valor_unit": "110,65",
+      "valor_total": "1.438,50",
+      "custo_medio": "267,27",
+      "grupo": "TORTA",
+      "subgrupo": "Torta F13",
+      "cod_produto": "235"
+    },
+    {
+      "produto": "MARAVILHA ABACAXI F25",
+      "quantidade": "13,000",
+      "valor_unit": "215,00",
+      "valor_total": "3.116,00",
+      "custo_medio": "713,88",
+      "grupo": "TORTA",
+      "subgrupo": "Torta F25",
+      "cod_produto": "262"
+    },
+    {
+      "produto": "MATE DA CASA",
+      "quantidade": "31,000",
+      "valor_unit": "12,00",
+      "valor_total": "372,00",
+      "custo_medio": "0,00",
+      "grupo": "BEBIDAS FRIAS",
+      "subgrupo": "Chá",
+      "cod_produto": "1025"
+    },
+    {
+      "produto": "MATE LIMAO",
+      "quantidade": "42,000",
+      "valor_unit": "7,52",
+      "valor_total": "317,00",
+      "custo_medio": "0,00",
+      "grupo": "BEBIDAS FRIAS",
+      "subgrupo": "Mate",
+      "cod_produto": "7"
+    },
+    {
+      "produto": "MATE NATURAL",
+      "quantidade": "32,000",
+      "valor_unit": "7,50",
+      "valor_total": "240,00",
+      "custo_medio": "0,00",
+      "grupo": "BEBIDAS FRIAS",
+      "subgrupo": "Mate",
+      "cod_produto": "8"
+    },
+    {
+      "produto": "MATE ZERO C LIMAO",
+      "quantidade": "23,000",
+      "valor_unit": "7,50",
+      "valor_total": "172,50",
+      "custo_medio": "3,41",
+      "grupo": "BEBIDAS FRIAS",
+      "subgrupo": "Mate",
+      "cod_produto": "1235"
+    },
+    {
+      "produto": "MEDIA",
+      "quantidade": "78,000",
+      "valor_unit": "13,50",
+      "valor_total": "1.053,01",
+      "custo_medio": "0,00",
+      "grupo": "BEBIDAS QUENTES",
+      "subgrupo": "Café Drink Quente",
+      "cod_produto": "48"
+    },
+    {
+      "produto": "MEDIA DESCAFEINADO",
+      "quantidade": "6,000",
+      "valor_unit": "14,20",
+      "valor_total": "85,20",
+      "custo_medio": "0,00",
+      "grupo": "BEBIDAS QUENTES",
+      "subgrupo": "Café Drink Quente",
+      "cod_produto": "50"
+    },
+    {
+      "produto": "MERENGUE 200ML",
+      "quantidade": "22,000",
+      "valor_unit": "26,00",
+      "valor_total": "576,00",
+      "custo_medio": "0,00",
+      "grupo": "CALDAS E COBERTURAS",
+      "subgrupo": "Merengue",
+      "cod_produto": "162"
+    },
+    {
+      "produto": "MILKSHAKE CHOCOLATE 300ML",
+      "quantidade": "6,000",
+      "valor_unit": "22,00",
+      "valor_total": "132,00",
+      "custo_medio": "0,00",
+      "grupo": "SORVETES",
+      "subgrupo": "Sorvete",
+      "cod_produto": "1139"
+    },
+    {
+      "produto": "MILKSHAKE MORANGO 300ML",
+      "quantidade": "6,000",
+      "valor_unit": "22,00",
+      "valor_total": "132,00",
+      "custo_medio": "0,00",
+      "grupo": "SORVETES",
+      "subgrupo": "Sorvete",
+      "cod_produto": "1140"
+    },
+    {
+      "produto": "MINI QUICHE ALHO PORO",
+      "quantidade": "18,000",
+      "valor_unit": "14,00",
+      "valor_total": "252,00",
+      "custo_medio": "20,94",
+      "grupo": "TORTA SALGADA",
+      "subgrupo": "Fatia Salgada",
+      "cod_produto": "1135"
+    },
+    {
+      "produto": "MINI QUICHE CEBOLA",
+      "quantidade": "9,000",
+      "valor_unit": "14,00",
+      "valor_total": "126,00",
+      "custo_medio": "10,61",
+      "grupo": "TORTA SALGADA",
+      "subgrupo": "Fatia Salgada",
+      "cod_produto": "1320"
+    },
+    {
+      "produto": "MINI QUICHE PRESUNTO",
+      "quantidade": "5,000",
+      "valor_unit": "14,00",
+      "valor_total": "70,00",
+      "custo_medio": "5,65",
+      "grupo": "TORTA SALGADA",
+      "subgrupo": "Fatia Salgada",
+      "cod_produto": "1340"
+    },
+    {
+      "produto": "MISTO PAO FRANCES",
+      "quantidade": "30,000",
+      "valor_unit": "13,50",
+      "valor_total": "405,00",
+      "custo_medio": "0,00",
+      "grupo": "SANDUICHES",
+      "subgrupo": "Chapa",
+      "cod_produto": "207"
+    },
+    {
+      "produto": "MISTO Q CROISSANT",
+      "quantidade": "35,000",
+      "valor_unit": "18,50",
+      "valor_total": "647,50",
+      "custo_medio": "0,00",
+      "grupo": "SANDUICHES",
+      "subgrupo": "Chapa",
+      "cod_produto": "208"
+    },
+    {
+      "produto": "MISTO Q MULTIGRAOS",
+      "quantidade": "13,000",
+      "valor_unit": "15,50",
+      "valor_total": "201,50",
+      "custo_medio": "0,00",
+      "grupo": "SANDUICHES",
+      "subgrupo": "Chapa",
+      "cod_produto": "209"
+    },
+    {
+      "produto": "MISTO TORRADA PETROPOLIS",
+      "quantidade": "40,000",
+      "valor_unit": "18,50",
+      "valor_total": "740,00",
+      "custo_medio": "0,00",
+      "grupo": "SANDUICHES",
+      "subgrupo": "Chapa",
+      "cod_produto": "210"
+    },
+    {
+      "produto": "MOKA GRD",
+      "quantidade": "17,000",
+      "valor_unit": "18,50",
+      "valor_total": "314,50",
+      "custo_medio": "0,00",
+      "grupo": "BEBIDAS QUENTES",
+      "subgrupo": "Café",
+      "cod_produto": "34"
+    },
+    {
+      "produto": "MORANGO - DELICIOSA NAKED F13",
+      "quantidade": "164,000",
+      "valor_unit": "151,00",
+      "valor_total": "24.935,50",
+      "custo_medio": "3.447,01",
+      "grupo": "TORTA",
+      "subgrupo": "Torta F13",
+      "cod_produto": "232"
+    },
+    {
+      "produto": "MORANGO - DELICIOSA NAKED F20",
+      "quantidade": "143,000",
+      "valor_unit": "242,24",
+      "valor_total": "34.866,00",
+      "custo_medio": "5.635,88",
+      "grupo": "TORTA",
+      "subgrupo": "Torta F20",
+      "cod_produto": "633"
+    },
+    {
+      "produto": "MORANGO - DELICIOSA NAKED F25",
+      "quantidade": "101,000",
+      "valor_unit": "322,78",
+      "valor_total": "33.008,25",
+      "custo_medio": "5.241,01",
+      "grupo": "TORTA",
+      "subgrupo": "Torta F25",
+      "cod_produto": "259"
+    },
+    {
+      "produto": "MORANGO - DELICIOSA NAKED F30",
+      "quantidade": "1,000",
+      "valor_unit": "640,00",
+      "valor_total": "640,00",
+      "custo_medio": "88,97",
+      "grupo": "TORTA",
+      "subgrupo": "Torta F30",
+      "cod_produto": "273"
+    },
+    {
+      "produto": "MORANGO - FT DELICIOSA",
+      "quantidade": "753,000",
+      "valor_unit": "36,08",
+      "valor_total": "27.348,75",
+      "custo_medio": "5.355,22",
+      "grupo": "TORTA",
+      "subgrupo": "Torta Fatia",
+      "cod_produto": "281"
+    },
+    {
+      "produto": "MORANGO AO LEITE",
+      "quantidade": "6,000",
+      "valor_unit": "17,50",
+      "valor_total": "105,00",
+      "custo_medio": "0,00",
+      "grupo": "BEBIDAS LACTEAS",
+      "subgrupo": "Vitaminas",
+      "cod_produto": "26"
+    },
+    {
+      "produto": "MORANGO CONGELADO KG",
+      "quantidade": "3,000",
+      "valor_unit": "16,00",
+      "valor_total": "48,00",
+      "custo_medio": "46,79",
+      "grupo": "CAFÉ DA MANHÃ",
+      "subgrupo": "FRUTAS",
+      "cod_produto": "1782"
+    },
+    {
+      "produto": "NOVA SWEET DARK F13",
+      "quantidade": "25,000",
+      "valor_unit": "138,56",
+      "valor_total": "3.464,00",
+      "custo_medio": "565,45",
+      "grupo": "TORTA",
+      "subgrupo": "Torta F13",
+      "cod_produto": "1189"
+    },
+    {
+      "produto": "NOVA SWEET DARK F25",
+      "quantidade": "20,000",
+      "valor_unit": "266,58",
+      "valor_total": "5.464,00",
+      "custo_medio": "985,46",
+      "grupo": "TORTA",
+      "subgrupo": "Torta F25",
+      "cod_produto": "1190"
+    },
+    {
+      "produto": "OMELETE",
+      "quantidade": "15,000",
+      "valor_unit": "22,00",
+      "valor_total": "330,00",
+      "custo_medio": "0,00",
+      "grupo": "PORÇÃO",
+      "subgrupo": "Ovos",
+      "cod_produto": "1147"
+    },
+    {
+      "produto": "OVOS MEXIDOS",
+      "quantidade": "46,000",
+      "valor_unit": "12,00",
+      "valor_total": "552,00",
+      "custo_medio": "0,00",
+      "grupo": "PORÇÃO",
+      "subgrupo": "Ovos",
+      "cod_produto": "197"
+    },
+    {
+      "produto": "PAO CHAPA MULTIGRAOS",
+      "quantidade": "6,000",
+      "valor_unit": "10,90",
+      "valor_total": "65,40",
+      "custo_medio": "0,00",
+      "grupo": "SANDUICHES",
+      "subgrupo": "Chapa",
+      "cod_produto": "211"
+    },
+    {
+      "produto": "PAO DE QUEIJO",
+      "quantidade": "498,000",
+      "valor_unit": "6,80",
+      "valor_total": "3.386,41",
+      "custo_medio": "0,00",
+      "grupo": "SANDUICHES",
+      "subgrupo": "Forno",
+      "cod_produto": "205"
+    },
+    {
+      "produto": "PAO FRANCES CHAPA",
+      "quantidade": "47,000",
+      "valor_unit": "8,90",
+      "valor_total": "418,31",
+      "custo_medio": "0,00",
+      "grupo": "SANDUICHES",
+      "subgrupo": "Chapa",
+      "cod_produto": "212"
+    },
+    {
+      "produto": "PAO ITALIANO",
+      "quantidade": "108,000",
+      "valor_unit": "7,50",
+      "valor_total": "810,00",
+      "custo_medio": "134,32",
+      "grupo": "SANDUICHES",
+      "subgrupo": "Forno",
+      "cod_produto": "219"
+    },
+    {
+      "produto": "PAO NA CHAPA CROISSANT",
+      "quantidade": "7,000",
+      "valor_unit": "15,50",
+      "valor_total": "108,50",
+      "custo_medio": "0,00",
+      "grupo": "SANDUICHES",
+      "subgrupo": "Chapa",
+      "cod_produto": "206"
+    },
+    {
+      "produto": "PET HAPPY",
+      "quantidade": "25,000",
+      "valor_unit": "11,14",
+      "valor_total": "290,00",
+      "custo_medio": "23,75",
+      "grupo": "PET",
+      "subgrupo": "Bolinho Pet",
+      "cod_produto": "196"
+    },
+    {
+      "produto": "PETROPOLIS CHAPA",
+      "quantidade": "16,000",
+      "valor_unit": "13,50",
+      "valor_total": "216,00",
+      "custo_medio": "0,00",
+      "grupo": "SANDUICHES",
+      "subgrupo": "Chapa",
+      "cod_produto": "213"
+    },
+    {
+      "produto": "PUDIM POTE UN",
+      "quantidade": "43,000",
+      "valor_unit": "20,68",
+      "valor_total": "886,00",
+      "custo_medio": "232,58",
+      "grupo": "PUDIM",
+      "subgrupo": "Pudim Individual",
+      "cod_produto": "198"
+    },
+    {
+      "produto": "QUEBRA NOZES F13",
+      "quantidade": "6,000",
+      "valor_unit": "131,00",
+      "valor_total": "786,00",
+      "custo_medio": "93,78",
+      "grupo": "TORTA",
+      "subgrupo": "Torta F13",
+      "cod_produto": "237"
+    },
+    {
+      "produto": "QUEBRA NOZES F25",
+      "quantidade": "2,000",
+      "valor_unit": "285,70",
+      "valor_total": "571,40",
+      "custo_medio": "72,50",
+      "grupo": "TORTA",
+      "subgrupo": "Torta F25",
+      "cod_produto": "264"
+    },
+    {
+      "produto": "QUEIJO Q CROISSANT",
+      "quantidade": "21,000",
+      "valor_unit": "18,50",
+      "valor_total": "388,50",
+      "custo_medio": "0,00",
+      "grupo": "SANDUICHES",
+      "subgrupo": "Chapa",
+      "cod_produto": "214"
+    },
+    {
+      "produto": "QUEIJO Q MULTIGRAOS",
+      "quantidade": "8,000",
+      "valor_unit": "15,50",
+      "valor_total": "124,00",
+      "custo_medio": "0,00",
+      "grupo": "SANDUICHES",
+      "subgrupo": "Chapa",
+      "cod_produto": "215"
+    },
+    {
+      "produto": "QUEIJO Q PAO FRANCES",
+      "quantidade": "19,000",
+      "valor_unit": "13,50",
+      "valor_total": "256,50",
+      "custo_medio": "0,00",
+      "grupo": "SANDUICHES",
+      "subgrupo": "Chapa",
+      "cod_produto": "216"
+    },
+    {
+      "produto": "QUEIJO Q TORRADA PETROPOLIS",
+      "quantidade": "7,000",
+      "valor_unit": "18,50",
+      "valor_total": "129,50",
+      "custo_medio": "0,00",
+      "grupo": "SANDUICHES",
+      "subgrupo": "Chapa",
+      "cod_produto": "217"
+    },
+    {
+      "produto": "QUICHE ALHO PORO F13",
+      "quantidade": "118,000",
+      "valor_unit": "20,64",
+      "valor_total": "2.437,80",
+      "custo_medio": "172,35",
+      "grupo": "TORTA SALGADA",
+      "subgrupo": "Fatia Salgada",
+      "cod_produto": "302"
+    },
+    {
+      "produto": "QUICHE ALHO PORO F25",
+      "quantidade": "9,000",
+      "valor_unit": "178,44",
+      "valor_total": "1.606,00",
+      "custo_medio": "244,80",
+      "grupo": "TORTA SALGADA",
+      "subgrupo": "Salgada F25",
+      "cod_produto": "299"
+    },
+    {
+      "produto": "QUICHE CEBOLA F13",
+      "quantidade": "47,000",
+      "valor_unit": "21,56",
+      "valor_total": "1.019,40",
+      "custo_medio": "63,45",
+      "grupo": "TORTA SALGADA",
+      "subgrupo": "Fatia Salgada",
+      "cod_produto": "303"
+    },
+    {
+      "produto": "QUICHE CEBOLA F25",
+      "quantidade": "7,000",
+      "valor_unit": "180,86",
+      "valor_total": "1.266,00",
+      "custo_medio": "157,22",
+      "grupo": "TORTA SALGADA",
+      "subgrupo": "Salgada F25",
+      "cod_produto": "300"
+    },
+    {
+      "produto": "QUICHE PRESUNTO F13",
+      "quantidade": "28,000",
+      "valor_unit": "23,16",
+      "valor_total": "642,40",
+      "custo_medio": "39,48",
+      "grupo": "TORTA SALGADA",
+      "subgrupo": "Fatia Salgada",
+      "cod_produto": "1342"
+    },
+    {
+      "produto": "QUICHE PRESUNTO F25",
+      "quantidade": "7,000",
+      "valor_unit": "178,14",
+      "valor_total": "1.247,00",
+      "custo_medio": "241,71",
+      "grupo": "TORTA SALGADA",
+      "subgrupo": "Salgada F25",
+      "cod_produto": "1341"
+    },
+    {
+      "produto": "QUINDIM UN",
+      "quantidade": "123,000",
+      "valor_unit": "11,74",
+      "valor_total": "1.464,00",
+      "custo_medio": "145,14",
+      "grupo": "ESPECIALIDADES DE OVOS",
+      "subgrupo": "Individual",
+      "cod_produto": "168"
+    },
+    {
+      "produto": "RED VELVET F13",
+      "quantidade": "18,000",
+      "valor_unit": "143,83",
+      "valor_total": "2.589,00",
+      "custo_medio": "435,67",
+      "grupo": "TORTA",
+      "subgrupo": "Torta F13",
+      "cod_produto": "238"
+    },
+    {
+      "produto": "RED VELVET F20",
+      "quantidade": "20,000",
+      "valor_unit": "225,64",
+      "valor_total": "4.512,75",
+      "custo_medio": "867,03",
+      "grupo": "TORTA",
+      "subgrupo": "Torta F20",
+      "cod_produto": "249"
+    },
+    {
+      "produto": "RED VELVET F25",
+      "quantidade": "10,000",
+      "valor_unit": "332,78",
+      "valor_total": "3.352,75",
+      "custo_medio": "655,51",
+      "grupo": "TORTA",
+      "subgrupo": "Torta F25",
+      "cod_produto": "265"
+    },
+    {
+      "produto": "ROCAMBOLE LARANJA F25",
+      "quantidade": "4,000",
+      "valor_unit": "188,00",
+      "valor_total": "752,00",
+      "custo_medio": "131,04",
+      "grupo": "TORTA",
+      "subgrupo": "Torta F25",
+      "cod_produto": "266"
+    },
+    {
+      "produto": "SALADA MONTADA",
+      "quantidade": "27,000",
+      "valor_unit": "26,50",
+      "valor_total": "715,50",
+      "custo_medio": "0,00",
+      "grupo": "REFEIÇÃO",
+      "subgrupo": "Saladas",
+      "cod_produto": "202"
+    },
+    {
+      "produto": "SALADA VERAO",
+      "quantidade": "75,000",
+      "valor_unit": "30,90",
+      "valor_total": "2.317,50",
+      "custo_medio": "0,00",
+      "grupo": "REFEIÇÃO",
+      "subgrupo": "Saladas",
+      "cod_produto": "203"
+    },
+    {
+      "produto": "SHOT LIMAO",
+      "quantidade": "13,000",
+      "valor_unit": "2,00",
+      "valor_total": "26,00",
+      "custo_medio": "0,00",
+      "grupo": "BEBIDAS FRIAS",
+      "subgrupo": "Suco Natural",
+      "cod_produto": "1164"
+    },
+    {
+      "produto": "SINO DE NOZES",
+      "quantidade": "1,000",
+      "valor_unit": "265,30",
+      "valor_total": "265,30",
+      "custo_medio": "45,10",
+      "grupo": "ESPECIAL",
+      "subgrupo": "Torta Natal",
+      "cod_produto": "296"
+    },
+    {
+      "produto": "SODA ITALIANA MACA VERDE",
+      "quantidade": "9,000",
+      "valor_unit": "12,90",
+      "valor_total": "116,10",
+      "custo_medio": "66,36",
+      "grupo": "BEBIDAS FRIAS",
+      "subgrupo": "Refrigerantes",
+      "cod_produto": "1855"
+    },
+    {
+      "produto": "SODA ITALIANA TANGERINA",
+      "quantidade": "8,000",
+      "valor_unit": "12,90",
+      "valor_total": "103,20",
+      "custo_medio": "42,84",
+      "grupo": "BEBIDAS FRIAS",
+      "subgrupo": "Refrigerantes",
+      "cod_produto": "1853"
+    },
+    {
+      "produto": "STRUDEL DIET",
+      "quantidade": "13,000",
+      "valor_unit": "16,00",
+      "valor_total": "208,00",
+      "custo_medio": "0,00",
+      "grupo": "TORTA",
+      "subgrupo": "Diet",
+      "cod_produto": "223"
+    },
+    {
+      "produto": "SUCO ABACAXI",
+      "quantidade": "11,000",
+      "valor_unit": "15,50",
+      "valor_total": "170,50",
+      "custo_medio": "0,00",
+      "grupo": "BEBIDAS FRIAS",
+      "subgrupo": "Suco Natural",
+      "cod_produto": "15"
+    },
+    {
+      "produto": "SUCO LARANJA",
+      "quantidade": "79,000",
+      "valor_unit": "12,00",
+      "valor_total": "948,00",
+      "custo_medio": "0,00",
+      "grupo": "BEBIDAS FRIAS",
+      "subgrupo": "Suco Natural",
+      "cod_produto": "17"
+    },
+    {
+      "produto": "SUCO LARANJA C/ MORANGO",
+      "quantidade": "33,000",
+      "valor_unit": "15,50",
+      "valor_total": "511,50",
+      "custo_medio": "0,00",
+      "grupo": "BEBIDAS FRIAS",
+      "subgrupo": "Suco Natural",
+      "cod_produto": "16"
+    },
+    {
+      "produto": "SUCO MORANGO",
+      "quantidade": "4,000",
+      "valor_unit": "15,50",
+      "valor_total": "62,00",
+      "custo_medio": "0,00",
+      "grupo": "BEBIDAS FRIAS",
+      "subgrupo": "Suco Natural",
+      "cod_produto": "19"
+    },
+    {
+      "produto": "TAÇA VINHO BRANCO",
+      "quantidade": "1,000",
+      "valor_unit": "35,00",
+      "valor_total": "35,00",
+      "custo_medio": "3,46",
+      "grupo": "BEBIDAS FRIAS",
+      "subgrupo": "Refrigerantes",
+      "cod_produto": "1658"
+    },
+    {
+      "produto": "TAÇA VINHO TINTO",
+      "quantidade": "1,000",
+      "valor_unit": "35,00",
+      "valor_total": "35,00",
+      "custo_medio": "3,46",
+      "grupo": "BEBIDAS FRIAS",
+      "subgrupo": "Refrigerantes",
+      "cod_produto": "1657"
+    },
+    {
+      "produto": "Taxa de entrega",
+      "quantidade": "1.662,000",
+      "valor_unit": "12,63",
+      "valor_total": "20.996,20",
+      "custo_medio": "0,00",
+      "grupo": "",
+      "subgrupo": "",
+      "cod_produto": "650"
+    },
+    {
+      "produto": "Taxa de Serviço",
+      "quantidade": "1.917,000",
+      "valor_unit": "1,42",
+      "valor_total": "2.728,16",
+      "custo_medio": "0,00",
+      "grupo": "",
+      "subgrupo": "",
+      "cod_produto": "657"
+    },
+    {
+      "produto": "TENTACAO F13",
+      "quantidade": "66,000",
+      "valor_unit": "120,69",
+      "valor_total": "8.090,00",
+      "custo_medio": "975,59",
+      "grupo": "TORTA",
+      "subgrupo": "Torta F13",
+      "cod_produto": "240"
+    },
+    {
+      "produto": "TENTACAO F25",
+      "quantidade": "56,000",
+      "valor_unit": "232,47",
+      "valor_total": "13.403,15",
+      "custo_medio": "2.123,37",
+      "grupo": "TORTA",
+      "subgrupo": "Torta F25",
+      "cod_produto": "267"
+    },
+    {
+      "produto": "TORTA BAILE DE CHOCOLATE F25",
+      "quantidade": "1,000",
+      "valor_unit": "260,00",
+      "valor_total": "260,00",
+      "custo_medio": "38,95",
+      "grupo": "TORTA",
+      "subgrupo": "Torta F25",
+      "cod_produto": "1896"
+    },
+    {
+      "produto": "TORTA BANANA F13",
+      "quantidade": "5,000",
+      "valor_unit": "134,00",
+      "valor_total": "670,00",
+      "custo_medio": "66,65",
+      "grupo": "TORTA",
+      "subgrupo": "Torta F13",
+      "cod_produto": "241"
+    },
+    {
+      "produto": "TORTA BANANA F22",
+      "quantidade": "4,000",
+      "valor_unit": "227,00",
+      "valor_total": "908,00",
+      "custo_medio": "139,32",
+      "grupo": "TORTA",
+      "subgrupo": "Torta F22",
+      "cod_produto": "268"
+    },
+    {
+      "produto": "TORTA LIMAO F13",
+      "quantidade": "8,000",
+      "valor_unit": "95,00",
+      "valor_total": "760,00",
+      "custo_medio": "87,29",
+      "grupo": "TORTA",
+      "subgrupo": "Torta F13",
+      "cod_produto": "242"
+    },
+    {
+      "produto": "TORTA LIMAO F25",
+      "quantidade": "11,000",
+      "valor_unit": "241,78",
+      "valor_total": "2.659,60",
+      "custo_medio": "322,19",
+      "grupo": "TORTA",
+      "subgrupo": "Torta F25",
+      "cod_produto": "269"
+    },
+    {
+      "produto": "TORTA MOUSSE F13",
+      "quantidade": "28,000",
+      "valor_unit": "133,38",
+      "valor_total": "3.676,00",
+      "custo_medio": "563,08",
+      "grupo": "TORTA",
+      "subgrupo": "Torta F13",
+      "cod_produto": "243"
+    },
+    {
+      "produto": "TORTA MOUSSE F25",
+      "quantidade": "7,000",
+      "valor_unit": "310,51",
+      "valor_total": "2.173,55",
+      "custo_medio": "348,67",
+      "grupo": "TORTA",
+      "subgrupo": "Torta F25",
+      "cod_produto": "270"
+    },
+    {
+      "produto": "TORTINHA BABA",
+      "quantidade": "67,000",
+      "valor_unit": "14,19",
+      "valor_total": "997,10",
+      "custo_medio": "1.108,85",
+      "grupo": "TORTINHAS",
+      "subgrupo": "Tortinha Unitária",
+      "cod_produto": "307"
+    },
+    {
+      "produto": "TORTINHA CHOCOLATE",
+      "quantidade": "52,000",
+      "valor_unit": "15,42",
+      "valor_total": "804,00",
+      "custo_medio": "134,60",
+      "grupo": "TORTINHAS",
+      "subgrupo": "Tortinha Unitária",
+      "cod_produto": "308"
+    },
+    {
+      "produto": "TORTINHA GOURMET BABA FESTA CX",
+      "quantidade": "9,000",
+      "valor_unit": "48,77",
+      "valor_total": "438,90",
+      "custo_medio": "67,21",
+      "grupo": "TORTINHAS",
+      "subgrupo": "Caixa C 6UN",
+      "cod_produto": "304"
+    },
+    {
+      "produto": "TORTINHA GOURMET BABA FESTA UN",
+      "quantidade": "10,000",
+      "valor_unit": "8,00",
+      "valor_total": "80,00",
+      "custo_medio": "8,03",
+      "grupo": "TORTINHAS",
+      "subgrupo": "Tortinha Unitária",
+      "cod_produto": "653"
+    },
+    {
+      "produto": "TORTINHA GOURMET CHOCO FESTA CX",
+      "quantidade": "20,000",
+      "valor_unit": "49,39",
+      "valor_total": "995,65",
+      "custo_medio": "159,89",
+      "grupo": "TORTINHAS",
+      "subgrupo": "Caixa C 6UN",
+      "cod_produto": "305"
+    },
+    {
+      "produto": "TORTINHA GOURMET CHOCO FESTA UN",
+      "quantidade": "8,000",
+      "valor_unit": "8,00",
+      "valor_total": "64,00",
+      "custo_medio": "8,40",
+      "grupo": "TORTINHAS",
+      "subgrupo": "Tortinha Unitária",
+      "cod_produto": "654"
+    },
+    {
+      "produto": "TORTINHA GOURMET MISTA FESTA CX",
+      "quantidade": "23,000",
+      "valor_unit": "51,31",
+      "valor_total": "1.192,30",
+      "custo_medio": "177,80",
+      "grupo": "TORTINHAS",
+      "subgrupo": "Caixa C 6UN",
+      "cod_produto": "306"
+    },
+    {
+      "produto": "VELA CORACAO 4UN",
+      "quantidade": "5,000",
+      "valor_unit": "31,40",
+      "valor_total": "157,00",
+      "custo_medio": "28,65",
+      "grupo": "PAPELARIA",
+      "subgrupo": "Vela",
+      "cod_produto": "1353"
+    },
+    {
+      "produto": "VELA DESING PARABENS NEON",
+      "quantidade": "6,000",
+      "valor_unit": "33,00",
+      "valor_total": "201,00",
+      "custo_medio": "63,80",
+      "grupo": "PAPELARIA",
+      "subgrupo": "Vela",
+      "cod_produto": "1356"
+    },
+    {
+      "produto": "VELA DESING PARABENS PRATA",
+      "quantidade": "9,000",
+      "valor_unit": "32,33",
+      "valor_total": "291,00",
+      "custo_medio": "87,41",
+      "grupo": "PAPELARIA",
+      "subgrupo": "Vela",
+      "cod_produto": "1357"
+    },
+    {
+      "produto": "VELA DOURADA NUMERO - 0",
+      "quantidade": "1,000",
+      "valor_unit": "10,00",
+      "valor_total": "10,00",
+      "custo_medio": "3,41",
+      "grupo": "PAPELARIA",
+      "subgrupo": "Vela",
+      "cod_produto": "1391"
+    },
+    {
+      "produto": "VELA DOURADA NUMERO - 1",
+      "quantidade": "4,000",
+      "valor_unit": "10,00",
+      "valor_total": "40,00",
+      "custo_medio": "12,42",
+      "grupo": "PAPELARIA",
+      "subgrupo": "Vela",
+      "cod_produto": "1392"
+    },
+    {
+      "produto": "VELA DOURADA NUMERO - 3",
+      "quantidade": "4,000",
+      "valor_unit": "10,00",
+      "valor_total": "40,00",
+      "custo_medio": "12,42",
+      "grupo": "PAPELARIA",
+      "subgrupo": "Vela",
+      "cod_produto": "1394"
+    },
+    {
+      "produto": "VELA DOURADA NUMERO - 4",
+      "quantidade": "2,000",
+      "valor_unit": "10,00",
+      "valor_total": "20,00",
+      "custo_medio": "6,21",
+      "grupo": "PAPELARIA",
+      "subgrupo": "Vela",
+      "cod_produto": "1395"
+    },
+    {
+      "produto": "VELA DOURADA NUMERO - 5",
+      "quantidade": "4,000",
+      "valor_unit": "10,00",
+      "valor_total": "40,00",
+      "custo_medio": "12,44",
+      "grupo": "PAPELARIA",
+      "subgrupo": "Vela",
+      "cod_produto": "1396"
+    },
+    {
+      "produto": "VELA DOURADA NUMERO - 6",
+      "quantidade": "2,000",
+      "valor_unit": "10,00",
+      "valor_total": "20,00",
+      "custo_medio": "6,22",
+      "grupo": "PAPELARIA",
+      "subgrupo": "Vela",
+      "cod_produto": "1397"
+    },
+    {
+      "produto": "VELA DOURADA NUMERO - 7",
+      "quantidade": "1,000",
+      "valor_unit": "10,00",
+      "valor_total": "10,00",
+      "custo_medio": "3,11",
+      "grupo": "PAPELARIA",
+      "subgrupo": "Vela",
+      "cod_produto": "1398"
+    },
+    {
+      "produto": "VELA DOURADA NUMERO - 9",
+      "quantidade": "2,000",
+      "valor_unit": "10,00",
+      "valor_total": "20,00",
+      "custo_medio": "6,21",
+      "grupo": "PAPELARIA",
+      "subgrupo": "Vela",
+      "cod_produto": "1400"
+    },
+    {
+      "produto": "VELA DOURADA NUMERO - X",
+      "quantidade": "4,000",
+      "valor_unit": "10,00",
+      "valor_total": "40,00",
+      "custo_medio": "12,42",
+      "grupo": "PAPELARIA",
+      "subgrupo": "Vela",
+      "cod_produto": "1401"
+    },
+    {
+      "produto": "VELA ESPIRAL FINA ROSE 4UN",
+      "quantidade": "8,000",
+      "valor_unit": "23,63",
+      "valor_total": "189,00",
+      "custo_medio": "29,76",
+      "grupo": "PAPELARIA",
+      "subgrupo": "Vela",
+      "cod_produto": "1354"
+    },
+    {
+      "produto": "VELA ESTRELA DOURADA 4UN",
+      "quantidade": "11,000",
+      "valor_unit": "27,18",
+      "valor_total": "299,00",
+      "custo_medio": "88,03",
+      "grupo": "PAPELARIA",
+      "subgrupo": "Vela",
+      "cod_produto": "1355"
+    },
+    {
+      "produto": "VELA FAISCA",
+      "quantidade": "25,000",
+      "valor_unit": "15,73",
+      "valor_total": "391,00",
+      "custo_medio": "0,00",
+      "grupo": "PAPELARIA",
+      "subgrupo": "Vela",
+      "cod_produto": "189"
+    },
+    {
+      "produto": "VELA PARABENS NEON",
+      "quantidade": "2,000",
+      "valor_unit": "33,50",
+      "valor_total": "67,00",
+      "custo_medio": "21,27",
+      "grupo": "PAPELARIA",
+      "subgrupo": "Vela",
+      "cod_produto": "1356"
+    },
+    {
+      "produto": "VELA PARABENS PRATA",
+      "quantidade": "3,000",
+      "valor_unit": "37,00",
+      "valor_total": "111,00",
+      "custo_medio": "29,14",
+      "grupo": "PAPELARIA",
+      "subgrupo": "Vela",
+      "cod_produto": "1357"
+    },
+    {
+      "produto": "VELA PRATA NUMERO - 0",
+      "quantidade": "1,000",
+      "valor_unit": "10,00",
+      "valor_total": "10,00",
+      "custo_medio": "3,41",
+      "grupo": "PAPELARIA",
+      "subgrupo": "Vela",
+      "cod_produto": "1380"
+    },
+    {
+      "produto": "VELA PRATA NUMERO - 1",
+      "quantidade": "1,000",
+      "valor_unit": "10,00",
+      "valor_total": "10,00",
+      "custo_medio": "3,41",
+      "grupo": "PAPELARIA",
+      "subgrupo": "Vela",
+      "cod_produto": "1381"
+    },
+    {
+      "produto": "VELA PRATA NUMERO - 2",
+      "quantidade": "3,000",
+      "valor_unit": "10,00",
+      "valor_total": "30,00",
+      "custo_medio": "10,22",
+      "grupo": "PAPELARIA",
+      "subgrupo": "Vela",
+      "cod_produto": "1382"
+    },
+    {
+      "produto": "VELA PRATA NUMERO - 3",
+      "quantidade": "4,000",
+      "valor_unit": "10,00",
+      "valor_total": "40,00",
+      "custo_medio": "13,62",
+      "grupo": "PAPELARIA",
+      "subgrupo": "Vela",
+      "cod_produto": "1383"
+    },
+    {
+      "produto": "VELA PRATA NUMERO - 4",
+      "quantidade": "3,000",
+      "valor_unit": "10,00",
+      "valor_total": "30,00",
+      "custo_medio": "10,22",
+      "grupo": "PAPELARIA",
+      "subgrupo": "Vela",
+      "cod_produto": "1384"
+    },
+    {
+      "produto": "VELA PRATA NUMERO - 5",
+      "quantidade": "3,000",
+      "valor_unit": "10,00",
+      "valor_total": "30,00",
+      "custo_medio": "10,22",
+      "grupo": "PAPELARIA",
+      "subgrupo": "Vela",
+      "cod_produto": "1385"
+    },
+    {
+      "produto": "VELA PRATA NUMERO - 6",
+      "quantidade": "2,000",
+      "valor_unit": "10,00",
+      "valor_total": "20,00",
+      "custo_medio": "6,81",
+      "grupo": "PAPELARIA",
+      "subgrupo": "Vela",
+      "cod_produto": "1386"
+    },
+    {
+      "produto": "VELA PRATA NUMERO - 8",
+      "quantidade": "1,000",
+      "valor_unit": "10,00",
+      "valor_total": "10,00",
+      "custo_medio": "3,41",
+      "grupo": "PAPELARIA",
+      "subgrupo": "Vela",
+      "cod_produto": "1388"
+    },
+    {
+      "produto": "VELA PRATA NUMERO - X",
+      "quantidade": "3,000",
+      "valor_unit": "10,00",
+      "valor_total": "30,00",
+      "custo_medio": "10,22",
+      "grupo": "PAPELARIA",
+      "subgrupo": "Vela",
+      "cod_produto": "1390"
+    },
+    {
+      "produto": "VELA VULCAO DOURADA",
+      "quantidade": "10,000",
+      "valor_unit": "25,40",
+      "valor_total": "254,00",
+      "custo_medio": "0,00",
+      "grupo": "PAPELARIA",
+      "subgrupo": "Vela",
+      "cod_produto": "193"
+    },
+    {
+      "produto": "VULCAO CENOURA",
+      "quantidade": "70,000",
+      "valor_unit": "26,73",
+      "valor_total": "1.862,80",
+      "custo_medio": "179,39",
+      "grupo": "BOLO",
+      "subgrupo": "Vulcão",
+      "cod_produto": "54"
+    },
+    {
+      "produto": "VULCAO DE NUTELLA",
+      "quantidade": "41,000",
+      "valor_unit": "25,14",
+      "valor_total": "1.065,30",
+      "custo_medio": "166,22",
+      "grupo": "BOLO",
+      "subgrupo": "Vulcão",
+      "cod_produto": "55"
+    },
+    {
+      "produto": "VULCAO DIVERTIDO",
+      "quantidade": "38,000",
+      "valor_unit": "23,25",
+      "valor_total": "881,90",
+      "custo_medio": "118,73",
+      "grupo": "BOLO",
+      "subgrupo": "Vulcão",
+      "cod_produto": "630"
+    },
+    {
+      "produto": "VULCAO RED VELVET",
+      "quantidade": "5,000",
+      "valor_unit": "24,76",
+      "valor_total": "123,80",
+      "custo_medio": "14,46",
+      "grupo": "BOLO",
+      "subgrupo": "Vulcão",
+      "cod_produto": "961"
+    },
+    {
+      "produto": "WAFFEL SIMPLES",
+      "quantidade": "5,000",
+      "valor_unit": "20,00",
+      "valor_total": "100,00",
+      "custo_medio": "0,00",
+      "grupo": "CAFÉ DA MANHÃ",
+      "subgrupo": "Waffle",
+      "cod_produto": "1026"
+    }
+  ]
+}

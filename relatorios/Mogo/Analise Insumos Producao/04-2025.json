@@ -1,0 +1,81 @@
+{
+  "periodo": {
+    "de": "01/04/2025",
+    "ate": "30/04/2025"
+  },
+  "total_registros": 8,
+  "registros": [
+    {
+      "data": "04/04/2025",
+      "hora": "13:29:10",
+      "produto_produzido": "(prod) Cebola Limpa (kg)",
+      "insumo": "(ins) Cebola Fresca (kg)",
+      "qtde": "2,990",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "04/04/2025",
+      "hora": "13:08:55",
+      "produto_produzido": "(prod) Maravilha Abacaxi F25 (un)",
+      "insumo": "(prod) Creme Cake Patisserie (kg)",
+      "qtde": "16,000",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "04/04/2025",
+      "hora": "13:08:55",
+      "produto_produzido": "(prod) Maravilha Abacaxi F25 (un)",
+      "insumo": "(ins) Coco Ralado Fresco (kg)",
+      "qtde": "1,000",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "04/04/2025",
+      "hora": "13:08:55",
+      "produto_produzido": "(prod) Maravilha Abacaxi F25 (un)",
+      "insumo": "(ins) Geleia de Brilho Neutra (kg)",
+      "qtde": "1,000",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "04/04/2025",
+      "hora": "13:08:55",
+      "produto_produzido": "(prod) Maravilha Abacaxi F25 (un)",
+      "insumo": "(prod) Abacaxi Limpo (kg)",
+      "qtde": "20,000",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "04/04/2025",
+      "hora": "13:08:55",
+      "produto_produzido": "(prod) Maravilha Abacaxi F25 (un)",
+      "insumo": "(desc) Disco Cake 29 Micro (und)",
+      "qtde": "20,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "04/04/2025",
+      "hora": "13:08:55",
+      "produto_produzido": "(prod) Maravilha Abacaxi F25 (un)",
+      "insumo": "(prod) Merengue (kg)",
+      "qtde": "6,000",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "04/04/2025",
+      "hora": "13:08:55",
+      "produto_produzido": "(prod) Maravilha Abacaxi F25 (un)",
+      "insumo": "(prod) Batido Branco (kg)",
+      "qtde": "15,400",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    }
+  ]
+}

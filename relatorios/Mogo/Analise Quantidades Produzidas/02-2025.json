@@ -1,0 +1,109 @@
+{
+  "periodo": {
+    "de": "01/02/2025",
+    "ate": "28/02/2025"
+  },
+  "total_registros": 11,
+  "custo_total": "R$ 19.843,89",
+  "registros": [
+    {
+      "data": "18/02/2025",
+      "hora": "17:26:57",
+      "produto": "(prod) Alema F22 (un)",
+      "qtde": "1,000",
+      "custo_unit": "43,82",
+      "custo_total": "43,82",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "18/02/2025",
+      "hora": "17:20:51",
+      "produto": "(prod) Creme de Alema (kg)",
+      "qtde": "10,000",
+      "custo_unit": "29,97",
+      "custo_total": "299,72",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "18/02/2025",
+      "hora": "17:00:56",
+      "produto": "(prod) Alema F22 (un)",
+      "qtde": "17,000",
+      "custo_unit": "16,85",
+      "custo_total": "286,40",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "18/02/2025",
+      "hora": "11:40:39",
+      "produto": "(prod) Creme de Alema (kg)",
+      "qtde": "10,000",
+      "custo_unit": "29,97",
+      "custo_total": "299,72",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "10/02/2025",
+      "hora": "16:56:47",
+      "produto": "(prod) Calda Chocolate Alema (kg)",
+      "qtde": "36,000",
+      "custo_unit": "16,54",
+      "custo_total": "595,28",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "10/02/2025",
+      "hora": "16:56:47",
+      "produto": "(prod) Creme de Alema (kg)",
+      "qtde": "170,000",
+      "custo_unit": "29,95",
+      "custo_total": "5.092,17",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "10/02/2025",
+      "hora": "16:56:46",
+      "produto": "(prod) Alema F22 (un)",
+      "qtde": "17,000",
+      "custo_unit": "23,07",
+      "custo_total": "392,13",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "10/02/2025",
+      "hora": "16:29:47",
+      "produto": "(prod) Nova Cobertura de Brigadeiro (kg)",
+      "qtde": "91,000",
+      "custo_unit": "19,19",
+      "custo_total": "1.745,86",
+      "turno": "Produção"
+    },
+    {
+      "data": "10/02/2025",
+      "hora": "16:29:47",
+      "produto": "(prod) Recheio Torta Mousse Chocolate (kg)",
+      "qtde": "495,000",
+      "custo_unit": "19,32",
+      "custo_total": "9.564,33",
+      "turno": "Produção"
+    },
+    {
+      "data": "10/02/2025",
+      "hora": "16:29:46",
+      "produto": "(prod) Torta Mousse Chocolate F25 (un)",
+      "qtde": "16,000",
+      "custo_unit": "47,64",
+      "custo_total": "762,23",
+      "turno": "Produção"
+    },
+    {
+      "data": "10/02/2025",
+      "hora": "16:22:22",
+      "produto": "(prod) Torta Mousse Chocolate F25 (un)",
+      "qtde": "16,000",
+      "custo_unit": "47,64",
+      "custo_total": "762,23",
+      "turno": "Camara Fria"
+    }
+  ]
+}

@@ -1,0 +1,154 @@
+{
+  "periodo": {
+    "de": "01/04/2025",
+    "ate": "30/04/2025"
+  },
+  "total_registros": 13,
+  "total_credito": "R$ 1.193,00",
+  "total_debito": "R$ 1.123,00",
+  "registros": [
+    {
+      "data": "30/04/2025",
+      "hora": "16:12:15",
+      "cliente": "Nathalia Lira",
+      "cpf": "17172493702",
+      "tipo": "Credito",
+      "descricao": "Red Vevelt",
+      "valor": "188,50",
+      "saldo": "188,50",
+      "financeiro": "Não gerar financeiro"
+    },
+    {
+      "data": "25/04/2025",
+      "hora": "14:16:10",
+      "cliente": "JULIANA DEL BARRIO",
+      "cpf": "02952676909",
+      "tipo": "Debito",
+      "descricao": "Pedido: 061049 (Delivery)",
+      "valor": "203,50",
+      "saldo": "0,00",
+      "financeiro": "Não selecionado"
+    },
+    {
+      "data": "25/04/2025",
+      "hora": "14:12:53",
+      "cliente": "JULIANA DEL BARRIO",
+      "cpf": "02952676909",
+      "tipo": "Credito",
+      "descricao": "Deliciosa aro 20 Pedido: 060864",
+      "valor": "203,50",
+      "saldo": "203,50",
+      "financeiro": "Não gerar financeiro"
+    },
+    {
+      "data": "22/04/2025",
+      "hora": "12:27:56",
+      "cliente": "Eliana F Lewkowicz ",
+      "cpf": "46895540725",
+      "tipo": "Credito",
+      "descricao": "Cx  brigadeiro Páscoa 25 unidades",
+      "valor": "88,00",
+      "saldo": "88,00",
+      "financeiro": "Não gerar financeiro"
+    },
+    {
+      "data": "19/04/2025",
+      "hora": "15:34:06",
+      "cliente": "MARIA AMELIA FREITAS DE PAULA PESSOA",
+      "cpf": "53594800768",
+      "tipo": "Debito",
+      "descricao": "Pedido: 059918 (Delivery)",
+      "valor": "60,50",
+      "saldo": "0,00",
+      "financeiro": "Não selecionado"
+    },
+    {
+      "data": "19/04/2025",
+      "hora": "15:31:31",
+      "cliente": "MARIA AMELIA FREITAS DE PAULA PESSOA",
+      "cpf": "53594800768",
+      "tipo": "Credito",
+      "descricao": "Pedido 059918 e Neemo 5478",
+      "valor": "60,50",
+      "saldo": "60,50",
+      "financeiro": "Não gerar financeiro"
+    },
+    {
+      "data": "19/04/2025",
+      "hora": "11:59:32",
+      "cliente": "Maria Beatriz",
+      "cpf": "85993905700",
+      "tipo": "Debito",
+      "descricao": "Pedido: 060035 (Delivery)",
+      "valor": "424,50",
+      "saldo": "0,00",
+      "financeiro": "Não selecionado"
+    },
+    {
+      "data": "19/04/2025",
+      "hora": "11:57:36",
+      "cliente": "Maria Beatriz",
+      "cpf": "85993905700",
+      "tipo": "Credito",
+      "descricao": "Pedido 060035 - Neemo 5489",
+      "valor": "424,50",
+      "saldo": "424,50",
+      "financeiro": "Não gerar financeiro"
+    },
+    {
+      "data": "17/04/2025",
+      "hora": "18:36:26",
+      "cliente": "VERA A PEREIRA",
+      "cpf": "",
+      "tipo": "Credito",
+      "descricao": "Torta de Banana aro 25  ",
+      "valor": "10,00",
+      "saldo": "10,00",
+      "financeiro": "Não gerar financeiro"
+    },
+    {
+      "data": "17/04/2025",
+      "hora": "11:22:35",
+      "cliente": "Isabela Braga ",
+      "cpf": "01101681780",
+      "tipo": "Credito",
+      "descricao": "Cancelou o pedido 059479",
+      "valor": "203,50",
+      "saldo": "203,50",
+      "financeiro": "Não gerar financeiro"
+    },
+    {
+      "data": "16/04/2025",
+      "hora": "18:38:28",
+      "cliente": "SYMPOSIUM",
+      "cpf": "",
+      "tipo": "Credito",
+      "descricao": "01 torta fantasia aro 25",
+      "valor": "14,50",
+      "saldo": "14,50",
+      "financeiro": "Não gerar financeiro"
+    },
+    {
+      "data": "07/04/2025",
+      "hora": "11:36:07",
+      "cliente": "MARIA CLARA",
+      "cpf": "",
+      "tipo": "Debito",
+      "descricao": "Pedido: 057667 (Delivery)",
+      "valor": "281,50",
+      "saldo": "0,00",
+      "financeiro": "Não selecionado"
+    },
+    {
+      "data": "04/04/2025",
+      "hora": "10:56:09",
+      "cliente": "Mariana Miranda ",
+      "cpf": "12398522741",
+      "tipo": "Debito",
+      "descricao": "Pedido: 057060 (Delivery)",
+      "valor": "153,00",
+      "saldo": "7,00",
+      "financeiro": "Não selecionado"
+    }
+  ]
+}

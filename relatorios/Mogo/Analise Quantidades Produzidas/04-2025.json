@@ -1,0 +1,28 @@
+{
+  "periodo": {
+    "de": "01/04/2025",
+    "ate": "30/04/2025"
+  },
+  "total_registros": 2,
+  "custo_total": "R$ 750,74",
+  "registros": [
+    {
+      "data": "04/04/2025",
+      "hora": "13:29:11",
+      "produto": "(prod) Cebola Limpa (kg)",
+      "qtde": "2,300",
+      "custo_unit": "6,38",
+      "custo_total": "14,68",
+      "turno": "Produção"
+    },
+    {
+      "data": "04/04/2025",
+      "hora": "13:08:56",
+      "produto": "(prod) Maravilha Abacaxi F25 (un)",
+      "qtde": "20,000",
+      "custo_unit": "36,80",
+      "custo_total": "736,06",
+      "turno": "Camara Fria"
+    }
+  ]
+}

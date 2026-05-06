@@ -8,6 +8,9 @@ Modos:
   --mode verify   Verifica os mensais do mês anterior no Drive sem fazer upload (rodar no dia 8)
 
 Regra operacional:
+  - NÃO substitui arquivo já existente no Drive por padrão.
+  - Arquivo baixado/conferido fica travado; reprocessamento só sobe arquivos novos.
+  - Replace exige opção manual explícita: --replace-existing.
   - Cron mensal nunca reprocessa meses antigos.
   - No dia 05/05/2026, por exemplo, só sobe 04-2026 / 2026-04.
   - Backfill histórico exige --period all ou --period YYYY-MM explícito.
@@ -239,8 +242,12 @@ def get_report_folder_ids(target_folders):
     return report_folder_ids
 
 
-def sync_upload(target_folders, period='all', replace_existing=True):
-    """Faz upload/replace dos arquivos locais para o Drive."""
+def sync_upload(target_folders, period='all', replace_existing=False):
+    """Faz upload dos arquivos locais para o Drive.
+
+    Por segurança operacional, não substitui arquivos já existentes no Drive.
+    Replace só acontece quando replace_existing=True é passado explicitamente.
+    """
     report_folder_ids = get_report_folder_ids(target_folders)
     year_folder_ids = build_drive_index(report_folder_ids)
 
@@ -262,6 +269,7 @@ def sync_upload(target_folders, period='all', replace_existing=True):
 
     uploaded = 0
     replaced = 0
+    skipped_existing = 0
     for local_folder in sorted(LOCAL_BASE.iterdir()):
         if not local_folder.is_dir() or local_folder.name in SKIP_FOLDERS:
             continue
@@ -286,13 +294,14 @@ def sync_upload(target_folders, period='all', replace_existing=True):
                     replaced += 1
                     print(f'REPLACED\t{local_folder.name}\t{year}\t{file.name}')
                 else:
+                    skipped_existing += 1
                     print(f'SKIPPED_EXISTING_DRIVE\t{local_folder.name}\t{year}\t{file.name}')
             else:
                 upload(file, year_id)
                 uploaded += 1
                 print(f'UPLOADED\t{local_folder.name}\t{year}\t{file.name}')
 
-    print(f'SUMMARY\tperiod={period}\treplaced={replaced}\tuploaded={uploaded}')
+    print(f'SUMMARY\tperiod={period}\treplaced={replaced}\tuploaded={uploaded}\tskipped_existing={skipped_existing}')
 
 
 def verify_monthly(period='previous'):
@@ -350,19 +359,28 @@ def main():
         help='Para monthly/verify: previous (padrão), all (backfill explícito) ou YYYY-MM'
     )
     parser.add_argument(
+        '--replace-existing',
+        action='store_true',
+        help='PERIGOSO: substitui arquivos já existentes no Drive. Use só em correção manual autorizada.'
+    )
+    parser.add_argument(
         '--no-replace',
         action='store_true',
-        help='Não substitui arquivos já existentes no Drive; útil para backfill histórico.'
+        help='Compatibilidade: não substitui arquivos existentes. Hoje já é o padrão.'
     )
     args = parser.parse_args()
 
+    replace_existing = bool(args.replace_existing)
+    if args.no_replace and args.replace_existing:
+        raise SystemExit('Use apenas uma opção: --no-replace ou --replace-existing')
+
     if args.mode == 'daily':
-        print(f'[MODO: diário] Subindo {len(DAILY_FOLDERS)} pastas: {sorted(DAILY_FOLDERS)}')
-        sync_upload(DAILY_FOLDERS, period='all', replace_existing=not args.no_replace)
+        print(f'[MODO: diário] Subindo {len(DAILY_FOLDERS)} pastas: {sorted(DAILY_FOLDERS)} | replace_existing={replace_existing}')
+        sync_upload(DAILY_FOLDERS, period='all', replace_existing=replace_existing)
 
     elif args.mode == 'monthly':
-        print(f'[MODO: mensal] Subindo {len(MONTHLY_FOLDERS)} pastas mensais | period={args.period}')
-        sync_upload(MONTHLY_FOLDERS, period=args.period, replace_existing=not args.no_replace)
+        print(f'[MODO: mensal] Subindo {len(MONTHLY_FOLDERS)} pastas mensais | period={args.period} | replace_existing={replace_existing}')
+        sync_upload(MONTHLY_FOLDERS, period=args.period, replace_existing=replace_existing)
 
     elif args.mode == 'verify':
         print(f'[MODO: verificação] Checando {len(MONTHLY_FOLDERS)} pastas mensais no Drive | period={args.period}')
@@ -371,9 +389,9 @@ def main():
             exit(1)
 
     else:  # all — comportamento legado
-        print('[MODO: all] Subindo todas as pastas e todos os períodos — uso manual/backfill')
+        print(f'[MODO: all] Subindo todas as pastas e todos os períodos — uso manual/backfill | replace_existing={replace_existing}')
         all_folders = set(FOLDER_MAP.keys())
-        sync_upload(all_folders, period='all', replace_existing=not args.no_replace)
+        sync_upload(all_folders, period='all', replace_existing=replace_existing)
 
 
 if __name__ == '__main__':

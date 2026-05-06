@@ -1,0 +1,46 @@
+{
+  "periodo": {
+    "de": "01/06/2025",
+    "ate": "30/06/2025"
+  },
+  "total_registros": 4,
+  "custo_total": "R$ 33.037,97",
+  "registros": [
+    {
+      "data": "13/06/2025",
+      "hora": "17:43:35",
+      "produto": "(prod) Batido Vulcao Chocolate (un)",
+      "qtde": "24,000",
+      "custo_unit": "0,95",
+      "custo_total": "22,75",
+      "turno": "Produção"
+    },
+    {
+      "data": "13/06/2025",
+      "hora": "17:43:34",
+      "produto": "(prod) Batido Nega Maluca (kg)",
+      "qtde": "2.304,000",
+      "custo_unit": "13,11",
+      "custo_total": "30.192,96",
+      "turno": "Produção"
+    },
+    {
+      "data": "05/06/2025",
+      "hora": "16:24:44",
+      "produto": "(prod) Semi Alema F22 (un)",
+      "qtde": "38,000",
+      "custo_unit": "35,18",
+      "custo_total": "1.336,69",
+      "turno": "Camara Fria"
+    },
+    {
+      "data": "05/06/2025",
+      "hora": "16:24:44",
+      "produto": "(prod) Alema F22 (un)",
+      "qtde": "38,000",
+      "custo_unit": "39,09",
+      "custo_total": "1.485,57",
+      "turno": "Camara Fria"
+    }
+  ]
+}

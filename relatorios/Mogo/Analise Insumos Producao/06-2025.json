@@ -1,0 +1,135 @@
+{
+  "periodo": {
+    "de": "01/06/2025",
+    "ate": "30/06/2025"
+  },
+  "total_registros": 14,
+  "registros": [
+    {
+      "data": "13/06/2025",
+      "hora": "17:43:35",
+      "produto_produzido": "(prod) Batido Vulcao Chocolate (un)",
+      "insumo": "(prod) Batido Nega Maluca (kg)",
+      "qtde": "1,920",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/06/2025",
+      "hora": "17:43:33",
+      "produto_produzido": "(prod) Batido Nega Maluca (kg)",
+      "insumo": "(prod) Farinha Biscoito Maisena (kg)",
+      "qtde": "672,000",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/06/2025",
+      "hora": "17:43:33",
+      "produto_produzido": "(prod) Batido Nega Maluca (kg)",
+      "insumo": "(ins) Oleo De Soja (lt)",
+      "qtde": "192,000",
+      "unidade": "Lt",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/06/2025",
+      "hora": "17:43:33",
+      "produto_produzido": "(prod) Batido Nega Maluca (kg)",
+      "insumo": "(ins) Nescau (kg)",
+      "qtde": "288,000",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/06/2025",
+      "hora": "17:43:33",
+      "produto_produzido": "(prod) Batido Nega Maluca (kg)",
+      "insumo": "(ins) Ovos Jumbo Branco (und)",
+      "qtde": "7.680,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/06/2025",
+      "hora": "17:43:33",
+      "produto_produzido": "(prod) Batido Nega Maluca (kg)",
+      "insumo": "(ins) Farinha De Trigo (kg)",
+      "qtde": "672,000",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/06/2025",
+      "hora": "17:43:33",
+      "produto_produzido": "(prod) Batido Nega Maluca (kg)",
+      "insumo": "(ins) Acucar Refinado (kg)",
+      "qtde": "384,000",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "05/06/2025",
+      "hora": "16:24:44",
+      "produto_produzido": "(prod) Semi Alema F22 (un)",
+      "insumo": "(ins) Biscoito Maisena (kg)",
+      "qtde": "6,730",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "05/06/2025",
+      "hora": "16:24:44",
+      "produto_produzido": "(prod) Semi Alema F22 (un)",
+      "insumo": "(prod) Creme de Alema (kg)",
+      "qtde": "40,770",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "05/06/2025",
+      "hora": "16:24:42",
+      "produto_produzido": "(prod) Alema F22 (un)",
+      "insumo": "(desc) Caixa Cake Torta 24,5 X 24,5 X 9 Micro (und)",
+      "qtde": "38,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "05/06/2025",
+      "hora": "16:24:42",
+      "produto_produzido": "(prod) Alema F22 (un)",
+      "insumo": "(prod) Calda Chocolate Alema (kg)",
+      "qtde": "9,500",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "05/06/2025",
+      "hora": "16:24:42",
+      "produto_produzido": "(prod) Alema F22 (un)",
+      "insumo": "(desc) Disco Cake 24 Micro (und)",
+      "qtde": "38,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "05/06/2025",
+      "hora": "16:24:42",
+      "produto_produzido": "(prod) Alema F22 (un)",
+      "insumo": "(prod) Semi Alema F22 (un)",
+      "qtde": "38,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "05/06/2025",
+      "hora": "16:24:42",
+      "produto_produzido": "(prod) Alema F22 (un)",
+      "insumo": "(desc) Cinta De Acetato 7Cm (m)",
+      "qtde": "38,000",
+      "unidade": "M",
+      "tipo_movimento": "Saida de Estoque"
+    }
+  ]
+}

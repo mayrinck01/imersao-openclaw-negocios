@@ -1,0 +1,46 @@
+BACKFILL_START months=1 scripts=1 total=1 result=/root/workspaces/cake-brain/relatorios/Mogo/exports/mogo-backfill-dia5-20260505-073652.jsonl
+
+MONTH_START 2026-01 fake_now=2026-02-05
+RUN 1/1 2026-01 mogo-ticket-medio.py
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/dist-packages/openpyxl/descriptors/base.py", line 59, in _convert
+    value = expected_type(value)
+            ^^^^^^^^^^^^^^^^^^^^
+TypeError: 'datetime.datetime' object cannot be interpreted as an integer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/workspaces/cake-brain/automacoes/scripts/mogo-backfill-historico-dia5.py", line 130, in run_one
+    runpy.run_path(str(script_path), run_name='__main__')
+  File "<frozen runpy>", line 286, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "/root/workspaces/cake-brain/automacoes/scripts/mogo-ticket-medio.py", line 87, in <module>
+    wb = openpyxl.Workbook()
+         ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/openpyxl/workbook/workbook.py", line 68, in __init__
+    self.properties = DocumentProperties()
+                      ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/openpyxl/packaging/core.py", line 107, in __init__
+    self.modified = modified or now
+    ^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/openpyxl/descriptors/base.py", line 272, in __set__
+    super().__set__(instance, value)
+  File "/usr/local/lib/python3.12/dist-packages/openpyxl/descriptors/nested.py", line 33, in __set__
+    super().__set__(instance, value)
+  File "/usr/local/lib/python3.12/dist-packages/openpyxl/descriptors/base.py", line 71, in __set__
+    value = _convert(self.expected_type, value)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/openpyxl/descriptors/base.py", line 61, in _convert
+    raise TypeError('expected ' + str(expected_type))
+TypeError: expected <class '__main__.FrozenDateTime'>
+Mogo: iniciando sessão...
+Mogo: autenticando...
+Mogo: selecionando modo Gerencial...
+Mogo: login OK ✅
+Ticket Médio: 01/01/2026 a 31/01/2026...
+Registros: 4
+DONE 1/1 2026-01 mogo-ticket-medio.py status=error duration=8.9s
+BACKFILL_DONE total=1 errors=1 result=/root/workspaces/cake-brain/relatorios/Mogo/exports/mogo-backfill-dia5-20260505-073652.jsonl
+EXIT:1

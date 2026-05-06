@@ -1,0 +1,1125 @@
+{
+  "periodo": {
+    "de": "01/11/2025",
+    "ate": "30/11/2025"
+  },
+  "total_registros": 124,
+  "registros": [
+    {
+      "data": "13/11/2025",
+      "hora": "17:31:18",
+      "produto_produzido": "(prod) Bolo ingles Cenoura do Polo Norte Natal 2025 (un)",
+      "insumo": "(ins) sprinkles decorativos (und)",
+      "qtde": "8,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/11/2025",
+      "hora": "17:31:18",
+      "produto_produzido": "(prod) Bolo ingles Cenoura do Polo Norte Natal 2025 (un)",
+      "insumo": "(prod) Massa Brigadeiro Ninho (kg)",
+      "qtde": "0,180",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/11/2025",
+      "hora": "17:31:18",
+      "produto_produzido": "(prod) Bolo ingles Cenoura do Polo Norte Natal 2025 (un)",
+      "insumo": "(prod) Batido Bolo Cenoura (kg)",
+      "qtde": "0,250",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/11/2025",
+      "hora": "17:31:18",
+      "produto_produzido": "(prod) Bolo ingles Cenoura do Polo Norte Natal 2025 (un)",
+      "insumo": "(desc) Forma Bolo Ingles c/ tampa (und)",
+      "qtde": "1,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/11/2025",
+      "hora": "16:49:29",
+      "produto_produzido": "(prod) Brig da Prosperidade Natal 2025 (cx12un)",
+      "insumo": "(ins) Cobertura Chocolate Branco (Gota) (kg)",
+      "qtde": "0,010",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/11/2025",
+      "hora": "16:49:29",
+      "produto_produzido": "(prod) Brig da Prosperidade Natal 2025 (cx12un)",
+      "insumo": "(ins) Micanga Branca (kg)",
+      "qtde": "0,050",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/11/2025",
+      "hora": "16:49:29",
+      "produto_produzido": "(prod) Brig da Prosperidade Natal 2025 (cx12un)",
+      "insumo": "(desc) Forminha Caixeta (Petala) (und)",
+      "qtde": "12,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/11/2025",
+      "hora": "16:49:29",
+      "produto_produzido": "(prod) Brig da Prosperidade Natal 2025 (cx12un)",
+      "insumo": "(prod) Nova Massa Brigadeiro Branco (kg)",
+      "qtde": "0,180",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/11/2025",
+      "hora": "16:49:29",
+      "produto_produzido": "(prod) Brig da Prosperidade Natal 2025 (cx12un)",
+      "insumo": "(desc) Caixa Cake 13 X 10 X 3,5 doce 12un (und)",
+      "qtde": "1,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/11/2025",
+      "hora": "16:03:47",
+      "produto_produzido": "(prod) Brig da Prosperidade Natal 2025 (cx12un)",
+      "insumo": "(ins) Micanga Branca (kg)",
+      "qtde": "0,050",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/11/2025",
+      "hora": "16:03:47",
+      "produto_produzido": "(prod) Brig da Prosperidade Natal 2025 (cx12un)",
+      "insumo": "(desc) Forminha Caixeta (Petala) (und)",
+      "qtde": "12,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/11/2025",
+      "hora": "16:03:47",
+      "produto_produzido": "(prod) Brig da Prosperidade Natal 2025 (cx12un)",
+      "insumo": "(prod) Nova Massa Brigadeiro Branco (kg)",
+      "qtde": "0,180",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/11/2025",
+      "hora": "16:03:47",
+      "produto_produzido": "(prod) Brig da Prosperidade Natal 2025 (cx12un)",
+      "insumo": "(ins) sprinkles decorativos (und)",
+      "qtde": "6,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/11/2025",
+      "hora": "16:03:47",
+      "produto_produzido": "(prod) Brig da Prosperidade Natal 2025 (cx12un)",
+      "insumo": "(desc) Caixa Cake 13 X 10 X 3,5 doce 12un (und)",
+      "qtde": "1,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/11/2025",
+      "hora": "16:02:32",
+      "produto_produzido": "(prod) Nova Massa Brigadeiro Branco (kg)",
+      "insumo": "(ins) Leite Condensado Integral (kg)",
+      "qtde": "6,000",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/11/2025",
+      "hora": "16:02:32",
+      "produto_produzido": "(prod) Nova Massa Brigadeiro Branco (kg)",
+      "insumo": "(ins) Creme De Leite (kg)",
+      "qtde": "2,500",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/11/2025",
+      "hora": "15:59:44",
+      "produto_produzido": "(prod) Bombom de Nozes Natal 2025 Caixa 6 (un)",
+      "insumo": "(prod) Bombom de Nozes Choc Branco (un)",
+      "qtde": "3,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/11/2025",
+      "hora": "15:59:44",
+      "produto_produzido": "(prod) Bombom de Nozes Natal 2025 Caixa 6 (un)",
+      "insumo": "(prod) Bombom de Nozes Chocolate (un)",
+      "qtde": "3,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/11/2025",
+      "hora": "15:59:01",
+      "produto_produzido": "(prod) Bombom de Nozes Chocolate (un)",
+      "insumo": "(ins) Cobertura Chocolate Meia Amargo (Gota) (kg)",
+      "qtde": "0,450",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/11/2025",
+      "hora": "15:59:01",
+      "produto_produzido": "(prod) Bombom de Nozes Chocolate (un)",
+      "insumo": "(prod) Massa Brigadeiro Nozes (kg)",
+      "qtde": "0,600",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/11/2025",
+      "hora": "15:59:01",
+      "produto_produzido": "(prod) Bombom de Nozes Chocolate (un)",
+      "insumo": "(ins) Nozes S/Casca (kg)",
+      "qtde": "0,090",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/11/2025",
+      "hora": "15:59:01",
+      "produto_produzido": "(prod) Bombom de Nozes Chocolate (un)",
+      "insumo": "(desc) Forminha Caixeta (Petala) (und)",
+      "qtde": "30,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/11/2025",
+      "hora": "15:59:00",
+      "produto_produzido": "(prod) Bombom de Nozes Choc Branco (un)",
+      "insumo": "(ins) Cobertura Chocolate Branco (Gota) (kg)",
+      "qtde": "0,450",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/11/2025",
+      "hora": "15:59:00",
+      "produto_produzido": "(prod) Bombom de Nozes Choc Branco (un)",
+      "insumo": "(prod) Massa Brigadeiro Nozes (kg)",
+      "qtde": "0,600",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/11/2025",
+      "hora": "15:59:00",
+      "produto_produzido": "(prod) Bombom de Nozes Choc Branco (un)",
+      "insumo": "(ins) Nozes S/Casca (kg)",
+      "qtde": "0,090",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/11/2025",
+      "hora": "15:59:00",
+      "produto_produzido": "(prod) Bombom de Nozes Choc Branco (un)",
+      "insumo": "(desc) Forminha Caixeta (Petala) (und)",
+      "qtde": "30,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/11/2025",
+      "hora": "15:57:31",
+      "produto_produzido": "(prod) Camafeu de Nozes Natal 2025 Caixa 6 (un)",
+      "insumo": "(prod) Camafeu de Nozes Fondant (un)",
+      "qtde": "3,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/11/2025",
+      "hora": "15:57:31",
+      "produto_produzido": "(prod) Camafeu de Nozes Natal 2025 Caixa 6 (un)",
+      "insumo": "(prod) Camafeu de Nozes Chocolate (un)",
+      "qtde": "3,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/11/2025",
+      "hora": "15:56:52",
+      "produto_produzido": "(prod) Camafeu de Nozes Chocolate (un)",
+      "insumo": "(ins) Cobertura Chocolate Meia Amargo (Gota) (kg)",
+      "qtde": "0,450",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/11/2025",
+      "hora": "15:56:52",
+      "produto_produzido": "(prod) Camafeu de Nozes Chocolate (un)",
+      "insumo": "(ins) Nozes Inteiras (Kg)",
+      "qtde": "0,090",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/11/2025",
+      "hora": "15:56:52",
+      "produto_produzido": "(prod) Camafeu de Nozes Chocolate (un)",
+      "insumo": "(desc) Forminha Caixeta (Petala) (und)",
+      "qtde": "30,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/11/2025",
+      "hora": "15:56:52",
+      "produto_produzido": "(prod) Camafeu de Nozes Chocolate (un)",
+      "insumo": "(prod) Massa Bombom Nozes (kg)",
+      "qtde": "0,600",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/11/2025",
+      "hora": "15:56:50",
+      "produto_produzido": "(prod) Camafeu de Nozes Fondant (un)",
+      "insumo": "(ins) Fondant (kg)",
+      "qtde": "0,450",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/11/2025",
+      "hora": "15:56:50",
+      "produto_produzido": "(prod) Camafeu de Nozes Fondant (un)",
+      "insumo": "(ins) Nozes Inteiras (Kg)",
+      "qtde": "0,090",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/11/2025",
+      "hora": "15:56:50",
+      "produto_produzido": "(prod) Camafeu de Nozes Fondant (un)",
+      "insumo": "(desc) Forminha Caixeta (Petala) (und)",
+      "qtde": "30,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/11/2025",
+      "hora": "15:56:50",
+      "produto_produzido": "(prod) Camafeu de Nozes Fondant (un)",
+      "insumo": "(prod) Massa Bombom Nozes (kg)",
+      "qtde": "0,600",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/11/2025",
+      "hora": "15:55:31",
+      "produto_produzido": "(prod) Massa Bombom Nozes (kg)",
+      "insumo": "(ins) Margarina (kg)",
+      "qtde": "0,100",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/11/2025",
+      "hora": "15:55:31",
+      "produto_produzido": "(prod) Massa Bombom Nozes (kg)",
+      "insumo": "(ins) Ovos Jumbo Branco (und)",
+      "qtde": "6,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/11/2025",
+      "hora": "15:55:31",
+      "produto_produzido": "(prod) Massa Bombom Nozes (kg)",
+      "insumo": "(ins) Acucar Refinado (kg)",
+      "qtde": "0,500",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/11/2025",
+      "hora": "15:55:31",
+      "produto_produzido": "(prod) Massa Bombom Nozes (kg)",
+      "insumo": "(ins) Nozes S/Casca (kg)",
+      "qtde": "1,000",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/11/2025",
+      "hora": "15:53:47",
+      "produto_produzido": "(prod) Tesouro de Natal - Tort Chocolate Natal 2025(un)",
+      "insumo": "(ins) Cobertura Chocolate Branco (Gota) (kg)",
+      "qtde": "0,010",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/11/2025",
+      "hora": "15:53:47",
+      "produto_produzido": "(prod) Tesouro de Natal - Tort Chocolate Natal 2025(un)",
+      "insumo": "(prod) Tortinha Choc Festa (un)",
+      "qtde": "6,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/11/2025",
+      "hora": "15:53:47",
+      "produto_produzido": "(prod) Tesouro de Natal - Tort Chocolate Natal 2025(un)",
+      "insumo": "(ins) sprinkles decorativos (und)",
+      "qtde": "3,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/11/2025",
+      "hora": "15:53:47",
+      "produto_produzido": "(prod) Tesouro de Natal - Tort Chocolate Natal 2025(un)",
+      "insumo": "(desc) Caixa Tortin. C/Visor Kraft 14X10X4,5 Pct C/10 (und)",
+      "qtde": "1,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/11/2025",
+      "hora": "15:53:44",
+      "produto_produzido": "(prod) Tesouro de Natal - Mix Tortinha Natal 2025 (un)",
+      "insumo": "(ins) Cobertura Chocolate Branco (Gota) (kg)",
+      "qtde": "0,010",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/11/2025",
+      "hora": "15:53:44",
+      "produto_produzido": "(prod) Tesouro de Natal - Mix Tortinha Natal 2025 (un)",
+      "insumo": "(prod) Tortinha Choc Festa (un)",
+      "qtde": "3,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/11/2025",
+      "hora": "15:53:44",
+      "produto_produzido": "(prod) Tesouro de Natal - Mix Tortinha Natal 2025 (un)",
+      "insumo": "(ins) sprinkles decorativos (und)",
+      "qtde": "3,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/11/2025",
+      "hora": "15:53:44",
+      "produto_produzido": "(prod) Tesouro de Natal - Mix Tortinha Natal 2025 (un)",
+      "insumo": "(prod) Tortinha Baba Festa (un)",
+      "qtde": "3,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/11/2025",
+      "hora": "15:53:44",
+      "produto_produzido": "(prod) Tesouro de Natal - Mix Tortinha Natal 2025 (un)",
+      "insumo": "(desc) Caixa Tortin. C/Visor Kraft 14X10X4,5 Pct C/10 (und)",
+      "qtde": "1,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/11/2025",
+      "hora": "15:53:42",
+      "produto_produzido": "(prod) Tesouro de Natal - Tort Baba Natal 2025 (un)",
+      "insumo": "(ins) sprinkles decorativos (und)",
+      "qtde": "6,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/11/2025",
+      "hora": "15:53:42",
+      "produto_produzido": "(prod) Tesouro de Natal - Tort Baba Natal 2025 (un)",
+      "insumo": "(prod) Tortinha Baba Festa (un)",
+      "qtde": "6,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/11/2025",
+      "hora": "15:53:42",
+      "produto_produzido": "(prod) Tesouro de Natal - Tort Baba Natal 2025 (un)",
+      "insumo": "(desc) Caixa Tortin. C/Visor Kraft 14X10X4,5 Pct C/10 (und)",
+      "qtde": "1,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/11/2025",
+      "hora": "15:48:12",
+      "produto_produzido": "(prod) Brig da Prosperidade Natal 2025 (cx12un)",
+      "insumo": "(ins) Micanga Branca (kg)",
+      "qtde": "0,050",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/11/2025",
+      "hora": "15:48:12",
+      "produto_produzido": "(prod) Brig da Prosperidade Natal 2025 (cx12un)",
+      "insumo": "(desc) Forminha Caixeta (Petala) (und)",
+      "qtde": "12,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/11/2025",
+      "hora": "15:48:12",
+      "produto_produzido": "(prod) Brig da Prosperidade Natal 2025 (cx12un)",
+      "insumo": "(prod) Nova Massa Brigadeiro Branco (kg)",
+      "qtde": "0,180",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/11/2025",
+      "hora": "15:48:12",
+      "produto_produzido": "(prod) Brig da Prosperidade Natal 2025 (cx12un)",
+      "insumo": "(desc) Caixa Cake 13 X 10 X 3,5 doce 12un (und)",
+      "qtde": "1,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/11/2025",
+      "hora": "15:48:12",
+      "produto_produzido": "(prod) Brig da Prosperidade Natal 2025 (cx12un)",
+      "insumo": "(ins) sprinkles decorativos (und)",
+      "qtde": "6,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/11/2025",
+      "hora": "15:48:10",
+      "produto_produzido": "(prod) Brigadeiros Noite Feliz Natal 2025 (cx12un)",
+      "insumo": "(desc) Forminha Caixeta (Petala) (und)",
+      "qtde": "12,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/11/2025",
+      "hora": "15:48:10",
+      "produto_produzido": "(prod) Brigadeiros Noite Feliz Natal 2025 (cx12un)",
+      "insumo": "(prod) Nova Massa Brigadeiro Branco (kg)",
+      "qtde": "0,090",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/11/2025",
+      "hora": "15:48:10",
+      "produto_produzido": "(prod) Brigadeiros Noite Feliz Natal 2025 (cx12un)",
+      "insumo": "(desc) Caixa Cake 13 X 10 X 3,5 doce 12un (und)",
+      "qtde": "1,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/11/2025",
+      "hora": "15:48:10",
+      "produto_produzido": "(prod) Brigadeiros Noite Feliz Natal 2025 (cx12un)",
+      "insumo": "(prod) Nova Massa Brigadeiro Preto (kg)",
+      "qtde": "0,090",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/11/2025",
+      "hora": "15:48:10",
+      "produto_produzido": "(prod) Brigadeiros Noite Feliz Natal 2025 (cx12un)",
+      "insumo": "(ins) sprinkles decorativos (und)",
+      "qtde": "6,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/11/2025",
+      "hora": "15:48:08",
+      "produto_produzido": "(prod) Vulcão Noel de Chocolate Natal 2025 (un)",
+      "insumo": "(prod) Nova Cobertura de Brigadeiro (kg)",
+      "qtde": "0,060",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/11/2025",
+      "hora": "15:48:08",
+      "produto_produzido": "(prod) Vulcão Noel de Chocolate Natal 2025 (un)",
+      "insumo": "(prod) Calda Negra (kg)",
+      "qtde": "0,060",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/11/2025",
+      "hora": "15:48:08",
+      "produto_produzido": "(prod) Vulcão Noel de Chocolate Natal 2025 (un)",
+      "insumo": "(prod) Batido Vulcao Chocolate (un)",
+      "qtde": "1,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/11/2025",
+      "hora": "15:48:08",
+      "produto_produzido": "(prod) Vulcão Noel de Chocolate Natal 2025 (un)",
+      "insumo": "(prod) Nova Massa Brigadeiro Preto (kg)",
+      "qtde": "0,010",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/11/2025",
+      "hora": "15:48:08",
+      "produto_produzido": "(prod) Vulcão Noel de Chocolate Natal 2025 (un)",
+      "insumo": "(ins) sprinkles decorativos (und)",
+      "qtde": "4,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/11/2025",
+      "hora": "15:48:08",
+      "produto_produzido": "(prod) Vulcão Noel de Chocolate Natal 2025 (un)",
+      "insumo": "(ins) Micanga Coloridos (kg)",
+      "qtde": "0,010",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/11/2025",
+      "hora": "15:48:07",
+      "produto_produzido": "(prod) Bolo Ingles Treno de Chocolate Natal 2025 (un)",
+      "insumo": "(prod) Bolo Chocolate Cobertura Inglês (un)",
+      "qtde": "1,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/11/2025",
+      "hora": "15:48:07",
+      "produto_produzido": "(prod) Bolo Ingles Treno de Chocolate Natal 2025 (un)",
+      "insumo": "(ins) sprinkles decorativos (und)",
+      "qtde": "0,010",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/11/2025",
+      "hora": "15:48:05",
+      "produto_produzido": "(prod) Bolo ingles Cenoura do Polo Norte Natal 2025 (un)",
+      "insumo": "(ins) sprinkles decorativos (und)",
+      "qtde": "8,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/11/2025",
+      "hora": "15:48:05",
+      "produto_produzido": "(prod) Bolo ingles Cenoura do Polo Norte Natal 2025 (un)",
+      "insumo": "(prod) Massa Brigadeiro Ninho (kg)",
+      "qtde": "0,180",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/11/2025",
+      "hora": "15:48:05",
+      "produto_produzido": "(prod) Bolo ingles Cenoura do Polo Norte Natal 2025 (un)",
+      "insumo": "(prod) Batido Bolo Cenoura (kg)",
+      "qtde": "0,250",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/11/2025",
+      "hora": "15:48:05",
+      "produto_produzido": "(prod) Bolo ingles Cenoura do Polo Norte Natal 2025 (un)",
+      "insumo": "(desc) Forma Bolo Ingles c/ tampa (und)",
+      "qtde": "1,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/11/2025",
+      "hora": "15:26:03",
+      "produto_produzido": "(prod) Bolo ingles Cenoura do Polo Norte Natal 2025 (un)",
+      "insumo": "(ins) sprinkles decorativos (und)",
+      "qtde": "8,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/11/2025",
+      "hora": "15:26:03",
+      "produto_produzido": "(prod) Bolo ingles Cenoura do Polo Norte Natal 2025 (un)",
+      "insumo": "(prod) Massa Brigadeiro Ninho (kg)",
+      "qtde": "0,180",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/11/2025",
+      "hora": "15:26:03",
+      "produto_produzido": "(prod) Bolo ingles Cenoura do Polo Norte Natal 2025 (un)",
+      "insumo": "(prod) Batido Bolo Cenoura (kg)",
+      "qtde": "0,250",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/11/2025",
+      "hora": "15:26:03",
+      "produto_produzido": "(prod) Bolo ingles Cenoura do Polo Norte Natal 2025 (un)",
+      "insumo": "(desc) Forma Bolo Ingles c/ tampa (und)",
+      "qtde": "1,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/11/2025",
+      "hora": "15:24:20",
+      "produto_produzido": "(prod) Bolo Ingles Treno de Chocolate Natal 2025 (un)",
+      "insumo": "(ins) sprinkles decorativos (und)",
+      "qtde": "0,010",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/11/2025",
+      "hora": "15:24:20",
+      "produto_produzido": "(prod) Bolo Ingles Treno de Chocolate Natal 2025 (un)",
+      "insumo": "(prod) Bolo Chocolate Cobertura Inglês (un)",
+      "qtde": "1,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/11/2025",
+      "hora": "15:22:54",
+      "produto_produzido": "(prod) Biscoito Estrela 2025 - 6gr (un)",
+      "insumo": "(ins) Cobertura Chocolate Meia Amargo (Gota) (kg)",
+      "qtde": "0,120",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/11/2025",
+      "hora": "15:22:54",
+      "produto_produzido": "(prod) Biscoito Estrela 2025 - 6gr (un)",
+      "insumo": "(prod) Massa Biscoito Natal (kg)",
+      "qtde": "0,240",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/11/2025",
+      "hora": "15:22:54",
+      "produto_produzido": "(prod) Biscoito Estrela 2025 - 6gr (un)",
+      "insumo": "(ins) Acucar Refinado (kg)",
+      "qtde": "0,080",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/11/2025",
+      "hora": "15:22:15",
+      "produto_produzido": "(prod) Massa Biscoito Natal (kg)",
+      "insumo": "(ins) Amido de Milho (kg)",
+      "qtde": "0,150",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/11/2025",
+      "hora": "15:22:15",
+      "produto_produzido": "(prod) Massa Biscoito Natal (kg)",
+      "insumo": "(ins) Farinha De Trigo (kg)",
+      "qtde": "0,090",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/11/2025",
+      "hora": "15:22:15",
+      "produto_produzido": "(prod) Massa Biscoito Natal (kg)",
+      "insumo": "(ins) Margarina (kg)",
+      "qtde": "0,140",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/11/2025",
+      "hora": "15:22:15",
+      "produto_produzido": "(prod) Massa Biscoito Natal (kg)",
+      "insumo": "(ins) Acucar Refinado (kg)",
+      "qtde": "0,080",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/11/2025",
+      "hora": "15:19:42",
+      "produto_produzido": "(prod) Guirlanda Natal 2025 (un)",
+      "insumo": "(desc) Caixa Cake Torta 29,5 X 29,5 X 9 Micro (und)",
+      "qtde": "1,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/11/2025",
+      "hora": "15:19:42",
+      "produto_produzido": "(prod) Guirlanda Natal 2025 (un)",
+      "insumo": "(desc) Disco Cake 29 Micro (und)",
+      "qtde": "1,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/11/2025",
+      "hora": "15:19:42",
+      "produto_produzido": "(prod) Guirlanda Natal 2025 (un)",
+      "insumo": "(ins) Cobertura Chocolate Meia Amargo (Gota) (kg)",
+      "qtde": "0,020",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/11/2025",
+      "hora": "15:19:42",
+      "produto_produzido": "(prod) Guirlanda Natal 2025 (un)",
+      "insumo": "(prod) Nova Cobertura de Brigadeiro (kg)",
+      "qtde": "0,300",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/11/2025",
+      "hora": "15:19:42",
+      "produto_produzido": "(prod) Guirlanda Natal 2025 (un)",
+      "insumo": "(prod) Calda Chocolate (kg)",
+      "qtde": "0,300",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/11/2025",
+      "hora": "15:19:42",
+      "produto_produzido": "(prod) Guirlanda Natal 2025 (un)",
+      "insumo": "(prod) Batido Nega Maluca (kg)",
+      "qtde": "0,800",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/11/2025",
+      "hora": "15:18:59",
+      "produto_produzido": "(prod) Batido Nega Maluca (kg)",
+      "insumo": "(ins) Fermento Em Pó (kg)",
+      "qtde": "0,010",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/11/2025",
+      "hora": "15:18:59",
+      "produto_produzido": "(prod) Batido Nega Maluca (kg)",
+      "insumo": "(prod) Farinha Biscoito Maisena (kg)",
+      "qtde": "0,250",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/11/2025",
+      "hora": "15:18:59",
+      "produto_produzido": "(prod) Batido Nega Maluca (kg)",
+      "insumo": "(ins) Oleo De Soja (lt)",
+      "qtde": "0,100",
+      "unidade": "Lt",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/11/2025",
+      "hora": "15:18:59",
+      "produto_produzido": "(prod) Batido Nega Maluca (kg)",
+      "insumo": "(ins) Nescau (kg)",
+      "qtde": "0,150",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/11/2025",
+      "hora": "15:18:59",
+      "produto_produzido": "(prod) Batido Nega Maluca (kg)",
+      "insumo": "(ins) Ovos Jumbo Branco (und)",
+      "qtde": "4,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/11/2025",
+      "hora": "15:18:59",
+      "produto_produzido": "(prod) Batido Nega Maluca (kg)",
+      "insumo": "(ins) Acucar Refinado (kg)",
+      "qtde": "0,200",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/11/2025",
+      "hora": "15:17:01",
+      "produto_produzido": "(prod) Guirlanda Natal 2025 (un)",
+      "insumo": "(desc) Caixa Cake Torta 29,5 X 29,5 X 9 Micro (und)",
+      "qtde": "1,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/11/2025",
+      "hora": "15:17:01",
+      "produto_produzido": "(prod) Guirlanda Natal 2025 (un)",
+      "insumo": "(desc) Disco Cake 29 Micro (und)",
+      "qtde": "1,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/11/2025",
+      "hora": "15:17:01",
+      "produto_produzido": "(prod) Guirlanda Natal 2025 (un)",
+      "insumo": "(ins) Cobertura Chocolate Meia Amargo (Gota) (kg)",
+      "qtde": "0,020",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/11/2025",
+      "hora": "15:17:01",
+      "produto_produzido": "(prod) Guirlanda Natal 2025 (un)",
+      "insumo": "(prod) Nova Cobertura de Brigadeiro (kg)",
+      "qtde": "0,300",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/11/2025",
+      "hora": "15:17:01",
+      "produto_produzido": "(prod) Guirlanda Natal 2025 (un)",
+      "insumo": "(prod) Calda Chocolate (kg)",
+      "qtde": "0,300",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/11/2025",
+      "hora": "15:17:01",
+      "produto_produzido": "(prod) Guirlanda Natal 2025 (un)",
+      "insumo": "(prod) Batido Nega Maluca (kg)",
+      "qtde": "0,800",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/11/2025",
+      "hora": "15:16:02",
+      "produto_produzido": "(prod) Nova Cobertura de Brigadeiro (kg)",
+      "insumo": "(ins) Leite Condensado Integral (kg)",
+      "qtde": "11,000",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/11/2025",
+      "hora": "15:16:02",
+      "produto_produzido": "(prod) Nova Cobertura de Brigadeiro (kg)",
+      "insumo": "(ins) Creme De Leite (kg)",
+      "qtde": "5,000",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/11/2025",
+      "hora": "15:16:02",
+      "produto_produzido": "(prod) Nova Cobertura de Brigadeiro (kg)",
+      "insumo": "(ins) Choc. Em Po 50% (kg)",
+      "qtde": "1,600",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/11/2025",
+      "hora": "15:14:23",
+      "produto_produzido": "(prod) Guirlanda Natal 2025 (un)",
+      "insumo": "(desc) Caixa Cake Torta 29,5 X 29,5 X 9 Micro (und)",
+      "qtde": "1,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/11/2025",
+      "hora": "15:14:23",
+      "produto_produzido": "(prod) Guirlanda Natal 2025 (un)",
+      "insumo": "(desc) Disco Cake 29 Micro (und)",
+      "qtde": "1,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/11/2025",
+      "hora": "15:14:23",
+      "produto_produzido": "(prod) Guirlanda Natal 2025 (un)",
+      "insumo": "(ins) Cobertura Chocolate Meia Amargo (Gota) (kg)",
+      "qtde": "0,020",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/11/2025",
+      "hora": "15:14:23",
+      "produto_produzido": "(prod) Guirlanda Natal 2025 (un)",
+      "insumo": "(prod) Nova Cobertura de Brigadeiro (kg)",
+      "qtde": "0,300",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/11/2025",
+      "hora": "15:14:23",
+      "produto_produzido": "(prod) Guirlanda Natal 2025 (un)",
+      "insumo": "(prod) Calda Chocolate (kg)",
+      "qtde": "0,300",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/11/2025",
+      "hora": "15:14:23",
+      "produto_produzido": "(prod) Guirlanda Natal 2025 (un)",
+      "insumo": "(prod) Batido Nega Maluca (kg)",
+      "qtde": "0,800",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/11/2025",
+      "hora": "15:13:40",
+      "produto_produzido": "(prod) Calda Chocolate (kg)",
+      "insumo": "(ins) Leite Condensado Semi Desnatado (kg)",
+      "qtde": "10,000",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/11/2025",
+      "hora": "15:13:40",
+      "produto_produzido": "(prod) Calda Chocolate (kg)",
+      "insumo": "(ins) Leite Integral (lt)",
+      "qtde": "4,000",
+      "unidade": "Lt",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/11/2025",
+      "hora": "15:13:40",
+      "produto_produzido": "(prod) Calda Chocolate (kg)",
+      "insumo": "(ins) Choc. Em Po 50% (kg)",
+      "qtde": "2,000",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/11/2025",
+      "hora": "15:13:40",
+      "produto_produzido": "(prod) Calda Chocolate (kg)",
+      "insumo": "(ins) Margarina (kg)",
+      "qtde": "0,300",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/11/2025",
+      "hora": "15:11:28",
+      "produto_produzido": "(prod) Guirlanda Natal 2025 (un)",
+      "insumo": "(desc) Caixa Cake Torta 29,5 X 29,5 X 9 Micro (und)",
+      "qtde": "1,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/11/2025",
+      "hora": "15:11:28",
+      "produto_produzido": "(prod) Guirlanda Natal 2025 (un)",
+      "insumo": "(desc) Disco Cake 29 Micro (und)",
+      "qtde": "1,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/11/2025",
+      "hora": "15:11:28",
+      "produto_produzido": "(prod) Guirlanda Natal 2025 (un)",
+      "insumo": "(ins) Cobertura Chocolate Meia Amargo (Gota) (kg)",
+      "qtde": "0,020",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/11/2025",
+      "hora": "15:11:28",
+      "produto_produzido": "(prod) Guirlanda Natal 2025 (un)",
+      "insumo": "(prod) Nova Cobertura de Brigadeiro (kg)",
+      "qtde": "0,300",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/11/2025",
+      "hora": "15:11:28",
+      "produto_produzido": "(prod) Guirlanda Natal 2025 (un)",
+      "insumo": "(prod) Calda Chocolate (kg)",
+      "qtde": "0,300",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/11/2025",
+      "hora": "15:11:28",
+      "produto_produzido": "(prod) Guirlanda Natal 2025 (un)",
+      "insumo": "(prod) Batido Nega Maluca (kg)",
+      "qtde": "0,800",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    }
+  ]
+}

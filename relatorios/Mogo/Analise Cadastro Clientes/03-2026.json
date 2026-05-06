@@ -4,7 +4,7 @@
     "ate": "31/03/2026"
   },
   "total_clientes": 1245,
-  "total_faturamento": "R$ 208.679,45",
+  "total_faturamento": "R$ 223.659,42",
   "registros": [
     {
       "nome": "Flavia de Oliveira Dias",
@@ -111,8 +111,8 @@
       "aniversario": "",
       "primeiro_pedido": "01/03/2026",
       "ultimo_pedido": "07/04/2026",
-      "total_pedidos": "330,00",
-      "total_delivery": "330,00"
+      "total_pedidos": "567,00",
+      "total_delivery": "567,00"
     },
     {
       "nome": "Júlia Nogueira De Sousa Pechman",
@@ -122,7 +122,7 @@
       "bairro": "Laranjeiras",
       "aniversario": "",
       "primeiro_pedido": "22/04/2024",
-      "ultimo_pedido": "01/03/2026",
+      "ultimo_pedido": "30/04/2026",
       "total_pedidos": "584,50",
       "total_delivery": "584,50"
     },
@@ -158,8 +158,8 @@
       "bairro": "Ipanema",
       "aniversario": "",
       "primeiro_pedido": "01/03/2026",
-      "ultimo_pedido": "31/03/2026",
-      "total_pedidos": "217,46",
+      "ultimo_pedido": "28/04/2026",
+      "total_pedidos": "512,99",
       "total_delivery": "0,00"
     },
     {
@@ -254,8 +254,8 @@
       "bairro": "Copacabana",
       "aniversario": "",
       "primeiro_pedido": "01/03/2026",
-      "ultimo_pedido": "01/03/2026",
-      "total_pedidos": "59,29",
+      "ultimo_pedido": "24/04/2026",
+      "total_pedidos": "175,77",
       "total_delivery": "0,00"
     },
     {
@@ -686,8 +686,8 @@
       "bairro": "Flamengo",
       "aniversario": "",
       "primeiro_pedido": "02/03/2026",
-      "ultimo_pedido": "02/03/2026",
-      "total_pedidos": "90,98",
+      "ultimo_pedido": "18/04/2026",
+      "total_pedidos": "178,96",
       "total_delivery": "0,00"
     },
     {
@@ -722,8 +722,8 @@
       "bairro": "Botafogo",
       "aniversario": "",
       "primeiro_pedido": "02/03/2026",
-      "ultimo_pedido": "05/03/2026",
-      "total_pedidos": "152,48",
+      "ultimo_pedido": "09/04/2026",
+      "total_pedidos": "289,47",
       "total_delivery": "0,00"
     },
     {
@@ -806,8 +806,8 @@
       "bairro": "Botafogo",
       "aniversario": "",
       "primeiro_pedido": "03/03/2026",
-      "ultimo_pedido": "01/04/2026",
-      "total_pedidos": "310,90",
+      "ultimo_pedido": "28/04/2026",
+      "total_pedidos": "474,86",
       "total_delivery": "0,00"
     },
     {
@@ -926,8 +926,8 @@
       "bairro": "Humaitá",
       "aniversario": "",
       "primeiro_pedido": "03/03/2026",
-      "ultimo_pedido": "03/03/2026",
-      "total_pedidos": "39,74",
+      "ultimo_pedido": "25/04/2026",
+      "total_pedidos": "79,48",
       "total_delivery": "0,00"
     },
     {
@@ -1142,8 +1142,8 @@
       "bairro": "Laranjeiras",
       "aniversario": "",
       "primeiro_pedido": "03/03/2026",
-      "ultimo_pedido": "06/03/2026",
-      "total_pedidos": "127,21",
+      "ultimo_pedido": "29/04/2026",
+      "total_pedidos": "243,47",
       "total_delivery": "0,00"
     },
     {
@@ -1214,8 +1214,8 @@
       "bairro": "Flamengo",
       "aniversario": "",
       "primeiro_pedido": "03/03/2026",
-      "ultimo_pedido": "11/03/2026",
-      "total_pedidos": "114,76",
+      "ultimo_pedido": "25/04/2026",
+      "total_pedidos": "172,64",
       "total_delivery": "0,00"
     },
     {
@@ -1430,8 +1430,8 @@
       "bairro": "Botafogo",
       "aniversario": "",
       "primeiro_pedido": "14/03/2026",
-      "ultimo_pedido": "27/03/2026",
-      "total_pedidos": "64,98",
+      "ultimo_pedido": "07/04/2026",
+      "total_pedidos": "104,72",
       "total_delivery": "0,00"
     },
     {
@@ -1550,8 +1550,8 @@
       "bairro": "Copacabana",
       "aniversario": "",
       "primeiro_pedido": "04/03/2026",
-      "ultimo_pedido": "24/03/2026",
-      "total_pedidos": "254,44",
+      "ultimo_pedido": "26/04/2026",
+      "total_pedidos": "411,91",
       "total_delivery": "0,00"
     },
     {
@@ -1670,8 +1670,8 @@
       "bairro": "Leblon",
       "aniversario": "",
       "primeiro_pedido": "05/03/2026",
-      "ultimo_pedido": "13/03/2026",
-      "total_pedidos": "421,89",
+      "ultimo_pedido": "10/04/2026",
+      "total_pedidos": "578,87",
       "total_delivery": "0,00"
     },
     {
@@ -1730,8 +1730,8 @@
       "bairro": "Leblon",
       "aniversario": "",
       "primeiro_pedido": "05/03/2026",
-      "ultimo_pedido": "24/03/2026",
-      "total_pedidos": "1.014,94",
+      "ultimo_pedido": "18/04/2026",
+      "total_pedidos": "1.205,42",
       "total_delivery": "0,00"
     },
     {
@@ -1790,8 +1790,8 @@
       "bairro": "Grajau",
       "aniversario": "",
       "primeiro_pedido": "05/03/2026",
-      "ultimo_pedido": "04/04/2026",
-      "total_pedidos": "323,86",
+      "ultimo_pedido": "20/04/2026",
+      "total_pedidos": "478,09",
       "total_delivery": "0,00"
     },
     {
@@ -1994,8 +1994,8 @@
       "bairro": "Leblon",
       "aniversario": "",
       "primeiro_pedido": "05/03/2026",
-      "ultimo_pedido": "05/03/2026",
-      "total_pedidos": "146,48",
+      "ultimo_pedido": "24/04/2026",
+      "total_pedidos": "580,65",
       "total_delivery": "0,00"
     },
     {
@@ -2055,8 +2055,8 @@
       "aniversario": "",
       "primeiro_pedido": "05/03/2026",
       "ultimo_pedido": "05/04/2026",
-      "total_pedidos": "530,00",
-      "total_delivery": "530,00"
+      "total_pedidos": "845,00",
+      "total_delivery": "845,00"
     },
     {
       "nome": "Caroline de Oliveira Pacheco",
@@ -2119,16 +2119,16 @@
       "total_delivery": "0,00"
     },
     {
-      "nome": "Cora Matos",
+      "nome": "Cora Mattos",
       "razao_social": "",
       "data_cadastro": "06/03/2026",
-      "telefone": "7193791459",
+      "telefone": "71993791459",
       "bairro": "Botafogo",
       "aniversario": "19/05/1985",
       "primeiro_pedido": "06/03/2026",
-      "ultimo_pedido": "06/03/2026",
-      "total_pedidos": "261,00",
-      "total_delivery": "261,00"
+      "ultimo_pedido": "15/04/2026",
+      "total_pedidos": "321,00",
+      "total_delivery": "321,00"
     },
     {
       "nome": "Marcela Grassi",
@@ -2462,8 +2462,8 @@
       "bairro": "Glória",
       "aniversario": "",
       "primeiro_pedido": "06/03/2026",
-      "ultimo_pedido": "29/03/2026",
-      "total_pedidos": "790,28",
+      "ultimo_pedido": "16/04/2026",
+      "total_pedidos": "900,76",
       "total_delivery": "0,00"
     },
     {
@@ -2762,8 +2762,8 @@
       "bairro": "Botafogo",
       "aniversario": "",
       "primeiro_pedido": "07/03/2026",
-      "ultimo_pedido": "07/03/2026",
-      "total_pedidos": "38,48",
+      "ultimo_pedido": "17/04/2026",
+      "total_pedidos": "72,97",
       "total_delivery": "0,00"
     },
     {
@@ -3122,8 +3122,8 @@
       "bairro": "Copacabana",
       "aniversario": "",
       "primeiro_pedido": "07/03/2026",
-      "ultimo_pedido": "24/03/2026",
-      "total_pedidos": "74,98",
+      "ultimo_pedido": "13/04/2026",
+      "total_pedidos": "121,96",
       "total_delivery": "0,00"
     },
     {
@@ -3134,8 +3134,8 @@
       "bairro": "Botafogo",
       "aniversario": "",
       "primeiro_pedido": "07/03/2026",
-      "ultimo_pedido": "21/03/2026",
-      "total_pedidos": "112,47",
+      "ultimo_pedido": "07/04/2026",
+      "total_pedidos": "157,96",
       "total_delivery": "0,00"
     },
     {
@@ -3158,9 +3158,9 @@
       "bairro": "Jardim Botânico",
       "aniversario": "",
       "primeiro_pedido": "08/03/2026",
-      "ultimo_pedido": "08/03/2026",
-      "total_pedidos": "230,00",
-      "total_delivery": "230,00"
+      "ultimo_pedido": "22/04/2026",
+      "total_pedidos": "421,40",
+      "total_delivery": "421,40"
     },
     {
       "nome": "Giovanna Franklin",
@@ -3230,8 +3230,8 @@
       "bairro": "Ipanema",
       "aniversario": "",
       "primeiro_pedido": "08/03/2026",
-      "ultimo_pedido": "08/03/2026",
-      "total_pedidos": "304,53",
+      "ultimo_pedido": "22/04/2026",
+      "total_pedidos": "452,51",
       "total_delivery": "0,00"
     },
     {
@@ -3302,8 +3302,8 @@
       "bairro": "Botafogo",
       "aniversario": "",
       "primeiro_pedido": "08/03/2026",
-      "ultimo_pedido": "26/03/2026",
-      "total_pedidos": "229,59",
+      "ultimo_pedido": "13/04/2026",
+      "total_pedidos": "389,58",
       "total_delivery": "0,00"
     },
     {
@@ -3494,8 +3494,8 @@
       "bairro": "Botafogo",
       "aniversario": "",
       "primeiro_pedido": "08/03/2026",
-      "ultimo_pedido": "03/04/2026",
-      "total_pedidos": "146,48",
+      "ultimo_pedido": "12/04/2026",
+      "total_pedidos": "219,72",
       "total_delivery": "0,00"
     },
     {
@@ -3638,8 +3638,8 @@
       "bairro": "ANDARAI",
       "aniversario": "",
       "primeiro_pedido": "08/03/2026",
-      "ultimo_pedido": "01/04/2026",
-      "total_pedidos": "435,19",
+      "ultimo_pedido": "20/04/2026",
+      "total_pedidos": "606,67",
       "total_delivery": "0,00"
     },
     {
@@ -3698,8 +3698,8 @@
       "bairro": "Botafogo",
       "aniversario": "",
       "primeiro_pedido": "08/03/2026",
-      "ultimo_pedido": "02/04/2026",
-      "total_pedidos": "184,70",
+      "ultimo_pedido": "15/04/2026",
+      "total_pedidos": "260,44",
       "total_delivery": "0,00"
     },
     {
@@ -3950,8 +3950,8 @@
       "bairro": "Copacabana",
       "aniversario": "06/04/1993",
       "primeiro_pedido": "09/03/2026",
-      "ultimo_pedido": "09/03/2026",
-      "total_pedidos": "237,00",
+      "ultimo_pedido": "10/04/2026",
+      "total_pedidos": "552,00",
       "total_delivery": "237,00"
     },
     {
@@ -4226,8 +4226,8 @@
       "bairro": "Centro",
       "aniversario": "",
       "primeiro_pedido": "10/03/2026",
-      "ultimo_pedido": "10/03/2026",
-      "total_pedidos": "498,53",
+      "ultimo_pedido": "10/04/2026",
+      "total_pedidos": "794,01",
       "total_delivery": "0,00"
     },
     {
@@ -4274,8 +4274,8 @@
       "bairro": "Botafogo",
       "aniversario": "",
       "primeiro_pedido": "10/03/2026",
-      "ultimo_pedido": "19/03/2026",
-      "total_pedidos": "84,48",
+      "ultimo_pedido": "28/04/2026",
+      "total_pedidos": "196,85",
       "total_delivery": "0,00"
     },
     {
@@ -4394,8 +4394,8 @@
       "bairro": "Copacabana",
       "aniversario": "",
       "primeiro_pedido": "10/03/2026",
-      "ultimo_pedido": "10/03/2026",
-      "total_pedidos": "85,73",
+      "ultimo_pedido": "10/04/2026",
+      "total_pedidos": "209,46",
       "total_delivery": "0,00"
     },
     {
@@ -4430,9 +4430,9 @@
       "bairro": "Botafogo",
       "aniversario": "",
       "primeiro_pedido": "10/03/2026",
-      "ultimo_pedido": "02/04/2026",
-      "total_pedidos": "308,00",
-      "total_delivery": "308,00"
+      "ultimo_pedido": "15/04/2026",
+      "total_pedidos": "489,00",
+      "total_delivery": "489,00"
     },
     {
       "nome": "Clara Machado",
@@ -4598,8 +4598,8 @@
       "bairro": "Laranjeiras",
       "aniversario": "",
       "primeiro_pedido": "10/03/2026",
-      "ultimo_pedido": "10/03/2026",
-      "total_pedidos": "33,99",
+      "ultimo_pedido": "29/04/2026",
+      "total_pedidos": "81,97",
       "total_delivery": "0,00"
     },
     {
@@ -4622,8 +4622,8 @@
       "bairro": "Flamengo",
       "aniversario": "",
       "primeiro_pedido": "10/03/2026",
-      "ultimo_pedido": "10/03/2026",
-      "total_pedidos": "87,24",
+      "ultimo_pedido": "07/04/2026",
+      "total_pedidos": "171,98",
       "total_delivery": "0,00"
     },
     {
@@ -4766,9 +4766,9 @@
       "bairro": "Sampaio",
       "aniversario": "06/02/1984",
       "primeiro_pedido": "13/03/2026",
-      "ultimo_pedido": "02/04/2026",
-      "total_pedidos": "1.262,80",
-      "total_delivery": "0,00"
+      "ultimo_pedido": "29/04/2026",
+      "total_pedidos": "1.854,90",
+      "total_delivery": "370,00"
     },
     {
       "nome": "Daniele Nascimento",
@@ -5090,8 +5090,8 @@
       "bairro": "Humaitá",
       "aniversario": "",
       "primeiro_pedido": "11/03/2026",
-      "ultimo_pedido": "11/03/2026",
-      "total_pedidos": "34,49",
+      "ultimo_pedido": "23/04/2026",
+      "total_pedidos": "101,23",
       "total_delivery": "0,00"
     },
     {
@@ -5530,8 +5530,8 @@
       "nome": "",
       "razao_social": "",
       "data_cadastro": "12/03/2026",
-      "telefone": "",
-      "bairro": "BOTAFOGO",
+      "telefone": "21990808980",
+      "bairro": "",
       "aniversario": "",
       "primeiro_pedido": "",
       "ultimo_pedido": "",
@@ -6446,9 +6446,9 @@
       "bairro": "Botafogo",
       "aniversario": "",
       "primeiro_pedido": "13/03/2026",
-      "ultimo_pedido": "01/04/2026",
-      "total_pedidos": "448,00",
-      "total_delivery": "448,00"
+      "ultimo_pedido": "10/04/2026",
+      "total_pedidos": "773,00",
+      "total_delivery": "773,00"
     },
     {
       "nome": "Tania Braga de Melo",
@@ -6566,8 +6566,8 @@
       "bairro": "Laranjeiras",
       "aniversario": "",
       "primeiro_pedido": "14/03/2026",
-      "ultimo_pedido": "24/03/2026",
-      "total_pedidos": "170,27",
+      "ultimo_pedido": "22/04/2026",
+      "total_pedidos": "375,03",
       "total_delivery": "0,00"
     },
     {
@@ -6890,8 +6890,8 @@
       "bairro": "Gávea",
       "aniversario": "",
       "primeiro_pedido": "14/03/2026",
-      "ultimo_pedido": "03/04/2026",
-      "total_pedidos": "286,36",
+      "ultimo_pedido": "25/04/2026",
+      "total_pedidos": "368,84",
       "total_delivery": "0,00"
     },
     {
@@ -6998,9 +6998,9 @@
       "bairro": "Leme",
       "aniversario": "",
       "primeiro_pedido": "15/03/2026",
-      "ultimo_pedido": "15/03/2026",
-      "total_pedidos": "330,00",
-      "total_delivery": "330,00"
+      "ultimo_pedido": "19/04/2026",
+      "total_pedidos": "975,00",
+      "total_delivery": "975,00"
     },
     {
       "nome": "Natasha Amaral",
@@ -7190,8 +7190,8 @@
       "bairro": "Urca",
       "aniversario": "",
       "primeiro_pedido": "15/03/2026",
-      "ultimo_pedido": "15/03/2026",
-      "total_pedidos": "378,53",
+      "ultimo_pedido": "25/04/2026",
+      "total_pedidos": "761,06",
       "total_delivery": "0,00"
     },
     {
@@ -7439,10 +7439,10 @@
       "razao_social": "",
       "data_cadastro": "16/03/2026",
       "telefone": "11914624793",
-      "bairro": "Leblon",
+      "bairro": "Lagoa",
       "aniversario": "",
       "primeiro_pedido": "16/03/2026",
-      "ultimo_pedido": "16/03/2026",
+      "ultimo_pedido": "29/04/2026",
       "total_pedidos": "0,00",
       "total_delivery": "0,00"
     },
@@ -7550,8 +7550,8 @@
       "bairro": "Botafogo",
       "aniversario": "",
       "primeiro_pedido": "16/03/2026",
-      "ultimo_pedido": "16/03/2026",
-      "total_pedidos": "161,49",
+      "ultimo_pedido": "27/04/2026",
+      "total_pedidos": "375,88",
       "total_delivery": "0,00"
     },
     {
@@ -7586,8 +7586,8 @@
       "bairro": "Botafogo",
       "aniversario": "",
       "primeiro_pedido": "16/03/2026",
-      "ultimo_pedido": "16/03/2026",
-      "total_pedidos": "300,00",
+      "ultimo_pedido": "17/04/2026",
+      "total_pedidos": "553,00",
       "total_delivery": "300,00"
     },
     {
@@ -7946,8 +7946,8 @@
       "bairro": "Copacabana",
       "aniversario": "",
       "primeiro_pedido": "17/03/2026",
-      "ultimo_pedido": "24/03/2026",
-      "total_pedidos": "78,58",
+      "ultimo_pedido": "16/04/2026",
+      "total_pedidos": "117,87",
       "total_delivery": "0,00"
     },
     {
@@ -8042,8 +8042,8 @@
       "bairro": "Urca",
       "aniversario": "",
       "primeiro_pedido": "17/03/2026",
-      "ultimo_pedido": "05/04/2026",
-      "total_pedidos": "347,81",
+      "ultimo_pedido": "26/04/2026",
+      "total_pedidos": "494,64",
       "total_delivery": "0,00"
     },
     {
@@ -8126,8 +8126,8 @@
       "bairro": "Botafogo",
       "aniversario": "",
       "primeiro_pedido": "17/03/2026",
-      "ultimo_pedido": "21/03/2026",
-      "total_pedidos": "285,45",
+      "ultimo_pedido": "11/04/2026",
+      "total_pedidos": "363,68",
       "total_delivery": "0,00"
     },
     {
@@ -8222,9 +8222,9 @@
       "bairro": "Copacabana",
       "aniversario": "28/08/1985",
       "primeiro_pedido": "18/03/2026",
-      "ultimo_pedido": "18/03/2026",
-      "total_pedidos": "137,00",
-      "total_delivery": "137,00"
+      "ultimo_pedido": "07/04/2026",
+      "total_pedidos": "497,00",
+      "total_delivery": "497,00"
     },
     {
       "nome": "Flavia Ribeiro",
@@ -8354,8 +8354,8 @@
       "bairro": "Lagoa",
       "aniversario": "",
       "primeiro_pedido": "18/03/2026",
-      "ultimo_pedido": "18/03/2026",
-      "total_pedidos": "105,48",
+      "ultimo_pedido": "11/04/2026",
+      "total_pedidos": "502,47",
       "total_delivery": "0,00"
     },
     {
@@ -8414,9 +8414,9 @@
       "bairro": "Laranjeiras",
       "aniversario": "",
       "primeiro_pedido": "18/03/2026",
-      "ultimo_pedido": "18/03/2026",
-      "total_pedidos": "237,00",
-      "total_delivery": "237,00"
+      "ultimo_pedido": "13/04/2026",
+      "total_pedidos": "585,00",
+      "total_delivery": "585,00"
     },
     {
       "nome": "Ana Beatriz Fernandes",
@@ -8479,15 +8479,15 @@
       "total_delivery": "0,00"
     },
     {
-      "nome": "Heltom G Vicente",
+      "nome": "HELTOM GUIMARAES VICENTE",
       "razao_social": "",
       "data_cadastro": "18/03/2026",
       "telefone": "08002005011",
       "bairro": "Copacabana",
       "aniversario": "",
       "primeiro_pedido": "18/03/2026",
-      "ultimo_pedido": "19/03/2026",
-      "total_pedidos": "205,99",
+      "ultimo_pedido": "21/04/2026",
+      "total_pedidos": "381,72",
       "total_delivery": "0,00"
     },
     {
@@ -8738,8 +8738,8 @@
       "bairro": "Copacabana",
       "aniversario": "",
       "primeiro_pedido": "19/03/2026",
-      "ultimo_pedido": "30/03/2026",
-      "total_pedidos": "137,96",
+      "ultimo_pedido": "12/04/2026",
+      "total_pedidos": "175,45",
       "total_delivery": "0,00"
     },
     {
@@ -8750,9 +8750,9 @@
       "bairro": "Lagoa",
       "aniversario": "",
       "primeiro_pedido": "19/03/2026",
-      "ultimo_pedido": "01/04/2026",
-      "total_pedidos": "390,00",
-      "total_delivery": "390,00"
+      "ultimo_pedido": "17/04/2026",
+      "total_pedidos": "502,00",
+      "total_delivery": "502,00"
     },
     {
       "nome": "NUBIA MAIA",
@@ -8786,8 +8786,8 @@
       "bairro": "Botafogo",
       "aniversario": "",
       "primeiro_pedido": "19/03/2026",
-      "ultimo_pedido": "19/03/2026",
-      "total_pedidos": "37,50",
+      "ultimo_pedido": "18/04/2026",
+      "total_pedidos": "114,98",
       "total_delivery": "0,00"
     },
     {
@@ -9050,9 +9050,9 @@
       "bairro": "Botafogo",
       "aniversario": "",
       "primeiro_pedido": "20/03/2026",
-      "ultimo_pedido": "20/03/2026",
-      "total_pedidos": "325,00",
-      "total_delivery": "325,00"
+      "ultimo_pedido": "20/04/2026",
+      "total_pedidos": "557,00",
+      "total_delivery": "557,00"
     },
     {
       "nome": "Lucia Sampaio ",
@@ -9098,9 +9098,9 @@
       "bairro": "Catete",
       "aniversario": "",
       "primeiro_pedido": "20/03/2026",
-      "ultimo_pedido": "20/03/2026",
-      "total_pedidos": "239,00",
-      "total_delivery": "239,00"
+      "ultimo_pedido": "16/04/2026",
+      "total_pedidos": "329,00",
+      "total_delivery": "329,00"
     },
     {
       "nome": "URIEL OLIVEIRA",
@@ -9110,8 +9110,8 @@
       "bairro": "Centro",
       "aniversario": "",
       "primeiro_pedido": "20/03/2026",
-      "ultimo_pedido": "20/03/2026",
-      "total_pedidos": "167,73",
+      "ultimo_pedido": "15/04/2026",
+      "total_pedidos": "395,21",
       "total_delivery": "0,00"
     },
     {
@@ -9155,11 +9155,11 @@
       "razao_social": "",
       "data_cadastro": "20/03/2026",
       "telefone": "08007051020",
-      "bairro": "Flamengo",
+      "bairro": "Botafogo",
       "aniversario": "",
       "primeiro_pedido": "25/03/2026",
-      "ultimo_pedido": "25/03/2026",
-      "total_pedidos": "50,48",
+      "ultimo_pedido": "26/04/2026",
+      "total_pedidos": "175,94",
       "total_delivery": "0,00"
     },
     {
@@ -9374,8 +9374,8 @@
       "bairro": "Humaitá",
       "aniversario": "",
       "primeiro_pedido": "20/03/2026",
-      "ultimo_pedido": "20/03/2026",
-      "total_pedidos": "34,49",
+      "ultimo_pedido": "10/04/2026",
+      "total_pedidos": "88,78",
       "total_delivery": "0,00"
     },
     {
@@ -9491,11 +9491,11 @@
       "razao_social": "",
       "data_cadastro": "21/03/2026",
       "telefone": "08007051020",
-      "bairro": "Copacabana",
+      "bairro": "Gávea",
       "aniversario": "",
       "primeiro_pedido": "21/03/2026",
-      "ultimo_pedido": "21/03/2026",
-      "total_pedidos": "396,99",
+      "ultimo_pedido": "12/04/2026",
+      "total_pedidos": "806,97",
       "total_delivery": "0,00"
     },
     {
@@ -9542,9 +9542,9 @@
       "bairro": "Botafogo",
       "aniversario": "",
       "primeiro_pedido": "21/03/2026",
-      "ultimo_pedido": "21/03/2026",
-      "total_pedidos": "220,00",
-      "total_delivery": "220,00"
+      "ultimo_pedido": "25/04/2026",
+      "total_pedidos": "660,00",
+      "total_delivery": "660,00"
     },
     {
       "nome": "HELIO TADASHI OMOTO",
@@ -9650,8 +9650,8 @@
       "bairro": "Botafogo",
       "aniversario": "",
       "primeiro_pedido": "21/03/2026",
-      "ultimo_pedido": "27/03/2026",
-      "total_pedidos": "241,47",
+      "ultimo_pedido": "25/04/2026",
+      "total_pedidos": "326,96",
       "total_delivery": "0,00"
     },
     {
@@ -10418,8 +10418,8 @@
       "bairro": "Ipanema",
       "aniversario": "",
       "primeiro_pedido": "22/03/2026",
-      "ultimo_pedido": "22/03/2026",
-      "total_pedidos": "37,49",
+      "ultimo_pedido": "15/04/2026",
+      "total_pedidos": "74,98",
       "total_delivery": "0,00"
     },
     {
@@ -10574,7 +10574,7 @@
       "bairro": "Grajaú",
       "aniversario": "",
       "primeiro_pedido": "23/03/2026",
-      "ultimo_pedido": "23/03/2026",
+      "ultimo_pedido": "28/04/2026",
       "total_pedidos": "406,00",
       "total_delivery": "406,00"
     },
@@ -10586,21 +10586,21 @@
       "bairro": "Gamboa",
       "aniversario": "",
       "primeiro_pedido": "23/03/2026",
-      "ultimo_pedido": "23/03/2026",
-      "total_pedidos": "164,74",
+      "ultimo_pedido": "26/04/2026",
+      "total_pedidos": "383,18",
       "total_delivery": "0,00"
     },
     {
-      "nome": "Maria Clara Fidelis Valente",
+      "nome": "MARIA CLARA FIDELIS VALENTE",
       "razao_social": "",
       "data_cadastro": "23/03/2026",
       "telefone": "21972831995",
       "bairro": "Flamengo",
       "aniversario": "19/04/1995",
       "primeiro_pedido": "23/03/2026",
-      "ultimo_pedido": "23/03/2026",
-      "total_pedidos": "237,00",
-      "total_delivery": "237,00"
+      "ultimo_pedido": "19/04/2026",
+      "total_pedidos": "463,00",
+      "total_delivery": "463,00"
     },
     {
       "nome": "Alice Petry",
@@ -10790,9 +10790,9 @@
       "bairro": "Copacabana",
       "aniversario": "",
       "primeiro_pedido": "24/03/2026",
-      "ultimo_pedido": "24/03/2026",
-      "total_pedidos": "237,00",
-      "total_delivery": "237,00"
+      "ultimo_pedido": "20/04/2026",
+      "total_pedidos": "711,00",
+      "total_delivery": "711,00"
     },
     {
       "nome": "Maria Regina  Firmino Xavier ",
@@ -10826,8 +10826,8 @@
       "bairro": "Botafogo",
       "aniversario": "",
       "primeiro_pedido": "24/03/2026",
-      "ultimo_pedido": "01/04/2026",
-      "total_pedidos": "77,21",
+      "ultimo_pedido": "25/04/2026",
+      "total_pedidos": "140,19",
       "total_delivery": "0,00"
     },
     {
@@ -10850,8 +10850,8 @@
       "bairro": "Centro",
       "aniversario": "",
       "primeiro_pedido": "24/03/2026",
-      "ultimo_pedido": "24/03/2026",
-      "total_pedidos": "90,98",
+      "ultimo_pedido": "28/04/2026",
+      "total_pedidos": "150,46",
       "total_delivery": "0,00"
     },
     {
@@ -11462,8 +11462,8 @@
       "bairro": "",
       "aniversario": "",
       "primeiro_pedido": "26/03/2026",
-      "ultimo_pedido": "26/03/2026",
-      "total_pedidos": "211,00",
+      "ultimo_pedido": "28/04/2026",
+      "total_pedidos": "422,00",
       "total_delivery": "0,00"
     },
     {
@@ -11942,8 +11942,8 @@
       "bairro": "Ipanema",
       "aniversario": "",
       "primeiro_pedido": "27/03/2026",
-      "ultimo_pedido": "27/03/2026",
-      "total_pedidos": "98,88",
+      "ultimo_pedido": "26/04/2026",
+      "total_pedidos": "198,76",
       "total_delivery": "0,00"
     },
     {
@@ -12122,8 +12122,8 @@
       "bairro": "Copacabana",
       "aniversario": "",
       "primeiro_pedido": "27/03/2026",
-      "ultimo_pedido": "28/03/2026",
-      "total_pedidos": "146,98",
+      "ultimo_pedido": "24/04/2026",
+      "total_pedidos": "299,96",
       "total_delivery": "0,00"
     },
     {
@@ -12206,9 +12206,9 @@
       "bairro": "Praça Da Bandeira",
       "aniversario": "",
       "primeiro_pedido": "27/03/2026",
-      "ultimo_pedido": "27/03/2026",
-      "total_pedidos": "438,00",
-      "total_delivery": "438,00"
+      "ultimo_pedido": "10/04/2026",
+      "total_pedidos": "522,00",
+      "total_delivery": "522,00"
     },
     {
       "nome": "Roseane de Vargas Fafa",
@@ -12482,8 +12482,8 @@
       "bairro": "Ipanema",
       "aniversario": "",
       "primeiro_pedido": "27/03/2026",
-      "ultimo_pedido": "27/03/2026",
-      "total_pedidos": "47,48",
+      "ultimo_pedido": "15/04/2026",
+      "total_pedidos": "96,96",
       "total_delivery": "0,00"
     },
     {
@@ -12830,8 +12830,8 @@
       "bairro": "Humaitá",
       "aniversario": "",
       "primeiro_pedido": "28/03/2026",
-      "ultimo_pedido": "28/03/2026",
-      "total_pedidos": "107,00",
+      "ultimo_pedido": "10/04/2026",
+      "total_pedidos": "204,00",
       "total_delivery": "107,00"
     },
     {
@@ -12950,8 +12950,8 @@
       "bairro": "Botafogo",
       "aniversario": "",
       "primeiro_pedido": "28/03/2026",
-      "ultimo_pedido": "28/03/2026",
-      "total_pedidos": "75,76",
+      "ultimo_pedido": "11/04/2026",
+      "total_pedidos": "119,02",
       "total_delivery": "0,00"
     },
     {
@@ -13058,8 +13058,8 @@
       "bairro": "Leblon",
       "aniversario": "",
       "primeiro_pedido": "28/03/2026",
-      "ultimo_pedido": "03/04/2026",
-      "total_pedidos": "268,04",
+      "ultimo_pedido": "08/04/2026",
+      "total_pedidos": "326,92",
       "total_delivery": "0,00"
     },
     {
@@ -13106,8 +13106,8 @@
       "bairro": "Flamengo",
       "aniversario": "",
       "primeiro_pedido": "28/03/2026",
-      "ultimo_pedido": "28/03/2026",
-      "total_pedidos": "78,98",
+      "ultimo_pedido": "25/04/2026",
+      "total_pedidos": "166,21",
       "total_delivery": "0,00"
     },
     {
@@ -13250,8 +13250,8 @@
       "bairro": "Botafogo",
       "aniversario": "",
       "primeiro_pedido": "28/03/2026",
-      "ultimo_pedido": "02/04/2026",
-      "total_pedidos": "78,97",
+      "ultimo_pedido": "19/04/2026",
+      "total_pedidos": "234,19",
       "total_delivery": "0,00"
     },
     {
@@ -13310,8 +13310,8 @@
       "bairro": "Copacabana",
       "aniversario": "",
       "primeiro_pedido": "29/03/2026",
-      "ultimo_pedido": "29/03/2026",
-      "total_pedidos": "331,98",
+      "ultimo_pedido": "12/04/2026",
+      "total_pedidos": "632,96",
       "total_delivery": "0,00"
     },
     {
@@ -13394,8 +13394,8 @@
       "bairro": "Botafogo",
       "aniversario": "",
       "primeiro_pedido": "29/03/2026",
-      "ultimo_pedido": "04/04/2026",
-      "total_pedidos": "74,98",
+      "ultimo_pedido": "23/04/2026",
+      "total_pedidos": "116,46",
       "total_delivery": "0,00"
     },
     {
@@ -13418,8 +13418,8 @@
       "bairro": "Lapa",
       "aniversario": "",
       "primeiro_pedido": "29/03/2026",
-      "ultimo_pedido": "29/03/2026",
-      "total_pedidos": "196,48",
+      "ultimo_pedido": "23/04/2026",
+      "total_pedidos": "315,76",
       "total_delivery": "0,00"
     },
     {
@@ -13646,8 +13646,8 @@
       "bairro": "Botafogo",
       "aniversario": "",
       "primeiro_pedido": "29/03/2026",
-      "ultimo_pedido": "05/04/2026",
-      "total_pedidos": "112,47",
+      "ultimo_pedido": "26/04/2026",
+      "total_pedidos": "184,45",
       "total_delivery": "0,00"
     },
     {
@@ -13703,11 +13703,11 @@
       "razao_social": "",
       "data_cadastro": "29/03/2026",
       "telefone": "08007053040",
-      "bairro": "Leme",
+      "bairro": "Botafogo",
       "aniversario": "",
-      "primeiro_pedido": "",
-      "ultimo_pedido": "",
-      "total_pedidos": "0,00",
+      "primeiro_pedido": "23/04/2026",
+      "ultimo_pedido": "23/04/2026",
+      "total_pedidos": "51,48",
       "total_delivery": "0,00"
     },
     {
@@ -13838,8 +13838,8 @@
       "bairro": "Botafogo",
       "aniversario": "",
       "primeiro_pedido": "29/03/2026",
-      "ultimo_pedido": "29/03/2026",
-      "total_pedidos": "46,51",
+      "ultimo_pedido": "21/04/2026",
+      "total_pedidos": "93,02",
       "total_delivery": "0,00"
     },
     {
@@ -14499,8 +14499,8 @@
       "aniversario": "",
       "primeiro_pedido": "31/03/2026",
       "ultimo_pedido": "06/04/2026",
-      "total_pedidos": "74,00",
-      "total_delivery": "74,00"
+      "total_pedidos": "683,30",
+      "total_delivery": "683,30"
     },
     {
       "nome": "Pedro Melo Modenesi",
@@ -14534,8 +14534,8 @@
       "bairro": "Botafogo",
       "aniversario": "",
       "primeiro_pedido": "31/03/2026",
-      "ultimo_pedido": "31/03/2026",
-      "total_pedidos": "44,73",
+      "ultimo_pedido": "14/04/2026",
+      "total_pedidos": "84,47",
       "total_delivery": "0,00"
     },
     {
@@ -14570,9 +14570,9 @@
       "bairro": "Botafogo",
       "aniversario": "",
       "primeiro_pedido": "31/03/2026",
-      "ultimo_pedido": "31/03/2026",
-      "total_pedidos": "207,00",
-      "total_delivery": "207,00"
+      "ultimo_pedido": "10/04/2026",
+      "total_pedidos": "377,00",
+      "total_delivery": "377,00"
     },
     {
       "nome": "Vincent F Spevack",
@@ -14726,8 +14726,8 @@
       "bairro": "Botafogo",
       "aniversario": "",
       "primeiro_pedido": "31/03/2026",
-      "ultimo_pedido": "31/03/2026",
-      "total_pedidos": "39,74",
+      "ultimo_pedido": "11/04/2026",
+      "total_pedidos": "79,48",
       "total_delivery": "0,00"
     },
     {
@@ -14750,8 +14750,8 @@
       "bairro": "Copacabana",
       "aniversario": "",
       "primeiro_pedido": "31/03/2026",
-      "ultimo_pedido": "03/04/2026",
-      "total_pedidos": "272,01",
+      "ultimo_pedido": "16/04/2026",
+      "total_pedidos": "388,99",
       "total_delivery": "0,00"
     },
     {
@@ -14906,8 +14906,8 @@
       "bairro": "Jardim Botânico",
       "aniversario": "",
       "primeiro_pedido": "31/03/2026",
-      "ultimo_pedido": "31/03/2026",
-      "total_pedidos": "37,49",
+      "ultimo_pedido": "11/04/2026",
+      "total_pedidos": "74,98",
       "total_delivery": "0,00"
     },
     {
@@ -14918,8 +14918,8 @@
       "bairro": "Botafogo",
       "aniversario": "",
       "primeiro_pedido": "31/03/2026",
-      "ultimo_pedido": "31/03/2026",
-      "total_pedidos": "37,49",
+      "ultimo_pedido": "16/04/2026",
+      "total_pedidos": "74,98",
       "total_delivery": "0,00"
     },
     {

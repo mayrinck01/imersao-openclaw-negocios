@@ -1,0 +1,445 @@
+{
+  "meta": {
+    "modelo": "Mogo > Ticket Médio",
+    "tipo_data_endpoint": 0,
+    "observacao": "Parâmetro técnico que reproduziu exatamente o modelo validado na tela enviada pelo Zão.",
+    "periodo_2026": {
+      "de": "01/01/2026",
+      "ate": "23/04/2026"
+    },
+    "periodo_2025": {
+      "de": "01/01/2025",
+      "ate": "23/04/2025"
+    }
+  },
+  "resumo": {
+    "overall_2026": {
+      "de": "01/01/2026",
+      "ate": "23/04/2026",
+      "total": 2340968.33,
+      "quantidade": 19353.0,
+      "ticket_medio": 120.96,
+      "linhas": [
+        {
+          "tipo": "Comanda",
+          "quantidade": 4.0,
+          "total": 357.88,
+          "ticket_medio": 89.47
+        },
+        {
+          "tipo": "Mesa",
+          "quantidade": 4631.0,
+          "total": 292380.01,
+          "ticket_medio": 63.14
+        },
+        {
+          "tipo": "Entrega",
+          "quantidade": 11915.0,
+          "total": 1860085.43,
+          "ticket_medio": 156.11
+        },
+        {
+          "tipo": "Balcão",
+          "quantidade": 2803.0,
+          "total": 188145.01,
+          "ticket_medio": 67.12
+        }
+      ]
+    },
+    "overall_2025": {
+      "de": "01/01/2025",
+      "ate": "23/04/2025",
+      "total": 1661649.37,
+      "quantidade": 15803.0,
+      "ticket_medio": 105.15,
+      "linhas": [
+        {
+          "tipo": "Comanda",
+          "quantidade": 46.0,
+          "total": 1870.41,
+          "ticket_medio": 40.66
+        },
+        {
+          "tipo": "Mesa",
+          "quantidade": 4184.0,
+          "total": 229173.4,
+          "ticket_medio": 54.77
+        },
+        {
+          "tipo": "Entrega",
+          "quantidade": 8997.0,
+          "total": 1261016.55,
+          "ticket_medio": 140.16
+        },
+        {
+          "tipo": "Balcão",
+          "quantidade": 2576.0,
+          "total": 169589.01,
+          "ticket_medio": 65.83
+        }
+      ]
+    },
+    "delta_total": 679318.96,
+    "delta_total_pct": 40.882208501063005,
+    "delta_quantidade": 3550.0,
+    "delta_quantidade_pct": 22.464089097006898,
+    "delta_ticket": 15.81,
+    "delta_ticket_pct": 15.035663338088433
+  },
+  "por_mes": [
+    {
+      "mes_num": 1,
+      "mes_nome": "Janeiro",
+      "curr": {
+        "de": "01/01/2026",
+        "ate": "31/01/2026",
+        "total": 515300.75,
+        "quantidade": 4513.0,
+        "ticket_medio": 114.18,
+        "linhas": [
+          {
+            "tipo": "Comanda",
+            "quantidade": 3.0,
+            "total": 218.02,
+            "ticket_medio": 72.67
+          },
+          {
+            "tipo": "Mesa",
+            "quantidade": 1154.0,
+            "total": 75761.41,
+            "ticket_medio": 65.65
+          },
+          {
+            "tipo": "Entrega",
+            "quantidade": 2675.0,
+            "total": 396061.42,
+            "ticket_medio": 148.06
+          },
+          {
+            "tipo": "Balcão",
+            "quantidade": 681.0,
+            "total": 43259.9,
+            "ticket_medio": 63.52
+          }
+        ]
+      },
+      "prev": {
+        "de": "01/01/2025",
+        "ate": "31/01/2025",
+        "total": 385640.2,
+        "quantidade": 3705.0,
+        "ticket_medio": 104.09,
+        "linhas": [
+          {
+            "tipo": "Comanda",
+            "quantidade": 2.0,
+            "total": 82.6,
+            "ticket_medio": 41.3
+          },
+          {
+            "tipo": "Mesa",
+            "quantidade": 1054.0,
+            "total": 56416.85,
+            "ticket_medio": 53.53
+          },
+          {
+            "tipo": "Entrega",
+            "quantidade": 2022.0,
+            "total": 288287.35,
+            "ticket_medio": 142.58
+          },
+          {
+            "tipo": "Balcão",
+            "quantidade": 627.0,
+            "total": 40853.4,
+            "ticket_medio": 65.16
+          }
+        ]
+      },
+      "delta_total": 129660.55,
+      "delta_total_pct": 33.62215609264801,
+      "delta_qtd": 808.0,
+      "delta_qtd_pct": 21.808367071524966,
+      "delta_ticket": 10.09,
+      "delta_ticket_pct": 9.693534441348836
+    },
+    {
+      "mes_num": 2,
+      "mes_nome": "Fevereiro",
+      "curr": {
+        "de": "01/02/2026",
+        "ate": "28/02/2026",
+        "total": 565384.4,
+        "quantidade": 4750.0,
+        "ticket_medio": 119.03,
+        "linhas": [
+          {
+            "tipo": "Mesa",
+            "quantidade": 1098.0,
+            "total": 71388.61,
+            "ticket_medio": 65.02
+          },
+          {
+            "tipo": "Entrega",
+            "quantidade": 2959.0,
+            "total": 449947.44,
+            "ticket_medio": 152.06
+          },
+          {
+            "tipo": "Balcão",
+            "quantidade": 693.0,
+            "total": 44048.35,
+            "ticket_medio": 63.56
+          }
+        ]
+      },
+      "prev": {
+        "de": "01/02/2025",
+        "ate": "28/02/2025",
+        "total": 403969.96,
+        "quantidade": 3926.0,
+        "ticket_medio": 102.9,
+        "linhas": [
+          {
+            "tipo": "Comanda",
+            "quantidade": 12.0,
+            "total": 722.78,
+            "ticket_medio": 60.23
+          },
+          {
+            "tipo": "Mesa",
+            "quantidade": 1151.0,
+            "total": 62565.35,
+            "ticket_medio": 54.36
+          },
+          {
+            "tipo": "Entrega",
+            "quantidade": 2119.0,
+            "total": 296649.95,
+            "ticket_medio": 140.0
+          },
+          {
+            "tipo": "Balcão",
+            "quantidade": 644.0,
+            "total": 44031.88,
+            "ticket_medio": 68.37
+          }
+        ]
+      },
+      "delta_total": 161414.44,
+      "delta_total_pct": 39.95704037003147,
+      "delta_qtd": 824.0,
+      "delta_qtd_pct": 20.98828323993887,
+      "delta_ticket": 16.13,
+      "delta_ticket_pct": 15.675413022351792
+    },
+    {
+      "mes_num": 3,
+      "mes_nome": "Março",
+      "curr": {
+        "de": "01/03/2026",
+        "ate": "31/03/2026",
+        "total": 696175.13,
+        "quantidade": 5828.0,
+        "ticket_medio": 119.45,
+        "linhas": [
+          {
+            "tipo": "Mesa",
+            "quantidade": 1442.0,
+            "total": 85659.28,
+            "ticket_medio": 59.4
+          },
+          {
+            "tipo": "Entrega",
+            "quantidade": 3587.0,
+            "total": 560566.74,
+            "ticket_medio": 156.28
+          },
+          {
+            "tipo": "Balcão",
+            "quantidade": 799.0,
+            "total": 49949.11,
+            "ticket_medio": 62.52
+          }
+        ]
+      },
+      "prev": {
+        "de": "01/03/2025",
+        "ate": "31/03/2025",
+        "total": 459529.38,
+        "quantidade": 4546.0,
+        "ticket_medio": 101.08,
+        "linhas": [
+          {
+            "tipo": "Comanda",
+            "quantidade": 25.0,
+            "total": 753.92,
+            "ticket_medio": 30.16
+          },
+          {
+            "tipo": "Mesa",
+            "quantidade": 1127.0,
+            "total": 62867.08,
+            "ticket_medio": 55.78
+          },
+          {
+            "tipo": "Entrega",
+            "quantidade": 2653.0,
+            "total": 348907.8,
+            "ticket_medio": 131.51
+          },
+          {
+            "tipo": "Balcão",
+            "quantidade": 741.0,
+            "total": 47000.58,
+            "ticket_medio": 63.43
+          }
+        ]
+      },
+      "delta_total": 236645.75,
+      "delta_total_pct": 51.49741459403532,
+      "delta_qtd": 1282.0,
+      "delta_qtd_pct": 28.20061592608887,
+      "delta_ticket": 18.37,
+      "delta_ticket_pct": 18.17372378314207
+    },
+    {
+      "mes_num": 4,
+      "mes_nome": "Abril",
+      "curr": {
+        "de": "01/04/2026",
+        "ate": "23/04/2026",
+        "total": 564108.05,
+        "quantidade": 4262.0,
+        "ticket_medio": 132.36,
+        "linhas": [
+          {
+            "tipo": "Comanda",
+            "quantidade": 1.0,
+            "total": 139.86,
+            "ticket_medio": 139.86
+          },
+          {
+            "tipo": "Mesa",
+            "quantidade": 937.0,
+            "total": 59570.71,
+            "ticket_medio": 63.58
+          },
+          {
+            "tipo": "Entrega",
+            "quantidade": 2694.0,
+            "total": 453509.83,
+            "ticket_medio": 168.34
+          },
+          {
+            "tipo": "Balcão",
+            "quantidade": 630.0,
+            "total": 50887.65,
+            "ticket_medio": 80.77
+          }
+        ]
+      },
+      "prev": {
+        "de": "01/04/2025",
+        "ate": "23/04/2025",
+        "total": 412509.83,
+        "quantidade": 3626.0,
+        "ticket_medio": 113.76,
+        "linhas": [
+          {
+            "tipo": "Comanda",
+            "quantidade": 7.0,
+            "total": 311.11,
+            "ticket_medio": 44.44
+          },
+          {
+            "tipo": "Mesa",
+            "quantidade": 852.0,
+            "total": 47324.12,
+            "ticket_medio": 55.55
+          },
+          {
+            "tipo": "Entrega",
+            "quantidade": 2203.0,
+            "total": 327171.45,
+            "ticket_medio": 148.51
+          },
+          {
+            "tipo": "Balcão",
+            "quantidade": 564.0,
+            "total": 37703.15,
+            "ticket_medio": 66.85
+          }
+        ]
+      },
+      "delta_total": 151598.22,
+      "delta_total_pct": 36.750207867773725,
+      "delta_qtd": 636.0,
+      "delta_qtd_pct": 17.539988968560397,
+      "delta_ticket": 18.6,
+      "delta_ticket_pct": 16.35021097046414
+    }
+  ],
+  "por_canal": [
+    {
+      "tipo": "Entrega",
+      "curr_total": 1860085.43,
+      "prev_total": 1261016.55,
+      "curr_qtd": 11915.0,
+      "prev_qtd": 8997.0,
+      "curr_ticket": 156.11,
+      "prev_ticket": 140.16,
+      "delta_total": 599068.88,
+      "delta_total_pct": 47.50682138152746,
+      "delta_qtd": 2918.0,
+      "delta_qtd_pct": 32.43303323329999,
+      "delta_ticket": 15.95,
+      "delta_ticket_pct": 11.379851598173527
+    },
+    {
+      "tipo": "Mesa",
+      "curr_total": 292380.01,
+      "prev_total": 229173.4,
+      "curr_qtd": 4631.0,
+      "prev_qtd": 4184.0,
+      "curr_ticket": 63.14,
+      "prev_ticket": 54.77,
+      "delta_total": 63206.61,
+      "delta_total_pct": 27.58025582375617,
+      "delta_qtd": 447.0,
+      "delta_qtd_pct": 10.683556405353729,
+      "delta_ticket": 8.37,
+      "delta_ticket_pct": 15.282088734708775
+    },
+    {
+      "tipo": "Balcão",
+      "curr_total": 188145.01,
+      "prev_total": 169589.01,
+      "curr_qtd": 2803.0,
+      "prev_qtd": 2576.0,
+      "curr_ticket": 67.12,
+      "prev_ticket": 65.83,
+      "delta_total": 18556.0,
+      "delta_total_pct": 10.941746755877634,
+      "delta_qtd": 227.0,
+      "delta_qtd_pct": 8.812111801242237,
+      "delta_ticket": 1.29,
+      "delta_ticket_pct": 1.9595928907792894
+    },
+    {
+      "tipo": "Comanda",
+      "curr_total": 357.88,
+      "prev_total": 1870.41,
+      "curr_qtd": 4.0,
+      "prev_qtd": 46.0,
+      "curr_ticket": 89.47,
+      "prev_ticket": 40.66,
+      "delta_total": -1512.53,
+      "delta_total_pct": -80.86622719082982,
+      "delta_qtd": -42.0,
+      "delta_qtd_pct": -91.30434782608695,
+      "delta_ticket": 48.81,
+      "delta_ticket_pct": 120.04426955238566
+    }
+  ]
+}

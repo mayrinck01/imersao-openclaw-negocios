@@ -1,0 +1,2250 @@
+{
+  "periodo": {
+    "de": "01/10/2025",
+    "ate": "31/10/2025"
+  },
+  "total_registros": 249,
+  "registros": [
+    {
+      "data": "23/10/2025",
+      "hora": "16:48:39",
+      "produto_produzido": "(prod) Geleia Damasco 200gr (un)",
+      "insumo": "(desc) Pote Vidro Pianezza 210ml + tampa (und)",
+      "qtde": "1,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "23/10/2025",
+      "hora": "16:48:39",
+      "produto_produzido": "(prod) Geleia Damasco 200gr (un)",
+      "insumo": "(prod) Geleia Damasco (kg)",
+      "qtde": "0,200",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "23/10/2025",
+      "hora": "16:12:51",
+      "produto_produzido": "(prod) Geleia Frutas Vermelhas 200gr (un)",
+      "insumo": "(desc) Pote Vidro Pianezza 210ml + tampa (und)",
+      "qtde": "1,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "23/10/2025",
+      "hora": "16:12:51",
+      "produto_produzido": "(prod) Geleia Frutas Vermelhas 200gr (un)",
+      "insumo": "(prod) Geleia Frutas Vermelhas (kg)",
+      "qtde": "0,200",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "23/10/2025",
+      "hora": "16:11:46",
+      "produto_produzido": "(prod) Geleia Frutas Vermelhas (kg)",
+      "insumo": "(ins) Frutas Vermelhas (kg)",
+      "qtde": "3,000",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "23/10/2025",
+      "hora": "16:11:46",
+      "produto_produzido": "(prod) Geleia Frutas Vermelhas (kg)",
+      "insumo": "(ins) Acucar Refinado (kg)",
+      "qtde": "1,200",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "22/10/2025",
+      "hora": "16:14:16",
+      "produto_produzido": "(prod) Cheescake F25 (un)",
+      "insumo": "(prod) Semi Cheescake F25 (un)",
+      "qtde": "1,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "22/10/2025",
+      "hora": "16:14:16",
+      "produto_produzido": "(prod) Cheescake F25 (un)",
+      "insumo": "(desc) Caixa Cake Torta 29,5 X 29,5 X 5,5 Micro (und)",
+      "qtde": "1,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "22/10/2025",
+      "hora": "16:14:16",
+      "produto_produzido": "(prod) Cheescake F25 (un)",
+      "insumo": "(desc) Disco Cake 29 Micro (und)",
+      "qtde": "1,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "22/10/2025",
+      "hora": "15:57:52",
+      "produto_produzido": "(prod) Recheio Damasco (kg)",
+      "insumo": "(ins) Damasco Ácido (kg)",
+      "qtde": "3,000",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "22/10/2025",
+      "hora": "15:57:52",
+      "produto_produzido": "(prod) Recheio Damasco (kg)",
+      "insumo": "(ins) Acucar Refinado (kg)",
+      "qtde": "2,000",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "22/10/2025",
+      "hora": "15:57:05",
+      "produto_produzido": "(prod) Geleia Damasco (kg)",
+      "insumo": "(ins) Damasco Ácido (kg)",
+      "qtde": "1,000",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "22/10/2025",
+      "hora": "15:57:05",
+      "produto_produzido": "(prod) Geleia Damasco (kg)",
+      "insumo": "(ins) Acucar Refinado (kg)",
+      "qtde": "1,000",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "21/10/2025",
+      "hora": "11:03:05",
+      "produto_produzido": "(prod) Chocoberries F30 (un)",
+      "insumo": "(prod) Semi Chocoberries F30 (un)",
+      "qtde": "1,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "21/10/2025",
+      "hora": "11:03:05",
+      "produto_produzido": "(prod) Chocoberries F30 (un)",
+      "insumo": "(ins) Blue Berry Fresca (kg)",
+      "qtde": "0,080",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "21/10/2025",
+      "hora": "11:03:05",
+      "produto_produzido": "(prod) Chocoberries F30 (un)",
+      "insumo": "(ins) Amora Fresca (kg)",
+      "qtde": "0,100",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "21/10/2025",
+      "hora": "11:03:05",
+      "produto_produzido": "(prod) Chocoberries F30 (un)",
+      "insumo": "(ins) Morango Fresco (kg)",
+      "qtde": "0,300",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "21/10/2025",
+      "hora": "11:03:05",
+      "produto_produzido": "(prod) Chocoberries F30 (un)",
+      "insumo": "(prod) Calda Negra (kg)",
+      "qtde": "0,300",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "21/10/2025",
+      "hora": "11:03:05",
+      "produto_produzido": "(prod) Chocoberries F30 (un)",
+      "insumo": "(ins) Granule Choc. Meio Amargo (kg)",
+      "qtde": "0,060",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "21/10/2025",
+      "hora": "11:03:05",
+      "produto_produzido": "(prod) Chocoberries F30 (un)",
+      "insumo": "(ins) Geleia de Brilho Neutra (kg)",
+      "qtde": "0,070",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "21/10/2025",
+      "hora": "11:03:02",
+      "produto_produzido": "(prod) Chocoberries F25 (un)",
+      "insumo": "(prod) Semi Chocoberries F25 (un)",
+      "qtde": "1,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "21/10/2025",
+      "hora": "11:03:02",
+      "produto_produzido": "(prod) Chocoberries F25 (un)",
+      "insumo": "(ins) Blue Berry Fresca (kg)",
+      "qtde": "0,040",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "21/10/2025",
+      "hora": "11:03:02",
+      "produto_produzido": "(prod) Chocoberries F25 (un)",
+      "insumo": "(ins) Amora Fresca (kg)",
+      "qtde": "0,040",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "21/10/2025",
+      "hora": "11:03:02",
+      "produto_produzido": "(prod) Chocoberries F25 (un)",
+      "insumo": "(ins) Morango Fresco (kg)",
+      "qtde": "0,180",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "21/10/2025",
+      "hora": "11:03:02",
+      "produto_produzido": "(prod) Chocoberries F25 (un)",
+      "insumo": "(prod) Calda Negra (kg)",
+      "qtde": "0,100",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "21/10/2025",
+      "hora": "11:03:02",
+      "produto_produzido": "(prod) Chocoberries F25 (un)",
+      "insumo": "(ins) Granule Choc. Meio Amargo (kg)",
+      "qtde": "0,030",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "21/10/2025",
+      "hora": "11:03:02",
+      "produto_produzido": "(prod) Chocoberries F25 (un)",
+      "insumo": "(ins) Geleia de Brilho Neutra (kg)",
+      "qtde": "0,050",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "21/10/2025",
+      "hora": "11:02:58",
+      "produto_produzido": "(prod) Chocoberries F20 (un)",
+      "insumo": "(prod) Semi Chocoberries F20 (un)",
+      "qtde": "1,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "21/10/2025",
+      "hora": "11:02:58",
+      "produto_produzido": "(prod) Chocoberries F20 (un)",
+      "insumo": "(ins) Blue Berry Fresca (kg)",
+      "qtde": "0,040",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "21/10/2025",
+      "hora": "11:02:58",
+      "produto_produzido": "(prod) Chocoberries F20 (un)",
+      "insumo": "(ins) Amora Fresca (kg)",
+      "qtde": "0,040",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "21/10/2025",
+      "hora": "11:02:58",
+      "produto_produzido": "(prod) Chocoberries F20 (un)",
+      "insumo": "(ins) Morango Fresco (kg)",
+      "qtde": "0,140",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "21/10/2025",
+      "hora": "11:02:58",
+      "produto_produzido": "(prod) Chocoberries F20 (un)",
+      "insumo": "(prod) Calda Negra (kg)",
+      "qtde": "0,080",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "21/10/2025",
+      "hora": "11:02:58",
+      "produto_produzido": "(prod) Chocoberries F20 (un)",
+      "insumo": "(ins) Granule Choc. Meio Amargo (kg)",
+      "qtde": "0,020",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "21/10/2025",
+      "hora": "11:02:58",
+      "produto_produzido": "(prod) Chocoberries F20 (un)",
+      "insumo": "(ins) Geleia de Brilho Neutra (kg)",
+      "qtde": "0,030",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "21/10/2025",
+      "hora": "11:02:55",
+      "produto_produzido": "(prod) Chocoberries F13 (un)",
+      "insumo": "(ins) Blue Berry Fresca (kg)",
+      "qtde": "0,030",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "21/10/2025",
+      "hora": "11:02:55",
+      "produto_produzido": "(prod) Chocoberries F13 (un)",
+      "insumo": "(ins) Amora Fresca (kg)",
+      "qtde": "0,030",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "21/10/2025",
+      "hora": "11:02:55",
+      "produto_produzido": "(prod) Chocoberries F13 (un)",
+      "insumo": "(ins) Morango Fresco (kg)",
+      "qtde": "0,100",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "21/10/2025",
+      "hora": "11:02:55",
+      "produto_produzido": "(prod) Chocoberries F13 (un)",
+      "insumo": "(prod) Semi Chocoberries F13 (un)",
+      "qtde": "1,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "21/10/2025",
+      "hora": "11:02:55",
+      "produto_produzido": "(prod) Chocoberries F13 (un)",
+      "insumo": "(prod) Calda Negra (kg)",
+      "qtde": "0,060",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "21/10/2025",
+      "hora": "11:02:55",
+      "produto_produzido": "(prod) Chocoberries F13 (un)",
+      "insumo": "(ins) Granule Choc. Meio Amargo (kg)",
+      "qtde": "0,010",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "21/10/2025",
+      "hora": "11:02:55",
+      "produto_produzido": "(prod) Chocoberries F13 (un)",
+      "insumo": "(ins) Geleia de Brilho Neutra (kg)",
+      "qtde": "0,020",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "21/10/2025",
+      "hora": "11:01:06",
+      "produto_produzido": "(prod) Semi Chocoberries F30 (un)",
+      "insumo": "(desc) Tabua Mdf 35X6MM (und)",
+      "qtde": "1,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "21/10/2025",
+      "hora": "11:01:06",
+      "produto_produzido": "(prod) Semi Chocoberries F30 (un)",
+      "insumo": "(prod) Batido Nega Maluca F30 (un)",
+      "qtde": "1,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "21/10/2025",
+      "hora": "11:01:06",
+      "produto_produzido": "(prod) Semi Chocoberries F30 (un)",
+      "insumo": "(prod) Nova Cobertura de Brigadeiro (kg)",
+      "qtde": "2,000",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "21/10/2025",
+      "hora": "11:01:06",
+      "produto_produzido": "(prod) Semi Chocoberries F30 (un)",
+      "insumo": "(desc) Cinta De Acetato 7Cm (m)",
+      "qtde": "1,100",
+      "unidade": "M",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "21/10/2025",
+      "hora": "11:01:04",
+      "produto_produzido": "(prod) Semi Chocoberries F25 (un)",
+      "insumo": "(desc) Caixa Cake Torta 29,5 X 29,5 X 12 Micro (und)",
+      "qtde": "1,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "21/10/2025",
+      "hora": "11:01:04",
+      "produto_produzido": "(prod) Semi Chocoberries F25 (un)",
+      "insumo": "(desc) Disco Cake 29 Micro (und)",
+      "qtde": "1,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "21/10/2025",
+      "hora": "11:01:04",
+      "produto_produzido": "(prod) Semi Chocoberries F25 (un)",
+      "insumo": "(prod) Nova Cobertura de Brigadeiro (kg)",
+      "qtde": "1,200",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "21/10/2025",
+      "hora": "11:01:04",
+      "produto_produzido": "(prod) Semi Chocoberries F25 (un)",
+      "insumo": "(prod) Batido Nega Maluca (kg)",
+      "qtde": "1,200",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "21/10/2025",
+      "hora": "11:01:04",
+      "produto_produzido": "(prod) Semi Chocoberries F25 (un)",
+      "insumo": "(desc) Cinta De Acetato 7Cm (m)",
+      "qtde": "0,980",
+      "unidade": "M",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "21/10/2025",
+      "hora": "11:01:03",
+      "produto_produzido": "(prod) Semi Chocoberries F20 (un)",
+      "insumo": "(desc) Caixa Cake Torta 24,5 X 24,5 X 12 Micro (und)",
+      "qtde": "1,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "21/10/2025",
+      "hora": "11:01:03",
+      "produto_produzido": "(prod) Semi Chocoberries F20 (un)",
+      "insumo": "(desc) Disco Cake 24 Micro (und)",
+      "qtde": "1,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "21/10/2025",
+      "hora": "11:01:03",
+      "produto_produzido": "(prod) Semi Chocoberries F20 (un)",
+      "insumo": "(prod) Nova Cobertura de Brigadeiro (kg)",
+      "qtde": "0,800",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "21/10/2025",
+      "hora": "11:01:03",
+      "produto_produzido": "(prod) Semi Chocoberries F20 (un)",
+      "insumo": "(prod) Batido Nega Maluca (kg)",
+      "qtde": "0,600",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "21/10/2025",
+      "hora": "11:01:03",
+      "produto_produzido": "(prod) Semi Chocoberries F20 (un)",
+      "insumo": "(desc) Cinta De Acetato 7Cm (m)",
+      "qtde": "0,800",
+      "unidade": "M",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "21/10/2025",
+      "hora": "11:01:01",
+      "produto_produzido": "(prod) Semi Chocoberries F13 (un)",
+      "insumo": "(desc) Caixa Cake Torta 17,5 X 17,5 X 12 Micro (und)",
+      "qtde": "1,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "21/10/2025",
+      "hora": "11:01:01",
+      "produto_produzido": "(prod) Semi Chocoberries F13 (un)",
+      "insumo": "(desc) Disco Cake 17 Micro (und)",
+      "qtde": "1,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "21/10/2025",
+      "hora": "11:01:01",
+      "produto_produzido": "(prod) Semi Chocoberries F13 (un)",
+      "insumo": "(prod) Nova Cobertura de Brigadeiro (kg)",
+      "qtde": "0,400",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "21/10/2025",
+      "hora": "11:01:01",
+      "produto_produzido": "(prod) Semi Chocoberries F13 (un)",
+      "insumo": "(prod) Batido Nega Maluca (kg)",
+      "qtde": "0,300",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "21/10/2025",
+      "hora": "11:01:01",
+      "produto_produzido": "(prod) Semi Chocoberries F13 (un)",
+      "insumo": "(desc) Cinta De Acetato 7Cm (m)",
+      "qtde": "0,480",
+      "unidade": "M",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "21/10/2025",
+      "hora": "10:58:14",
+      "produto_produzido": "(prod) Batido Nega Maluca F30 (un)",
+      "insumo": "(prod) Batido Nega Maluca (kg)",
+      "qtde": "2,000",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "21/10/2025",
+      "hora": "10:58:13",
+      "produto_produzido": "(prod) Batido Nega Maluca F25 (un)",
+      "insumo": "(prod) Batido Nega Maluca (kg)",
+      "qtde": "1,200",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "21/10/2025",
+      "hora": "10:58:12",
+      "produto_produzido": "(prod) Batido Nega Maluca F22 (un)",
+      "insumo": "(prod) Batido Nega Maluca (kg)",
+      "qtde": "0,800",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "21/10/2025",
+      "hora": "10:58:12",
+      "produto_produzido": "(prod) Batido Nega Maluca F20 (un)",
+      "insumo": "(prod) Batido Nega Maluca (kg)",
+      "qtde": "0,600",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "21/10/2025",
+      "hora": "10:58:11",
+      "produto_produzido": "(prod) Batido Nega Maluca F14 (un)",
+      "insumo": "(prod) Batido Nega Maluca (kg)",
+      "qtde": "0,300",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "21/10/2025",
+      "hora": "10:58:10",
+      "produto_produzido": "(prod) Batido Nega Maluca F13 (un)",
+      "insumo": "(prod) Batido Nega Maluca (kg)",
+      "qtde": "0,250",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "20/10/2025",
+      "hora": "19:11:09",
+      "produto_produzido": "(prod) Batido Nega Maluca (kg)",
+      "insumo": "(ins) Fermento Em Pó (kg)",
+      "qtde": "0,010",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "20/10/2025",
+      "hora": "19:11:09",
+      "produto_produzido": "(prod) Batido Nega Maluca (kg)",
+      "insumo": "(prod) Farinha Biscoito Maisena (kg)",
+      "qtde": "0,250",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "20/10/2025",
+      "hora": "19:11:09",
+      "produto_produzido": "(prod) Batido Nega Maluca (kg)",
+      "insumo": "(ins) Oleo De Soja (lt)",
+      "qtde": "0,100",
+      "unidade": "Lt",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "20/10/2025",
+      "hora": "19:11:09",
+      "produto_produzido": "(prod) Batido Nega Maluca (kg)",
+      "insumo": "(ins) Nescau (kg)",
+      "qtde": "0,150",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "20/10/2025",
+      "hora": "19:11:09",
+      "produto_produzido": "(prod) Batido Nega Maluca (kg)",
+      "insumo": "(ins) Ovos Jumbo Branco (und)",
+      "qtde": "4,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "20/10/2025",
+      "hora": "19:11:09",
+      "produto_produzido": "(prod) Batido Nega Maluca (kg)",
+      "insumo": "(ins) Acucar Refinado (kg)",
+      "qtde": "0,200",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "20/10/2025",
+      "hora": "17:28:25",
+      "produto_produzido": "(prod) Maravilha Abacaxi F30 (un)",
+      "insumo": "(prod) Semi Maravilha Abacaxi F30 (un)",
+      "qtde": "1,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "20/10/2025",
+      "hora": "17:28:25",
+      "produto_produzido": "(prod) Maravilha Abacaxi F30 (un)",
+      "insumo": "(prod) Merengue (kg)",
+      "qtde": "0,750",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "20/10/2025",
+      "hora": "17:28:25",
+      "produto_produzido": "(prod) Maravilha Abacaxi F30 (un)",
+      "insumo": "(prod) Recheio Abacaxi (kg)",
+      "qtde": "0,210",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "20/10/2025",
+      "hora": "17:28:25",
+      "produto_produzido": "(prod) Maravilha Abacaxi F30 (un)",
+      "insumo": "(ins) Coco Ralado Fresco (kg)",
+      "qtde": "0,080",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "20/10/2025",
+      "hora": "17:28:25",
+      "produto_produzido": "(prod) Maravilha Abacaxi F30 (un)",
+      "insumo": "(ins) Geleia de Brilho Neutra (kg)",
+      "qtde": "0,070",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "20/10/2025",
+      "hora": "17:27:24",
+      "produto_produzido": "(prod) Semi Maravilha Abacaxi F30 (un)",
+      "insumo": "(desc) Tabua Mdf 35X6MM (und)",
+      "qtde": "1,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "20/10/2025",
+      "hora": "17:27:24",
+      "produto_produzido": "(prod) Semi Maravilha Abacaxi F30 (un)",
+      "insumo": "(prod) Batido Branco F30 (un)",
+      "qtde": "1,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "20/10/2025",
+      "hora": "17:27:24",
+      "produto_produzido": "(prod) Semi Maravilha Abacaxi F30 (un)",
+      "insumo": "(prod) Recheio Abacaxi (kg)",
+      "qtde": "0,800",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "20/10/2025",
+      "hora": "17:27:24",
+      "produto_produzido": "(prod) Semi Maravilha Abacaxi F30 (un)",
+      "insumo": "(prod) Creme Cake Patisserie (kg)",
+      "qtde": "1,000",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "20/10/2025",
+      "hora": "13:58:59",
+      "produto_produzido": "(prod) Deliciosa F20 (un)",
+      "insumo": "(ins) Morango Fresco (kg)",
+      "qtde": "0,140",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "20/10/2025",
+      "hora": "13:58:59",
+      "produto_produzido": "(prod) Deliciosa F20 (un)",
+      "insumo": "(prod) Semi Deliciosa F20 (un)",
+      "qtde": "1,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "20/10/2025",
+      "hora": "13:58:59",
+      "produto_produzido": "(prod) Deliciosa F20 (un)",
+      "insumo": "(ins) Geleia de Brilho Neutra (kg)",
+      "qtde": "0,030",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "20/10/2025",
+      "hora": "13:58:20",
+      "produto_produzido": "(prod) Semi Deliciosa F20 (un)",
+      "insumo": "(prod) Semi Acabada Deliciosa F20 (un)",
+      "qtde": "1,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "20/10/2025",
+      "hora": "13:58:20",
+      "produto_produzido": "(prod) Semi Deliciosa F20 (un)",
+      "insumo": "(prod) Merengue (kg)",
+      "qtde": "0,250",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "20/10/2025",
+      "hora": "13:57:28",
+      "produto_produzido": "(prod) Semi Acabada Deliciosa F20 (un)",
+      "insumo": "(prod) Batido Semi Pronta Deliciosa F20 (un)",
+      "qtde": "1,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "20/10/2025",
+      "hora": "13:57:28",
+      "produto_produzido": "(prod) Semi Acabada Deliciosa F20 (un)",
+      "insumo": "(desc) Caixa Cake Torta 24,5 X 24,5 X 12 Micro (und)",
+      "qtde": "1,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "20/10/2025",
+      "hora": "13:57:28",
+      "produto_produzido": "(prod) Semi Acabada Deliciosa F20 (un)",
+      "insumo": "(desc) Cinta De Acetato 7Cm (m)",
+      "qtde": "0,900",
+      "unidade": "M",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "20/10/2025",
+      "hora": "13:57:28",
+      "produto_produzido": "(prod) Semi Acabada Deliciosa F20 (un)",
+      "insumo": "(ins) Morango Fresco (kg)",
+      "qtde": "0,420",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "20/10/2025",
+      "hora": "13:57:28",
+      "produto_produzido": "(prod) Semi Acabada Deliciosa F20 (un)",
+      "insumo": "(desc) Disco Cake 24 Micro (und)",
+      "qtde": "1,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/10/2025",
+      "hora": "18:52:36",
+      "produto_produzido": "(prod) Tortinha Baba Caixa 6 (un)",
+      "insumo": "(prod) Tortinha Baba Festa (un)",
+      "qtde": "6,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/10/2025",
+      "hora": "18:52:36",
+      "produto_produzido": "(prod) Tortinha Baba Caixa 6 (un)",
+      "insumo": "(desc) Caixa Tortin. C/Visor Kraft 14X10X4,5 Pct C/10 (und)",
+      "qtde": "1,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/10/2025",
+      "hora": "18:47:47",
+      "produto_produzido": "(prod) Tortinhas Mimos de Mãe - Dia das Maes 2026 (6 un)",
+      "insumo": "(desc) Caixa Tortin. C/Visor Kraft 14X10X4,5 Pct C/10 (und)",
+      "qtde": "1,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/10/2025",
+      "hora": "18:47:47",
+      "produto_produzido": "(prod) Tortinhas Mimos de Mãe - Dia das Maes 2026 (6 un)",
+      "insumo": "(prod) Tortinha Choc Festa (un)",
+      "qtde": "6,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/10/2025",
+      "hora": "17:58:05",
+      "produto_produzido": "(prod) Massa Bombom Nozes (kg)",
+      "insumo": "(ins) Margarina (kg)",
+      "qtde": "0,100",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/10/2025",
+      "hora": "17:58:05",
+      "produto_produzido": "(prod) Massa Bombom Nozes (kg)",
+      "insumo": "(ins) Ovos Jumbo Branco (und)",
+      "qtde": "6,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/10/2025",
+      "hora": "17:58:05",
+      "produto_produzido": "(prod) Massa Bombom Nozes (kg)",
+      "insumo": "(ins) Acucar Refinado (kg)",
+      "qtde": "0,500",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/10/2025",
+      "hora": "17:58:05",
+      "produto_produzido": "(prod) Massa Bombom Nozes (kg)",
+      "insumo": "(ins) Nozes S/Casca (kg)",
+      "qtde": "1,000",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/10/2025",
+      "hora": "16:03:33",
+      "produto_produzido": "(prod) Tortinha Baba Festa (un)",
+      "insumo": "(desc) Forminha Branca Nº 4 (und)",
+      "qtde": "1,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/10/2025",
+      "hora": "16:03:33",
+      "produto_produzido": "(prod) Tortinha Baba Festa (un)",
+      "insumo": "(ins) Fondant (kg)",
+      "qtde": "0,020",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/10/2025",
+      "hora": "16:03:33",
+      "produto_produzido": "(prod) Tortinha Baba Festa (un)",
+      "insumo": "(prod) Tortinha Baba Festa Semi (un)",
+      "qtde": "1,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/10/2025",
+      "hora": "16:03:31",
+      "produto_produzido": "(prod) Tortinha Baba Caixa 6 (un)",
+      "insumo": "(prod) Tortinha Baba Festa (un)",
+      "qtde": "6,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/10/2025",
+      "hora": "16:03:31",
+      "produto_produzido": "(prod) Tortinha Baba Caixa 6 (un)",
+      "insumo": "(desc) Caixa Tortin. C/Visor Kraft 14X10X4,5 Pct C/10 (und)",
+      "qtde": "1,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/10/2025",
+      "hora": "15:52:02",
+      "produto_produzido": "(prod) Italianinho (un)",
+      "insumo": "(prod) Pao Italiano (un)",
+      "qtde": "1,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/10/2025",
+      "hora": "15:52:02",
+      "produto_produzido": "(prod) Italianinho (un)",
+      "insumo": "(ins) Queijo Mussarela (kg)",
+      "qtde": "0,020",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/10/2025",
+      "hora": "15:52:02",
+      "produto_produzido": "(prod) Italianinho (un)",
+      "insumo": "(ins) Tomate Italiano Fresco (kg)",
+      "qtde": "0,020",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/10/2025",
+      "hora": "15:37:54",
+      "produto_produzido": "(prod) Bolim Vulcao Cenoura (un)",
+      "insumo": "(prod) Batido Vulcao Cenoura (un)",
+      "qtde": "1,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/10/2025",
+      "hora": "15:37:54",
+      "produto_produzido": "(prod) Bolim Vulcao Cenoura (un)",
+      "insumo": "(ins) Granule Choc. Meio Amargo (kg)",
+      "qtde": "0,010",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/10/2025",
+      "hora": "15:37:54",
+      "produto_produzido": "(prod) Bolim Vulcao Cenoura (un)",
+      "insumo": "(prod) Nova Massa Brigadeiro Preto (kg)",
+      "qtde": "0,030",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "17/10/2025",
+      "hora": "15:37:54",
+      "produto_produzido": "(prod) Bolim Vulcao Cenoura (un)",
+      "insumo": "(prod) Calda Negra (kg)",
+      "qtde": "0,060",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/10/2025",
+      "hora": "15:13:09",
+      "produto_produzido": "(prod) Halloween - Bolo Ingles Tumulo do Chocolatra (un)",
+      "insumo": "(prod) Bolo Chocolate Cobertura Inglês 300gr (un)",
+      "qtde": "1,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/10/2025",
+      "hora": "15:13:09",
+      "produto_produzido": "(prod) Halloween - Bolo Ingles Tumulo do Chocolatra (un)",
+      "insumo": "(ins) sprinkles decorativos (und)",
+      "qtde": "0,300",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/10/2025",
+      "hora": "15:13:09",
+      "produto_produzido": "(prod) Halloween - Bolo Ingles Tumulo do Chocolatra (un)",
+      "insumo": "(ins) Bala Fine Gelatina 250gr (kg)",
+      "qtde": "0,030",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/10/2025",
+      "hora": "15:13:09",
+      "produto_produzido": "(prod) Halloween - Bolo Ingles Tumulo do Chocolatra (un)",
+      "insumo": "(ins) Cobertura Chocolate Meia Amargo (Gota) (kg)",
+      "qtde": "0,030",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/10/2025",
+      "hora": "15:11:10",
+      "produto_produzido": "(prod) Halloween - Bolo Ingles Tumulo do Chocolatra (un)",
+      "insumo": "(ins) sprinkles decorativos (und)",
+      "qtde": "0,300",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/10/2025",
+      "hora": "15:11:10",
+      "produto_produzido": "(prod) Halloween - Bolo Ingles Tumulo do Chocolatra (un)",
+      "insumo": "(ins) Bala Fine Gelatina 250gr (kg)",
+      "qtde": "0,030",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/10/2025",
+      "hora": "15:11:10",
+      "produto_produzido": "(prod) Halloween - Bolo Ingles Tumulo do Chocolatra (un)",
+      "insumo": "(ins) Cobertura Chocolate Meia Amargo (Gota) (kg)",
+      "qtde": "0,030",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/10/2025",
+      "hora": "15:11:10",
+      "produto_produzido": "(prod) Halloween - Bolo Ingles Tumulo do Chocolatra (un)",
+      "insumo": "(prod) Bolo Chocolate Cobertura Inglês (un)",
+      "qtde": "1,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/10/2025",
+      "hora": "13:15:52",
+      "produto_produzido": "(prod) Halloween - Torta Breu da Meia-Noite F25 (un)",
+      "insumo": "(prod) Semi Tentacao/Emilia F25 (un)",
+      "qtde": "1,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/10/2025",
+      "hora": "13:15:52",
+      "produto_produzido": "(prod) Halloween - Torta Breu da Meia-Noite F25 (un)",
+      "insumo": "(prod) Batido Nega Maluca (kg)",
+      "qtde": "0,100",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/10/2025",
+      "hora": "13:15:52",
+      "produto_produzido": "(prod) Halloween - Torta Breu da Meia-Noite F25 (un)",
+      "insumo": "(ins) Biscoito Maisena (kg)",
+      "qtde": "0,010",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/10/2025",
+      "hora": "13:15:52",
+      "produto_produzido": "(prod) Halloween - Torta Breu da Meia-Noite F25 (un)",
+      "insumo": "(ins) sprinkles decorativos (und)",
+      "qtde": "1,100",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/10/2025",
+      "hora": "13:15:52",
+      "produto_produzido": "(prod) Halloween - Torta Breu da Meia-Noite F25 (un)",
+      "insumo": "(ins) Micanga Laranja (kg)",
+      "qtde": "0,100",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/10/2025",
+      "hora": "13:15:52",
+      "produto_produzido": "(prod) Halloween - Torta Breu da Meia-Noite F25 (un)",
+      "insumo": "(ins) Micanga Preta (kg)",
+      "qtde": "0,100",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/10/2025",
+      "hora": "13:15:52",
+      "produto_produzido": "(prod) Halloween - Torta Breu da Meia-Noite F25 (un)",
+      "insumo": "(prod) Massa Brigadeiro Branco (kg)",
+      "qtde": "0,090",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/10/2025",
+      "hora": "13:15:47",
+      "produto_produzido": "(prod) Halloween - Torta Breu da Meia-Noite F13 (un)",
+      "insumo": "(prod) Semi Tentacao/Emilia F13 (un)",
+      "qtde": "1,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/10/2025",
+      "hora": "13:15:47",
+      "produto_produzido": "(prod) Halloween - Torta Breu da Meia-Noite F13 (un)",
+      "insumo": "(prod) Batido Nega Maluca (kg)",
+      "qtde": "0,050",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/10/2025",
+      "hora": "13:15:47",
+      "produto_produzido": "(prod) Halloween - Torta Breu da Meia-Noite F13 (un)",
+      "insumo": "(ins) sprinkles decorativos (und)",
+      "qtde": "0,280",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/10/2025",
+      "hora": "13:15:47",
+      "produto_produzido": "(prod) Halloween - Torta Breu da Meia-Noite F13 (un)",
+      "insumo": "(ins) Micanga Laranja (kg)",
+      "qtde": "0,070",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/10/2025",
+      "hora": "13:15:47",
+      "produto_produzido": "(prod) Halloween - Torta Breu da Meia-Noite F13 (un)",
+      "insumo": "(ins) Micanga Preta (kg)",
+      "qtde": "0,070",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/10/2025",
+      "hora": "13:15:47",
+      "produto_produzido": "(prod) Halloween - Torta Breu da Meia-Noite F13 (un)",
+      "insumo": "(prod) Massa Brigadeiro Branco (kg)",
+      "qtde": "0,030",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/10/2025",
+      "hora": "13:14:36",
+      "produto_produzido": "(prod) Halloween - Vulcão Sombrio de Chocolate (un)",
+      "insumo": "(ins) sprinkles decorativos (und)",
+      "qtde": "0,280",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/10/2025",
+      "hora": "13:14:36",
+      "produto_produzido": "(prod) Halloween - Vulcão Sombrio de Chocolate (un)",
+      "insumo": "(prod) Calda Negra (kg)",
+      "qtde": "0,060",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/10/2025",
+      "hora": "13:14:36",
+      "produto_produzido": "(prod) Halloween - Vulcão Sombrio de Chocolate (un)",
+      "insumo": "(prod) Batido Vulcao Chocolate (un)",
+      "qtde": "1,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/10/2025",
+      "hora": "13:14:36",
+      "produto_produzido": "(prod) Halloween - Vulcão Sombrio de Chocolate (un)",
+      "insumo": "(prod) Nova Massa Brigadeiro Preto (kg)",
+      "qtde": "0,010",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/10/2025",
+      "hora": "13:14:26",
+      "produto_produzido": "(prod) Batido Vulcao Chocolate (un)",
+      "insumo": "(prod) Batido Nega Maluca (kg)",
+      "qtde": "0,240",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/10/2025",
+      "hora": "13:12:33",
+      "produto_produzido": "(prod) Halloween - Vulcão Olho de Bruxa (un)",
+      "insumo": "(ins) sprinkles decorativos (und)",
+      "qtde": "1,370",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/10/2025",
+      "hora": "13:12:33",
+      "produto_produzido": "(prod) Halloween - Vulcão Olho de Bruxa (un)",
+      "insumo": "(ins) Cobertura Chocolate Branco (Gota) (kg)",
+      "qtde": "0,010",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/10/2025",
+      "hora": "13:12:33",
+      "produto_produzido": "(prod) Halloween - Vulcão Olho de Bruxa (un)",
+      "insumo": "(prod) Massa Brigadeiro Branco (kg)",
+      "qtde": "0,010",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/10/2025",
+      "hora": "13:12:33",
+      "produto_produzido": "(prod) Halloween - Vulcão Olho de Bruxa (un)",
+      "insumo": "(prod) Batido Vulcao Red (un)",
+      "qtde": "1,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/10/2025",
+      "hora": "13:12:33",
+      "produto_produzido": "(prod) Halloween - Vulcão Olho de Bruxa (un)",
+      "insumo": "(prod) Recheio Red Velvet (kg)",
+      "qtde": "0,060",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/10/2025",
+      "hora": "13:11:53",
+      "produto_produzido": "(prod) Bolim Vulcao Red (un)",
+      "insumo": "(prod) Batido Vulcao Red (un)",
+      "qtde": "3,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/10/2025",
+      "hora": "13:11:53",
+      "produto_produzido": "(prod) Bolim Vulcao Red (un)",
+      "insumo": "(prod) Recheio Red Velvet (kg)",
+      "qtde": "0,180",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/10/2025",
+      "hora": "13:11:53",
+      "produto_produzido": "(prod) Bolim Vulcao Red (un)",
+      "insumo": "(ins) Morango Fresco (kg)",
+      "qtde": "0,080",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/10/2025",
+      "hora": "13:10:10",
+      "produto_produzido": "(prod) Halloween - Bolo Ingles Tumulo do Chocolatra (un)",
+      "insumo": "(ins) sprinkles decorativos (und)",
+      "qtde": "0,300",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/10/2025",
+      "hora": "13:10:10",
+      "produto_produzido": "(prod) Halloween - Bolo Ingles Tumulo do Chocolatra (un)",
+      "insumo": "(ins) Bala Fine Gelatina 250gr (kg)",
+      "qtde": "0,030",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/10/2025",
+      "hora": "13:10:10",
+      "produto_produzido": "(prod) Halloween - Bolo Ingles Tumulo do Chocolatra (un)",
+      "insumo": "(ins) Cobertura Chocolate Meia Amargo (Gota) (kg)",
+      "qtde": "0,030",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/10/2025",
+      "hora": "13:10:10",
+      "produto_produzido": "(prod) Halloween - Bolo Ingles Tumulo do Chocolatra (un)",
+      "insumo": "(prod) Bolo Chocolate Cobertura Inglês (un)",
+      "qtde": "1,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/10/2025",
+      "hora": "13:09:01",
+      "produto_produzido": "(prod) Bolo Chocolate Cobertura Inglês 300gr (un)",
+      "insumo": "(prod) Batido Nega Maluca (kg)",
+      "qtde": "0,300",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/10/2025",
+      "hora": "13:09:01",
+      "produto_produzido": "(prod) Bolo Chocolate Cobertura Inglês 300gr (un)",
+      "insumo": "(ins) Granule Choc. Meio Amargo (kg)",
+      "qtde": "0,020",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/10/2025",
+      "hora": "13:09:01",
+      "produto_produzido": "(prod) Bolo Chocolate Cobertura Inglês 300gr (un)",
+      "insumo": "(prod) Nova Massa Brigadeiro Preto (kg)",
+      "qtde": "0,030",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/10/2025",
+      "hora": "13:09:01",
+      "produto_produzido": "(prod) Bolo Chocolate Cobertura Inglês 300gr (un)",
+      "insumo": "(prod) Nova Cobertura de Brigadeiro (kg)",
+      "qtde": "0,140",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/10/2025",
+      "hora": "13:09:01",
+      "produto_produzido": "(prod) Bolo Chocolate Cobertura Inglês 300gr (un)",
+      "insumo": "(desc) Forma Bolo Ingles c/ tampa (und)",
+      "qtde": "1,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/10/2025",
+      "hora": "13:05:36",
+      "produto_produzido": "(prod) Halloween - Brigadeiros Mal-Assombrado cx12 (un)",
+      "insumo": "(ins) sprinkles decorativos (und)",
+      "qtde": "3,360",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/10/2025",
+      "hora": "13:05:36",
+      "produto_produzido": "(prod) Halloween - Brigadeiros Mal-Assombrado cx12 (un)",
+      "insumo": "(ins) Micanga Rosa (kg)",
+      "qtde": "0,010",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/10/2025",
+      "hora": "13:05:36",
+      "produto_produzido": "(prod) Halloween - Brigadeiros Mal-Assombrado cx12 (un)",
+      "insumo": "(ins) Micanga Preta (kg)",
+      "qtde": "0,040",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/10/2025",
+      "hora": "13:05:36",
+      "produto_produzido": "(prod) Halloween - Brigadeiros Mal-Assombrado cx12 (un)",
+      "insumo": "(prod) Nova Massa Brigadeiro Preto (kg)",
+      "qtde": "0,180",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/10/2025",
+      "hora": "13:05:36",
+      "produto_produzido": "(prod) Halloween - Brigadeiros Mal-Assombrado cx12 (un)",
+      "insumo": "(desc) Caixa Cake 13 X 10 X 3,5 doce 12un (und)",
+      "qtde": "1,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/10/2025",
+      "hora": "12:59:17",
+      "produto_produzido": "(prod) Halloween - Brigadeiros Mal-Assombrado cx12 (un)",
+      "insumo": "(ins) Micanga Rosa (kg)",
+      "qtde": "0,010",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/10/2025",
+      "hora": "12:59:17",
+      "produto_produzido": "(prod) Halloween - Brigadeiros Mal-Assombrado cx12 (un)",
+      "insumo": "(ins) Micanga Preta (kg)",
+      "qtde": "0,040",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/10/2025",
+      "hora": "12:59:17",
+      "produto_produzido": "(prod) Halloween - Brigadeiros Mal-Assombrado cx12 (un)",
+      "insumo": "(prod) Nova Massa Brigadeiro Preto (kg)",
+      "qtde": "0,180",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/10/2025",
+      "hora": "12:59:17",
+      "produto_produzido": "(prod) Halloween - Brigadeiros Mal-Assombrado cx12 (un)",
+      "insumo": "(desc) Caixa Cake 13 X 10 X 3,5 doce 12un (und)",
+      "qtde": "1,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/10/2025",
+      "hora": "12:55:49",
+      "produto_produzido": "(prod) Halloween - Brigadeiros Mal-Assombrado cx12 (un)",
+      "insumo": "(ins) Micanga Rosa (kg)",
+      "qtde": "0,010",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/10/2025",
+      "hora": "12:55:49",
+      "produto_produzido": "(prod) Halloween - Brigadeiros Mal-Assombrado cx12 (un)",
+      "insumo": "(ins) Micanga Preta (kg)",
+      "qtde": "0,040",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/10/2025",
+      "hora": "12:55:49",
+      "produto_produzido": "(prod) Halloween - Brigadeiros Mal-Assombrado cx12 (un)",
+      "insumo": "(prod) Nova Massa Brigadeiro Preto (kg)",
+      "qtde": "0,180",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/10/2025",
+      "hora": "12:55:49",
+      "produto_produzido": "(prod) Halloween - Brigadeiros Mal-Assombrado cx12 (un)",
+      "insumo": "(desc) Caixa Cake 13 X 10 X 3,5 doce 12un (und)",
+      "qtde": "1,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/10/2025",
+      "hora": "12:43:08",
+      "produto_produzido": "(prod) Halloween - Bolo Ingles Colheita Assombrada (un)",
+      "insumo": "(ins) sprinkles decorativos (und)",
+      "qtde": "0,300",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/10/2025",
+      "hora": "12:43:08",
+      "produto_produzido": "(prod) Halloween - Bolo Ingles Colheita Assombrada (un)",
+      "insumo": "(prod) Massa Brigadeiro Branco (kg)",
+      "qtde": "0,060",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/10/2025",
+      "hora": "12:43:08",
+      "produto_produzido": "(prod) Halloween - Bolo Ingles Colheita Assombrada (un)",
+      "insumo": "(prod) Bolo Cenoura Cobertura Ingles (un)",
+      "qtde": "1,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/10/2025",
+      "hora": "12:43:08",
+      "produto_produzido": "(prod) Halloween - Bolo Ingles Colheita Assombrada (un)",
+      "insumo": "(ins) Micanga Laranja (kg)",
+      "qtde": "0,010",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/10/2025",
+      "hora": "12:43:00",
+      "produto_produzido": "(prod) Bolo Cenoura Inglês 300gr (un)",
+      "insumo": "(prod) Batido Bolo Cenoura (kg)",
+      "qtde": "0,900",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/10/2025",
+      "hora": "12:43:00",
+      "produto_produzido": "(prod) Bolo Cenoura Inglês 300gr (un)",
+      "insumo": "(desc) Forma Bolo Ingles c/ tampa (und)",
+      "qtde": "3,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/10/2025",
+      "hora": "12:42:48",
+      "produto_produzido": "(prod) Batido Bolo Cenoura (kg)",
+      "insumo": "(ins) Fermento Em Pó (kg)",
+      "qtde": "0,060",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/10/2025",
+      "hora": "12:42:48",
+      "produto_produzido": "(prod) Batido Bolo Cenoura (kg)",
+      "insumo": "(ins) Farinha De Trigo (kg)",
+      "qtde": "1,500",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/10/2025",
+      "hora": "12:42:48",
+      "produto_produzido": "(prod) Batido Bolo Cenoura (kg)",
+      "insumo": "(ins) Ovos Jumbo Branco (und)",
+      "qtde": "15,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/10/2025",
+      "hora": "12:42:48",
+      "produto_produzido": "(prod) Batido Bolo Cenoura (kg)",
+      "insumo": "(ins) Acucar Refinado (kg)",
+      "qtde": "1,800",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/10/2025",
+      "hora": "12:42:48",
+      "produto_produzido": "(prod) Batido Bolo Cenoura (kg)",
+      "insumo": "(ins) Oleo De Soja (lt)",
+      "qtde": "0,900",
+      "unidade": "Lt",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "13/10/2025",
+      "hora": "12:42:48",
+      "produto_produzido": "(prod) Batido Bolo Cenoura (kg)",
+      "insumo": "(prod) Cenoura Descascada (kg)",
+      "qtde": "1,350",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "10/10/2025",
+      "hora": "17:02:36",
+      "produto_produzido": "(prod) Crocante F30 (un)",
+      "insumo": "(prod) Semi Crocante F30 (un)",
+      "qtde": "1,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "10/10/2025",
+      "hora": "17:02:36",
+      "produto_produzido": "(prod) Crocante F30 (un)",
+      "insumo": "(prod) Recheio Crocante (kg)",
+      "qtde": "0,400",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "10/10/2025",
+      "hora": "17:02:25",
+      "produto_produzido": "(prod) Semi Crocante F30 (un)",
+      "insumo": "(prod) Semi Acabada Crocante F30 (un)",
+      "qtde": "1,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "10/10/2025",
+      "hora": "17:02:25",
+      "produto_produzido": "(prod) Semi Crocante F30 (un)",
+      "insumo": "(prod) Nova Cobertura de Brigadeiro (kg)",
+      "qtde": "0,550",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "10/10/2025",
+      "hora": "17:02:18",
+      "produto_produzido": "(prod) Semi Acabada Crocante F30 (un)",
+      "insumo": "(prod) Batido Preto F30 (un)",
+      "qtde": "1,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "10/10/2025",
+      "hora": "17:02:18",
+      "produto_produzido": "(prod) Semi Acabada Crocante F30 (un)",
+      "insumo": "(prod) Recheio Crocante (kg)",
+      "qtde": "0,600",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "10/10/2025",
+      "hora": "17:02:18",
+      "produto_produzido": "(prod) Semi Acabada Crocante F30 (un)",
+      "insumo": "(prod) Calda Chocolate (kg)",
+      "qtde": "0,700",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "10/10/2025",
+      "hora": "17:02:10",
+      "produto_produzido": "(prod) Semi Acabada Crocante F30 (un)",
+      "insumo": "(prod) Batido Preto F30 (un)",
+      "qtde": "1,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "10/10/2025",
+      "hora": "17:02:10",
+      "produto_produzido": "(prod) Semi Acabada Crocante F30 (un)",
+      "insumo": "(prod) Recheio Crocante (kg)",
+      "qtde": "0,600",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "10/10/2025",
+      "hora": "17:02:10",
+      "produto_produzido": "(prod) Semi Acabada Crocante F30 (un)",
+      "insumo": "(prod) Calda Chocolate (kg)",
+      "qtde": "0,700",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "10/10/2025",
+      "hora": "16:57:43",
+      "produto_produzido": "(prod) Batido Preto F30 (un)",
+      "insumo": "(prod) Batido Chocolate (kg)",
+      "qtde": "1,500",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "10/10/2025",
+      "hora": "16:56:10",
+      "produto_produzido": "(prod) Crocante F30 (un)",
+      "insumo": "(prod) Semi Crocante F30 (un)",
+      "qtde": "1,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "10/10/2025",
+      "hora": "16:56:10",
+      "produto_produzido": "(prod) Crocante F30 (un)",
+      "insumo": "(prod) Recheio Crocante (kg)",
+      "qtde": "0,400",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "10/10/2025",
+      "hora": "16:56:03",
+      "produto_produzido": "(prod) Semi Crocante F30 (un)",
+      "insumo": "(prod) Semi Acabada Crocante F30 (un)",
+      "qtde": "1,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "10/10/2025",
+      "hora": "16:56:03",
+      "produto_produzido": "(prod) Semi Crocante F30 (un)",
+      "insumo": "(prod) Nova Cobertura de Brigadeiro (kg)",
+      "qtde": "0,550",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "10/10/2025",
+      "hora": "16:55:56",
+      "produto_produzido": "(prod) Semi Acabada Crocante F30 (un)",
+      "insumo": "(prod) Batido Preto F30 (un)",
+      "qtde": "1,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "10/10/2025",
+      "hora": "16:55:56",
+      "produto_produzido": "(prod) Semi Acabada Crocante F30 (un)",
+      "insumo": "(prod) Recheio Crocante (kg)",
+      "qtde": "0,600",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "10/10/2025",
+      "hora": "16:55:56",
+      "produto_produzido": "(prod) Semi Acabada Crocante F30 (un)",
+      "insumo": "(prod) Calda Chocolate (kg)",
+      "qtde": "0,700",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "10/10/2025",
+      "hora": "16:55:48",
+      "produto_produzido": "(prod) Recheio Crocante (kg)",
+      "insumo": "(ins) Manteiga Sem Sal (kg)",
+      "qtde": "0,400",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "10/10/2025",
+      "hora": "16:55:48",
+      "produto_produzido": "(prod) Recheio Crocante (kg)",
+      "insumo": "(ins) Acucar Refinado (kg)",
+      "qtde": "4,000",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "10/10/2025",
+      "hora": "16:55:48",
+      "produto_produzido": "(prod) Recheio Crocante (kg)",
+      "insumo": "(ins) Castanha de Caju (kg)",
+      "qtde": "2,000",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "10/10/2025",
+      "hora": "16:55:38",
+      "produto_produzido": "(prod) Batido Chocolate (kg)",
+      "insumo": "(ins) Choc. Em Po 50% (kg)",
+      "qtde": "0,500",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "10/10/2025",
+      "hora": "16:55:38",
+      "produto_produzido": "(prod) Batido Chocolate (kg)",
+      "insumo": "(ins) Fermento Em Pó (kg)",
+      "qtde": "0,040",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "10/10/2025",
+      "hora": "16:55:38",
+      "produto_produzido": "(prod) Batido Chocolate (kg)",
+      "insumo": "(ins) Margarina (kg)",
+      "qtde": "0,600",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "10/10/2025",
+      "hora": "16:55:38",
+      "produto_produzido": "(prod) Batido Chocolate (kg)",
+      "insumo": "(ins) Leite Integral (lt)",
+      "qtde": "0,800",
+      "unidade": "Lt",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "10/10/2025",
+      "hora": "16:55:38",
+      "produto_produzido": "(prod) Batido Chocolate (kg)",
+      "insumo": "(ins) Ovos Jumbo Branco (und)",
+      "qtde": "20,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "10/10/2025",
+      "hora": "16:55:38",
+      "produto_produzido": "(prod) Batido Chocolate (kg)",
+      "insumo": "(ins) Farinha De Trigo (kg)",
+      "qtde": "1,350",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "10/10/2025",
+      "hora": "16:55:38",
+      "produto_produzido": "(prod) Batido Chocolate (kg)",
+      "insumo": "(ins) Acucar Refinado (kg)",
+      "qtde": "1,600",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "07/10/2025",
+      "hora": "16:22:03",
+      "produto_produzido": "(prod) Fantasia F13 (un)",
+      "insumo": "(prod) Semi Fantasia F13 (un)",
+      "qtde": "1,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "07/10/2025",
+      "hora": "16:22:03",
+      "produto_produzido": "(prod) Fantasia F13 (un)",
+      "insumo": "(prod) Baba de Moca Grossa (kg)",
+      "qtde": "0,020",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "07/10/2025",
+      "hora": "16:22:03",
+      "produto_produzido": "(prod) Fantasia F13 (un)",
+      "insumo": "(prod) Nova Cobertura de Brigadeiro (kg)",
+      "qtde": "0,120",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "07/10/2025",
+      "hora": "16:21:54",
+      "produto_produzido": "(prod) Semi Fantasia F13 (un)",
+      "insumo": "(prod) Batido Preto F13 (un)",
+      "qtde": "1,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "07/10/2025",
+      "hora": "16:21:54",
+      "produto_produzido": "(prod) Semi Fantasia F13 (un)",
+      "insumo": "(desc) Caixa Cake Torta 17,5 X 17,5 X 9 Micro (und)",
+      "qtde": "1,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "07/10/2025",
+      "hora": "16:21:54",
+      "produto_produzido": "(prod) Semi Fantasia F13 (un)",
+      "insumo": "(desc) Disco Cake 17 Micro (und)",
+      "qtde": "1,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "07/10/2025",
+      "hora": "16:21:54",
+      "produto_produzido": "(prod) Semi Fantasia F13 (un)",
+      "insumo": "(prod) Baba de Moca Grossa (kg)",
+      "qtde": "0,180",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "07/10/2025",
+      "hora": "16:21:54",
+      "produto_produzido": "(prod) Semi Fantasia F13 (un)",
+      "insumo": "(prod) Calda Chocolate (kg)",
+      "qtde": "0,240",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "07/10/2025",
+      "hora": "16:14:28",
+      "produto_produzido": "(prod) Fantasia F30 (un)",
+      "insumo": "(prod) Calda Chocolate Alema (kg)",
+      "qtde": "0,050",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "07/10/2025",
+      "hora": "16:14:28",
+      "produto_produzido": "(prod) Fantasia F30 (un)",
+      "insumo": "(prod) Semi Fantasia F30 (un)",
+      "qtde": "1,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "07/10/2025",
+      "hora": "16:14:28",
+      "produto_produzido": "(prod) Fantasia F30 (un)",
+      "insumo": "(prod) Baba de Moca Grossa (kg)",
+      "qtde": "0,100",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "07/10/2025",
+      "hora": "16:14:28",
+      "produto_produzido": "(prod) Fantasia F30 (un)",
+      "insumo": "(prod) Nova Cobertura de Brigadeiro (kg)",
+      "qtde": "0,550",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "07/10/2025",
+      "hora": "16:14:14",
+      "produto_produzido": "(prod) Semi Fantasia F30 (un)",
+      "insumo": "(prod) Batido Preto F30 (un)",
+      "qtde": "1,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "07/10/2025",
+      "hora": "16:14:14",
+      "produto_produzido": "(prod) Semi Fantasia F30 (un)",
+      "insumo": "(desc) Tabua Mdf 35X6MM (und)",
+      "qtde": "1,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "07/10/2025",
+      "hora": "16:14:14",
+      "produto_produzido": "(prod) Semi Fantasia F30 (un)",
+      "insumo": "(prod) Baba de Moca Grossa (kg)",
+      "qtde": "1,200",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "07/10/2025",
+      "hora": "16:14:14",
+      "produto_produzido": "(prod) Semi Fantasia F30 (un)",
+      "insumo": "(prod) Calda Chocolate (kg)",
+      "qtde": "0,600",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "07/10/2025",
+      "hora": "16:03:39",
+      "produto_produzido": "(prod) Fantasia F13 (un)",
+      "insumo": "(prod) Semi Fantasia F13 (un)",
+      "qtde": "1,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "07/10/2025",
+      "hora": "16:03:39",
+      "produto_produzido": "(prod) Fantasia F13 (un)",
+      "insumo": "(prod) Baba de Moca Grossa (kg)",
+      "qtde": "0,020",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "07/10/2025",
+      "hora": "16:03:39",
+      "produto_produzido": "(prod) Fantasia F13 (un)",
+      "insumo": "(prod) Nova Cobertura de Brigadeiro (kg)",
+      "qtde": "0,120",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "07/10/2025",
+      "hora": "16:03:29",
+      "produto_produzido": "(prod) Semi Fantasia F13 (un)",
+      "insumo": "(prod) Batido Preto F13 (un)",
+      "qtde": "1,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "07/10/2025",
+      "hora": "16:03:29",
+      "produto_produzido": "(prod) Semi Fantasia F13 (un)",
+      "insumo": "(desc) Caixa Cake Torta 17,5 X 17,5 X 9 Micro (und)",
+      "qtde": "1,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "07/10/2025",
+      "hora": "16:03:29",
+      "produto_produzido": "(prod) Semi Fantasia F13 (un)",
+      "insumo": "(desc) Disco Cake 17 Micro (und)",
+      "qtde": "1,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "07/10/2025",
+      "hora": "16:03:29",
+      "produto_produzido": "(prod) Semi Fantasia F13 (un)",
+      "insumo": "(prod) Baba de Moca Grossa (kg)",
+      "qtde": "0,180",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "07/10/2025",
+      "hora": "16:03:29",
+      "produto_produzido": "(prod) Semi Fantasia F13 (un)",
+      "insumo": "(prod) Calda Chocolate (kg)",
+      "qtde": "0,240",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "07/10/2025",
+      "hora": "15:46:47",
+      "produto_produzido": "(prod) Torta Mousse Chocolate F30 (un)",
+      "insumo": "(prod) Semi Torta Mousse Chocolate F30 (un)",
+      "qtde": "1,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "07/10/2025",
+      "hora": "15:46:47",
+      "produto_produzido": "(prod) Torta Mousse Chocolate F30 (un)",
+      "insumo": "(ins) Cobertura Chocolate Meio Amargo (Barra) (kg)",
+      "qtde": "0,100",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "07/10/2025",
+      "hora": "15:46:47",
+      "produto_produzido": "(prod) Torta Mousse Chocolate F30 (un)",
+      "insumo": "(prod) Nova Cobertura de Brigadeiro (kg)",
+      "qtde": "0,470",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "07/10/2025",
+      "hora": "15:46:37",
+      "produto_produzido": "(prod) Semi Torta Mousse Chocolate F30 (un)",
+      "insumo": "(prod) Base Torta Mousse Chocolate F30 (un)",
+      "qtde": "1,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "07/10/2025",
+      "hora": "15:46:37",
+      "produto_produzido": "(prod) Semi Torta Mousse Chocolate F30 (un)",
+      "insumo": "(prod) Recheio Torta Mousse Chocolate (kg)",
+      "qtde": "2,200",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "07/10/2025",
+      "hora": "15:46:27",
+      "produto_produzido": "(prod) Base Torta Mousse Chocolate F30 (un)",
+      "insumo": "(prod) Recheio Torta Mousse Chocolate (kg)",
+      "qtde": "1,000",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "01/10/2025",
+      "hora": "14:49:02",
+      "produto_produzido": "(prod) Pudim 110gr (un)",
+      "insumo": "(desc) Emb. G367 Pudim (und)",
+      "qtde": "1,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "01/10/2025",
+      "hora": "14:49:02",
+      "produto_produzido": "(prod) Pudim 110gr (un)",
+      "insumo": "(prod) Pudim (kg)",
+      "qtde": "0,090",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "01/10/2025",
+      "hora": "14:49:02",
+      "produto_produzido": "(prod) Pudim 110gr (un)",
+      "insumo": "(prod) Calda Pudim (kg)",
+      "qtde": "0,020",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "01/10/2025",
+      "hora": "14:48:55",
+      "produto_produzido": "(prod) Calda Pudim (kg)",
+      "insumo": "(ins) Acucar Refinado (kg)",
+      "qtde": "2,000",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "01/10/2025",
+      "hora": "14:48:47",
+      "produto_produzido": "(prod) Calda Pudim (kg)",
+      "insumo": "(ins) Acucar Refinado (kg)",
+      "qtde": "2,000",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "01/10/2025",
+      "hora": "13:03:57",
+      "produto_produzido": "(prod) Bolo Chocolate F25 (un)",
+      "insumo": "(desc) Disco Cake 29 Micro (und)",
+      "qtde": "1,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "01/10/2025",
+      "hora": "13:03:57",
+      "produto_produzido": "(prod) Bolo Chocolate F25 (un)",
+      "insumo": "(desc) Caixa Cake Torta 29,5 X 29,5 X 9 Micro (und)",
+      "qtde": "1,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "01/10/2025",
+      "hora": "13:03:57",
+      "produto_produzido": "(prod) Bolo Chocolate F25 (un)",
+      "insumo": "(prod) Calda Chocolate Alema (kg)",
+      "qtde": "0,250",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "01/10/2025",
+      "hora": "13:03:57",
+      "produto_produzido": "(prod) Bolo Chocolate F25 (un)",
+      "insumo": "(prod) Batido Nega Maluca F25 (un)",
+      "qtde": "1,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "01/10/2025",
+      "hora": "13:03:49",
+      "produto_produzido": "(prod) Pote Calda Chocolate 250gr (un)",
+      "insumo": "(prod) Calda Chocolate Alema (kg)",
+      "qtde": "0,250",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "01/10/2025",
+      "hora": "13:03:49",
+      "produto_produzido": "(prod) Pote Calda Chocolate 250gr (un)",
+      "insumo": "(desc) Pote Plastico Redondo com Lacre 220ml (und)",
+      "qtde": "1,000",
+      "unidade": "Und",
+      "tipo_movimento": "Saida de Estoque"
+    },
+    {
+      "data": "01/10/2025",
+      "hora": "13:03:48",
+      "produto_produzido": "(prod) Batido Nega Maluca F25 (un)",
+      "insumo": "(prod) Batido Nega Maluca (kg)",
+      "qtde": "1,200",
+      "unidade": "Kg",
+      "tipo_movimento": "Saida de Estoque"
+    }
+  ]
+}

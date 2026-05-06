@@ -1,7 +1,7 @@
 {
-  "gerado_em": "07/04/2026 16:16",
-  "total_clientes": 150,
-  "total_saldo": "R$ 6.874,11",
+  "gerado_em": "30/04/2026 10:16",
+  "total_clientes": 152,
+  "total_saldo": "R$ 6.863,94",
   "registros": [
     {
       "cliente": "Ana Paula Vianna quintal",
@@ -244,6 +244,12 @@
       "id_cliente": "1898"
     },
     {
+      "cliente": "Cleci Carvalho",
+      "cpf": "95662960704",
+      "saldo": "150,80",
+      "id_cliente": "29272"
+    },
+    {
       "cliente": "CRISTINA VACCARI MANGHI DE CARVALHO",
       "cpf": "02045628728",
       "saldo": "0,00",
@@ -336,7 +342,7 @@
     {
       "cliente": "Felipe Castro (Jornalista)",
       "cpf": "07836630722",
-      "saldo": "260,61",
+      "saldo": "99,64",
       "id_cliente": "19411"
     },
     {
@@ -461,7 +467,7 @@
     },
     {
       "cliente": "Larissa Cysne",
-      "cpf": "07917192784",
+      "cpf": "",
       "saldo": "0,00",
       "id_cliente": "11234"
     },
@@ -604,6 +610,12 @@
       "id_cliente": "10056"
     },
     {
+      "cliente": "Maria Gabriela Koblitz",
+      "cpf": "02873657782",
+      "saldo": "0,00",
+      "id_cliente": "30771"
+    },
+    {
       "cliente": "Maria Isabel Simões Castanheira",
       "cpf": "37653121772",
       "saldo": "33,00",
@@ -652,8 +664,8 @@
       "id_cliente": "161"
     },
     {
-      "cliente": "Marisa de Lima Viana",
-      "cpf": "",
+      "cliente": "Marisa de Lima Vianna",
+      "cpf": "60473533715",
       "saldo": "213,50",
       "id_cliente": "6640"
     },
@@ -803,7 +815,7 @@
     },
     {
       "cliente": "Rosangela Evangelista",
-      "cpf": "",
+      "cpf": "00877866724",
       "saldo": "0,00",
       "id_cliente": "3929"
     },
@@ -893,7 +905,7 @@
     },
     {
       "cliente": "William Sandes",
-      "cpf": "92986021204",
+      "cpf": "08183327788",
       "saldo": "10,00",
       "id_cliente": "11899"
     },

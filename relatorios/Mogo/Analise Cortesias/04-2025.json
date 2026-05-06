@@ -1,0 +1,143 @@
+{
+  "periodo": {
+    "de": "01/04/2025",
+    "ate": "30/04/2025"
+  },
+  "total_registros": 12,
+  "total_valor": "R$ 3.584,50",
+  "total_custo": "R$ 118,91",
+  "registros": [
+    {
+      "data": "26/04/2025",
+      "hora": "17:00:10",
+      "funcionario": "cristiane",
+      "cliente": "RICARDO LAFAYETTE CAMPOS",
+      "telefone": "21999041110",
+      "valor": "68,00",
+      "custo": "0,00",
+      "motivo": "",
+      "id": "66115"
+    },
+    {
+      "data": "25/04/2025",
+      "hora": "18:17:50",
+      "funcionario": "Larissa Lira",
+      "cliente": "Michel rocha ",
+      "telefone": "21983485413",
+      "valor": "84,50",
+      "custo": "0,00",
+      "motivo": "",
+      "id": "65904"
+    },
+    {
+      "data": "20/04/2025",
+      "hora": "20:57:00",
+      "funcionario": "JOAO ",
+      "cliente": "JOAO ",
+      "telefone": "",
+      "valor": "120,00",
+      "custo": "0,00",
+      "motivo": "",
+      "id": "65115"
+    },
+    {
+      "data": "20/04/2025",
+      "hora": "14:29:40",
+      "funcionario": "JOAO ",
+      "cliente": "JOAO ",
+      "telefone": "",
+      "valor": "475,00",
+      "custo": "19,03",
+      "motivo": "",
+      "id": "65072"
+    },
+    {
+      "data": "18/04/2025",
+      "hora": "15:41:10",
+      "funcionario": "cristiane",
+      "cliente": "IRMÃS CLARISSAS",
+      "telefone": "",
+      "valor": "712,00",
+      "custo": "28,03",
+      "motivo": "",
+      "id": "64671"
+    },
+    {
+      "data": "18/04/2025",
+      "hora": "15:40:49",
+      "funcionario": "cristiane",
+      "cliente": "Irmã Terezinha (Clarissas)",
+      "telefone": "2122743147",
+      "valor": "169,50",
+      "custo": "0,00",
+      "motivo": "",
+      "id": "64670"
+    },
+    {
+      "data": "17/04/2025",
+      "hora": "12:36:15",
+      "funcionario": "cristiane",
+      "cliente": "JOAO ",
+      "telefone": "",
+      "valor": "320,50",
+      "custo": "43,82",
+      "motivo": "",
+      "id": "64377"
+    },
+    {
+      "data": "12/04/2025",
+      "hora": "16:32:34",
+      "funcionario": "cristiane",
+      "cliente": "LAURA OLIVEIRA CASTRO",
+      "telefone": "21991466344",
+      "valor": "479,30",
+      "custo": "0,00",
+      "motivo": "",
+      "id": "63492"
+    },
+    {
+      "data": "10/04/2025",
+      "hora": "16:03:30",
+      "funcionario": "alex",
+      "cliente": "Cariocas na Viagem - Marcele de Jesus",
+      "telefone": "",
+      "valor": "177,20",
+      "custo": "0,00",
+      "motivo": "",
+      "id": "63073"
+    },
+    {
+      "data": "09/04/2025",
+      "hora": "15:26:04",
+      "funcionario": "cristiane",
+      "cliente": "MARIA EUGENIA SANSON",
+      "telefone": "21981876646",
+      "valor": "413,50",
+      "custo": "28,03",
+      "motivo": "",
+      "id": "62830"
+    },
+    {
+      "data": "09/04/2025",
+      "hora": "15:23:28",
+      "funcionario": "cristiane",
+      "cliente": "MARIA EUGENIA SANSON",
+      "telefone": "21981876646",
+      "valor": "477,00",
+      "custo": "0,00",
+      "motivo": "",
+      "id": "62828"
+    },
+    {
+      "data": "03/04/2025",
+      "hora": "15:33:35",
+      "funcionario": "cristiane",
+      "cliente": "Ana Luiza Silva Fialho ",
+      "telefone": "21972572150",
+      "valor": "88,00",
+      "custo": "0,00",
+      "motivo": "",
+      "id": "61536"
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "periodo": {
+    "de": "01/03/2025",
+    "ate": "31/03/2025"
+  },
+  "total_registros": 2,
+  "total_credito": "R$ 481,50",
+  "total_debito": "R$ 0,00",
+  "registros": [
+    {
+      "data": "28/03/2025",
+      "hora": "09:23:39",
+      "cliente": "Antônia Cloudiny Silva do Nascimento Aguiar",
+      "cpf": "12681934702",
+      "tipo": "Credito",
+      "descricao": "Crédito: 200 reais em loja",
+      "valor": "200,00",
+      "saldo": "200,00",
+      "financeiro": "Não gerar financeiro"
+    },
+    {
+      "data": "21/03/2025",
+      "hora": "11:13:12",
+      "cliente": "MARIA CLARA",
+      "cpf": "",
+      "tipo": "Credito",
+      "descricao": "DESMEMBRANDO PEDIDO 051477",
+      "valor": "281,50",
+      "saldo": "281,50",
+      "financeiro": "Não gerar financeiro"
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "periodo": {
+    "de": "01/02/2026",
+    "ate": "28/02/2026"
+  },
+  "total_registros": 6,
+  "total_valor": "R$ 538,75",
+  "total_custo": "R$ 96,68",
+  "registros": [
+    {
+      "data": "14/02/2026",
+      "hora": "19:01:24",
+      "funcionario": "cristiane",
+      "cliente": "Claudia castro",
+      "telefone": "21985469780",
+      "valor": "330,00",
+      "custo": "64,48",
+      "motivo": "Retratação da torta, cleinte reclamou que estava muito Doce",
+      "id": "136065"
+    },
+    {
+      "data": "13/02/2026",
+      "hora": "11:14:06",
+      "funcionario": "cristiane",
+      "cliente": "Leticia Garrett",
+      "telefone": "21995881212",
+      "valor": "18,50",
+      "custo": "2,77",
+      "motivo": "Torta sino de nozes entregue no Natal a cliente achou rececada",
+      "id": "135616"
+    },
+    {
+      "data": "06/02/2026",
+      "hora": "11:39:14",
+      "funcionario": "eduarda",
+      "cliente": "Maria Paula Marques",
+      "telefone": "61983296620",
+      "valor": "16,75",
+      "custo": "4,81",
+      "motivo": "cliente fora do rio que veio morar aqui e recomendaram a gente",
+      "id": "133903"
+    },
+    {
+      "data": "06/02/2026",
+      "hora": "11:25:32",
+      "funcionario": "eduarda",
+      "cliente": "Ana claudia Muniz ",
+      "telefone": "81992929999",
+      "valor": "7,50",
+      "custo": "0,92",
+      "motivo": "cliente fora do rio, comprou pra casamento",
+      "id": "133899"
+    },
+    {
+      "data": "05/02/2026",
+      "hora": "18:00:50",
+      "funcionario": "Juliana Fidelis Alvez",
+      "cliente": "Emanuel Azevedo ",
+      "telefone": "21996842635",
+      "valor": "135,00",
+      "custo": "17,56",
+      "motivo": "Sorteio falae",
+      "id": "133791"
+    },
+    {
+      "data": "03/02/2026",
+      "hora": "14:04:04",
+      "funcionario": "eduarda",
+      "cliente": "MARIA CRISTINA PORTELA GOMEZ",
+      "telefone": "21997313868",
+      "valor": "31,00",
+      "custo": "6,14",
+      "motivo": "sorteio falae",
+      "id": "133216"
+    }
+  ]
+}
