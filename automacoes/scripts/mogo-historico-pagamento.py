@@ -63,6 +63,7 @@ while cursor <= ultimo:
 
     pagina = 0
     lote = 2000
+    total_carregado_semana = 0
 
     while True:
         try:
@@ -79,10 +80,11 @@ while cursor <= ultimo:
             d = r.json()
             rows = d.get('rows') or []
             todos_registros.extend(rows)
+            total_carregado_semana += len(rows)
             total_semana = int(d.get('records', 0))
-            print(f"  {data_ini_str}–{data_fim_str} lote {pagina+1}: {len(rows)} | total semana: {total_semana}")
+            print(f"  {data_ini_str}–{data_fim_str} lote {pagina+1}: {len(rows)} | acumulado semana: {total_carregado_semana} | total semana: {total_semana}")
 
-            if len(rows) < lote:
+            if len(rows) < lote or (total_semana and total_carregado_semana >= total_semana):
                 break
             pagina += 1
 
