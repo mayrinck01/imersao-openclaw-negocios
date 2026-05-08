@@ -56,6 +56,7 @@ FOLDER_MAP = {
     'Analise Cadastro Clientes': 'Análise Cadastro Clientes',
     'Contas a Receber': 'Contas a Receber',
     'Contas a Pagar Pagas': 'Contas a Pagar Pagas',
+    'Contas a Pagar Emissao': 'Contas a Pagar Emissão',
     'ContasAssinada': 'Contas Assinada',
 }
 
