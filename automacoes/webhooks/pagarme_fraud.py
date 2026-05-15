@@ -14,7 +14,7 @@ import unicodedata
 from dataclasses import dataclass
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
-from typing import Any
+from typing import Any, Protocol
 
 WINDOW_MINUTES = 60
 ALERT_THRESHOLD = 50
@@ -40,6 +40,43 @@ def normalize_text(value: str | None) -> str:
     value = value.lower().strip()
     value = re.sub(r"[^a-z0-9]+", " ", value)
     return re.sub(r"\s+", " ", value).strip()
+
+
+def only_digits(value: str | None) -> str:
+    return re.sub(r"\D+", "", value or "")
+
+
+def _first_present(row: dict[str, Any], keys: tuple[str, ...]) -> str:
+    for key in keys:
+        value = row.get(key)
+        if value not in (None, ""):
+            return str(value)
+    return ""
+
+
+def _extract_phone_from_obj(value: Any) -> str:
+    if isinstance(value, str):
+        return only_digits(value)
+    if not isinstance(value, dict):
+        return ""
+    country = only_digits(str(value.get("country_code") or value.get("ddi") or ""))
+    area = only_digits(str(value.get("area_code") or value.get("ddd") or ""))
+    number = only_digits(str(value.get("number") or value.get("phone") or value.get("telefone") or ""))
+    compact = only_digits(str(value.get("full_number") or value.get("fullNumber") or ""))
+    return compact or f"{country}{area}{number}".lstrip("0")
+
+
+def extract_customer_phone(customer: dict[str, Any]) -> str:
+    direct = _extract_phone_from_obj(customer.get("phone") or customer.get("telefone") or customer.get("whatsapp"))
+    if direct:
+        return direct
+    phones = customer.get("phones") or {}
+    if isinstance(phones, dict):
+        for key in ("mobile_phone", "home_phone", "customer_phone", "phone"):
+            phone = _extract_phone_from_obj(phones.get(key))
+            if phone:
+                return phone
+    return ""
 
 
 def names_compatible(customer_name: str | None, holder_name: str | None) -> bool:
@@ -68,6 +105,37 @@ def names_compatible(customer_name: str | None, holder_name: str | None) -> bool
     return normalize_text(customer_name) == normalize_text(holder_name)
 
 
+def _meaningful_name_tokens(customer_name: str | None) -> list[str]:
+    ignored = {"da", "de", "do", "das", "dos", "e"}
+    return [
+        token for token in normalize_text(customer_name).split()
+        if len(token) >= 3 and token not in ignored
+    ]
+
+
+def customer_name_part_in_email_or_holder(customer_name: str | None, email: str | None, holder_name: str | None) -> bool:
+    """Accept holder mismatch when a meaningful customer-name token appears in email or holder.
+
+    This avoids noisy alerts for cases like customer "Iasminy" with holder
+    "IASMINY VERGETTI" and email "vergetti.iasminy@gmail.com".
+    """
+    tokens = _meaningful_name_tokens(customer_name)
+    if not tokens:
+        return False
+
+    holder_tokens = set(normalize_text(holder_name).split())
+    email_user = normalize_text((email or "").split("@", 1)[0])
+    email_tokens = set(email_user.split())
+    compact_email_user = email_user.replace(" ", "")
+
+    for token in tokens:
+        if token in holder_tokens or token in email_tokens:
+            return True
+        if len(token) >= 4 and token in compact_email_user:
+            return True
+    return False
+
+
 @dataclass(frozen=True)
 class ChargeEvent:
     hook_id: str
@@ -79,6 +147,7 @@ class ChargeEvent:
     customer_name: str
     customer_email: str
     customer_document: str
+    customer_phone: str
     card_brand: str
     card_last4: str
     holder_name: str
@@ -116,6 +185,120 @@ class ChargeEvent:
 
 
 @dataclass(frozen=True)
+class CustomerHistoryResult:
+    has_prior_valid_purchase: bool
+    matched_by: str | None
+    status: str
+    error: str | None = None
+
+
+class CustomerHistoryChecker(Protocol):
+    def lookup(self, charge: ChargeEvent) -> CustomerHistoryResult:
+        ...
+
+
+class NoopCustomerHistoryChecker:
+    def lookup(self, charge: ChargeEvent) -> CustomerHistoryResult:
+        return CustomerHistoryResult(False, None, "not_configured", None)
+
+
+class LocalMogoHistoryChecker:
+    """Lookup prior valid purchases in local Mogo JSON exports.
+
+    The checker indexes only records that represent paid/concluded history.
+    Matching priority is document, email, phone, then careful name fallback.
+    """
+
+    VALID_STATUS = {"pago", "paga", "entregue", "concluido", "concluida", "finalizado", "finalizada"}
+
+    def __init__(self, reports_root: str | Path):
+        self.reports_root = Path(reports_root)
+        self._loaded = False
+        self._documents: set[str] = set()
+        self._emails: set[str] = set()
+        self._phones: set[str] = set()
+        self._names: set[str] = set()
+
+    def lookup(self, charge: ChargeEvent) -> CustomerHistoryResult:
+        try:
+            self._load_once()
+        except Exception as exc:
+            return CustomerHistoryResult(False, None, "error", exc.__class__.__name__)
+
+        document = only_digits(charge.customer_document)
+        if document and document in self._documents:
+            return CustomerHistoryResult(True, "document", "valid_purchase", None)
+
+        email = normalize_text(charge.customer_email)
+        if email and email in self._emails:
+            return CustomerHistoryResult(True, "email", "valid_purchase", None)
+
+        phone = only_digits(charge.customer_phone)
+        if phone and any(phone == indexed or phone.endswith(indexed) or indexed.endswith(phone) for indexed in self._phones):
+            return CustomerHistoryResult(True, "phone", "valid_purchase", None)
+
+        name = normalize_text(charge.customer_name)
+        if name and any(names_compatible(name, indexed_name) for indexed_name in self._names):
+            return CustomerHistoryResult(True, "name", "valid_purchase", None)
+
+        return CustomerHistoryResult(False, None, "not_found", None)
+
+    def _load_once(self) -> None:
+        if self._loaded:
+            return
+        if not self.reports_root.exists():
+            self._loaded = True
+            return
+
+        for path in self.reports_root.rglob("*.json"):
+            try:
+                payload = json.loads(path.read_text(encoding="utf-8", errors="replace"))
+            except Exception:
+                continue
+            for row in self._iter_rows(payload):
+                if self._is_valid_purchase_row(path, row):
+                    self._index_row(row)
+        self._loaded = True
+
+    def _iter_rows(self, payload: Any) -> list[dict[str, Any]]:
+        if isinstance(payload, list):
+            return [row for row in payload if isinstance(row, dict)]
+        if not isinstance(payload, dict):
+            return []
+        for key in ("registros", "rows", "data", "items", "records"):
+            value = payload.get(key)
+            if isinstance(value, list):
+                return [row for row in value if isinstance(row, dict)]
+        return []
+
+    def _is_valid_purchase_row(self, path: Path, row: dict[str, Any]) -> bool:
+        folder = normalize_text(path.parent.name)
+        status = normalize_text(_first_present(row, ("A10", "status", "situacao", "posicao")))
+        if status:
+            return status in self.VALID_STATUS
+        if "historico pagamento" in folder:
+            return bool(_first_present(row, ("dataPag", "idPag", "numPed", "chave")))
+        return False
+
+    def _index_row(self, row: dict[str, Any]) -> None:
+        document = only_digits(_first_present(row, ("document", "documento", "cpf", "cnpj", "customer_document")))
+        if document:
+            self._documents.add(document)
+
+        email = normalize_text(_first_present(row, ("email", "customer_email", "cliente_email")))
+        if email:
+            self._emails.add(email)
+
+        phone = only_digits(_first_present(row, ("telefone", "phone", "whatsapp", "celular", "customer_phone")))
+        if phone:
+            self._phones.add(phone)
+
+        name = normalize_text(_first_present(row, ("cliente", "A5", "nome", "NomeCliente", "customer_name")))
+        if name:
+            self._names.add(name)
+
+
+@dataclass(frozen=True)
 class RiskResult:
     alert: bool
     score: int
@@ -138,6 +321,7 @@ def extract_charge(payload: dict[str, Any]) -> ChargeEvent:
         customer_name=str(customer.get("name") or ""),
         customer_email=str(customer.get("email") or ""),
         customer_document=str(customer.get("document") or ""),
+        customer_phone=extract_customer_phone(customer),
         card_brand=str(card.get("brand") or ""),
         card_last4=str(card.get("last_four_digits") or ""),
         holder_name=str(card.get("holder_name") or ""),
@@ -149,8 +333,9 @@ def extract_charge(payload: dict[str, Any]) -> ChargeEvent:
 
 
 class RiskEngine:
-    def __init__(self, db_path: str):
+    def __init__(self, db_path: str, history_checker: CustomerHistoryChecker | None = None):
         self.db_path = db_path
+        self.history_checker = history_checker or NoopCustomerHistoryChecker()
         Path(db_path).parent.mkdir(parents=True, exist_ok=True) if str(Path(db_path).parent) != "." else None
         self._init_db()
 
@@ -240,40 +425,58 @@ class RiskEngine:
                 )
             )
 
+    def _customer_history(self, charge: ChargeEvent) -> CustomerHistoryResult:
+        try:
+            return self.history_checker.lookup(charge)
+        except Exception as exc:
+            return CustomerHistoryResult(False, None, "error", exc.__class__.__name__)
+
     def _score_paid_charge(self, charge: ChargeEvent) -> tuple[int, list[str]]:
-        score = 0
-        reasons: list[str] = []
+        strong_score = 0
+        weak_score = 0
+        strong_reasons: list[str] = []
+        weak_reasons: list[str] = []
+        operational_reasons: list[str] = []
         recent = self._recent_events(charge)
         failed = [row for row in recent if row["event_type"] == "charge.payment_failed" or row["status"] in ("failed", "not_authorized")]
         cards = {row["card_key"] for row in recent if row["card_key"]}
         if charge.card_key:
             cards.add(charge.card_key)
 
+        history = self._customer_history(charge)
+        suppress_weak = history.has_prior_valid_purchase
+        if history.status == "error":
+            detail = f": {history.error}" if history.error else ""
+            operational_reasons.append(f"Histórico Mogo não validado{detail}")
+
         if charge.holder_name and not names_compatible(charge.customer_name, charge.holder_name):
-            score += 50
-            reasons.append("Titular diferente do nome do cliente")
+            if not customer_name_part_in_email_or_holder(charge.customer_name, charge.customer_email, charge.holder_name):
+                weak_score += 50
+                weak_reasons.append("Titular diferente do nome do cliente")
 
         if failed:
-            score += 35
-            reasons.append(f"Falha recente antes de pagamento aprovado ({len(failed)} em {WINDOW_MINUTES} min)")
+            strong_score += 50
+            strong_reasons.append(f"Falha recente antes de pagamento aprovado ({len(failed)} em {WINDOW_MINUTES} min)")
 
         if len(cards) >= 2:
-            score += 50
-            reasons.append(f"2+ cartões diferentes no mesmo cliente/documento/email em {WINDOW_MINUTES} min")
+            strong_score += 50
+            strong_reasons.append(f"2+ cartões diferentes no mesmo cliente/documento/email em {WINDOW_MINUTES} min")
 
         failed_amounts = [int(row["amount"] or 0) for row in failed]
         if failed_amounts and max(failed_amounts) > charge.amount:
-            score += 30
-            reasons.append("Valor maior falhou e valor menor foi aprovado")
+            strong_score += 30
+            strong_reasons.append("Valor maior falhou e valor menor foi aprovado")
 
         if charge.customer_email and charge.customer_name:
             email_user = normalize_text(charge.customer_email.split("@", 1)[0])
             name_tokens = set(normalize_text(charge.customer_name).split())
             if name_tokens and email_user and not any(token and token in email_user for token in name_tokens):
-                score += 20
-                reasons.append("Email pouco compatível com o nome do cliente")
+                weak_score += 20
+                weak_reasons.append("Email pouco compatível com o nome do cliente")
 
-        return score, reasons
+        if suppress_weak:
+            return strong_score, strong_reasons + operational_reasons
+        return strong_score + weak_score, strong_reasons + weak_reasons + operational_reasons
 
 
 def format_alert(result: RiskResult) -> str:

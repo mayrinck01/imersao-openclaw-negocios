@@ -13,7 +13,7 @@ from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from urllib.parse import urlparse
 
-from pagarme_fraud import RiskEngine, format_alert
+from pagarme_fraud import LocalMogoHistoryChecker, RiskEngine, format_alert
 
 HOST = os.environ.get("PAGARME_WEBHOOK_HOST", "127.0.0.1")
 PORT = int(os.environ.get("PAGARME_WEBHOOK_PORT", "3060"))
@@ -24,6 +24,7 @@ PASSWORD = os.environ.get("PAGARME_WEBHOOK_PASSWORD", "")
 TELEGRAM_TARGET = os.environ.get("PAGARME_ALERT_TELEGRAM_TARGET", "968564677")
 EMAIL_TO = os.environ.get("PAGARME_ALERT_EMAIL_TO", "financeiro@cakeco.com.br")
 EMAIL_ACCOUNT = os.environ.get("PAGARME_ALERT_EMAIL_ACCOUNT", "cakebigdog@gmail.com")
+MOGO_REPORTS_ROOT = os.environ.get("PAGARME_MOGO_REPORTS_ROOT", "/root/workspaces/cake-brain/relatorios/Mogo")
 
 
 def _authorized(header: str | None) -> bool:
@@ -89,7 +90,7 @@ def deliver_alert(message: str) -> dict[str, bool]:
 
 
 class Handler(BaseHTTPRequestHandler):
-    engine = RiskEngine(DB_PATH)
+    engine = RiskEngine(DB_PATH, history_checker=LocalMogoHistoryChecker(MOGO_REPORTS_ROOT))
 
     def log_message(self, fmt: str, *args):  # noqa: D401 - stdlib hook
         sys.stderr.write("pagarme-webhook " + (fmt % args) + "\n")
