@@ -1,0 +1,50 @@
+{
+  "periodo": {
+    "de": "01/01/2024",
+    "ate": "31/01/2024"
+  },
+  "total_registros": 2,
+  "faturamento_total": "R$ 0,00",
+  "registros": [
+    {
+      "A0": "31/01/2024",
+      "A1": "23:47:44",
+      "A13": "000001",
+      "A10": "Cancelado",
+      "A2": "EMPADAO FRANGO F13",
+      "A17": "",
+      "A3": "1,00",
+      "A4": "0,00",
+      "OrigemPedido": "Telefone",
+      "A5": "JOAO ",
+      "A8": "JOAO ",
+      "A9": " ",
+      "A12": "0,00",
+      "A11": "0,00",
+      "A15": "1.00 -   teste joao",
+      "A6": "Delivery",
+      "A16": "2",
+      "A18": ""
+    },
+    {
+      "A0": "31/01/2024",
+      "A1": "23:47:44",
+      "A13": "000001",
+      "A10": "Cancelado",
+      "A2": "MORANGO - DELICIOSA NAKED F20",
+      "A17": "",
+      "A3": "1,00",
+      "A4": "0,00",
+      "OrigemPedido": "Telefone",
+      "A5": "JOAO ",
+      "A8": "JOAO ",
+      "A9": " ",
+      "A12": "0,00",
+      "A11": "0,00",
+      "A15": "1.00 -   teste joao",
+      "A6": "Delivery",
+      "A16": "1",
+      "A18": ""
+    }
+  ]
+}

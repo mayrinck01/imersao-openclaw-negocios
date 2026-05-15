@@ -1,0 +1,36 @@
+{"script": "mogo-historico-pagamento.py", "year": 2024, "month": 1, "status": "ok", "error": "", "duration_s": 4.6}
+{"script": "mogo-lancamentos-pedidos.py", "year": 2024, "month": 1, "status": "skipped_existing", "error": "", "duration_s": 0.0, "files": ["/root/workspaces/cake-brain/relatorios/Mogo/Lancamentos Pedidos/01-2024.xlsx", "/root/workspaces/cake-brain/relatorios/Mogo/Lancamentos Pedidos/01-2024.json"]}
+{"script": "mogo-analise-cadastro-clientes.py", "year": 2024, "month": 1, "status": "skipped_existing", "error": "", "duration_s": 0.0, "files": ["/root/workspaces/cake-brain/relatorios/Mogo/Analise Cadastro Clientes/01-2024.xlsx", "/root/workspaces/cake-brain/relatorios/Mogo/Analise Cadastro Clientes/01-2024.json"]}
+{"script": "mogo-historico-pagamento.py", "year": 2024, "month": 2, "status": "skipped_existing", "error": "", "duration_s": 0.0, "files": ["/root/workspaces/cake-brain/relatorios/Mogo/Historico Pagamento/02-2024.xlsx", "/root/workspaces/cake-brain/relatorios/Mogo/Historico Pagamento/02-2024.json"]}
+{"script": "mogo-lancamentos-pedidos.py", "year": 2024, "month": 2, "status": "skipped_existing", "error": "", "duration_s": 0.0, "files": ["/root/workspaces/cake-brain/relatorios/Mogo/Lancamentos Pedidos/02-2024.xlsx", "/root/workspaces/cake-brain/relatorios/Mogo/Lancamentos Pedidos/02-2024.json"]}
+{"script": "mogo-analise-cadastro-clientes.py", "year": 2024, "month": 2, "status": "skipped_existing", "error": "", "duration_s": 0.0, "files": ["/root/workspaces/cake-brain/relatorios/Mogo/Analise Cadastro Clientes/02-2024.xlsx", "/root/workspaces/cake-brain/relatorios/Mogo/Analise Cadastro Clientes/02-2024.json"]}
+{"script": "mogo-historico-pagamento.py", "year": 2024, "month": 3, "status": "skipped_existing", "error": "", "duration_s": 0.0, "files": ["/root/workspaces/cake-brain/relatorios/Mogo/Historico Pagamento/03-2024.xlsx", "/root/workspaces/cake-brain/relatorios/Mogo/Historico Pagamento/03-2024.json"]}
+{"script": "mogo-lancamentos-pedidos.py", "year": 2024, "month": 3, "status": "skipped_existing", "error": "", "duration_s": 0.0, "files": ["/root/workspaces/cake-brain/relatorios/Mogo/Lancamentos Pedidos/03-2024.xlsx", "/root/workspaces/cake-brain/relatorios/Mogo/Lancamentos Pedidos/03-2024.json"]}
+{"script": "mogo-analise-cadastro-clientes.py", "year": 2024, "month": 3, "status": "skipped_existing", "error": "", "duration_s": 0.0, "files": ["/root/workspaces/cake-brain/relatorios/Mogo/Analise Cadastro Clientes/03-2024.xlsx", "/root/workspaces/cake-brain/relatorios/Mogo/Analise Cadastro Clientes/03-2024.json"]}
+{"script": "mogo-historico-pagamento.py", "year": 2024, "month": 4, "status": "skipped_existing", "error": "", "duration_s": 0.0, "files": ["/root/workspaces/cake-brain/relatorios/Mogo/Historico Pagamento/04-2024.xlsx", "/root/workspaces/cake-brain/relatorios/Mogo/Historico Pagamento/04-2024.json"]}
+{"script": "mogo-lancamentos-pedidos.py", "year": 2024, "month": 4, "status": "skipped_existing", "error": "", "duration_s": 0.0, "files": ["/root/workspaces/cake-brain/relatorios/Mogo/Lancamentos Pedidos/04-2024.xlsx", "/root/workspaces/cake-brain/relatorios/Mogo/Lancamentos Pedidos/04-2024.json"]}
+{"script": "mogo-analise-cadastro-clientes.py", "year": 2024, "month": 4, "status": "skipped_existing", "error": "", "duration_s": 0.0, "files": ["/root/workspaces/cake-brain/relatorios/Mogo/Analise Cadastro Clientes/04-2024.xlsx", "/root/workspaces/cake-brain/relatorios/Mogo/Analise Cadastro Clientes/04-2024.json"]}
+{"script": "mogo-historico-pagamento.py", "year": 2024, "month": 5, "status": "skipped_existing", "error": "", "duration_s": 0.0, "files": ["/root/workspaces/cake-brain/relatorios/Mogo/Historico Pagamento/05-2024.xlsx", "/root/workspaces/cake-brain/relatorios/Mogo/Historico Pagamento/05-2024.json"]}
+{"script": "mogo-lancamentos-pedidos.py", "year": 2024, "month": 5, "status": "ok", "error": "", "duration_s": 107.3}
+{"script": "mogo-analise-cadastro-clientes.py", "year": 2024, "month": 5, "status": "ok", "error": "", "duration_s": 16.0}
+{"script": "mogo-historico-pagamento.py", "year": 2024, "month": 6, "status": "ok", "error": "", "duration_s": 55.7}
+{"script": "mogo-lancamentos-pedidos.py", "year": 2024, "month": 6, "status": "ok", "error": "", "duration_s": 108.3}
+{"script": "mogo-analise-cadastro-clientes.py", "year": 2024, "month": 6, "status": "ok", "error": "", "duration_s": 15.1}
+{"script": "mogo-historico-pagamento.py", "year": 2024, "month": 7, "status": "ok", "error": "", "duration_s": 50.8}
+{"script": "mogo-lancamentos-pedidos.py", "year": 2024, "month": 7, "status": "ok", "error": "", "duration_s": 107.5}
+{"script": "mogo-analise-cadastro-clientes.py", "year": 2024, "month": 7, "status": "ok", "error": "", "duration_s": 20.0}
+{"script": "mogo-historico-pagamento.py", "year": 2024, "month": 8, "status": "ok", "error": "", "duration_s": 55.0}
+{"script": "mogo-lancamentos-pedidos.py", "year": 2024, "month": 8, "status": "ok", "error": "", "duration_s": 126.3}
+{"script": "mogo-analise-cadastro-clientes.py", "year": 2024, "month": 8, "status": "ok", "error": "", "duration_s": 14.0}
+{"script": "mogo-historico-pagamento.py", "year": 2024, "month": 9, "status": "ok", "error": "", "duration_s": 50.0}
+{"script": "mogo-lancamentos-pedidos.py", "year": 2024, "month": 9, "status": "ok", "error": "", "duration_s": 115.0}
+{"script": "mogo-analise-cadastro-clientes.py", "year": 2024, "month": 9, "status": "ok", "error": "", "duration_s": 12.6}
+{"script": "mogo-historico-pagamento.py", "year": 2024, "month": 10, "status": "ok", "error": "", "duration_s": 67.9}
+{"script": "mogo-lancamentos-pedidos.py", "year": 2024, "month": 10, "status": "ok", "error": "", "duration_s": 139.9}
+{"script": "mogo-analise-cadastro-clientes.py", "year": 2024, "month": 10, "status": "ok", "error": "", "duration_s": 17.5}
+{"script": "mogo-historico-pagamento.py", "year": 2024, "month": 11, "status": "ok", "error": "", "duration_s": 72.6}
+{"script": "mogo-lancamentos-pedidos.py", "year": 2024, "month": 11, "status": "ok", "error": "", "duration_s": 138.6}
+{"script": "mogo-analise-cadastro-clientes.py", "year": 2024, "month": 11, "status": "ok", "error": "", "duration_s": 17.0}
+{"script": "mogo-historico-pagamento.py", "year": 2024, "month": 12, "status": "ok", "error": "", "duration_s": 70.6}
+{"script": "mogo-lancamentos-pedidos.py", "year": 2024, "month": 12, "status": "ok", "error": "", "duration_s": 153.4}
+{"script": "mogo-analise-cadastro-clientes.py", "year": 2024, "month": 12, "status": "ok", "error": "", "duration_s": 20.9}

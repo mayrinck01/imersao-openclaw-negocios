@@ -1,0 +1,22 @@
+{
+  "periodo": {
+    "de": "01/01/2024",
+    "ate": "31/01/2024"
+  },
+  "total_clientes": 1,
+  "total_faturamento": "R$ 0,00",
+  "registros": [
+    {
+      "nome": "João Carlos de Mayrinck - Inativo - Inativo",
+      "razao_social": "",
+      "data_cadastro": "31/01/2024",
+      "telefone": "",
+      "bairro": "Lagoa",
+      "aniversario": "",
+      "primeiro_pedido": "",
+      "ultimo_pedido": "",
+      "total_pedidos": "0,00",
+      "total_delivery": "0,00"
+    }
+  ]
+}
