@@ -25,7 +25,7 @@ class CakeDashboardSemanalTests(unittest.TestCase):
         self.assertEqual(parse_brl("15,00"), 15.0)
         self.assertEqual(parse_brl(""), 0.0)
 
-    def test_build_dashboard_uses_existing_mogo_json_sources(self):
+    def test_build_dashboard_prioritizes_vendas_analitico_pedido_for_gross_revenue(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp) / "Mogo"
             write_json(root / "Faturamento Detalhado" / "05-2026.json", {
@@ -53,14 +53,41 @@ class CakeDashboardSemanalTests(unittest.TestCase):
             dashboard = build_dashboard(root, date(2026, 5, 11), date(2026, 5, 17))
 
             self.assertEqual(dashboard["periodo"], "11/05/2026 a 17/05/2026")
-            self.assertEqual(dashboard["receita"]["faturamento_semana"], 350.0)
+            self.assertEqual(dashboard["receita"]["faturamento_semana"], 365.0)
             self.assertEqual(dashboard["receita"]["pedidos"], 2)
-            self.assertEqual(dashboard["receita"]["ticket_medio"], 175.0)
+            self.assertEqual(dashboard["receita"]["ticket_medio"], 182.5)
             self.assertEqual(dashboard["canais"][0]["nome"], "Delivery")
-            self.assertEqual(dashboard["canais"][0]["valor"], 250.0)
+            self.assertEqual(dashboard["canais"][0]["valor"], 265.0)
             self.assertEqual(dashboard["produtos"][0]["produto"], "Brigadeiro")
             self.assertEqual(dashboard["produtos"][0]["quantidade"], 10.0)
             self.assertEqual(dashboard["clientes"]["novos"], 1)
+            self.assertIn("Vendas Analitico", " ".join(dashboard["observacoes"]))
+
+    def test_build_dashboard_accepts_validated_mogo_revenue_override(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp) / "Mogo"
+            write_json(root / "Lancamentos Pedidos" / "05-2026.json", {
+                "registros": [
+                    {"A0": "12/05/2026", "A13": "001", "A2": "Bolo", "A3": "1,00", "A4": "999,00", "OrigemPedido": "Loja"},
+                ]
+            })
+
+            dashboard = build_dashboard(
+                root,
+                date(2026, 5, 11),
+                date(2026, 5, 17),
+                validated_revenue=1234.56,
+                validated_revenue_note="Mogo Vendas Analitico filtro Pedido",
+                validated_period_total=9876.54,
+                validated_period_label="01/05/2026 a 17/05/2026",
+            )
+
+            self.assertEqual(dashboard["receita"]["faturamento_semana"], 1234.56)
+            self.assertEqual(dashboard["receita"]["faturamento_periodo_validado"], 9876.54)
+            self.assertEqual(dashboard["receita"]["pedidos"], 0)
+            self.assertEqual(dashboard["canais"], [])
+            self.assertEqual(dashboard["produtos"], [])
+            self.assertIn("Mogo Vendas Analitico filtro Pedido", " ".join(dashboard["observacoes"]))
 
     def test_build_dashboard_falls_back_to_lancamentos_pedidos_for_current_month(self):
         with tempfile.TemporaryDirectory() as tmp:

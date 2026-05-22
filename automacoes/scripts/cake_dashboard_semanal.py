@@ -211,27 +211,56 @@ def previous_completed_week(today: date | None = None) -> tuple[date, date]:
     return start, end
 
 
-def build_dashboard(mogo_root: Path | str, week_start: date, week_end: date) -> dict[str, Any]:
+def build_dashboard(
+    mogo_root: Path | str,
+    week_start: date,
+    week_end: date,
+    *,
+    validated_revenue: float | None = None,
+    validated_revenue_note: str | None = None,
+    validated_period_total: float | None = None,
+    validated_period_label: str | None = None,
+) -> dict[str, Any]:
     root = Path(mogo_root)
     faturamento_records, missing_faturamento = load_monthly_records(root, "Faturamento Detalhado", week_start, week_end)
     vendas_records, missing_vendas = load_monthly_records(root, "Vendas Analitico", week_start, week_end)
     lancamentos_records, missing_lancamentos = load_monthly_records(root, "Lancamentos Pedidos", week_start, week_end)
     clientes_records, missing_clientes = load_monthly_records(root, "Analise Cadastro Clientes", week_start, week_end)
 
-    revenue_total, revenue_rows = summarize_revenue(faturamento_records, week_start, week_end)
-    revenue_source = revenue_rows
     observations: list[str] = []
+
+    if vendas_records:
+        revenue_total, revenue_rows = summarize_revenue(vendas_records, week_start, week_end)
+        revenue_source = revenue_rows
+        observations.append("Faturamento bruto calculado por Vendas Analitico com Tipo de Data: Pedido.")
+    else:
+        revenue_total, revenue_rows = summarize_revenue(faturamento_records, week_start, week_end)
+        revenue_source = revenue_rows
+
     if revenue_total == 0 and lancamentos_records:
         revenue_total, revenue_source = summarize_revenue(lancamentos_records, week_start, week_end)
         if revenue_total > 0:
-            observations.append("Faturamento Detalhado ausente ou vazio; usando Lancamentos Pedidos como fallback.")
+            observations.append(
+                "Vendas Analitico/Faturamento Detalhado ausentes ou vazios; usando Lancamentos Pedidos como fallback nao validado."
+            )
 
-    sales_source = vendas_records or lancamentos_records
+    if validated_revenue is not None:
+        revenue_total = validated_revenue
+        note = validated_revenue_note or "Faturamento validado manualmente no Mogo."
+        observations.append(f"Faturamento da semana substituido por validacao Mogo: {note}.")
+
+    hide_unvalidated_sales_breakdowns = validated_revenue is not None and not vendas_records
+    sales_source = vendas_records or ([] if hide_unvalidated_sales_breakdowns else lancamentos_records)
     sales = summarize_sales(sales_source, week_start, week_end)
     if not vendas_records and lancamentos_records:
-        observations.append("Vendas Analitico ausente; usando Lancamentos Pedidos para pedidos/produtos.")
+        if hide_unvalidated_sales_breakdowns:
+            observations.append(
+                "Vendas Analitico ausente; canais, produtos, pedidos e ticket medio ficam ocultos para nao misturar fonte nao reconciliada."
+            )
+        else:
+            observations.append("Vendas Analitico ausente; usando Lancamentos Pedidos para pedidos/produtos.")
 
-    channels = summarize_channels(revenue_source or sales_source, week_start, week_end)
+    channels = [] if hide_unvalidated_sales_breakdowns else summarize_channels(revenue_source or sales_source, week_start, week_end)
     clients = summarize_clients(clientes_records, week_start, week_end)
 
     pedidos = len(sales["orders"])
@@ -256,6 +285,8 @@ def build_dashboard(mogo_root: Path | str, week_start: date, week_end: date) -> 
             "faturamento_semana": revenue_total,
             "pedidos": pedidos,
             "ticket_medio": ticket_medio,
+            "faturamento_periodo_validado": validated_period_total,
+            "periodo_validado": validated_period_label,
         },
         "canais": channels[:8],
         "produtos": sales["products"],
@@ -276,12 +307,16 @@ def render_markdown(dashboard: dict[str, Any]) -> str:
         "## Placar da semana",
         "",
         f"- Faturamento da semana: {format_brl(receita['faturamento_semana'])}",
-        f"- Pedidos identificados: {format_number(receita['pedidos'])}",
-        f"- Ticket medio: {format_brl(receita['ticket_medio'])}",
+        f"- Pedidos identificados: {format_number(receita['pedidos'])}" if receita["pedidos"] else "- Pedidos identificados: aguardando Vendas Analitico local",
+        f"- Ticket medio: {format_brl(receita['ticket_medio'])}" if receita["pedidos"] else "- Ticket medio: aguardando Vendas Analitico local",
         "",
         "## Canais operacionais",
         "",
     ]
+    if receita.get("faturamento_periodo_validado") is not None:
+        label = receita.get("periodo_validado") or "periodo validado"
+        lines.insert(8, f"- Faturamento bruto validado ({label}): {format_brl(receita['faturamento_periodo_validado'])}")
+
     if dashboard["canais"]:
         for channel in dashboard["canais"]:
             lines.append(f"- {channel['nome']}: {format_brl(channel['valor'])}")
@@ -342,8 +377,21 @@ def export_dashboard_markdown(
     output_dir: Path | str,
     week_start: date,
     week_end: date,
+    *,
+    validated_revenue: float | None = None,
+    validated_revenue_note: str | None = None,
+    validated_period_total: float | None = None,
+    validated_period_label: str | None = None,
 ) -> Path:
-    dashboard = build_dashboard(Path(mogo_root), week_start, week_end)
+    dashboard = build_dashboard(
+        Path(mogo_root),
+        week_start,
+        week_end,
+        validated_revenue=validated_revenue,
+        validated_revenue_note=validated_revenue_note,
+        validated_period_total=validated_period_total,
+        validated_period_label=validated_period_label,
+    )
     output = Path(output_dir)
     output.mkdir(parents=True, exist_ok=True)
     path = output / f"{week_start.isoformat()}.md"
@@ -357,6 +405,10 @@ def main() -> int:
     parser.add_argument("--output-dir", type=Path, default=DEFAULT_OUTPUT_DIR)
     parser.add_argument("--week-start", help="Data inicial da semana em YYYY-MM-DD. Default: semana completa anterior.")
     parser.add_argument("--week-end", help="Data final da semana em YYYY-MM-DD. Default: week-start + 6 dias.")
+    parser.add_argument("--validated-revenue-brl", help="Faturamento bruto da semana validado no Mogo, ex: 139.322,18.")
+    parser.add_argument("--validated-revenue-note", help="Nota da validacao manual do faturamento.")
+    parser.add_argument("--validated-period-total-brl", help="Faturamento bruto de periodo maior validado no Mogo.")
+    parser.add_argument("--validated-period-label", help="Rotulo do periodo maior validado, ex: 01/05/2026 a 17/05/2026.")
     args = parser.parse_args()
 
     if args.week_start:
@@ -369,7 +421,16 @@ def main() -> int:
     else:
         week_start, week_end = previous_completed_week()
 
-    path = export_dashboard_markdown(args.mogo_root, args.output_dir, week_start, week_end)
+    path = export_dashboard_markdown(
+        args.mogo_root,
+        args.output_dir,
+        week_start,
+        week_end,
+        validated_revenue=parse_brl(args.validated_revenue_brl) if args.validated_revenue_brl else None,
+        validated_revenue_note=args.validated_revenue_note,
+        validated_period_total=parse_brl(args.validated_period_total_brl) if args.validated_period_total_brl else None,
+        validated_period_label=args.validated_period_label,
+    )
     print(path)
     return 0
 
