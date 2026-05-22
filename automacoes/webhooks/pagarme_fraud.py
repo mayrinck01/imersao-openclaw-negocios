@@ -7,6 +7,7 @@ No automatic cancellation/refund happens here.
 
 from __future__ import annotations
 
+import hashlib
 import json
 import re
 import sqlite3
@@ -18,6 +19,7 @@ from typing import Any, Protocol
 
 WINDOW_MINUTES = 60
 ALERT_THRESHOLD = 50
+DEFAULT_HOTLIST_PATH = Path(__file__).resolve().parents[1] / "data" / "pagarme_fraud_hotlist.json"
 
 
 def _parse_dt(value: str | None) -> datetime:
@@ -46,12 +48,41 @@ def only_digits(value: str | None) -> str:
     return re.sub(r"\D+", "", value or "")
 
 
+def normalized_sha256(value: str | None) -> str:
+    normalized = normalize_text(value)
+    if not normalized:
+        return ""
+    return hashlib.sha256(normalized.encode("utf-8")).hexdigest()
+
+
+def digits_sha256(value: str | None) -> str:
+    digits = only_digits(value)
+    if not digits:
+        return ""
+    return hashlib.sha256(digits.encode("utf-8")).hexdigest()
+
+
+def card_sha256(brand: str | None, last4: str | None) -> str:
+    brand_norm = normalize_text(brand)
+    last4_digits = only_digits(last4)
+    if not brand_norm or not last4_digits:
+        return ""
+    return hashlib.sha256(f"{brand_norm}|{last4_digits}".encode("utf-8")).hexdigest()
+
+
 def _first_present(row: dict[str, Any], keys: tuple[str, ...]) -> str:
     for key in keys:
         value = row.get(key)
         if value not in (None, ""):
             return str(value)
     return ""
+
+
+def _clean_mogo_value(value: str | None) -> str:
+    value = value or ""
+    value = re.sub(r"<[^>]+>", " ", value)
+    value = value.replace("&nbsp;", " ")
+    return re.sub(r"\s+", " ", value).strip()
 
 
 def _extract_phone_from_obj(value: Any) -> str:
@@ -185,11 +216,30 @@ class ChargeEvent:
 
 
 @dataclass(frozen=True)
+class MogoOrderSummary:
+    order_number: str = ""
+    status: str = ""
+    customer_name: str = ""
+    date: str = ""
+    delivery_date: str = ""
+    delivery_time: str = ""
+    address: str = ""
+    neighborhood: str = ""
+    amount: str = ""
+    origin: str = ""
+    item: str = ""
+    phone: str = ""
+    document: str = ""
+    email: str = ""
+
+
+@dataclass(frozen=True)
 class CustomerHistoryResult:
     has_prior_valid_purchase: bool
     matched_by: str | None
     status: str
     error: str | None = None
+    order: MogoOrderSummary | None = None
 
 
 class CustomerHistoryChecker(Protocol):
@@ -200,6 +250,69 @@ class CustomerHistoryChecker(Protocol):
 class NoopCustomerHistoryChecker:
     def lookup(self, charge: ChargeEvent) -> CustomerHistoryResult:
         return CustomerHistoryResult(False, None, "not_configured", None)
+
+
+@dataclass(frozen=True)
+class FraudHotlist:
+    holder_name_hashes: frozenset[str]
+    customer_name_hashes: frozenset[str] = frozenset()
+    customer_email_hashes: frozenset[str] = frozenset()
+    customer_document_hashes: frozenset[str] = frozenset()
+    card_hashes: frozenset[str] = frozenset()
+
+    @classmethod
+    def empty(cls) -> "FraudHotlist":
+        return cls(frozenset())
+
+    @classmethod
+    def from_holder_names(cls, names: list[str]) -> "FraudHotlist":
+        return cls(frozenset(hash_ for hash_ in (normalized_sha256(name) for name in names) if hash_))
+
+    @classmethod
+    def from_customer_documents(cls, documents: list[str]) -> "FraudHotlist":
+        return cls(frozenset(), customer_document_hashes=frozenset(hash_ for hash_ in (digits_sha256(document) for document in documents) if hash_))
+
+    @classmethod
+    def from_cards(cls, cards: list[tuple[str, str]]) -> "FraudHotlist":
+        return cls(frozenset(), card_hashes=frozenset(hash_ for hash_ in (card_sha256(brand, last4) for brand, last4 in cards) if hash_))
+
+    @classmethod
+    def from_path(cls, path: str | Path) -> "FraudHotlist":
+        path = Path(path)
+        if not path.exists():
+            return cls.empty()
+        try:
+            payload = json.loads(path.read_text(encoding="utf-8"))
+        except Exception:
+            return cls.empty()
+
+        def read_hashes(key: str) -> frozenset[str]:
+            raw_hashes = payload.get(key, [])
+            if not isinstance(raw_hashes, list):
+                return frozenset()
+            return frozenset({
+                str(value).strip().lower()
+                for value in raw_hashes
+                if isinstance(value, str) and re.fullmatch(r"[0-9a-fA-F]{64}", value.strip())
+            })
+
+        return cls(
+            holder_name_hashes=read_hashes("holder_name_sha256"),
+            customer_name_hashes=read_hashes("customer_name_sha256"),
+            customer_email_hashes=read_hashes("customer_email_sha256"),
+            customer_document_hashes=read_hashes("customer_document_sha256"),
+            card_hashes=read_hashes("card_sha256"),
+        )
+
+    def matches(self, charge: ChargeEvent) -> bool:
+        hashes = [
+            (normalized_sha256(charge.holder_name), self.holder_name_hashes),
+            (normalized_sha256(charge.customer_name), self.customer_name_hashes),
+            (normalized_sha256(charge.customer_email), self.customer_email_hashes),
+            (digits_sha256(charge.customer_document), self.customer_document_hashes),
+            (card_sha256(charge.card_brand, charge.card_last4), self.card_hashes),
+        ]
+        return any(hash_ and hash_ in hotlist_hashes for hash_, hotlist_hashes in hashes)
 
 
 class LocalMogoHistoryChecker:
@@ -218,6 +331,10 @@ class LocalMogoHistoryChecker:
         self._emails: set[str] = set()
         self._phones: set[str] = set()
         self._names: set[str] = set()
+        self._document_orders: dict[str, MogoOrderSummary] = {}
+        self._email_orders: dict[str, MogoOrderSummary] = {}
+        self._phone_orders: dict[str, MogoOrderSummary] = {}
+        self._name_orders: dict[str, MogoOrderSummary] = {}
 
     def lookup(self, charge: ChargeEvent) -> CustomerHistoryResult:
         try:
@@ -227,19 +344,23 @@ class LocalMogoHistoryChecker:
 
         document = only_digits(charge.customer_document)
         if document and document in self._documents:
-            return CustomerHistoryResult(True, "document", "valid_purchase", None)
+            return CustomerHistoryResult(True, "document", "valid_purchase", None, self._document_orders.get(document))
 
         email = normalize_text(charge.customer_email)
         if email and email in self._emails:
-            return CustomerHistoryResult(True, "email", "valid_purchase", None)
+            return CustomerHistoryResult(True, "email", "valid_purchase", None, self._email_orders.get(email))
 
         phone = only_digits(charge.customer_phone)
-        if phone and any(phone == indexed or phone.endswith(indexed) or indexed.endswith(phone) for indexed in self._phones):
-            return CustomerHistoryResult(True, "phone", "valid_purchase", None)
+        if phone:
+            for indexed in self._phones:
+                if phone == indexed or phone.endswith(indexed) or indexed.endswith(phone):
+                    return CustomerHistoryResult(True, "phone", "valid_purchase", None, self._phone_orders.get(indexed))
 
         name = normalize_text(charge.customer_name)
-        if name and any(names_compatible(name, indexed_name) for indexed_name in self._names):
-            return CustomerHistoryResult(True, "name", "valid_purchase", None)
+        if name:
+            for indexed_name in self._names:
+                if names_compatible(name, indexed_name):
+                    return CustomerHistoryResult(True, "name", "valid_purchase", None, self._name_orders.get(indexed_name))
 
         return CustomerHistoryResult(False, None, "not_found", None)
 
@@ -281,21 +402,49 @@ class LocalMogoHistoryChecker:
         return False
 
     def _index_row(self, row: dict[str, Any]) -> None:
+        order = self._order_summary(row)
         document = only_digits(_first_present(row, ("document", "documento", "cpf", "cnpj", "customer_document")))
         if document:
             self._documents.add(document)
+            self._document_orders.setdefault(document, order)
 
         email = normalize_text(_first_present(row, ("email", "customer_email", "cliente_email")))
         if email:
             self._emails.add(email)
+            self._email_orders.setdefault(email, order)
 
         phone = only_digits(_first_present(row, ("telefone", "phone", "whatsapp", "celular", "customer_phone")))
         if phone:
             self._phones.add(phone)
+            self._phone_orders.setdefault(phone, order)
 
         name = normalize_text(_first_present(row, ("cliente", "A5", "nome", "NomeCliente", "customer_name")))
         if name:
             self._names.add(name)
+            self._name_orders.setdefault(name, order)
+
+    def _order_summary(self, row: dict[str, Any]) -> MogoOrderSummary:
+        address_parts = [
+            _clean_mogo_value(_first_present(row, ("Logradouro", "logradouro", "endereco", "Endereço"))),
+            _clean_mogo_value(_first_present(row, ("Numero", "Número", "numero", "Nº"))),
+        ]
+        address = ", ".join(part for part in address_parts if part)
+        return MogoOrderSummary(
+            order_number=_clean_mogo_value(_first_present(row, ("A13", "NumeroPedido", "Nº Pedido", "numPed", "pedido", "numero_pedido"))),
+            status=_clean_mogo_value(_first_present(row, ("A10", "status", "situacao", "posicao", "Pago"))),
+            customer_name=_clean_mogo_value(_first_present(row, ("cliente", "A5", "nome", "NomeCliente", "customer_name", "Cliente"))),
+            date=_clean_mogo_value(_first_present(row, ("A0", "data", "Data Pedido", "dataPed", "dataPag"))),
+            delivery_date=_clean_mogo_value(_first_present(row, ("Data Entrega", "DataEntrega", "Data Agendada"))),
+            delivery_time=_clean_mogo_value(_first_present(row, ("Hora Entrega", "HoraEntregaTxt", "Hora Agendada"))),
+            address=address,
+            neighborhood=_clean_mogo_value(_first_present(row, ("Bairro", "bairro"))),
+            amount=_clean_mogo_value(_first_present(row, ("Valor Final", "ValorFinal", "totalped", "A4", "valor"))),
+            origin=_clean_mogo_value(_first_present(row, ("Origem", "OrigemPedido", "origem"))),
+            item=_clean_mogo_value(_first_present(row, ("A2", "Produto", "produto", "item"))),
+            phone=_clean_mogo_value(_first_present(row, ("telefone", "phone", "whatsapp", "celular", "customer_phone"))),
+            document=_clean_mogo_value(_first_present(row, ("document", "documento", "cpf", "cnpj", "customer_document"))),
+            email=_clean_mogo_value(_first_present(row, ("email", "customer_email", "cliente_email"))),
+        )
 
 
 @dataclass(frozen=True)
@@ -304,6 +453,7 @@ class RiskResult:
     score: int
     reasons: list[str]
     charge: ChargeEvent
+    customer_history: CustomerHistoryResult | None = None
 
 
 def extract_charge(payload: dict[str, Any]) -> ChargeEvent:
@@ -333,9 +483,10 @@ def extract_charge(payload: dict[str, Any]) -> ChargeEvent:
 
 
 class RiskEngine:
-    def __init__(self, db_path: str, history_checker: CustomerHistoryChecker | None = None):
+    def __init__(self, db_path: str, history_checker: CustomerHistoryChecker | None = None, hotlist: FraudHotlist | None = None):
         self.db_path = db_path
         self.history_checker = history_checker or NoopCustomerHistoryChecker()
+        self.hotlist = hotlist if hotlist is not None else FraudHotlist.from_path(DEFAULT_HOTLIST_PATH)
         Path(db_path).parent.mkdir(parents=True, exist_ok=True) if str(Path(db_path).parent) != "." else None
         self._init_db()
 
@@ -376,8 +527,8 @@ class RiskEngine:
         self._store(charge)
         if not charge.is_paid:
             return RiskResult(False, 0, [], charge)
-        score, reasons = self._score_paid_charge(charge)
-        return RiskResult(score >= ALERT_THRESHOLD, score, reasons, charge)
+        score, reasons, history = self._score_paid_charge(charge)
+        return RiskResult(score >= ALERT_THRESHOLD, score, reasons, charge, history)
 
     def _store(self, charge: ChargeEvent) -> None:
         with self._connect() as conn:
@@ -431,7 +582,7 @@ class RiskEngine:
         except Exception as exc:
             return CustomerHistoryResult(False, None, "error", exc.__class__.__name__)
 
-    def _score_paid_charge(self, charge: ChargeEvent) -> tuple[int, list[str]]:
+    def _score_paid_charge(self, charge: ChargeEvent) -> tuple[int, list[str], CustomerHistoryResult]:
         strong_score = 0
         weak_score = 0
         strong_reasons: list[str] = []
@@ -448,6 +599,10 @@ class RiskEngine:
         if history.status == "error":
             detail = f": {history.error}" if history.error else ""
             operational_reasons.append(f"Histórico Mogo não validado{detail}")
+
+        if self.hotlist.matches(charge):
+            strong_score += 50
+            strong_reasons.append("Dado em lista quente de chargeback/fraude")
 
         if charge.holder_name and not names_compatible(charge.customer_name, charge.holder_name):
             if not customer_name_part_in_email_or_holder(charge.customer_name, charge.customer_email, charge.holder_name):
@@ -475,24 +630,165 @@ class RiskEngine:
                 weak_reasons.append("Email pouco compatível com o nome do cliente")
 
         if suppress_weak:
-            return strong_score, strong_reasons + operational_reasons
-        return strong_score + weak_score, strong_reasons + weak_reasons + operational_reasons
+            return strong_score, strong_reasons + operational_reasons, history
+        return strong_score + weak_score, strong_reasons + weak_reasons + operational_reasons, history
+
+
+def _format_mogo_context(history: CustomerHistoryResult | None) -> str:
+    if history is None:
+        return "Mogo: histórico local não consultado"
+    if history.status == "error":
+        detail = f" ({history.error})" if history.error else ""
+        return f"Mogo: histórico local não validado{detail}"
+    if not history.has_prior_valid_purchase:
+        return "Mogo: pedido/histórico local não localizado"
+
+    order = history.order
+    if order is None:
+        return f"Mogo: histórico válido localizado por {history.matched_by or '-'}"
+
+    lines = [f"Mogo: histórico válido localizado por {history.matched_by or '-'}"]
+    fields = [
+        ("Pedido", order.order_number),
+        ("Status", order.status),
+        ("Cliente Mogo", order.customer_name),
+        ("Data", order.date),
+        ("Entrega", " ".join(part for part in (order.delivery_date, order.delivery_time) if part)),
+        ("Endereço", " - ".join(part for part in (order.address, order.neighborhood) if part)),
+        ("Valor Mogo", order.amount),
+        ("Origem", order.origin),
+        ("Item", order.item),
+    ]
+    for label, value in fields:
+        if value:
+            lines.append(f"{label}: {value}")
+    return "\n".join(lines)
+
+
+def _format_brl(cents: int) -> str:
+    return f"R$ {cents / 100:,.2f}".replace(",", "X").replace(".", ",").replace("X", ".")
+
+
+def _ensure_brl_text(value: str) -> str:
+    value = value.strip()
+    if not value:
+        return value
+    if value.lower().startswith("r$"):
+        return value
+    return f"R$ {value}"
+
+
+def _format_brt_datetime(dt: datetime) -> str:
+    brt = timezone(timedelta(hours=-3))
+    return dt.astimezone(brt).strftime("%d/%m/%Y %H:%M")
+
+
+def _alert_level(score: int) -> str:
+    if score >= ALERT_THRESHOLD:
+        return "FORTE"
+    return "ATENÇÃO"
+
+
+def _format_br_phone(value: str) -> str:
+    digits = only_digits(value)
+    if digits.startswith("55") and len(digits) in {12, 13}:
+        digits = digits[2:]
+    if len(digits) == 11:
+        return f"({digits[:2]}) {digits[2:7]}-{digits[7:]}"
+    if len(digits) == 10:
+        return f"({digits[:2]}) {digits[2:6]}-{digits[6:]}"
+    return value or "-"
+
+
+def _format_cpf(value: str) -> str:
+    digits = only_digits(value)
+    if len(digits) == 11:
+        return f"{digits[:3]}.{digits[3:6]}.{digits[6:9]}-{digits[9:]}"
+    return value or "-"
+
+
+def _mogo_order_header(history: CustomerHistoryResult | None) -> str:
+    order = history.order if history else None
+    if order and order.order_number:
+        return f"🧾 PEDIDO MOGO: #{order.order_number}"
+    return "🧾 PEDIDO MOGO: não localizado"
+
+
+def _mogo_customer_lines(history: CustomerHistoryResult | None, charge: ChargeEvent) -> list[str]:
+    order = history.order if history else None
+    return [
+        "Cliente no Mogo",
+        f"• Nome: {(order.customer_name if order and order.customer_name else charge.customer_name) or '-'}",
+        f"• Telefone/WhatsApp: {_format_br_phone(order.phone if order and order.phone else charge.customer_phone)}",
+        f"• CPF do pedido: {_format_cpf(order.document if order and order.document else charge.customer_document)}",
+        f"• Email: {(order.email if order and order.email else charge.customer_email) or '-'}",
+    ]
+
+
+def _mogo_order_lines(history: CustomerHistoryResult | None) -> list[str]:
+    if history is None:
+        return ["Pedido Mogo", "• Histórico local: não consultado"]
+    if history.status == "error":
+        detail = f" ({history.error})" if history.error else ""
+        return ["Pedido Mogo", f"• Histórico local: não validado{detail}"]
+    if not history.has_prior_valid_purchase:
+        return ["Pedido Mogo", "• Histórico local: pedido/histórico não localizado"]
+
+    order = history.order
+    lines = ["Pedido Mogo", f"• Histórico local: localizado por {history.matched_by or '-'}"]
+    if not order:
+        return lines
+
+    fields = [
+        ("Status Mogo", order.status),
+        ("Data Mogo", order.date),
+        ("Entrega", " ".join(part for part in (order.delivery_date, order.delivery_time) if part)),
+        ("Endereço", " - ".join(part for part in (order.address, order.neighborhood) if part)),
+        ("Valor Mogo", order.amount),
+        ("Origem Mogo", order.origin),
+        ("Item/produto", order.item),
+    ]
+    for label, value in fields:
+        if value:
+            lines.append(f"• {label}: {value}")
+    return lines
 
 
 def format_alert(result: RiskResult) -> str:
     charge = result.charge
-    amount_brl = charge.amount / 100
-    reasons = "\n".join(f"- {reason}" for reason in result.reasons)
-    return (
-        "ALERTA ANTIFRAUDE — confirmar antes de entregar\n\n"
-        f"Cliente: {charge.customer_name or '-'}\n"
-        f"Email: {charge.customer_email or '-'}\n"
-        f"Documento: {charge.customer_document or '-'}\n"
-        f"Valor: R$ {amount_brl:,.2f}\n".replace(",", "X").replace(".", ",").replace("X", ".") +
-        f"Cobrança: {charge.charge_id or '-'}\n"
-        f"Cartão: {charge.card_brand or '-'} final {charge.card_last4 or '-'}\n"
-        f"Titular: {charge.holder_name or '-'}\n"
-        f"Score: {result.score}\n\n"
-        f"Motivos:\n{reasons}\n\n"
-        "Ação: falar com o cliente antes de liberar entrega. Não acusar fraude."
-    )
+    history = result.customer_history
+    order = history.order if history else None
+    value_line = _ensure_brl_text(order.amount) if order and order.amount else _format_brl(charge.amount)
+    reasons = "\n".join(f"• {reason}" for reason in result.reasons) or "• Sem motivo detalhado"
+    lines = [
+        "🚨 POSSÍVEL FRAUDE — SEGURAR ENTREGA",
+        "",
+        _mogo_order_header(history),
+        "Status operacional: SEGURAR / NÃO ENTREGAR",
+        "",
+        "Resumo",
+        f"• Valor do pedido: {value_line}",
+        f"• Data/hora: {_format_brt_datetime(charge.created_at)}",
+        "• Origem pagamento: Pagar.me",
+        f"• Cobrança Pagar.me: {charge.charge_id or '-'}",
+        f"• Nível do alerta: {_alert_level(result.score)}",
+        "",
+        *_mogo_customer_lines(history, charge),
+        "",
+        *_mogo_order_lines(history),
+        "",
+        "Pagamento Pagar.me",
+        f"• Cliente Pagar.me: {charge.customer_name or '-'}",
+        f"• Email Pagar.me: {charge.customer_email or '-'}",
+        f"• Documento Pagar.me: {charge.customer_document or '-'}",
+        f"• Valor Pagar.me: {_format_brl(charge.amount)}",
+        f"• Cartão: {charge.card_brand or '-'} final {charge.card_last4 or '-'}",
+        f"• Titular do cartão: {charge.holder_name or '-'}",
+        f"• Score: {result.score}",
+        "",
+        "Motivos do alerta",
+        reasons,
+        "",
+        "Ação: falar com o cliente antes de liberar entrega. Não acusar fraude.",
+    ]
+    return "\n".join(lines)
