@@ -448,9 +448,9 @@ def render_markdown(dashboard: dict[str, Any]) -> str:
         "",
         f"Periodo: {dashboard['periodo']}",
         "",
-        "## Placar da semana",
+        "## Placar executivo",
         "",
-        f"- Faturamento da semana: {format_brl(receita['faturamento_semana'])}",
+        f"- Faturamento do periodo: {format_brl(receita['faturamento_semana'])}",
         (
             f"- Faturamento acumulado do mes ({receita['faturamento_mes_label']}): "
             f"{format_brl(receita['faturamento_mes_2026'])}"
@@ -534,7 +534,7 @@ def render_markdown(dashboard: dict[str, Any]) -> str:
     lines.extend(["", "## Produtos", ""])
     if dashboard["produtos"]:
         lines.extend([
-            "| # | Produto | Qtde | Faturamento | % do faturamento da semana |",
+            "| # | Produto | Qtde | Faturamento | % do faturamento do periodo |",
             "|---:|---|---:|---:|---:|",
         ])
         for index, product in enumerate(dashboard["produtos"][:10], 1):

@@ -239,10 +239,10 @@ def render_html(dashboard: dict) -> str:
     <div>
       <div class="eyebrow">Cake & Co - Dashboard V1</div>
       <h1>Maio cresce forte, mas a leitura precisa separar efeito Dia das Mães de tração recorrente.</h1>
-      <p class="lead">Semana de {html.escape(dashboard['periodo'])}, usando Mogo Vendas Analítico com data Pedido como fonte canônica.</p>
+      <p class="lead">Período de {html.escape(dashboard['periodo'])}, usando Mogo Vendas Analítico com data Pedido como fonte canônica.</p>
     </div>
     <div class="grid grid-4">
-      <div class="metric"><div class="k">Semana</div><div class="v">{format_brl(receita['faturamento_semana'])}</div><div class="s">11 a 17/05/2026</div></div>
+      <div class="metric"><div class="k">Período</div><div class="v">{format_brl(receita['faturamento_semana'])}</div><div class="s">{html.escape(dashboard['periodo'])}</div></div>
       <div class="metric"><div class="k">Acumulado maio</div><div class="v">{format_brl(receita['faturamento_mes_2026'])}</div><div class="s">01 a 17/05/2026</div></div>
       <div class="metric"><div class="k">Vs 2025</div><div class="v">+{format_percent(receita['faturamento_mes_delta_pct'])}</div><div class="s">{format_brl(receita['faturamento_mes_delta'])}</div></div>
       <div class="metric"><div class="k">Pedidos</div><div class="v">{format_number(receita['pedidos'])}</div><div class="s">Ticket {format_brl(receita['ticket_medio'])}</div></div>
@@ -276,7 +276,7 @@ def render_html(dashboard: dict) -> str:
         <p class="insight">O mês está {format_percent(receita['faturamento_mes_delta_pct'])} acima de 2025 no mesmo recorte. Contra maio/2025 fechado, 2026 parcial já atingiu {format_percent(receita['faturamento_mes_vs_2025_fechado_pct'])} do total e ainda falta {format_brl(abs(receita['faturamento_mes_vs_2025_fechado_delta']))} para empatar. O pico veio principalmente entre 08 e 16/05, com destaque para iFood, Neemo e loja física.</p>
       </div>
     </div>
-    <div class="footer"><span>Dashboard V1</span><span>Semana {html.escape(dashboard['periodo'])}</span></div>
+    <div class="footer"><span>Dashboard V1</span><span>Período {html.escape(dashboard['periodo'])}</span></div>
   </section>
 
   <section class="slide">
@@ -318,12 +318,12 @@ def render_html(dashboard: dict) -> str:
   <section class="slide">
     <h2>Top 10 produtos por faturamento</h2>
     <table>
-      <thead><tr><th>#</th><th>Produto</th><th class="num">Qtde</th><th class="num">Faturamento</th><th>Participação</th></tr></thead>
+      <thead><tr><th>#</th><th>Produto</th><th class="num">Qtde</th><th class="num">Faturamento</th><th>Participação no período</th></tr></thead>
       <tbody>{render_products(products)}</tbody>
     </table>
     <div class="card">
       <h3>Produto líder</h3>
-      <p class="insight">{html.escape(str(top_product['produto'])) if top_product else '-'} puxou {format_brl(top_product['valor']) if top_product else '-'}, equivalente a {format_percent(top_product.get('share_revenue')) if top_product else '-'} do faturamento da semana. A linha Morango/Deliciosa aparece como motor forte do período.</p>
+      <p class="insight">{html.escape(str(top_product['produto'])) if top_product else '-'} puxou {format_brl(top_product['valor']) if top_product else '-'}, equivalente a {format_percent(top_product.get('share_revenue')) if top_product else '-'} do faturamento do período. A linha Morango/Deliciosa aparece como motor forte do período.</p>
     </div>
     <div class="footer"><span>Taxa de entrega excluída do ranking de produtos</span><span>Faturamento bruto total preservado</span></div>
   </section>
