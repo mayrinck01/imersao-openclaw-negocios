@@ -64,6 +64,8 @@ class CakeDashboardSemanalTests(unittest.TestCase):
             self.assertEqual(dashboard["receita"]["faturamento_semana"], 365.0)
             self.assertEqual(dashboard["receita"]["faturamento_mes_2026"], 415.0)
             self.assertEqual(dashboard["receita"]["faturamento_mes_2025"], 240.0)
+            self.assertEqual(dashboard["receita"]["faturamento_mes_2025_fechado"], 240.0)
+            self.assertEqual(dashboard["receita"]["faturamento_mes_vs_2025_fechado_delta"], 175.0)
             self.assertEqual(dashboard["comparativo_dia_a_dia"][1]["valor_2026"], 100.0)
             self.assertEqual(dashboard["comparativo_dia_a_dia"][1]["valor_2025"], 80.0)
             self.assertEqual(dashboard["comparativo_semana_a_semana"][1]["valor_2026"], 365.0)

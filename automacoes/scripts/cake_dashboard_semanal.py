@@ -390,6 +390,8 @@ def build_dashboard(
             "faturamento_mes_2026": mtd_2026,
             "faturamento_mes_2025": mtd_2025,
             "faturamento_mes_2025_fechado": month_2025_closed,
+            "faturamento_mes_vs_2025_fechado_delta": mtd_2026 - month_2025_closed,
+            "faturamento_mes_vs_2025_fechado_pct": (mtd_2026 / month_2025_closed * 100) if month_2025_closed else None,
             "faturamento_mes_delta": mtd_2026 - mtd_2025,
             "faturamento_mes_delta_pct": delta_percent(mtd_2026, mtd_2025),
             "faturamento_mes_label": f"01/{week_end.strftime('%m/%Y')} a {week_end.strftime('%d/%m/%Y')}",
@@ -434,6 +436,11 @@ def render_markdown(dashboard: dict[str, Any]) -> str:
             f"- Maio/2025 fechado ({receita['faturamento_mes_2025_fechado_label']}): "
             f"{format_brl(receita['faturamento_mes_2025_fechado'])}"
         ) if receita.get("faturamento_mes_2025_fechado") else "- Maio/2025 fechado: aguardando Vendas Analitico local",
+        (
+            f"- Maio/2026 parcial vs maio/2025 fechado: "
+            f"{format_percent(receita['faturamento_mes_vs_2025_fechado_pct'])} do total de 2025 | "
+            f"diferença {format_brl(receita['faturamento_mes_vs_2025_fechado_delta'])}"
+        ) if receita.get("faturamento_mes_2025_fechado") else "- Maio/2026 parcial vs maio/2025 fechado: aguardando Vendas Analitico local",
         f"- Pedidos identificados: {format_number(receita['pedidos'])}" if receita["pedidos"] else "- Pedidos identificados: aguardando Vendas Analitico local",
         f"- Ticket medio: {format_brl(receita['ticket_medio'])}" if receita["pedidos"] else "- Ticket medio: aguardando Vendas Analitico local",
         "",

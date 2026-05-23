@@ -34,6 +34,12 @@ def signed_class(value: float) -> str:
     return "positive" if value >= 0 else "negative"
 
 
+def gap_text(value: float) -> str:
+    if value >= 0:
+        return f"{format_brl(value)} acima"
+    return f"{format_brl(abs(value))} para igualar"
+
+
 def render_daily_rows(rows: list[dict]) -> str:
     return "\n".join(
         f"""
@@ -228,6 +234,14 @@ def render_html(dashboard: dict) -> str:
       <div class="card metric"><div class="k">Ganho absoluto</div><div class="v positive">{format_brl(receita['faturamento_mes_delta'])}</div><div class="s">crescimento de {format_percent(receita['faturamento_mes_delta_pct'])}</div></div>
       <div class="card metric"><div class="k">Maio/2025 fechado</div><div class="v">{format_brl(receita['faturamento_mes_2025_fechado'])}</div><div class="s">{html.escape(receita['faturamento_mes_2025_fechado_label'])}</div></div>
     </div>
+    <div class="card">
+      <h3>Parcial 2026 contra maio/2025 fechado</h3>
+      <div class="grid grid-3">
+        <div class="metric"><div class="k">Maio/2026 parcial</div><div class="v">{format_brl(receita['faturamento_mes_2026'])}</div><div class="s">até 17/05</div></div>
+        <div class="metric"><div class="k">Atingido do mês passado</div><div class="v">{format_percent(receita['faturamento_mes_vs_2025_fechado_pct'])}</div><div class="s">base: maio/2025 fechado</div></div>
+        <div class="metric"><div class="k">Distância para empatar</div><div class="v {signed_class(receita['faturamento_mes_vs_2025_fechado_delta'])}">{gap_text(receita['faturamento_mes_vs_2025_fechado_delta'])}</div><div class="s">comparação parcial vs fechado</div></div>
+      </div>
+    </div>
     <div class="grid grid-2">
       <div class="card">
         <h3>Canais operacionais da semana</h3>
@@ -235,7 +249,7 @@ def render_html(dashboard: dict) -> str:
       </div>
       <div class="card">
         <h3>Leitura para sócios</h3>
-        <p class="insight">O mês está {format_percent(receita['faturamento_mes_delta_pct'])} acima de 2025 no mesmo recorte. Maio/2025 fechado foi {format_brl(receita['faturamento_mes_2025_fechado'])}; 2026 ainda está parcial até 17/05. O pico veio principalmente entre 08 e 16/05, com destaque para iFood, Neemo e loja física.</p>
+        <p class="insight">O mês está {format_percent(receita['faturamento_mes_delta_pct'])} acima de 2025 no mesmo recorte. Contra maio/2025 fechado, 2026 parcial já atingiu {format_percent(receita['faturamento_mes_vs_2025_fechado_pct'])} do total e ainda falta {format_brl(abs(receita['faturamento_mes_vs_2025_fechado_delta']))} para empatar. O pico veio principalmente entre 08 e 16/05, com destaque para iFood, Neemo e loja física.</p>
       </div>
     </div>
     <div class="footer"><span>Dashboard V1</span><span>Semana {html.escape(dashboard['periodo'])}</span></div>
