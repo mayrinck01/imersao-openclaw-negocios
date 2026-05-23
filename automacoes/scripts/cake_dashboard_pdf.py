@@ -243,7 +243,7 @@ def render_html(dashboard: dict) -> str:
     </div>
     <div class="grid grid-4">
       <div class="metric"><div class="k">Período</div><div class="v">{format_brl(receita['faturamento_semana'])}</div><div class="s">{html.escape(dashboard['periodo'])}</div></div>
-      <div class="metric"><div class="k">Acumulado maio</div><div class="v">{format_brl(receita['faturamento_mes_2026'])}</div><div class="s">01 a 17/05/2026</div></div>
+      <div class="metric"><div class="k">Acumulado maio</div><div class="v">{format_brl(receita['faturamento_mes_2026'])}</div><div class="s">{html.escape(receita['faturamento_mes_label'])}</div></div>
       <div class="metric"><div class="k">Vs 2025</div><div class="v">+{format_percent(receita['faturamento_mes_delta_pct'])}</div><div class="s">{format_brl(receita['faturamento_mes_delta'])}</div></div>
       <div class="metric"><div class="k">Pedidos</div><div class="v">{format_number(receita['pedidos'])}</div><div class="s">Ticket {format_brl(receita['ticket_medio'])}</div></div>
     </div>
@@ -261,7 +261,7 @@ def render_html(dashboard: dict) -> str:
     <div class="card">
       <h3>Parcial 2026 contra maio/2025 fechado</h3>
       <div class="grid grid-3">
-        <div class="metric"><div class="k">Maio/2026 parcial</div><div class="v">{format_brl(receita['faturamento_mes_2026'])}</div><div class="s">até 17/05</div></div>
+        <div class="metric"><div class="k">Maio/2026 parcial</div><div class="v">{format_brl(receita['faturamento_mes_2026'])}</div><div class="s">{html.escape(receita['faturamento_mes_label'])}</div></div>
         <div class="metric"><div class="k">Atingido do mês passado</div><div class="v">{format_percent(receita['faturamento_mes_vs_2025_fechado_pct'])}</div><div class="s">base: maio/2025 fechado</div></div>
         <div class="metric"><div class="k">Distância para empatar</div><div class="v {signed_class(receita['faturamento_mes_vs_2025_fechado_delta'])}">{gap_text(receita['faturamento_mes_vs_2025_fechado_delta'])}</div><div class="s">comparação parcial vs fechado</div></div>
       </div>
@@ -300,9 +300,9 @@ def render_html(dashboard: dict) -> str:
     </table>
     <div class="card">
       <h3>Leitura</h3>
-      <p class="insight">No acumulado até 17/05, maio/2026 está {format_percent(receita['faturamento_mes_delta_pct'])} acima do mesmo período de 2025. Contra maio/2025 fechado, já atingiu {format_percent(receita['faturamento_mes_vs_2025_fechado_pct'])} do mês completo.</p>
+      <p class="insight">No acumulado {html.escape(receita['faturamento_mes_label'])}, maio/2026 está {format_percent(receita['faturamento_mes_delta_pct'])} acima do mesmo período de 2025. Contra maio/2025 fechado, já atingiu {format_percent(receita['faturamento_mes_vs_2025_fechado_pct'])} do mês completo.</p>
     </div>
-    <div class="footer"><span>Recorte: 01/05 a 17/05</span><span>Acumulado diário</span></div>
+    <div class="footer"><span>Recorte: {html.escape(receita['faturamento_mes_label'])}</span><span>Acumulado diário</span></div>
   </section>
 
   <section class="slide">
@@ -310,9 +310,9 @@ def render_html(dashboard: dict) -> str:
     <div class="card">{render_weekly_bars(weekly)}</div>
     <div class="card">
       <h3>Resumo</h3>
-      <p class="insight">As três janelas de maio ficaram acima de 2025: +28,7% na primeira semana, +29,0% na segunda e +18,2% entre 15 e 17/05. A leitura boa: crescimento consistente. A leitura de gestão: precisamos separar o que foi campanha/data sazonal do que vira recorrência.</p>
+      <p class="insight">O comparativo semana a semana mostra onde o crescimento está concentrado e onde houve perda contra 2025. A leitura de gestão: separar o que foi campanha/data sazonal do que vira recorrência.</p>
     </div>
-    <div class="footer"><span>Recorte: 01/05 a 17/05</span><span>Data Pedido</span></div>
+    <div class="footer"><span>Recorte: {html.escape(receita['faturamento_mes_label'])}</span><span>Data Pedido</span></div>
   </section>
 
   <section class="slide">
@@ -333,16 +333,34 @@ def render_html(dashboard: dict) -> str:
 
 
 def write_pdf_with_chromium(html_path: Path, pdf_path: Path) -> None:
-    cmd = [
-        "chromium-browser",
-        "--headless",
-        "--no-sandbox",
-        "--disable-gpu",
-        f"--print-to-pdf={pdf_path}",
-        "--print-to-pdf-no-header",
-        html_path.resolve().as_uri(),
-    ]
-    subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+    try:
+        from playwright.sync_api import sync_playwright
+        with sync_playwright() as playwright:
+            browser = playwright.chromium.launch(headless=True)
+            page = browser.new_page()
+            page.goto(html_path.resolve().as_uri(), wait_until="load")
+            page.pdf(
+                path=str(pdf_path),
+                format="A4",
+                landscape=True,
+                print_background=True,
+                margin={"top": "12mm", "right": "12mm", "bottom": "12mm", "left": "12mm"},
+            )
+            browser.close()
+    except Exception:
+        cmd = [
+            "chromium-browser",
+            "--headless",
+            "--no-sandbox",
+            "--disable-gpu",
+            f"--print-to-pdf={pdf_path}",
+            "--print-to-pdf-no-header",
+            html_path.resolve().as_uri(),
+        ]
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+
+    if not pdf_path.exists() or pdf_path.stat().st_size <= 0:
+        raise RuntimeError("Falha ao gerar PDF do Dashboard V1.")
 
 
 def main() -> int:
