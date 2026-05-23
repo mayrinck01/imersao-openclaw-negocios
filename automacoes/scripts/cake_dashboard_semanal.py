@@ -59,6 +59,22 @@ def format_number(value: float) -> str:
     return f"{value:,.2f}".replace(",", "X").replace(".", ",").replace("X", ".")
 
 
+def format_percent(value: float | None) -> str:
+    if value is None:
+        return "-"
+    return f"{value:.1f}%".replace(".", ",")
+
+
+def delta_percent(current: float, previous: float) -> float | None:
+    if abs(previous) < 0.001:
+        return None
+    return ((current - previous) / previous) * 100
+
+
+def same_period_last_year(start: date, end: date) -> tuple[date, date]:
+    return date(start.year - 1, start.month, start.day), date(end.year - 1, end.month, end.day)
+
+
 def month_keys(start: date, end: date) -> list[str]:
     keys: list[str] = []
     cursor = date(start.year, start.month, 1)
@@ -137,6 +153,70 @@ def summarize_revenue(records: list[dict[str, Any]], start: date, end: date) -> 
         selected.append(row)
         total += value
     return total, selected
+
+
+def row_revenue_value(row: dict[str, Any]) -> float:
+    return parse_brl(row.get("val") or row.get("valor") or row.get("valTota") or row.get("A4"))
+
+
+def row_date_value(row: dict[str, Any]) -> date | None:
+    return parse_pt_date(row.get("dataped") or row.get("dt") or row.get("data") or row.get("A0"))
+
+
+def revenue_by_day(records: list[dict[str, Any]], start: date, end: date) -> dict[date, float]:
+    totals: defaultdict[date, float] = defaultdict(float)
+    for row in records:
+        row_date = row_date_value(row)
+        if in_period(row_date, start, end):
+            totals[row_date] += row_revenue_value(row)
+    return dict(totals)
+
+
+def weekly_ranges_since_month_start(end: date) -> list[tuple[date, date]]:
+    ranges: list[tuple[date, date]] = []
+    cursor = date(end.year, end.month, 1)
+    while cursor <= end:
+        chunk_end = min(cursor + timedelta(days=6), end)
+        ranges.append((cursor, chunk_end))
+        cursor = chunk_end + timedelta(days=1)
+    return ranges
+
+
+def build_daily_comparison(records_2026: list[dict[str, Any]], records_2025: list[dict[str, Any]], start: date, end: date) -> list[dict[str, Any]]:
+    prior_start, prior_end = same_period_last_year(start, end)
+    totals_2026 = revenue_by_day(records_2026, start, end)
+    totals_2025 = revenue_by_day(records_2025, prior_start, prior_end)
+    rows: list[dict[str, Any]] = []
+    for current_day in daterange(start, end):
+        prior_day = date(current_day.year - 1, current_day.month, current_day.day)
+        current = totals_2026.get(current_day, 0.0)
+        previous = totals_2025.get(prior_day, 0.0)
+        rows.append({
+            "dia_2026": current_day,
+            "dia_2025": prior_day,
+            "valor_2026": current,
+            "valor_2025": previous,
+            "delta": current - previous,
+            "delta_pct": delta_percent(current, previous),
+        })
+    return rows
+
+
+def build_weekly_comparison(records_2026: list[dict[str, Any]], records_2025: list[dict[str, Any]], end: date) -> list[dict[str, Any]]:
+    rows: list[dict[str, Any]] = []
+    for start_2026, end_2026 in weekly_ranges_since_month_start(end):
+        start_2025, end_2025 = same_period_last_year(start_2026, end_2026)
+        total_2026, _ = summarize_revenue(records_2026, start_2026, end_2026)
+        total_2025, _ = summarize_revenue(records_2025, start_2025, end_2025)
+        rows.append({
+            "periodo_2026": f"{start_2026.strftime('%d/%m')} a {end_2026.strftime('%d/%m')}",
+            "periodo_2025": f"{start_2025.strftime('%d/%m')} a {end_2025.strftime('%d/%m')}",
+            "valor_2026": total_2026,
+            "valor_2025": total_2025,
+            "delta": total_2026 - total_2025,
+            "delta_pct": delta_percent(total_2026, total_2025),
+        })
+    return rows
 
 
 def summarize_sales(records: list[dict[str, Any]], start: date, end: date) -> dict[str, Any]:
@@ -224,6 +304,8 @@ def build_dashboard(
     root = Path(mogo_root)
     faturamento_records, missing_faturamento = load_monthly_records(root, "Faturamento Detalhado", week_start, week_end)
     vendas_records, missing_vendas = load_monthly_records(root, "Vendas Analitico", week_start, week_end)
+    prior_week_start, prior_week_end = same_period_last_year(week_start, week_end)
+    vendas_prior_records, missing_vendas_prior = load_monthly_records(root, "Vendas Analitico", prior_week_start, prior_week_end)
     lancamentos_records, missing_lancamentos = load_monthly_records(root, "Lancamentos Pedidos", week_start, week_end)
     clientes_records, missing_clientes = load_monthly_records(root, "Analise Cadastro Clientes", week_start, week_end)
 
@@ -252,6 +334,9 @@ def build_dashboard(
     hide_unvalidated_sales_breakdowns = validated_revenue is not None and not vendas_records
     sales_source = vendas_records or ([] if hide_unvalidated_sales_breakdowns else lancamentos_records)
     sales = summarize_sales(sales_source, week_start, week_end)
+    if revenue_total:
+        for product in sales["products"]:
+            product["share_revenue"] = (product["valor"] / revenue_total) * 100
     if not vendas_records and lancamentos_records:
         if hide_unvalidated_sales_breakdowns:
             observations.append(
@@ -261,6 +346,17 @@ def build_dashboard(
             observations.append("Vendas Analitico ausente; usando Lancamentos Pedidos para pedidos/produtos.")
 
     channels = [] if hide_unvalidated_sales_breakdowns else summarize_channels(revenue_source or sales_source, week_start, week_end)
+    daily_comparison = build_daily_comparison(vendas_records, vendas_prior_records, week_start, week_end) if vendas_records and vendas_prior_records else []
+    weekly_comparison = build_weekly_comparison(vendas_records, vendas_prior_records, week_end) if vendas_records and vendas_prior_records else []
+    month_start = date(week_end.year, week_end.month, 1)
+    month_start_prior = date(week_end.year - 1, week_end.month, 1)
+    week_end_prior = date(week_end.year - 1, week_end.month, week_end.day)
+    mtd_2026, _ = summarize_revenue(vendas_records, month_start, week_end) if vendas_records else (0.0, [])
+    mtd_2025, _ = summarize_revenue(vendas_prior_records, month_start_prior, week_end_prior) if vendas_prior_records else (0.0, [])
+    if not vendas_records:
+        observations.append("Comparativos 2026 vs 2025 por dia/semana aguardam Vendas Analitico local de 2026 para evitar base errada.")
+    elif not vendas_prior_records:
+        observations.append("Comparativos 2026 vs 2025 por dia/semana aguardam Vendas Analitico local de 2025.")
     clients = summarize_clients(clientes_records, week_start, week_end)
 
     pedidos = len(sales["orders"])
@@ -277,12 +373,19 @@ def build_dashboard(
     missing_sources = missing_clientes
     if not lancamentos_records:
         missing_sources += missing_faturamento + missing_vendas + missing_lancamentos
+    missing_sources += missing_vendas_prior
     return {
         "periodo": f"{week_start.strftime('%d/%m/%Y')} a {week_end.strftime('%d/%m/%Y')}",
         "week_start": week_start,
         "week_end": week_end,
         "receita": {
             "faturamento_semana": revenue_total,
+            "faturamento_mes_2026": mtd_2026,
+            "faturamento_mes_2025": mtd_2025,
+            "faturamento_mes_delta": mtd_2026 - mtd_2025,
+            "faturamento_mes_delta_pct": delta_percent(mtd_2026, mtd_2025),
+            "faturamento_mes_label": f"01/{week_end.strftime('%m/%Y')} a {week_end.strftime('%d/%m/%Y')}",
+            "faturamento_mes_label_2025": f"01/{week_end.strftime('%m')}/{week_end.year - 1} a {week_end.strftime('%d/%m')}/{week_end.year - 1}",
             "pedidos": pedidos,
             "ticket_medio": ticket_medio,
             "faturamento_periodo_validado": validated_period_total,
@@ -290,6 +393,8 @@ def build_dashboard(
         },
         "canais": channels[:8],
         "produtos": sales["products"],
+        "comparativo_dia_a_dia": daily_comparison,
+        "comparativo_semana_a_semana": weekly_comparison,
         "clientes": clients,
         "operacao": operations,
         "fontes_ausentes": missing_sources,
@@ -307,6 +412,15 @@ def render_markdown(dashboard: dict[str, Any]) -> str:
         "## Placar da semana",
         "",
         f"- Faturamento da semana: {format_brl(receita['faturamento_semana'])}",
+        (
+            f"- Faturamento acumulado do mes ({receita['faturamento_mes_label']}): "
+            f"{format_brl(receita['faturamento_mes_2026'])}"
+        ) if receita.get("faturamento_mes_2026") else "- Faturamento acumulado do mes: aguardando Vendas Analitico local",
+        (
+            f"- Acumulado vs 2025 ({receita['faturamento_mes_label_2025']}): "
+            f"{format_brl(receita['faturamento_mes_2025'])} | "
+            f"delta {format_brl(receita['faturamento_mes_delta'])} ({format_percent(receita['faturamento_mes_delta_pct'])})"
+        ) if receita.get("faturamento_mes_2025") else "- Acumulado vs 2025: aguardando Vendas Analitico local",
         f"- Pedidos identificados: {format_number(receita['pedidos'])}" if receita["pedidos"] else "- Pedidos identificados: aguardando Vendas Analitico local",
         f"- Ticket medio: {format_brl(receita['ticket_medio'])}" if receita["pedidos"] else "- Ticket medio: aguardando Vendas Analitico local",
         "",
@@ -323,11 +437,46 @@ def render_markdown(dashboard: dict[str, Any]) -> str:
     else:
         lines.append("- Sem dados de canal para a semana.")
 
+    lines.extend(["", "## Comparativo dia a dia — 2026 vs 2025", ""])
+    if dashboard["comparativo_dia_a_dia"]:
+        lines.extend([
+            "| Dia 2026 | Dia 2025 | 2026 | 2025 | Delta | Delta % |",
+            "|---|---:|---:|---:|---:|---:|",
+        ])
+        for row in dashboard["comparativo_dia_a_dia"]:
+            lines.append(
+                f"| {row['dia_2026'].strftime('%d/%m/%Y')} | {row['dia_2025'].strftime('%d/%m/%Y')} | "
+                f"{format_brl(row['valor_2026'])} | {format_brl(row['valor_2025'])} | "
+                f"{format_brl(row['delta'])} | {format_percent(row['delta_pct'])} |"
+            )
+    else:
+        lines.append("- Aguardando Vendas Analitico local reconciliado de 2026 e 2025.")
+
+    lines.extend(["", "## Comparativo semana a semana no mes — 2026 vs 2025", ""])
+    if dashboard["comparativo_semana_a_semana"]:
+        lines.extend([
+            "| Periodo 2026 | Periodo 2025 | 2026 | 2025 | Delta | Delta % |",
+            "|---|---:|---:|---:|---:|---:|",
+        ])
+        for row in dashboard["comparativo_semana_a_semana"]:
+            lines.append(
+                f"| {row['periodo_2026']} | {row['periodo_2025']} | "
+                f"{format_brl(row['valor_2026'])} | {format_brl(row['valor_2025'])} | "
+                f"{format_brl(row['delta'])} | {format_percent(row['delta_pct'])} |"
+            )
+    else:
+        lines.append("- Aguardando Vendas Analitico local reconciliado de 2026 e 2025.")
+
     lines.extend(["", "## Produtos", ""])
     if dashboard["produtos"]:
-        for product in dashboard["produtos"][:5]:
+        lines.extend([
+            "| # | Produto | Qtde | Faturamento | % do faturamento da semana |",
+            "|---:|---|---:|---:|---:|",
+        ])
+        for index, product in enumerate(dashboard["produtos"][:10], 1):
             lines.append(
-                f"- {product['produto']}: {format_number(product['quantidade'])} un. | {format_brl(product['valor'])}"
+                f"| {index} | {product['produto']} | {format_number(product['quantidade'])} | "
+                f"{format_brl(product['valor'])} | {format_percent(product.get('share_revenue'))} |"
             )
     else:
         lines.append("- Sem dados de produto para a semana.")

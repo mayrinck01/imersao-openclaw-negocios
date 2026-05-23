@@ -37,10 +37,18 @@ class CakeDashboardSemanalTests(unittest.TestCase):
             })
             write_json(root / "Vendas Analitico" / "05-2026.json", {
                 "registros": [
+                    {"dataped": "01/05/2026", "NumeroPedido": "000", "Produto": "Bolo", "Qtde": "1,00", "valTota": "50,00", "OrigemPedido": "Loja"},
                     {"dataped": "12/05/2026", "NumeroPedido": "001", "Produto": "Bolo", "Qtde": "2,00", "valTota": "100,00", "OrigemPedido": "Loja"},
                     {"dataped": "13/05/2026", "NumeroPedido": "002", "Produto": "Brigadeiro", "Qtde": "10,00", "valTota": "250,00", "OrigemPedido": "Delivery"},
                     {"dataped": "13/05/2026", "NumeroPedido": "002", "Produto": "Taxa de entrega", "Qtde": "1,00", "valTota": "15,00", "OrigemPedido": "Delivery"},
                     {"dataped": "20/05/2026", "NumeroPedido": "003", "Produto": "Fora", "Qtde": "1,00", "valTota": "999,00", "OrigemPedido": "Fora"},
+                ]
+            })
+            write_json(root / "Vendas Analitico" / "05-2025.json", {
+                "registros": [
+                    {"dataped": "01/05/2025", "NumeroPedido": "900", "Produto": "Bolo", "Qtde": "1,00", "valTota": "40,00", "OrigemPedido": "Loja"},
+                    {"dataped": "12/05/2025", "NumeroPedido": "901", "Produto": "Bolo", "Qtde": "1,00", "valTota": "80,00", "OrigemPedido": "Loja"},
+                    {"dataped": "13/05/2025", "NumeroPedido": "902", "Produto": "Brigadeiro", "Qtde": "5,00", "valTota": "120,00", "OrigemPedido": "Delivery"},
                 ]
             })
             write_json(root / "Analise Cadastro Clientes" / "05-2026.json", {
@@ -54,12 +62,18 @@ class CakeDashboardSemanalTests(unittest.TestCase):
 
             self.assertEqual(dashboard["periodo"], "11/05/2026 a 17/05/2026")
             self.assertEqual(dashboard["receita"]["faturamento_semana"], 365.0)
+            self.assertEqual(dashboard["receita"]["faturamento_mes_2026"], 415.0)
+            self.assertEqual(dashboard["receita"]["faturamento_mes_2025"], 240.0)
+            self.assertEqual(dashboard["comparativo_dia_a_dia"][1]["valor_2026"], 100.0)
+            self.assertEqual(dashboard["comparativo_dia_a_dia"][1]["valor_2025"], 80.0)
+            self.assertEqual(dashboard["comparativo_semana_a_semana"][1]["valor_2026"], 365.0)
             self.assertEqual(dashboard["receita"]["pedidos"], 2)
             self.assertEqual(dashboard["receita"]["ticket_medio"], 182.5)
             self.assertEqual(dashboard["canais"][0]["nome"], "Delivery")
             self.assertEqual(dashboard["canais"][0]["valor"], 265.0)
             self.assertEqual(dashboard["produtos"][0]["produto"], "Brigadeiro")
             self.assertEqual(dashboard["produtos"][0]["quantidade"], 10.0)
+            self.assertAlmostEqual(dashboard["produtos"][0]["share_revenue"], 68.49, places=2)
             self.assertEqual(dashboard["clientes"]["novos"], 1)
             self.assertIn("Vendas Analitico", " ".join(dashboard["observacoes"]))
 
