@@ -75,6 +75,12 @@ def same_period_last_year(start: date, end: date) -> tuple[date, date]:
     return date(start.year - 1, start.month, start.day), date(end.year - 1, end.month, end.day)
 
 
+def month_end(day: date) -> date:
+    if day.month == 12:
+        return date(day.year, 12, 31)
+    return date(day.year, day.month + 1, 1) - timedelta(days=1)
+
+
 def month_keys(start: date, end: date) -> list[str]:
     keys: list[str] = []
     cursor = date(start.year, start.month, 1)
@@ -353,6 +359,7 @@ def build_dashboard(
     week_end_prior = date(week_end.year - 1, week_end.month, week_end.day)
     mtd_2026, _ = summarize_revenue(vendas_records, month_start, week_end) if vendas_records else (0.0, [])
     mtd_2025, _ = summarize_revenue(vendas_prior_records, month_start_prior, week_end_prior) if vendas_prior_records else (0.0, [])
+    month_2025_closed, _ = summarize_revenue(vendas_prior_records, month_start_prior, month_end(month_start_prior)) if vendas_prior_records else (0.0, [])
     if not vendas_records:
         observations.append("Comparativos 2026 vs 2025 por dia/semana aguardam Vendas Analitico local de 2026 para evitar base errada.")
     elif not vendas_prior_records:
@@ -382,10 +389,12 @@ def build_dashboard(
             "faturamento_semana": revenue_total,
             "faturamento_mes_2026": mtd_2026,
             "faturamento_mes_2025": mtd_2025,
+            "faturamento_mes_2025_fechado": month_2025_closed,
             "faturamento_mes_delta": mtd_2026 - mtd_2025,
             "faturamento_mes_delta_pct": delta_percent(mtd_2026, mtd_2025),
             "faturamento_mes_label": f"01/{week_end.strftime('%m/%Y')} a {week_end.strftime('%d/%m/%Y')}",
             "faturamento_mes_label_2025": f"01/{week_end.strftime('%m')}/{week_end.year - 1} a {week_end.strftime('%d/%m')}/{week_end.year - 1}",
+            "faturamento_mes_2025_fechado_label": f"01/{week_end.strftime('%m')}/{week_end.year - 1} a {month_end(month_start_prior).strftime('%d/%m/%Y')}",
             "pedidos": pedidos,
             "ticket_medio": ticket_medio,
             "faturamento_periodo_validado": validated_period_total,
@@ -421,6 +430,10 @@ def render_markdown(dashboard: dict[str, Any]) -> str:
             f"{format_brl(receita['faturamento_mes_2025'])} | "
             f"delta {format_brl(receita['faturamento_mes_delta'])} ({format_percent(receita['faturamento_mes_delta_pct'])})"
         ) if receita.get("faturamento_mes_2025") else "- Acumulado vs 2025: aguardando Vendas Analitico local",
+        (
+            f"- Maio/2025 fechado ({receita['faturamento_mes_2025_fechado_label']}): "
+            f"{format_brl(receita['faturamento_mes_2025_fechado'])}"
+        ) if receita.get("faturamento_mes_2025_fechado") else "- Maio/2025 fechado: aguardando Vendas Analitico local",
         f"- Pedidos identificados: {format_number(receita['pedidos'])}" if receita["pedidos"] else "- Pedidos identificados: aguardando Vendas Analitico local",
         f"- Ticket medio: {format_brl(receita['ticket_medio'])}" if receita["pedidos"] else "- Ticket medio: aguardando Vendas Analitico local",
         "",

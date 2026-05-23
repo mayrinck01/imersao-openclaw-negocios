@@ -222,10 +222,11 @@ def render_html(dashboard: dict) -> str:
 
   <section class="slide">
     <h2>Placar executivo</h2>
-    <div class="grid grid-3">
+    <div class="grid grid-4">
       <div class="card metric"><div class="k">Acumulado 2026</div><div class="v">{format_brl(receita['faturamento_mes_2026'])}</div><div class="s">{html.escape(receita['faturamento_mes_label'])}</div></div>
       <div class="card metric"><div class="k">Acumulado 2025</div><div class="v">{format_brl(receita['faturamento_mes_2025'])}</div><div class="s">{html.escape(receita['faturamento_mes_label_2025'])}</div></div>
       <div class="card metric"><div class="k">Ganho absoluto</div><div class="v positive">{format_brl(receita['faturamento_mes_delta'])}</div><div class="s">crescimento de {format_percent(receita['faturamento_mes_delta_pct'])}</div></div>
+      <div class="card metric"><div class="k">Maio/2025 fechado</div><div class="v">{format_brl(receita['faturamento_mes_2025_fechado'])}</div><div class="s">{html.escape(receita['faturamento_mes_2025_fechado_label'])}</div></div>
     </div>
     <div class="grid grid-2">
       <div class="card">
@@ -234,7 +235,7 @@ def render_html(dashboard: dict) -> str:
       </div>
       <div class="card">
         <h3>Leitura para sócios</h3>
-        <p class="insight">O mês está {format_percent(receita['faturamento_mes_delta_pct'])} acima de 2025 no mesmo recorte. O pico veio principalmente entre 08 e 16/05, com destaque para iFood, Neemo e loja física. A queda do domingo 17/05 contra 2025 precisa ser lida com calendário e comportamento pós-Dia das Mães, não isoladamente.</p>
+        <p class="insight">O mês está {format_percent(receita['faturamento_mes_delta_pct'])} acima de 2025 no mesmo recorte. Maio/2025 fechado foi {format_brl(receita['faturamento_mes_2025_fechado'])}; 2026 ainda está parcial até 17/05. O pico veio principalmente entre 08 e 16/05, com destaque para iFood, Neemo e loja física.</p>
       </div>
     </div>
     <div class="footer"><span>Dashboard V1</span><span>Semana {html.escape(dashboard['periodo'])}</span></div>
