@@ -1,0 +1,415 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <title>Dashboard V1 Cake & Co - Socios</title>
+  <style>
+    @page { size: A4 landscape; margin: 12mm; }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: #f4f2ed;
+      color: #172033;
+      font-family: Aptos, "Segoe UI", Arial, sans-serif;
+      font-size: 13px;
+      line-height: 1.35;
+    }
+    .deck { width: 100%; }
+    .slide {
+      min-height: 186mm;
+      page-break-after: always;
+      background: #fffdf9;
+      border: 1px solid #ded8cc;
+      padding: 26px 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+    .slide:last-child { page-break-after: auto; }
+    .hero {
+      background: #172033;
+      color: white;
+      justify-content: space-between;
+      border: none;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero:after {
+      content: "";
+      position: absolute;
+      inset: auto -70px -120px auto;
+      width: 330px;
+      height: 330px;
+      border: 32px solid rgba(185,133,47,.45);
+      border-radius: 50%;
+    }
+    .eyebrow { color: #d8b66c; text-transform: uppercase; letter-spacing: .08em; font-weight: 800; font-size: 12px; }
+    h1 { font-family: Georgia, serif; font-size: 48px; line-height: 1; max-width: 760px; margin: 38px 0 16px; font-weight: 500; }
+    h2 { font-family: Georgia, serif; font-size: 30px; line-height: 1.05; margin: 0; font-weight: 500; }
+    h3 { margin: 0 0 8px; font-size: 15px; }
+    .lead { max-width: 760px; font-size: 18px; color: rgba(255,255,255,.82); }
+    .meta { color: #6f7480; font-size: 12px; }
+    .hero .meta { color: rgba(255,255,255,.68); }
+    .grid { display: grid; gap: 14px; }
+    .grid-4 { grid-template-columns: repeat(4, 1fr); }
+    .grid-3 { grid-template-columns: repeat(3, 1fr); }
+    .grid-2 { grid-template-columns: 1fr 1fr; }
+    .card { background: #faf7f1; border: 1px solid #e1d8c9; padding: 16px; border-radius: 7px; }
+    .metric .k { color: #6f7480; font-weight: 700; font-size: 11px; text-transform: uppercase; letter-spacing: .04em; }
+    .metric .v { font-size: 27px; font-weight: 850; margin-top: 7px; }
+    .metric .s { color: #6f7480; margin-top: 5px; }
+    .positive { color: #23745d; }
+    .negative { color: #b34232; }
+    table { width: 100%; border-collapse: collapse; font-size: 12px; }
+    th { text-align: left; background: #172033; color: white; padding: 8px; font-size: 11px; }
+    td { border-bottom: 1px solid #e5ded3; padding: 7px 8px; vertical-align: middle; }
+    .num { text-align: right; white-space: nowrap; }
+    .muted { color: #6f7480; }
+    .rank { width: 32px; font-weight: 800; color: #a3742d; }
+    .track { height: 9px; background: #e9e2d7; border-radius: 999px; overflow: hidden; }
+    .track i { display: block; height: 100%; background: #315b96; border-radius: inherit; }
+    .muted-bar .track i { background: #a9b2bf; }
+    .mini-bar { width: 120px; height: 8px; display: inline-block; margin-right: 8px; background: #e9e2d7; border-radius: 999px; overflow: hidden; }
+    .mini-bar i { display: block; height: 100%; background: #b9852f; border-radius: inherit; }
+    .tiny { color: #6f7480; font-size: 11px; }
+    .week-row { display: grid; grid-template-columns: 120px 1fr 110px; gap: 14px; align-items: center; padding: 12px 0; border-bottom: 1px solid #e5ded3; }
+    .week-row span { color: #6f7480; display: block; font-size: 11px; }
+    .bar-line { display: grid; grid-template-columns: 40px 1fr 105px; gap: 8px; align-items: center; margin: 5px 0; }
+    .bar-line b { text-align: right; font-size: 12px; }
+    .label { font-weight: 800; color: #172033 !important; }
+    .delta { text-align: right; font-weight: 850; }
+    .delta span { font-size: 12px; }
+    .channel-row { display: grid; grid-template-columns: 105px 1fr 105px; gap: 10px; align-items: center; padding: 8px 0; }
+    .channel-row b { text-align: right; }
+    .insight { font-size: 18px; line-height: 1.25; }
+    .footer { margin-top: auto; color: #8a8074; font-size: 11px; display: flex; justify-content: space-between; }
+  </style>
+</head>
+<body>
+<main class="deck">
+  <section class="slide hero">
+    <div>
+      <div class="eyebrow">Cake & Co - Dashboard V1</div>
+      <h1>Maio cresce forte, mas a leitura precisa separar efeito Dia das Mães de tração recorrente.</h1>
+      <p class="lead">Semana de 11/05/2026 a 17/05/2026, usando Mogo Vendas Analítico com data Pedido como fonte canônica.</p>
+    </div>
+    <div class="grid grid-4">
+      <div class="metric"><div class="k">Semana</div><div class="v">R$ 139.322,18</div><div class="s">11 a 17/05/2026</div></div>
+      <div class="metric"><div class="k">Acumulado maio</div><div class="v">R$ 457.614,42</div><div class="s">01 a 17/05/2026</div></div>
+      <div class="metric"><div class="k">Vs 2025</div><div class="v">+27,1%</div><div class="s">R$ 97.526,24</div></div>
+      <div class="metric"><div class="k">Pedidos</div><div class="v">1.478</div><div class="s">Ticket R$ 94,26</div></div>
+    </div>
+    <div class="footer"><span>Fonte: Mogo Vendas Analítico - Data Pedido</span><span>Gerado por BigDog</span></div>
+  </section>
+
+  <section class="slide">
+    <h2>Placar executivo</h2>
+    <div class="grid grid-3">
+      <div class="card metric"><div class="k">Acumulado 2026</div><div class="v">R$ 457.614,42</div><div class="s">01/05/2026 a 17/05/2026</div></div>
+      <div class="card metric"><div class="k">Acumulado 2025</div><div class="v">R$ 360.088,18</div><div class="s">01/05/2025 a 17/05/2025</div></div>
+      <div class="card metric"><div class="k">Ganho absoluto</div><div class="v positive">R$ 97.526,24</div><div class="s">crescimento de 27,1%</div></div>
+    </div>
+    <div class="grid grid-2">
+      <div class="card">
+        <h3>Canais operacionais da semana</h3>
+        
+        <div class="channel-row">
+          <span>iFood</span>
+          <div class="track"><i style="width:100.0%"></i></div>
+          <b>R$ 57.961,33</b>
+        </div>
+        
+
+        <div class="channel-row">
+          <span>neemo</span>
+          <div class="track"><i style="width:45.8%"></i></div>
+          <b>R$ 26.570,80</b>
+        </div>
+        
+
+        <div class="channel-row">
+          <span>balcão</span>
+          <div class="track"><i style="width:26.7%"></i></div>
+          <b>R$ 15.476,55</b>
+        </div>
+        
+
+        <div class="channel-row">
+          <span>WhatsApp</span>
+          <div class="track"><i style="width:23.7%"></i></div>
+          <b>R$ 13.716,40</b>
+        </div>
+        
+
+        <div class="channel-row">
+          <span>Telefone</span>
+          <div class="track"><i style="width:9.2%"></i></div>
+          <b>R$ 5.330,00</b>
+        </div>
+        
+      </div>
+      <div class="card">
+        <h3>Leitura para sócios</h3>
+        <p class="insight">O mês está 27,1% acima de 2025 no mesmo recorte. O pico veio principalmente entre 08 e 16/05, com destaque para iFood, Neemo e loja física. A queda do domingo 17/05 contra 2025 precisa ser lida com calendário e comportamento pós-Dia das Mães, não isoladamente.</p>
+      </div>
+    </div>
+    <div class="footer"><span>Dashboard V1</span><span>Semana 11/05/2026 a 17/05/2026</span></div>
+  </section>
+
+  <section class="slide">
+    <h2>Comparação dia a dia: 2026 vs 2025</h2>
+    <table>
+      <thead><tr><th>Dia</th><th class="num">2026</th><th class="num">2025</th><th class="num">Delta</th><th class="num">Delta %</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>11/05</td>
+          <td class="num">R$ 11.905,27</td>
+          <td class="num muted">R$ 17.177,96</td>
+          <td class="num negative">R$ -5.272,69</td>
+          <td class="num negative">-30,7%</td>
+        </tr>
+        
+
+        <tr>
+          <td>12/05</td>
+          <td class="num">R$ 15.618,55</td>
+          <td class="num muted">R$ 12.794,31</td>
+          <td class="num positive">R$ 2.824,24</td>
+          <td class="num positive">22,1%</td>
+        </tr>
+        
+
+        <tr>
+          <td>13/05</td>
+          <td class="num">R$ 18.677,81</td>
+          <td class="num muted">R$ 11.683,69</td>
+          <td class="num positive">R$ 6.994,12</td>
+          <td class="num positive">59,9%</td>
+        </tr>
+        
+
+        <tr>
+          <td>14/05</td>
+          <td class="num">R$ 21.838,68</td>
+          <td class="num muted">R$ 16.781,83</td>
+          <td class="num positive">R$ 5.056,85</td>
+          <td class="num positive">30,1%</td>
+        </tr>
+        
+
+        <tr>
+          <td>15/05</td>
+          <td class="num">R$ 26.347,76</td>
+          <td class="num muted">R$ 19.990,11</td>
+          <td class="num positive">R$ 6.357,65</td>
+          <td class="num positive">31,8%</td>
+        </tr>
+        
+
+        <tr>
+          <td>16/05</td>
+          <td class="num">R$ 33.580,05</td>
+          <td class="num muted">R$ 20.100,01</td>
+          <td class="num positive">R$ 13.480,04</td>
+          <td class="num positive">67,1%</td>
+        </tr>
+        
+
+        <tr>
+          <td>17/05</td>
+          <td class="num">R$ 11.354,06</td>
+          <td class="num muted">R$ 20.213,56</td>
+          <td class="num negative">R$ -8.859,50</td>
+          <td class="num negative">-43,8%</td>
+        </tr>
+        </tbody>
+    </table>
+    <div class="grid grid-2">
+      <div class="card"><h3>Melhor delta diário</h3><div class="metric"><div class="v positive">R$ 13.480,04</div><div class="s">16/05/2026</div></div></div>
+      <div class="card"><h3>Ponto de atenção</h3><div class="metric"><div class="v negative">R$ -8.859,50</div><div class="s">17/05/2026</div></div></div>
+    </div>
+    <div class="footer"><span>Comparativo por mesma data calendário</span><span>Valores brutos Mogo</span></div>
+  </section>
+
+  <section class="slide">
+    <h2>Semana a semana desde o início do mês</h2>
+    <div class="card">
+            <div class="week-row">
+              <div>
+                <strong>01/05 a 07/05</strong>
+                <span>vs 01/05 a 07/05</span>
+              </div>
+              <div class="bars">
+                <div class="bar-line"><span class="label">2026</span><div class="track"><i style="width:79.5%"></i></div><b>R$ 171.095,57</b></div>
+                <div class="bar-line muted-bar"><span class="label">2025</span><div class="track"><i style="width:61.8%"></i></div><b>R$ 132.925,85</b></div>
+              </div>
+              <div class="delta positive">R$ 38.169,72<br><span>28,7%</span></div>
+            </div>
+            
+
+            <div class="week-row">
+              <div>
+                <strong>08/05 a 14/05</strong>
+                <span>vs 08/05 a 14/05</span>
+              </div>
+              <div class="bars">
+                <div class="bar-line"><span class="label">2026</span><div class="track"><i style="width:100.0%"></i></div><b>R$ 215.236,98</b></div>
+                <div class="bar-line muted-bar"><span class="label">2025</span><div class="track"><i style="width:77.5%"></i></div><b>R$ 166.858,65</b></div>
+              </div>
+              <div class="delta positive">R$ 48.378,33<br><span>29,0%</span></div>
+            </div>
+            
+
+            <div class="week-row">
+              <div>
+                <strong>15/05 a 17/05</strong>
+                <span>vs 15/05 a 17/05</span>
+              </div>
+              <div class="bars">
+                <div class="bar-line"><span class="label">2026</span><div class="track"><i style="width:33.1%"></i></div><b>R$ 71.281,87</b></div>
+                <div class="bar-line muted-bar"><span class="label">2025</span><div class="track"><i style="width:28.0%"></i></div><b>R$ 60.303,68</b></div>
+              </div>
+              <div class="delta positive">R$ 10.978,19<br><span>18,2%</span></div>
+            </div>
+            </div>
+    <div class="card">
+      <h3>Resumo</h3>
+      <p class="insight">As três janelas de maio ficaram acima de 2025: +28,7% na primeira semana, +29,0% na segunda e +18,2% entre 15 e 17/05. A leitura boa: crescimento consistente. A leitura de gestão: precisamos separar o que foi campanha/data sazonal do que vira recorrência.</p>
+    </div>
+    <div class="footer"><span>Recorte: 01/05 a 17/05</span><span>Data Pedido</span></div>
+  </section>
+
+  <section class="slide">
+    <h2>Top 10 produtos por faturamento</h2>
+    <table>
+      <thead><tr><th>#</th><th>Produto</th><th class="num">Qtde</th><th class="num">Faturamento</th><th>Participação</th></tr></thead>
+      <tbody>
+            <tr>
+              <td class="rank">1</td>
+              <td>MORANGO - DELICIOSA NAKED F25</td>
+              <td class="num">39</td>
+              <td class="num">R$ 12.878,00</td>
+              <td>
+                <div class="mini-bar"><i style="width:100.0%"></i></div>
+                <span class="tiny">9,2%</span>
+              </td>
+            </tr>
+            
+
+            <tr>
+              <td class="rank">2</td>
+              <td>MORANGO - DELICIOSA NAKED F20</td>
+              <td class="num">44</td>
+              <td class="num">R$ 10.512,00</td>
+              <td>
+                <div class="mini-bar"><i style="width:81.6%"></i></div>
+                <span class="tiny">7,5%</span>
+              </td>
+            </tr>
+            
+
+            <tr>
+              <td class="rank">3</td>
+              <td>MORANGO - FT DELICIOSA</td>
+              <td class="num">230</td>
+              <td class="num">R$ 8.465,00</td>
+              <td>
+                <div class="mini-bar"><i style="width:65.7%"></i></div>
+                <span class="tiny">6,1%</span>
+              </td>
+            </tr>
+            
+
+            <tr>
+              <td class="rank">4</td>
+              <td>TENTACAO F25</td>
+              <td class="num">16</td>
+              <td class="num">R$ 3.802,75</td>
+              <td>
+                <div class="mini-bar"><i style="width:29.5%"></i></div>
+                <span class="tiny">2,7%</span>
+              </td>
+            </tr>
+            
+
+            <tr>
+              <td class="rank">5</td>
+              <td>FT SWEET DARK</td>
+              <td class="num">111</td>
+              <td class="num">R$ 3.762,50</td>
+              <td>
+                <div class="mini-bar"><i style="width:29.2%"></i></div>
+                <span class="tiny">2,7%</span>
+              </td>
+            </tr>
+            
+
+            <tr>
+              <td class="rank">6</td>
+              <td>FANTASIA F25</td>
+              <td class="num">13</td>
+              <td class="num">R$ 3.004,10</td>
+              <td>
+                <div class="mini-bar"><i style="width:23.3%"></i></div>
+                <span class="tiny">2,2%</span>
+              </td>
+            </tr>
+            
+
+            <tr>
+              <td class="rank">7</td>
+              <td>CHOCOBERRIES F25</td>
+              <td class="num">8</td>
+              <td class="num">R$ 2.531,10</td>
+              <td>
+                <div class="mini-bar"><i style="width:19.7%"></i></div>
+                <span class="tiny">1,8%</span>
+              </td>
+            </tr>
+            
+
+            <tr>
+              <td class="rank">8</td>
+              <td>ALEMA F22</td>
+              <td class="num">11</td>
+              <td class="num">R$ 2.506,50</td>
+              <td>
+                <div class="mini-bar"><i style="width:19.5%"></i></div>
+                <span class="tiny">1,8%</span>
+              </td>
+            </tr>
+            
+
+            <tr>
+              <td class="rank">9</td>
+              <td>FT TENTACAO</td>
+              <td class="num">76</td>
+              <td class="num">R$ 2.384,60</td>
+              <td>
+                <div class="mini-bar"><i style="width:18.5%"></i></div>
+                <span class="tiny">1,7%</span>
+              </td>
+            </tr>
+            
+
+            <tr>
+              <td class="rank">10</td>
+              <td>MORANGO - DELICIOSA NAKED F13</td>
+              <td class="num">19</td>
+              <td class="num">R$ 2.375,00</td>
+              <td>
+                <div class="mini-bar"><i style="width:18.4%"></i></div>
+                <span class="tiny">1,7%</span>
+              </td>
+            </tr>
+            </tbody>
+    </table>
+    <div class="card">
+      <h3>Produto líder</h3>
+      <p class="insight">MORANGO - DELICIOSA NAKED F25 puxou R$ 12.878,00, equivalente a 9,2% do faturamento da semana. A linha Morango/Deliciosa aparece como motor forte do período.</p>
+    </div>
+    <div class="footer"><span>Taxa de entrega excluída do ranking de produtos</span><span>Faturamento bruto total preservado</span></div>
+  </section>
+</main>
+</body>
+</html>
