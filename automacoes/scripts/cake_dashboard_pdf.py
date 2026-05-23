@@ -55,6 +55,23 @@ def render_daily_rows(rows: list[dict]) -> str:
     )
 
 
+def render_month_daily_rows(rows: list[dict]) -> str:
+    return "\n".join(
+        f"""
+        <tr>
+          <td>{row['dia_2026'].strftime('%d/%m')}</td>
+          <td class="num">{format_brl(row['valor_2026'])}</td>
+          <td class="num muted">{format_brl(row['valor_2025'])}</td>
+          <td class="num">{format_brl(row['acumulado_2026'])}</td>
+          <td class="num muted">{format_brl(row['acumulado_2025'])}</td>
+          <td class="num {signed_class(row['delta_acumulado'])}">{format_brl(row['delta_acumulado'])}</td>
+          <td class="num {signed_class(row['delta_acumulado'])}">{format_percent(row['delta_acumulado_pct'])}</td>
+        </tr>
+        """
+        for row in rows
+    )
+
+
 def render_weekly_bars(rows: list[dict]) -> str:
     max_value = max([row["valor_2026"] for row in rows] + [row["valor_2025"] for row in rows] + [1])
     parts = []
@@ -101,6 +118,7 @@ def render_products(products: list[dict]) -> str:
 def render_html(dashboard: dict) -> str:
     receita = dashboard["receita"]
     daily = dashboard["comparativo_dia_a_dia"]
+    month_daily = dashboard["comparativo_mes_dia_a_dia"]
     weekly = dashboard["comparativo_semana_a_semana"]
     products = dashboard["produtos"]
     channels = dashboard["canais"]
@@ -207,6 +225,12 @@ def render_html(dashboard: dict) -> str:
     .channel-row b {{ text-align: right; }}
     .insight {{ font-size: 18px; line-height: 1.25; }}
     .footer {{ margin-top: auto; color: #8a8074; font-size: 11px; display: flex; justify-content: space-between; }}
+    .compact {{ gap: 10px; }}
+    .compact table {{ font-size: 10.5px; }}
+    .compact th {{ padding: 5px 6px; }}
+    .compact td {{ padding: 4px 6px; }}
+    .compact .card {{ padding: 10px 12px; }}
+    .compact .insight {{ font-size: 13px; margin: 0; }}
   </style>
 </head>
 <body>
@@ -266,6 +290,19 @@ def render_html(dashboard: dict) -> str:
       <div class="card"><h3>Ponto de atenção</h3><div class="metric"><div class="v negative">{format_brl(worst_day['delta']) if worst_day else '-'}</div><div class="s">{worst_day['dia_2026'].strftime('%d/%m/%Y') if worst_day else '-'}</div></div></div>
     </div>
     <div class="footer"><span>Comparativo por mesma data calendário</span><span>Valores brutos Mogo</span></div>
+  </section>
+
+  <section class="slide compact">
+    <h2>Maio dia a dia: diário e acumulado</h2>
+    <table>
+      <thead><tr><th>Dia</th><th class="num">2026 dia</th><th class="num">2025 dia</th><th class="num">Acum. 2026</th><th class="num">Acum. 2025</th><th class="num">Delta acum.</th><th class="num">Delta %</th></tr></thead>
+      <tbody>{render_month_daily_rows(month_daily)}</tbody>
+    </table>
+    <div class="card">
+      <h3>Leitura</h3>
+      <p class="insight">No acumulado até 17/05, maio/2026 está {format_percent(receita['faturamento_mes_delta_pct'])} acima do mesmo período de 2025. Contra maio/2025 fechado, já atingiu {format_percent(receita['faturamento_mes_vs_2025_fechado_pct'])} do mês completo.</p>
+    </div>
+    <div class="footer"><span>Recorte: 01/05 a 17/05</span><span>Acumulado diário</span></div>
   </section>
 
   <section class="slide">

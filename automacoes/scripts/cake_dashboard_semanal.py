@@ -208,6 +208,32 @@ def build_daily_comparison(records_2026: list[dict[str, Any]], records_2025: lis
     return rows
 
 
+def build_cumulative_daily_comparison(records_2026: list[dict[str, Any]], records_2025: list[dict[str, Any]], start: date, end: date) -> list[dict[str, Any]]:
+    prior_start, prior_end = same_period_last_year(start, end)
+    totals_2026 = revenue_by_day(records_2026, start, end)
+    totals_2025 = revenue_by_day(records_2025, prior_start, prior_end)
+    rows: list[dict[str, Any]] = []
+    running_2026 = 0.0
+    running_2025 = 0.0
+    for current_day in daterange(start, end):
+        prior_day = date(current_day.year - 1, current_day.month, current_day.day)
+        current = totals_2026.get(current_day, 0.0)
+        previous = totals_2025.get(prior_day, 0.0)
+        running_2026 += current
+        running_2025 += previous
+        rows.append({
+            "dia_2026": current_day,
+            "dia_2025": prior_day,
+            "valor_2026": current,
+            "valor_2025": previous,
+            "acumulado_2026": running_2026,
+            "acumulado_2025": running_2025,
+            "delta_acumulado": running_2026 - running_2025,
+            "delta_acumulado_pct": delta_percent(running_2026, running_2025),
+        })
+    return rows
+
+
 def build_weekly_comparison(records_2026: list[dict[str, Any]], records_2025: list[dict[str, Any]], end: date) -> list[dict[str, Any]]:
     rows: list[dict[str, Any]] = []
     for start_2026, end_2026 in weekly_ranges_since_month_start(end):
@@ -357,6 +383,7 @@ def build_dashboard(
     month_start = date(week_end.year, week_end.month, 1)
     month_start_prior = date(week_end.year - 1, week_end.month, 1)
     week_end_prior = date(week_end.year - 1, week_end.month, week_end.day)
+    month_daily_comparison = build_cumulative_daily_comparison(vendas_records, vendas_prior_records, month_start, week_end) if vendas_records and vendas_prior_records else []
     mtd_2026, _ = summarize_revenue(vendas_records, month_start, week_end) if vendas_records else (0.0, [])
     mtd_2025, _ = summarize_revenue(vendas_prior_records, month_start_prior, week_end_prior) if vendas_prior_records else (0.0, [])
     month_2025_closed, _ = summarize_revenue(vendas_prior_records, month_start_prior, month_end(month_start_prior)) if vendas_prior_records else (0.0, [])
@@ -405,6 +432,7 @@ def build_dashboard(
         "canais": channels[:8],
         "produtos": sales["products"],
         "comparativo_dia_a_dia": daily_comparison,
+        "comparativo_mes_dia_a_dia": month_daily_comparison,
         "comparativo_semana_a_semana": weekly_comparison,
         "clientes": clients,
         "operacao": operations,
@@ -468,6 +496,22 @@ def render_markdown(dashboard: dict[str, Any]) -> str:
                 f"| {row['dia_2026'].strftime('%d/%m/%Y')} | {row['dia_2025'].strftime('%d/%m/%Y')} | "
                 f"{format_brl(row['valor_2026'])} | {format_brl(row['valor_2025'])} | "
                 f"{format_brl(row['delta'])} | {format_percent(row['delta_pct'])} |"
+            )
+    else:
+        lines.append("- Aguardando Vendas Analitico local reconciliado de 2026 e 2025.")
+
+    lines.extend(["", "## Comparativo dia a dia no mes — acumulado 2026 vs 2025", ""])
+    if dashboard["comparativo_mes_dia_a_dia"]:
+        lines.extend([
+            "| Dia | 2026 dia | 2025 dia | Acum. 2026 | Acum. 2025 | Delta acum. | Delta % |",
+            "|---|---:|---:|---:|---:|---:|---:|",
+        ])
+        for row in dashboard["comparativo_mes_dia_a_dia"]:
+            lines.append(
+                f"| {row['dia_2026'].strftime('%d/%m')} | "
+                f"{format_brl(row['valor_2026'])} | {format_brl(row['valor_2025'])} | "
+                f"{format_brl(row['acumulado_2026'])} | {format_brl(row['acumulado_2025'])} | "
+                f"{format_brl(row['delta_acumulado'])} | {format_percent(row['delta_acumulado_pct'])} |"
             )
     else:
         lines.append("- Aguardando Vendas Analitico local reconciliado de 2026 e 2025.")
