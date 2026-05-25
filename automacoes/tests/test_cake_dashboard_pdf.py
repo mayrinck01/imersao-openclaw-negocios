@@ -1,4 +1,5 @@
 import json
+import re
 import sys
 import tempfile
 import unittest
@@ -183,10 +184,46 @@ class CakeDashboardPdfTests(unittest.TestCase):
 
         self.assertIn("Visão anual", html)
         self.assertIn("Total faturado no ano 2026", html)
-        self.assertIn("R$ 300,00", html)
+        self.assertIn("R$ 300", html)
         self.assertIn("Mesmo período de 2025", html)
-        self.assertIn("R$ 230,00", html)
+        self.assertIn("R$ 230", html)
         self.assertIn("01/01/2026 a 17/05/2026", html)
+
+    def test_render_html_uses_integer_currency_and_matching_metric_size(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp) / "Mogo"
+            write_json(root / "Vendas Analitico" / "05-2026.json", {
+                "registros": [
+                    {
+                        "dataped": "12/05/2026",
+                        "NumeroPedido": "001",
+                        "Produto": "Bolo",
+                        "Qtde": "1,00",
+                        "valTota": "100,75",
+                        "OrigemPedido": "Loja",
+                    }
+                ]
+            })
+            write_json(root / "Vendas Analitico" / "05-2025.json", {
+                "registros": [
+                    {
+                        "dataped": "12/05/2025",
+                        "NumeroPedido": "901",
+                        "Produto": "Bolo",
+                        "Qtde": "1,00",
+                        "valTota": "80,25",
+                        "OrigemPedido": "Loja",
+                    }
+                ]
+            })
+
+            dashboard = build_dashboard(root, date(2026, 5, 11), date(2026, 5, 17))
+            html = render_html(dashboard)
+
+        self.assertIn("R$ 101", html)
+        self.assertNotRegex(html, r"R\\$ [0-9.]+,[0-9]{2}")
+        self.assertIn("year-value", html)
+        self.assertRegex(html, r"\.year-value \{[^}]*font-size: 27px;")
 
 
 if __name__ == "__main__":

@@ -12,6 +12,7 @@ import argparse
 import json
 from collections import Counter, defaultdict
 from datetime import date, datetime, timedelta
+from decimal import Decimal, ROUND_HALF_UP
 from pathlib import Path
 from typing import Any, Iterable
 
@@ -49,7 +50,8 @@ def parse_brl(value: Any) -> float:
 
 
 def format_brl(value: float) -> str:
-    formatted = f"{value:,.2f}".replace(",", "X").replace(".", ",").replace("X", ".")
+    rounded = Decimal(str(value)).quantize(Decimal("1"), rounding=ROUND_HALF_UP)
+    formatted = f"{int(rounded):,}".replace(",", ".")
     return f"R$ {formatted}"
 
 

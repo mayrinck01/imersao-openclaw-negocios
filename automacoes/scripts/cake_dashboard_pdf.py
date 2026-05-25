@@ -235,6 +235,7 @@ def render_html(dashboard: dict) -> str:
       font-size: 13px;
     }}
     .year-strip b {{ display: block; color: white; font-size: 15px; }}
+    .year-value {{ display: block; font-size: 27px; line-height: 1.05; font-weight: 850; margin-top: 7px; }}
     .year-label {{ color: #d8b66c; text-transform: uppercase; letter-spacing: .08em; font-weight: 800; font-size: 11px; }}
     .year-range {{ color: rgba(255,255,255,.58); font-size: 11px; display: block; margin-top: 2px; }}
     .positive {{ color: #23745d; }}
@@ -290,9 +291,9 @@ def render_html(dashboard: dict) -> str:
     </div>
     <div class="year-strip">
       <div><span class="year-label">Visão anual</span><span class="year-range">{html.escape(receita['faturamento_ano_label'])}</span></div>
-      <div><b>Total faturado no ano 2026</b>{format_brl(receita['faturamento_ano_2026'])}</div>
-      <div><b>Mesmo período de 2025</b>{format_brl(receita['faturamento_ano_2025'])}</div>
-      <div class="{signed_class(receita['faturamento_ano_delta'])}"><b>Delta anual</b>{format_brl(receita['faturamento_ano_delta'])} / {format_percent(receita['faturamento_ano_delta_pct'])}</div>
+      <div><b>Total faturado no ano 2026</b><span class="year-value">{format_brl(receita['faturamento_ano_2026'])}</span></div>
+      <div><b>Mesmo período de 2025</b><span class="year-value">{format_brl(receita['faturamento_ano_2025'])}</span></div>
+      <div class="{signed_class(receita['faturamento_ano_delta'])}"><b>Delta anual</b><span class="year-value">{format_brl(receita['faturamento_ano_delta'])} / {format_percent(receita['faturamento_ano_delta_pct'])}</span></div>
     </div>
     <div class="footer"><span>Fonte: Mogo Vendas Analítico - Data Pedido</span><span>Gerado por BigDog</span></div>
   </section>
