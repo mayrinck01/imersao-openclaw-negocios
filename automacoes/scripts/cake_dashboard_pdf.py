@@ -266,33 +266,23 @@ def render_html(dashboard: dict) -> str:
           <div class="eyebrow">Cake & Co - {REPORT_DISPLAY_NAME}</div>
         </div>
       </div>
-      <h1>Maio cresce forte, mas a leitura precisa separar efeito Dia das Mães de tração recorrente.</h1>
-      <p class="lead">Período de {html.escape(dashboard['periodo'])}, usando Mogo Vendas Analítico com data Pedido como fonte canônica.</p>
+      <h1>Faturamento acumulado de 2026 contra 2025 no mesmo período.</h1>
+      <p class="lead">Recorte acumulado de {html.escape(receita['faturamento_mes_label'])} contra {html.escape(receita['faturamento_mes_label_2025'])}, usando Mogo Vendas Analítico com data Pedido como fonte canônica.</p>
     </div>
-    <div class="grid grid-4">
-      <div class="metric"><div class="k">Período</div><div class="v">{format_brl(receita['faturamento_semana'])}</div><div class="s">{html.escape(dashboard['periodo'])}</div></div>
-      <div class="metric"><div class="k">Acumulado maio</div><div class="v">{format_brl(receita['faturamento_mes_2026'])}</div><div class="s">{html.escape(receita['faturamento_mes_label'])}</div></div>
-      <div class="metric"><div class="k">Vs 2025</div><div class="v">+{format_percent(receita['faturamento_mes_delta_pct'])}</div><div class="s">{format_brl(receita['faturamento_mes_delta'])}</div></div>
-      <div class="metric"><div class="k">Pedidos</div><div class="v">{format_number(receita['pedidos'])}</div><div class="s">Ticket {format_brl(receita['ticket_medio'])}</div></div>
+    <div class="grid grid-3">
+      <div class="metric"><div class="k">Faturamento acumulado 2026</div><div class="v">{format_brl(receita['faturamento_mes_2026'])}</div><div class="s">{html.escape(receita['faturamento_mes_label'])}</div></div>
+      <div class="metric"><div class="k">2025 mesmo período</div><div class="v">{format_brl(receita['faturamento_mes_2025'])}</div><div class="s">{html.escape(receita['faturamento_mes_label_2025'])}</div></div>
+      <div class="metric"><div class="k">Delta acumulado</div><div class="v {signed_class(receita['faturamento_mes_delta'])}">{format_brl(receita['faturamento_mes_delta'])}</div><div class="s">{format_percent(receita['faturamento_mes_delta_pct'])}</div></div>
     </div>
     <div class="footer"><span>Fonte: Mogo Vendas Analítico - Data Pedido</span><span>Gerado por BigDog</span></div>
   </section>
 
   <section class="slide">
-    <h2>Placar executivo</h2>
-    <div class="grid grid-4">
-      <div class="card metric"><div class="k">Acumulado 2026</div><div class="v">{format_brl(receita['faturamento_mes_2026'])}</div><div class="s">{html.escape(receita['faturamento_mes_label'])}</div></div>
-      <div class="card metric"><div class="k">Acumulado 2025</div><div class="v">{format_brl(receita['faturamento_mes_2025'])}</div><div class="s">{html.escape(receita['faturamento_mes_label_2025'])}</div></div>
-      <div class="card metric"><div class="k">Ganho absoluto</div><div class="v positive">{format_brl(receita['faturamento_mes_delta'])}</div><div class="s">crescimento de {format_percent(receita['faturamento_mes_delta_pct'])}</div></div>
-      <div class="card metric"><div class="k">Maio/2025 fechado</div><div class="v">{format_brl(receita['faturamento_mes_2025_fechado'])}</div><div class="s">{html.escape(receita['faturamento_mes_2025_fechado_label'])}</div></div>
-    </div>
-    <div class="card">
-      <h3>Parcial 2026 contra maio/2025 fechado</h3>
-      <div class="grid grid-3">
-        <div class="metric"><div class="k">Maio/2026 parcial</div><div class="v">{format_brl(receita['faturamento_mes_2026'])}</div><div class="s">{html.escape(receita['faturamento_mes_label'])}</div></div>
-        <div class="metric"><div class="k">Atingido do mês passado</div><div class="v">{format_percent(receita['faturamento_mes_vs_2025_fechado_pct'])}</div><div class="s">base: maio/2025 fechado</div></div>
-        <div class="metric"><div class="k">Distância para empatar</div><div class="v {signed_class(receita['faturamento_mes_vs_2025_fechado_delta'])}">{gap_text(receita['faturamento_mes_vs_2025_fechado_delta'])}</div><div class="s">comparação parcial vs fechado</div></div>
-      </div>
+    <h2>Faturamento acumulado</h2>
+    <div class="grid grid-3">
+      <div class="card metric"><div class="k">Faturamento acumulado 2026</div><div class="v">{format_brl(receita['faturamento_mes_2026'])}</div><div class="s">{html.escape(receita['faturamento_mes_label'])}</div></div>
+      <div class="card metric"><div class="k">2025 mesmo período</div><div class="v">{format_brl(receita['faturamento_mes_2025'])}</div><div class="s">{html.escape(receita['faturamento_mes_label_2025'])}</div></div>
+      <div class="card metric"><div class="k">Delta acumulado</div><div class="v {signed_class(receita['faturamento_mes_delta'])}">{format_brl(receita['faturamento_mes_delta'])}</div><div class="s">{format_percent(receita['faturamento_mes_delta_pct'])}</div></div>
     </div>
     <div class="grid grid-2">
       <div class="card">
@@ -301,7 +291,7 @@ def render_html(dashboard: dict) -> str:
       </div>
       <div class="card">
         <h3>Leitura para sócios</h3>
-        <p class="insight">O mês está {format_percent(receita['faturamento_mes_delta_pct'])} acima de 2025 no mesmo recorte. Contra maio/2025 fechado, 2026 parcial já atingiu {format_percent(receita['faturamento_mes_vs_2025_fechado_pct'])} do total e ainda falta {format_brl(abs(receita['faturamento_mes_vs_2025_fechado_delta']))} para empatar. O pico veio principalmente entre 08 e 16/05, com destaque para iFood, Neemo e loja física.</p>
+        <p class="insight">No acumulado do mesmo período, 2026 está {format_percent(receita['faturamento_mes_delta_pct'])} contra 2025, uma diferença de {format_brl(receita['faturamento_mes_delta'])}. A leitura principal fica concentrada em faturamento acumulado, sem misturar comparação com mês fechado.</p>
       </div>
     </div>
     <div class="footer"><span>{REPORT_DISPLAY_NAME}</span><span>Período {html.escape(dashboard['periodo'])}</span></div>
@@ -328,7 +318,7 @@ def render_html(dashboard: dict) -> str:
     </table>
     <div class="card">
       <h3>Leitura</h3>
-      <p class="insight">No acumulado {html.escape(receita['faturamento_mes_label'])}, maio/2026 está {format_percent(receita['faturamento_mes_delta_pct'])} acima do mesmo período de 2025. Contra maio/2025 fechado, já atingiu {format_percent(receita['faturamento_mes_vs_2025_fechado_pct'])} do mês completo.</p>
+      <p class="insight">No acumulado {html.escape(receita['faturamento_mes_label'])}, 2026 está {format_percent(receita['faturamento_mes_delta_pct'])} contra o mesmo período de 2025, com diferença de {format_brl(receita['faturamento_mes_delta'])}.</p>
     </div>
     <div class="footer"><span>Recorte: {html.escape(receita['faturamento_mes_label'])}</span><span>Acumulado diário</span></div>
   </section>
