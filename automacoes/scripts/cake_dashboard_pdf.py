@@ -6,6 +6,7 @@ Gera a versao PDF executiva do Dashboard V1 para apresentacao a socios.
 from __future__ import annotations
 
 import argparse
+import base64
 import html
 import subprocess
 from datetime import date
@@ -22,6 +23,17 @@ from cake_dashboard_semanal import (
 
 
 DEFAULT_OUTPUT_DIR = Path("/root/workspaces/cake-brain/relatorios/Cake Dashboard Semanal/pdf")
+DEFAULT_BRAND_LOGO = Path("/root/workspaces/cake-brain/marketing/logo-cake-2024.png")
+
+
+def image_data_uri(path: Path) -> str:
+    if not path.exists():
+        return ""
+    mime = "image/png"
+    if path.suffix.lower() in {".jpg", ".jpeg"}:
+        mime = "image/jpeg"
+    encoded = base64.b64encode(path.read_bytes()).decode("ascii")
+    return f"data:{mime};base64,{encoded}"
 
 
 def pct_width(value: float, max_value: float) -> str:
@@ -127,6 +139,12 @@ def render_html(dashboard: dict) -> str:
     worst_day = min(daily, key=lambda row: row["delta"]) if daily else None
     top_product = products[0] if products else None
     top_channels = channels[:5]
+    logo_uri = image_data_uri(DEFAULT_BRAND_LOGO)
+    logo_html = (
+        f'<img class="brand-logo" src="{logo_uri}" alt="Cake & Co">'
+        if logo_uri
+        else '<span class="brand-wordmark">Cake & Co</span>'
+    )
 
     channel_max = max([item["valor"] for item in top_channels] + [1])
     channel_rows = "\n".join(
@@ -192,6 +210,10 @@ def render_html(dashboard: dict) -> str:
     .lead {{ max-width: 760px; font-size: 18px; color: rgba(255,255,255,.82); }}
     .meta {{ color: #6f7480; font-size: 12px; }}
     .hero .meta {{ color: rgba(255,255,255,.68); }}
+    .topbar {{ display: flex; align-items: center; justify-content: space-between; gap: 18px; }}
+    .brand-lockup {{ display: flex; align-items: center; gap: 14px; position: relative; z-index: 1; }}
+    .brand-logo {{ width: 82px; height: 82px; object-fit: contain; display: block; }}
+    .brand-wordmark {{ color: #d8b66c; font-family: Georgia, serif; font-size: 24px; }}
     .grid {{ display: grid; gap: 14px; }}
     .grid-4 {{ grid-template-columns: repeat(4, 1fr); }}
     .grid-3 {{ grid-template-columns: repeat(3, 1fr); }}
@@ -237,7 +259,12 @@ def render_html(dashboard: dict) -> str:
 <main class="deck">
   <section class="slide hero">
     <div>
-      <div class="eyebrow">Cake & Co - Dashboard V1</div>
+      <div class="topbar">
+        <div class="brand-lockup">
+          {logo_html}
+          <div class="eyebrow">Cake & Co - Dashboard V1</div>
+        </div>
+      </div>
       <h1>Maio cresce forte, mas a leitura precisa separar efeito Dia das Mães de tração recorrente.</h1>
       <p class="lead">Período de {html.escape(dashboard['periodo'])}, usando Mogo Vendas Analítico com data Pedido como fonte canônica.</p>
     </div>
