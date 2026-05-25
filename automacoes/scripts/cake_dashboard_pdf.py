@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Gera a versao PDF executiva do Dashboard V1 para apresentacao a socios.
+Gera a versao PDF/HTML executiva do Relatorio Semanal - Vendas para socios.
 """
 
 from __future__ import annotations
@@ -24,6 +24,7 @@ from cake_dashboard_semanal import (
 
 DEFAULT_OUTPUT_DIR = Path("/root/workspaces/cake-brain/relatorios/Cake Dashboard Semanal/pdf")
 DEFAULT_BRAND_LOGO = Path("/root/workspaces/cake-brain/marketing/logo-cake-2024.png")
+REPORT_DISPLAY_NAME = "Relatório Semanal - Vendas"
 
 
 def image_data_uri(path: Path) -> str:
@@ -162,7 +163,7 @@ def render_html(dashboard: dict) -> str:
 <html lang="pt-BR">
 <head>
   <meta charset="utf-8">
-  <title>Dashboard V1 Cake & Co - Socios</title>
+  <title>{REPORT_DISPLAY_NAME} Cake & Co - Sócios</title>
   <style>
     @page {{ size: A4 landscape; margin: 12mm; }}
     * {{ box-sizing: border-box; }}
@@ -262,7 +263,7 @@ def render_html(dashboard: dict) -> str:
       <div class="topbar">
         <div class="brand-lockup">
           {logo_html}
-          <div class="eyebrow">Cake & Co - Dashboard V1</div>
+          <div class="eyebrow">Cake & Co - {REPORT_DISPLAY_NAME}</div>
         </div>
       </div>
       <h1>Maio cresce forte, mas a leitura precisa separar efeito Dia das Mães de tração recorrente.</h1>
@@ -303,7 +304,7 @@ def render_html(dashboard: dict) -> str:
         <p class="insight">O mês está {format_percent(receita['faturamento_mes_delta_pct'])} acima de 2025 no mesmo recorte. Contra maio/2025 fechado, 2026 parcial já atingiu {format_percent(receita['faturamento_mes_vs_2025_fechado_pct'])} do total e ainda falta {format_brl(abs(receita['faturamento_mes_vs_2025_fechado_delta']))} para empatar. O pico veio principalmente entre 08 e 16/05, com destaque para iFood, Neemo e loja física.</p>
       </div>
     </div>
-    <div class="footer"><span>Dashboard V1</span><span>Período {html.escape(dashboard['periodo'])}</span></div>
+    <div class="footer"><span>{REPORT_DISPLAY_NAME}</span><span>Período {html.escape(dashboard['periodo'])}</span></div>
   </section>
 
   <section class="slide">
@@ -387,11 +388,11 @@ def write_pdf_with_chromium(html_path: Path, pdf_path: Path) -> None:
         subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
 
     if not pdf_path.exists() or pdf_path.stat().st_size <= 0:
-        raise RuntimeError("Falha ao gerar PDF do Dashboard V1.")
+        raise RuntimeError(f"Falha ao gerar PDF do {REPORT_DISPLAY_NAME}.")
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Gera PDF executivo do Dashboard V1.")
+    parser = argparse.ArgumentParser(description=f"Gera PDF executivo do {REPORT_DISPLAY_NAME}.")
     parser.add_argument("--mogo-root", type=Path, default=DEFAULT_MOGO_ROOT)
     parser.add_argument("--output-dir", type=Path, default=DEFAULT_OUTPUT_DIR)
     parser.add_argument("--week-start", default="2026-05-11")
@@ -405,7 +406,7 @@ def main() -> int:
 
     dashboard = build_dashboard(args.mogo_root, week_start, week_end)
     args.output_dir.mkdir(parents=True, exist_ok=True)
-    stem = f"cake-dashboard-v1-socios-{week_start.isoformat()}-a-{week_end.isoformat()}"
+    stem = f"relatorio-semanal-vendas-cake-{week_start.isoformat()}-a-{week_end.isoformat()}"
     html_path = args.output_dir / f"{stem}.html"
     pdf_path = args.output_dir / f"{stem}.pdf"
     html_path.write_text(render_html(dashboard), encoding="utf-8")

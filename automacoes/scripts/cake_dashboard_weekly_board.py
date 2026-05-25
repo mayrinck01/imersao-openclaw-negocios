@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Gera e envia o Dashboard V1 semanal para o grupo Cake Board via Evolution."""
+"""Gera e envia o Relatorio Semanal - Vendas para o grupo Cake Board via Evolution."""
 
 from __future__ import annotations
 
@@ -18,6 +18,7 @@ SCRIPT_DIR = Path(__file__).resolve().parent
 if str(SCRIPT_DIR) not in sys.path:
     sys.path.insert(0, str(SCRIPT_DIR))
 
+from cake_dashboard_pdf import REPORT_DISPLAY_NAME  # noqa: E402
 from cake_dashboard_semanal import build_dashboard, format_brl, parse_brl, parse_pt_date  # noqa: E402
 from mogo_login import MOGO_URL, mogo_login  # noqa: E402
 
@@ -244,7 +245,7 @@ def fetch_vendas_analitico(start: date, end: date, root: Path = DEFAULT_MOGO_ROO
                 "periodo": {"de": pt_date(start), "ate": pt_date(end)},
                 "tipo_data": "Pedido",
                 "fonte": "Mogo Vendas Analitico codRelatorio=3",
-                "observacao": "Arquivo atualizado automaticamente para Dashboard V1.",
+                "observacao": f"Arquivo atualizado automaticamente para {REPORT_DISPLAY_NAME}.",
                 "total_registros": len(records),
                 "faturamento_total": format_brl(total_value),
                 "registros": records,
@@ -287,7 +288,7 @@ def generate_pdf(start: date, end: date, root: Path = DEFAULT_MOGO_ROOT, output_
 
     output_dir.mkdir(parents=True, exist_ok=True)
     dashboard = build_dashboard(root, start, end)
-    stem = f"cake-dashboard-v1-socios-{start.isoformat()}-a-{end.isoformat()}"
+    stem = f"relatorio-semanal-vendas-cake-{start.isoformat()}-a-{end.isoformat()}"
     html_path = output_dir / f"{stem}.html"
     pdf_path = output_dir / f"{stem}.pdf"
     html_path.write_text(render_html(dashboard), encoding="utf-8")
@@ -296,7 +297,7 @@ def generate_pdf(start: date, end: date, root: Path = DEFAULT_MOGO_ROOT, output_
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Envia Dashboard V1 semanal para Cake Board via Evolution.")
+    parser = argparse.ArgumentParser(description=f"Envia {REPORT_DISPLAY_NAME} semanal para Cake Board via Evolution.")
     parser.add_argument("--today", help="Data de execução YYYY-MM-DD, para teste/reprocessamento.")
     parser.add_argument("--start", help="Início do relatório YYYY-MM-DD. Default: primeiro dia do mês de ontem.")
     parser.add_argument("--end", help="Fim do relatório YYYY-MM-DD. Default: ontem.")
@@ -324,8 +325,8 @@ def main() -> int:
     pdf_path = generate_pdf(start, end, args.mogo_root, args.output_dir)
 
     period = f"{pt_date(start)} a {pt_date(end)}"
-    text = f"Dashboard V1 — vendas Cake & Co\nPeríodo: {period}\nReport em anexo."
-    caption = f"Dashboard V1 — vendas Cake & Co — {period}"
+    text = f"{REPORT_DISPLAY_NAME}\nCake & Co\nPeríodo: {period}\nReport em anexo."
+    caption = f"{REPORT_DISPLAY_NAME} — Cake & Co — {period}"
     if not args.dry_run:
         send_report_to_evolution(
             pdf_path,

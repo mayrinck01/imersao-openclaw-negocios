@@ -54,6 +54,40 @@ class CakeDashboardPdfTests(unittest.TestCase):
         self.assertIn("data:image/png;base64,", html)
         self.assertIn("alt=\"Cake & Co\"", html)
 
+    def test_render_html_uses_weekly_sales_report_name(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp) / "Mogo"
+            write_json(root / "Vendas Analitico" / "05-2026.json", {
+                "registros": [
+                    {
+                        "dataped": "12/05/2026",
+                        "NumeroPedido": "001",
+                        "Produto": "Bolo",
+                        "Qtde": "1,00",
+                        "valTota": "100,00",
+                        "OrigemPedido": "Loja",
+                    }
+                ]
+            })
+            write_json(root / "Vendas Analitico" / "05-2025.json", {
+                "registros": [
+                    {
+                        "dataped": "12/05/2025",
+                        "NumeroPedido": "901",
+                        "Produto": "Bolo",
+                        "Qtde": "1,00",
+                        "valTota": "80,00",
+                        "OrigemPedido": "Loja",
+                    }
+                ]
+            })
+
+            dashboard = build_dashboard(root, date(2026, 5, 11), date(2026, 5, 17))
+            html = render_html(dashboard)
+
+        self.assertIn("Relatório Semanal - Vendas", html)
+        self.assertNotIn("Dashboard V1", html)
+
 
 if __name__ == "__main__":
     unittest.main()

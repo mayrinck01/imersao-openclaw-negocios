@@ -60,8 +60,8 @@ class CakeDashboardWeeklyBoardTests(unittest.TestCase):
             send_report_to_evolution(
                 pdf_path,
                 target="120363346768054790@g.us",
-                caption="Dashboard V1 em anexo",
-                text="Dashboard V1 - report em anexo",
+                caption="Relatório Semanal - Vendas em anexo",
+                text="Relatório Semanal - Vendas - report em anexo",
                 base_url="http://127.0.0.1:3087",
                 instance="cake-interno",
                 api_key="test-key",
@@ -90,8 +90,8 @@ class CakeDashboardWeeklyBoardTests(unittest.TestCase):
                 send_report_to_evolution(
                     pdf_path,
                     target="120363346768054790@g.us",
-                    caption="Dashboard V1 em anexo",
-                    text="Dashboard V1 - report em anexo",
+                    caption="Relatório Semanal - Vendas em anexo",
+                    text="Relatório Semanal - Vendas - report em anexo",
                     base_url="http://127.0.0.1:3087",
                     instance="cake-interno",
                     api_key="test-key",
