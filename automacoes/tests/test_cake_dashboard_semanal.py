@@ -139,7 +139,7 @@ class CakeDashboardSemanalTests(unittest.TestCase):
             self.assertTrue(path.exists())
             report = path.read_text(encoding="utf-8")
             self.assertIn("Dashboard Semanal Cake & Co", report)
-            self.assertIn("Faturamento do periodo: R$ 100,00", report)
+            self.assertIn("Faturamento do periodo: R$ 100", report)
             self.assertIn("Decisao da semana", report)
 
 

@@ -249,6 +249,48 @@ class CakeDashboardPdfTests(unittest.TestCase):
         self.assertIn("year-strip grid grid-3", html)
         self.assertRegex(html, r"\.metric \.v \{[^}]*font-size: 27px;")
 
+    def test_render_html_adds_top10_vs_rest_product_mix_chart(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp) / "Mogo"
+            records = []
+            top_values = [100, 90, 80, 70, 60, 50, 40, 30, 20, 10]
+            rest_values = [5] * 90
+            for index, value in enumerate(top_values + rest_values, 1):
+                records.append({
+                    "dataped": "12/05/2026",
+                    "NumeroPedido": f"{index:03d}",
+                    "Produto": f"Produto {index:02d}",
+                    "Qtde": "1,00",
+                    "valTota": f"{value},00",
+                    "OrigemPedido": "Loja",
+                })
+            write_json(root / "Vendas Analitico" / "05-2026.json", {"registros": records})
+            write_json(root / "Vendas Analitico" / "05-2025.json", {
+                "registros": [
+                    {
+                        "dataped": "12/05/2025",
+                        "NumeroPedido": "901",
+                        "Produto": "Bolo",
+                        "Qtde": "1,00",
+                        "valTota": "800,00",
+                        "OrigemPedido": "Loja",
+                    }
+                ]
+            })
+
+            dashboard = build_dashboard(root, date(2026, 5, 11), date(2026, 5, 17))
+            html = render_html(dashboard)
+
+        self.assertIn("Top 10 vs resto do faturamento", html)
+        self.assertIn("Top 10 produtos", html)
+        self.assertIn("R$ 550", html)
+        self.assertIn("55,0%", html)
+        self.assertIn("Restante do faturamento", html)
+        self.assertNotIn("Resto do período", html)
+        self.assertIn("R$ 450", html)
+        self.assertIn("45,0%", html)
+        self.assertRegex(html, r"class=\"product-mix-fill\" style=\"width:55\.0%\"")
+
 
 if __name__ == "__main__":
     unittest.main()

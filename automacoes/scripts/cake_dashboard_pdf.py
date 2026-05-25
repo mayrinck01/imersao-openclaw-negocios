@@ -128,6 +128,40 @@ def render_products(products: list[dict]) -> str:
     return "\n".join(parts)
 
 
+def render_product_mix(products: list[dict], period_revenue: float) -> str:
+    if not products or period_revenue <= 0:
+        return ""
+
+    top10_value = sum(item["valor"] for item in products[:10])
+    rest_value = max(period_revenue - top10_value, 0)
+    top10_pct = (top10_value / period_revenue) * 100
+    rest_pct = max(100 - top10_pct, 0)
+
+    return f"""
+    <div class="card product-mix">
+      <div class="product-mix-head">
+        <h3>Top 10 vs resto do faturamento</h3>
+        <span class="tiny">Participação sobre o faturamento bruto do período</span>
+      </div>
+      <div class="product-mix-bar" aria-label="Top 10 produtos representam {format_percent(top10_pct)} do faturamento">
+        <i class="product-mix-fill" style="width:{top10_pct:.1f}%"></i>
+      </div>
+      <div class="product-mix-grid">
+        <div>
+          <span class="mix-label top10-dot">Top 10 produtos</span>
+          <strong>{format_brl(top10_value)}</strong>
+          <small>{format_percent(top10_pct)}</small>
+        </div>
+        <div>
+          <span class="mix-label rest-dot">Restante do faturamento</span>
+          <strong>{format_brl(rest_value)}</strong>
+          <small>{format_percent(rest_pct)}</small>
+        </div>
+      </div>
+    </div>
+    """
+
+
 def render_html(dashboard: dict) -> str:
     receita = dashboard["receita"]
     daily = dashboard["comparativo_dia_a_dia"]
@@ -252,6 +286,19 @@ def render_html(dashboard: dict) -> str:
     .mini-bar {{ width: 120px; height: 8px; display: inline-block; margin-right: 8px; background: #e9e2d7; border-radius: 999px; overflow: hidden; }}
     .mini-bar i {{ display: block; height: 100%; background: #b9852f; border-radius: inherit; }}
     .tiny {{ color: #6f7480; font-size: 11px; }}
+    .product-mix {{ display: grid; gap: 11px; }}
+    .product-mix-head {{ display: flex; align-items: baseline; justify-content: space-between; gap: 16px; }}
+    .product-mix-head h3 {{ margin: 0; }}
+    .product-mix-bar {{ height: 18px; background: #e9e2d7; border-radius: 999px; overflow: hidden; }}
+    .product-mix-fill {{ display: block; height: 100%; background: #b9852f; border-radius: inherit; }}
+    .product-mix-grid {{ display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }}
+    .product-mix-grid div {{ display: grid; grid-template-columns: 1fr auto auto; gap: 10px; align-items: baseline; }}
+    .product-mix-grid strong {{ font-size: 20px; }}
+    .product-mix-grid small {{ color: #6f7480; font-size: 14px; font-weight: 800; }}
+    .mix-label {{ color: #172033; font-weight: 800; font-size: 12px; }}
+    .mix-label:before {{ content: ""; display: inline-block; width: 9px; height: 9px; border-radius: 50%; margin-right: 7px; }}
+    .top10-dot:before {{ background: #b9852f; }}
+    .rest-dot:before {{ background: #e9e2d7; border: 1px solid #cfc4b4; }}
     .week-row {{ display: grid; grid-template-columns: 120px 1fr 110px; gap: 14px; align-items: center; padding: 12px 0; border-bottom: 1px solid #e5ded3; }}
     .week-row span {{ color: #6f7480; display: block; font-size: 11px; }}
     .bar-line {{ display: grid; grid-template-columns: 40px 1fr 105px; gap: 8px; align-items: center; margin: 5px 0; }}
@@ -360,6 +407,7 @@ def render_html(dashboard: dict) -> str:
       <thead><tr><th>#</th><th>Produto</th><th class="num">Qtde</th><th class="num">Faturamento</th><th>Participação no período</th></tr></thead>
       <tbody>{render_products(products)}</tbody>
     </table>
+    {render_product_mix(products, receita['faturamento_semana'])}
     <div class="card">
       <h3>Produto líder</h3>
       <p class="insight">{html.escape(str(top_product['produto'])) if top_product else '-'} puxou {format_brl(top_product['valor']) if top_product else '-'}, equivalente a {format_percent(top_product.get('share_revenue')) if top_product else '-'} do faturamento do período. A linha Morango/Deliciosa aparece como motor forte do período.</p>
