@@ -182,7 +182,13 @@ class CakeDashboardPdfTests(unittest.TestCase):
             dashboard = build_dashboard(root, date(2026, 5, 11), date(2026, 5, 17))
             html = render_html(dashboard)
 
-        self.assertIn("Visão anual", html)
+        self.assertNotIn("Visão anual", html)
+        self.assertIn(
+            "Recorte acumulado de 01/01/2026 a 17/05/2026 contra 01/01/2025 a 17/05/2025, usando Mogo Vendas Analítico com data Pedido como fonte canônica.",
+            html,
+        )
+        self.assertIn('<p class="annual-lead">Recorte acumulado de 01/01/2026 a 17/05/2026 contra 01/01/2025 a 17/05/2025, usando Mogo Vendas Analítico com data Pedido como fonte canônica.</p>', html)
+        self.assertIn('<div class="year-strip grid grid-3">', html)
         self.assertIn("Total faturado no ano 2026", html)
         self.assertIn("R$ 300", html)
         self.assertIn("Mesmo período de 2025", html)
@@ -191,20 +197,20 @@ class CakeDashboardPdfTests(unittest.TestCase):
         self.assertRegex(
             html,
             r"Total faturado no ano 2026[\s\S]*?"
-            r'<span class="year-value">R\$ 300</span>'
-            r'<span class="year-range">01/01/2026 a 17/05/2026</span>',
+            r'<div class="v">R\$ 300</div>'
+            r'<div class="s">01/01/2026 a 17/05/2026</div>',
         )
         self.assertRegex(
             html,
             r"Mesmo período de 2025[\s\S]*?"
-            r'<span class="year-value">R\$ 230</span>'
-            r'<span class="year-range">01/01/2025 a 17/05/2025</span>',
+            r'<div class="v">R\$ 230</div>'
+            r'<div class="s">01/01/2025 a 17/05/2025</div>',
         )
         self.assertRegex(
             html,
             r"Delta anual[\s\S]*?"
-            r'<span class="year-value">R\$ 70</span>'
-            r'<span class="year-range">30,4%</span>',
+            r'<div class="v positive">R\$ 70</div>'
+            r'<div class="s">30,4%</div>',
         )
 
     def test_render_html_uses_integer_currency_and_matching_metric_size(self):
@@ -240,8 +246,8 @@ class CakeDashboardPdfTests(unittest.TestCase):
 
         self.assertIn("R$ 101", html)
         self.assertNotRegex(html, r"R\\$ [0-9.]+,[0-9]{2}")
-        self.assertIn("year-value", html)
-        self.assertRegex(html, r"\.year-value \{[^}]*font-size: 27px;")
+        self.assertIn("year-strip grid grid-3", html)
+        self.assertRegex(html, r"\.metric \.v \{[^}]*font-size: 27px;")
 
 
 if __name__ == "__main__":
