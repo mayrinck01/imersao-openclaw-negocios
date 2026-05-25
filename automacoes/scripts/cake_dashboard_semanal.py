@@ -383,9 +383,15 @@ def build_dashboard(
     month_start = date(week_end.year, week_end.month, 1)
     month_start_prior = date(week_end.year - 1, week_end.month, 1)
     week_end_prior = date(week_end.year - 1, week_end.month, week_end.day)
+    year_start = date(week_end.year, 1, 1)
+    year_start_prior = date(week_end.year - 1, 1, 1)
+    ytd_records, missing_ytd = load_monthly_records(root, "Vendas Analitico", year_start, week_end)
+    ytd_prior_records, missing_ytd_prior = load_monthly_records(root, "Vendas Analitico", year_start_prior, week_end_prior)
     month_daily_comparison = build_cumulative_daily_comparison(vendas_records, vendas_prior_records, month_start, week_end) if vendas_records and vendas_prior_records else []
     mtd_2026, _ = summarize_revenue(vendas_records, month_start, week_end) if vendas_records else (0.0, [])
     mtd_2025, _ = summarize_revenue(vendas_prior_records, month_start_prior, week_end_prior) if vendas_prior_records else (0.0, [])
+    ytd_2026, _ = summarize_revenue(ytd_records, year_start, week_end) if ytd_records else (0.0, [])
+    ytd_2025, _ = summarize_revenue(ytd_prior_records, year_start_prior, week_end_prior) if ytd_prior_records else (0.0, [])
     month_2025_closed, _ = summarize_revenue(vendas_prior_records, month_start_prior, month_end(month_start_prior)) if vendas_prior_records else (0.0, [])
     if not vendas_records:
         observations.append("Comparativos 2026 vs 2025 por dia/semana aguardam Vendas Analitico local de 2026 para evitar base errada.")
@@ -407,7 +413,7 @@ def build_dashboard(
     missing_sources = missing_clientes
     if not lancamentos_records:
         missing_sources += missing_faturamento + missing_vendas + missing_lancamentos
-    missing_sources += missing_vendas_prior
+    missing_sources += missing_vendas_prior + missing_ytd + missing_ytd_prior
     return {
         "periodo": f"{week_start.strftime('%d/%m/%Y')} a {week_end.strftime('%d/%m/%Y')}",
         "week_start": week_start,
@@ -421,9 +427,15 @@ def build_dashboard(
             "faturamento_mes_vs_2025_fechado_pct": (mtd_2026 / month_2025_closed * 100) if month_2025_closed else None,
             "faturamento_mes_delta": mtd_2026 - mtd_2025,
             "faturamento_mes_delta_pct": delta_percent(mtd_2026, mtd_2025),
+            "faturamento_ano_2026": ytd_2026,
+            "faturamento_ano_2025": ytd_2025,
+            "faturamento_ano_delta": ytd_2026 - ytd_2025,
+            "faturamento_ano_delta_pct": delta_percent(ytd_2026, ytd_2025),
             "faturamento_mes_label": f"01/{week_end.strftime('%m/%Y')} a {week_end.strftime('%d/%m/%Y')}",
             "faturamento_mes_label_2025": f"01/{week_end.strftime('%m')}/{week_end.year - 1} a {week_end.strftime('%d/%m')}/{week_end.year - 1}",
             "faturamento_mes_2025_fechado_label": f"01/{week_end.strftime('%m')}/{week_end.year - 1} a {month_end(month_start_prior).strftime('%d/%m/%Y')}",
+            "faturamento_ano_label": f"01/01/{week_end.year} a {week_end.strftime('%d/%m/%Y')}",
+            "faturamento_ano_label_2025": f"01/01/{week_end.year - 1} a {week_end_prior.strftime('%d/%m/%Y')}",
             "pedidos": pedidos,
             "ticket_medio": ticket_medio,
             "faturamento_periodo_validado": validated_period_total,

@@ -126,6 +126,68 @@ class CakeDashboardPdfTests(unittest.TestCase):
         self.assertNotIn('<div class="k">Pedidos</div>', html)
         self.assertNotIn("Maio/2025 fechado", html)
 
+    def test_render_html_adds_year_to_date_context_below_primary_values(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp) / "Mogo"
+            write_json(root / "Vendas Analitico" / "01-2026.json", {
+                "registros": [
+                    {
+                        "dataped": "10/01/2026",
+                        "NumeroPedido": "001",
+                        "Produto": "Bolo",
+                        "Qtde": "1,00",
+                        "valTota": "200,00",
+                        "OrigemPedido": "Loja",
+                    }
+                ]
+            })
+            write_json(root / "Vendas Analitico" / "05-2026.json", {
+                "registros": [
+                    {
+                        "dataped": "12/05/2026",
+                        "NumeroPedido": "002",
+                        "Produto": "Bolo",
+                        "Qtde": "1,00",
+                        "valTota": "100,00",
+                        "OrigemPedido": "Loja",
+                    }
+                ]
+            })
+            write_json(root / "Vendas Analitico" / "01-2025.json", {
+                "registros": [
+                    {
+                        "dataped": "10/01/2025",
+                        "NumeroPedido": "901",
+                        "Produto": "Bolo",
+                        "Qtde": "1,00",
+                        "valTota": "150,00",
+                        "OrigemPedido": "Loja",
+                    }
+                ]
+            })
+            write_json(root / "Vendas Analitico" / "05-2025.json", {
+                "registros": [
+                    {
+                        "dataped": "12/05/2025",
+                        "NumeroPedido": "902",
+                        "Produto": "Bolo",
+                        "Qtde": "1,00",
+                        "valTota": "80,00",
+                        "OrigemPedido": "Loja",
+                    }
+                ]
+            })
+
+            dashboard = build_dashboard(root, date(2026, 5, 11), date(2026, 5, 17))
+            html = render_html(dashboard)
+
+        self.assertIn("Visão anual", html)
+        self.assertIn("Total faturado no ano 2026", html)
+        self.assertIn("R$ 300,00", html)
+        self.assertIn("Mesmo período de 2025", html)
+        self.assertIn("R$ 230,00", html)
+        self.assertIn("01/01/2026 a 17/05/2026", html)
+
 
 if __name__ == "__main__":
     unittest.main()
