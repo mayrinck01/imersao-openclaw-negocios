@@ -188,6 +188,24 @@ class CakeDashboardPdfTests(unittest.TestCase):
         self.assertIn("Mesmo período de 2025", html)
         self.assertIn("R$ 230", html)
         self.assertIn("01/01/2026 a 17/05/2026", html)
+        self.assertRegex(
+            html,
+            r"Total faturado no ano 2026[\s\S]*?"
+            r'<span class="year-value">R\$ 300</span>'
+            r'<span class="year-range">01/01/2026 a 17/05/2026</span>',
+        )
+        self.assertRegex(
+            html,
+            r"Mesmo período de 2025[\s\S]*?"
+            r'<span class="year-value">R\$ 230</span>'
+            r'<span class="year-range">01/01/2025 a 17/05/2025</span>',
+        )
+        self.assertRegex(
+            html,
+            r"Delta anual[\s\S]*?"
+            r'<span class="year-value">R\$ 70</span>'
+            r'<span class="year-range">30,4%</span>',
+        )
 
     def test_render_html_uses_integer_currency_and_matching_metric_size(self):
         with tempfile.TemporaryDirectory() as tmp:

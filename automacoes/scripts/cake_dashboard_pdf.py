@@ -290,10 +290,10 @@ def render_html(dashboard: dict) -> str:
       <div class="metric"><div class="k">Delta acumulado</div><div class="v {signed_class(receita['faturamento_mes_delta'])}">{format_brl(receita['faturamento_mes_delta'])}</div><div class="s">{format_percent(receita['faturamento_mes_delta_pct'])}</div></div>
     </div>
     <div class="year-strip">
-      <div><span class="year-label">Visão anual</span><span class="year-range">{html.escape(receita['faturamento_ano_label'])}</span></div>
-      <div><b>Total faturado no ano 2026</b><span class="year-value">{format_brl(receita['faturamento_ano_2026'])}</span></div>
-      <div><b>Mesmo período de 2025</b><span class="year-value">{format_brl(receita['faturamento_ano_2025'])}</span></div>
-      <div class="{signed_class(receita['faturamento_ano_delta'])}"><b>Delta anual</b><span class="year-value">{format_brl(receita['faturamento_ano_delta'])} / {format_percent(receita['faturamento_ano_delta_pct'])}</span></div>
+      <div><span class="year-label">Visão anual</span></div>
+      <div><b>Total faturado no ano 2026</b><span class="year-value">{format_brl(receita['faturamento_ano_2026'])}</span><span class="year-range">{html.escape(receita['faturamento_ano_label'])}</span></div>
+      <div><b>Mesmo período de 2025</b><span class="year-value">{format_brl(receita['faturamento_ano_2025'])}</span><span class="year-range">{html.escape(receita['faturamento_ano_label_2025'])}</span></div>
+      <div class="{signed_class(receita['faturamento_ano_delta'])}"><b>Delta anual</b><span class="year-value">{format_brl(receita['faturamento_ano_delta'])}</span><span class="year-range">{format_percent(receita['faturamento_ano_delta_pct'])}</span></div>
     </div>
     <div class="footer"><span>Fonte: Mogo Vendas Analítico - Data Pedido</span><span>Gerado por BigDog</span></div>
   </section>
