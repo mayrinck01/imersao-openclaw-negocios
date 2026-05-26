@@ -580,6 +580,47 @@ class PagarmeFraudTests(unittest.TestCase):
             self.assertNotIn("• Origem pagamento: Pagar.me", alert)
             self.assertNotIn("• Cobrança Pagar.me:", alert)
 
+    def test_alert_treats_operational_order_without_delivery_time_as_immediate(self):
+        with tempfile.NamedTemporaryFile() as db:
+            checker = FakeHistoryChecker(CustomerHistoryResult(
+                False,
+                None,
+                "not_found",
+                None,
+                None,
+                0,
+                MogoOrderSummary(
+                    order_number="038709",
+                    status="Pendente",
+                    customer_name="Cliente Agora",
+                    delivery_date="26/05/2026",
+                    delivery_time="",
+                    fulfillment="P/Entregar (Motoboy)",
+                    address="Rua Jardim Botanico, 100",
+                    neighborhood="Jardim Botanico - Rio de Janeiro/RJ",
+                    amount="150,00",
+                    phone="21999999999",
+                    email="agora@example.com",
+                ),
+            ))
+            engine = RiskEngine(db.name, history_checker=checker)
+            result = engine.handle_event(event(
+                "charge.paid",
+                "ch_operational_order_now",
+                customer_name="Cliente Agora",
+                email="agora@example.com",
+                phone="21999999999",
+                amount=15000,
+                holder="Outro Nome",
+                holder_document="12345678901",
+            ))
+
+            alert = format_alert(result)
+
+            self.assertIn("• Modalidade: Entrega", alert)
+            self.assertIn("• Agendamento: 26/05/2026 — sem hora agendada — ⚠️ tratar como para agora", alert)
+            self.assertIn("• Endereço de entrega: Rua Jardim Botanico, 100 - Jardim Botanico - Rio de Janeiro/RJ", alert)
+
     def test_local_mogo_history_checker_finds_operational_pending_order_without_valid_history(self):
         with tempfile.TemporaryDirectory() as root:
             folder = Path(root) / "Pendentes"

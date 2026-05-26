@@ -1025,9 +1025,14 @@ def _order_modality(order: MogoOrderSummary | None) -> str:
 def _order_schedule(order: MogoOrderSummary | None) -> str:
     if not order:
         return "não localizado no alerta"
-    schedule = " ".join(part for part in (order.delivery_date, order.delivery_time) if part).strip()
-    if schedule:
-        return schedule
+    delivery_date = (order.delivery_date or "").strip()
+    delivery_time = (order.delivery_time or "").strip()
+    if delivery_date and delivery_time:
+        return f"{delivery_date} {delivery_time}"
+    if delivery_date:
+        return f"{delivery_date} — sem hora agendada — ⚠️ tratar como para agora"
+    if delivery_time:
+        return f"sem data agendada, hora {delivery_time} — ⚠️ revisar antes de liberar"
     return "não informado — ⚠️ tratar como para agora"
 
 
