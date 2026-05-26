@@ -182,6 +182,7 @@ class ChargeEvent:
     card_brand: str
     card_last4: str
     holder_name: str
+    holder_document: str
     acquirer_message: str
     acquirer_return_code: str
     payment_method: str
@@ -205,6 +206,10 @@ class ChargeEvent:
     @property
     def is_pix(self) -> bool:
         return normalize_text(self.payment_method) == "pix"
+
+    @property
+    def is_card(self) -> bool:
+        return normalize_text(self.payment_method) in {"credit card", "creditcard", "cartao", "cartao credito"}
 
     @property
     def is_paid(self) -> bool:
@@ -498,6 +503,7 @@ def extract_charge(payload: dict[str, Any]) -> ChargeEvent:
         card_brand=str(card.get("brand") or ""),
         card_last4=str(card.get("last_four_digits") or ""),
         holder_name=str(card.get("holder_name") or ""),
+        holder_document=str(card.get("holder_document") or ""),
         acquirer_message=str(tx.get("acquirer_message") or ""),
         acquirer_return_code=str(tx.get("acquirer_return_code") or ""),
         payment_method=str(data.get("payment_method") or tx.get("payment_method") or ""),
@@ -639,6 +645,15 @@ class RiskEngine:
         if self.hotlist.matches(charge):
             strong_score += 50
             strong_reasons.append("Dado em lista quente de chargeback/fraude")
+
+        customer_document = only_digits(charge.customer_document)
+        holder_document = only_digits(charge.holder_document)
+        if charge.is_card and not holder_document:
+            strong_score += 50
+            strong_reasons.append("CPF do titular do cartão ausente em pagamento de cartão")
+        elif charge.is_card and customer_document and holder_document and customer_document != holder_document:
+            strong_score += 50
+            strong_reasons.append("CPF do cliente diferente do CPF do titular do cartão")
 
         if charge.holder_name and not names_compatible(charge.customer_name, charge.holder_name):
             if not customer_name_part_in_email_or_holder(charge.customer_name, charge.customer_email, charge.holder_name):

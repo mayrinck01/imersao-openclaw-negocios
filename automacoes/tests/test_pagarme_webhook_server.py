@@ -17,7 +17,7 @@ class FakeHistoryChecker:
         return self.result
 
 
-def pagarme_event(event_type, charge_id, *, customer_name="Ana Paula", email="ana@example.com", amount=31200, card_last4="6931", created_at=None, status=None):
+def pagarme_event(event_type, charge_id, *, customer_name="Ana Paula", email="ana@example.com", document="12345678900", amount=31200, card_last4="6931", created_at=None, status=None):
     created_at = created_at or datetime.now(timezone.utc).isoformat()
     status = status or ("paid" if event_type == "charge.paid" else "failed")
     return {
@@ -29,10 +29,10 @@ def pagarme_event(event_type, charge_id, *, customer_name="Ana Paula", email="an
             "amount": amount,
             "status": status,
             "payment_method": "credit_card",
-            "customer": {"name": customer_name, "email": email, "document": "", "phones": {}},
+            "customer": {"name": customer_name, "email": email, "document": document, "phones": {}},
             "last_transaction": {
                 "status": "captured" if status == "paid" else "not_authorized",
-                "card": {"brand": "Elo", "last_four_digits": card_last4, "holder_name": "ANA PAULA"},
+                "card": {"brand": "Elo", "last_four_digits": card_last4, "holder_name": "ANA PAULA", "holder_document": document},
                 "acquirer_message": "Transação capturada" if status == "paid" else "Não autorizado",
                 "acquirer_return_code": "00" if status == "paid" else "1035",
             },

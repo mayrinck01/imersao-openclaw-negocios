@@ -15,9 +15,11 @@ class FakeHistoryChecker:
         return self.result
 
 
-def event(event_type, charge_id, *, customer_name="Cliente Limpo", email="cliente.limpo@example.com", document="123", phone=None, amount=23000, card_last4="1111", brand="visa", holder="CLIENTE LIMPO", created_at=None, status=None, payment_method="credit_card"):
+def event(event_type, charge_id, *, customer_name="Cliente Limpo", email="cliente.limpo@example.com", document="123", phone=None, amount=23000, card_last4="1111", brand="visa", holder="CLIENTE LIMPO", holder_document=None, created_at=None, status=None, payment_method="credit_card"):
     created_at = created_at or datetime.now(timezone.utc).isoformat()
     status = status or ("paid" if event_type == "charge.paid" else "failed")
+    if holder_document is None:
+        holder_document = document
     return {
         "id": f"hook_{charge_id}",
         "type": event_type,
@@ -30,7 +32,7 @@ def event(event_type, charge_id, *, customer_name="Cliente Limpo", email="client
             "customer": {"name": customer_name, "email": email, "document": document, "phones": ({"mobile_phone": {"country_code": "55", "area_code": phone[:2], "number": phone[2:]}} if phone else {})},
             "last_transaction": {
                 "status": "captured" if status == "paid" else "not_authorized",
-                "card": {"brand": brand, "last_four_digits": card_last4, "holder_name": holder},
+                "card": {"brand": brand, "last_four_digits": card_last4, "holder_name": holder, "holder_document": holder_document},
                 "acquirer_message": "Transação capturada" if status == "paid" else "Não autorizado",
                 "acquirer_return_code": "00" if status == "paid" else "1035",
             },
@@ -101,6 +103,35 @@ class PagarmeFraudTests(unittest.TestCase):
             result = engine.handle_event(event("charge.paid", "ch_clean"))
             self.assertFalse(result.alert)
             self.assertEqual(result.score, 0)
+
+    def test_card_holder_document_mismatch_triggers_alert(self):
+        with tempfile.NamedTemporaryFile() as db:
+            checker = FakeHistoryChecker(CustomerHistoryResult(True, "document", "valid_purchase", None))
+            engine = RiskEngine(db.name, history_checker=checker)
+            result = engine.handle_event(event(
+                "charge.paid",
+                "ch_holder_document_mismatch",
+                document="12345678900",
+                holder_document="98765432100",
+            ))
+
+            self.assertTrue(result.alert)
+            self.assertEqual(50, result.score)
+            self.assertIn("cpf do cliente diferente", " ".join(result.reasons).lower())
+
+    def test_card_holder_document_missing_triggers_operational_alert(self):
+        with tempfile.NamedTemporaryFile() as db:
+            engine = RiskEngine(db.name)
+            result = engine.handle_event(event(
+                "charge.paid",
+                "ch_holder_document_missing",
+                document="12345678900",
+                holder_document="",
+            ))
+
+            self.assertTrue(result.alert)
+            self.assertEqual(50, result.score)
+            self.assertIn("cpf do titular do cartão ausente", " ".join(result.reasons).lower())
 
     def test_pix_paid_charge_never_triggers_antifraud_alert(self):
         with tempfile.NamedTemporaryFile() as db:
@@ -224,6 +255,7 @@ class PagarmeFraudTests(unittest.TestCase):
                 "ch_single_purchase_fail",
                 email="",
                 document="",
+                holder_document="98765432100",
                 created_at=(now - timedelta(minutes=5)).isoformat(),
                 card_last4="1111",
                 brand="visa",
@@ -233,6 +265,7 @@ class PagarmeFraudTests(unittest.TestCase):
                 "ch_single_purchase_paid",
                 email="",
                 document="",
+                holder_document="98765432100",
                 created_at=now.isoformat(),
                 card_last4="2222",
                 brand="mastercard",
