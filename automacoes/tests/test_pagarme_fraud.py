@@ -464,6 +464,7 @@ class PagarmeFraudTests(unittest.TestCase):
             self.assertIn("HISTÓRICO MOGO: pedido #037222", alert)
             self.assertIn("Status operacional: SEGURAR / NÃO ENTREGAR", alert)
             self.assertIn("*Score antifraude: 50 — 🌡️ 🔴 FORTE (50+ segura entrega)*", alert)
+            self.assertIn("Status operacional: SEGURAR / NÃO ENTREGAR\n\n*Score antifraude: 50", alert)
             self.assertLess(alert.index("Status operacional: SEGURAR / NÃO ENTREGAR"), alert.index("*Score antifraude: 50"))
             self.assertLess(alert.index("*Score antifraude: 50"), alert.index("Pedido"))
             self.assertLess(alert.index("Pedido"), alert.index("Resumo"))

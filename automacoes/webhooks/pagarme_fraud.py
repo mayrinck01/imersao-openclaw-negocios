@@ -1094,6 +1094,7 @@ def format_alert(result: RiskResult) -> str:
         "",
         _mogo_order_header(history),
         "Status operacional: SEGURAR / NÃO ENTREGAR",
+        "",
         _score_header_line(result.score),
         "",
         *_fulfillment_lines(history),
