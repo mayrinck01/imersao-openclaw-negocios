@@ -11,7 +11,7 @@ import subprocess
 import sys
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
-from urllib.parse import urlparse
+from urllib.parse import parse_qs, urlparse
 from urllib import request
 
 from pagarme_fraud import LocalMogoHistoryChecker, RiskEngine, format_alert
@@ -34,6 +34,124 @@ EVOLUTION_BASE_URL = os.environ.get("PAGARME_ALERT_EVOLUTION_BASE_URL", "http://
 EVOLUTION_INSTANCE = os.environ.get("PAGARME_ALERT_EVOLUTION_INSTANCE", "cake-interno")
 EVOLUTION_ENV_FILE = os.environ.get("PAGARME_ALERT_EVOLUTION_ENV_FILE", "/opt/cake-interno-whatsapp/.env")
 MOGO_REPORTS_ROOT = os.environ.get("PAGARME_MOGO_REPORTS_ROOT", "/root/workspaces/cake-brain/relatorios/Mogo")
+
+
+def _format_brl(cents: int) -> str:
+    return f"R$ {cents / 100:,.2f}".replace(",", "X").replace(".", ",").replace("X", ".")
+
+
+def _safe_limit(value: int | str | None, default: int = 5, maximum: int = 20) -> int:
+    try:
+        limit = int(value) if value is not None else default
+    except (TypeError, ValueError):
+        limit = default
+    return max(1, min(limit, maximum))
+
+
+def _manual_history_summary(history) -> dict:
+    if history is None:
+        return {"status": "not_checked", "has_prior_valid_purchase": False}
+
+    order = history.order
+    order_summary = None
+    if order is not None:
+        order_summary = {
+            "order_number": order.order_number,
+            "status": order.status,
+            "customer_name": order.customer_name,
+            "date": order.date,
+            "delivery_date": order.delivery_date,
+            "delivery_time": order.delivery_time,
+            "amount": order.amount,
+            "origin": order.origin,
+            "item": order.item,
+        }
+
+    return {
+        "status": history.status,
+        "has_prior_valid_purchase": history.has_prior_valid_purchase,
+        "matched_by": history.matched_by,
+        "valid_purchase_count": history.valid_purchase_count,
+        "order": order_summary,
+    }
+
+
+def manual_antifraud_checks(engine: RiskEngine, search: str = "", limit: int | str | None = 5) -> list[dict]:
+    """Recompute antifraud status for recent paid charges stored by the webhook."""
+    limit = _safe_limit(limit)
+    search = (search or "").strip()
+    params: list[object] = []
+    where = "(event_type = 'charge.paid' OR status = 'paid')"
+
+    if search:
+        like = f"%{search.lower()}%"
+        digits = "".join(ch for ch in search if ch.isdigit())
+        where += """
+            AND (
+                lower(customer_name) LIKE ?
+                OR lower(customer_email) LIKE ?
+                OR lower(holder_name) LIKE ?
+                OR lower(charge_id) = ?
+                OR card_last4 = ?
+            )
+        """
+        params.extend([like, like, like, search.lower(), digits[-4:] if digits else search])
+
+    with engine._connect() as conn:
+        conn.row_factory = None
+        rows = list(conn.execute(
+            f"""
+            SELECT raw_json
+            FROM charge_events
+            WHERE {where}
+            ORDER BY created_at DESC
+            LIMIT ?
+            """,
+            [*params, limit],
+        ))
+
+    checks: list[dict] = []
+    for (raw_json,) in rows:
+        payload = json.loads(raw_json)
+        result = engine.handle_event(payload)
+        charge = result.charge
+        item = {
+            "alert": result.alert,
+            "score": result.score,
+            "reasons": result.reasons,
+            "charge": {
+                "charge_id": charge.charge_id,
+                "event_type": charge.event_type,
+                "status": charge.status,
+                "created_at": charge.created_at.isoformat(),
+                "amount": charge.amount,
+                "amount_brl": _format_brl(charge.amount),
+                "customer_name": charge.customer_name,
+                "customer_email": charge.customer_email,
+                "card_brand": charge.card_brand,
+                "card_last4": charge.card_last4,
+                "holder_name": charge.holder_name,
+            },
+            "history": _manual_history_summary(result.customer_history),
+        }
+        if result.alert:
+            item["alert_text"] = format_alert(result)
+        checks.append(item)
+
+    return checks
+
+
+def manual_antifraud_response(engine: RiskEngine, query_string: str = "") -> dict:
+    query = parse_qs(query_string, keep_blank_values=True)
+    search = (query.get("q") or query.get("search") or [""])[0]
+    limit = (query.get("limit") or ["5"])[0]
+    checks = manual_antifraud_checks(engine, search, limit)
+    return {
+        "ok": True,
+        "query": search,
+        "count": len(checks),
+        "checks": checks,
+    }
 
 
 def _authorized(header: str | None) -> bool:
@@ -193,9 +311,13 @@ class Handler(BaseHTTPRequestHandler):
         self.wfile.write(data)
 
     def do_GET(self):
-        path = urlparse(self.path).path
+        parsed = urlparse(self.path)
+        path = parsed.path
         if path == "/health" or path == WEBHOOK_PATH + "/health":
             self._send_json(200, {"ok": True})
+            return
+        if path == WEBHOOK_PATH + "/manual-check":
+            self._send_json(200, manual_antifraud_response(self.engine, parsed.query))
             return
         self._send_json(404, {"ok": False})
 

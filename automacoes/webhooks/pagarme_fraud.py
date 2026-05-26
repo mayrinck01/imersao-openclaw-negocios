@@ -240,6 +240,7 @@ class CustomerHistoryResult:
     status: str
     error: str | None = None
     order: MogoOrderSummary | None = None
+    valid_purchase_count: int = 0
 
 
 class CustomerHistoryChecker(Protocol):
@@ -335,6 +336,10 @@ class LocalMogoHistoryChecker:
         self._email_orders: dict[str, MogoOrderSummary] = {}
         self._phone_orders: dict[str, MogoOrderSummary] = {}
         self._name_orders: dict[str, MogoOrderSummary] = {}
+        self._document_order_ids: dict[str, set[str]] = {}
+        self._email_order_ids: dict[str, set[str]] = {}
+        self._phone_order_ids: dict[str, set[str]] = {}
+        self._name_order_ids: dict[str, set[str]] = {}
 
     def lookup(self, charge: ChargeEvent) -> CustomerHistoryResult:
         try:
@@ -344,23 +349,23 @@ class LocalMogoHistoryChecker:
 
         document = only_digits(charge.customer_document)
         if document and document in self._documents:
-            return CustomerHistoryResult(True, "document", "valid_purchase", None, self._document_orders.get(document))
+            return CustomerHistoryResult(True, "document", "valid_purchase", None, self._document_orders.get(document), self._valid_count(self._document_order_ids, document))
 
         email = normalize_text(charge.customer_email)
         if email and email in self._emails:
-            return CustomerHistoryResult(True, "email", "valid_purchase", None, self._email_orders.get(email))
+            return CustomerHistoryResult(True, "email", "valid_purchase", None, self._email_orders.get(email), self._valid_count(self._email_order_ids, email))
 
         phone = only_digits(charge.customer_phone)
         if phone:
             for indexed in self._phones:
                 if phone == indexed or phone.endswith(indexed) or indexed.endswith(phone):
-                    return CustomerHistoryResult(True, "phone", "valid_purchase", None, self._phone_orders.get(indexed))
+                    return CustomerHistoryResult(True, "phone", "valid_purchase", None, self._phone_orders.get(indexed), self._valid_count(self._phone_order_ids, indexed))
 
         name = normalize_text(charge.customer_name)
         if name:
             for indexed_name in self._names:
                 if names_compatible(name, indexed_name):
-                    return CustomerHistoryResult(True, "name", "valid_purchase", None, self._name_orders.get(indexed_name))
+                    return CustomerHistoryResult(True, "name", "valid_purchase", None, self._name_orders.get(indexed_name), self._valid_count(self._name_order_ids, indexed_name))
 
         return CustomerHistoryResult(False, None, "not_found", None)
 
@@ -405,23 +410,40 @@ class LocalMogoHistoryChecker:
         order = self._order_summary(row)
         document = only_digits(_first_present(row, ("document", "documento", "cpf", "cnpj", "customer_document")))
         if document:
-            self._documents.add(document)
-            self._document_orders.setdefault(document, order)
+            self._index_purchase(document, order, self._documents, self._document_orders, self._document_order_ids)
 
         email = normalize_text(_first_present(row, ("email", "customer_email", "cliente_email")))
         if email:
-            self._emails.add(email)
-            self._email_orders.setdefault(email, order)
+            self._index_purchase(email, order, self._emails, self._email_orders, self._email_order_ids)
 
         phone = only_digits(_first_present(row, ("telefone", "phone", "whatsapp", "celular", "customer_phone")))
         if phone:
-            self._phones.add(phone)
-            self._phone_orders.setdefault(phone, order)
+            self._index_purchase(phone, order, self._phones, self._phone_orders, self._phone_order_ids)
 
         name = normalize_text(_first_present(row, ("cliente", "A5", "nome", "NomeCliente", "customer_name")))
         if name:
-            self._names.add(name)
-            self._name_orders.setdefault(name, order)
+            self._index_purchase(name, order, self._names, self._name_orders, self._name_order_ids)
+
+    def _index_purchase(
+        self,
+        key: str,
+        order: MogoOrderSummary,
+        keys: set[str],
+        orders: dict[str, MogoOrderSummary],
+        order_ids: dict[str, set[str]],
+    ) -> None:
+        keys.add(key)
+        orders.setdefault(key, order)
+        order_ids.setdefault(key, set()).add(self._purchase_id(order))
+
+    def _purchase_id(self, order: MogoOrderSummary) -> str:
+        if order.order_number:
+            return order.order_number
+        fallback = "|".join((order.date, order.amount, order.customer_name, order.item))
+        return fallback or "-"
+
+    def _valid_count(self, order_ids: dict[str, set[str]], key: str) -> int:
+        return len(order_ids.get(key, set()))
 
     def _order_summary(self, row: dict[str, Any]) -> MogoOrderSummary:
         address_parts = [
@@ -582,6 +604,18 @@ class RiskEngine:
         except Exception as exc:
             return CustomerHistoryResult(False, None, "error", exc.__class__.__name__)
 
+    def _history_can_suppress_alerts(self, charge: ChargeEvent, history: CustomerHistoryResult) -> bool:
+        if not history.has_prior_valid_purchase:
+            return False
+        if history.matched_by in {"document", "email", "phone"}:
+            return True
+        has_stronger_identity = bool(
+            only_digits(charge.customer_document)
+            or normalize_text(charge.customer_email)
+            or only_digits(charge.customer_phone)
+        )
+        return not has_stronger_identity
+
     def _score_paid_charge(self, charge: ChargeEvent) -> tuple[int, list[str], CustomerHistoryResult]:
         strong_score = 0
         weak_score = 0
@@ -595,7 +629,8 @@ class RiskEngine:
             cards.add(charge.card_key)
 
         history = self._customer_history(charge)
-        suppress_weak = history.has_prior_valid_purchase
+        suppress_weak = self._history_can_suppress_alerts(charge, history)
+        suppress_checkout_retry = suppress_weak
         if history.status == "error":
             detail = f": {history.error}" if history.error else ""
             operational_reasons.append(f"Histórico Mogo não validado{detail}")
@@ -609,16 +644,16 @@ class RiskEngine:
                 weak_score += 50
                 weak_reasons.append("Titular diferente do nome do cliente")
 
-        if failed:
+        if failed and not suppress_checkout_retry:
             strong_score += 50
             strong_reasons.append(f"Falha recente antes de pagamento aprovado ({len(failed)} em {WINDOW_MINUTES} min)")
 
-        if len(cards) >= 2:
+        if len(cards) >= 2 and not suppress_checkout_retry:
             strong_score += 50
             strong_reasons.append(f"2+ cartões diferentes no mesmo cliente/documento/email em {WINDOW_MINUTES} min")
 
         failed_amounts = [int(row["amount"] or 0) for row in failed]
-        if failed_amounts and max(failed_amounts) > charge.amount:
+        if failed_amounts and max(failed_amounts) > charge.amount and not suppress_checkout_retry:
             strong_score += 30
             strong_reasons.append("Valor maior falhou e valor menor foi aprovado")
 
@@ -710,8 +745,8 @@ def _format_cpf(value: str) -> str:
 def _mogo_order_header(history: CustomerHistoryResult | None) -> str:
     order = history.order if history else None
     if order and order.order_number:
-        return f"🧾 PEDIDO MOGO: #{order.order_number}"
-    return "🧾 PEDIDO MOGO: não localizado"
+        return f"🧾 HISTÓRICO MOGO: pedido #{order.order_number}"
+    return "🧾 HISTÓRICO MOGO: não localizado"
 
 
 def _mogo_customer_lines(history: CustomerHistoryResult | None, charge: ChargeEvent) -> list[str]:
@@ -727,15 +762,16 @@ def _mogo_customer_lines(history: CustomerHistoryResult | None, charge: ChargeEv
 
 def _mogo_order_lines(history: CustomerHistoryResult | None) -> list[str]:
     if history is None:
-        return ["Pedido Mogo", "• Histórico local: não consultado"]
+        return ["Histórico Mogo", "• Histórico local: não consultado"]
     if history.status == "error":
         detail = f" ({history.error})" if history.error else ""
-        return ["Pedido Mogo", f"• Histórico local: não validado{detail}"]
+        return ["Histórico Mogo", f"• Histórico local: não validado{detail}"]
     if not history.has_prior_valid_purchase:
-        return ["Pedido Mogo", "• Histórico local: pedido/histórico não localizado"]
+        return ["Histórico Mogo", "• Histórico local: pedido/histórico não localizado"]
 
     order = history.order
-    lines = ["Pedido Mogo", f"• Histórico local: localizado por {history.matched_by or '-'}"]
+    count_text = f" ({history.valid_purchase_count} compra(s) válida(s))" if history.valid_purchase_count else ""
+    lines = ["Histórico Mogo", f"• Histórico local: localizado por {history.matched_by or '-'}{count_text}"]
     if not order:
         return lines
 
@@ -757,8 +793,7 @@ def _mogo_order_lines(history: CustomerHistoryResult | None) -> list[str]:
 def format_alert(result: RiskResult) -> str:
     charge = result.charge
     history = result.customer_history
-    order = history.order if history else None
-    value_line = _ensure_brl_text(order.amount) if order and order.amount else _format_brl(charge.amount)
+    value_line = _format_brl(charge.amount)
     reasons = "\n".join(f"• {reason}" for reason in result.reasons) or "• Sem motivo detalhado"
     lines = [
         "🚨 POSSÍVEL FRAUDE — SEGURAR ENTREGA",
