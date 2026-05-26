@@ -5,7 +5,7 @@ from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "webhooks"))
-from automacoes.webhooks.pagarme_fraud import CustomerHistoryResult, RiskEngine
+from automacoes.webhooks.pagarme_fraud import CustomerHistoryResult, FraudHotlist, RiskEngine
 from automacoes.webhooks import pagarme_webhook_server as server
 
 
@@ -50,7 +50,7 @@ class PagarmeWebhookDeliveryTests(unittest.TestCase):
                 None,
                 valid_purchase_count=1,
             ))
-            engine = RiskEngine(db.name, history_checker=checker)
+            engine = RiskEngine(db.name, history_checker=checker, hotlist=FraudHotlist.empty())
             now = datetime.now(timezone.utc)
             engine.handle_event(pagarme_event(
                 "charge.payment_failed",
@@ -83,7 +83,7 @@ class PagarmeWebhookDeliveryTests(unittest.TestCase):
     def test_manual_antifraud_response_reads_query_string(self):
         with tempfile.NamedTemporaryFile() as db:
             checker = FakeHistoryChecker(CustomerHistoryResult(True, "name", "valid_purchase", None))
-            engine = RiskEngine(db.name, history_checker=checker)
+            engine = RiskEngine(db.name, history_checker=checker, hotlist=FraudHotlist.empty())
             engine.handle_event(pagarme_event("charge.paid", "ch_paid_ana"))
 
             response = server.manual_antifraud_response(engine, "q=Ana%20Paula&limit=1")
