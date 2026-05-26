@@ -472,7 +472,8 @@ class PagarmeFraudTests(unittest.TestCase):
             self.assertIn("• Endereço de entrega: Rua Dias Ferreira, 123 - Leblon", alert)
             self.assertIn("Resumo", alert)
             self.assertIn("• Valor do pedido: R$ 230,00", alert)
-            self.assertIn("• Origem pagamento: Pagar.me", alert)
+            self.assertNotIn("• Origem pagamento: Pagar.me", alert)
+            self.assertNotIn("• Cobrança Pagar.me:", alert)
             self.assertIn("• Nível do alerta: FORTE", alert)
             self.assertIn("Cliente no Mogo", alert)
             self.assertIn("• Nome: Cliente Recorrente", alert)
@@ -530,6 +531,97 @@ class PagarmeFraudTests(unittest.TestCase):
             self.assertIn("• Modalidade: Entrega", alert)
             self.assertIn("• Agendamento: não informado — ⚠️ tratar como para agora", alert)
             self.assertIn("• Endereço de entrega: Rua Visconde de Pirajá, 44 - Ipanema", alert)
+
+    def test_alert_uses_operational_mogo_order_when_no_prior_history(self):
+        with tempfile.NamedTemporaryFile() as db:
+            checker = FakeHistoryChecker(CustomerHistoryResult(
+                False,
+                None,
+                "not_found",
+                None,
+                None,
+                0,
+                MogoOrderSummary(
+                    order_number="038708",
+                    status="Pendente",
+                    customer_name="Cristina Tobji",
+                    delivery_date="27/05/2026",
+                    delivery_time="16:00",
+                    fulfillment="P/Entregar (Motoboy)",
+                    address="Rua Dona Mariana, 136, 104",
+                    neighborhood="Botafogo - Rio de Janeiro/RJ",
+                    amount="208,80",
+                    origin="Neemo",
+                    phone="21988780670",
+                    email="cristina.tobji@jree.com.br",
+                ),
+            ))
+            engine = RiskEngine(db.name, history_checker=checker)
+            result = engine.handle_event(event(
+                "charge.paid",
+                "ch_operational_order",
+                customer_name="Cristina Tobji",
+                email="cristina.tobji@jree.com.br",
+                document="54246911100",
+                phone="21988780670",
+                amount=20880,
+                holder="J R S DE AQUINO",
+                holder_document="12345678901",
+            ))
+
+            alert = format_alert(result)
+
+            self.assertIn("HISTÓRICO MOGO: não localizado", alert)
+            self.assertIn("Pedido", alert)
+            self.assertIn("• Modalidade: Entrega", alert)
+            self.assertIn("• Agendamento: 27/05/2026 16:00", alert)
+            self.assertIn("• Endereço de entrega: Rua Dona Mariana, 136, 104 - Botafogo - Rio de Janeiro/RJ", alert)
+            self.assertIn("• Pedido operacional: #038708 localizado no Mogo", alert)
+            self.assertNotIn("• Origem pagamento: Pagar.me", alert)
+            self.assertNotIn("• Cobrança Pagar.me:", alert)
+
+    def test_local_mogo_history_checker_finds_operational_pending_order_without_valid_history(self):
+        with tempfile.TemporaryDirectory() as root:
+            folder = Path(root) / "Pendentes"
+            folder.mkdir(parents=True)
+            (folder / "26-05-2026.json").write_text(json.dumps({
+                "registros": [{
+                    "NumeroPedido": "038708",
+                    "StatusEntrega": "Pendente",
+                    "NomeCliente": "Cristina Tobji",
+                    "DataEntrega": "27/05/2026",
+                    "HoraEntregaTxt": "16:00",
+                    "ObsEntrega_Descricao": "P/Entregar (Motoboy)",
+                    "Logradouro": "Rua Dona Mariana",
+                    "Numero": "136",
+                    "Complemento": "104",
+                    "Bairro": "Botafogo",
+                    "Cidade": "Rio de Janeiro",
+                    "Estado": "RJ",
+                    "CelularCliente": "21988780670",
+                    "Email": "cristina.tobji@jree.com.br",
+                    "ValorTotal": "208,80",
+                    "OrigemPedido": "Neemo",
+                }]
+            }), encoding="utf-8")
+            checker = LocalMogoHistoryChecker(root)
+            result = checker.lookup(extract_charge(event(
+                "charge.paid",
+                "ch_pending_order",
+                customer_name="Cristina Tobji",
+                email="cristina.tobji@jree.com.br",
+                document="54246911100",
+                phone="21988780670",
+                amount=20880,
+            )))
+
+            self.assertFalse(result.has_prior_valid_purchase)
+            self.assertIsNotNone(result.operational_order)
+            self.assertEqual(result.operational_order.order_number, "038708")
+            self.assertEqual(result.operational_order.delivery_date, "27/05/2026")
+            self.assertEqual(result.operational_order.delivery_time, "16:00")
+            self.assertEqual(result.operational_order.address, "Rua Dona Mariana, 136, 104")
+            self.assertEqual(result.operational_order.neighborhood, "Botafogo - Rio de Janeiro/RJ")
 
     def test_local_mogo_history_checker_matches_paid_purchase_by_phone(self):
         with tempfile.TemporaryDirectory() as root:

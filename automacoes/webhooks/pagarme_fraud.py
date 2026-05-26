@@ -11,6 +11,7 @@ import hashlib
 import json
 import re
 import sqlite3
+import sys
 import unicodedata
 from dataclasses import dataclass
 from datetime import datetime, timedelta, timezone
@@ -83,6 +84,39 @@ def _clean_mogo_value(value: str | None) -> str:
     value = re.sub(r"<[^>]+>", " ", value)
     value = value.replace("&nbsp;", " ")
     return re.sub(r"\s+", " ", value).strip()
+
+
+def _parse_brlish_number(value: str | int | float | None) -> float | None:
+    if value is None:
+        return None
+    if isinstance(value, (int, float)):
+        return float(value)
+    text = str(value).strip()
+    if not text:
+        return None
+    text = re.sub(r"[^0-9,.-]+", "", text)
+    if "," in text:
+        text = text.replace(".", "").replace(",", ".")
+    try:
+        return float(text)
+    except ValueError:
+        return None
+
+
+def _format_address_parts(row: dict[str, Any]) -> tuple[str, str]:
+    address_parts = [
+        _clean_mogo_value(_first_present(row, ("Logradouro", "logradouro", "endereco", "Endereço"))),
+        _clean_mogo_value(_first_present(row, ("Numero", "Número", "numero", "Nº"))),
+        _clean_mogo_value(_first_present(row, ("Complemento", "complemento"))),
+    ]
+    address = ", ".join(part for part in address_parts if part)
+    city = _clean_mogo_value(_first_present(row, ("Cidade", "cidade")))
+    state = _clean_mogo_value(_first_present(row, ("Estado", "UF", "estado", "uf")))
+    neighborhood_parts = [
+        _clean_mogo_value(_first_present(row, ("Bairro", "bairro"))),
+        f"{city}/{state}" if city and state else city or state,
+    ]
+    return address, " - ".join(part for part in neighborhood_parts if part)
 
 
 def _extract_phone_from_obj(value: Any) -> str:
@@ -247,6 +281,7 @@ class CustomerHistoryResult:
     error: str | None = None
     order: MogoOrderSummary | None = None
     valid_purchase_count: int = 0
+    operational_order: MogoOrderSummary | None = None
 
 
 class CustomerHistoryChecker(Protocol):
@@ -257,6 +292,40 @@ class CustomerHistoryChecker(Protocol):
 class NoopCustomerHistoryChecker:
     def lookup(self, charge: ChargeEvent) -> CustomerHistoryResult:
         return CustomerHistoryResult(False, None, "not_configured", None)
+
+
+class CompositeCustomerHistoryChecker:
+    def __init__(self, *checkers: CustomerHistoryChecker):
+        self.checkers = checkers
+
+    def lookup(self, charge: ChargeEvent) -> CustomerHistoryResult:
+        merged = CustomerHistoryResult(False, None, "not_found", None)
+        for checker in self.checkers:
+            result = checker.lookup(charge)
+            if result.has_prior_valid_purchase and not merged.has_prior_valid_purchase:
+                merged = CustomerHistoryResult(
+                    result.has_prior_valid_purchase,
+                    result.matched_by,
+                    result.status,
+                    result.error,
+                    result.order,
+                    result.valid_purchase_count,
+                    merged.operational_order or result.operational_order,
+                )
+            elif result.status == "error" and not merged.has_prior_valid_purchase and merged.status != "error":
+                merged = CustomerHistoryResult(False, None, "error", result.error, None, 0, merged.operational_order or result.operational_order)
+
+            if result.operational_order and not merged.operational_order:
+                merged = CustomerHistoryResult(
+                    merged.has_prior_valid_purchase,
+                    merged.matched_by,
+                    merged.status,
+                    merged.error,
+                    merged.order,
+                    merged.valid_purchase_count,
+                    result.operational_order,
+                )
+        return merged
 
 
 @dataclass(frozen=True)
@@ -347,6 +416,7 @@ class LocalMogoHistoryChecker:
         self._email_order_ids: dict[str, set[str]] = {}
         self._phone_order_ids: dict[str, set[str]] = {}
         self._name_order_ids: dict[str, set[str]] = {}
+        self._operational_orders: list[MogoOrderSummary] = []
 
     def lookup(self, charge: ChargeEvent) -> CustomerHistoryResult:
         try:
@@ -354,27 +424,29 @@ class LocalMogoHistoryChecker:
         except Exception as exc:
             return CustomerHistoryResult(False, None, "error", exc.__class__.__name__)
 
+        operational_order = self._find_operational_order(charge)
+
         document = only_digits(charge.customer_document)
         if document and document in self._documents:
-            return CustomerHistoryResult(True, "document", "valid_purchase", None, self._document_orders.get(document), self._valid_count(self._document_order_ids, document))
+            return CustomerHistoryResult(True, "document", "valid_purchase", None, self._document_orders.get(document), self._valid_count(self._document_order_ids, document), operational_order)
 
         email = normalize_text(charge.customer_email)
         if email and email in self._emails:
-            return CustomerHistoryResult(True, "email", "valid_purchase", None, self._email_orders.get(email), self._valid_count(self._email_order_ids, email))
+            return CustomerHistoryResult(True, "email", "valid_purchase", None, self._email_orders.get(email), self._valid_count(self._email_order_ids, email), operational_order)
 
         phone = only_digits(charge.customer_phone)
         if phone:
             for indexed in self._phones:
                 if phone == indexed or phone.endswith(indexed) or indexed.endswith(phone):
-                    return CustomerHistoryResult(True, "phone", "valid_purchase", None, self._phone_orders.get(indexed), self._valid_count(self._phone_order_ids, indexed))
+                    return CustomerHistoryResult(True, "phone", "valid_purchase", None, self._phone_orders.get(indexed), self._valid_count(self._phone_order_ids, indexed), operational_order)
 
         name = normalize_text(charge.customer_name)
         if name:
             for indexed_name in self._names:
                 if names_compatible(name, indexed_name):
-                    return CustomerHistoryResult(True, "name", "valid_purchase", None, self._name_orders.get(indexed_name), self._valid_count(self._name_order_ids, indexed_name))
+                    return CustomerHistoryResult(True, "name", "valid_purchase", None, self._name_orders.get(indexed_name), self._valid_count(self._name_order_ids, indexed_name), operational_order)
 
-        return CustomerHistoryResult(False, None, "not_found", None)
+        return CustomerHistoryResult(False, None, "not_found", None, None, 0, operational_order)
 
     def _load_once(self) -> None:
         if self._loaded:
@@ -389,9 +461,40 @@ class LocalMogoHistoryChecker:
             except Exception:
                 continue
             for row in self._iter_rows(payload):
+                if self._is_operational_order_row(path, row):
+                    self._index_operational_row(row)
                 if self._is_valid_purchase_row(path, row):
                     self._index_row(row)
+        for path in self._operational_xlsx_paths():
+            for row in self._iter_xlsx_rows(path):
+                self._index_operational_row(row)
         self._loaded = True
+
+    def _operational_xlsx_paths(self) -> list[Path]:
+        folders = ("Pendentes", "Na Entrega", "Pedidos Entregues")
+        paths: list[Path] = []
+        for folder in folders:
+            candidate = self.reports_root / folder
+            if candidate.exists():
+                paths.extend(sorted(candidate.glob("*.xlsx"), key=lambda path: path.stat().st_mtime, reverse=True)[:10])
+        return paths
+
+    def _iter_xlsx_rows(self, path: Path) -> list[dict[str, Any]]:
+        try:
+            import openpyxl
+        except Exception:
+            return []
+        try:
+            workbook = openpyxl.load_workbook(path, read_only=True, data_only=True)
+            sheet = workbook.active
+            rows = sheet.iter_rows(values_only=True)
+            headers = [str(value or "").strip() for value in next(rows)]
+            return [
+                {headers[index]: value for index, value in enumerate(row) if index < len(headers)}
+                for row in rows
+            ]
+        except Exception:
+            return []
 
     def _iter_rows(self, payload: Any) -> list[dict[str, Any]]:
         if isinstance(payload, list):
@@ -412,6 +515,44 @@ class LocalMogoHistoryChecker:
         if "historico pagamento" in folder:
             return bool(_first_present(row, ("dataPag", "idPag", "numPed", "chave")))
         return False
+
+    def _is_operational_order_row(self, path: Path, row: dict[str, Any]) -> bool:
+        folder = normalize_text(path.parent.name)
+        if any(name in folder for name in ("pendentes", "na entrega", "pedidos entregues")):
+            return True
+        return bool(_first_present(row, ("NumeroPedido", "Nº Pedido"))) and bool(_first_present(row, ("DataEntrega", "Data Agendada", "HoraEntregaTxt", "Hora Agendada")))
+
+    def _index_operational_row(self, row: dict[str, Any]) -> None:
+        order = self._order_summary(row)
+        if order.order_number or order.customer_name:
+            self._operational_orders.append(order)
+
+    def _find_operational_order(self, charge: ChargeEvent) -> MogoOrderSummary | None:
+        best: tuple[int, MogoOrderSummary] | None = None
+        for order in self._operational_orders:
+            score = self._operational_match_score(charge, order)
+            if score and (best is None or score > best[0]):
+                best = (score, order)
+        if best and best[0] >= 60:
+            return best[1]
+        return None
+
+    def _operational_match_score(self, charge: ChargeEvent, order: MogoOrderSummary) -> int:
+        score = 0
+        charge_phone = only_digits(charge.customer_phone)
+        order_phone = only_digits(order.phone)
+        if charge_phone and order_phone and (charge_phone == order_phone or charge_phone.endswith(order_phone) or order_phone.endswith(charge_phone)):
+            score += 100
+        if normalize_text(charge.customer_email) and normalize_text(charge.customer_email) == normalize_text(order.email):
+            score += 90
+        if only_digits(charge.customer_document) and only_digits(charge.customer_document) == only_digits(order.document):
+            score += 100
+        if names_compatible(charge.customer_name, order.customer_name):
+            score += 30
+        order_amount = _parse_brlish_number(order.amount)
+        if order_amount is not None and abs(order_amount - (charge.amount / 100)) < 0.01:
+            score += 30
+        return score
 
     def _index_row(self, row: dict[str, Any]) -> None:
         order = self._order_summary(row)
@@ -453,28 +594,98 @@ class LocalMogoHistoryChecker:
         return len(order_ids.get(key, set()))
 
     def _order_summary(self, row: dict[str, Any]) -> MogoOrderSummary:
-        address_parts = [
-            _clean_mogo_value(_first_present(row, ("Logradouro", "logradouro", "endereco", "Endereço"))),
-            _clean_mogo_value(_first_present(row, ("Numero", "Número", "numero", "Nº"))),
-        ]
-        address = ", ".join(part for part in address_parts if part)
+        address, neighborhood = _format_address_parts(row)
         return MogoOrderSummary(
             order_number=_clean_mogo_value(_first_present(row, ("A13", "NumeroPedido", "Nº Pedido", "numPed", "pedido", "numero_pedido"))),
-            status=_clean_mogo_value(_first_present(row, ("A10", "status", "situacao", "posicao", "Pago"))),
-            customer_name=_clean_mogo_value(_first_present(row, ("cliente", "A5", "nome", "NomeCliente", "customer_name", "Cliente"))),
-            date=_clean_mogo_value(_first_present(row, ("A0", "data", "Data Pedido", "dataPed", "dataPag"))),
+            status=_clean_mogo_value(_first_present(row, ("A10", "StatusEntrega", "StatusPedido", "StatusPago", "status", "situacao", "posicao", "Pago"))),
+            customer_name=_clean_mogo_value(_first_present(row, ("cliente", "A5", "nome", "NomeCliente", "Cliente_Nome", "customer_name", "Cliente"))),
+            date=_clean_mogo_value(_first_present(row, ("A0", "data", "Data Pedido", "DataPedido", "dataPed", "dataPag"))),
             delivery_date=_clean_mogo_value(_first_present(row, ("Data Entrega", "DataEntrega", "Data Agendada"))),
             delivery_time=_clean_mogo_value(_first_present(row, ("Hora Entrega", "HoraEntregaTxt", "Hora Agendada"))),
-            fulfillment=_clean_mogo_value(_first_present(row, ("A6", "Forma Entrega", "FormaEntrega", "forma_entrega", "delivery_type"))),
+            fulfillment=_clean_mogo_value(_first_present(row, ("A6", "Forma Entrega", "FormaEntrega", "ObsEntrega_Descricao", "forma_entrega", "delivery_type"))),
             address=address,
-            neighborhood=_clean_mogo_value(_first_present(row, ("Bairro", "bairro"))),
-            amount=_clean_mogo_value(_first_present(row, ("Valor Final", "ValorFinal", "totalped", "A4", "valor"))),
+            neighborhood=neighborhood,
+            amount=_clean_mogo_value(_first_present(row, ("ValorTotal", "ValorPago", "Valor Final", "ValorFinal", "totalped", "A4", "valor"))),
             origin=_clean_mogo_value(_first_present(row, ("Origem", "OrigemPedido", "origem"))),
             item=_clean_mogo_value(_first_present(row, ("A2", "Produto", "produto", "item"))),
-            phone=_clean_mogo_value(_first_present(row, ("telefone", "phone", "whatsapp", "celular", "customer_phone"))),
-            document=_clean_mogo_value(_first_present(row, ("document", "documento", "cpf", "cnpj", "customer_document"))),
-            email=_clean_mogo_value(_first_present(row, ("email", "customer_email", "cliente_email"))),
+            phone=_clean_mogo_value(_first_present(row, ("TelefoneCliente", "CelularCliente", "telefone", "phone", "whatsapp", "celular", "customer_phone"))),
+            document=_clean_mogo_value(_first_present(row, ("Documento", "CPF", "document", "documento", "cpf", "cnpj", "customer_document"))),
+            email=_clean_mogo_value(_first_present(row, ("Email", "email", "customer_email", "cliente_email"))),
         )
+
+
+class LiveMogoOperationalOrderChecker:
+    """Fetch current delivery/pickup context directly from Mogo open orders."""
+
+    def __init__(self, scripts_dir: str | Path | None = None):
+        self.scripts_dir = Path(scripts_dir or Path(__file__).resolve().parents[1] / "scripts")
+
+    def lookup(self, charge: ChargeEvent) -> CustomerHistoryResult:
+        try:
+            order = self._lookup_order(charge)
+        except BaseException:
+            order = None
+        return CustomerHistoryResult(False, None, "not_found", None, None, 0, order)
+
+    def _lookup_order(self, charge: ChargeEvent) -> MogoOrderSummary | None:
+        if str(self.scripts_dir) not in sys.path:
+            sys.path.insert(0, str(self.scripts_dir))
+        from mogo_login import MOGO_URL, mogo_login  # type: ignore
+
+        session = mogo_login(verbose=False)
+        rows = self._fetch_pending_rows(session, MOGO_URL) + self._fetch_delivery_rows(session, MOGO_URL)
+        best: tuple[int, MogoOrderSummary] | None = None
+        local = LocalMogoHistoryChecker(Path("/nonexistent"))
+        for row in rows:
+            order = local._order_summary(row)
+            score = local._operational_match_score(charge, order)
+            if score and (best is None or score > best[0]):
+                best = (score, order)
+        if best and best[0] >= 60:
+            return best[1]
+        return None
+
+    def _fetch_pending_rows(self, session: Any, mogo_url: str) -> list[dict[str, Any]]:
+        response = session.get(
+            f"{mogo_url}/Pedido/ListPedidosParaEntrega",
+            params={
+                "_search": "true",
+                "rows": "1000",
+                "page": "1",
+                "sidx": "DataEntrega",
+                "sord": "asc",
+                "filters": json.dumps({
+                    "groupOp": "AND",
+                    "rules": [{"field": "StatusEntrega", "op": "eq", "data": "Pendente"}],
+                }),
+            },
+            timeout=30,
+        )
+        if response.status_code != 200:
+            return []
+        payload = response.json()
+        rows = payload.get("rows", [])
+        return [row for row in rows if isinstance(row, dict)]
+
+    def _fetch_delivery_rows(self, session: Any, mogo_url: str) -> list[dict[str, Any]]:
+        response = session.post(
+            f"{mogo_url}/Pedido/ListPedidosParaEntrega",
+            params={"cFiltroTipoEntrega": "1"},
+            data={
+                "_search": "false",
+                "nd": "1",
+                "rows": "1000",
+                "page": "1",
+                "sidx": "HoraInclusao",
+                "sord": "desc",
+            },
+            timeout=30,
+        )
+        if response.status_code != 200:
+            return []
+        payload = response.json()
+        rows = payload.get("rows", [])
+        return [row for row in rows if isinstance(row, dict)]
 
 
 @dataclass(frozen=True)
@@ -780,7 +991,7 @@ def _mogo_order_header(history: CustomerHistoryResult | None) -> str:
 
 
 def _mogo_customer_lines(history: CustomerHistoryResult | None, charge: ChargeEvent) -> list[str]:
-    order = history.order if history else None
+    order = _context_order(history)
     return [
         "Cliente no Mogo",
         f"• Nome: {(order.customer_name if order and order.customer_name else charge.customer_name) or '-'}",
@@ -792,6 +1003,12 @@ def _mogo_customer_lines(history: CustomerHistoryResult | None, charge: ChargeEv
 
 def _format_order_address(order: MogoOrderSummary) -> str:
     return " - ".join(part for part in (order.address, order.neighborhood) if part)
+
+
+def _context_order(history: CustomerHistoryResult | None) -> MogoOrderSummary | None:
+    if not history:
+        return None
+    return history.operational_order or history.order
 
 
 def _order_modality(order: MogoOrderSummary | None) -> str:
@@ -815,7 +1032,7 @@ def _order_schedule(order: MogoOrderSummary | None) -> str:
 
 
 def _fulfillment_lines(history: CustomerHistoryResult | None) -> list[str]:
-    order = history.order if history else None
+    order = _context_order(history)
     modality = _order_modality(order)
     lines = [
         "Pedido",
@@ -835,7 +1052,11 @@ def _mogo_order_lines(history: CustomerHistoryResult | None) -> list[str]:
         detail = f" ({history.error})" if history.error else ""
         return ["Histórico Mogo", f"• Histórico local: não validado{detail}"]
     if not history.has_prior_valid_purchase:
-        return ["Histórico Mogo", "• Histórico local: pedido/histórico não localizado"]
+        lines = ["Histórico Mogo", "• Histórico local: pedido/histórico não localizado"]
+        if history.operational_order:
+            suffix = f" #{history.operational_order.order_number}" if history.operational_order.order_number else ""
+            lines.append(f"• Pedido operacional:{suffix} localizado no Mogo")
+        return lines
 
     order = history.order
     count_text = f" ({history.valid_purchase_count} compra(s) válida(s))" if history.valid_purchase_count else ""
@@ -875,8 +1096,6 @@ def format_alert(result: RiskResult) -> str:
         "Resumo",
         f"• Valor do pedido: {value_line}",
         f"• Data/hora: {_format_brt_datetime(charge.created_at)}",
-        "• Origem pagamento: Pagar.me",
-        f"• Cobrança Pagar.me: {charge.charge_id or '-'}",
         f"• Nível do alerta: {_alert_level(result.score)}",
         "",
         *_mogo_customer_lines(history, charge),

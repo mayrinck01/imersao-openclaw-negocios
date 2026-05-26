@@ -14,7 +14,7 @@ from pathlib import Path
 from urllib.parse import parse_qs, urlparse
 from urllib import request
 
-from pagarme_fraud import LocalMogoHistoryChecker, RiskEngine, format_alert
+from pagarme_fraud import CompositeCustomerHistoryChecker, LiveMogoOperationalOrderChecker, LocalMogoHistoryChecker, RiskEngine, format_alert
 
 HOST = os.environ.get("PAGARME_WEBHOOK_HOST", "127.0.0.1")
 PORT = int(os.environ.get("PAGARME_WEBHOOK_PORT", "3060"))
@@ -297,7 +297,13 @@ def deliver_alert(message: str) -> dict[str, bool]:
 
 
 class Handler(BaseHTTPRequestHandler):
-    engine = RiskEngine(DB_PATH, history_checker=LocalMogoHistoryChecker(MOGO_REPORTS_ROOT))
+    engine = RiskEngine(
+        DB_PATH,
+        history_checker=CompositeCustomerHistoryChecker(
+            LocalMogoHistoryChecker(MOGO_REPORTS_ROOT),
+            LiveMogoOperationalOrderChecker(),
+        ),
+    )
 
     def log_message(self, fmt: str, *args):  # noqa: D401 - stdlib hook
         sys.stderr.write("pagarme-webhook " + (fmt % args) + "\n")
