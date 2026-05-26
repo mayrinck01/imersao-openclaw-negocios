@@ -432,6 +432,10 @@ class PagarmeFraudTests(unittest.TestCase):
                     status="Pago",
                     customer_name="Cliente Recorrente",
                     date="22/05/2026",
+                    delivery_date="27/05/2026",
+                    delivery_time="15:30",
+                    address="Rua Dias Ferreira, 123",
+                    neighborhood="Leblon",
                     amount="213,30",
                     origin="Neemo",
                     item="TORTA F13",
@@ -461,7 +465,11 @@ class PagarmeFraudTests(unittest.TestCase):
             self.assertIn("Status operacional: SEGURAR / NÃO ENTREGAR", alert)
             self.assertIn("*Score antifraude: 50 — 🌡️ 🔴 FORTE (50+ segura entrega)*", alert)
             self.assertLess(alert.index("Status operacional: SEGURAR / NÃO ENTREGAR"), alert.index("*Score antifraude: 50"))
-            self.assertLess(alert.index("*Score antifraude: 50"), alert.index("Resumo"))
+            self.assertLess(alert.index("*Score antifraude: 50"), alert.index("Pedido"))
+            self.assertLess(alert.index("Pedido"), alert.index("Resumo"))
+            self.assertIn("• Modalidade: Entrega", alert)
+            self.assertIn("• Agendamento: 27/05/2026 15:30", alert)
+            self.assertIn("• Endereço de entrega: Rua Dias Ferreira, 123 - Leblon", alert)
             self.assertIn("Resumo", alert)
             self.assertIn("• Valor do pedido: R$ 230,00", alert)
             self.assertIn("• Origem pagamento: Pagar.me", alert)
@@ -493,6 +501,35 @@ class PagarmeFraudTests(unittest.TestCase):
             self.assertLess(alert.index("*Score antifraude: 120"), alert.index("Resumo"))
             self.assertIn("alepmotta19@gmail.com", alert)
             self.assertNotIn("alepmotta19@gmail,com", alert)
+
+    def test_alert_treats_order_without_schedule_as_immediate(self):
+        with tempfile.NamedTemporaryFile() as db:
+            checker = FakeHistoryChecker(CustomerHistoryResult(
+                True,
+                "phone",
+                "valid_purchase",
+                None,
+                MogoOrderSummary(
+                    order_number="037333",
+                    status="Pago",
+                    customer_name="Cliente Urgente",
+                    address="Rua Visconde de Pirajá, 44",
+                    neighborhood="Ipanema",
+                    amount="208,80",
+                    origin="WhatsApp",
+                    item="BOLO",
+                ),
+            ))
+            hotlist = FraudHotlist.from_customer_documents(["123"])
+            engine = RiskEngine(db.name, history_checker=checker, hotlist=hotlist)
+            result = engine.handle_event(event("charge.paid", "ch_immediate_delivery", phone="21999999999"))
+
+            alert = format_alert(result)
+
+            self.assertIn("Pedido", alert)
+            self.assertIn("• Modalidade: Entrega", alert)
+            self.assertIn("• Agendamento: não informado — ⚠️ tratar como para agora", alert)
+            self.assertIn("• Endereço de entrega: Rua Visconde de Pirajá, 44 - Ipanema", alert)
 
     def test_local_mogo_history_checker_matches_paid_purchase_by_phone(self):
         with tempfile.TemporaryDirectory() as root:

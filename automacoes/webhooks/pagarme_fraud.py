@@ -228,6 +228,7 @@ class MogoOrderSummary:
     date: str = ""
     delivery_date: str = ""
     delivery_time: str = ""
+    fulfillment: str = ""
     address: str = ""
     neighborhood: str = ""
     amount: str = ""
@@ -464,6 +465,7 @@ class LocalMogoHistoryChecker:
             date=_clean_mogo_value(_first_present(row, ("A0", "data", "Data Pedido", "dataPed", "dataPag"))),
             delivery_date=_clean_mogo_value(_first_present(row, ("Data Entrega", "DataEntrega", "Data Agendada"))),
             delivery_time=_clean_mogo_value(_first_present(row, ("Hora Entrega", "HoraEntregaTxt", "Hora Agendada"))),
+            fulfillment=_clean_mogo_value(_first_present(row, ("A6", "Forma Entrega", "FormaEntrega", "forma_entrega", "delivery_type"))),
             address=address,
             neighborhood=_clean_mogo_value(_first_present(row, ("Bairro", "bairro"))),
             amount=_clean_mogo_value(_first_present(row, ("Valor Final", "ValorFinal", "totalped", "A4", "valor"))),
@@ -788,6 +790,44 @@ def _mogo_customer_lines(history: CustomerHistoryResult | None, charge: ChargeEv
     ]
 
 
+def _format_order_address(order: MogoOrderSummary) -> str:
+    return " - ".join(part for part in (order.address, order.neighborhood) if part)
+
+
+def _order_modality(order: MogoOrderSummary | None) -> str:
+    if not order:
+        return "não localizada no alerta"
+    raw = normalize_text(" ".join(part for part in (order.fulfillment, order.origin) if part))
+    if "retir" in raw:
+        return "Retirada"
+    if "entreg" in raw or "delivery" in raw or "motoboy" in raw or _format_order_address(order):
+        return "Entrega"
+    return order.fulfillment or "não localizada no alerta"
+
+
+def _order_schedule(order: MogoOrderSummary | None) -> str:
+    if not order:
+        return "não localizado no alerta"
+    schedule = " ".join(part for part in (order.delivery_date, order.delivery_time) if part).strip()
+    if schedule:
+        return schedule
+    return "não informado — ⚠️ tratar como para agora"
+
+
+def _fulfillment_lines(history: CustomerHistoryResult | None) -> list[str]:
+    order = history.order if history else None
+    modality = _order_modality(order)
+    lines = [
+        "Pedido",
+        f"• Modalidade: {modality}",
+        f"• Agendamento: {_order_schedule(order)}",
+    ]
+    if modality == "Entrega":
+        address = _format_order_address(order) if order else ""
+        lines.append(f"• Endereço de entrega: {address or 'não localizado no alerta'}")
+    return lines
+
+
 def _mogo_order_lines(history: CustomerHistoryResult | None) -> list[str]:
     if history is None:
         return ["Histórico Mogo", "• Histórico local: não consultado"]
@@ -829,6 +869,8 @@ def format_alert(result: RiskResult) -> str:
         _mogo_order_header(history),
         "Status operacional: SEGURAR / NÃO ENTREGAR",
         _score_header_line(result.score),
+        "",
+        *_fulfillment_lines(history),
         "",
         "Resumo",
         f"• Valor do pedido: {value_line}",
