@@ -740,6 +740,18 @@ def _alert_level(score: int) -> str:
     return "ATENÇÃO"
 
 
+def _score_thermometer(score: int) -> str:
+    if score >= ALERT_THRESHOLD:
+        return "🔴 FORTE (50+ segura entrega)"
+    if score >= 30:
+        return "🟡 ATENÇÃO (30-49 revisar)"
+    return "🟢 BAIXO (0-29 referência)"
+
+
+def _score_header_line(score: int) -> str:
+    return f"*Score antifraude: {score} — 🌡️ {_score_thermometer(score)}*"
+
+
 def _format_br_phone(value: str) -> str:
     digits = only_digits(value)
     if digits.startswith("55") and len(digits) in {12, 13}:
@@ -816,6 +828,7 @@ def format_alert(result: RiskResult) -> str:
         "",
         _mogo_order_header(history),
         "Status operacional: SEGURAR / NÃO ENTREGAR",
+        _score_header_line(result.score),
         "",
         "Resumo",
         f"• Valor do pedido: {value_line}",

@@ -459,6 +459,9 @@ class PagarmeFraudTests(unittest.TestCase):
             self.assertIn("POSSÍVEL FRAUDE — SEGURAR ENTREGA", alert)
             self.assertIn("HISTÓRICO MOGO: pedido #037222", alert)
             self.assertIn("Status operacional: SEGURAR / NÃO ENTREGAR", alert)
+            self.assertIn("*Score antifraude: 50 — 🌡️ 🔴 FORTE (50+ segura entrega)*", alert)
+            self.assertLess(alert.index("Status operacional: SEGURAR / NÃO ENTREGAR"), alert.index("*Score antifraude: 50"))
+            self.assertLess(alert.index("*Score antifraude: 50"), alert.index("Resumo"))
             self.assertIn("Resumo", alert)
             self.assertIn("• Valor do pedido: R$ 230,00", alert)
             self.assertIn("• Origem pagamento: Pagar.me", alert)
@@ -485,6 +488,9 @@ class PagarmeFraudTests(unittest.TestCase):
 
             self.assertIn("HISTÓRICO MOGO: não localizado", alert)
             self.assertIn("Status operacional: SEGURAR / NÃO ENTREGAR", alert)
+            self.assertIn("*Score antifraude: 120 — 🌡️ 🔴 FORTE (50+ segura entrega)*", alert)
+            self.assertLess(alert.index("Status operacional: SEGURAR / NÃO ENTREGAR"), alert.index("*Score antifraude: 120"))
+            self.assertLess(alert.index("*Score antifraude: 120"), alert.index("Resumo"))
             self.assertIn("alepmotta19@gmail.com", alert)
             self.assertNotIn("alepmotta19@gmail,com", alert)
 
