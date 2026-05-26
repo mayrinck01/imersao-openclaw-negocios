@@ -4,7 +4,7 @@ import unittest
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
-from automacoes.webhooks.pagarme_fraud import CustomerHistoryResult, FraudHotlist, LocalMogoHistoryChecker, MogoOrderSummary, RiskEngine, extract_charge, format_alert, names_compatible
+from automacoes.webhooks.pagarme_fraud import CustomerHistoryResult, FraudHotlist, LocalMogoHistoryChecker, MogoOrderSummary, RiskEngine, extract_charge, format_alert, names_compatible, normalized_sha256
 
 
 class FakeHistoryChecker:
@@ -310,20 +310,38 @@ class PagarmeFraudTests(unittest.TestCase):
             self.assertNotIn("falha recente", reasons)
             self.assertNotIn("cartões diferentes", reasons)
 
-    def test_hotlisted_chargeback_holder_triggers_alert_even_with_mogo_history(self):
+    def test_hotlisted_customer_name_triggers_alert_even_with_mogo_history(self):
         with tempfile.NamedTemporaryFile() as db:
             checker = FakeHistoryChecker(CustomerHistoryResult(True, "name", "valid_purchase", None))
-            hotlist = FraudHotlist.from_holder_names(["Contestacao Confirmada"])
+            hotlist = FraudHotlist(
+                frozenset(),
+                customer_name_hashes=frozenset({normalized_sha256("Contestacao Confirmada")}),
+            )
             engine = RiskEngine(db.name, history_checker=checker, hotlist=hotlist)
             result = engine.handle_event(event(
                 "charge.paid",
-                "ch_hotlisted_holder",
+                "ch_hotlisted_customer_name",
                 customer_name="Contestacao Confirmada",
                 email="cliente@example.com",
                 holder="CONTESTACAO CONFIRMADA",
             ))
             self.assertTrue(result.alert)
             self.assertIn("lista quente", " ".join(result.reasons).lower())
+
+    def test_hotlisted_holder_name_alone_does_not_trigger_alert(self):
+        with tempfile.NamedTemporaryFile() as db:
+            checker = FakeHistoryChecker(CustomerHistoryResult(True, "name", "valid_purchase", None))
+            hotlist = FraudHotlist.from_holder_names(["Titular Cartao"])
+            engine = RiskEngine(db.name, history_checker=checker, hotlist=hotlist)
+            result = engine.handle_event(event(
+                "charge.paid",
+                "ch_hotlisted_holder_only",
+                customer_name="Cliente Cadastro",
+                email="cliente@example.com",
+                holder="TITULAR CARTAO",
+            ))
+            self.assertFalse(result.alert)
+            self.assertNotIn("lista quente", " ".join(result.reasons).lower())
 
     def test_hotlisted_customer_document_triggers_alert_even_with_mogo_history(self):
         with tempfile.NamedTemporaryFile() as db:
@@ -340,7 +358,7 @@ class PagarmeFraudTests(unittest.TestCase):
             self.assertTrue(result.alert)
             self.assertIn("lista quente", " ".join(result.reasons).lower())
 
-    def test_hotlisted_card_triggers_alert_even_with_mogo_history(self):
+    def test_hotlisted_card_alone_does_not_trigger_alert(self):
         with tempfile.NamedTemporaryFile() as db:
             checker = FakeHistoryChecker(CustomerHistoryResult(True, "name", "valid_purchase", None))
             hotlist = FraudHotlist.from_cards([("Visa", "0294")])
@@ -351,8 +369,8 @@ class PagarmeFraudTests(unittest.TestCase):
                 card_last4="0294",
                 brand="visa",
             ))
-            self.assertTrue(result.alert)
-            self.assertIn("lista quente", " ".join(result.reasons).lower())
+            self.assertFalse(result.alert)
+            self.assertNotIn("lista quente", " ".join(result.reasons).lower())
 
     def test_mogo_lookup_failure_does_not_suppress_weak_alert(self):
         with tempfile.NamedTemporaryFile() as db:
@@ -386,7 +404,7 @@ class PagarmeFraudTests(unittest.TestCase):
                     item="TORTA F13",
                 ),
             ))
-            hotlist = FraudHotlist.from_cards([("visa", "2222")])
+            hotlist = FraudHotlist.from_customer_documents(["123"])
             engine = RiskEngine(db.name, history_checker=checker, hotlist=hotlist)
             now = datetime.now(timezone.utc)
             engine.handle_event(event(

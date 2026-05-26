@@ -306,12 +306,13 @@ class FraudHotlist:
         )
 
     def matches(self, charge: ChargeEvent) -> bool:
+        # The operational hotlist is anchored on the identity the customer used
+        # to create the Pagar.me/Mogo customer: name, CPF/document and email.
+        # Card holder and card last4 are too weak to block delivery on their own.
         hashes = [
-            (normalized_sha256(charge.holder_name), self.holder_name_hashes),
             (normalized_sha256(charge.customer_name), self.customer_name_hashes),
             (normalized_sha256(charge.customer_email), self.customer_email_hashes),
             (digits_sha256(charge.customer_document), self.customer_document_hashes),
-            (card_sha256(charge.card_brand, charge.card_last4), self.card_hashes),
         ]
         return any(hash_ and hash_ in hotlist_hashes for hash_, hotlist_hashes in hashes)
 
