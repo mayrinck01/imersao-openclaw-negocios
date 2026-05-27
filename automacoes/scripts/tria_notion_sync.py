@@ -80,6 +80,16 @@ class ReportExtraction:
 
 
 @dataclass
+class StructuredTriaExport:
+    visits_by_id: dict[str, dict[str, Any]]
+    visits_by_date: dict[str, dict[str, Any]]
+    nonconformities_by_date: dict[str, list[dict[str, Any]]]
+    recognitions_by_date: dict[str, list[dict[str, Any]]]
+    action_plan: list[dict[str, Any]]
+    photos_dir: Path
+
+
+@dataclass
 class InventoryItem:
     checklist_id: str
     message_id: str
@@ -138,6 +148,36 @@ def notion_request(
 def load_inventory(path: Path) -> list[InventoryItem]:
     data = json.loads(path.read_text(encoding="utf-8"))
     return [InventoryItem(**item) for item in data if item.get("status") in {"downloaded", "skipped"}]
+
+
+def load_json_file(path: Path, default: Any) -> Any:
+    if not path.exists():
+        return default
+    return json.loads(path.read_text(encoding="utf-8"))
+
+
+def load_structured_export(path: Path | None) -> StructuredTriaExport | None:
+    if path is None:
+        return None
+    data_dir = path / "Dados Estruturados"
+    visits = load_json_file(data_dir / "visitas.json", [])
+    nonconformities = load_json_file(data_dir / "nao_conformidades.json", [])
+    recognitions = load_json_file(data_dir / "reconhecimentos.json", [])
+    action_plan = load_json_file(data_dir / "plano_acao.json", [])
+    nonconformities_by_date: dict[str, list[dict[str, Any]]] = {}
+    recognitions_by_date: dict[str, list[dict[str, Any]]] = {}
+    for item in nonconformities:
+        nonconformities_by_date.setdefault(item.get("data", ""), []).append(item)
+    for item in recognitions:
+        recognitions_by_date.setdefault(item.get("data", ""), []).append(item)
+    return StructuredTriaExport(
+        visits_by_id={str(item.get("id")): item for item in visits if item.get("id")},
+        visits_by_date={item.get("data"): item for item in visits if item.get("data")},
+        nonconformities_by_date=nonconformities_by_date,
+        recognitions_by_date=recognitions_by_date,
+        action_plan=action_plan,
+        photos_dir=path / "Fotos Visitas",
+    )
 
 
 def rich_text_value(prop: dict[str, Any]) -> str:
@@ -232,6 +272,167 @@ def action_description(text: str) -> str:
     if match:
         return f"{match.group(1).strip().capitalize()} — venc. {match.group(2)}"
     return text[:1].upper() + text[1:]
+
+
+def display_date(value: str) -> str:
+    if not value:
+        return ""
+    match = re.fullmatch(r"(\d{4})-(\d{2})-(\d{2})", value)
+    if match:
+        year, month, day = match.groups()
+        return f"{day}/{month}/{year}"
+    return value
+
+
+def photo_count_for_date(photos_dir: Path, visit_date: str) -> int | None:
+    day, month, year = visit_date.split("-")[2], visit_date.split("-")[1], visit_date.split("-")[0]
+    date_dir = photos_dir / f"{day}-{month}-{year}"
+    if not date_dir.exists():
+        return None
+    return len([path for path in date_dir.iterdir() if path.is_file() and path.suffix.lower() in {".jpg", ".jpeg", ".png", ".webp"}])
+
+
+def structured_action_description(item: dict[str, Any]) -> str:
+    parts = [str(item.get("item") or "").strip()]
+    product = str(item.get("produto") or "").strip()
+    validity = str(item.get("validade") or "").strip()
+    responsible = str(item.get("responsavel") or "").strip()
+    if product:
+        parts.append(f"Produto: {product}")
+    if validity:
+        parts.append(f"Validade: {display_date(validity)}")
+    if responsible:
+        parts.append(f"Responsável: {responsible}")
+    return " · ".join(part for part in parts if part)
+
+
+def structured_actions(items: list[dict[str, Any]]) -> list[ReportAction]:
+    actions: list[ReportAction] = []
+    for item in items:
+        title = str(item.get("item") or "").strip()
+        if not title:
+            continue
+        actions.append(
+            ReportAction(
+                title=title[:1].upper() + title[1:],
+                category=str(item.get("categoria") or "Não conformidade").strip() or "Não conformidade",
+                description=structured_action_description(item),
+                sector=canonical_sector(str(item.get("setor") or "")) or str(item.get("setor") or "Geral").strip() or "Geral",
+                gravity=str(item.get("gravidade") or "Média").strip() or "Média",
+                status=str(item.get("status") or "Aberta").strip() or "Aberta",
+            )
+        )
+    return actions
+
+
+def structured_plan_actions(items: list[dict[str, Any]]) -> list[ReportAction]:
+    actions: list[ReportAction] = []
+    for item in items:
+        title = str(item.get("topico") or "").strip()
+        if not title:
+            continue
+        details = str(item.get("itens") or "").strip()
+        responsible = str(item.get("responsavel") or "").strip()
+        deadline = str(item.get("prazo") or "").strip()
+        parts = [details]
+        if responsible:
+            parts.append(f"Responsável: {responsible}")
+        if deadline:
+            parts.append(f"Prazo: {deadline}")
+        actions.append(
+            ReportAction(
+                title=title,
+                category="Plano de ação",
+                description=" · ".join(part for part in parts if part),
+                sector=re.sub(r"^T\d+\s*", "", title).strip() or "Geral",
+                gravity="Média",
+                status=str(item.get("status") or "Aberta").strip() or "Aberta",
+            )
+        )
+    return actions
+
+
+def structured_critical_areas(actions: list[ReportAction], visit: dict[str, Any], recognitions: list[dict[str, Any]]) -> list[str]:
+    source = " ".join(
+        [
+            str(visit.get("resumo") or ""),
+            " ".join(action.category for action in actions),
+            " ".join(action.sector for action in actions),
+            " ".join(str(item.get("setor") or "") + " " + str(item.get("texto") or "") for item in recognitions),
+        ]
+    )
+    normalized = normalize_text(source)
+    areas: list[str] = []
+
+    def add(label: str, *needles: str) -> None:
+        if any(needle in normalized for needle in needles) and label not in areas:
+            areas.append(label)
+
+    add("Validade e identificação", "validade", "identificacao", "etiqueta")
+    add("Produção", "producao")
+    add("Geladeiras", "geladeira", "freezer", "camara", "refrigeracao")
+    add("Documentação", "documentacao", "documental", "documentos")
+    add("Treinamento", "treinamento", "boas praticas")
+    return areas
+
+
+def structured_title_topic(actions: list[ReportAction], critical_areas: list[str], visit: dict[str, Any]) -> str:
+    summary = normalize_text(str(visit.get("resumo") or ""))
+    if "Plano de Ação" in str(visit.get("tipo") or ""):
+        return "Plano de ação"
+    if actions and {"Produção", "Geladeiras"}.issubset(set(critical_areas)):
+        return "Produção e geladeiras"
+    if actions and "Validade e identificação" in critical_areas:
+        return "Validades e identificação"
+    if "Checklist de Segurança" in str(visit.get("tipo") or ""):
+        return "Auditoria sanitária"
+    if "treinamento" in summary:
+        return "Treinamento Boas Práticas"
+    if "Documentação" in critical_areas:
+        return "Documentação"
+    if actions:
+        return actions[0].sector
+    return ""
+
+
+def structured_highlights(actions: list[ReportAction], visit: dict[str, Any]) -> list[str]:
+    highlights: list[str] = []
+    summary = str(visit.get("resumo") or "").strip()
+    if summary:
+        highlights.append(summary)
+    highlights.extend(highlights_for(actions))
+    unique: list[str] = []
+    for item in highlights:
+        if item and item not in unique:
+            unique.append(item)
+    return unique[:4]
+
+
+def structured_extraction_for(item: InventoryItem, export: StructuredTriaExport | None) -> ReportExtraction | None:
+    if export is None:
+        return None
+    visit = export.visits_by_id.get(item.checklist_id) or export.visits_by_date.get(item.visit_date)
+    if not visit:
+        return None
+    nonconformities = structured_actions(export.nonconformities_by_date.get(item.visit_date, []))
+    actions = structured_plan_actions(export.action_plan) if "Plano de Ação" in str(visit.get("tipo") or item.report_type) else nonconformities
+    recognitions = [str(entry.get("texto") or "").strip() for entry in export.recognitions_by_date.get(item.visit_date, []) if entry.get("texto")]
+    critical_areas = structured_critical_areas(actions, visit, export.recognitions_by_date.get(item.visit_date, []))
+    topic = structured_title_topic(actions, critical_areas, visit)
+    title = item.title if not topic else f"{item.title} - {topic}"
+    training_status = str(visit.get("treinamento") or "Não informado").strip() or "Não informado"
+    return ReportExtraction(
+        title=title,
+        summary=str(visit.get("resumo") or "").strip() or f"{len(actions)} NCs identificadas na visita.",
+        training_status=training_status,
+        training_note=str(visit.get("obs_trein") or "").strip(),
+        photo_count=photo_count_for_date(export.photos_dir, item.visit_date),
+        nonconformity_count=len(nonconformities),
+        critical_areas=critical_areas,
+        highlights=structured_highlights(actions, visit),
+        recognitions=recognitions,
+        actions=actions,
+    )
 
 
 def parse_actions(opportunities: str) -> list[ReportAction]:
@@ -438,6 +639,21 @@ def report_action_titles(action_pages: list[dict[str, Any]]) -> dict[str, set[st
     return titles
 
 
+def archive_extra_action_pages(action_pages: list[dict[str, Any]], report_page_id: str, keep_titles: set[str], token: str) -> int:
+    archived = 0
+    for page in action_pages:
+        props = page.get("properties") or {}
+        relation = (props.get("Relatório", {}) or {}).get("relation") or []
+        if not any(linked.get("id") == report_page_id for linked in relation):
+            continue
+        title = normalize_text(title_value(props.get("Ação / Inconformidade", {})).strip())
+        if title in keep_titles:
+            continue
+        notion_request("PATCH", f"/pages/{page['id']}", token, body={"archived": True})
+        archived += 1
+    return archived
+
+
 def page_indexes(pages: list[dict[str, Any]]) -> tuple[dict[str, dict[str, Any]], dict[str, dict[str, Any]]]:
     by_checklist: dict[str, dict[str, Any]] = {}
     by_date: dict[str, dict[str, Any]] = {}
@@ -464,6 +680,27 @@ def files_count(page: dict[str, Any]) -> int:
 def has_children(page_id: str, token: str) -> bool:
     data = notion_request("GET", f"/blocks/{page_id}/children?page_size=1", token)
     return bool(data.get("results"))
+
+
+def fetch_child_blocks(page_id: str, token: str) -> list[dict[str, Any]]:
+    blocks: list[dict[str, Any]] = []
+    cursor = None
+    while True:
+        query = "page_size=100"
+        if cursor:
+            query += f"&start_cursor={cursor}"
+        data = notion_request("GET", f"/blocks/{page_id}/children?{query}", token)
+        blocks.extend(data.get("results", []))
+        if not data.get("has_more"):
+            return blocks
+        cursor = data.get("next_cursor")
+
+
+def archive_existing_children(page_id: str, token: str) -> int:
+    blocks = fetch_child_blocks(page_id, token)
+    for block in blocks:
+        notion_request("PATCH", f"/blocks/{block['id']}", token, body={"archived": True})
+    return len(blocks)
 
 
 def page_payload(item: InventoryItem, extracted: ReportExtraction | None = None) -> dict[str, Any]:
@@ -653,11 +890,15 @@ def sync_inventory(
     sleep_seconds: float = 0.35,
     update_existing_metadata: bool = False,
     enrich_from_pdf: bool = False,
+    structured_export_dir: Path | None = None,
     append_body: bool = False,
+    replace_body: bool = False,
     create_actions: bool = False,
+    archive_extra_actions: bool = False,
     action_database_id: str = DEFAULT_ACTION_DATABASE_ID,
 ) -> dict[str, Any]:
     items = load_inventory(inventory_path)
+    structured_export = load_structured_export(structured_export_dir)
     pages = fetch_database_pages(database_id, token)
     action_pages = fetch_database_pages(action_database_id, token) if create_actions else []
     action_counts = report_action_counts(action_pages) if create_actions else {}
@@ -670,9 +911,13 @@ def sync_inventory(
         "metadata_updated": 0,
         "body_appended": 0,
         "body_skipped_existing": 0,
+        "body_archived_blocks": 0,
         "actions_created": 0,
         "actions_skipped_existing": 0,
+        "actions_archived_extra": 0,
         "parsed_actions": 0,
+        "structured_matches": 0,
+        "structured_actions": 0,
         "attached": 0,
         "skipped_already_attached": 0,
         "missing_pdf": 0,
@@ -693,7 +938,12 @@ def sync_inventory(
         extracted: ReportExtraction | None = None
         if enrich_from_pdf:
             try:
-                extracted = parse_report_text(item, read_pdf_text(pdf_path))
+                extracted = structured_extraction_for(item, structured_export)
+                if extracted:
+                    summary["structured_matches"] += 1
+                    summary["structured_actions"] += len(extracted.actions)
+                else:
+                    extracted = parse_report_text(item, read_pdf_text(pdf_path))
                 summary["parsed_actions"] += len(extracted.actions)
             except Exception as exc:  # noqa: BLE001 - report batch parsing errors.
                 summary["errors"].append({"checklist_id": item.checklist_id, "error": f"parse_failed: {exc}"})
@@ -716,8 +966,13 @@ def sync_inventory(
                 update_metadata(page, item, token, extracted)
                 summary["metadata_updated"] += 1
 
-        if extracted and append_body and not dry_run:
-            if has_children(page["id"], token):
+        if extracted and (append_body or replace_body) and not dry_run:
+            if replace_body:
+                summary["body_archived_blocks"] += archive_existing_children(page["id"], token)
+                append_page_body(page["id"], page_body_blocks(item, extracted), token)
+                summary["body_appended"] += 1
+                time.sleep(sleep_seconds)
+            elif has_children(page["id"], token):
                 summary["body_skipped_existing"] += 1
             else:
                 append_page_body(page["id"], page_body_blocks(item, extracted), token)
@@ -738,6 +993,10 @@ def sync_inventory(
                     action_counts[page["id"]] = action_counts.get(page["id"], 0) + 1
                     summary["actions_created"] += 1
                     time.sleep(sleep_seconds)
+            if archive_extra_actions:
+                keep_titles = {normalize_text(action.title) for action in extracted.actions}
+                summary["actions_archived_extra"] += archive_extra_action_pages(action_pages, page["id"], keep_titles, token)
+                time.sleep(sleep_seconds)
 
         if action == "existing" and files_count(page) > 0:
             summary["skipped_already_attached"] += 1
@@ -772,8 +1031,11 @@ def main() -> int:
         help="Also rewrite metadata on pages that already exist. Default preserves existing Notion formatting.",
     )
     parser.add_argument("--enrich-from-pdf", action="store_true", help="Extract report fields/actions/body from the PDF text.")
+    parser.add_argument("--structured-export-dir", type=Path, help="Use Tria structured JSON/fotos export before falling back to PDF text parsing.")
     parser.add_argument("--append-body", action="store_true", help="Append a structured body only to pages that have no child blocks.")
+    parser.add_argument("--replace-body", action="store_true", help="Archive existing page children and append a fresh structured body.")
     parser.add_argument("--create-actions", action="store_true", help="Create Ações e Inconformidades records when the report has none.")
+    parser.add_argument("--archive-extra-actions", action="store_true", help="Archive action records related to processed reports when their title is not in the current extraction.")
     parser.add_argument("--action-database-id", default=DEFAULT_ACTION_DATABASE_ID)
     args = parser.parse_args()
 
@@ -790,8 +1052,11 @@ def main() -> int:
         limit=args.limit,
         update_existing_metadata=args.update_existing_metadata,
         enrich_from_pdf=args.enrich_from_pdf,
+        structured_export_dir=args.structured_export_dir,
         append_body=args.append_body,
+        replace_body=args.replace_body,
         create_actions=args.create_actions,
+        archive_extra_actions=args.archive_extra_actions,
         action_database_id=args.action_database_id,
     )
     print(json.dumps(summary, ensure_ascii=False, indent=2))
