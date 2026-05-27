@@ -21,6 +21,7 @@ DEFAULT_PDF_DIR = Path("/root/workspaces/cake-brain/relatorios/Tria/Relatorios P
 NOTION_API = "https://api.notion.com/v1"
 NOTION_QUERY_VERSION = "2022-06-28"
 NOTION_UPLOAD_VERSION = "2026-03-11"
+DEFAULT_AUTHOR = "Mariana Moreira - Nutricionista - CRN-4: 20101623"
 
 
 @dataclass
@@ -41,7 +42,7 @@ class InventoryItem:
     @property
     def title(self) -> str:
         day, month, year = self.visit_date.split("-")[2], self.visit_date.split("-")[1], self.visit_date.split("-")[0]
-        return f"{day}/{month}/{year} - {self.report_type}"
+        return f"{day}/{month}/{year} - {display_report_type(self.report_type)}"
 
 
 def notion_headers(token: str, version: str = NOTION_QUERY_VERSION) -> dict[str, str]:
@@ -91,12 +92,16 @@ def normalize_text(value: str) -> str:
 
 def report_type_option(report_type: str) -> str:
     if report_type == "Relatório de Visita Orientativa":
-        return "Relatório de Visita Orientativa"
+        return "Visita Orientativa"
     if report_type == "Plano de Ação e Evolução":
         return "Plano de Ação e Evolução"
     if report_type == "Checklist de Segurança dos Alimentos":
         return "Checklist de Segurança dos Alimentos"
     return report_type[:100]
+
+
+def display_report_type(report_type: str) -> str:
+    return report_type_option(report_type)
 
 
 def fetch_database_pages(database_id: str, token: str) -> list[dict[str, Any]]:
@@ -145,6 +150,7 @@ def page_payload(item: InventoryItem) -> dict[str, Any]:
         "Unidade": {"select": {"name": "Cake & Co"}},
         "ID Checklist Fácil": {"rich_text": [{"text": {"content": item.checklist_id}}]},
         "Email origem": {"rich_text": [{"text": {"content": f"joao@cakeco.com.br / {item.message_id}"}}]},
+        "Autor": {"rich_text": [{"text": {"content": DEFAULT_AUTHOR}}]},
         "Conteúdo em Markdown": {"checkbox": False},
     }
 
@@ -158,8 +164,17 @@ def create_page(database_id: str, item: InventoryItem, token: str) -> dict[str, 
     )
 
 
-def update_metadata(page_id: str, item: InventoryItem, token: str) -> None:
-    notion_request("PATCH", f"/pages/{page_id}", token, body={"properties": page_payload(item)})
+def update_payload(page: dict[str, Any], item: InventoryItem) -> dict[str, Any]:
+    payload = page_payload(item)
+    current_title = title_value((page.get("properties") or {}).get("Título", {})).strip()
+    old_title = f"{item.title.split(' - ', 1)[0]} - {item.report_type}"
+    if current_title and current_title not in {old_title, item.title}:
+        payload["Título"] = {"title": [{"text": {"content": current_title}}]}
+    return payload
+
+
+def update_metadata(page: dict[str, Any], item: InventoryItem, token: str) -> None:
+    notion_request("PATCH", f"/pages/{page['id']}", token, body={"properties": update_payload(page, item)})
 
 
 def create_file_upload(token: str) -> dict[str, Any]:
@@ -250,7 +265,7 @@ def sync_inventory(
             action = "created"
         else:
             if update_existing_metadata and not dry_run:
-                update_metadata(page["id"], item, token)
+                update_metadata(page, item, token)
                 summary["metadata_updated"] += 1
 
         if action == "existing" and files_count(page) > 0:
