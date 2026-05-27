@@ -21,10 +21,13 @@ DEFAULT_DATABASE_ID = "364f1f50-f16e-8196-97e5-f72b357e8b22"
 DEFAULT_INVENTORY = Path("/root/workspaces/cake-brain/relatorios/Tria/tria-email-pdf-inventory.json")
 DEFAULT_PDF_DIR = Path("/root/workspaces/cake-brain/relatorios/Tria/Relatorios PDF")
 DEFAULT_ACTION_DATABASE_ID = "364f1f50-f16e-8101-810b-e18b039b694b"
+DEFAULT_DRIVE_ROOT_FOLDER_ID = "1oEABLAfGbDE-iVlYnH_45wbD7pilKU1D"
+DEFAULT_DRIVE_FOLDER_MAP = Path("/root/workspaces/cake-brain/relatorios/Tria/tria-drive-photo-folders.json")
 NOTION_API = "https://api.notion.com/v1"
 NOTION_QUERY_VERSION = "2022-06-28"
 NOTION_UPLOAD_VERSION = "2026-03-11"
 DEFAULT_AUTHOR = "Mariana Moreira - Nutricionista - CRN-4: 20101623"
+IMAGE_EXTENSIONS = {".jpg", ".jpeg", ".png", ".webp"}
 KNOWN_SECTORS = {
     "atendimento": "Atendimento",
     "produção": "Produção",
@@ -289,7 +292,141 @@ def photo_count_for_date(photos_dir: Path, visit_date: str) -> int | None:
     date_dir = photos_dir / f"{day}-{month}-{year}"
     if not date_dir.exists():
         return None
-    return len([path for path in date_dir.iterdir() if path.is_file() and path.suffix.lower() in {".jpg", ".jpeg", ".png", ".webp"}])
+    return len([path for path in date_dir.iterdir() if path.is_file() and path.suffix.lower() in IMAGE_EXTENSIONS])
+
+
+def date_folder_to_iso(value: str) -> str | None:
+    match = re.fullmatch(r"(\d{2})-(\d{2})-(\d{4})", value)
+    if not match:
+        return None
+    day, month, year = match.groups()
+    return f"{year}-{month}-{day}"
+
+
+def iso_to_date_folder(value: str) -> str:
+    year, month, day = value.split("-")
+    return f"{day}-{month}-{year}"
+
+
+def drive_folder_url(folder_id: str) -> str:
+    return f"https://drive.google.com/drive/folders/{folder_id}"
+
+
+def load_drive_folder_map(path: Path | None) -> dict[str, dict[str, Any]]:
+    if path is None or not path.exists():
+        return {}
+    data = json.loads(path.read_text(encoding="utf-8"))
+    return data.get("folders", data) if isinstance(data, dict) else {}
+
+
+def drive_link_for_visit(folder_map: dict[str, dict[str, Any]], visit_date: str) -> str | None:
+    entry = folder_map.get(visit_date) or folder_map.get(iso_to_date_folder(visit_date))
+    if not isinstance(entry, dict):
+        return None
+    return str(entry.get("url") or drive_folder_url(str(entry.get("id") or ""))).strip() or None
+
+
+def gog_drive(
+    *args: str,
+    account: str = "cakebigdog@gmail.com",
+    client: str = "cakebigdog",
+    json_output: bool = False,
+) -> Any:
+    command = ["gog", *args, "--account", account, "--client", client, "--no-input"]
+    if json_output:
+        command.append("--json")
+    env = os.environ.copy()
+    env["GOG_KEYRING_PASSWORD"] = ""
+    completed = subprocess.run(command, check=True, capture_output=True, text=True, env=env)
+    if json_output:
+        return json.loads(completed.stdout)
+    return completed.stdout
+
+
+def _unwrap_drive_file(response: Any) -> dict[str, Any]:
+    if isinstance(response, dict):
+        if "file" in response:
+            return response["file"]
+        if "folder" in response:
+            return response["folder"]
+    return response if isinstance(response, dict) else {}
+
+
+def sync_drive_photo_folders(
+    *,
+    export_dir: Path,
+    root_folder_id: str,
+    folder_map_path: Path,
+    dry_run: bool,
+    upload_photos: bool,
+    gog_runner: Any = gog_drive,
+) -> dict[str, Any]:
+    photos_root = export_dir / "Fotos Visitas"
+    if not photos_root.exists():
+        raise FileNotFoundError(f"Fotos Visitas not found: {photos_root}")
+
+    root_listing = gog_runner("drive", "ls", "--parent", root_folder_id, "--max", "300", json_output=True)
+    root_files = root_listing.get("files", []) if isinstance(root_listing, dict) else []
+    existing_folders = {
+        item.get("name"): item
+        for item in root_files
+        if item.get("mimeType") == "application/vnd.google-apps.folder" or item.get("id")
+    }
+    folder_map = load_drive_folder_map(folder_map_path)
+    summary: dict[str, Any] = {
+        "folders_seen": 0,
+        "folders_created": 0,
+        "folders_existing": 0,
+        "photos_uploaded": 0,
+        "photos_skipped_existing": 0,
+        "dry_run_uploads": 0,
+        "folders": {},
+    }
+
+    for visit_dir in sorted(path for path in photos_root.iterdir() if path.is_dir()):
+        visit_date = date_folder_to_iso(visit_dir.name)
+        if not visit_date:
+            continue
+        summary["folders_seen"] += 1
+        folder = existing_folders.get(visit_dir.name)
+        if folder:
+            summary["folders_existing"] += 1
+            folder_id = folder["id"]
+        elif dry_run:
+            summary["folders_created"] += 1
+            folder_id = f"dry-run-{visit_dir.name}"
+        else:
+            folder = _unwrap_drive_file(gog_runner("drive", "mkdir", visit_dir.name, "--parent", root_folder_id, json_output=True))
+            folder_id = folder["id"]
+            summary["folders_created"] += 1
+
+        image_files = sorted(path for path in visit_dir.iterdir() if path.is_file() and path.suffix.lower() in IMAGE_EXTENSIONS)
+        if upload_photos:
+            child_listing = {"files": []} if dry_run else gog_runner("drive", "ls", "--parent", folder_id, "--max", "500", json_output=True)
+            existing_names = {item.get("name") for item in child_listing.get("files", [])}
+            for image_file in image_files:
+                if image_file.name in existing_names:
+                    summary["photos_skipped_existing"] += 1
+                    continue
+                if dry_run:
+                    summary["dry_run_uploads"] += 1
+                    continue
+                gog_runner("drive", "upload", str(image_file), "--parent", folder_id, json_output=True)
+                summary["photos_uploaded"] += 1
+
+        entry = {
+            "id": folder_id,
+            "name": visit_dir.name,
+            "url": drive_folder_url(folder_id),
+            "photo_count": len(image_files),
+        }
+        folder_map[visit_date] = entry
+        summary["folders"][visit_date] = entry
+
+    if not dry_run:
+        folder_map_path.parent.mkdir(parents=True, exist_ok=True)
+        folder_map_path.write_text(json.dumps({"root_folder_id": root_folder_id, "folders": folder_map}, ensure_ascii=False, indent=2), encoding="utf-8")
+    return summary
 
 
 def structured_action_description(item: dict[str, Any]) -> str:
@@ -777,19 +914,32 @@ def bullet(content: str) -> dict[str, Any]:
 
 
 def callout(content: str, emoji: str = "⚠️", color: str = "orange_background") -> dict[str, Any]:
+    return callout_rich_text(rt(content), emoji=emoji, color=color)
+
+
+def callout_rich_text(rich_text: list[dict[str, Any]], emoji: str = "⚠️", color: str = "orange_background") -> dict[str, Any]:
     return {
         "object": "block",
         "type": "callout",
         "callout": {
-            "rich_text": rt(content),
+            "rich_text": rich_text,
             "icon": {"type": "emoji", "emoji": emoji},
             "color": color,
         },
     }
 
 
-def page_body_blocks(item: InventoryItem, extracted: ReportExtraction) -> list[dict[str, Any]]:
+def link_text(content: str, url: str) -> dict[str, Any]:
+    return {
+        "type": "text",
+        "text": {"content": content[:2000], "link": {"url": url}},
+        "annotations": {"bold": True},
+    }
+
+
+def page_body_blocks(item: InventoryItem, extracted: ReportExtraction, *, drive_folder_url: str | None = None) -> list[dict[str, Any]]:
     day, month, year = item.visit_date.split("-")[2], item.visit_date.split("-")[1], item.visit_date.split("-")[0]
+    date_folder = f"{day}-{month}-{year}"
     blocks: list[dict[str, Any]] = [
         callout(extracted.summary),
         heading("Dados da visita"),
@@ -814,6 +964,17 @@ def page_body_blocks(item: InventoryItem, extracted: ReportExtraction) -> list[d
             ),
         ]
     )
+    if drive_folder_url:
+        blocks.append(
+            callout_rich_text(
+                [
+                    {"type": "text", "text": {"content": f"Fotos no Drive ({extracted.photo_count or 0}): "}, "annotations": {"bold": True}},
+                    link_text(f"Abrir pasta {date_folder}", drive_folder_url),
+                ],
+                emoji="📁",
+                color="blue_background",
+            )
+        )
     return blocks[:90]
 
 
@@ -891,14 +1052,17 @@ def sync_inventory(
     update_existing_metadata: bool = False,
     enrich_from_pdf: bool = False,
     structured_export_dir: Path | None = None,
+    structured_only: bool = False,
     append_body: bool = False,
     replace_body: bool = False,
     create_actions: bool = False,
     archive_extra_actions: bool = False,
     action_database_id: str = DEFAULT_ACTION_DATABASE_ID,
+    drive_folder_map_path: Path | None = DEFAULT_DRIVE_FOLDER_MAP,
 ) -> dict[str, Any]:
     items = load_inventory(inventory_path)
     structured_export = load_structured_export(structured_export_dir)
+    drive_folder_map = load_drive_folder_map(drive_folder_map_path)
     pages = fetch_database_pages(database_id, token)
     action_pages = fetch_database_pages(action_database_id, token) if create_actions else []
     action_counts = report_action_counts(action_pages) if create_actions else {}
@@ -918,6 +1082,8 @@ def sync_inventory(
         "parsed_actions": 0,
         "structured_matches": 0,
         "structured_actions": 0,
+        "skipped_not_structured": 0,
+        "drive_links_available": len(drive_folder_map),
         "attached": 0,
         "skipped_already_attached": 0,
         "missing_pdf": 0,
@@ -942,6 +1108,9 @@ def sync_inventory(
                 if extracted:
                     summary["structured_matches"] += 1
                     summary["structured_actions"] += len(extracted.actions)
+                elif structured_only:
+                    summary["skipped_not_structured"] += 1
+                    continue
                 else:
                     extracted = parse_report_text(item, read_pdf_text(pdf_path))
                 summary["parsed_actions"] += len(extracted.actions)
@@ -967,15 +1136,16 @@ def sync_inventory(
                 summary["metadata_updated"] += 1
 
         if extracted and (append_body or replace_body) and not dry_run:
+            photo_drive_url = drive_link_for_visit(drive_folder_map, item.visit_date)
             if replace_body:
                 summary["body_archived_blocks"] += archive_existing_children(page["id"], token)
-                append_page_body(page["id"], page_body_blocks(item, extracted), token)
+                append_page_body(page["id"], page_body_blocks(item, extracted, drive_folder_url=photo_drive_url), token)
                 summary["body_appended"] += 1
                 time.sleep(sleep_seconds)
             elif has_children(page["id"], token):
                 summary["body_skipped_existing"] += 1
             else:
-                append_page_body(page["id"], page_body_blocks(item, extracted), token)
+                append_page_body(page["id"], page_body_blocks(item, extracted, drive_folder_url=photo_drive_url), token)
                 summary["body_appended"] += 1
                 time.sleep(sleep_seconds)
 
@@ -1032,12 +1202,40 @@ def main() -> int:
     )
     parser.add_argument("--enrich-from-pdf", action="store_true", help="Extract report fields/actions/body from the PDF text.")
     parser.add_argument("--structured-export-dir", type=Path, help="Use Tria structured JSON/fotos export before falling back to PDF text parsing.")
+    parser.add_argument("--structured-only", action="store_true", help="When using structured export, skip inventory rows that are not present in the structured data.")
     parser.add_argument("--append-body", action="store_true", help="Append a structured body only to pages that have no child blocks.")
     parser.add_argument("--replace-body", action="store_true", help="Archive existing page children and append a fresh structured body.")
     parser.add_argument("--create-actions", action="store_true", help="Create Ações e Inconformidades records when the report has none.")
     parser.add_argument("--archive-extra-actions", action="store_true", help="Archive action records related to processed reports when their title is not in the current extraction.")
     parser.add_argument("--action-database-id", default=DEFAULT_ACTION_DATABASE_ID)
+    parser.add_argument("--drive-folder-map", type=Path, default=DEFAULT_DRIVE_FOLDER_MAP, help="JSON mapping visit dates to Google Drive photo folder URLs.")
+    parser.add_argument("--sync-drive-photos", action="store_true", help="Create Drive photo folders from the structured export before updating Notion.")
+    parser.add_argument("--upload-drive-photos", action="store_true", help="Upload image files to each Drive photo folder when --sync-drive-photos is used.")
+    parser.add_argument("--drive-root-folder-id", default=DEFAULT_DRIVE_ROOT_FOLDER_ID)
+    parser.add_argument("--drive-account", default="cakebigdog@gmail.com")
+    parser.add_argument("--drive-client", default="cakebigdog")
     args = parser.parse_args()
+    notion_requested = args.enrich_from_pdf or args.append_body or args.replace_body or args.create_actions or not args.sync_drive_photos
+
+    if args.sync_drive_photos:
+        if not args.structured_export_dir:
+            raise SystemExit("--sync-drive-photos requires --structured-export-dir")
+        drive_summary = sync_drive_photo_folders(
+            export_dir=args.structured_export_dir,
+            root_folder_id=args.drive_root_folder_id,
+            folder_map_path=args.drive_folder_map,
+            dry_run=args.dry_run,
+            upload_photos=args.upload_drive_photos,
+            gog_runner=lambda *gog_args, **kwargs: gog_drive(
+                *gog_args,
+                account=args.drive_account,
+                client=args.drive_client,
+                json_output=kwargs.get("json_output", False),
+            ),
+        )
+        if not notion_requested:
+            print(json.dumps(drive_summary, ensure_ascii=False, indent=2))
+            return 0
 
     token = os.environ.get("NOTION_TOKEN") or os.environ.get("NOTION_API_KEY")
     if not token:
@@ -1053,12 +1251,16 @@ def main() -> int:
         update_existing_metadata=args.update_existing_metadata,
         enrich_from_pdf=args.enrich_from_pdf,
         structured_export_dir=args.structured_export_dir,
+        structured_only=args.structured_only,
         append_body=args.append_body,
         replace_body=args.replace_body,
         create_actions=args.create_actions,
         archive_extra_actions=args.archive_extra_actions,
         action_database_id=args.action_database_id,
+        drive_folder_map_path=args.drive_folder_map,
     )
+    if args.sync_drive_photos:
+        summary["drive_sync"] = drive_summary
     print(json.dumps(summary, ensure_ascii=False, indent=2))
     return 1 if summary["errors"] else 0
 

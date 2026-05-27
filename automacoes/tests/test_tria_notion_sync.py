@@ -8,9 +8,11 @@ from pathlib import Path
 
 from automacoes.scripts.tria_notion_sync import (
     InventoryItem,
+    ReportExtraction,
     action_page_payload,
     archive_existing_children,
     archive_extra_action_pages,
+    drive_folder_url,
     load_structured_export,
     notion_request,
     page_body_blocks,
@@ -18,6 +20,7 @@ from automacoes.scripts.tria_notion_sync import (
     parse_report_text,
     read_pdf_text,
     structured_extraction_for,
+    sync_drive_photo_folders,
     sync_inventory,
     update_payload,
 )
@@ -346,6 +349,48 @@ class TriaNotionSyncTests(unittest.TestCase):
         self.assertEqual(summary["parsed_actions"], 30)
         self.assertEqual(summary["errors"], [])
 
+    @patch("automacoes.scripts.tria_notion_sync.fetch_database_pages", return_value=[])
+    def test_sync_inventory_can_skip_reports_not_in_structured_export(self, _fetch_pages):
+        items = [
+            {
+                "checklist_id": "188263778",
+                "message_id": "message-1",
+                "email_date": "2026-03-09 13:57",
+                "report_type": "Relatório de Visita Orientativa",
+                "filename": "2026-03-09-188263778-relatorio-de-visita-orientativa.pdf",
+                "status": "skipped",
+                "bytes": 10,
+                "error": "",
+            },
+            {
+                "checklist_id": "176070219",
+                "message_id": "message-2",
+                "email_date": "2025-12-15 17:55",
+                "report_type": "Relatório de Visita Orientativa",
+                "filename": "2025-12-15-176070219-relatorio-de-visita-orientativa.pdf",
+                "status": "skipped",
+                "bytes": 10,
+                "error": "",
+            },
+        ]
+        with tempfile.TemporaryDirectory() as inventory_dir, make_structured_export_fixture() as export_dir:
+            inventory_path = Path(inventory_dir) / "inventory.json"
+            inventory_path.write_text(json.dumps(items, ensure_ascii=False), encoding="utf-8")
+            summary = sync_inventory(
+                token="token",
+                database_id="database",
+                inventory_path=inventory_path,
+                pdf_dir=Path("relatorios/Tria/Relatorios PDF"),
+                dry_run=True,
+                enrich_from_pdf=True,
+                structured_export_dir=Path(export_dir),
+                structured_only=True,
+            )
+
+        self.assertEqual(summary["structured_matches"], 1)
+        self.assertEqual(summary["skipped_not_structured"], 1)
+        self.assertEqual(summary["parsed_actions"], 23)
+
     @patch("automacoes.scripts.tria_notion_sync.notion_request")
     def test_archive_existing_children_archives_every_child_block(self, notion_request_mock):
         notion_request_mock.side_effect = [
@@ -435,6 +480,82 @@ class TriaNotionSyncTests(unittest.TestCase):
             "Geleia de morango vencida",
         )
         self.assertEqual(action_payload["properties"]["Relatório"]["relation"][0]["id"], "report-page-id")
+
+    def test_page_body_blocks_include_drive_folder_link_when_available(self):
+        item = InventoryItem(
+            checklist_id="188263778",
+            message_id="19cd3889d0256a4c",
+            email_date="2026-03-09 13:57",
+            report_type="Relatório de Visita Orientativa",
+            filename="2026-03-09-188263778-relatorio-de-visita-orientativa.pdf",
+            status="skipped",
+            bytes=10,
+        )
+        extracted = ReportExtraction(
+            title="09/03/2026 - Visita Orientativa - Produção e geladeiras",
+            summary="Resumo",
+            photo_count=3,
+            nonconformity_count=23,
+        )
+
+        blocks = page_body_blocks(
+            item,
+            extracted,
+            drive_folder_url="https://drive.google.com/drive/folders/folder-id",
+        )
+
+        drive_callouts = [
+            block
+            for block in blocks
+            if block["type"] == "callout"
+            and block["callout"]["icon"]["emoji"] == "📁"
+        ]
+        self.assertEqual(len(drive_callouts), 1)
+        rich_text = drive_callouts[0]["callout"]["rich_text"]
+        self.assertEqual(rich_text[0]["text"]["content"], "Fotos no Drive (3): ")
+        self.assertEqual(rich_text[1]["text"]["content"], "Abrir pasta 09-03-2026")
+        self.assertEqual(rich_text[1]["text"]["link"]["url"], "https://drive.google.com/drive/folders/folder-id")
+
+    def test_sync_drive_photo_folders_creates_folder_map_and_uploads_only_images(self):
+        with tempfile.TemporaryDirectory() as temp_dir:
+            export_dir = Path(temp_dir)
+            photos_root = export_dir / "Fotos Visitas"
+            visit_dir = photos_root / "09-03-2026"
+            visit_dir.mkdir(parents=True)
+            (visit_dir / "img-001.jpg").write_bytes(b"jpg")
+            (visit_dir / "img-002.png").write_bytes(b"png")
+            (visit_dir / "img-003.ppm").write_bytes(b"ppm")
+            folder_map_path = export_dir / "drive-folders.json"
+            calls = []
+
+            def fake_gog(*args, **_kwargs):
+                calls.append(args)
+                if args[:2] == ("drive", "ls"):
+                    return {"files": []}
+                if args[:2] == ("drive", "mkdir"):
+                    return {"folder": {"id": "folder-id", "name": "09-03-2026"}}
+                if args[:2] == ("drive", "url"):
+                    return "https://drive.google.com/drive/folders/folder-id\n"
+                if args[:2] == ("drive", "upload"):
+                    return {"file": {"id": f"uploaded-{len(calls)}"}}
+                raise AssertionError(args)
+
+            summary = sync_drive_photo_folders(
+                export_dir=export_dir,
+                root_folder_id="root-id",
+                folder_map_path=folder_map_path,
+                dry_run=False,
+                upload_photos=True,
+                gog_runner=fake_gog,
+            )
+
+        self.assertEqual(summary["folders_created"], 1)
+        self.assertEqual(summary["photos_uploaded"], 2)
+        self.assertEqual(summary["photos_skipped_existing"], 0)
+        self.assertEqual(summary["folders"]["2026-03-09"]["url"], drive_folder_url("folder-id"))
+        upload_calls = [call for call in calls if call[:2] == ("drive", "upload")]
+        uploaded_names = [Path(call[2]).name for call in upload_calls]
+        self.assertEqual(uploaded_names, ["img-001.jpg", "img-002.png"])
 
     def test_notion_request_retries_rate_limit(self):
         rate_limited = Mock(status_code=429, headers={"Retry-After": "0"})
