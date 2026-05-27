@@ -170,6 +170,12 @@ class CakeDashboardPdfTests(unittest.TestCase):
         self.assertIn("Participação no faturamento do mês", html)
         self.assertRegex(
             html,
+            r"iFood[\s\S]*?"
+            r"R\$ 300[\s\S]*?"
+            r"30,0%",
+        )
+        self.assertRegex(
+            html,
             r"Delivery Próprio[\s\S]*?"
             r"R\$ 200[\s\S]*?"
             r"20,0%",

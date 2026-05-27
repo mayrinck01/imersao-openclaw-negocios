@@ -230,6 +230,10 @@ def render_html(dashboard: dict) -> str:
     monthly_revenue = float(receita["faturamento_mes_2026"] or 0)
     channel_mix = [
         {
+            "nome": "iFood",
+            "valor": channel_values.get("iFood", 0.0),
+        },
+        {
             "nome": "Delivery Próprio",
             "valor": (
                 channel_values.get("Neemo", 0.0)
