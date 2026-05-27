@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import base64
+import argparse
 import hmac
 import json
 import os
@@ -11,6 +12,7 @@ import subprocess
 import sys
 import threading
 import time
+from datetime import datetime, timedelta, timezone
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from urllib.parse import parse_qs, urlparse
@@ -37,6 +39,9 @@ EVOLUTION_INSTANCE = os.environ.get("PAGARME_ALERT_EVOLUTION_INSTANCE", "cake-in
 EVOLUTION_ENV_FILE = os.environ.get("PAGARME_ALERT_EVOLUTION_ENV_FILE", "/opt/cake-interno-whatsapp/.env")
 MOGO_REPORTS_ROOT = os.environ.get("PAGARME_MOGO_REPORTS_ROOT", "/root/workspaces/cake-brain/relatorios/Mogo")
 ALERT_DELAY_SECONDS = int(os.environ.get("PAGARME_ALERT_DELAY_SECONDS", "60"))
+PENDING_REVIEW_DAYS = int(os.environ.get("PAGARME_PENDING_REVIEW_DAYS", "14"))
+PENDING_REVIEW_LIMIT = int(os.environ.get("PAGARME_PENDING_REVIEW_LIMIT", "50"))
+REVIEW_DECISIONS = {"fraud", "not_fraud"}
 
 
 def _format_brl(cents: int) -> str:
@@ -155,6 +160,227 @@ def manual_antifraud_response(engine: RiskEngine, query_string: str = "") -> dic
         "count": len(checks),
         "checks": checks,
     }
+
+
+def _ensure_review_tables(engine: RiskEngine) -> None:
+    with engine._connect() as conn:
+        conn.execute(
+            """
+            CREATE TABLE IF NOT EXISTS antifraud_alerts (
+                charge_id TEXT PRIMARY KEY,
+                alerted_at TEXT NOT NULL,
+                score INTEGER NOT NULL,
+                customer_name TEXT,
+                amount INTEGER NOT NULL,
+                order_number TEXT,
+                delivery_date TEXT,
+                delivery_time TEXT,
+                address TEXT,
+                reasons_json TEXT NOT NULL,
+                alert_text TEXT NOT NULL
+            )
+            """
+        )
+        conn.execute(
+            """
+            CREATE TABLE IF NOT EXISTS antifraud_reviews (
+                charge_id TEXT PRIMARY KEY,
+                decision TEXT NOT NULL,
+                reviewed_at TEXT NOT NULL,
+                reviewed_by TEXT,
+                note TEXT
+            )
+            """
+        )
+        conn.execute("CREATE INDEX IF NOT EXISTS idx_antifraud_alerts_alerted_at ON antifraud_alerts(alerted_at)")
+
+
+def _context_order(history):
+    if history is None:
+        return None
+    return history.operational_order or history.order
+
+
+def _order_address(order) -> str:
+    if not order:
+        return ""
+    return " - ".join(part for part in (order.address, order.neighborhood) if part)
+
+
+def record_antifraud_alert(engine: RiskEngine, result, now: datetime | None = None) -> None:
+    _ensure_review_tables(engine)
+    order = _context_order(result.customer_history)
+    alerted_at = (now or datetime.now(timezone.utc)).astimezone(timezone.utc).isoformat()
+    with engine._connect() as conn:
+        conn.execute(
+            """
+            INSERT OR REPLACE INTO antifraud_alerts (
+                charge_id, alerted_at, score, customer_name, amount, order_number,
+                delivery_date, delivery_time, address, reasons_json, alert_text
+            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+            """,
+            (
+                result.charge.charge_id,
+                alerted_at,
+                result.score,
+                result.charge.customer_name,
+                result.charge.amount,
+                order.order_number if order else "",
+                order.delivery_date if order else "",
+                order.delivery_time if order else "",
+                _order_address(order),
+                json.dumps(result.reasons, ensure_ascii=False),
+                format_alert(result),
+            ),
+        )
+
+
+def backfill_recent_antifraud_alerts(engine: RiskEngine, days: int = PENDING_REVIEW_DAYS, limit: int = 200) -> int:
+    _ensure_review_tables(engine)
+    cutoff = (datetime.now(timezone.utc) - timedelta(days=max(1, int(days)))).isoformat()
+    with engine._connect() as conn:
+        rows = list(conn.execute(
+            """
+            SELECT raw_json
+            FROM charge_events
+            WHERE (event_type = 'charge.paid' OR status = 'paid')
+              AND created_at >= ?
+            ORDER BY created_at DESC
+            LIMIT ?
+            """,
+            (cutoff, max(1, int(limit))),
+        ))
+
+    inserted = 0
+    for (raw_json,) in rows:
+        result = engine.handle_event(json.loads(raw_json))
+        if result.alert:
+            record_antifraud_alert(engine, result, now=result.charge.created_at)
+            inserted += 1
+    return inserted
+
+
+def pending_antifraud_reviews(
+    engine: RiskEngine,
+    days: int = PENDING_REVIEW_DAYS,
+    limit: int = PENDING_REVIEW_LIMIT,
+    now: datetime | None = None,
+) -> list[dict]:
+    _ensure_review_tables(engine)
+    cutoff = ((now or datetime.now(timezone.utc)).astimezone(timezone.utc) - timedelta(days=max(1, int(days)))).isoformat()
+    with engine._connect() as conn:
+        conn.row_factory = None
+        rows = list(conn.execute(
+            """
+            SELECT a.charge_id, a.alerted_at, a.score, a.customer_name, a.amount,
+                   a.order_number, a.delivery_date, a.delivery_time, a.address, a.reasons_json
+            FROM antifraud_alerts a
+            LEFT JOIN antifraud_reviews r ON r.charge_id = a.charge_id
+            WHERE r.charge_id IS NULL
+              AND a.alerted_at >= ?
+            ORDER BY a.alerted_at DESC
+            LIMIT ?
+            """,
+            (cutoff, max(1, int(limit))),
+        ))
+
+    pending = []
+    for row in rows:
+        reasons = json.loads(row[9]) if row[9] else []
+        pending.append({
+            "charge_id": row[0],
+            "alerted_at": row[1],
+            "score": row[2],
+            "customer_name": row[3],
+            "amount": row[4],
+            "order_number": row[5],
+            "delivery_date": row[6],
+            "delivery_time": row[7],
+            "address": row[8],
+            "reasons": reasons,
+        })
+    return pending
+
+
+def mark_antifraud_review(
+    engine: RiskEngine,
+    charge_id: str,
+    decision: str,
+    reviewed_by: str = "bigdog",
+    note: str = "",
+    reviewed_at: datetime | None = None,
+) -> None:
+    if decision not in REVIEW_DECISIONS:
+        raise ValueError(f"decision must be one of: {', '.join(sorted(REVIEW_DECISIONS))}")
+    _ensure_review_tables(engine)
+    with engine._connect() as conn:
+        conn.execute(
+            """
+            INSERT OR REPLACE INTO antifraud_reviews (
+                charge_id, decision, reviewed_at, reviewed_by, note
+            ) VALUES (?, ?, ?, ?, ?)
+            """,
+            (
+                charge_id,
+                decision,
+                (reviewed_at or datetime.now(timezone.utc)).astimezone(timezone.utc).isoformat(),
+                reviewed_by,
+                note,
+            ),
+        )
+
+
+def _format_brt_datetime(value: datetime) -> str:
+    return value.astimezone(timezone(timedelta(hours=-3))).strftime("%d/%m/%Y %H:%M")
+
+
+def format_pending_review_report(items: list[dict], now: datetime | None = None) -> str:
+    now = now or datetime.now(timezone.utc)
+    if not items:
+        return (
+            "ANTIFRAUDES PENDENTES DE CONFIRMAÇÃO\n\n"
+            f"Atualizado em {_format_brt_datetime(now)}.\n"
+            "Sem antifraudes pendentes de confirmação."
+        )
+
+    plural = "pendente" if len(items) == 1 else "pendentes"
+    lines = [
+        "ANTIFRAUDES PENDENTES DE CONFIRMAÇÃO",
+        "",
+        f"Atualizado em {_format_brt_datetime(now)} — {len(items)} {plural}.",
+        "",
+    ]
+    for index, item in enumerate(items, start=1):
+        schedule = " ".join(part for part in (item.get("delivery_date"), item.get("delivery_time")) if part) or "sem agendamento localizado"
+        order = f"pedido #{item['order_number']}" if item.get("order_number") else f"charge {item['charge_id']}"
+        reasons = item.get("reasons") or []
+        reason_text = "; ".join(reasons[:2]) if reasons else "motivo não detalhado"
+        lines.extend([
+            f"{index}. {item.get('customer_name') or '-'} — {_format_brl(int(item.get('amount') or 0))} — score {item.get('score')}",
+            f"   {order} — {schedule}",
+            f"   Endereço: {item.get('address') or 'não localizado'}",
+            f"   Motivo: {reason_text}",
+            f"   ID: {item['charge_id']}",
+            "",
+        ])
+    lines.append("Ação: confirmar cada caso como fraude ou não fraude para limpar esta lista.")
+    return "\n".join(lines).rstrip()
+
+
+def send_pending_review_report(
+    engine: RiskEngine,
+    send_message_func=None,
+    now: datetime | None = None,
+    days: int = PENDING_REVIEW_DAYS,
+    limit: int = PENDING_REVIEW_LIMIT,
+) -> dict:
+    backfill_recent_antifraud_alerts(engine, days=days)
+    items = pending_antifraud_reviews(engine, days=days, limit=limit, now=now)
+    if send_message_func is None:
+        send_message_func = _send_telegram_message
+    send_result = send_message_func(format_pending_review_report(items, now=now))
+    sent = True if send_result is None else bool(send_result)
+    return {"sent": sent, "count": len(items)}
 
 
 def _authorized(header: str | None) -> bool:
@@ -320,7 +546,9 @@ def process_webhook_payload(
     result = engine.handle_event(payload)
     delivery = {"telegram": False, "email": False, "whatsapp": False}
     if result.alert:
-        delivery = deliver_alert_func(format_alert(result))
+        alert_message = format_alert(result)
+        record_antifraud_alert(engine, result)
+        delivery = deliver_alert_func(alert_message)
     return {"ok": True, "alert": result.alert, "score": result.score, "delivery": delivery}
 
 
@@ -331,14 +559,18 @@ def process_webhook_payload_background(payload: dict, engine: RiskEngine) -> Non
         sys.stderr.write("pagarme-webhook background processing failed\n")
 
 
-class Handler(BaseHTTPRequestHandler):
-    engine = RiskEngine(
+def build_engine() -> RiskEngine:
+    return RiskEngine(
         DB_PATH,
         history_checker=CompositeCustomerHistoryChecker(
             LocalMogoHistoryChecker(MOGO_REPORTS_ROOT),
             LiveMogoOperationalOrderChecker(),
         ),
     )
+
+
+class Handler(BaseHTTPRequestHandler):
+    engine = build_engine()
 
     def log_message(self, fmt: str, *args):  # noqa: D401 - stdlib hook
         sys.stderr.write("pagarme-webhook " + (fmt % args) + "\n")
@@ -396,7 +628,29 @@ class Handler(BaseHTTPRequestHandler):
             self._send_json(200, {"ok": True, "accepted": True, "warning": "processing_failed"})
 
 
-def main() -> int:
+def main(argv: list[str] | None = None) -> int:
+    parser = argparse.ArgumentParser(description="Pagar.me antifraud webhook and review tools")
+    parser.add_argument("--send-pending-review", action="store_true", help="send daily pending antifraud review report")
+    parser.add_argument("--mark-review", metavar="CHARGE_ID", help="mark an antifraud alert as reviewed")
+    parser.add_argument("--decision", choices=sorted(REVIEW_DECISIONS), help="review decision for --mark-review")
+    parser.add_argument("--note", default="", help="optional review note")
+    parser.add_argument("--reviewed-by", default="bigdog", help="review author")
+    parser.add_argument("--days", type=int, default=PENDING_REVIEW_DAYS, help="lookback window for pending review report")
+    parser.add_argument("--limit", type=int, default=PENDING_REVIEW_LIMIT, help="maximum pending items to include")
+    args = parser.parse_args(argv)
+
+    if args.mark_review:
+        if not args.decision:
+            parser.error("--decision is required with --mark-review")
+        mark_antifraud_review(build_engine(), args.mark_review, args.decision, reviewed_by=args.reviewed_by, note=args.note)
+        print(json.dumps({"ok": True, "charge_id": args.mark_review, "decision": args.decision}, ensure_ascii=False))
+        return 0
+
+    if args.send_pending_review:
+        result = send_pending_review_report(build_engine(), days=args.days, limit=args.limit)
+        print(json.dumps({"ok": bool(result["sent"]), **result}, ensure_ascii=False))
+        return 0 if result["sent"] else 1
+
     if not USER or not PASSWORD:
         print("PAGARME_WEBHOOK_USER/PASSWORD missing", file=sys.stderr)
         return 2

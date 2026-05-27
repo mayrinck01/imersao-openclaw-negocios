@@ -142,6 +142,93 @@ class PagarmeWebhookDeliveryTests(unittest.TestCase):
             self.assertEqual(1, response["count"])
             self.assertEqual("ch_paid_ana", response["checks"][0]["charge"]["charge_id"])
 
+    def test_process_webhook_payload_records_pending_review_for_alert(self):
+        with tempfile.NamedTemporaryFile() as db:
+            checker = FakeHistoryChecker(CustomerHistoryResult(False, None, "not_found", None))
+            engine = RiskEngine(db.name, history_checker=checker, hotlist=FraudHotlist.empty())
+            now = datetime.now(timezone.utc)
+            engine.handle_event(pagarme_event(
+                "charge.payment_failed",
+                "ch_pending_failed",
+                created_at=(now - timedelta(minutes=5)).isoformat(),
+                card_last4="1111",
+            ))
+
+            response = server.process_webhook_payload(
+                pagarme_event("charge.paid", "ch_pending_review", created_at=now.isoformat(), card_last4="2222"),
+                engine,
+                deliver_alert_func=lambda message: {"telegram": True, "email": False, "whatsapp": False},
+                delay_seconds=0,
+            )
+            pending = server.pending_antifraud_reviews(engine, days=2)
+
+            self.assertTrue(response["alert"])
+            self.assertEqual(1, len(pending))
+            self.assertEqual("ch_pending_review", pending[0]["charge_id"])
+            self.assertEqual("Ana Paula", pending[0]["customer_name"])
+            self.assertEqual(100, pending[0]["score"])
+
+    def test_mark_antifraud_review_removes_charge_from_pending_report(self):
+        with tempfile.NamedTemporaryFile() as db:
+            checker = FakeHistoryChecker(CustomerHistoryResult(False, None, "not_found", None))
+            engine = RiskEngine(db.name, history_checker=checker, hotlist=FraudHotlist.empty())
+            now = datetime.now(timezone.utc)
+            engine.handle_event(pagarme_event(
+                "charge.payment_failed",
+                "ch_reviewed_failed",
+                created_at=(now - timedelta(minutes=5)).isoformat(),
+                card_last4="1111",
+            ))
+            server.process_webhook_payload(
+                pagarme_event("charge.paid", "ch_reviewed", created_at=now.isoformat(), card_last4="2222"),
+                engine,
+                deliver_alert_func=lambda message: {"telegram": True, "email": False, "whatsapp": False},
+                delay_seconds=0,
+            )
+
+            server.mark_antifraud_review(engine, "ch_reviewed", "not_fraud", reviewed_by="test")
+
+            self.assertEqual([], server.pending_antifraud_reviews(engine, days=2))
+
+    def test_pending_review_report_sends_empty_state_when_no_pending(self):
+        with tempfile.NamedTemporaryFile() as db:
+            engine = RiskEngine(db.name, history_checker=FakeHistoryChecker(CustomerHistoryResult(False, None, "not_found")), hotlist=FraudHotlist.empty())
+            sent_messages = []
+
+            result = server.send_pending_review_report(
+                engine,
+                send_message_func=sent_messages.append,
+                now=datetime(2026, 5, 27, 20, 0, tzinfo=timezone.utc),
+            )
+
+            self.assertEqual({"sent": True, "count": 0}, result)
+            self.assertEqual(1, len(sent_messages))
+            self.assertIn("Sem antifraudes pendentes", sent_messages[0])
+
+    def test_format_pending_review_report_lists_alert_details(self):
+        items = [{
+            "charge_id": "ch_123",
+            "customer_name": "Luciana Lopes",
+            "amount": 15300,
+            "score": 50,
+            "alerted_at": "2026-05-27T14:01:00+00:00",
+            "order_number": "008749",
+            "delivery_date": "27/05/2026",
+            "delivery_time": "17:30",
+            "address": "Rua Dona Mariana, 182, 1206 bloco 1 - Botafogo",
+            "reasons": ["Titular diferente do nome do cliente"],
+        }]
+
+        report = server.format_pending_review_report(items, now=datetime(2026, 5, 27, 20, 0, tzinfo=timezone.utc))
+
+        self.assertIn("ANTIFRAUDES PENDENTES DE CONFIRMAÇÃO", report)
+        self.assertIn("1 pendente", report)
+        self.assertIn("Luciana Lopes", report)
+        self.assertIn("R$ 153,00", report)
+        self.assertIn("pedido #008749", report)
+        self.assertIn("27/05/2026 17:30", report)
+        self.assertIn("Titular diferente do nome do cliente", report)
+
     def test_deliver_alert_sends_to_each_configured_whatsapp_target_via_evolution(self):
         calls = []
         evolution_calls = []
