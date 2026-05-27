@@ -106,8 +106,7 @@ class PagarmeFraudTests(unittest.TestCase):
 
     def test_card_holder_document_mismatch_triggers_alert(self):
         with tempfile.NamedTemporaryFile() as db:
-            checker = FakeHistoryChecker(CustomerHistoryResult(True, "document", "valid_purchase", None))
-            engine = RiskEngine(db.name, history_checker=checker)
+            engine = RiskEngine(db.name)
             result = engine.handle_event(event(
                 "charge.paid",
                 "ch_holder_document_mismatch",
@@ -118,6 +117,21 @@ class PagarmeFraudTests(unittest.TestCase):
             self.assertTrue(result.alert)
             self.assertEqual(50, result.score)
             self.assertIn("cpf do cliente diferente", " ".join(result.reasons).lower())
+
+    def test_mogo_prior_valid_purchase_suppresses_card_holder_document_mismatch_alert(self):
+        with tempfile.NamedTemporaryFile() as db:
+            checker = FakeHistoryChecker(CustomerHistoryResult(True, "name", "valid_purchase", None, valid_purchase_count=2))
+            engine = RiskEngine(db.name, history_checker=checker)
+            result = engine.handle_event(event(
+                "charge.paid",
+                "ch_returning_holder_document_mismatch",
+                document="12345678900",
+                holder_document="98765432100",
+            ))
+
+            self.assertFalse(result.alert)
+            self.assertEqual(0, result.score)
+            self.assertNotIn("cpf do cliente diferente", " ".join(result.reasons).lower())
 
     def test_card_holder_document_missing_triggers_operational_alert(self):
         with tempfile.NamedTemporaryFile() as db:

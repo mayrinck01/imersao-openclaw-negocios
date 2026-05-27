@@ -910,10 +910,10 @@ class RiskEngine:
 
         customer_document = only_digits(charge.customer_document)
         holder_document = only_digits(charge.holder_document)
-        if charge.is_card and not holder_document:
+        if charge.is_card and not holder_document and not suppress_weak:
             strong_score += 50
             strong_reasons.append("CPF do titular do cartão ausente em pagamento de cartão")
-        elif charge.is_card and customer_document and holder_document and customer_document != holder_document:
+        elif charge.is_card and customer_document and holder_document and customer_document != holder_document and not suppress_weak:
             strong_score += 50
             strong_reasons.append("CPF do cliente diferente do CPF do titular do cartão")
 
