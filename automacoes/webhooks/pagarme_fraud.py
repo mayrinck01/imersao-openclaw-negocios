@@ -201,6 +201,27 @@ def customer_name_part_in_email_or_holder(customer_name: str | None, email: str 
     return False
 
 
+def _order_address_key(order: "MogoOrderSummary" | None) -> str:
+    if order is None:
+        return ""
+    return normalize_text(" ".join(part for part in (order.address, order.neighborhood) if part))
+
+
+def _names_share_meaningful_part(left: str | None, right: str | None) -> bool:
+    if names_compatible(left, right):
+        return True
+    left_tokens = set(_meaningful_name_tokens(left))
+    right_tokens = set(_meaningful_name_tokens(right))
+    if not left_tokens or not right_tokens:
+        return False
+    smaller = left_tokens if len(left_tokens) <= len(right_tokens) else right_tokens
+    larger = right_tokens if smaller is left_tokens else left_tokens
+    overlap = smaller & larger
+    if len(smaller) == 1:
+        return bool(overlap)
+    return len(overlap) / len(smaller) >= 0.75
+
+
 @dataclass(frozen=True)
 class ChargeEvent:
     hook_id: str
@@ -416,6 +437,8 @@ class LocalMogoHistoryChecker:
         self._email_order_ids: dict[str, set[str]] = {}
         self._phone_order_ids: dict[str, set[str]] = {}
         self._name_order_ids: dict[str, set[str]] = {}
+        self._valid_orders: list[MogoOrderSummary] = []
+        self._valid_order_ids: set[str] = set()
         self._operational_orders: list[MogoOrderSummary] = []
 
     def lookup(self, charge: ChargeEvent) -> CustomerHistoryResult:
@@ -425,6 +448,9 @@ class LocalMogoHistoryChecker:
             return CustomerHistoryResult(False, None, "error", exc.__class__.__name__)
 
         operational_order = self._find_operational_order(charge)
+        name_address_order = self._find_valid_purchase_by_name_and_address(charge, operational_order)
+        if name_address_order:
+            return CustomerHistoryResult(True, "name_address", "valid_purchase", None, name_address_order, 1, operational_order)
 
         document = only_digits(charge.customer_document)
         if document and document in self._documents:
@@ -447,6 +473,18 @@ class LocalMogoHistoryChecker:
                     return CustomerHistoryResult(True, "name", "valid_purchase", None, self._name_orders.get(indexed_name), self._valid_count(self._name_order_ids, indexed_name), operational_order)
 
         return CustomerHistoryResult(False, None, "not_found", None, None, 0, operational_order)
+
+    def _find_valid_purchase_by_name_and_address(self, charge: ChargeEvent, operational_order: MogoOrderSummary | None) -> MogoOrderSummary | None:
+        current_address = _order_address_key(operational_order)
+        if not current_address:
+            return None
+        current_name = operational_order.customer_name if operational_order and operational_order.customer_name else charge.customer_name
+        for order in self._valid_orders:
+            if not _order_address_key(order) or _order_address_key(order) != current_address:
+                continue
+            if _names_share_meaningful_part(current_name, order.customer_name):
+                return order
+        return None
 
     def _load_once(self) -> None:
         if self._loaded:
@@ -509,7 +547,7 @@ class LocalMogoHistoryChecker:
 
     def _is_valid_purchase_row(self, path: Path, row: dict[str, Any]) -> bool:
         folder = normalize_text(path.parent.name)
-        status = normalize_text(_first_present(row, ("A10", "status", "situacao", "posicao")))
+        status = normalize_text(_first_present(row, ("A10", "StatusEntrega", "StatusPedido", "StatusPago", "status", "situacao", "posicao")))
         if status:
             return status in self.VALID_STATUS
         if "historico pagamento" in folder:
@@ -556,6 +594,11 @@ class LocalMogoHistoryChecker:
 
     def _index_row(self, row: dict[str, Any]) -> None:
         order = self._order_summary(row)
+        purchase_id = self._purchase_id(order)
+        if purchase_id not in self._valid_order_ids:
+            self._valid_orders.append(order)
+            self._valid_order_ids.add(purchase_id)
+
         document = only_digits(_first_present(row, ("document", "documento", "cpf", "cnpj", "customer_document")))
         if document:
             self._index_purchase(document, order, self._documents, self._document_orders, self._document_order_ids)
@@ -827,6 +870,8 @@ class RiskEngine:
     def _history_can_suppress_alerts(self, charge: ChargeEvent, history: CustomerHistoryResult) -> bool:
         if not history.has_prior_valid_purchase:
             return False
+        if history.matched_by == "name_address":
+            return True
         if history.matched_by in {"document", "email", "phone"}:
             return True
         if history.matched_by == "name" and history.valid_purchase_count >= 2:
@@ -839,8 +884,10 @@ class RiskEngine:
         return not has_stronger_identity
 
     def _score_paid_charge(self, charge: ChargeEvent) -> tuple[int, list[str], CustomerHistoryResult]:
+        hotlist_score = 0
         strong_score = 0
         weak_score = 0
+        hotlist_reasons: list[str] = []
         strong_reasons: list[str] = []
         weak_reasons: list[str] = []
         operational_reasons: list[str] = []
@@ -858,8 +905,8 @@ class RiskEngine:
             operational_reasons.append(f"Histórico Mogo não validado{detail}")
 
         if self.hotlist.matches(charge):
-            strong_score += 50
-            strong_reasons.append("Dado em lista quente de chargeback/fraude")
+            hotlist_score += 50
+            hotlist_reasons.append("Dado em lista quente de chargeback/fraude")
 
         customer_document = only_digits(charge.customer_document)
         holder_document = only_digits(charge.holder_document)
@@ -895,9 +942,11 @@ class RiskEngine:
                 weak_score += 20
                 weak_reasons.append("Email pouco compatível com o nome do cliente")
 
+        if history.matched_by == "name_address":
+            return hotlist_score, hotlist_reasons + operational_reasons, history
         if suppress_weak:
-            return strong_score, strong_reasons + operational_reasons, history
-        return strong_score + weak_score, strong_reasons + weak_reasons + operational_reasons, history
+            return hotlist_score + strong_score, hotlist_reasons + strong_reasons + operational_reasons, history
+        return hotlist_score + strong_score + weak_score, hotlist_reasons + strong_reasons + weak_reasons + operational_reasons, history
 
 
 def _format_mogo_context(history: CustomerHistoryResult | None) -> str:

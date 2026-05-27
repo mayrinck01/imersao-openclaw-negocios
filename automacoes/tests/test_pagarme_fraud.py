@@ -264,6 +264,46 @@ class PagarmeFraudTests(unittest.TestCase):
             self.assertNotIn("titular diferente", reasons)
             self.assertNotIn("email pouco compatível", reasons)
 
+    def test_name_address_mogo_match_suppresses_card_holder_document_alert(self):
+        with tempfile.NamedTemporaryFile() as db:
+            checker = FakeHistoryChecker(CustomerHistoryResult(
+                True,
+                "name_address",
+                "valid_purchase",
+                None,
+                MogoOrderSummary(
+                    order_number="008715",
+                    customer_name="Luciana",
+                    address="Rua Dona Mariana, 182, 1206 bloco 1",
+                    neighborhood="Botafogo - Rio de Janeiro/RJ",
+                    origin="iFood",
+                ),
+                valid_purchase_count=1,
+                operational_order=MogoOrderSummary(
+                    order_number="008749",
+                    customer_name="Luciana Lopes Marinho",
+                    address="Rua Dona Mariana, 182, 1206 bloco 1",
+                    neighborhood="Botafogo - Rio de Janeiro/RJ",
+                    amount="153,00",
+                ),
+            ))
+            engine = RiskEngine(db.name, history_checker=checker)
+            result = engine.handle_event(event(
+                "charge.paid",
+                "ch_luciana_address_match",
+                customer_name="Luciana Lopes Marinho",
+                holder="Outro Titular",
+                document="12345678900",
+                holder_document="98765432100",
+                amount=15300,
+            ))
+
+            self.assertFalse(result.alert)
+            self.assertEqual(result.score, 0)
+            reasons = " ".join(result.reasons).lower()
+            self.assertNotIn("cpf do cliente diferente", reasons)
+            self.assertNotIn("titular diferente", reasons)
+
     def test_single_mogo_purchase_suppresses_checkout_retry_alerts(self):
         with tempfile.NamedTemporaryFile() as db:
             checker = FakeHistoryChecker(CustomerHistoryResult(
@@ -777,6 +817,56 @@ class PagarmeFraudTests(unittest.TestCase):
             result = checker.lookup(extract_charge(event("charge.paid", "ch_name", customer_name="Patricia Bernardo", email="semnome@example.com", document="")))
             self.assertTrue(result.has_prior_valid_purchase)
             self.assertEqual(result.matched_by, "name")
+
+    def test_local_mogo_history_checker_matches_partial_name_with_exact_delivery_address(self):
+        with tempfile.TemporaryDirectory() as root:
+            delivered = Path(root) / "Pedidos Entregues"
+            delivered.mkdir(parents=True)
+            (delivered / "10-01-2026.json").write_text(json.dumps({
+                "registros": [{
+                    "NumeroPedido": "008715",
+                    "StatusEntrega": "Entregue",
+                    "NomeCliente": "Luciana",
+                    "Logradouro": "Rua Dona Mariana",
+                    "Numero": "182",
+                    "Complemento": "1206 bloco 1",
+                    "Bairro": "Botafogo",
+                    "Cidade": "Rio de Janeiro",
+                    "Estado": "RJ",
+                    "OrigemPedido": "iFood",
+                }]
+            }), encoding="utf-8")
+            pending = Path(root) / "Pendentes"
+            pending.mkdir(parents=True)
+            (pending / "27-05-2026.json").write_text(json.dumps({
+                "registros": [{
+                    "NumeroPedido": "008749",
+                    "StatusEntrega": "Pendente",
+                    "NomeCliente": "Luciana Lopes Marinho",
+                    "Logradouro": "Rua Dona Mariana",
+                    "Numero": "182",
+                    "Complemento": "1206 bloco 1",
+                    "Bairro": "Botafogo",
+                    "Cidade": "Rio de Janeiro",
+                    "Estado": "RJ",
+                    "ValorTotal": "153,00",
+                }]
+            }), encoding="utf-8")
+
+            checker = LocalMogoHistoryChecker(root)
+            result = checker.lookup(extract_charge(event(
+                "charge.paid",
+                "ch_luciana_partial_address",
+                customer_name="Luciana Lopes Marinho",
+                email="outro@example.com",
+                document="12345678900",
+                amount=15300,
+            )))
+
+            self.assertTrue(result.has_prior_valid_purchase)
+            self.assertEqual(result.matched_by, "name_address")
+            self.assertEqual(result.order.order_number, "008715")
+            self.assertEqual(result.operational_order.order_number, "008749")
 
     def test_local_mogo_history_checker_ignores_non_paid_purchase_status(self):
         with tempfile.TemporaryDirectory() as root:
