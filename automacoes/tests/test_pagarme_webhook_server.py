@@ -205,6 +205,30 @@ class PagarmeWebhookDeliveryTests(unittest.TestCase):
             self.assertEqual(1, len(sent_messages))
             self.assertIn("Sem antifraudes pendentes", sent_messages[0])
 
+    def test_pending_review_report_does_not_backfill_by_default(self):
+        original_backfill = server.backfill_recent_antifraud_alerts
+        original_pending = server.pending_antifraud_reviews
+
+        def forbidden_backfill(*args, **kwargs):
+            raise AssertionError("daily report should use the recorded review queue by default")
+
+        def fake_pending(*args, **kwargs):
+            return []
+
+        server.backfill_recent_antifraud_alerts = forbidden_backfill
+        server.pending_antifraud_reviews = fake_pending
+        try:
+            result = server.send_pending_review_report(
+                object(),
+                send_message_func=lambda message: True,
+                now=datetime(2026, 5, 27, 20, 0, tzinfo=timezone.utc),
+            )
+        finally:
+            server.backfill_recent_antifraud_alerts = original_backfill
+            server.pending_antifraud_reviews = original_pending
+
+        self.assertEqual({"sent": True, "count": 0}, result)
+
     def test_format_pending_review_report_lists_alert_details(self):
         items = [{
             "charge_id": "ch_123",
@@ -228,6 +252,39 @@ class PagarmeWebhookDeliveryTests(unittest.TestCase):
         self.assertIn("pedido #008749", report)
         self.assertIn("27/05/2026 17:30", report)
         self.assertIn("Titular diferente do nome do cliente", report)
+
+    def test_send_pending_review_cli_uses_review_engine(self):
+        calls = []
+        original_build_engine = server.build_engine
+        original_build_review_engine = getattr(server, "build_review_engine", None)
+        original_send_pending_review_report = server.send_pending_review_report
+
+        def forbidden_build_engine():
+            raise AssertionError("daily review report must not use the live webhook engine")
+
+        def fake_build_review_engine():
+            calls.append("review_engine")
+            return "review-engine"
+
+        def fake_send_pending_review_report(engine, days=14, limit=50, backfill=False):
+            calls.append(("report", engine, days, limit, backfill))
+            return {"sent": True, "count": 3}
+
+        server.build_engine = forbidden_build_engine
+        server.build_review_engine = fake_build_review_engine
+        server.send_pending_review_report = fake_send_pending_review_report
+        try:
+            exit_code = server.main(["--send-pending-review", "--days", "7", "--limit", "12"])
+        finally:
+            server.build_engine = original_build_engine
+            if original_build_review_engine is None:
+                delattr(server, "build_review_engine")
+            else:
+                server.build_review_engine = original_build_review_engine
+            server.send_pending_review_report = original_send_pending_review_report
+
+        self.assertEqual(0, exit_code)
+        self.assertEqual(["review_engine", ("report", "review-engine", 7, 12, False)], calls)
 
     def test_deliver_alert_sends_to_each_configured_whatsapp_target_via_evolution(self):
         calls = []

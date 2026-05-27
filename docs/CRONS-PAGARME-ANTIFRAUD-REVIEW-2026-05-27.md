@@ -24,7 +24,8 @@ cd /root/workspaces/cake-brain && /usr/bin/python3 automacoes/webhooks/pagarme_w
 - Quando um alerta antifraude real e gerado, o webhook salva o `charge_id` em `antifraud_alerts` no SQLite do servico.
 - A rotina diaria consulta os alertas que ainda nao tem decisao em `antifraud_reviews`.
 - Se nao houver pendencias, envia uma mensagem curta dizendo que nao ha antifraudes pendentes.
-- Antes de montar o relatorio, a rotina tambem faz backfill dos eventos recentes pagos que ainda nao estavam na tabela de alertas.
+- Para nao travar a rotina diaria com cruzamento pesado de Mogo, o envio padrao usa a fila ja gravada pelo webhook.
+- Backfill de eventos recentes fica manual/opt-in com `--backfill-recent`.
 
 ## Marcar revisao
 
@@ -35,6 +36,15 @@ python3 automacoes/webhooks/pagarme_webhook_server.py --mark-review ch_xxx --dec
 ```
 
 Decisoes aceitas: `fraud`, `not_fraud`.
+
+## Backfill manual
+
+Use apenas quando precisar recompor pendencias antigas ja gravadas em `charge_events`:
+
+```bash
+cd /root/workspaces/cake-brain
+python3 automacoes/webhooks/pagarme_webhook_server.py --send-pending-review --backfill-recent
+```
 
 ## Validacao
 

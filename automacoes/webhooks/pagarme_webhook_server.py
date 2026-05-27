@@ -373,8 +373,10 @@ def send_pending_review_report(
     now: datetime | None = None,
     days: int = PENDING_REVIEW_DAYS,
     limit: int = PENDING_REVIEW_LIMIT,
+    backfill: bool = False,
 ) -> dict:
-    backfill_recent_antifraud_alerts(engine, days=days)
+    if backfill:
+        backfill_recent_antifraud_alerts(engine, days=days)
     items = pending_antifraud_reviews(engine, days=days, limit=limit, now=now)
     if send_message_func is None:
         send_message_func = _send_telegram_message
@@ -569,6 +571,15 @@ def build_engine() -> RiskEngine:
     )
 
 
+def build_review_engine() -> RiskEngine:
+    return RiskEngine(
+        DB_PATH,
+        history_checker=CompositeCustomerHistoryChecker(
+            LocalMogoHistoryChecker(MOGO_REPORTS_ROOT),
+        ),
+    )
+
+
 class Handler(BaseHTTPRequestHandler):
     engine = build_engine()
 
@@ -637,6 +648,7 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--reviewed-by", default="bigdog", help="review author")
     parser.add_argument("--days", type=int, default=PENDING_REVIEW_DAYS, help="lookback window for pending review report")
     parser.add_argument("--limit", type=int, default=PENDING_REVIEW_LIMIT, help="maximum pending items to include")
+    parser.add_argument("--backfill-recent", action="store_true", help="recompute recent alerts before sending the review report")
     args = parser.parse_args(argv)
 
     if args.mark_review:
@@ -647,7 +659,7 @@ def main(argv: list[str] | None = None) -> int:
         return 0
 
     if args.send_pending_review:
-        result = send_pending_review_report(build_engine(), days=args.days, limit=args.limit)
+        result = send_pending_review_report(build_review_engine(), days=args.days, limit=args.limit, backfill=args.backfill_recent)
         print(json.dumps({"ok": bool(result["sent"]), **result}, ensure_ascii=False))
         return 0 if result["sent"] else 1
 
