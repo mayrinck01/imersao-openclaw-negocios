@@ -829,6 +829,8 @@ class RiskEngine:
             return False
         if history.matched_by in {"document", "email", "phone"}:
             return True
+        if history.matched_by == "name" and history.valid_purchase_count >= 2:
+            return True
         has_stronger_identity = bool(
             only_digits(charge.customer_document)
             or normalize_text(charge.customer_email)

@@ -1,6 +1,7 @@
 import unittest
 import sys
 import tempfile
+from types import SimpleNamespace
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
@@ -14,6 +15,16 @@ class FakeHistoryChecker:
         self.result = result
 
     def lookup(self, charge):
+        return self.result
+
+
+class FakeEngine:
+    def __init__(self, result):
+        self.result = result
+        self.handled_payloads = []
+
+    def handle_event(self, payload):
+        self.handled_payloads.append(payload)
         return self.result
 
 
@@ -41,6 +52,44 @@ def pagarme_event(event_type, charge_id, *, customer_name="Ana Paula", email="an
 
 
 class PagarmeWebhookDeliveryTests(unittest.TestCase):
+    def test_process_webhook_payload_waits_before_paid_alert_processing(self):
+        sleeps = []
+        deliveries = []
+        payload = pagarme_event("charge.paid", "ch_wait_before_mogo")
+        result = SimpleNamespace(alert=False, score=0, charge=None)
+        engine = FakeEngine(result)
+
+        response = server.process_webhook_payload(
+            payload,
+            engine,
+            deliver_alert_func=deliveries.append,
+            delay_seconds=60,
+            sleep_func=sleeps.append,
+        )
+
+        self.assertEqual([60], sleeps)
+        self.assertEqual([payload], engine.handled_payloads)
+        self.assertEqual([], deliveries)
+        self.assertTrue(response["ok"])
+        self.assertFalse(response["alert"])
+
+    def test_process_webhook_payload_does_not_wait_for_failed_charge_storage(self):
+        sleeps = []
+        payload = pagarme_event("charge.payment_failed", "ch_failed_no_wait")
+        result = SimpleNamespace(alert=False, score=0, charge=None)
+        engine = FakeEngine(result)
+
+        response = server.process_webhook_payload(
+            payload,
+            engine,
+            delay_seconds=60,
+            sleep_func=sleeps.append,
+        )
+
+        self.assertEqual([], sleeps)
+        self.assertEqual([payload], engine.handled_payloads)
+        self.assertTrue(response["ok"])
+
     def test_manual_antifraud_checks_returns_latest_paid_match_with_score(self):
         with tempfile.NamedTemporaryFile() as db:
             checker = FakeHistoryChecker(CustomerHistoryResult(

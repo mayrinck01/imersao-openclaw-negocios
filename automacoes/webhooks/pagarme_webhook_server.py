@@ -9,12 +9,14 @@ import json
 import os
 import subprocess
 import sys
+import threading
+import time
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from urllib.parse import parse_qs, urlparse
 from urllib import request
 
-from pagarme_fraud import CompositeCustomerHistoryChecker, LiveMogoOperationalOrderChecker, LocalMogoHistoryChecker, RiskEngine, format_alert
+from pagarme_fraud import CompositeCustomerHistoryChecker, LiveMogoOperationalOrderChecker, LocalMogoHistoryChecker, RiskEngine, extract_charge, format_alert
 
 HOST = os.environ.get("PAGARME_WEBHOOK_HOST", "127.0.0.1")
 PORT = int(os.environ.get("PAGARME_WEBHOOK_PORT", "3060"))
@@ -34,6 +36,7 @@ EVOLUTION_BASE_URL = os.environ.get("PAGARME_ALERT_EVOLUTION_BASE_URL", "http://
 EVOLUTION_INSTANCE = os.environ.get("PAGARME_ALERT_EVOLUTION_INSTANCE", "cake-interno")
 EVOLUTION_ENV_FILE = os.environ.get("PAGARME_ALERT_EVOLUTION_ENV_FILE", "/opt/cake-interno-whatsapp/.env")
 MOGO_REPORTS_ROOT = os.environ.get("PAGARME_MOGO_REPORTS_ROOT", "/root/workspaces/cake-brain/relatorios/Mogo")
+ALERT_DELAY_SECONDS = int(os.environ.get("PAGARME_ALERT_DELAY_SECONDS", "60"))
 
 
 def _format_brl(cents: int) -> str:
@@ -296,6 +299,38 @@ def deliver_alert(message: str) -> dict[str, bool]:
     return {"telegram": telegram_ok, "email": email_ok, "whatsapp": whatsapp_ok}
 
 
+def should_delay_payload(payload: dict) -> bool:
+    try:
+        charge = extract_charge(payload)
+    except Exception:
+        return False
+    return charge.is_paid and not charge.is_pix
+
+
+def process_webhook_payload(
+    payload: dict,
+    engine: RiskEngine,
+    deliver_alert_func=deliver_alert,
+    delay_seconds: int = ALERT_DELAY_SECONDS,
+    sleep_func=time.sleep,
+) -> dict:
+    if delay_seconds > 0 and should_delay_payload(payload):
+        sleep_func(delay_seconds)
+
+    result = engine.handle_event(payload)
+    delivery = {"telegram": False, "email": False, "whatsapp": False}
+    if result.alert:
+        delivery = deliver_alert_func(format_alert(result))
+    return {"ok": True, "alert": result.alert, "score": result.score, "delivery": delivery}
+
+
+def process_webhook_payload_background(payload: dict, engine: RiskEngine) -> None:
+    try:
+        process_webhook_payload(payload, engine)
+    except Exception:
+        sys.stderr.write("pagarme-webhook background processing failed\n")
+
+
 class Handler(BaseHTTPRequestHandler):
     engine = RiskEngine(
         DB_PATH,
@@ -345,11 +380,17 @@ class Handler(BaseHTTPRequestHandler):
             return
 
         try:
-            result = self.engine.handle_event(payload)
-            delivery = {"telegram": False, "email": False, "whatsapp": False}
-            if result.alert:
-                delivery = deliver_alert(format_alert(result))
-            self._send_json(200, {"ok": True, "alert": result.alert, "score": result.score, "delivery": delivery})
+            if ALERT_DELAY_SECONDS > 0 and should_delay_payload(payload):
+                thread = threading.Thread(
+                    target=process_webhook_payload_background,
+                    args=(payload, self.engine),
+                    daemon=True,
+                )
+                thread.start()
+                self._send_json(200, {"ok": True, "accepted": True, "deferred": True, "delay_seconds": ALERT_DELAY_SECONDS})
+                return
+
+            self._send_json(200, process_webhook_payload(payload, self.engine, delay_seconds=0))
         except Exception:
             self.log_message("processing failed")
             self._send_json(200, {"ok": True, "accepted": True, "warning": "processing_failed"})

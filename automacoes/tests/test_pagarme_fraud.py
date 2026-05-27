@@ -202,14 +202,14 @@ class PagarmeFraudTests(unittest.TestCase):
             self.assertFalse(result.alert)
             self.assertNotIn("falha recente", " ".join(result.reasons).lower())
 
-    def test_name_only_mogo_match_does_not_suppress_retry_alert_when_identity_fields_exist(self):
+    def test_single_name_only_mogo_match_does_not_suppress_retry_alert_when_identity_fields_exist(self):
         with tempfile.NamedTemporaryFile() as db:
             checker = FakeHistoryChecker(CustomerHistoryResult(
                 True,
                 "name",
                 "valid_purchase",
                 None,
-                valid_purchase_count=28,
+                valid_purchase_count=1,
             ))
             engine = RiskEngine(db.name, history_checker=checker)
             now = datetime.now(timezone.utc)
@@ -238,6 +238,31 @@ class PagarmeFraudTests(unittest.TestCase):
             reasons = " ".join(result.reasons).lower()
             self.assertIn("falha recente", reasons)
             self.assertIn("cartões diferentes", reasons)
+
+    def test_recurrent_name_only_mogo_customer_suppresses_weak_identity_alerts(self):
+        with tempfile.NamedTemporaryFile() as db:
+            checker = FakeHistoryChecker(CustomerHistoryResult(
+                True,
+                "name",
+                "valid_purchase",
+                None,
+                valid_purchase_count=2,
+            ))
+            engine = RiskEngine(db.name, history_checker=checker)
+            result = engine.handle_event(event(
+                "charge.paid",
+                "ch_miguel_like",
+                customer_name="Miguel Angel Gomez",
+                email="mconsuelo.quintero@udea.edu.co",
+                document="04426337771",
+                holder="MARIA QUINTERO",
+            ))
+
+            self.assertFalse(result.alert)
+            self.assertEqual(result.score, 0)
+            reasons = " ".join(result.reasons).lower()
+            self.assertNotIn("titular diferente", reasons)
+            self.assertNotIn("email pouco compatível", reasons)
 
     def test_single_mogo_purchase_suppresses_checkout_retry_alerts(self):
         with tempfile.NamedTemporaryFile() as db:
