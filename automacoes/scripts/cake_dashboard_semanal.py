@@ -10,6 +10,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import unicodedata
 from collections import Counter, defaultdict
 from datetime import date, datetime, timedelta
 from decimal import Decimal, ROUND_HALF_UP
@@ -184,10 +185,35 @@ def weekly_ranges_since_month_start(end: date) -> list[tuple[date, date]]:
     ranges: list[tuple[date, date]] = []
     cursor = date(end.year, end.month, 1)
     while cursor <= end:
-        chunk_end = min(cursor + timedelta(days=6), end)
+        days_until_sunday = 6 - cursor.weekday()
+        chunk_end = min(cursor + timedelta(days=days_until_sunday), end)
         ranges.append((cursor, chunk_end))
         cursor = chunk_end + timedelta(days=1)
     return ranges
+
+
+def weekly_ranges_for_month(year: int, month: int) -> list[tuple[date, date]]:
+    return weekly_ranges_since_month_start(month_end(date(year, month, 1)))
+
+
+def matching_prior_year_calendar_week(start: date, end: date) -> tuple[date, date]:
+    source_ranges = weekly_ranges_for_month(start.year, start.month)
+    try:
+        week_index = next(index for index, (range_start, _) in enumerate(source_ranges) if range_start == start)
+    except StopIteration:
+        return same_period_last_year(start, end)
+
+    target_ranges = weekly_ranges_for_month(start.year - 1, start.month)
+    if week_index >= len(target_ranges):
+        return same_period_last_year(start, end)
+
+    _, source_full_end = source_ranges[week_index]
+    target_start, target_full_end = target_ranges[week_index]
+    if end < source_full_end:
+        target_end = min(target_start + timedelta(days=(end - start).days), target_full_end)
+    else:
+        target_end = target_full_end
+    return target_start, target_end
 
 
 def build_daily_comparison(records_2026: list[dict[str, Any]], records_2025: list[dict[str, Any]], start: date, end: date) -> list[dict[str, Any]]:
@@ -239,7 +265,7 @@ def build_cumulative_daily_comparison(records_2026: list[dict[str, Any]], record
 def build_weekly_comparison(records_2026: list[dict[str, Any]], records_2025: list[dict[str, Any]], end: date) -> list[dict[str, Any]]:
     rows: list[dict[str, Any]] = []
     for start_2026, end_2026 in weekly_ranges_since_month_start(end):
-        start_2025, end_2025 = same_period_last_year(start_2026, end_2026)
+        start_2025, end_2025 = matching_prior_year_calendar_week(start_2026, end_2026)
         total_2026, _ = summarize_revenue(records_2026, start_2026, end_2026)
         total_2025, _ = summarize_revenue(records_2025, start_2025, end_2025)
         rows.append({
@@ -251,6 +277,23 @@ def build_weekly_comparison(records_2026: list[dict[str, Any]], records_2025: li
             "delta_pct": delta_percent(total_2026, total_2025),
         })
     return rows
+
+
+def build_current_vs_previous_week(records: list[dict[str, Any]], end: date) -> dict[str, Any]:
+    current_start, current_end = latest_closed_monday_to_sunday_week(end)
+    previous_start = current_start - timedelta(days=7)
+    previous_end = current_start - timedelta(days=1)
+    current_total, _ = summarize_revenue(records, current_start, current_end)
+    previous_total, _ = summarize_revenue(records, previous_start, previous_end)
+
+    return {
+        "semana_atual_label": f"{current_start.strftime('%d/%m')} a {current_end.strftime('%d/%m')}",
+        "semana_anterior_label": f"{previous_start.strftime('%d/%m')} a {previous_end.strftime('%d/%m')}",
+        "valor_atual": current_total,
+        "valor_anterior": previous_total,
+        "delta": current_total - previous_total,
+        "delta_pct": delta_percent(current_total, previous_total),
+    }
 
 
 def summarize_sales(records: list[dict[str, Any]], start: date, end: date) -> dict[str, Any]:
@@ -297,10 +340,25 @@ def summarize_channels(records: list[dict[str, Any]], start: date, end: date) ->
         if not in_period(row_date, start, end):
             continue
         channel = str(row.get("origem") or row.get("OrigemPedido") or "Sem origem").strip() or "Sem origem"
+        channel = normalize_operational_channel(channel)
         totals[channel] += parse_brl(row.get("val") or row.get("valor") or row.get("valTota") or row.get("A4"))
     result = [{"nome": name, "valor": value} for name, value in totals.items()]
     result.sort(key=lambda item: item["valor"], reverse=True)
     return result
+
+
+def normalize_operational_channel(channel: str) -> str:
+    normalized = unicodedata.normalize("NFKD", channel)
+    key = "".join(char for char in normalized if not unicodedata.combining(char)).casefold().strip()
+    if "ifood" in key:
+        return "iFood"
+    if "neemo" in key:
+        return "Neemo"
+    if "balcao" in key:
+        return "Balcão"
+    if key.startswith("mesa") or key.startswith("comanda"):
+        return "Mesa"
+    return "Delivery Atendimento"
 
 
 def summarize_clients(records: list[dict[str, Any]], start: date, end: date) -> dict[str, Any]:
@@ -323,6 +381,15 @@ def previous_completed_week(today: date | None = None) -> tuple[date, date]:
     start = current_monday - timedelta(days=7)
     end = start + timedelta(days=6)
     return start, end
+
+
+def latest_closed_monday_to_sunday_week(period_end: date) -> tuple[date, date]:
+    current_monday = period_end - timedelta(days=period_end.weekday())
+    if period_end.weekday() == 6:
+        start = current_monday
+    else:
+        start = current_monday - timedelta(days=7)
+    return start, start + timedelta(days=6)
 
 
 def build_dashboard(
@@ -382,6 +449,7 @@ def build_dashboard(
     channels = [] if hide_unvalidated_sales_breakdowns else summarize_channels(revenue_source or sales_source, week_start, week_end)
     daily_comparison = build_daily_comparison(vendas_records, vendas_prior_records, week_start, week_end) if vendas_records and vendas_prior_records else []
     weekly_comparison = build_weekly_comparison(vendas_records, vendas_prior_records, week_end) if vendas_records and vendas_prior_records else []
+    current_vs_previous_week = build_current_vs_previous_week(vendas_records, week_end) if vendas_records else {}
     month_start = date(week_end.year, week_end.month, 1)
     month_start_prior = date(week_end.year - 1, week_end.month, 1)
     week_end_prior = date(week_end.year - 1, week_end.month, week_end.day)
@@ -448,6 +516,7 @@ def build_dashboard(
         "comparativo_dia_a_dia": daily_comparison,
         "comparativo_mes_dia_a_dia": month_daily_comparison,
         "comparativo_semana_a_semana": weekly_comparison,
+        "comparativo_semana_atual_anterior": current_vs_previous_week,
         "clientes": clients,
         "operacao": operations,
         "fontes_ausentes": missing_sources,

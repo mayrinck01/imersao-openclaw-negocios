@@ -127,6 +127,60 @@ class CakeDashboardPdfTests(unittest.TestCase):
         self.assertNotIn('<div class="k">Pedidos</div>', html)
         self.assertNotIn("Maio/2025 fechado", html)
 
+    def test_render_html_names_accumulated_revenue_section_as_month(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp) / "Mogo"
+            write_json(root / "Vendas Analitico" / "05-2026.json", {
+                "registros": [
+                    {
+                        "dataped": "12/05/2026",
+                        "NumeroPedido": "001",
+                        "Produto": "Bolo",
+                        "Qtde": "1,00",
+                        "valTota": "100,00",
+                        "OrigemPedido": "Loja",
+                    }
+                ]
+            })
+            write_json(root / "Vendas Analitico" / "05-2025.json", {"registros": []})
+
+            dashboard = build_dashboard(root, date(2026, 5, 11), date(2026, 5, 17))
+            html = render_html(dashboard)
+
+        self.assertIn("<h2>Faturamento acumulado do mês</h2>", html)
+        self.assertNotIn("<h2>Faturamento acumulado</h2>", html)
+
+    def test_render_html_adds_month_share_chart_below_operational_channels(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp) / "Mogo"
+            write_json(root / "Vendas Analitico" / "05-2026.json", {
+                "registros": [
+                    {"dataped": "12/05/2026", "NumeroPedido": "001", "Produto": "Bolo", "Qtde": "1,00", "valTota": "300,00", "OrigemPedido": "iFood"},
+                    {"dataped": "13/05/2026", "NumeroPedido": "002", "Produto": "Bolo", "Qtde": "1,00", "valTota": "100,00", "OrigemPedido": "Neemo"},
+                    {"dataped": "14/05/2026", "NumeroPedido": "003", "Produto": "Bolo", "Qtde": "1,00", "valTota": "100,00", "OrigemPedido": "WhatsApp"},
+                    {"dataped": "15/05/2026", "NumeroPedido": "004", "Produto": "Bolo", "Qtde": "1,00", "valTota": "200,00", "OrigemPedido": "Mesa"},
+                    {"dataped": "16/05/2026", "NumeroPedido": "005", "Produto": "Bolo", "Qtde": "1,00", "valTota": "300,00", "OrigemPedido": "Balcão"},
+                ]
+            })
+            write_json(root / "Vendas Analitico" / "05-2025.json", {"registros": []})
+
+            dashboard = build_dashboard(root, date(2026, 5, 1), date(2026, 5, 17))
+            html = render_html(dashboard)
+
+        self.assertIn("Participação no faturamento do mês", html)
+        self.assertRegex(
+            html,
+            r"Delivery Próprio[\s\S]*?"
+            r"R\$ 200[\s\S]*?"
+            r"20,0%",
+        )
+        self.assertRegex(
+            html,
+            r"Loja[\s\S]*?"
+            r"R\$ 500[\s\S]*?"
+            r"50,0%",
+        )
+
     def test_render_html_adds_year_to_date_context_below_primary_values(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp) / "Mogo"
@@ -184,10 +238,11 @@ class CakeDashboardPdfTests(unittest.TestCase):
 
         self.assertNotIn("Visão anual", html)
         self.assertIn(
-            "Recorte acumulado de 01/01/2026 a 17/05/2026 contra 01/01/2025 a 17/05/2025, usando Mogo Vendas Analítico com data Pedido como fonte canônica.",
+            "Recorte acumulado de 01/01/2026 a 17/05/2026 contra 01/01/2025 a 17/05/2025, usando Mogo Vendas Analítico com data Pedido.",
             html,
         )
-        self.assertIn('<p class="annual-lead">Recorte acumulado de 01/01/2026 a 17/05/2026 contra 01/01/2025 a 17/05/2025, usando Mogo Vendas Analítico com data Pedido como fonte canônica.</p>', html)
+        self.assertIn('<p class="annual-lead">Recorte acumulado de 01/01/2026 a 17/05/2026 contra 01/01/2025 a 17/05/2025, usando Mogo Vendas Analítico com data Pedido.</p>', html)
+        self.assertNotIn("fonte canônica", html)
         self.assertIn('<div class="year-strip grid grid-3">', html)
         self.assertIn("Total faturado no ano 2026", html)
         self.assertIn("R$ 300", html)
@@ -290,6 +345,85 @@ class CakeDashboardPdfTests(unittest.TestCase):
         self.assertIn("R$ 450", html)
         self.assertIn("45,0%", html)
         self.assertRegex(html, r"class=\"product-mix-fill\" style=\"width:55\.0%\"")
+
+    def test_render_html_adds_current_week_vs_previous_week_card(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp) / "Mogo"
+            write_json(root / "Vendas Analitico" / "05-2026.json", {
+                "registros": [
+                    {
+                        "dataped": "04/05/2026",
+                        "NumeroPedido": "001",
+                        "Produto": "Bolo",
+                        "Qtde": "1,00",
+                        "valTota": "200,00",
+                        "OrigemPedido": "Loja",
+                    },
+                    {
+                        "dataped": "11/05/2026",
+                        "NumeroPedido": "002",
+                        "Produto": "Torta",
+                        "Qtde": "1,00",
+                        "valTota": "400,00",
+                        "OrigemPedido": "Loja",
+                    },
+                ]
+            })
+            write_json(root / "Vendas Analitico" / "05-2025.json", {"registros": []})
+
+            dashboard = build_dashboard(root, date(2026, 5, 11), date(2026, 5, 17))
+            html = render_html(dashboard)
+
+        self.assertIn("Semana atual vs semana anterior", html)
+        self.assertIn("11/05 a 17/05", html)
+        self.assertIn("04/05 a 10/05", html)
+        self.assertIn("R$ 400", html)
+        self.assertIn("R$ 200", html)
+        self.assertIn("100,0%", html)
+
+    def test_render_html_hero_leads_with_last_closed_week(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp) / "Mogo"
+            write_json(root / "Vendas Analitico" / "05-2026.json", {
+                "registros": [
+                    {
+                        "dataped": "11/05/2026",
+                        "NumeroPedido": "001",
+                        "Produto": "Bolo",
+                        "Qtde": "1,00",
+                        "valTota": "300,00",
+                        "OrigemPedido": "Loja",
+                    },
+                    {
+                        "dataped": "18/05/2026",
+                        "NumeroPedido": "002",
+                        "Produto": "Torta",
+                        "Qtde": "1,00",
+                        "valTota": "750,00",
+                        "OrigemPedido": "Loja",
+                    },
+                    {
+                        "dataped": "25/05/2026",
+                        "NumeroPedido": "003",
+                        "Produto": "Parcial",
+                        "Qtde": "1,00",
+                        "valTota": "999,00",
+                        "OrigemPedido": "Loja",
+                    },
+                ]
+            })
+            write_json(root / "Vendas Analitico" / "05-2025.json", {"registros": []})
+
+            dashboard = build_dashboard(root, date(2026, 5, 1), date(2026, 5, 26))
+            html = render_html(dashboard)
+
+        hero = html.split('<section class="slide hero">', 1)[1].split("</section>", 1)[0]
+        self.assertIn("Resultado da última semana fechada.", hero)
+        self.assertIn("18/05 a 24/05", hero)
+        self.assertIn("11/05 a 17/05", hero)
+        self.assertIn("R$ 750", hero)
+        self.assertIn("R$ 300", hero)
+        self.assertNotIn("25/05 a 26/05", hero)
 
 
 if __name__ == "__main__":

@@ -119,6 +119,12 @@
     .delta span { font-size: 12px; }
     .channel-row { display: grid; grid-template-columns: 105px 1fr 105px; gap: 10px; align-items: center; padding: 8px 0; }
     .channel-row b { text-align: right; }
+    .channel-share { margin-top: 14px; padding-top: 14px; border-top: 1px solid #e5ded3; }
+    .channel-share h4 { margin: 0 0 9px; color: #6f7480; font-size: 11px; text-transform: uppercase; letter-spacing: .04em; }
+    .share-row { display: grid; grid-template-columns: 120px 1fr 86px 48px; gap: 10px; align-items: center; padding: 7px 0; }
+    .share-row span { font-weight: 800; }
+    .share-row b { text-align: right; }
+    .share-row small { color: #315b96; font-weight: 850; text-align: right; }
     .insight { font-size: 18px; line-height: 1.25; }
     .footer { margin-top: auto; color: #8a8074; font-size: 11px; display: flex; justify-content: space-between; }
     .compact { gap: 10px; }
@@ -139,75 +145,94 @@
           <div class="eyebrow">Cake & Co - Relatório Semanal - Vendas</div>
         </div>
       </div>
-      <h1>Faturamento acumulado de 2026 contra 2025 no mesmo período.</h1>
-      <p class="lead">Recorte acumulado de 01/05/2026 a 24/05/2026 contra 01/05/2025 a 24/05/2025, usando Mogo Vendas Analítico com data Pedido.</p>
+      <h1>Resultado da última semana fechada.</h1>
+      <p class="lead">Recorte fechado de segunda a domingo: 18/05 a 24/05 contra 11/05 a 17/05. O restante do relatório mantém a leitura acumulada de 01/05/2026 a 26/05/2026.</p>
     </div>
     <div class="grid grid-3">
-      <div class="metric"><div class="k">Faturamento acumulado 2026</div><div class="v">R$ 610.993</div><div class="s">01/05/2026 a 24/05/2026</div></div>
-      <div class="metric"><div class="k">2025 mesmo período</div><div class="v">R$ 469.409</div><div class="s">01/05/2025 a 24/05/2025</div></div>
-      <div class="metric"><div class="k">Delta acumulado</div><div class="v positive">R$ 141.584</div><div class="s">30,2%</div></div>
+      <div class="metric"><div class="k">Última semana fechada</div><div class="v">R$ 153.509</div><div class="s">18/05 a 24/05</div></div>
+      <div class="metric"><div class="k">Semana anterior</div><div class="v">R$ 139.322</div><div class="s">11/05 a 17/05</div></div>
+      <div class="metric"><div class="k">Diferença entre semanas</div><div class="v positive">R$ 14.187</div><div class="s">10,2%</div></div>
     </div>
-    <p class="annual-lead">Recorte acumulado de 01/01/2026 a 24/05/2026 contra 01/01/2025 a 24/05/2025, usando Mogo Vendas Analítico com data Pedido.</p>
+    <p class="annual-lead">Recorte acumulado de 01/01/2026 a 26/05/2026 contra 01/01/2025 a 26/05/2025, usando Mogo Vendas Analítico com data Pedido.</p>
     <div class="year-strip grid grid-3">
-      <div class="metric"><div class="k">Total faturado no ano 2026</div><div class="v">R$ 3.028.407</div><div class="s">01/01/2026 a 24/05/2026</div></div>
-      <div class="metric"><div class="k">Mesmo período de 2025</div><div class="v">R$ 2.230.440</div><div class="s">01/01/2025 a 24/05/2025</div></div>
-      <div class="metric"><div class="k">Delta anual</div><div class="v positive">R$ 797.967</div><div class="s">35,8%</div></div>
+      <div class="metric"><div class="k">Total faturado no ano 2026</div><div class="v">R$ 3.062.895</div><div class="s">01/01/2026 a 26/05/2026</div></div>
+      <div class="metric"><div class="k">Mesmo período de 2025</div><div class="v">R$ 2.250.658</div><div class="s">01/01/2025 a 26/05/2025</div></div>
+      <div class="metric"><div class="k">Delta anual</div><div class="v positive">R$ 812.238</div><div class="s">36,1%</div></div>
     </div>
     <div class="footer"><span>Fonte: Mogo Vendas Analítico - Data Pedido</span><span>Gerado por BigDog</span></div>
   </section>
 
   <section class="slide">
-    <h2>Faturamento acumulado</h2>
+    <h2>Faturamento acumulado do mês</h2>
     <div class="grid grid-3">
-      <div class="card metric"><div class="k">Faturamento acumulado 2026</div><div class="v">R$ 610.993</div><div class="s">01/05/2026 a 24/05/2026</div></div>
-      <div class="card metric"><div class="k">2025 mesmo período</div><div class="v">R$ 469.409</div><div class="s">01/05/2025 a 24/05/2025</div></div>
-      <div class="card metric"><div class="k">Delta acumulado</div><div class="v positive">R$ 141.584</div><div class="s">30,2%</div></div>
+      <div class="card metric"><div class="k">Faturamento acumulado 2026</div><div class="v">R$ 645.481</div><div class="s">01/05/2026 a 26/05/2026</div></div>
+      <div class="card metric"><div class="k">2025 mesmo período</div><div class="v">R$ 489.626</div><div class="s">01/05/2025 a 26/05/2025</div></div>
+      <div class="card metric"><div class="k">Delta acumulado</div><div class="v positive">R$ 155.855</div><div class="s">31,8%</div></div>
     </div>
     <div class="grid grid-2">
       <div class="card">
-        <h3>Canais operacionais da semana</h3>
+        <h3>Canais operacionais</h3>
         
         <div class="channel-row">
           <span>iFood</span>
           <div class="track"><i style="width:100.0%"></i></div>
-          <b>R$ 257.718</b>
+          <b>R$ 270.004</b>
         </div>
         
 
         <div class="channel-row">
-          <span>neemo</span>
-          <div class="track"><i style="width:49.5%"></i></div>
-          <b>R$ 127.616</b>
+          <span>Neemo</span>
+          <div class="track"><i style="width:50.4%"></i></div>
+          <b>R$ 136.079</b>
         </div>
         
 
         <div class="channel-row">
-          <span>balcão</span>
-          <div class="track"><i style="width:24.4%"></i></div>
-          <b>R$ 62.783</b>
+          <span>Delivery Atendimento</span>
+          <div class="track"><i style="width:38.6%"></i></div>
+          <b>R$ 104.089</b>
         </div>
         
 
         <div class="channel-row">
-          <span>WhatsApp</span>
-          <div class="track"><i style="width:23.7%"></i></div>
-          <b>R$ 61.157</b>
+          <span>Mesa</span>
+          <div class="track"><i style="width:26.1%"></i></div>
+          <b>R$ 70.523</b>
         </div>
         
 
         <div class="channel-row">
-          <span>Telefone</span>
-          <div class="track"><i style="width:9.4%"></i></div>
-          <b>R$ 24.277</b>
+          <span>Balcão</span>
+          <div class="track"><i style="width:24.0%"></i></div>
+          <b>R$ 64.786</b>
         </div>
         
+        <div class="channel-share">
+          <h4>Participação no faturamento do mês</h4>
+          
+        <div class="share-row">
+          <span>Delivery Próprio</span>
+          <div class="track"><i style="width:79.0%"></i></div>
+          <b>R$ 510.172</b>
+          <small>79,0%</small>
+        </div>
+        
+
+        <div class="share-row">
+          <span>Loja</span>
+          <div class="track"><i style="width:21.0%"></i></div>
+          <b>R$ 135.309</b>
+          <small>21,0%</small>
+        </div>
+        
+        </div>
       </div>
       <div class="card">
         <h3>Leitura para sócios</h3>
-        <p class="insight">No acumulado do mesmo período, 2026 está 30,2% contra 2025, uma diferença de R$ 141.584. A leitura principal fica concentrada em faturamento acumulado, sem misturar comparação com mês fechado.</p>
+        <p class="insight">No acumulado do mesmo período, 2026 está 31,8% contra 2025, uma diferença de R$ 155.855. A leitura principal fica concentrada em faturamento acumulado, sem misturar comparação com mês fechado.</p>
       </div>
     </div>
-    <div class="footer"><span>Relatório Semanal - Vendas</span><span>Período 01/05/2026 a 24/05/2026</span></div>
+    <div class="footer"><span>Relatório Semanal - Vendas</span><span>Período 01/05/2026 a 26/05/2026</span></div>
   </section>
 
   <section class="slide">
@@ -415,10 +440,10 @@
 
         <tr>
           <td>23/05</td>
-          <td class="num">R$ 33.943</td>
+          <td class="num">R$ 34.074</td>
           <td class="num muted">R$ 19.953</td>
-          <td class="num positive">R$ 13.990</td>
-          <td class="num positive">70,1%</td>
+          <td class="num positive">R$ 14.121</td>
+          <td class="num positive">70,8%</td>
         </tr>
         
 
@@ -428,6 +453,24 @@
           <td class="num muted">R$ 22.659</td>
           <td class="num negative">R$ -6.239</td>
           <td class="num negative">-27,5%</td>
+        </tr>
+        
+
+        <tr>
+          <td>25/05</td>
+          <td class="num">R$ 12.960</td>
+          <td class="num muted">R$ 7.496</td>
+          <td class="num positive">R$ 5.464</td>
+          <td class="num positive">72,9%</td>
+        </tr>
+        
+
+        <tr>
+          <td>26/05</td>
+          <td class="num">R$ 21.398</td>
+          <td class="num muted">R$ 12.722</td>
+          <td class="num positive">R$ 8.676</td>
+          <td class="num positive">68,2%</td>
         </tr>
         </tbody>
     </table>
@@ -687,11 +730,11 @@
 
         <tr>
           <td>23/05</td>
-          <td class="num">R$ 33.943</td>
+          <td class="num">R$ 34.074</td>
           <td class="num muted">R$ 19.953</td>
-          <td class="num">R$ 594.573</td>
+          <td class="num">R$ 594.704</td>
           <td class="num muted">R$ 446.750</td>
-          <td class="num positive">R$ 147.824</td>
+          <td class="num positive">R$ 147.955</td>
           <td class="num positive">33,1%</td>
         </tr>
         
@@ -700,18 +743,40 @@
           <td>24/05</td>
           <td class="num">R$ 16.419</td>
           <td class="num muted">R$ 22.659</td>
-          <td class="num">R$ 610.993</td>
+          <td class="num">R$ 611.124</td>
           <td class="num muted">R$ 469.409</td>
-          <td class="num positive">R$ 141.584</td>
+          <td class="num positive">R$ 141.715</td>
           <td class="num positive">30,2%</td>
+        </tr>
+        
+
+        <tr>
+          <td>25/05</td>
+          <td class="num">R$ 12.960</td>
+          <td class="num muted">R$ 7.496</td>
+          <td class="num">R$ 624.084</td>
+          <td class="num muted">R$ 476.904</td>
+          <td class="num positive">R$ 147.179</td>
+          <td class="num positive">30,9%</td>
+        </tr>
+        
+
+        <tr>
+          <td>26/05</td>
+          <td class="num">R$ 21.398</td>
+          <td class="num muted">R$ 12.722</td>
+          <td class="num">R$ 645.481</td>
+          <td class="num muted">R$ 489.626</td>
+          <td class="num positive">R$ 155.855</td>
+          <td class="num positive">31,8%</td>
         </tr>
         </tbody>
     </table>
     <div class="card">
       <h3>Leitura</h3>
-      <p class="insight">No acumulado 01/05/2026 a 24/05/2026, 2026 está 30,2% contra o mesmo período de 2025, com diferença de R$ 141.584.</p>
+      <p class="insight">No acumulado 01/05/2026 a 26/05/2026, 2026 está 31,8% contra o mesmo período de 2025, com diferença de R$ 155.855.</p>
     </div>
-    <div class="footer"><span>Recorte: 01/05/2026 a 24/05/2026</span><span>Acumulado diário</span></div>
+    <div class="footer"><span>Recorte: 01/05/2026 a 26/05/2026</span><span>Acumulado diário</span></div>
   </section>
 
   <section class="slide">
@@ -722,7 +787,7 @@
       <div class="week-vs-grid">
         <div>
           <span>Semana atual</span>
-          <strong>R$ 153.378</strong>
+          <strong>R$ 153.509</strong>
           <small>18/05 a 24/05</small>
         </div>
         <div>
@@ -732,8 +797,8 @@
         </div>
         <div>
           <span>Variação</span>
-          <strong class="positive">R$ 14.056</strong>
-          <small class="positive">10,1%</small>
+          <strong class="positive">R$ 14.187</strong>
+          <small class="positive">10,2%</small>
         </div>
       </div>
     </div>
@@ -784,17 +849,30 @@
                 <span>vs 19/05 a 25/05</span>
               </div>
               <div class="bars">
-                <div class="bar-line"><span class="label">2026</span><div class="track"><i style="width:59.1%"></i></div><b>R$ 153.378</b></div>
+                <div class="bar-line"><span class="label">2026</span><div class="track"><i style="width:59.1%"></i></div><b>R$ 153.509</b></div>
                 <div class="bar-line muted-bar"><span class="label">2025</span><div class="track"><i style="width:42.3%"></i></div><b>R$ 109.768</b></div>
               </div>
-              <div class="delta positive">R$ 43.610<br><span>39,7%</span></div>
+              <div class="delta positive">R$ 43.741<br><span>39,8%</span></div>
+            </div>
+            
+
+            <div class="week-row">
+              <div>
+                <strong>25/05 a 26/05</strong>
+                <span>vs 26/05 a 27/05</span>
+              </div>
+              <div class="bars">
+                <div class="bar-line"><span class="label">2026</span><div class="track"><i style="width:13.2%"></i></div><b>R$ 34.358</b></div>
+                <div class="bar-line muted-bar"><span class="label">2025</span><div class="track"><i style="width:9.9%"></i></div><b>R$ 25.825</b></div>
+              </div>
+              <div class="delta positive">R$ 8.532<br><span>33,0%</span></div>
             </div>
             </div>
     <div class="card">
       <h3>Resumo</h3>
       <p class="insight">O comparativo semana a semana mostra onde o crescimento está concentrado e onde houve perda contra 2025. A leitura de gestão: separar o que foi campanha/data sazonal do que vira recorrência.</p>
     </div>
-    <div class="footer"><span>Recorte: 01/05/2026 a 24/05/2026</span><span>Data Pedido</span></div>
+    <div class="footer"><span>Recorte: 01/05/2026 a 26/05/2026</span><span>Data Pedido</span></div>
   </section>
 
   <section class="slide">
@@ -805,11 +883,11 @@
             <tr>
               <td class="rank">1</td>
               <td>MORANGO - DELICIOSA NAKED F20</td>
-              <td class="num">234</td>
-              <td class="num">R$ 56.994</td>
+              <td class="num">250</td>
+              <td class="num">R$ 60.807</td>
               <td>
                 <div class="mini-bar"><i style="width:100.0%"></i></div>
-                <span class="tiny">9,3%</span>
+                <span class="tiny">9,4%</span>
               </td>
             </tr>
             
@@ -817,10 +895,10 @@
             <tr>
               <td class="rank">2</td>
               <td>MORANGO - DELICIOSA NAKED F25</td>
-              <td class="num">153</td>
-              <td class="num">R$ 50.839</td>
+              <td class="num">162</td>
+              <td class="num">R$ 53.767</td>
               <td>
-                <div class="mini-bar"><i style="width:89.2%"></i></div>
+                <div class="mini-bar"><i style="width:88.4%"></i></div>
                 <span class="tiny">8,3%</span>
               </td>
             </tr>
@@ -829,20 +907,8 @@
             <tr>
               <td class="rank">3</td>
               <td>MORANGO - FT DELICIOSA</td>
-              <td class="num">794</td>
-              <td class="num">R$ 29.040</td>
-              <td>
-                <div class="mini-bar"><i style="width:51.0%"></i></div>
-                <span class="tiny">4,8%</span>
-              </td>
-            </tr>
-            
-
-            <tr>
-              <td class="rank">4</td>
-              <td>MORANGO - DELICIOSA NAKED F13</td>
-              <td class="num">196</td>
-              <td class="num">R$ 28.603</td>
+              <td class="num">835</td>
+              <td class="num">R$ 30.550</td>
               <td>
                 <div class="mini-bar"><i style="width:50.2%"></i></div>
                 <span class="tiny">4,7%</span>
@@ -851,13 +917,25 @@
             
 
             <tr>
+              <td class="rank">4</td>
+              <td>MORANGO - DELICIOSA NAKED F13</td>
+              <td class="num">208</td>
+              <td class="num">R$ 30.281</td>
+              <td>
+                <div class="mini-bar"><i style="width:49.8%"></i></div>
+                <span class="tiny">4,7%</span>
+              </td>
+            </tr>
+            
+
+            <tr>
               <td class="rank">5</td>
               <td>TENTACAO F25</td>
-              <td class="num">77</td>
-              <td class="num">R$ 18.441</td>
+              <td class="num">79</td>
+              <td class="num">R$ 18.871</td>
               <td>
-                <div class="mini-bar"><i style="width:32.4%"></i></div>
-                <span class="tiny">3,0%</span>
+                <div class="mini-bar"><i style="width:31.0%"></i></div>
+                <span class="tiny">2,9%</span>
               </td>
             </tr>
             
@@ -865,11 +943,11 @@
             <tr>
               <td class="rank">6</td>
               <td>FT SWEET DARK</td>
-              <td class="num">419</td>
-              <td class="num">R$ 14.212</td>
+              <td class="num">450</td>
+              <td class="num">R$ 15.252</td>
               <td>
-                <div class="mini-bar"><i style="width:24.9%"></i></div>
-                <span class="tiny">2,3%</span>
+                <div class="mini-bar"><i style="width:25.1%"></i></div>
+                <span class="tiny">2,4%</span>
               </td>
             </tr>
             
@@ -877,11 +955,11 @@
             <tr>
               <td class="rank">7</td>
               <td>ALEMA F22</td>
-              <td class="num">59</td>
-              <td class="num">R$ 13.397</td>
+              <td class="num">60</td>
+              <td class="num">R$ 13.613</td>
               <td>
-                <div class="mini-bar"><i style="width:23.5%"></i></div>
-                <span class="tiny">2,2%</span>
+                <div class="mini-bar"><i style="width:22.4%"></i></div>
+                <span class="tiny">2,1%</span>
               </td>
             </tr>
             
@@ -889,11 +967,11 @@
             <tr>
               <td class="rank">8</td>
               <td>CHOCOBERRIES F20</td>
-              <td class="num">52</td>
-              <td class="num">R$ 12.395</td>
+              <td class="num">57</td>
+              <td class="num">R$ 13.567</td>
               <td>
-                <div class="mini-bar"><i style="width:21.7%"></i></div>
-                <span class="tiny">2,0%</span>
+                <div class="mini-bar"><i style="width:22.3%"></i></div>
+                <span class="tiny">2,1%</span>
               </td>
             </tr>
             
@@ -901,22 +979,22 @@
             <tr>
               <td class="rank">9</td>
               <td>NOVA SWEET DARK F25</td>
-              <td class="num">32</td>
-              <td class="num">R$ 8.427</td>
+              <td class="num">33</td>
+              <td class="num">R$ 8.678</td>
               <td>
-                <div class="mini-bar"><i style="width:14.8%"></i></div>
-                <span class="tiny">1,4%</span>
+                <div class="mini-bar"><i style="width:14.3%"></i></div>
+                <span class="tiny">1,3%</span>
               </td>
             </tr>
             
 
             <tr>
               <td class="rank">10</td>
-              <td>TORTA LIMAO F25</td>
-              <td class="num">33</td>
-              <td class="num">R$ 8.143</td>
+              <td>CHOCOBERRIES F25</td>
+              <td class="num">27</td>
+              <td class="num">R$ 8.436</td>
               <td>
-                <div class="mini-bar"><i style="width:14.3%"></i></div>
+                <div class="mini-bar"><i style="width:13.9%"></i></div>
                 <span class="tiny">1,3%</span>
               </td>
             </tr>
@@ -928,26 +1006,26 @@
         <h3>Top 10 vs resto do faturamento</h3>
         <span class="tiny">Participação sobre o faturamento bruto do período</span>
       </div>
-      <div class="product-mix-bar" aria-label="Top 10 produtos representam 39,4% do faturamento">
-        <i class="product-mix-fill" style="width:39.4%"></i>
+      <div class="product-mix-bar" aria-label="Top 10 produtos representam 39,3% do faturamento">
+        <i class="product-mix-fill" style="width:39.3%"></i>
       </div>
       <div class="product-mix-grid">
         <div>
           <span class="mix-label top10-dot">Top 10 produtos</span>
-          <strong>R$ 240.490</strong>
-          <small>39,4%</small>
+          <strong>R$ 253.822</strong>
+          <small>39,3%</small>
         </div>
         <div>
           <span class="mix-label rest-dot">Restante do faturamento</span>
-          <strong>R$ 370.503</strong>
-          <small>60,6%</small>
+          <strong>R$ 391.660</strong>
+          <small>60,7%</small>
         </div>
       </div>
     </div>
     
     <div class="card">
       <h3>Produto líder</h3>
-      <p class="insight">MORANGO - DELICIOSA NAKED F20 puxou R$ 56.994, equivalente a 9,3% do faturamento do período. A linha Morango/Deliciosa aparece como motor forte do período.</p>
+      <p class="insight">MORANGO - DELICIOSA NAKED F20 puxou R$ 60.807, equivalente a 9,4% do faturamento do período. A linha Morango/Deliciosa aparece como motor forte do período.</p>
     </div>
     <div class="footer"><span>Taxa de entrega excluída do ranking de produtos</span><span>Faturamento bruto total preservado</span></div>
   </section>

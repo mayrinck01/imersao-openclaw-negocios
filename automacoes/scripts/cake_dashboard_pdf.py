@@ -162,11 +162,39 @@ def render_product_mix(products: list[dict], period_revenue: float) -> str:
     """
 
 
+def render_current_vs_previous_week(comparison: dict) -> str:
+    if not comparison:
+        return ""
+    return f"""
+    <div class="card week-vs-week">
+      <h3>Semana atual vs semana anterior</h3>
+      <div class="week-vs-grid">
+        <div>
+          <span>Semana atual</span>
+          <strong>{format_brl(comparison['valor_atual'])}</strong>
+          <small>{html.escape(comparison['semana_atual_label'])}</small>
+        </div>
+        <div>
+          <span>Semana anterior</span>
+          <strong>{format_brl(comparison['valor_anterior'])}</strong>
+          <small>{html.escape(comparison['semana_anterior_label'])}</small>
+        </div>
+        <div>
+          <span>Variação</span>
+          <strong class="{signed_class(comparison['delta'])}">{format_brl(comparison['delta'])}</strong>
+          <small class="{signed_class(comparison['delta'])}">{format_percent(comparison['delta_pct'])}</small>
+        </div>
+      </div>
+    </div>
+    """
+
+
 def render_html(dashboard: dict) -> str:
     receita = dashboard["receita"]
     daily = dashboard["comparativo_dia_a_dia"]
     month_daily = dashboard["comparativo_mes_dia_a_dia"]
     weekly = dashboard["comparativo_semana_a_semana"]
+    current_vs_previous_week = dashboard.get("comparativo_semana_atual_anterior") or {}
     products = dashboard["produtos"]
     channels = dashboard["canais"]
 
@@ -180,6 +208,12 @@ def render_html(dashboard: dict) -> str:
         if logo_uri
         else '<span class="brand-wordmark">Cake & Co</span>'
     )
+    hero_current_label = current_vs_previous_week.get("semana_atual_label", receita["faturamento_mes_label"])
+    hero_previous_label = current_vs_previous_week.get("semana_anterior_label", receita["faturamento_mes_label_2025"])
+    hero_current_value = current_vs_previous_week.get("valor_atual", receita["faturamento_mes_2026"])
+    hero_previous_value = current_vs_previous_week.get("valor_anterior", receita["faturamento_mes_2025"])
+    hero_delta = current_vs_previous_week.get("delta", receita["faturamento_mes_delta"])
+    hero_delta_pct = current_vs_previous_week.get("delta_pct", receita["faturamento_mes_delta_pct"])
 
     channel_max = max([item["valor"] for item in top_channels] + [1])
     channel_rows = "\n".join(
@@ -191,6 +225,32 @@ def render_html(dashboard: dict) -> str:
         </div>
         """
         for item in top_channels
+    )
+    channel_values = {str(item["nome"]): float(item["valor"]) for item in channels}
+    monthly_revenue = float(receita["faturamento_mes_2026"] or 0)
+    channel_mix = [
+        {
+            "nome": "Delivery Próprio",
+            "valor": (
+                channel_values.get("Neemo", 0.0)
+                + channel_values.get("Delivery Atendimento", 0.0)
+            ),
+        },
+        {
+            "nome": "Loja",
+            "valor": channel_values.get("Mesa", 0.0) + channel_values.get("Balcão", 0.0),
+        },
+    ]
+    channel_mix_rows = "\n".join(
+        f"""
+        <div class="share-row">
+          <span>{html.escape(item['nome'])}</span>
+          <div class="track"><i style="width:{min(max((item['valor'] / monthly_revenue * 100) if monthly_revenue else 0, 2), 100):.1f}%"></i></div>
+          <b>{format_brl(item['valor'])}</b>
+          <small>{format_percent((item['valor'] / monthly_revenue * 100) if monthly_revenue else None)}</small>
+        </div>
+        """
+        for item in channel_mix
     )
 
     return f"""<!doctype html>
@@ -301,6 +361,12 @@ def render_html(dashboard: dict) -> str:
     .rest-dot:before {{ background: #e9e2d7; border: 1px solid #cfc4b4; }}
     .week-row {{ display: grid; grid-template-columns: 120px 1fr 110px; gap: 14px; align-items: center; padding: 12px 0; border-bottom: 1px solid #e5ded3; }}
     .week-row span {{ color: #6f7480; display: block; font-size: 11px; }}
+    .week-vs-week {{ background: #172033; color: white; border-color: #172033; }}
+    .week-vs-week h3 {{ color: #d8b66c; }}
+    .week-vs-grid {{ display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }}
+    .week-vs-grid span {{ display: block; color: rgba(255,255,255,.58); font-size: 11px; text-transform: uppercase; letter-spacing: .04em; font-weight: 800; }}
+    .week-vs-grid strong {{ display: block; margin-top: 7px; font-size: 24px; }}
+    .week-vs-grid small {{ display: block; margin-top: 5px; color: rgba(255,255,255,.66); font-size: 12px; }}
     .bar-line {{ display: grid; grid-template-columns: 40px 1fr 105px; gap: 8px; align-items: center; margin: 5px 0; }}
     .bar-line b {{ text-align: right; font-size: 12px; }}
     .label {{ font-weight: 800; color: #172033 !important; }}
@@ -308,6 +374,12 @@ def render_html(dashboard: dict) -> str:
     .delta span {{ font-size: 12px; }}
     .channel-row {{ display: grid; grid-template-columns: 105px 1fr 105px; gap: 10px; align-items: center; padding: 8px 0; }}
     .channel-row b {{ text-align: right; }}
+    .channel-share {{ margin-top: 14px; padding-top: 14px; border-top: 1px solid #e5ded3; }}
+    .channel-share h4 {{ margin: 0 0 9px; color: #6f7480; font-size: 11px; text-transform: uppercase; letter-spacing: .04em; }}
+    .share-row {{ display: grid; grid-template-columns: 120px 1fr 86px 48px; gap: 10px; align-items: center; padding: 7px 0; }}
+    .share-row span {{ font-weight: 800; }}
+    .share-row b {{ text-align: right; }}
+    .share-row small {{ color: #315b96; font-weight: 850; text-align: right; }}
     .insight {{ font-size: 18px; line-height: 1.25; }}
     .footer {{ margin-top: auto; color: #8a8074; font-size: 11px; display: flex; justify-content: space-between; }}
     .compact {{ gap: 10px; }}
@@ -328,15 +400,15 @@ def render_html(dashboard: dict) -> str:
           <div class="eyebrow">Cake & Co - {REPORT_DISPLAY_NAME}</div>
         </div>
       </div>
-      <h1>Faturamento acumulado de 2026 contra 2025 no mesmo período.</h1>
-      <p class="lead">Recorte acumulado de {html.escape(receita['faturamento_mes_label'])} contra {html.escape(receita['faturamento_mes_label_2025'])}, usando Mogo Vendas Analítico com data Pedido como fonte canônica.</p>
+      <h1>Resultado da última semana fechada.</h1>
+      <p class="lead">Recorte fechado de segunda a domingo: {html.escape(hero_current_label)} contra {html.escape(hero_previous_label)}. O restante do relatório mantém a leitura acumulada de {html.escape(receita['faturamento_mes_label'])}.</p>
     </div>
     <div class="grid grid-3">
-      <div class="metric"><div class="k">Faturamento acumulado 2026</div><div class="v">{format_brl(receita['faturamento_mes_2026'])}</div><div class="s">{html.escape(receita['faturamento_mes_label'])}</div></div>
-      <div class="metric"><div class="k">2025 mesmo período</div><div class="v">{format_brl(receita['faturamento_mes_2025'])}</div><div class="s">{html.escape(receita['faturamento_mes_label_2025'])}</div></div>
-      <div class="metric"><div class="k">Delta acumulado</div><div class="v {signed_class(receita['faturamento_mes_delta'])}">{format_brl(receita['faturamento_mes_delta'])}</div><div class="s">{format_percent(receita['faturamento_mes_delta_pct'])}</div></div>
+      <div class="metric"><div class="k">Última semana fechada</div><div class="v">{format_brl(hero_current_value)}</div><div class="s">{html.escape(hero_current_label)}</div></div>
+      <div class="metric"><div class="k">Semana anterior</div><div class="v">{format_brl(hero_previous_value)}</div><div class="s">{html.escape(hero_previous_label)}</div></div>
+      <div class="metric"><div class="k">Diferença entre semanas</div><div class="v {signed_class(hero_delta)}">{format_brl(hero_delta)}</div><div class="s">{format_percent(hero_delta_pct)}</div></div>
     </div>
-    <p class="annual-lead">Recorte acumulado de {html.escape(receita['faturamento_ano_label'])} contra {html.escape(receita['faturamento_ano_label_2025'])}, usando Mogo Vendas Analítico com data Pedido como fonte canônica.</p>
+    <p class="annual-lead">Recorte acumulado de {html.escape(receita['faturamento_ano_label'])} contra {html.escape(receita['faturamento_ano_label_2025'])}, usando Mogo Vendas Analítico com data Pedido.</p>
     <div class="year-strip grid grid-3">
       <div class="metric"><div class="k">Total faturado no ano 2026</div><div class="v">{format_brl(receita['faturamento_ano_2026'])}</div><div class="s">{html.escape(receita['faturamento_ano_label'])}</div></div>
       <div class="metric"><div class="k">Mesmo período de 2025</div><div class="v">{format_brl(receita['faturamento_ano_2025'])}</div><div class="s">{html.escape(receita['faturamento_ano_label_2025'])}</div></div>
@@ -346,7 +418,7 @@ def render_html(dashboard: dict) -> str:
   </section>
 
   <section class="slide">
-    <h2>Faturamento acumulado</h2>
+    <h2>Faturamento acumulado do mês</h2>
     <div class="grid grid-3">
       <div class="card metric"><div class="k">Faturamento acumulado 2026</div><div class="v">{format_brl(receita['faturamento_mes_2026'])}</div><div class="s">{html.escape(receita['faturamento_mes_label'])}</div></div>
       <div class="card metric"><div class="k">2025 mesmo período</div><div class="v">{format_brl(receita['faturamento_mes_2025'])}</div><div class="s">{html.escape(receita['faturamento_mes_label_2025'])}</div></div>
@@ -354,8 +426,12 @@ def render_html(dashboard: dict) -> str:
     </div>
     <div class="grid grid-2">
       <div class="card">
-        <h3>Canais operacionais da semana</h3>
+        <h3>Canais operacionais</h3>
         {channel_rows}
+        <div class="channel-share">
+          <h4>Participação no faturamento do mês</h4>
+          {channel_mix_rows}
+        </div>
       </div>
       <div class="card">
         <h3>Leitura para sócios</h3>
@@ -393,6 +469,7 @@ def render_html(dashboard: dict) -> str:
 
   <section class="slide">
     <h2>Semana a semana desde o início do mês</h2>
+    {render_current_vs_previous_week(current_vs_previous_week)}
     <div class="card">{render_weekly_bars(weekly)}</div>
     <div class="card">
       <h3>Resumo</h3>
