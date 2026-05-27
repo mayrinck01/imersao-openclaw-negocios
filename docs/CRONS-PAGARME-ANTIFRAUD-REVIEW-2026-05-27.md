@@ -9,7 +9,7 @@ Enviar uma vez por dia a lista de alertas antifraude Pagar.me que ainda nao fora
 ## Rotina
 
 - Cron de sistema: `/etc/cron.d/cake-pagarme-antifraud-review`
-- Agenda: todos os dias as 17:05 BRT
+- Agenda: todos os dias as 20:32 BRT
 - Comando:
 
 ```bash
