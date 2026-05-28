@@ -150,6 +150,45 @@ class PagarmeFraudTests(unittest.TestCase):
             self.assertNotIn("Observação operacional", alert)
             self.assertNotIn("Cartão é conferência auxiliar", alert)
 
+    def test_first_purchase_alert_treats_vem_buscar_as_pickup_even_with_customer_address(self):
+        with tempfile.NamedTemporaryFile() as db:
+            checker = FakeHistoryChecker(CustomerHistoryResult(
+                False,
+                None,
+                "not_found",
+                None,
+                None,
+                0,
+                MogoOrderSummary(
+                    order_number="039069",
+                    status="Pendente",
+                    customer_name="Elizabeth Rezende Rodrigues Barreto",
+                    delivery_date="30/05/2026",
+                    delivery_time="10:30",
+                    fulfillment="Vem Buscar",
+                    address="Rua do cadastro, 123",
+                    neighborhood="Leblon - Rio de Janeiro/RJ",
+                    amount="315,00",
+                ),
+            ))
+            engine = RiskEngine(db.name, history_checker=checker)
+            result = engine.handle_event(event(
+                "charge.paid",
+                "ch_first_purchase_vem_buscar",
+                customer_name="Elizabeth Rezende Rodrigues Barreto",
+                amount=31500,
+                brand="Mastercard",
+                card_last4="8615",
+                holder="ELIZABETH R R BARRETO",
+            ))
+
+            alert = format_first_purchase_alert(result)
+
+            self.assertIn("PRIMEIRA COMPRA — CONFERIR NA RETIRADA", alert)
+            self.assertIn("• Modalidade: Retirada", alert)
+            self.assertIn("• Endereço: não aplicável — retirada na loja", alert)
+            self.assertNotIn("CONFERIR ANTES DE ENTREGAR", alert)
+
     def test_prior_mogo_history_suppresses_first_purchase_alert(self):
         with tempfile.NamedTemporaryFile() as db:
             checker = FakeHistoryChecker(CustomerHistoryResult(

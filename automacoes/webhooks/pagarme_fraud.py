@@ -1096,7 +1096,7 @@ def _order_modality(order: MogoOrderSummary | None) -> str:
     if not order:
         return "não localizada no alerta"
     raw = normalize_text(" ".join(part for part in (order.fulfillment, order.origin) if part))
-    if "retir" in raw:
+    if "retir" in raw or "buscar" in raw or "balcao" in raw:
         return "Retirada"
     if "entreg" in raw or "delivery" in raw or "motoboy" in raw or _format_order_address(order):
         return "Entrega"

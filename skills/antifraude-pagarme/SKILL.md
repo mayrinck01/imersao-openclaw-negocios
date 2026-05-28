@@ -2,7 +2,7 @@
 name: antifraude-pagarme
 description: "Use quando o usuario pedir para analisar, ajustar, consultar, revisar ou operar antifraude Pagar.me, alertas de fraude, chargeback, lista quente, historico Mogo ou pendencias de revisao antifraude."
 metadata:
-  version: "1.4"
+  version: "1.5"
   created: "2026-05-28"
   maintainer: "Joao Mayrinck - CEO Cake & Co"
   related_scripts:
@@ -36,6 +36,7 @@ O antifraude e operacional: segura entrega para verificacao humana. Nao cancela,
 - Charge paga de cartao e aceita no HTTP imediatamente e processada em background apos `PAGARME_ALERT_DELAY_SECONDS`; padrao: 60 segundos.
 - O mesmo delay de 60 segundos e obrigatorio para alerta de primeira compra, para dar tempo do Mogo consolidar pedido/cliente antes da checagem.
 - Charge recusada/falha entra sem espera para preservar historico de tentativa.
+- No Mogo, forma de entrega `Vem Buscar`/`buscar`/`retirada`/`balcao` deve ser tratada como retirada, mesmo quando houver endereco cadastral no pedido. Endereco sozinho nao pode transformar retirada em entrega quando a forma indica busca.
 - Score `>= 50` significa alerta operacional: `SEGURAR / NAO ENTREGAR`.
 - Lista quente de fraude/chargeback e forte e nao deve ser suprimida por historico Mogo.
 - Cliente com compra valida anterior no Mogo suprime apenas sinais fracos.
