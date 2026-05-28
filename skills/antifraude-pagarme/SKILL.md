@@ -1,6 +1,6 @@
 ---
 name: antifraude-pagarme
-description: "Use quando o usuario pedir para analisar, ajustar, consultar, revisar ou operar antifraude Pagar.me, alertas de fraude, chargeback, lista quente, historico Mogo ou pendencias diarias de revisao."
+description: "Use quando o usuario pedir para analisar, ajustar, consultar, revisar ou operar antifraude Pagar.me, alertas de fraude, chargeback, lista quente, historico Mogo ou pendencias de revisao antifraude."
 metadata:
   version: "1.0"
   created: "2026-05-28"
@@ -44,9 +44,9 @@ O antifraude e operacional: segura entrega para verificacao humana. Nao cancela,
 - CPF/documento do titular ausente ou diferente e sinal operacional, mas pode ser suprimido por historico Mogo confiavel.
 - Titular/cartao/lista quente por titular sozinho nao deve bloquear entrega sem ancoragem na identidade do cliente.
 
-## Rotina diaria de pendencias
+## Rotina diaria de pendencias antifraude
 
-O relatorio diario usa a fila ja gravada pelo webhook, nao recalcula Mogo por padrao.
+O relatorio diario de antifraude usa a fila ja gravada pelo webhook, nao recalcula Mogo por padrao. Nao confundir com outras pendencias diarias da operacao.
 
 - Tabela de alertas: `antifraud_alerts`
 - Tabela de decisoes: `antifraud_reviews`
