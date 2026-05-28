@@ -550,6 +550,32 @@ class TriaNotionSyncTests(unittest.TestCase):
         self.assertEqual(rich_text[1]["text"]["content"], "Abrir pasta 09-03-2026")
         self.assertEqual(rich_text[1]["text"]["link"]["url"], "https://drive.google.com/drive/folders/folder-id")
 
+    def test_page_body_blocks_include_visible_pdf_download_file_when_upload_id_available(self):
+        item = InventoryItem(
+            checklist_id="188263778",
+            message_id="19cd3889d0256a4c",
+            email_date="2026-03-09 13:57",
+            report_type="Relatório de Visita Orientativa",
+            filename="2026-03-09-188263778-relatorio-de-visita-orientativa.pdf",
+            status="skipped",
+            bytes=10,
+        )
+        extracted = ReportExtraction(
+            title="09/03/2026 - Visita Orientativa - Produção e geladeiras",
+            summary="Resumo",
+            photo_count=3,
+            nonconformity_count=23,
+        )
+
+        blocks = page_body_blocks(item, extracted, pdf_upload_id="upload-id")
+
+        pdf_blocks = [block for block in blocks if block["type"] == "file"]
+        self.assertEqual(len(pdf_blocks), 1)
+        self.assertEqual(pdf_blocks[0]["file"]["type"], "file_upload")
+        self.assertEqual(pdf_blocks[0]["file"]["file_upload"]["id"], "upload-id")
+        self.assertEqual(pdf_blocks[0]["file"]["name"], item.filename)
+        self.assertEqual(pdf_blocks[0]["file"]["caption"][0]["text"]["content"], "PDF original para baixar")
+
     def test_sync_drive_photo_folders_creates_folder_map_and_uploads_only_images(self):
         with tempfile.TemporaryDirectory() as temp_dir:
             export_dir = Path(temp_dir)

@@ -1016,7 +1016,26 @@ def link_text(content: str, url: str) -> dict[str, Any]:
     }
 
 
-def page_body_blocks(item: InventoryItem, extracted: ReportExtraction, *, drive_folder_url: str | None = None) -> list[dict[str, Any]]:
+def pdf_download_file_block(upload_id: str, filename: str) -> dict[str, Any]:
+    return {
+        "object": "block",
+        "type": "file",
+        "file": {
+            "type": "file_upload",
+            "file_upload": {"id": upload_id},
+            "name": filename,
+            "caption": rt("PDF original para baixar"),
+        },
+    }
+
+
+def page_body_blocks(
+    item: InventoryItem,
+    extracted: ReportExtraction,
+    *,
+    drive_folder_url: str | None = None,
+    pdf_upload_id: str | None = None,
+) -> list[dict[str, Any]]:
     day, month, year = item.visit_date.split("-")[2], item.visit_date.split("-")[1], item.visit_date.split("-")[0]
     date_folder = f"{day}-{month}-{year}"
     blocks: list[dict[str, Any]] = [
@@ -1025,8 +1044,15 @@ def page_body_blocks(item: InventoryItem, extracted: ReportExtraction, *, drive_
         bullet(f"Data: {day}/{month}/{year} · Tipo: {display_report_type(item.report_type)}"),
         bullet(f"Nutricionista: {DEFAULT_AUTHOR.replace(' - Nutricionista - ', ' (').replace('CRN-4: ', 'CRN-4: ') + ')' if ' - Nutricionista - ' in DEFAULT_AUTHOR else DEFAULT_AUTHOR}"),
         bullet(f"Checklist Fácil: #{item.checklist_id}"),
-        heading("Destaques / áreas críticas"),
     ]
+    if pdf_upload_id:
+        blocks.extend(
+            [
+                callout("PDF original anexado abaixo para baixar direto na página da visita.", emoji="📎", color="gray_background"),
+                pdf_download_file_block(pdf_upload_id, item.filename),
+            ]
+        )
+    blocks.append(heading("Destaques / áreas críticas"))
     for highlight in extracted.highlights or ["Pontos críticos extraídos do PDF original e lançados como ações/inconformidades."]:
         blocks.append(bullet(highlight))
     blocks.append(heading("Reconhecimentos"))
@@ -1334,6 +1360,14 @@ def send_file_upload(upload: dict[str, Any], pdf_path: Path, token: str) -> dict
     return response.json()
 
 
+def upload_pdf_to_notion(pdf_path: Path, token: str) -> str:
+    upload = create_file_upload(token)
+    uploaded = send_file_upload(upload, pdf_path, token)
+    if uploaded.get("status") != "uploaded":
+        raise RuntimeError(f"upload_status={uploaded.get('status')}")
+    return uploaded["id"]
+
+
 def attach_pdf(page_id: str, upload_id: str, filename: str, token: str) -> None:
     body = {
         "properties": {
@@ -1370,6 +1404,7 @@ def sync_inventory(
     archive_extra_actions: bool = False,
     action_database_id: str = DEFAULT_ACTION_DATABASE_ID,
     drive_folder_map_path: Path | None = DEFAULT_DRIVE_FOLDER_MAP,
+    ensure_body_pdf_block: bool = False,
 ) -> dict[str, Any]:
     items = load_inventory(inventory_path)
     structured_export = load_structured_export(structured_export_dir)
@@ -1385,6 +1420,7 @@ def sync_inventory(
         "created": 0,
         "metadata_updated": 0,
         "body_appended": 0,
+        "body_pdf_blocks_appended": 0,
         "body_skipped_existing": 0,
         "body_archived_blocks": 0,
         "actions_created": 0,
@@ -1446,18 +1482,32 @@ def sync_inventory(
                 update_metadata(page, item, token, extracted)
                 summary["metadata_updated"] += 1
 
+        body_pdf_upload_id: str | None = None
         if extracted and (append_body or replace_body) and not dry_run:
             photo_drive_url = drive_link_for_visit(drive_folder_map, item.visit_date)
             if replace_body:
                 summary["body_archived_blocks"] += archive_existing_children(page["id"], token)
-                append_page_body(page["id"], page_body_blocks(item, extracted, drive_folder_url=photo_drive_url), token)
-                summary["body_appended"] += 1
-                time.sleep(sleep_seconds)
+                should_append_body = True
             elif has_children(page["id"], token):
                 summary["body_skipped_existing"] += 1
+                should_append_body = False
             else:
-                append_page_body(page["id"], page_body_blocks(item, extracted, drive_folder_url=photo_drive_url), token)
+                should_append_body = True
+            if should_append_body:
+                if ensure_body_pdf_block:
+                    try:
+                        body_pdf_upload_id = upload_pdf_to_notion(pdf_path, token)
+                    except Exception as exc:  # noqa: BLE001 - keep batch going and report the specific visit.
+                        summary["errors"].append({"checklist_id": item.checklist_id, "error": f"body_pdf_upload_failed: {exc}"})
+                        continue
+                append_page_body(
+                    page["id"],
+                    page_body_blocks(item, extracted, drive_folder_url=photo_drive_url, pdf_upload_id=body_pdf_upload_id),
+                    token,
+                )
                 summary["body_appended"] += 1
+                if body_pdf_upload_id:
+                    summary["body_pdf_blocks_appended"] += 1
                 time.sleep(sleep_seconds)
 
         if extracted and create_actions and not dry_run:
@@ -1487,12 +1537,12 @@ def sync_inventory(
             summary["attached"] += 1
             continue
 
-        upload = create_file_upload(token)
-        uploaded = send_file_upload(upload, pdf_path, token)
-        if uploaded.get("status") != "uploaded":
-            summary["errors"].append({"checklist_id": item.checklist_id, "error": f"upload_status={uploaded.get('status')}"})
+        try:
+            upload_id = body_pdf_upload_id or upload_pdf_to_notion(pdf_path, token)
+        except Exception as exc:  # noqa: BLE001 - report batch upload errors.
+            summary["errors"].append({"checklist_id": item.checklist_id, "error": f"upload_failed: {exc}"})
             continue
-        attach_pdf(page["id"], uploaded["id"], item.filename, token)
+        attach_pdf(page["id"], upload_id, item.filename, token)
         summary["attached"] += 1
         time.sleep(sleep_seconds)
 
@@ -1517,6 +1567,7 @@ def main() -> int:
     parser.add_argument("--structured-only", action="store_true", help="When using structured export, skip inventory rows that are not present in the structured data.")
     parser.add_argument("--append-body", action="store_true", help="Append a structured body only to pages that have no child blocks.")
     parser.add_argument("--replace-body", action="store_true", help="Archive existing page children and append a fresh structured body.")
+    parser.add_argument("--ensure-body-pdf-block", action="store_true", help="Add the original PDF as a visible downloadable file block in the page body.")
     parser.add_argument("--create-actions", action="store_true", help="Create Ações e Inconformidades records when the report has none.")
     parser.add_argument("--archive-extra-actions", action="store_true", help="Archive action records related to processed reports when their title is not in the current extraction.")
     parser.add_argument("--action-database-id", default=DEFAULT_ACTION_DATABASE_ID)
@@ -1538,6 +1589,7 @@ def main() -> int:
         or args.append_body
         or args.replace_body
         or args.create_actions
+        or args.ensure_body_pdf_block
         or (not args.sync_drive_photos and not args.extract_pdf_photos and not args.sync_monthly_kpis)
     )
     notion_requested = inventory_requested or args.sync_monthly_kpis
@@ -1594,6 +1646,7 @@ def main() -> int:
             archive_extra_actions=args.archive_extra_actions,
             action_database_id=args.action_database_id,
             drive_folder_map_path=args.drive_folder_map,
+            ensure_body_pdf_block=args.ensure_body_pdf_block,
         )
     if args.sync_monthly_kpis:
         final_summary["monthly_kpis"] = sync_monthly_kpi_pages(
