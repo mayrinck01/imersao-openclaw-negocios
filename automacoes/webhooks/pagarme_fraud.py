@@ -552,6 +552,14 @@ class LocalMogoHistoryChecker:
             return status in self.VALID_STATUS
         if "historico pagamento" in folder:
             return bool(_first_present(row, ("dataPag", "idPag", "numPed", "chave")))
+        if "analise cadastro clientes" in folder:
+            first_order = _first_present(row, ("primeiro_pedido", "Primeiro Pedido"))
+            last_order = _first_present(row, ("ultimo_pedido", "Último Pedido", "Ultimo Pedido"))
+            total_orders = _parse_brlish_number(_first_present(row, ("total_pedidos", "Total Pedidos")))
+            total_delivery = _parse_brlish_number(_first_present(row, ("total_delivery", "Total Delivery")))
+            has_order_window = bool(first_order or last_order)
+            has_paid_total = any(value is not None and value > 0 for value in (total_orders, total_delivery))
+            return has_order_window and has_paid_total
         return False
 
     def _is_operational_order_row(self, path: Path, row: dict[str, Any]) -> bool:
@@ -642,13 +650,13 @@ class LocalMogoHistoryChecker:
             order_number=_clean_mogo_value(_first_present(row, ("A13", "NumeroPedido", "Nº Pedido", "numPed", "pedido", "numero_pedido"))),
             status=_clean_mogo_value(_first_present(row, ("A10", "StatusEntrega", "StatusPedido", "StatusPago", "status", "situacao", "posicao", "Pago"))),
             customer_name=_clean_mogo_value(_first_present(row, ("cliente", "A5", "nome", "NomeCliente", "Cliente_Nome", "customer_name", "Cliente"))),
-            date=_clean_mogo_value(_first_present(row, ("A0", "data", "Data Pedido", "DataPedido", "dataPed", "dataPag"))),
+            date=_clean_mogo_value(_first_present(row, ("A0", "data", "Data Pedido", "DataPedido", "dataPed", "dataPag", "ultimo_pedido", "Último Pedido", "Ultimo Pedido"))),
             delivery_date=_clean_mogo_value(_first_present(row, ("Data Entrega", "DataEntrega", "Data Agendada"))),
             delivery_time=_clean_mogo_value(_first_present(row, ("Hora Entrega", "HoraEntregaTxt", "Hora Agendada"))),
             fulfillment=_clean_mogo_value(_first_present(row, ("A6", "Forma Entrega", "FormaEntrega", "ObsEntrega_Descricao", "forma_entrega", "delivery_type"))),
             address=address,
             neighborhood=neighborhood,
-            amount=_clean_mogo_value(_first_present(row, ("ValorTotal", "ValorPago", "Valor Final", "ValorFinal", "totalped", "A4", "valor"))),
+            amount=_clean_mogo_value(_first_present(row, ("ValorTotal", "ValorPago", "Valor Final", "ValorFinal", "totalped", "A4", "valor", "total_delivery", "Total Delivery", "total_pedidos", "Total Pedidos"))),
             origin=_clean_mogo_value(_first_present(row, ("Origem", "OrigemPedido", "origem"))),
             item=_clean_mogo_value(_first_present(row, ("A2", "Produto", "produto", "item"))),
             phone=_clean_mogo_value(_first_present(row, ("TelefoneCliente", "CelularCliente", "telefone", "phone", "whatsapp", "celular", "customer_phone"))),
@@ -738,6 +746,7 @@ class RiskResult:
     reasons: list[str]
     charge: ChargeEvent
     customer_history: CustomerHistoryResult | None = None
+    first_purchase_alert: bool = False
 
 
 def extract_charge(payload: dict[str, Any]) -> ChargeEvent:
@@ -813,7 +822,9 @@ class RiskEngine:
         if not charge.is_paid:
             return RiskResult(False, 0, [], charge)
         score, reasons, history = self._score_paid_charge(charge)
-        return RiskResult(score >= ALERT_THRESHOLD, score, reasons, charge, history)
+        antifraud_alert = score >= ALERT_THRESHOLD
+        first_purchase_alert = self._should_alert_first_purchase(charge, history, antifraud_alert)
+        return RiskResult(antifraud_alert, score, reasons, charge, history, first_purchase_alert)
 
     def _store(self, charge: ChargeEvent) -> None:
         with self._connect() as conn:
@@ -866,6 +877,20 @@ class RiskEngine:
             return self.history_checker.lookup(charge)
         except Exception as exc:
             return CustomerHistoryResult(False, None, "error", exc.__class__.__name__)
+
+    def _should_alert_first_purchase(
+        self,
+        charge: ChargeEvent,
+        history: CustomerHistoryResult,
+        antifraud_alert: bool,
+    ) -> bool:
+        if antifraud_alert:
+            return False
+        if not charge.is_card:
+            return False
+        if history.status != "not_found":
+            return False
+        return not history.has_prior_valid_purchase
 
     def _history_can_suppress_alerts(self, charge: ChargeEvent, history: CustomerHistoryResult) -> bool:
         if not history.has_prior_valid_purchase:
@@ -1014,6 +1039,11 @@ def _score_thermometer(score: int) -> str:
 
 def _score_header_line(score: int) -> str:
     return f"*Score antifraude: {score} — 🌡️ {_score_thermometer(score)}*"
+
+
+def _format_card_brand(value: str) -> str:
+    value = (value or "").strip()
+    return value[:1].upper() + value[1:].lower() if value else "-"
 
 
 def _format_br_phone(value: str) -> str:
@@ -1172,5 +1202,55 @@ def format_alert(result: RiskResult) -> str:
         reasons,
         "",
         "Ação: falar com o cliente antes de liberar entrega. Não acusar fraude.",
+    ]
+    return "\n".join(lines)
+
+
+def format_first_purchase_alert(result: RiskResult) -> str:
+    charge = result.charge
+    history = result.customer_history
+    order = _context_order(history)
+    modality = _order_modality(order)
+    is_pickup = modality == "Retirada"
+    header_action = "CONFERIR NA RETIRADA" if is_pickup else "CONFERIR ANTES DE ENTREGAR"
+    address_line = "não aplicável — retirada na loja" if is_pickup else (_format_order_address(order) if order else "não localizado no alerta")
+    customer_name = (order.customer_name if order and order.customer_name else charge.customer_name) or "-"
+    lines = [
+        f"🟡 PRIMEIRA COMPRA — {header_action}",
+        "",
+        "Status operacional: NÃO LIBERAR SEM CONFERÊNCIA",
+        "",
+        "Pedido",
+        f"• Cliente: {customer_name}",
+        f"• Modalidade: {modality}",
+        f"• Valor: {_format_brl(charge.amount)}",
+        "• Pagamento: cartão online aprovado",
+        "• Antifraude Pagar.me: sem alerta",
+        "",
+        "Pagamento",
+        f"• Cartão: {_format_card_brand(charge.card_brand)} final {charge.card_last4 or '-'}",
+        f"• Titular do cartão: {charge.holder_name or '-'}",
+        "• Status: aprovado",
+        "",
+        "Histórico Mogo",
+        "• CPF: não localizado em compra anterior",
+        "• Telefone: não localizado em compra anterior",
+        "• Email: não localizado em compra anterior",
+        "• Nome: não localizado em compra anterior confiável",
+        f"• Endereço: {address_line}",
+        "",
+        "Resumo",
+        "• Situação: possível primeira compra",
+        "• Risco: baixo/médio",
+        "• Motivo: pedido aprovado sem histórico confiável no Mogo",
+        "",
+        "Ação da equipe",
+        "• Conferir documento do comprador na retirada." if is_pickup else "• Conferir documento do comprador antes de liberar.",
+        f"• Se possível, confirmar cartão {_format_card_brand(charge.card_brand)} final {charge.card_last4 or '-'}.",
+        "• Se outra pessoa for retirar, pedir autorização do comprador." if is_pickup else "• Se houver terceiro envolvido, pedir autorização do comprador.",
+        "• Não acusar fraude. Tratar como procedimento padrão de primeira compra.",
+        "",
+        "Observação operacional",
+        "Cartão é conferência auxiliar. Se for Apple Pay, cartão virtual ou cartão de terceiro, o que manda é documento/autorização do comprador.",
     ]
     return "\n".join(lines)

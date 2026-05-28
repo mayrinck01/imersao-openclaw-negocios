@@ -56,7 +56,7 @@ class PagarmeWebhookDeliveryTests(unittest.TestCase):
         sleeps = []
         deliveries = []
         payload = pagarme_event("charge.paid", "ch_wait_before_mogo")
-        result = SimpleNamespace(alert=False, score=0, charge=None)
+        result = SimpleNamespace(alert=False, first_purchase_alert=False, score=0, charge=None)
         engine = FakeEngine(result)
 
         response = server.process_webhook_payload(
@@ -72,11 +72,12 @@ class PagarmeWebhookDeliveryTests(unittest.TestCase):
         self.assertEqual([], deliveries)
         self.assertTrue(response["ok"])
         self.assertFalse(response["alert"])
+        self.assertFalse(response["first_purchase_alert"])
 
     def test_process_webhook_payload_does_not_wait_for_failed_charge_storage(self):
         sleeps = []
         payload = pagarme_event("charge.payment_failed", "ch_failed_no_wait")
-        result = SimpleNamespace(alert=False, score=0, charge=None)
+        result = SimpleNamespace(alert=False, first_purchase_alert=False, score=0, charge=None)
         engine = FakeEngine(result)
 
         response = server.process_webhook_payload(
@@ -89,6 +90,37 @@ class PagarmeWebhookDeliveryTests(unittest.TestCase):
         self.assertEqual([], sleeps)
         self.assertEqual([payload], engine.handled_payloads)
         self.assertTrue(response["ok"])
+
+    def test_process_webhook_payload_sends_first_purchase_alert_after_delay(self):
+        sleeps = []
+        first_purchase_deliveries = []
+        antifraud_deliveries = []
+        payload = pagarme_event("charge.paid", "ch_first_purchase_delivery")
+        result = SimpleNamespace(
+            alert=False,
+            first_purchase_alert=True,
+            score=0,
+            charge=server.extract_charge(payload),
+            customer_history=CustomerHistoryResult(False, None, "not_found", None),
+        )
+        engine = FakeEngine(result)
+
+        response = server.process_webhook_payload(
+            payload,
+            engine,
+            deliver_alert_func=antifraud_deliveries.append,
+            deliver_first_purchase_alert_func=first_purchase_deliveries.append,
+            delay_seconds=60,
+            sleep_func=sleeps.append,
+        )
+
+        self.assertEqual([60], sleeps)
+        self.assertEqual([], antifraud_deliveries)
+        self.assertEqual(1, len(first_purchase_deliveries))
+        self.assertIn("PRIMEIRA COMPRA", first_purchase_deliveries[0])
+        self.assertTrue(response["ok"])
+        self.assertFalse(response["alert"])
+        self.assertTrue(response["first_purchase_alert"])
 
     def test_manual_antifraud_checks_returns_latest_paid_match_with_score(self):
         with tempfile.NamedTemporaryFile() as db:

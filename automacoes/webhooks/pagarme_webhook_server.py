@@ -18,7 +18,7 @@ from pathlib import Path
 from urllib.parse import parse_qs, urlparse
 from urllib import request
 
-from pagarme_fraud import CompositeCustomerHistoryChecker, LiveMogoOperationalOrderChecker, LocalMogoHistoryChecker, RiskEngine, extract_charge, format_alert
+from pagarme_fraud import CompositeCustomerHistoryChecker, LiveMogoOperationalOrderChecker, LocalMogoHistoryChecker, RiskEngine, extract_charge, format_alert, format_first_purchase_alert
 
 HOST = os.environ.get("PAGARME_WEBHOOK_HOST", "127.0.0.1")
 PORT = int(os.environ.get("PAGARME_WEBHOOK_PORT", "3060"))
@@ -527,6 +527,45 @@ def deliver_alert(message: str) -> dict[str, bool]:
     return {"telegram": telegram_ok, "email": email_ok, "whatsapp": whatsapp_ok}
 
 
+def deliver_first_purchase_alert(message: str) -> dict[str, bool]:
+    telegram_ok = _send_telegram_message(message)
+
+    email_ok = _run_quiet([
+        "gog",
+        "gmail",
+        "send",
+        "--account",
+        EMAIL_ACCOUNT,
+        "--to",
+        EMAIL_TO,
+        "--subject",
+        "Alerta primeira compra Pagar.me — conferir antes de liberar",
+        "--body-file",
+        "-",
+        "--no-input",
+    ], input_text=message)
+
+    direct_targets = [target for target in WHATSAPP_TARGETS if not _is_group_target(target)]
+    group_targets = [target for target in WHATSAPP_TARGETS if _is_group_target(target)]
+    ordered_targets = direct_targets + group_targets
+    whatsapp_results = [(target, _post_evolution_text(target, message)) for target in ordered_targets]
+    required_results = [(target, ok) for target, ok in whatsapp_results if not _is_group_target(target)]
+    if not required_results:
+        required_results = whatsapp_results
+    whatsapp_ok = bool(required_results) and all(ok for _, ok in required_results)
+
+    failed_targets = [target for target, ok in whatsapp_results if not ok]
+    if failed_targets:
+        failed_list = "\n".join(f"• {_describe_whatsapp_target(target)}" for target in failed_targets)
+        _send_telegram_message(
+            "ALERTA PRIMEIRA COMPRA — falha parcial no WhatsApp interno.\n\n"
+            "O alerta principal foi gerado, mas estes destinos falharam na Evolution:\n"
+            f"{failed_list}"
+        )
+
+    return {"telegram": telegram_ok, "email": email_ok, "whatsapp": whatsapp_ok}
+
+
 def should_delay_payload(payload: dict) -> bool:
     try:
         charge = extract_charge(payload)
@@ -539,6 +578,7 @@ def process_webhook_payload(
     payload: dict,
     engine: RiskEngine,
     deliver_alert_func=deliver_alert,
+    deliver_first_purchase_alert_func=deliver_first_purchase_alert,
     delay_seconds: int = ALERT_DELAY_SECONDS,
     sleep_func=time.sleep,
 ) -> dict:
@@ -551,7 +591,10 @@ def process_webhook_payload(
         alert_message = format_alert(result)
         record_antifraud_alert(engine, result)
         delivery = deliver_alert_func(alert_message)
-    return {"ok": True, "alert": result.alert, "score": result.score, "delivery": delivery}
+    elif result.first_purchase_alert:
+        first_purchase_message = format_first_purchase_alert(result)
+        delivery = deliver_first_purchase_alert_func(first_purchase_message)
+    return {"ok": True, "alert": result.alert, "first_purchase_alert": result.first_purchase_alert, "score": result.score, "delivery": delivery}
 
 
 def process_webhook_payload_background(payload: dict, engine: RiskEngine) -> None:

@@ -4,7 +4,7 @@ import unittest
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
-from automacoes.webhooks.pagarme_fraud import CustomerHistoryResult, FraudHotlist, LocalMogoHistoryChecker, MogoOrderSummary, RiskEngine, extract_charge, format_alert, names_compatible, normalized_sha256
+from automacoes.webhooks.pagarme_fraud import CustomerHistoryResult, FraudHotlist, LocalMogoHistoryChecker, MogoOrderSummary, RiskEngine, extract_charge, format_alert, format_first_purchase_alert, names_compatible, normalized_sha256
 
 
 class FakeHistoryChecker:
@@ -103,6 +103,72 @@ class PagarmeFraudTests(unittest.TestCase):
             result = engine.handle_event(event("charge.paid", "ch_clean"))
             self.assertFalse(result.alert)
             self.assertEqual(result.score, 0)
+
+    def test_clean_paid_card_without_mogo_history_triggers_first_purchase_alert(self):
+        with tempfile.NamedTemporaryFile() as db:
+            checker = FakeHistoryChecker(CustomerHistoryResult(
+                False,
+                None,
+                "not_found",
+                None,
+                None,
+                0,
+                MogoOrderSummary(
+                    order_number="039001",
+                    status="Pendente",
+                    customer_name="Adriano Velloso Meirelles",
+                    fulfillment="Retirada na loja",
+                    amount="315,00",
+                ),
+            ))
+            engine = RiskEngine(db.name, history_checker=checker)
+            result = engine.handle_event(event(
+                "charge.paid",
+                "ch_first_purchase_pickup",
+                customer_name="Adriano Velloso Meirelles",
+                email="adriano@example.com",
+                amount=31500,
+                brand="Mastercard",
+                card_last4="1234",
+                holder="ADRIANO VELLOSO MEIRELLES",
+            ))
+
+            self.assertFalse(result.alert)
+            self.assertTrue(result.first_purchase_alert)
+
+            alert = format_first_purchase_alert(result)
+
+            self.assertIn("PRIMEIRA COMPRA — CONFERIR NA RETIRADA", alert)
+            self.assertIn("Status operacional: NÃO LIBERAR SEM CONFERÊNCIA", alert)
+            self.assertIn("• Cliente: Adriano Velloso Meirelles", alert)
+            self.assertIn("• Modalidade: Retirada", alert)
+            self.assertIn("• Valor: R$ 315,00", alert)
+            self.assertIn("• Cartão: Mastercard final 1234", alert)
+            self.assertIn("• Titular do cartão: ADRIANO VELLOSO MEIRELLES", alert)
+            self.assertIn("• Endereço: não aplicável — retirada na loja", alert)
+            self.assertIn("Cartão é conferência auxiliar", alert)
+
+    def test_prior_mogo_history_suppresses_first_purchase_alert(self):
+        with tempfile.NamedTemporaryFile() as db:
+            checker = FakeHistoryChecker(CustomerHistoryResult(
+                True,
+                "phone",
+                "valid_purchase",
+                None,
+                MogoOrderSummary(order_number="032852", customer_name="daniela vaz"),
+                valid_purchase_count=2,
+            ))
+            engine = RiskEngine(db.name, history_checker=checker)
+            result = engine.handle_event(event(
+                "charge.paid",
+                "ch_returning_no_first_purchase",
+                customer_name="daniela vaz",
+                email="daniela@example.com",
+                phone="21988955515",
+            ))
+
+            self.assertFalse(result.alert)
+            self.assertFalse(result.first_purchase_alert)
 
     def test_card_holder_document_mismatch_triggers_alert(self):
         with tempfile.NamedTemporaryFile() as db:
@@ -831,6 +897,41 @@ class PagarmeFraudTests(unittest.TestCase):
             result = checker.lookup(extract_charge(event("charge.paid", "ch_name", customer_name="Patricia Bernardo", email="semnome@example.com", document="")))
             self.assertTrue(result.has_prior_valid_purchase)
             self.assertEqual(result.matched_by, "name")
+
+    def test_customer_registry_with_prior_delivery_suppresses_weak_antifraud_alert(self):
+        with tempfile.TemporaryDirectory() as root, tempfile.NamedTemporaryFile() as db:
+            folder = Path(root) / "Analise Cadastro Clientes"
+            folder.mkdir(parents=True)
+            (folder / "11-2024.json").write_text(json.dumps({
+                "registros": [{
+                    "nome": "daniela  vaz",
+                    "telefone": "21988955515",
+                    "bairro": "Flamengo",
+                    "primeiro_pedido": "14/11/2024",
+                    "ultimo_pedido": "20/11/2025",
+                    "total_pedidos": "1.103,50",
+                    "total_delivery": "1.103,50",
+                }]
+            }), encoding="utf-8")
+
+            checker = LocalMogoHistoryChecker(root)
+            engine = RiskEngine(db.name, history_checker=checker)
+            result = engine.handle_event(event(
+                "charge.paid",
+                "ch_returning_customer_registry",
+                customer_name="daniela vaz",
+                email="juliomtc@uol.com.br",
+                document="02410594700",
+                phone="21988955515",
+                amount=22700,
+                holder="JULIO M T COSTA",
+                holder_document="02410594700",
+            ))
+
+            self.assertFalse(result.alert)
+            self.assertEqual(result.score, 0)
+            self.assertTrue(result.customer_history.has_prior_valid_purchase)
+            self.assertEqual(result.customer_history.matched_by, "phone")
 
     def test_local_mogo_history_checker_matches_partial_name_with_exact_delivery_address(self):
         with tempfile.TemporaryDirectory() as root:

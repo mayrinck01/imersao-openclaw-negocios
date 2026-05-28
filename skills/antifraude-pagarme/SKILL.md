@@ -2,7 +2,7 @@
 name: antifraude-pagarme
 description: "Use quando o usuario pedir para analisar, ajustar, consultar, revisar ou operar antifraude Pagar.me, alertas de fraude, chargeback, lista quente, historico Mogo ou pendencias de revisao antifraude."
 metadata:
-  version: "1.0"
+  version: "1.2"
   created: "2026-05-28"
   maintainer: "Joao Mayrinck - CEO Cake & Co"
   related_scripts:
@@ -34,6 +34,7 @@ O antifraude e operacional: segura entrega para verificacao humana. Nao cancela,
 - Pix pago nao gera alerta antifraude.
 - Cartao pago entra no webhook e pode ser analisado.
 - Charge paga de cartao e aceita no HTTP imediatamente e processada em background apos `PAGARME_ALERT_DELAY_SECONDS`; padrao: 60 segundos.
+- O mesmo delay de 60 segundos e obrigatorio para alerta de primeira compra, para dar tempo do Mogo consolidar pedido/cliente antes da checagem.
 - Charge recusada/falha entra sem espera para preservar historico de tentativa.
 - Score `>= 50` significa alerta operacional: `SEGURAR / NAO ENTREGAR`.
 - Lista quente de fraude/chargeback e forte e nao deve ser suprimida por historico Mogo.
@@ -41,8 +42,54 @@ O antifraude e operacional: segura entrega para verificacao humana. Nao cancela,
 - Match por documento, email ou telefone no Mogo suprime sinais fracos.
 - Match por nome no Mogo so suprime sinais fracos quando `valid_purchase_count >= 2`.
 - Match por `name_address` suprime falso positivo operacional quando ha nome ou parte relevante do nome e endereco normalizado 100% igual em compra valida anterior.
+- `Analise Cadastro Clientes` do Mogo tambem conta como historico valido quando tiver primeiro/ultimo pedido e total de pedidos ou delivery maior que zero; nesse caso, telefone/nome desse cadastro pode derrubar alerta fraco de titular ou email diferente.
 - CPF/documento do titular ausente ou diferente e sinal operacional, mas pode ser suprimido por historico Mogo confiavel.
 - Titular/cartao/lista quente por titular sozinho nao deve bloquear entrega sem ancoragem na identidade do cliente.
+
+## Alerta de primeira compra
+
+Primeira compra e alerta operacional separado do antifraude. Nao vai para a fila `antifraud_alerts` e nao deve ser tratado como fraude.
+
+Disparar quando:
+
+- cobranca de cartao estiver paga/aprovada;
+- o antifraude nao tiver alerta (`score < 50`);
+- apos aguardar `PAGARME_ALERT_DELAY_SECONDS` (padrao 60s), o Mogo nao localizar historico confiavel de compra anterior por CPF, telefone, email, nome, nome+endereco ou cadastro valido.
+
+Modelo operacional:
+
+```text
+🟡 PRIMEIRA COMPRA — CONFERIR NA RETIRADA
+
+Status operacional: NÃO LIBERAR SEM CONFERÊNCIA
+
+Pedido
+• Cliente: <nome>
+• Modalidade: Retirada na loja
+• Valor: R$ <valor>
+• Pagamento: cartão online aprovado
+• Antifraude Pagar.me: sem alerta
+
+Pagamento
+• Cartão: <bandeira> final <4 dígitos>
+• Titular do cartão: <titular>
+• Status: aprovado
+
+Histórico Mogo
+• CPF: não localizado em compra anterior
+• Telefone: não localizado em compra anterior
+• Email: não localizado em compra anterior
+• Nome: não localizado em compra anterior confiável
+• Endereço: não aplicável — retirada na loja
+
+Ação da equipe
+• Conferir documento do comprador.
+• Se possível, confirmar cartão <bandeira> final <4 dígitos>.
+• Se outra pessoa retirar, pedir autorização do comprador.
+• Não acusar fraude. Tratar como procedimento padrão de primeira compra.
+```
+
+Cartao e apenas conferencia auxiliar. Documento/autorizacao continuam sendo a regra principal porque pode haver Apple Pay, cartao virtual, cartao de terceiro ou retirada autorizada.
 
 ## Rotina diaria de pendencias antifraude
 
@@ -91,9 +138,10 @@ Ao alterar regra antifraude:
 1. Reproduzir o caso com teste em `test_pagarme_fraud.py` ou `test_pagarme_webhook_server.py`.
 2. Separar sinal fraco de sinal forte.
 3. Garantir que a nova supressao nao afrouxa lista quente, chargeback ou sinal forte.
-4. Manter mensagens operacionais: falar com cliente antes de liberar entrega; nao acusar fraude.
-5. Reiniciar o servico so depois de testes verdes.
-6. Validar `/health`.
+4. Se o caso envolver cliente recorrente, checar tambem `Analise Cadastro Clientes`, nao apenas `Lancamentos Pedidos` ou `Historico Pagamento`.
+5. Manter mensagens operacionais: falar com cliente antes de liberar entrega; nao acusar fraude.
+6. Reiniciar o servico so depois de testes verdes.
+7. Validar `/health`.
 
 ## Consultas manuais
 
