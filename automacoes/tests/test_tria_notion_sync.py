@@ -12,7 +12,9 @@ from automacoes.scripts.tria_notion_sync import (
     action_page_payload,
     archive_existing_children,
     archive_extra_action_pages,
+    extract_pdf_photos,
     drive_folder_url,
+    monthly_kpi_blocks,
     load_structured_export,
     notion_request,
     page_body_blocks,
@@ -200,6 +202,38 @@ class TriaNotionSyncTests(unittest.TestCase):
             payload["Título"]["title"][0]["text"]["content"],
             "09/03/2026 - Visita Orientativa - Produção e geladeiras",
         )
+
+    def test_update_payload_rewrites_counts_when_metadata_update_is_explicit(self):
+        item = InventoryItem(
+            checklist_id="137969461",
+            message_id="message-1",
+            email_date="2025-03-28 13:57",
+            report_type="Relatório de Visita Orientativa",
+            filename="report.pdf",
+            status="skipped",
+            bytes=10,
+        )
+        page = {
+            "properties": {
+                "Título": {"title": [{"plain_text": "28/03/2025 - Visita Orientativa"}]},
+                "Nº inconformidades": {"number": 22},
+                "Nº fotos (evidências)": {"number": 10},
+                "Treinamento realizado?": {"select": {"name": "Não aplicado"}},
+            }
+        }
+        extracted = ReportExtraction(
+            title="28/03/2025 - Visita Orientativa - Validades e identificação",
+            summary="Resumo",
+            training_status="Não informado",
+            photo_count=24,
+            nonconformity_count=21,
+        )
+
+        payload = update_payload(page, item, extracted)
+
+        self.assertEqual(payload["Nº inconformidades"]["number"], 21)
+        self.assertEqual(payload["Nº fotos (evidências)"]["number"], 24)
+        self.assertEqual(payload["Treinamento realizado?"]["select"]["name"], "Não informado")
 
     def test_parses_2026_03_09_visit_report_model(self):
         item = InventoryItem(
@@ -556,6 +590,159 @@ class TriaNotionSyncTests(unittest.TestCase):
         upload_calls = [call for call in calls if call[:2] == ("drive", "upload")]
         uploaded_names = [Path(call[2]).name for call in upload_calls]
         self.assertEqual(uploaded_names, ["img-001.jpg", "img-002.png"])
+
+    def test_extract_pdf_photos_extracts_into_date_folders_and_skips_existing(self):
+        with tempfile.TemporaryDirectory() as temp_dir:
+            root = Path(temp_dir)
+            pdf_dir = root / "pdfs"
+            photos_dir = root / "Fotos Visitas"
+            pdf_dir.mkdir()
+            inventory = root / "inventory.json"
+            first_pdf = pdf_dir / "2025-01-10-129313473-relatorio-de-visita-orientativa.pdf"
+            second_pdf = pdf_dir / "2025-01-24-130848833-relatorio-de-visita-orientativa.pdf"
+            first_pdf.write_bytes(b"%PDF-first")
+            second_pdf.write_bytes(b"%PDF-second")
+            inventory.write_text(
+                json.dumps(
+                    [
+                        {
+                            "checklist_id": "129313473",
+                            "message_id": "message-1",
+                            "email_date": "2025-01-10 10:00",
+                            "report_type": "Relatório de Visita Orientativa",
+                            "filename": first_pdf.name,
+                            "status": "downloaded",
+                            "bytes": 10,
+                            "error": "",
+                        },
+                        {
+                            "checklist_id": "130848833",
+                            "message_id": "message-2",
+                            "email_date": "2025-01-24 10:00",
+                            "report_type": "Relatório de Visita Orientativa",
+                            "filename": second_pdf.name,
+                            "status": "downloaded",
+                            "bytes": 10,
+                            "error": "",
+                        },
+                    ],
+                    ensure_ascii=False,
+                ),
+                encoding="utf-8",
+            )
+            existing_dir = photos_dir / "24-01-2025"
+            existing_dir.mkdir(parents=True)
+            (existing_dir / "img-000.jpg").write_bytes(b"existing")
+            calls = []
+
+            def fake_runner(command, **_kwargs):
+                calls.append(command)
+                prefix = Path(command[-1])
+                (prefix.parent / f"{prefix.name}-000.jpg").write_bytes(b"jpg")
+                (prefix.parent / f"{prefix.name}-001.ppm").write_bytes(b"ppm")
+
+                class Completed:
+                    returncode = 0
+
+                return Completed()
+
+            summary = extract_pdf_photos(
+                inventory_path=inventory,
+                pdf_dir=pdf_dir,
+                photos_dir=photos_dir,
+                dry_run=False,
+                overwrite=False,
+                runner=fake_runner,
+            )
+            extracted_bytes = (photos_dir / "10-01-2025" / "img-000.jpg").read_bytes()
+
+            self.assertEqual(summary["reports_seen"], 2)
+            self.assertEqual(summary["reports_extracted"], 1)
+            self.assertEqual(summary["reports_skipped_existing"], 1)
+            self.assertEqual(summary["photos_extracted"], 1)
+            self.assertEqual(len(calls), 1)
+            self.assertEqual(extracted_bytes, b"jpg")
+
+    def test_monthly_kpi_blocks_follow_reference_emoji_logic(self):
+        reports = [
+            {
+                "id": "report-1",
+                "properties": {
+                    "Título": {"title": [{"plain_text": "10/01/2025 - Visita Orientativa"}]},
+                    "Data da visita": {"date": {"start": "2025-01-10"}},
+                },
+            }
+        ]
+        actions = [
+            {
+                "properties": {
+                    "Ação / Inconformidade": {"title": [{"plain_text": "Bolo vencido"}]},
+                    "Categoria": {"select": {"name": "Validade vencida"}},
+                    "Setor": {"select": {"name": "Atendimento"}},
+                    "Gravidade": {"select": {"name": "Crítica"}},
+                    "Relatório": {"relation": [{"id": "report-1"}]},
+                }
+            },
+            {
+                "properties": {
+                    "Ação / Inconformidade": {"title": [{"plain_text": "Produto sem etiqueta"}]},
+                    "Categoria": {"select": {"name": "Sem identificação"}},
+                    "Setor": {"select": {"name": "Produção"}},
+                    "Gravidade": {"select": {"name": "Alta"}},
+                    "Relatório": {"relation": [{"id": "report-1"}]},
+                }
+            },
+        ]
+
+        blocks = monthly_kpi_blocks("2025-01", reports, actions)
+
+        def block_text(block):
+            data = block.get(block["type"], {})
+            return "".join(
+                rt.get("plain_text") or rt.get("text", {}).get("content", "")
+                for rt in data.get("rich_text", [])
+            )
+
+        rendered = "\n".join(
+            block_text(block)
+            for block in blocks
+            if block["type"] in {"callout", "heading_2", "heading_3", "bulleted_list_item"}
+        )
+
+        self.assertEqual(blocks[0]["callout"]["icon"]["emoji"], "📆")
+        self.assertIn("Panorama de Janeiro/2025", rendered)
+        self.assertIn("🥇 Atendimento — 1", rendered)
+        self.assertIn("🔴 Validade vencida — 1", rendered)
+        self.assertIn("🏷️ Sem identificação — 1", rendered)
+        self.assertIn("🚨 Críticas: Bolo vencido", rendered)
+        self.assertIn("⚠️ Altas: Produto sem etiqueta", rendered)
+
+    def test_monthly_kpi_blocks_handles_more_than_three_sectors(self):
+        reports = [
+            {
+                "id": "report-1",
+                "properties": {
+                    "Título": {"title": [{"plain_text": "10/01/2025 - Visita Orientativa"}]},
+                    "Data da visita": {"date": {"start": "2025-01-10"}},
+                },
+            }
+        ]
+        actions = [
+            {
+                "properties": {
+                    "Ação / Inconformidade": {"title": [{"plain_text": f"Achado {index}"}]},
+                    "Categoria": {"select": {"name": "Validade vencida"}},
+                    "Setor": {"select": {"name": sector}},
+                    "Gravidade": {"select": {"name": "Média"}},
+                    "Relatório": {"relation": [{"id": "report-1"}]},
+                }
+            }
+            for index, sector in enumerate(["Atendimento", "Produção", "Estoque", "Documentação", "Expedição"], 1)
+        ]
+
+        blocks = monthly_kpi_blocks("2025-01", reports, actions)
+
+        self.assertTrue(blocks)
 
     def test_notion_request_retries_rate_limit(self):
         rate_limited = Mock(status_code=429, headers={"Retry-After": "0"})

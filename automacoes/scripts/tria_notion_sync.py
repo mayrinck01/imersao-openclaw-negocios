@@ -10,6 +10,7 @@ import re
 import subprocess
 import time
 import unicodedata
+from collections import Counter, defaultdict
 from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any
@@ -20,7 +21,9 @@ import requests
 DEFAULT_DATABASE_ID = "364f1f50-f16e-8196-97e5-f72b357e8b22"
 DEFAULT_INVENTORY = Path("/root/workspaces/cake-brain/relatorios/Tria/tria-email-pdf-inventory.json")
 DEFAULT_PDF_DIR = Path("/root/workspaces/cake-brain/relatorios/Tria/Relatorios PDF")
+DEFAULT_PHOTOS_DIR = Path("/root/workspaces/cake-brain/relatorios/Tria/Fotos Visitas")
 DEFAULT_ACTION_DATABASE_ID = "364f1f50-f16e-8101-810b-e18b039b694b"
+DEFAULT_KPI_PARENT_PAGE_ID = "368f1f50-f16e-816f-a44c-cd334dfa2057"
 DEFAULT_DRIVE_ROOT_FOLDER_ID = "1oEABLAfGbDE-iVlYnH_45wbD7pilKU1D"
 DEFAULT_DRIVE_FOLDER_MAP = Path("/root/workspaces/cake-brain/relatorios/Tria/tria-drive-photo-folders.json")
 NOTION_API = "https://api.notion.com/v1"
@@ -28,6 +31,20 @@ NOTION_QUERY_VERSION = "2022-06-28"
 NOTION_UPLOAD_VERSION = "2026-03-11"
 DEFAULT_AUTHOR = "Mariana Moreira - Nutricionista - CRN-4: 20101623"
 IMAGE_EXTENSIONS = {".jpg", ".jpeg", ".png", ".webp"}
+MONTH_NAMES_PT = {
+    "01": "Janeiro",
+    "02": "Fevereiro",
+    "03": "Março",
+    "04": "Abril",
+    "05": "Maio",
+    "06": "Junho",
+    "07": "Julho",
+    "08": "Agosto",
+    "09": "Setembro",
+    "10": "Outubro",
+    "11": "Novembro",
+    "12": "Dezembro",
+}
 KNOWN_SECTORS = {
     "atendimento": "Atendimento",
     "produção": "Produção",
@@ -308,6 +325,12 @@ def iso_to_date_folder(value: str) -> str:
     return f"{day}-{month}-{year}"
 
 
+def image_files(path: Path) -> list[Path]:
+    if not path.exists():
+        return []
+    return sorted(item for item in path.iterdir() if item.is_file() and item.suffix.lower() in IMAGE_EXTENSIONS)
+
+
 def drive_folder_url(folder_id: str) -> str:
     return f"https://drive.google.com/drive/folders/{folder_id}"
 
@@ -354,14 +377,20 @@ def _unwrap_drive_file(response: Any) -> dict[str, Any]:
 
 def sync_drive_photo_folders(
     *,
-    export_dir: Path,
+    export_dir: Path | None = None,
+    photos_dir: Path | None = None,
     root_folder_id: str,
     folder_map_path: Path,
     dry_run: bool,
     upload_photos: bool,
     gog_runner: Any = gog_drive,
 ) -> dict[str, Any]:
-    photos_root = export_dir / "Fotos Visitas"
+    if photos_dir is None:
+        if export_dir is None:
+            raise ValueError("export_dir or photos_dir is required")
+        photos_root = export_dir / "Fotos Visitas"
+    else:
+        photos_root = photos_dir
     if not photos_root.exists():
         raise FileNotFoundError(f"Fotos Visitas not found: {photos_root}")
 
@@ -400,11 +429,11 @@ def sync_drive_photo_folders(
             folder_id = folder["id"]
             summary["folders_created"] += 1
 
-        image_files = sorted(path for path in visit_dir.iterdir() if path.is_file() and path.suffix.lower() in IMAGE_EXTENSIONS)
+        images = image_files(visit_dir)
         if upload_photos:
             child_listing = {"files": []} if dry_run else gog_runner("drive", "ls", "--parent", folder_id, "--max", "500", json_output=True)
             existing_names = {item.get("name") for item in child_listing.get("files", [])}
-            for image_file in image_files:
+            for image_file in images:
                 if image_file.name in existing_names:
                     summary["photos_skipped_existing"] += 1
                     continue
@@ -418,7 +447,7 @@ def sync_drive_photo_folders(
             "id": folder_id,
             "name": visit_dir.name,
             "url": drive_folder_url(folder_id),
-            "photo_count": len(image_files),
+            "photo_count": len(images),
         }
         folder_map[visit_date] = entry
         summary["folders"][visit_date] = entry
@@ -426,6 +455,58 @@ def sync_drive_photo_folders(
     if not dry_run:
         folder_map_path.parent.mkdir(parents=True, exist_ok=True)
         folder_map_path.write_text(json.dumps({"root_folder_id": root_folder_id, "folders": folder_map}, ensure_ascii=False, indent=2), encoding="utf-8")
+    return summary
+
+
+def extract_pdf_photos(
+    *,
+    inventory_path: Path,
+    pdf_dir: Path,
+    photos_dir: Path,
+    dry_run: bool,
+    overwrite: bool = False,
+    runner: Any = subprocess.run,
+) -> dict[str, Any]:
+    items = load_inventory(inventory_path)
+    summary = {
+        "reports_seen": len(items),
+        "reports_extracted": 0,
+        "reports_skipped_existing": 0,
+        "missing_pdf": 0,
+        "photos_extracted": 0,
+        "dry_run_extracts": 0,
+        "errors": [],
+    }
+    for item in items:
+        pdf_path = pdf_dir / item.filename
+        if not pdf_path.exists() or not pdf_path.read_bytes().startswith(b"%PDF-"):
+            summary["missing_pdf"] += 1
+            summary["errors"].append({"checklist_id": item.checklist_id, "error": "missing_or_invalid_pdf"})
+            continue
+        visit_dir = photos_dir / iso_to_date_folder(item.visit_date)
+        existing_images = image_files(visit_dir)
+        if existing_images and not overwrite:
+            summary["reports_skipped_existing"] += 1
+            continue
+        if dry_run:
+            summary["dry_run_extracts"] += 1
+            continue
+        visit_dir.mkdir(parents=True, exist_ok=True)
+        before = {path.name for path in image_files(visit_dir)}
+        try:
+            runner(
+                ["pdfimages", "-j", str(pdf_path), str(visit_dir / "img")],
+                check=True,
+                capture_output=True,
+                text=True,
+            )
+        except Exception as exc:  # noqa: BLE001 - batch job records per-file extraction errors.
+            summary["errors"].append({"checklist_id": item.checklist_id, "error": f"extract_failed: {exc}"})
+            continue
+        after = {path.name for path in image_files(visit_dir)}
+        extracted_count = len(after - before)
+        summary["photos_extracted"] += extracted_count
+        summary["reports_extracted"] += 1
     return summary
 
 
@@ -880,16 +961,6 @@ def update_payload(page: dict[str, Any], item: InventoryItem, extracted: ReportE
     intended_title = extracted.title if extracted else item.title
     if current_title and current_title not in {old_title, item.title, intended_title}:
         payload["Título"] = {"title": [{"text": {"content": current_title}}]}
-    if extracted:
-        if (props.get("Nº inconformidades", {}) or {}).get("number") is not None:
-            payload.pop("Nº inconformidades", None)
-        if (props.get("Nº fotos (evidências)", {}) or {}).get("number") is not None:
-            payload.pop("Nº fotos (evidências)", None)
-        current_training = ((props.get("Treinamento realizado?", {}) or {}).get("select") or {}).get("name")
-        if current_training and current_training != "Não informado":
-            payload.pop("Treinamento realizado?", None)
-        if (props.get("Áreas críticas", {}) or {}).get("multi_select"):
-            payload.pop("Áreas críticas", None)
     return payload
 
 
@@ -909,8 +980,16 @@ def heading(content: str) -> dict[str, Any]:
     return {"object": "block", "type": "heading_2", "heading_2": {"rich_text": rt(content)}}
 
 
+def heading3(content: str) -> dict[str, Any]:
+    return {"object": "block", "type": "heading_3", "heading_3": {"rich_text": rt(content)}}
+
+
 def bullet(content: str) -> dict[str, Any]:
     return {"object": "block", "type": "bulleted_list_item", "bulleted_list_item": {"rich_text": rt(content)}}
+
+
+def divider() -> dict[str, Any]:
+    return {"object": "block", "type": "divider", "divider": {}}
 
 
 def callout(content: str, emoji: str = "⚠️", color: str = "orange_background") -> dict[str, Any]:
@@ -976,6 +1055,238 @@ def page_body_blocks(item: InventoryItem, extracted: ReportExtraction, *, drive_
             )
         )
     return blocks[:90]
+
+
+def select_name(prop: dict[str, Any]) -> str:
+    return ((prop or {}).get("select") or {}).get("name") or ""
+
+
+def action_relation_ids(action_page: dict[str, Any]) -> list[str]:
+    relation = ((action_page.get("properties") or {}).get("Relatório", {}) or {}).get("relation") or []
+    return [item.get("id") for item in relation if item.get("id")]
+
+
+def month_label(month_key: str) -> str:
+    year, month = month_key.split("-")
+    return f"{MONTH_NAMES_PT.get(month, month)}/{year}"
+
+
+def category_emoji(category: str) -> str:
+    normalized = normalize_text(category)
+    if "validade" in normalized:
+        return "🔴"
+    if "identificacao" in normalized:
+        return "🏷️"
+    if "document" in normalized:
+        return "📄"
+    if "higiene" in normalized or "suj" in normalized:
+        return "🧽"
+    if "embalagem" in normalized or "protecao" in normalized or "armazenamento" in normalized:
+        return "📦"
+    if "equipamento" in normalized:
+        return "🔧"
+    if "temperatura" in normalized:
+        return "🌡️"
+    if "estrutura" in normalized or "edificacao" in normalized:
+        return "🏗️"
+    if "praga" in normalized:
+        return "🐞"
+    return "•"
+
+
+def ranked_counter_line(counter: Counter[str], *, empty: str, limit: int = 3) -> list[str]:
+    if not counter:
+        return [empty]
+    medals = ["🥇", "🥈", "🥉"]
+    ranked = sorted(counter.items(), key=lambda item: (-item[1], normalize_text(item[0])))
+    first = []
+    for index, (name, count) in enumerate(ranked[: min(limit, len(ranked))]):
+        prefix = medals[index] if index < len(medals) else "•"
+        first.append(f"{prefix} {name} — {count}")
+    lines = [" · ".join(first)]
+    rest = ranked[limit:]
+    if rest:
+        lines.append(" · ".join(f"{name} — {count}" for name, count in rest[:8]) + ".")
+    return lines
+
+
+def category_counter_lines(counter: Counter[str], *, total: int) -> list[str]:
+    if not counter:
+        return ["✅ Sem categorias recorrentes no mês."]
+    lines: list[str] = []
+    for category, count in sorted(counter.items(), key=lambda item: (-item[1], normalize_text(item[0])))[:8]:
+        pct = round((count / total) * 100) if total else 0
+        lines.append(f"{category_emoji(category)} {category} — {count} ({pct}%)")
+    return lines
+
+
+def gravity_summary(counter: Counter[str]) -> str:
+    if not counter:
+        return "Gravidade: — (sem ocorrências)."
+    return (
+        "Gravidade: "
+        f"{counter.get('Crítica', 0)} críticas, "
+        f"{counter.get('Alta', 0)} altas, "
+        f"{counter.get('Média', 0)} médias, "
+        f"{counter.get('Baixa', 0)} baixas."
+    )
+
+
+def report_visit_date(page: dict[str, Any]) -> str:
+    return (((page.get("properties") or {}).get("Data da visita", {}) or {}).get("date") or {}).get("start") or ""
+
+
+def monthly_kpi_blocks(month_key: str, reports: list[dict[str, Any]], actions: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    total_actions = len(actions)
+    report_dates = sorted(filter(None, (report_visit_date(report) for report in reports)))
+    display_dates = ", ".join(display_date(date)[:5] for date in report_dates)
+    label = month_label(month_key)
+    sector_counts: Counter[str] = Counter()
+    category_counts: Counter[str] = Counter()
+    gravity_counts: Counter[str] = Counter()
+    critical_titles: list[str] = []
+    high_titles: list[str] = []
+    for action in actions:
+        props = action.get("properties") or {}
+        title = title_value(props.get("Ação / Inconformidade", {})).strip()
+        sector = select_name(props.get("Setor", {})) or "Geral"
+        category = select_name(props.get("Categoria", {})) or "Não informado"
+        gravity = select_name(props.get("Gravidade", {})) or "Média"
+        sector_counts[sector] += 1
+        category_counts[category] += 1
+        gravity_counts[gravity] += 1
+        if gravity == "Crítica" and title:
+            critical_titles.append(title)
+        elif gravity == "Alta" and title:
+            high_titles.append(title)
+
+    visit_word = "visita" if len(reports) == 1 else "visitas"
+    nc_word = "não conformidade" if total_actions == 1 else "não conformidades"
+    if total_actions == 0:
+        overview = f"Panorama de {label} — base: {len(reports)} {visit_word}"
+        if display_dates:
+            overview += f" ({display_dates})"
+        overview += " e 0 não conformidades. ✅ Mês sem ocorrências registradas."
+    else:
+        overview = f"Panorama de {label} — base: {len(reports)} {visit_word}"
+        if display_dates:
+            overview += f" ({display_dates})"
+        overview += f" e {total_actions} {nc_word}."
+
+    blocks: list[dict[str, Any]] = [
+        callout(overview, emoji="📆", color="blue_background"),
+        heading("Números do mês"),
+        bullet(f"{len(reports)} {visit_word} · {total_actions} {nc_word}."),
+        bullet(gravity_summary(gravity_counts)),
+        heading("Onde mais acontece (Setor)"),
+    ]
+    blocks.extend(bullet(line) for line in ranked_counter_line(sector_counts, empty="✅ Sem ocorrências por setor no mês."))
+    blocks.append(heading("O que mais se repete (Categoria)"))
+    blocks.extend(bullet(line) for line in category_counter_lines(category_counts, total=total_actions))
+    blocks.append(heading("Pontos críticos e altos"))
+    if critical_titles:
+        blocks.append(bullet("🚨 Críticas: " + " · ".join(critical_titles[:5]) + ("." if len(critical_titles) <= 5 else " · ...")))
+    else:
+        blocks.append(bullet("✅ Sem pontos críticos registrados no mês."))
+    if high_titles:
+        blocks.append(bullet("⚠️ Altas: " + " · ".join(high_titles[:8]) + ("." if len(high_titles) <= 8 else " · ...")))
+    else:
+        blocks.append(bullet("✅ Sem pontos altos registrados no mês."))
+    blocks.extend(
+        [
+            heading("Plano de ação"),
+            bullet("Itens do mês relacionados na base Ações e Inconformidades; priorizar críticas, altas e recorrências de validade/identificação."),
+            heading("O que está melhorando 👏"),
+            bullet("Usar este mês como leitura operacional: reduzir recorrências e manter evidências/PDFs centralizados no Relatório de Visita."),
+            divider(),
+            callout("Gráficos do mês abaixo seguem a mesma lógica visual de jan–mar: categoria, setor e gravidade.", emoji="📈", color="gray_background"),
+            heading3(f"🔴 Por Categoria — {label}"),
+        ]
+    )
+    blocks.extend(bullet(line) for line in category_counter_lines(category_counts, total=total_actions))
+    blocks.append(heading3(f"🏭 Por Setor — {label}"))
+    blocks.extend(bullet(line) for line in ranked_counter_line(sector_counts, empty="✅ Sem não conformidades no mês.", limit=10))
+    blocks.append(heading3(f"⚠️ Por Gravidade — {label}"))
+    blocks.append(bullet(gravity_summary(gravity_counts)))
+    return blocks[:100]
+
+
+def fetch_child_pages(parent_page_id: str, token: str) -> dict[str, str]:
+    pages: dict[str, str] = {}
+    for block in fetch_child_blocks(parent_page_id, token):
+        if block.get("type") == "child_page":
+            pages[block["child_page"]["title"]] = block["id"]
+    return pages
+
+
+def create_child_page(parent_page_id: str, title: str, blocks: list[dict[str, Any]], token: str) -> str:
+    body = {
+        "parent": {"page_id": parent_page_id},
+        "icon": {"type": "emoji", "emoji": "📊"},
+        "properties": {"title": {"title": [{"text": {"content": title}}]}},
+        "children": blocks,
+    }
+    page = notion_request("POST", "/pages", token, body=body)
+    return page["id"]
+
+
+def sync_monthly_kpi_pages(
+    *,
+    token: str,
+    parent_page_id: str,
+    database_id: str,
+    action_database_id: str,
+    dry_run: bool,
+    replace_existing: bool,
+) -> dict[str, Any]:
+    reports = fetch_database_pages(database_id, token)
+    action_pages = fetch_database_pages(action_database_id, token)
+    reports_by_id = {report["id"]: report for report in reports}
+    reports_by_month: dict[str, list[dict[str, Any]]] = defaultdict(list)
+    for report in reports:
+        date = report_visit_date(report)
+        if re.fullmatch(r"\d{4}-\d{2}-\d{2}", date):
+            reports_by_month[date[:7]].append(report)
+    actions_by_month: dict[str, list[dict[str, Any]]] = defaultdict(list)
+    for action in action_pages:
+        for report_id in action_relation_ids(action):
+            report = reports_by_id.get(report_id)
+            if not report:
+                continue
+            date = report_visit_date(report)
+            if re.fullmatch(r"\d{4}-\d{2}-\d{2}", date):
+                actions_by_month[date[:7]].append(action)
+    existing_pages = fetch_child_pages(parent_page_id, token)
+    summary = {
+        "months_seen": len(reports_by_month),
+        "created": 0,
+        "updated": 0,
+        "skipped_existing": 0,
+        "dry_run_create": 0,
+        "dry_run_update": 0,
+        "errors": [],
+    }
+    for month_key in sorted(reports_by_month):
+        title = f"KPIs — {MONTH_NAMES_PT.get(month_key[5:7], month_key[5:7])} {month_key[:4]}"
+        blocks = monthly_kpi_blocks(month_key, reports_by_month[month_key], actions_by_month.get(month_key, []))
+        existing_page_id = existing_pages.get(title)
+        if existing_page_id:
+            if not replace_existing:
+                summary["skipped_existing"] += 1
+                continue
+            if dry_run:
+                summary["dry_run_update"] += 1
+                continue
+            archive_existing_children(existing_page_id, token)
+            append_page_body(existing_page_id, blocks, token)
+            summary["updated"] += 1
+            continue
+        if dry_run:
+            summary["dry_run_create"] += 1
+            continue
+        create_child_page(parent_page_id, title, blocks, token)
+        summary["created"] += 1
+    return summary
 
 
 def action_page_payload(report_page_id: str, item: InventoryItem, action: ReportAction) -> dict[str, Any]:
@@ -1193,6 +1504,7 @@ def main() -> int:
     parser.add_argument("--database-id", default=DEFAULT_DATABASE_ID)
     parser.add_argument("--inventory", type=Path, default=DEFAULT_INVENTORY)
     parser.add_argument("--pdf-dir", type=Path, default=DEFAULT_PDF_DIR)
+    parser.add_argument("--photos-dir", type=Path, help="Directory with visit photo folders. Defaults to the structured export photos folder when available.")
     parser.add_argument("--dry-run", action="store_true")
     parser.add_argument("--limit", type=int)
     parser.add_argument(
@@ -1214,14 +1526,36 @@ def main() -> int:
     parser.add_argument("--drive-root-folder-id", default=DEFAULT_DRIVE_ROOT_FOLDER_ID)
     parser.add_argument("--drive-account", default="cakebigdog@gmail.com")
     parser.add_argument("--drive-client", default="cakebigdog")
+    parser.add_argument("--extract-pdf-photos", action="store_true", help="Extract JPEG photos from each PDF into date folders for Drive upload.")
+    parser.add_argument("--overwrite-pdf-photos", action="store_true", help="Re-run pdfimages even when a date folder already has extracted photos.")
+    parser.add_argument("--sync-monthly-kpis", action="store_true", help="Create/update monthly KPI child pages under the Tria KPI page.")
+    parser.add_argument("--kpi-parent-page-id", default=DEFAULT_KPI_PARENT_PAGE_ID)
+    parser.add_argument("--replace-kpi-pages", action="store_true", help="Archive and rebuild existing monthly KPI page bodies.")
     args = parser.parse_args()
-    notion_requested = args.enrich_from_pdf or args.append_body or args.replace_body or args.create_actions or not args.sync_drive_photos
+    photos_dir = args.photos_dir or (args.structured_export_dir / "Fotos Visitas" if args.structured_export_dir else DEFAULT_PHOTOS_DIR)
+    inventory_requested = (
+        args.enrich_from_pdf
+        or args.append_body
+        or args.replace_body
+        or args.create_actions
+        or (not args.sync_drive_photos and not args.extract_pdf_photos and not args.sync_monthly_kpis)
+    )
+    notion_requested = inventory_requested or args.sync_monthly_kpis
+    final_summary: dict[str, Any] = {}
+
+    if args.extract_pdf_photos:
+        final_summary["pdf_photo_extract"] = extract_pdf_photos(
+            inventory_path=args.inventory,
+            pdf_dir=args.pdf_dir,
+            photos_dir=photos_dir,
+            dry_run=args.dry_run,
+            overwrite=args.overwrite_pdf_photos,
+        )
 
     if args.sync_drive_photos:
-        if not args.structured_export_dir:
-            raise SystemExit("--sync-drive-photos requires --structured-export-dir")
         drive_summary = sync_drive_photo_folders(
             export_dir=args.structured_export_dir,
+            photos_dir=photos_dir,
             root_folder_id=args.drive_root_folder_id,
             folder_map_path=args.drive_folder_map,
             dry_run=args.dry_run,
@@ -1233,36 +1567,46 @@ def main() -> int:
                 json_output=kwargs.get("json_output", False),
             ),
         )
+        final_summary["drive_sync"] = drive_summary
         if not notion_requested:
-            print(json.dumps(drive_summary, ensure_ascii=False, indent=2))
+            print(json.dumps(final_summary, ensure_ascii=False, indent=2))
             return 0
 
     token = os.environ.get("NOTION_TOKEN") or os.environ.get("NOTION_API_KEY")
-    if not token:
+    if notion_requested and not token:
         raise SystemExit("NOTION_TOKEN missing")
 
-    summary = sync_inventory(
-        token=token,
-        database_id=args.database_id,
-        inventory_path=args.inventory,
-        pdf_dir=args.pdf_dir,
-        dry_run=args.dry_run,
-        limit=args.limit,
-        update_existing_metadata=args.update_existing_metadata,
-        enrich_from_pdf=args.enrich_from_pdf,
-        structured_export_dir=args.structured_export_dir,
-        structured_only=args.structured_only,
-        append_body=args.append_body,
-        replace_body=args.replace_body,
-        create_actions=args.create_actions,
-        archive_extra_actions=args.archive_extra_actions,
-        action_database_id=args.action_database_id,
-        drive_folder_map_path=args.drive_folder_map,
-    )
-    if args.sync_drive_photos:
-        summary["drive_sync"] = drive_summary
-    print(json.dumps(summary, ensure_ascii=False, indent=2))
-    return 1 if summary["errors"] else 0
+    if inventory_requested:
+        final_summary["inventory_sync"] = sync_inventory(
+            token=token,
+            database_id=args.database_id,
+            inventory_path=args.inventory,
+            pdf_dir=args.pdf_dir,
+            dry_run=args.dry_run,
+            limit=args.limit,
+            update_existing_metadata=args.update_existing_metadata,
+            enrich_from_pdf=args.enrich_from_pdf,
+            structured_export_dir=args.structured_export_dir,
+            structured_only=args.structured_only,
+            append_body=args.append_body,
+            replace_body=args.replace_body,
+            create_actions=args.create_actions,
+            archive_extra_actions=args.archive_extra_actions,
+            action_database_id=args.action_database_id,
+            drive_folder_map_path=args.drive_folder_map,
+        )
+    if args.sync_monthly_kpis:
+        final_summary["monthly_kpis"] = sync_monthly_kpi_pages(
+            token=token,
+            parent_page_id=args.kpi_parent_page_id,
+            database_id=args.database_id,
+            action_database_id=args.action_database_id,
+            dry_run=args.dry_run,
+            replace_existing=args.replace_kpi_pages,
+        )
+    print(json.dumps(final_summary, ensure_ascii=False, indent=2))
+    has_errors = any(isinstance(value, dict) and value.get("errors") for value in final_summary.values())
+    return 1 if has_errors else 0
 
 
 if __name__ == "__main__":
