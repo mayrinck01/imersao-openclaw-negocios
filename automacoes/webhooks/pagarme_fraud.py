@@ -1215,17 +1215,27 @@ def format_first_purchase_alert(result: RiskResult) -> str:
     header_action = "CONFERIR NA RETIRADA" if is_pickup else "CONFERIR ANTES DE ENTREGAR"
     address_line = "não aplicável — retirada na loja" if is_pickup else (_format_order_address(order) if order else "não localizado no alerta")
     customer_name = (order.customer_name if order and order.customer_name else charge.customer_name) or "-"
+    order_lines = [
+        f"• Cliente: {customer_name}",
+        f"• Modalidade: {modality}",
+    ]
+    if modality == "Entrega":
+        order_lines.extend([
+            f"• Agendamento: {_order_schedule(order)}",
+            f"• Endereço de entrega: {address_line or 'não localizado no alerta'}",
+        ])
+    order_lines.extend([
+        f"• Valor: {_format_brl(charge.amount)}",
+        "• Pagamento: cartão online aprovado",
+        "• Antifraude Pagar.me: sem alerta",
+    ])
     lines = [
         f"🟡 PRIMEIRA COMPRA — {header_action}",
         "",
         "Status operacional: NÃO LIBERAR SEM CONFERÊNCIA",
         "",
         "Pedido",
-        f"• Cliente: {customer_name}",
-        f"• Modalidade: {modality}",
-        f"• Valor: {_format_brl(charge.amount)}",
-        "• Pagamento: cartão online aprovado",
-        "• Antifraude Pagar.me: sem alerta",
+        *order_lines,
         "",
         "Pagamento",
         f"• Cartão: {_format_card_brand(charge.card_brand)} final {charge.card_last4 or '-'}",

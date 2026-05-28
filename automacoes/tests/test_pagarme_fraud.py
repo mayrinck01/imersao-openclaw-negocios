@@ -189,6 +189,45 @@ class PagarmeFraudTests(unittest.TestCase):
             self.assertIn("• Endereço: não aplicável — retirada na loja", alert)
             self.assertNotIn("CONFERIR ANTES DE ENTREGAR", alert)
 
+    def test_first_purchase_delivery_alert_includes_schedule_and_delivery_address(self):
+        with tempfile.NamedTemporaryFile() as db:
+            checker = FakeHistoryChecker(CustomerHistoryResult(
+                False,
+                None,
+                "not_found",
+                None,
+                None,
+                0,
+                MogoOrderSummary(
+                    order_number="039100",
+                    status="Pendente",
+                    customer_name="Cliente Entrega",
+                    delivery_date="31/05/2026",
+                    delivery_time="14:30",
+                    fulfillment="P/Entregar (Motoboy)",
+                    address="Rua Dias Ferreira, 123, Apto 401",
+                    neighborhood="Leblon - Rio de Janeiro/RJ",
+                    amount="315,00",
+                ),
+            ))
+            engine = RiskEngine(db.name, history_checker=checker)
+            result = engine.handle_event(event(
+                "charge.paid",
+                "ch_first_purchase_delivery_context",
+                customer_name="Cliente Entrega",
+                amount=31500,
+                brand="Mastercard",
+                card_last4="8615",
+                holder="CLIENTE ENTREGA",
+            ))
+
+            alert = format_first_purchase_alert(result)
+
+            self.assertIn("PRIMEIRA COMPRA — CONFERIR ANTES DE ENTREGAR", alert)
+            self.assertIn("• Modalidade: Entrega", alert)
+            self.assertIn("• Agendamento: 31/05/2026 14:30", alert)
+            self.assertIn("• Endereço de entrega: Rua Dias Ferreira, 123, Apto 401 - Leblon - Rio de Janeiro/RJ", alert)
+
     def test_prior_mogo_history_suppresses_first_purchase_alert(self):
         with tempfile.NamedTemporaryFile() as db:
             checker = FakeHistoryChecker(CustomerHistoryResult(

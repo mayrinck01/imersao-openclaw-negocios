@@ -2,7 +2,7 @@
 name: antifraude-pagarme
 description: "Use quando o usuario pedir para analisar, ajustar, consultar, revisar ou operar antifraude Pagar.me, alertas de fraude, chargeback, lista quente, historico Mogo ou pendencias de revisao antifraude."
 metadata:
-  version: "1.5"
+  version: "1.6"
   created: "2026-05-28"
   maintainer: "Joao Mayrinck - CEO Cake & Co"
   related_scripts:
@@ -59,7 +59,7 @@ Disparar quando:
 - o antifraude nao tiver alerta (`score < 50`);
 - apos aguardar `PAGARME_ALERT_DELAY_SECONDS` (padrao 60s), o Mogo nao localizar historico confiavel de compra anterior por CPF, telefone, email, nome, nome+endereco ou cadastro valido.
 
-Modelo operacional:
+Modelo operacional para retirada:
 
 ```text
 🟡 PRIMEIRA COMPRA — CONFERIR NA RETIRADA
@@ -92,6 +92,15 @@ Ação da equipe
 ```
 
 Manter bandeira e final do cartao no bloco `Pagamento`, mas nao orientar a equipe a confirmar o cartao como acao final e nao incluir observacao operacional sobre cartao auxiliar. A acao final deve focar em documento/autorizacao para evitar confusao com Apple Pay, cartao virtual, cartao de terceiro ou retirada autorizada.
+
+Para entrega, o bloco `Pedido` deve incluir tambem:
+
+```text
+• Agendamento: <data> <hora>
+• Endereço de entrega: <rua>, <numero>, <complemento> - <bairro> - <cidade>/<UF>
+```
+
+Essas linhas devem aparecer no bloco principal do pedido, nao apenas dentro de `Histórico Mogo`, para a equipe conseguir agir sem procurar informacao no corpo do alerta.
 
 ## Rotina diaria de pendencias antifraude
 
