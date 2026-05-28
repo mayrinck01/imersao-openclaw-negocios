@@ -2,7 +2,7 @@
 name: antifraude-pagarme
 description: "Use quando o usuario pedir para analisar, ajustar, consultar, revisar ou operar antifraude Pagar.me, alertas de fraude, chargeback, lista quente, historico Mogo ou pendencias de revisao antifraude."
 metadata:
-  version: "1.3"
+  version: "1.4"
   created: "2026-05-28"
   maintainer: "Joao Mayrinck - CEO Cake & Co"
   related_scripts:
@@ -86,12 +86,11 @@ Histórico Mogo
 
 Ação da equipe
 • Conferir documento do comprador.
-• Se possível, confirmar cartão <bandeira> final <4 dígitos>.
 • Se outra pessoa retirar, pedir autorização do comprador.
 • Não acusar fraude. Tratar como procedimento padrão de primeira compra.
 ```
 
-Cartao e apenas conferencia auxiliar. Documento/autorizacao continuam sendo a regra principal porque pode haver Apple Pay, cartao virtual, cartao de terceiro ou retirada autorizada.
+Manter bandeira e final do cartao no bloco `Pagamento`, mas nao orientar a equipe a confirmar o cartao como acao final e nao incluir observacao operacional sobre cartao auxiliar. A acao final deve focar em documento/autorizacao para evitar confusao com Apple Pay, cartao virtual, cartao de terceiro ou retirada autorizada.
 
 ## Rotina diaria de pendencias antifraude
 

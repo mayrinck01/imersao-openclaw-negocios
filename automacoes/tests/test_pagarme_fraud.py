@@ -146,7 +146,9 @@ class PagarmeFraudTests(unittest.TestCase):
             self.assertIn("• Cartão: Mastercard final 1234", alert)
             self.assertIn("• Titular do cartão: ADRIANO VELLOSO MEIRELLES", alert)
             self.assertIn("• Endereço: não aplicável — retirada na loja", alert)
-            self.assertIn("Cartão é conferência auxiliar", alert)
+            self.assertNotIn("Se possível, confirmar cartão", alert)
+            self.assertNotIn("Observação operacional", alert)
+            self.assertNotIn("Cartão é conferência auxiliar", alert)
 
     def test_prior_mogo_history_suppresses_first_purchase_alert(self):
         with tempfile.NamedTemporaryFile() as db:

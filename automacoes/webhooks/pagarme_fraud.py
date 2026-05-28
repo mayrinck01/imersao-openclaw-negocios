@@ -1246,11 +1246,7 @@ def format_first_purchase_alert(result: RiskResult) -> str:
         "",
         "Ação da equipe",
         "• Conferir documento do comprador na retirada." if is_pickup else "• Conferir documento do comprador antes de liberar.",
-        f"• Se possível, confirmar cartão {_format_card_brand(charge.card_brand)} final {charge.card_last4 or '-'}.",
         "• Se outra pessoa for retirar, pedir autorização do comprador." if is_pickup else "• Se houver terceiro envolvido, pedir autorização do comprador.",
         "• Não acusar fraude. Tratar como procedimento padrão de primeira compra.",
-        "",
-        "Observação operacional",
-        "Cartão é conferência auxiliar. Se for Apple Pay, cartão virtual ou cartão de terceiro, o que manda é documento/autorização do comprador.",
     ]
     return "\n".join(lines)
