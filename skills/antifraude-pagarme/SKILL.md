@@ -2,7 +2,7 @@
 name: antifraude-pagarme
 description: "Use quando o usuario pedir para analisar, ajustar, consultar, revisar ou operar antifraude Pagar.me, alertas de fraude, chargeback, lista quente, historico Mogo ou pendencias de revisao antifraude."
 metadata:
-  version: "1.2"
+  version: "1.3"
   created: "2026-05-28"
   maintainer: "Joao Mayrinck - CEO Cake & Co"
   related_scripts:
@@ -49,6 +49,8 @@ O antifraude e operacional: segura entrega para verificacao humana. Nao cancela,
 ## Alerta de primeira compra
 
 Primeira compra e alerta operacional separado do antifraude. Nao vai para a fila `antifraud_alerts` e nao deve ser tratado como fraude.
+
+O disparo usa os mesmos destinos operacionais do antifraude: Telegram, email e WhatsApp interno/Evolution, incluindo os mesmos grupos configurados em `WHATSAPP_TARGETS`. A diferenca e de classificacao, assunto e texto: primeira compra e conferencia operacional, nao fraude.
 
 Disparar quando:
 
