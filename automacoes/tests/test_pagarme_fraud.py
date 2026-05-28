@@ -279,6 +279,38 @@ class PagarmeFraudTests(unittest.TestCase):
             self.assertEqual(0, result.score)
             self.assertNotIn("cpf do cliente diferente", " ".join(result.reasons).lower())
 
+    def test_prior_paid_pagarme_charge_suppresses_holder_document_mismatch_when_mogo_export_lags(self):
+        with tempfile.NamedTemporaryFile() as db:
+            checker = FakeHistoryChecker(CustomerHistoryResult(False, None, "not_found"))
+            engine = RiskEngine(db.name, history_checker=checker)
+            now = datetime.now(timezone.utc)
+            engine.handle_event(event(
+                "charge.paid",
+                "ch_prior_paid_same_customer",
+                customer_name="Renata Marquina",
+                email="renata@example.com",
+                document="12345678900",
+                holder="ISABEL C A ALVES",
+                holder_document="98765432100",
+                created_at=(now - timedelta(days=8)).isoformat(),
+            ))
+
+            result = engine.handle_event(event(
+                "charge.paid",
+                "ch_returning_customer_mogo_lag",
+                customer_name="Renata Marquina",
+                email="renata@example.com",
+                document="12345678900",
+                holder="ISABEL C A ALVES",
+                holder_document="98765432100",
+                created_at=now.isoformat(),
+            ))
+
+            self.assertFalse(result.alert)
+            self.assertFalse(result.first_purchase_alert)
+            self.assertEqual("pagarme_prior_charge", result.customer_history.matched_by)
+            self.assertNotIn("cpf do cliente diferente", " ".join(result.reasons).lower())
+
     def test_card_holder_document_missing_triggers_operational_alert(self):
         with tempfile.NamedTemporaryFile() as db:
             engine = RiskEngine(db.name)

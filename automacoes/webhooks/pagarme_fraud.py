@@ -874,9 +874,52 @@ class RiskEngine:
 
     def _customer_history(self, charge: ChargeEvent) -> CustomerHistoryResult:
         try:
-            return self.history_checker.lookup(charge)
+            history = self.history_checker.lookup(charge)
         except Exception as exc:
             return CustomerHistoryResult(False, None, "error", exc.__class__.__name__)
+        if history.has_prior_valid_purchase or history.status == "error":
+            return history
+        prior_pagarme = self._prior_paid_charge_history(charge, history.operational_order)
+        return prior_pagarme or history
+
+    def _prior_paid_charge_history(self, charge: ChargeEvent, operational_order: MogoOrderSummary | None = None) -> CustomerHistoryResult | None:
+        if not charge.identity_key:
+            return None
+        with self._connect() as conn:
+            conn.row_factory = sqlite3.Row
+            rows = list(
+                conn.execute(
+                    """
+                    SELECT charge_id, created_at, amount, customer_name
+                    FROM charge_events
+                    WHERE identity_key = ?
+                      AND charge_id != ?
+                      AND (event_type = 'charge.paid' OR status = 'paid')
+                      AND created_at < ?
+                    ORDER BY created_at DESC
+                    """,
+                    (charge.identity_key, charge.charge_id, charge.created_at.isoformat()),
+                )
+            )
+        if not rows:
+            return None
+        latest = rows[0]
+        return CustomerHistoryResult(
+            True,
+            "pagarme_prior_charge",
+            "valid_purchase",
+            None,
+            MogoOrderSummary(
+                order_number=str(latest["charge_id"] or ""),
+                status="paid",
+                customer_name=str(latest["customer_name"] or ""),
+                date=str(latest["created_at"] or ""),
+                amount=str(latest["amount"] or ""),
+                origin="Pagar.me",
+            ),
+            len(rows),
+            operational_order,
+        )
 
     def _should_alert_first_purchase(
         self,
@@ -898,6 +941,8 @@ class RiskEngine:
         if history.matched_by == "name_address":
             return True
         if history.matched_by in {"document", "email", "phone"}:
+            return True
+        if history.matched_by == "pagarme_prior_charge":
             return True
         if history.matched_by == "name" and history.valid_purchase_count >= 2:
             return True

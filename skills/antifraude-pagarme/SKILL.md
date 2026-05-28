@@ -2,7 +2,7 @@
 name: antifraude-pagarme
 description: "Use quando o usuario pedir para analisar, ajustar, consultar, revisar ou operar antifraude Pagar.me, alertas de fraude, chargeback, lista quente, historico Mogo ou pendencias de revisao antifraude."
 metadata:
-  version: "1.6"
+  version: "1.7"
   created: "2026-05-28"
   maintainer: "Joao Mayrinck - CEO Cake & Co"
   related_scripts:
@@ -44,6 +44,7 @@ O antifraude e operacional: segura entrega para verificacao humana. Nao cancela,
 - Match por nome no Mogo so suprime sinais fracos quando `valid_purchase_count >= 2`.
 - Match por `name_address` suprime falso positivo operacional quando ha nome ou parte relevante do nome e endereco normalizado 100% igual em compra valida anterior.
 - `Analise Cadastro Clientes` do Mogo tambem conta como historico valido quando tiver primeiro/ultimo pedido e total de pedidos ou delivery maior que zero; nesse caso, telefone/nome desse cadastro pode derrubar alerta fraco de titular ou email diferente.
+- Compra Pagar.me paga anterior do mesmo cliente conta como fallback de cliente conhecido quando o export local do Mogo estiver atrasado; isso evita falso positivo operacional por historico Mogo defasado, mas nao suprime lista quente ou identidade em fraude confirmada.
 - CPF/documento do titular ausente ou diferente e sinal operacional, mas pode ser suprimido por historico Mogo confiavel.
 - Titular/cartao/lista quente por titular sozinho nao deve bloquear entrega sem ancoragem na identidade do cliente.
 
