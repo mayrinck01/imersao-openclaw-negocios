@@ -5,7 +5,7 @@ Roda todo dia às 00:01 BRT.
 Gera resumo de pedidos agendados (status Pendente) por data/hora e envia por email.
 """
 
-import sys, os, subprocess, json
+import sys, os, json
 from datetime import datetime
 from collections import defaultdict
 import openpyxl
@@ -13,7 +13,15 @@ from openpyxl.styles import Font, PatternFill, Alignment
 from mogo_excel import order_columns_by_first_record, format_currency_cells
 from filter_pt import month_year_pt, pt_columns, pt_title
 sys.path.insert(0, os.path.dirname(__file__))
+from gog_mail import send_gmail
 from mogo_login import mogo_login, MOGO_URL
+from mogo_pendentes_alerts import (
+    build_overdue_alert_message,
+    build_pending_email_body,
+    build_pending_email_subject,
+    overdue_pending_orders,
+    send_telegram_alert,
+)
 
 op_token = open('/root/.openclaw/credentials/1password-token.txt').read().strip()
 env = os.environ.copy()
@@ -51,6 +59,8 @@ except Exception as e:
 pedidos = [p for p in todos_pedidos if p.get('StatusEntrega','').lower() == 'pendente']
 
 hoje = datetime.now().strftime('%d-%m-%Y')
+hoje_br = datetime.now().strftime('%d/%m/%Y')
+hoje_date = datetime.now().date()
 print(f"Pendentes encontrados: {len(pedidos)}")
 
 if not pedidos:
@@ -68,6 +78,10 @@ for p in pedidos:
     except:
         hora_grp = hora
     por_data_hora[data_ent][hora_grp].append(p)
+
+pedidos_atrasados = overdue_pending_orders(pedidos, today=hoje_date)
+if pedidos_atrasados:
+    print(f"ALERTA: {len(pedidos_atrasados)} pendente(s) com entrega vencida")
 
 # Salvar Excel
 COLUNAS = [
@@ -112,34 +126,37 @@ print(f"Excel: {xlsx_path}")
 
 # Montar email
 total = len(pedidos)
-corpo = f"📦 Pedidos Pendentes — {hoje}\n"
-corpo += f"Total: {total} pedido(s)\n"
-corpo += "=" * 40 + "\n\n"
-
-for data_ent in sorted(por_data_hora.keys()):
-    horas = por_data_hora[data_ent]
-    subtotal = sum(len(v) for v in horas.values())
-    corpo += f"📅 {data_ent} — {subtotal} pedido(s)\n"
-    for hora in sorted(horas.keys()):
-        pedidos_hora = horas[hora]
-        corpo += f"  ⏰ {hora} → {len(pedidos_hora)} pedido(s)\n"
-        for p in pedidos_hora:
-            corpo += f"     #{p.get('NumeroPedido','')} | {p.get('NomeCliente','')} | {p.get('Bairro','')} | R${p.get('ValorFinal','')}\n"
-    corpo += "\n"
+corpo = build_pending_email_body(
+    pedidos=pedidos,
+    grouped_by_date_hour=por_data_hora,
+    today_label=hoje,
+    overdue_orders=pedidos_atrasados,
+)
+subject = build_pending_email_subject(
+    total=total,
+    today_label=hoje,
+    overdue_count=len(pedidos_atrasados),
+)
 
 # Enviar email
-cmd = [
-    'bash', '-c',
-    f'GOG_KEYRING_PASSWORD="" gog gmail send '
-    f'--account cakebigdog@gmail.com '
-    f'--client cakebigdog '
-    f'--to joao@cakeco.com.br '
-    f'--subject "📦 Mogo Pendentes — {total} pedido(s) agendado(s) — {hoje}" '
-    f'--body "{corpo}" '
-    f'--attach "{xlsx_path}"'
-]
-res = subprocess.run(cmd, capture_output=True, text=True, env=env)
+res = send_gmail(
+    account="cakebigdog@gmail.com",
+    client="cakebigdog",
+    to="joao@cakeco.com.br",
+    subject=subject,
+    body=corpo,
+    attach=xlsx_path,
+    env=env,
+)
 if 'message_id' in res.stdout:
     print(f"✅ Email enviado para joao@cakeco.com.br")
 else:
     print(f"ERRO email: {res.stderr[:200]}")
+
+if pedidos_atrasados:
+    alert = build_overdue_alert_message(pedidos_atrasados, today_label=hoje_br)
+    telegram_res = send_telegram_alert(alert)
+    if telegram_res.returncode == 0:
+        print("✅ Alerta Telegram enviado para pendentes atrasados")
+    else:
+        print(f"ERRO Telegram alerta atrasados: {telegram_res.stderr[:200]}")
