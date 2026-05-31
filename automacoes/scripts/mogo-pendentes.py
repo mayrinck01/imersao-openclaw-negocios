@@ -21,6 +21,7 @@ from mogo_pendentes_alerts import (
     build_pending_email_subject,
     overdue_pending_orders,
     send_telegram_alert,
+    sort_pending_orders,
 )
 
 op_token = open('/root/.openclaw/credentials/1password-token.txt').read().strip()
@@ -57,6 +58,7 @@ except Exception as e:
 
 # Filtrar só os pendentes (redundante, mas garante)
 pedidos = [p for p in todos_pedidos if p.get('StatusEntrega','').lower() == 'pendente']
+pedidos = sort_pending_orders(pedidos)
 
 hoje = datetime.now().strftime('%d-%m-%Y')
 hoje_br = datetime.now().strftime('%d/%m/%Y')

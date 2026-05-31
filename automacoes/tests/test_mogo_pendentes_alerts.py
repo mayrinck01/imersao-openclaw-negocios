@@ -6,10 +6,25 @@ from automacoes.scripts.mogo_pendentes_alerts import (
     build_pending_email_body,
     build_pending_email_subject,
     overdue_pending_orders,
+    sort_pending_orders,
 )
 
 
 class MogoPendentesAlertsTests(unittest.TestCase):
+    def test_sort_pending_orders_uses_real_delivery_date_before_june_dates(self):
+        pedidos = [
+            {"NumeroPedido": "040100", "DataEntrega": "02/06/2026", "HoraEntregaTxt": "10:00"},
+            {"NumeroPedido": "039814", "DataEntrega": "31/05/2026", "HoraEntregaTxt": "19:00"},
+            {"NumeroPedido": "040050", "DataEntrega": "01/06/2026", "HoraEntregaTxt": "09:00"},
+        ]
+
+        ordenados = sort_pending_orders(pedidos)
+
+        self.assertEqual(
+            [pedido["NumeroPedido"] for pedido in ordenados],
+            ["039814", "040050", "040100"],
+        )
+
     def test_overdue_pending_orders_detects_delivery_before_today(self):
         pedidos = [
             {

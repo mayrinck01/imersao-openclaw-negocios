@@ -42,6 +42,17 @@ def overdue_pending_orders(pedidos: list[dict[str, Any]], *, today: date) -> lis
     )
 
 
+def sort_pending_orders(pedidos: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    return sorted(
+        pedidos,
+        key=lambda p: (
+            parse_delivery_date(p.get("DataEntrega")) or date.max,
+            str(p.get("HoraEntregaTxt") or ""),
+            str(p.get("NumeroPedido") or ""),
+        ),
+    )
+
+
 def build_pending_email_subject(*, total: int, today_label: str, overdue_count: int) -> str:
     if overdue_count:
         return (
