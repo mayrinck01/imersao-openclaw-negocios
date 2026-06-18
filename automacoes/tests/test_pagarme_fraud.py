@@ -228,6 +228,203 @@ class PagarmeFraudTests(unittest.TestCase):
             self.assertIn("• Agendamento: 31/05/2026 14:30", alert)
             self.assertIn("• Endereço de entrega: Rua Dias Ferreira, 123, Apto 401 - Leblon - Rio de Janeiro/RJ", alert)
 
+    def test_first_purchase_pickup_below_280_does_not_alert(self):
+        with tempfile.NamedTemporaryFile() as db:
+            checker = FakeHistoryChecker(CustomerHistoryResult(
+                False,
+                None,
+                "not_found",
+                None,
+                None,
+                0,
+                MogoOrderSummary(
+                    order_number="039101",
+                    status="Pendente",
+                    customer_name="Cliente Retirada",
+                    fulfillment="Retirada na loja",
+                    amount="279,99",
+                ),
+            ))
+            engine = RiskEngine(db.name, history_checker=checker)
+            result = engine.handle_event(event(
+                "charge.paid",
+                "ch_first_purchase_pickup_low_value",
+                customer_name="Cliente Retirada",
+                amount=27999,
+                holder="CLIENTE RETIRADA",
+            ))
+
+            self.assertFalse(result.alert)
+            self.assertFalse(result.first_purchase_alert)
+
+    def test_first_purchase_pickup_at_280_still_alerts(self):
+        with tempfile.NamedTemporaryFile() as db:
+            checker = FakeHistoryChecker(CustomerHistoryResult(
+                False,
+                None,
+                "not_found",
+                None,
+                None,
+                0,
+                MogoOrderSummary(
+                    order_number="039102",
+                    status="Pendente",
+                    customer_name="Cliente Retirada",
+                    fulfillment="Retirada na loja",
+                    amount="280,00",
+                ),
+            ))
+            engine = RiskEngine(db.name, history_checker=checker)
+            result = engine.handle_event(event(
+                "charge.paid",
+                "ch_first_purchase_pickup_at_threshold",
+                customer_name="Cliente Retirada",
+                amount=28000,
+                holder="CLIENTE RETIRADA",
+            ))
+
+            self.assertFalse(result.alert)
+            self.assertTrue(result.first_purchase_alert)
+
+    def test_first_purchase_special_delivery_neighborhood_alerts_only_above_700(self):
+        with tempfile.NamedTemporaryFile() as db:
+            checker = FakeHistoryChecker(CustomerHistoryResult(
+                False,
+                None,
+                "not_found",
+                None,
+                None,
+                0,
+                MogoOrderSummary(
+                    order_number="039103",
+                    status="Pendente",
+                    customer_name="Cliente Flamengo",
+                    fulfillment="P/Entregar (Motoboy)",
+                    address="Rua Senador Vergueiro, 238, apto 203",
+                    neighborhood="Flamengo - Rio de Janeiro/RJ",
+                    amount="700,00",
+                ),
+            ))
+            engine = RiskEngine(db.name, history_checker=checker)
+            at_threshold = engine.handle_event(event(
+                "charge.paid",
+                "ch_first_purchase_flamengo_700",
+                customer_name="Cliente Flamengo",
+                amount=70000,
+                holder="CLIENTE FLAMENGO",
+            ))
+            above_threshold = engine.handle_event(event(
+                "charge.paid",
+                "ch_first_purchase_flamengo_701",
+                customer_name="Cliente Flamengo Maior",
+                document="701",
+                amount=70100,
+                holder="CLIENTE FLAMENGO MAIOR",
+            ))
+
+            self.assertFalse(at_threshold.alert)
+            self.assertFalse(at_threshold.first_purchase_alert)
+            self.assertFalse(above_threshold.alert)
+            self.assertTrue(above_threshold.first_purchase_alert)
+
+    def test_first_purchase_outside_zona_sul_delivery_alerts_any_value(self):
+        with tempfile.NamedTemporaryFile() as db:
+            checker = FakeHistoryChecker(CustomerHistoryResult(
+                False,
+                None,
+                "not_found",
+                None,
+                None,
+                0,
+                MogoOrderSummary(
+                    order_number="039104",
+                    status="Pendente",
+                    customer_name="Cliente Tijuca",
+                    fulfillment="P/Entregar (Motoboy)",
+                    address="Rua Conde de Bonfim, 100",
+                    neighborhood="Tijuca - Rio de Janeiro/RJ",
+                    amount="200,25",
+                ),
+            ))
+            engine = RiskEngine(db.name, history_checker=checker)
+            outside_zona_sul = engine.handle_event(event(
+                "charge.paid",
+                "ch_first_purchase_tijuca_200",
+                customer_name="Cliente Tijuca",
+                amount=20025,
+                holder="CLIENTE TIJUCA",
+            ))
+
+            self.assertFalse(outside_zona_sul.alert)
+            self.assertTrue(outside_zona_sul.first_purchase_alert)
+
+    def test_known_fraud_delivery_address_triggers_strong_antifraud_alert_for_any_customer_name(self):
+        with tempfile.NamedTemporaryFile() as db:
+            checker = FakeHistoryChecker(CustomerHistoryResult(
+                False,
+                None,
+                "not_found",
+                None,
+                None,
+                0,
+                MogoOrderSummary(
+                    order_number="039106",
+                    status="Pendente",
+                    customer_name="Nome Novo Qualquer",
+                    fulfillment="P/Entregar (Motoboy)",
+                    address="Rua Euclides Da Cunha, nº 106",
+                    neighborhood="São Cristóvão - Rio de Janeiro/RJ",
+                    amount="120,00",
+                ),
+            ))
+            engine = RiskEngine(db.name, history_checker=checker)
+            result = engine.handle_event(event(
+                "charge.paid",
+                "ch_known_fraud_address",
+                customer_name="Outro Cliente",
+                amount=12000,
+                holder="OUTRO CLIENTE",
+            ))
+
+            self.assertTrue(result.alert)
+            self.assertFalse(result.first_purchase_alert)
+            self.assertEqual(50, result.score)
+            self.assertIn("endereço com fraude anterior", " ".join(result.reasons).lower())
+
+    def test_first_purchase_value_cutoffs_do_not_suppress_antifraud_alert(self):
+        with tempfile.NamedTemporaryFile() as db:
+            checker = FakeHistoryChecker(CustomerHistoryResult(
+                False,
+                None,
+                "not_found",
+                None,
+                None,
+                0,
+                MogoOrderSummary(
+                    order_number="039105",
+                    status="Pendente",
+                    customer_name="Cliente Flamengo",
+                    fulfillment="P/Entregar (Motoboy)",
+                    address="Rua Senador Vergueiro, 238",
+                    neighborhood="Flamengo - Rio de Janeiro/RJ",
+                    amount="227,00",
+                ),
+            ))
+            engine = RiskEngine(db.name, history_checker=checker)
+            result = engine.handle_event(event(
+                "charge.paid",
+                "ch_low_value_antifraud_signal",
+                customer_name="Cliente Flamengo",
+                document="12345678900",
+                amount=22700,
+                holder="TITULAR DIFERENTE",
+                holder_document="98765432100",
+            ))
+
+            self.assertTrue(result.alert)
+            self.assertFalse(result.first_purchase_alert)
+            self.assertIn("cpf do cliente diferente", " ".join(result.reasons).lower())
+
     def test_prior_mogo_history_suppresses_first_purchase_alert(self):
         with tempfile.NamedTemporaryFile() as db:
             checker = FakeHistoryChecker(CustomerHistoryResult(

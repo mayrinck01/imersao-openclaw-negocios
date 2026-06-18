@@ -20,6 +20,23 @@ from typing import Any, Protocol
 
 WINDOW_MINUTES = 60
 ALERT_THRESHOLD = 50
+FIRST_PURCHASE_PICKUP_ALERT_MIN_BRL = 280.0
+FIRST_PURCHASE_DELIVERY_ALERT_MIN_BRL = 400.0
+FIRST_PURCHASE_SPECIAL_DELIVERY_ALERT_ABOVE_BRL = 700.0
+FIRST_PURCHASE_SPECIAL_DELIVERY_NEIGHBORHOODS = {
+    "ipanema",
+    "leblon",
+    "gavea",
+    "jardim botanico",
+    "humaita",
+    "botafogo",
+    "lagoa",
+    "flamengo",
+    "laranjeiras",
+}
+KNOWN_FRAUD_DELIVERY_ADDRESSES = (
+    ("euclides da cunha", "106", "Rua Euclides da Cunha, 106"),
+)
 DEFAULT_HOTLIST_PATH = Path(__file__).resolve().parents[1] / "data" / "pagarme_fraud_hotlist.json"
 
 
@@ -205,6 +222,17 @@ def _order_address_key(order: "MogoOrderSummary" | None) -> str:
     if order is None:
         return ""
     return normalize_text(" ".join(part for part in (order.address, order.neighborhood) if part))
+
+
+def _known_fraud_delivery_address(order: "MogoOrderSummary" | None) -> str:
+    if order is None:
+        return ""
+    address = normalize_text(order.address)
+    tokens = set(address.split())
+    for street, number, label in KNOWN_FRAUD_DELIVERY_ADDRESSES:
+        if street in address and number in tokens:
+            return label
+    return ""
 
 
 def _names_share_meaningful_part(left: str | None, right: str | None) -> bool:
@@ -933,7 +961,9 @@ class RiskEngine:
             return False
         if history.status != "not_found":
             return False
-        return not history.has_prior_valid_purchase
+        if history.has_prior_valid_purchase:
+            return False
+        return _first_purchase_value_requires_alert(charge, _context_order(history))
 
     def _history_can_suppress_alerts(self, charge: ChargeEvent, history: CustomerHistoryResult) -> bool:
         if not history.has_prior_valid_purchase:
@@ -978,6 +1008,11 @@ class RiskEngine:
             hotlist_score += 50
             hotlist_reasons.append("Dado em lista quente de chargeback/fraude")
 
+        known_fraud_address = _known_fraud_delivery_address(_context_order(history))
+        if known_fraud_address:
+            strong_score += 50
+            strong_reasons.append(f"Endereço com fraude anterior: {known_fraud_address}")
+
         customer_document = only_digits(charge.customer_document)
         holder_document = only_digits(charge.holder_document)
         if charge.is_card and not holder_document and not suppress_weak:
@@ -1012,7 +1047,7 @@ class RiskEngine:
                 weak_score += 20
                 weak_reasons.append("Email pouco compatível com o nome do cliente")
 
-        if history.matched_by == "name_address":
+        if history.matched_by == "name_address" and not strong_score:
             return hotlist_score, hotlist_reasons + operational_reasons, history
         if suppress_weak:
             return hotlist_score + strong_score, hotlist_reasons + strong_reasons + operational_reasons, history
@@ -1135,6 +1170,37 @@ def _context_order(history: CustomerHistoryResult | None) -> MogoOrderSummary | 
     if not history:
         return None
     return history.operational_order or history.order
+
+
+def _first_purchase_amount_brl(charge: ChargeEvent, order: MogoOrderSummary | None) -> float | None:
+    if charge.amount > 0:
+        return charge.amount / 100
+    if order:
+        return _parse_brlish_number(order.amount)
+    return None
+
+
+def _special_first_purchase_delivery_neighborhood(order: MogoOrderSummary | None) -> bool:
+    if not order or not order.neighborhood:
+        return False
+    neighborhood = normalize_text(order.neighborhood.split("-", 1)[0])
+    return neighborhood in FIRST_PURCHASE_SPECIAL_DELIVERY_NEIGHBORHOODS
+
+
+def _first_purchase_value_requires_alert(charge: ChargeEvent, order: MogoOrderSummary | None) -> bool:
+    amount = _first_purchase_amount_brl(charge, order)
+    if amount is None:
+        return True
+
+    modality = _order_modality(order)
+    if modality == "Retirada":
+        return amount >= FIRST_PURCHASE_PICKUP_ALERT_MIN_BRL
+    if modality == "Entrega":
+        if _special_first_purchase_delivery_neighborhood(order):
+            return amount > FIRST_PURCHASE_SPECIAL_DELIVERY_ALERT_ABOVE_BRL
+        if order and order.neighborhood:
+            return True
+    return amount >= FIRST_PURCHASE_DELIVERY_ALERT_MIN_BRL
 
 
 def _order_modality(order: MogoOrderSummary | None) -> str:
