@@ -4,6 +4,9 @@
 
 set -e
 
+# Autenticação 1Password (necessária sob cron, env vazio)
+export OP_SERVICE_ACCOUNT_TOKEN=$(cat /root/.openclaw/credentials/1password-token.txt)
+
 echo "🐕 RELATÓRIO MARKETING AUTOMÁTICO — Cake & Co"
 echo "======================================================================"
 echo ""
