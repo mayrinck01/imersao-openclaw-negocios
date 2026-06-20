@@ -461,6 +461,25 @@ class PagarmeFraudTests(unittest.TestCase):
             self.assertEqual(50, result.score)
             self.assertIn("cpf do cliente diferente", " ".join(result.reasons).lower())
 
+    def test_alert_distinguishes_customer_document_from_card_holder_document(self):
+        with tempfile.NamedTemporaryFile() as db:
+            engine = RiskEngine(db.name)
+            result = engine.handle_event(event(
+                "charge.paid",
+                "ch_holder_document_alert_copy",
+                customer_name="Felipe Alvite",
+                email="felipealvite@example.com",
+                document="099.932.937-50",
+                holder="JULIANA DE C LOPEZ",
+                holder_document="12429598744",
+            ))
+
+            alert = format_alert(result)
+
+            self.assertIn("• Documento do cliente Pagar.me: 099.932.937-50", alert)
+            self.assertIn("• Documento do titular do cartão: final 8744", alert)
+            self.assertNotIn("• Documento Pagar.me:", alert)
+
     def test_mogo_prior_valid_purchase_suppresses_card_holder_document_mismatch_alert(self):
         with tempfile.NamedTemporaryFile() as db:
             checker = FakeHistoryChecker(CustomerHistoryResult(True, "name", "valid_purchase", None, valid_purchase_count=2))

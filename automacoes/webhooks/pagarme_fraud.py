@@ -1121,6 +1121,13 @@ def _score_header_line(score: int) -> str:
     return f"*Score antifraude: {score} — 🌡️ {_score_thermometer(score)}*"
 
 
+def _format_document_tail(value: str | None) -> str:
+    digits = only_digits(value)
+    if not digits:
+        return "-"
+    return f"final {digits[-4:]}"
+
+
 def _format_card_brand(value: str) -> str:
     value = (value or "").strip()
     return value[:1].upper() + value[1:].lower() if value else "-"
@@ -1303,10 +1310,11 @@ def format_alert(result: RiskResult) -> str:
         "Pagamento Pagar.me",
         f"• Cliente Pagar.me: {charge.customer_name or '-'}",
         f"• Email Pagar.me: {charge.customer_email or '-'}",
-        f"• Documento Pagar.me: {charge.customer_document or '-'}",
+        f"• Documento do cliente Pagar.me: {charge.customer_document or '-'}",
         f"• Valor Pagar.me: {_format_brl(charge.amount)}",
         f"• Cartão: {charge.card_brand or '-'} final {charge.card_last4 or '-'}",
         f"• Titular do cartão: {charge.holder_name or '-'}",
+        f"• Documento do titular do cartão: {_format_document_tail(charge.holder_document)}",
         f"• Score: {result.score}",
         "",
         "Motivos do alerta",
