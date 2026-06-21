@@ -1151,6 +1151,10 @@ def _format_cpf(value: str) -> str:
     return value or "-"
 
 
+def _has_hotlist_reason(reasons: list[str]) -> bool:
+    return any("lista quente" in reason.lower() for reason in reasons)
+
+
 def _mogo_order_header(history: CustomerHistoryResult | None) -> str:
     order = history.order if history else None
     if order and order.order_number:
@@ -1291,6 +1295,11 @@ def format_alert(result: RiskResult) -> str:
     lines = [
         "🚨 POSSÍVEL FRAUDE — SEGURAR ENTREGA",
         "",
+        *([
+            "🚨🚨🚨 ATENÇÃO: JÁ CONSTA EM LISTA DE FRAUDADORES ANTERIORES 🚨🚨🚨",
+            "⚠️ HISTÓRICO ANTERIOR DE CHARGEBACK/FRAUDE — NÃO LIBERAR SEM VALIDAÇÃO",
+            "",
+        ] if _has_hotlist_reason(result.reasons) else []),
         _mogo_order_header(history),
         "Status operacional: SEGURAR / NÃO ENTREGAR",
         "",

@@ -864,6 +864,28 @@ class PagarmeFraudTests(unittest.TestCase):
             self.assertTrue(result.alert)
             self.assertIn("lista quente", " ".join(result.reasons).lower())
 
+    def test_hotlisted_alert_shows_large_prior_fraud_list_warning(self):
+        with tempfile.NamedTemporaryFile() as db:
+            checker = FakeHistoryChecker(CustomerHistoryResult(True, "name", "valid_purchase", None))
+            hotlist = FraudHotlist.from_customer_documents(["123.456.789-00"])
+            engine = RiskEngine(db.name, history_checker=checker, hotlist=hotlist)
+            result = engine.handle_event(event(
+                "charge.paid",
+                "ch_hotlisted_warning",
+                customer_name="Cliente Qualquer",
+                document="12345678900",
+                holder="CLIENTE QUALQUER",
+            ))
+
+            alert = format_alert(result)
+
+            self.assertIn("🚨🚨🚨 ATENÇÃO: JÁ CONSTA EM LISTA DE FRAUDADORES ANTERIORES 🚨🚨🚨", alert)
+            self.assertIn("HISTÓRICO ANTERIOR DE CHARGEBACK/FRAUDE", alert)
+            self.assertLess(
+                alert.index("JÁ CONSTA EM LISTA DE FRAUDADORES ANTERIORES"),
+                alert.index("Status operacional: SEGURAR / NÃO ENTREGAR"),
+            )
+
     def test_hotlisted_card_alone_does_not_trigger_alert(self):
         with tempfile.NamedTemporaryFile() as db:
             checker = FakeHistoryChecker(CustomerHistoryResult(True, "name", "valid_purchase", None))
