@@ -76,7 +76,7 @@ Expected: 13 registros e dois arquivos salvos.
 
 Abrir os dois XLSX com openpyxl e comparar os cabeçalhos e todas as linhas após normalizar números para inteiros.
 
-Expected: zero divergências; totais 18.706 pedidos e 194 cancelamentos.
+Expected: zero divergências; totais 20.706 pedidos e 194 cancelamentos.
 
 ### Task 5: Publicação e verificação
 
@@ -98,4 +98,3 @@ Listar a pasta remota e confirmar `07-2026.xlsx` e `07-2026.json` dentro de `202
 Reexecutar os testes focados, validar sintaxe do cron e compilar o novo script.
 
 Expected: todos os critérios da especificação passam sem expor credenciais.
-

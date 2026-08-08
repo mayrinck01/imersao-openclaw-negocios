@@ -47,6 +47,5 @@ Adicionar o relatório mensal Mogo código 71 ao mesmo pipeline operacional dos 
 2. Teste do Drive comprova o mapeamento e a inclusão em `MONTHLY_FOLDERS`.
 3. Teste do cron comprova a entrada `15 0 2 * *` e o wrapper correto.
 4. Execução real gera julho com 13 registros.
-5. Comparação com o anexo não encontra divergências.
+5. Comparação com o anexo não encontra divergências e confirma 20.706 pedidos e 194 cancelamentos.
 6. Drive contém os dois arquivos em `Pedidos X Cancelamentos por Usuário/2026`.
-
