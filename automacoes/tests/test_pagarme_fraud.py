@@ -4,7 +4,7 @@ import unittest
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
-from automacoes.webhooks.pagarme_fraud import CustomerHistoryResult, FraudHotlist, LocalMogoHistoryChecker, MogoOrderSummary, RiskEngine, extract_charge, format_alert, format_first_purchase_alert, names_compatible, normalized_sha256
+from automacoes.webhooks.pagarme_fraud import CustomerHistoryResult, FraudHotlist, LocalMogoHistoryChecker, MogoOrderSummary, RelatedCustomerProfile, RiskEngine, extract_charge, format_alert, format_first_purchase_alert, format_same_day_repeat_alert, format_same_day_repeat_notice, names_compatible, normalized_sha256
 
 
 class FakeHistoryChecker:
@@ -15,7 +15,7 @@ class FakeHistoryChecker:
         return self.result
 
 
-def event(event_type, charge_id, *, customer_name="Cliente Limpo", email="cliente.limpo@example.com", document="123", phone=None, amount=23000, card_last4="1111", brand="visa", holder="CLIENTE LIMPO", holder_document=None, created_at=None, status=None, payment_method="credit_card"):
+def event(event_type, charge_id, *, customer_name="Cliente Limpo", email="cliente.limpo@example.com", document="123", phone=None, amount=23000, card_last4="1111", card_first6="411111", card_exp_month="12", card_exp_year="2030", brand="visa", holder="CLIENTE LIMPO", holder_document=None, created_at=None, status=None, payment_method="credit_card", billing_address=None):
     created_at = created_at or datetime.now(timezone.utc).isoformat()
     status = status or ("paid" if event_type == "charge.paid" else "failed")
     if holder_document is None:
@@ -32,7 +32,16 @@ def event(event_type, charge_id, *, customer_name="Cliente Limpo", email="client
             "customer": {"name": customer_name, "email": email, "document": document, "phones": ({"mobile_phone": {"country_code": "55", "area_code": phone[:2], "number": phone[2:]}} if phone else {})},
             "last_transaction": {
                 "status": "captured" if status == "paid" else "not_authorized",
-                "card": {"brand": brand, "last_four_digits": card_last4, "holder_name": holder, "holder_document": holder_document},
+                "card": {
+                    "brand": brand,
+                    "first_six_digits": card_first6,
+                    "last_four_digits": card_last4,
+                    "exp_month": card_exp_month,
+                    "exp_year": card_exp_year,
+                    "holder_name": holder,
+                    "holder_document": holder_document,
+                    **({"billing_address": billing_address} if billing_address else {}),
+                },
                 "acquirer_message": "Transação capturada" if status == "paid" else "Não autorizado",
                 "acquirer_return_code": "00" if status == "paid" else "1035",
             },
@@ -41,6 +50,234 @@ def event(event_type, charge_id, *, customer_name="Cliente Limpo", email="client
 
 
 class PagarmeFraudTests(unittest.TestCase):
+    def test_related_profile_exact_address_includes_full_customer_context(self):
+        checker = LocalMogoHistoryChecker("/nonexistent")
+        checker._loaded = True
+        checker._valid_orders = [MogoOrderSummary(
+            order_number="010001", customer_name="Maria Antiga", date="10/08/2026",
+            address="Rua das Flores, 10, Apto 201", neighborhood="Botafogo - Rio de Janeiro/RJ",
+            amount="150,00", phone="21999990000", document="11122233344", email="maria@example.com",
+        )]
+        checker._operational_orders = [MogoOrderSummary(
+            order_number="010002", customer_name="Cliente Novo",
+            address="R. das Flores, 10, ap 201", neighborhood="Botafogo - Rio de Janeiro/RJ",
+            amount="200,00", phone="21888880000", document="99988877766", email="novo@example.com",
+        )]
+
+        result = checker.lookup(extract_charge(event(
+            "charge.paid", "ch_related_address", customer_name="Cliente Novo",
+            email="novo@example.com", document="99988877766", phone="21888880000", amount=20000,
+        )))
+
+        self.assertEqual(1, len(result.related_profiles))
+        profile = result.related_profiles[0]
+        self.assertEqual("exact_address", profile.match_kind)
+        self.assertEqual("Maria Antiga", profile.name)
+        self.assertEqual("maria@example.com", profile.email)
+        self.assertEqual("11122233344", profile.document)
+
+    def test_related_profile_different_apartment_is_not_a_match(self):
+        checker = LocalMogoHistoryChecker("/nonexistent")
+        checker._loaded = True
+        checker._valid_orders = [MogoOrderSummary(
+            customer_name="Maria Antiga", address="Rua das Flores, 10, Apto 202",
+            neighborhood="Botafogo - Rio de Janeiro/RJ", email="maria@example.com",
+        )]
+        checker._operational_orders = [MogoOrderSummary(
+            customer_name="Cliente Novo", address="Rua das Flores, 10, Apto 201",
+            neighborhood="Botafogo - Rio de Janeiro/RJ", email="novo@example.com",
+        )]
+
+        result = checker.lookup(extract_charge(event(
+            "charge.paid", "ch_other_apartment", customer_name="Cliente Novo", email="novo@example.com",
+        )))
+
+        self.assertEqual((), result.related_profiles)
+
+    def test_related_profile_full_cardholder_name_is_strong(self):
+        checker = LocalMogoHistoryChecker("/nonexistent")
+        checker._loaded = True
+        checker._valid_orders = [MogoOrderSummary(
+            customer_name="Carlos Pereira Lima", email="carlos@example.com", phone="21999990000",
+            document="11122233344", address="Rua Outra, 20, Casa", date="01/08/2026", amount="180,00",
+        )]
+
+        result = checker.lookup(extract_charge(event(
+            "charge.paid", "ch_holder_related", customer_name="Ana Souza", email="ana@example.com",
+            holder="CARLOS PEREIRA LIMA",
+        )))
+
+        self.assertEqual("strong_holder_name", result.related_profiles[0].match_kind)
+
+    def test_related_profile_holder_surname_alone_without_confirmation_is_ignored(self):
+        checker = LocalMogoHistoryChecker("/nonexistent")
+        checker._loaded = True
+        checker._valid_orders = [MogoOrderSummary(customer_name="Outra Pessoa Souza", email="outra@example.com")]
+
+        result = checker.lookup(extract_charge(event(
+            "charge.paid", "ch_holder_homonym", customer_name="Ana Lima", email="ana@example.com",
+            holder="CARLOS SOUZA",
+        )))
+
+        self.assertEqual((), result.related_profiles)
+
+    def test_related_profile_partial_holder_with_phone_confirmation_is_informational(self):
+        checker = LocalMogoHistoryChecker("/nonexistent")
+        checker._loaded = True
+        checker._valid_orders = [MogoOrderSummary(
+            customer_name="Outra Pessoa Souza", phone="21999990000", email="outra@example.com",
+        )]
+
+        result = checker.lookup(extract_charge(event(
+            "charge.paid", "ch_holder_partial_confirmed", customer_name="Ana Lima",
+            email="ana@example.com", phone="21999990000", holder="CARLOS SOUZA",
+        )))
+
+        self.assertEqual("partial_holder_confirmed", result.related_profiles[0].match_kind)
+
+    def test_related_profiles_appear_in_fraud_and_first_purchase_alerts_without_changing_score(self):
+        profile = RelatedCustomerProfile(
+            match_kind="exact_address", match_reason="endereço completo igual",
+            name="Maria Antiga", phone="21999990000", email="maria@example.com",
+            document="11122233344", address="Rua das Flores, 10, Apto 201 - Botafogo",
+            last_purchase_date="10/08/2026", last_purchase_amount="150,00", valid_purchase_count=3,
+        )
+        charge = extract_charge(event("charge.paid", "ch_format_related", customer_name="Cliente Novo"))
+        history = CustomerHistoryResult(
+            False, None, "not_found", None, None, 0,
+            MogoOrderSummary(customer_name="Cliente Novo", address="Rua das Flores, 10, Apto 201"),
+            (profile,),
+        )
+        fraud_result = type("Result", (), {
+            "charge": charge, "customer_history": history, "score": 50,
+            "reasons": ["sinal forte"], "alert": True,
+        })()
+        first_result = type("Result", (), {
+            "charge": charge, "customer_history": history, "score": 0,
+            "reasons": [], "alert": False,
+        })()
+
+        fraud_text = format_alert(fraud_result)
+        first_text = format_first_purchase_alert(first_result)
+
+        for text in (fraud_text, first_text):
+            self.assertIn("Cadastros possivelmente relacionados", text)
+            self.assertIn("Maria Antiga", text)
+            self.assertIn("maria@example.com", text)
+            self.assertIn("não altera score nem decisão operacional", text)
+        self.assertEqual(50, fraud_result.score)
+
+    def test_second_lifetime_purchase_same_brt_day_is_critical(self):
+        with tempfile.NamedTemporaryFile() as db:
+            checker = FakeHistoryChecker(CustomerHistoryResult(False, None, "not_found", None))
+            engine = RiskEngine(db.name, history_checker=checker)
+            engine.handle_event(event(
+                "charge.paid", "ch_first_today", document="11122233344",
+                created_at="2026-08-12T13:00:00+00:00", amount=11700,
+            ))
+            result = engine.handle_event(event(
+                "charge.paid", "ch_second_today", document="11122233344",
+                created_at="2026-08-12T15:00:00+00:00", amount=13700,
+            ))
+
+            self.assertIsNotNone(result.same_day_repeat)
+            self.assertEqual("critical_first_day", result.same_day_repeat.kind)
+            self.assertEqual(2, result.same_day_repeat.sequence)
+
+    def test_third_lifetime_purchase_same_brt_day_stays_critical(self):
+        with tempfile.NamedTemporaryFile() as db:
+            checker = FakeHistoryChecker(CustomerHistoryResult(False, None, "not_found", None))
+            engine = RiskEngine(db.name, history_checker=checker)
+            for number, hour in ((1, 13), (2, 14)):
+                engine.handle_event(event(
+                    "charge.paid", f"ch_today_{number}", document="11122233344",
+                    created_at=f"2026-08-12T{hour}:00:00+00:00", amount=10000 * number,
+                ))
+            result = engine.handle_event(event(
+                "charge.paid", "ch_today_3", document="11122233344",
+                created_at="2026-08-12T15:00:00+00:00", amount=30000,
+            ))
+
+            self.assertEqual("critical_first_day", result.same_day_repeat.kind)
+            self.assertEqual(3, result.same_day_repeat.sequence)
+
+    def test_old_customer_second_purchase_today_is_informational(self):
+        with tempfile.NamedTemporaryFile() as db:
+            checker = FakeHistoryChecker(CustomerHistoryResult(True, "document", "valid_purchase", None, valid_purchase_count=1))
+            engine = RiskEngine(db.name, history_checker=checker)
+            engine.handle_event(event(
+                "charge.paid", "ch_yesterday", document="11122233344",
+                created_at="2026-08-11T13:00:00+00:00", amount=9000,
+            ))
+            engine.handle_event(event(
+                "charge.paid", "ch_old_first_today", document="11122233344",
+                created_at="2026-08-12T13:00:00+00:00", amount=11700,
+            ))
+            result = engine.handle_event(event(
+                "charge.paid", "ch_old_second_today", document="11122233344",
+                created_at="2026-08-12T15:00:00+00:00", amount=13700,
+            ))
+
+            self.assertEqual("informational_returning", result.same_day_repeat.kind)
+            self.assertEqual(2, result.same_day_repeat.sequence)
+
+    def test_first_purchase_next_day_has_no_same_day_repeat(self):
+        with tempfile.NamedTemporaryFile() as db:
+            checker = FakeHistoryChecker(CustomerHistoryResult(True, "document", "valid_purchase", None, valid_purchase_count=1))
+            engine = RiskEngine(db.name, history_checker=checker)
+            engine.handle_event(event(
+                "charge.paid", "ch_previous_day", document="11122233344",
+                created_at="2026-08-12T13:00:00+00:00", amount=11700,
+            ))
+            result = engine.handle_event(event(
+                "charge.paid", "ch_next_day", document="11122233344",
+                created_at="2026-08-13T13:00:00+00:00", amount=13700,
+            ))
+
+            self.assertIsNone(result.same_day_repeat)
+
+    def test_critical_same_day_repeat_alert_says_hold_and_lists_purchases(self):
+        with tempfile.NamedTemporaryFile() as db:
+            checker = FakeHistoryChecker(CustomerHistoryResult(False, None, "not_found", None))
+            engine = RiskEngine(db.name, history_checker=checker)
+            engine.handle_event(event(
+                "charge.paid", "ch_critical_first", document="11122233344",
+                created_at="2026-08-12T13:00:00+00:00", amount=11700,
+            ))
+            result = engine.handle_event(event(
+                "charge.paid", "ch_critical_second", document="11122233344",
+                created_at="2026-08-12T15:00:00+00:00", amount=13700,
+            ))
+
+            text = format_same_day_repeat_alert(result)
+            self.assertIn("MUITO CRÍTICO", text)
+            self.assertIn("SEGURAR / NÃO ENTREGAR", text)
+            self.assertIn("2ª compra", text)
+            self.assertIn("R$ 117,00", text)
+            self.assertIn("R$ 137,00", text)
+
+    def test_informational_repeat_notice_does_not_hold(self):
+        with tempfile.NamedTemporaryFile() as db:
+            checker = FakeHistoryChecker(CustomerHistoryResult(True, "document", "valid_purchase", None, valid_purchase_count=2))
+            engine = RiskEngine(db.name, history_checker=checker)
+            engine.handle_event(event(
+                "charge.paid", "ch_old_yesterday", document="11122233344",
+                created_at="2026-08-11T13:00:00+00:00", amount=9000,
+            ))
+            engine.handle_event(event(
+                "charge.paid", "ch_info_first", document="11122233344",
+                created_at="2026-08-12T13:00:00+00:00", amount=11700,
+            ))
+            result = engine.handle_event(event(
+                "charge.paid", "ch_info_second", document="11122233344",
+                created_at="2026-08-12T15:00:00+00:00", amount=13700,
+            ))
+
+            text = format_same_day_repeat_notice(result)
+            self.assertIn("AVISO INFORMATIVO", text)
+            self.assertIn("NÃO SEGURA ENTREGA", text)
+            self.assertNotIn("SEGURAR / NÃO ENTREGAR", text)
+
     def test_name_initial_is_compatible_with_full_middle_name(self):
         self.assertTrue(names_compatible("Joao Victor Martins", "JOAO V MARTINS"))
 
@@ -97,12 +334,209 @@ class PagarmeFraudTests(unittest.TestCase):
             self.assertIn("falha recente", reasons)
             self.assertIn("cartões diferentes", reasons)
 
+    def test_failed_attempt_within_48h_triggers_alert_for_later_paid_charge(self):
+        with tempfile.NamedTemporaryFile() as db:
+            engine = RiskEngine(db.name)
+            now = datetime.now(timezone.utc)
+            engine.handle_event(event(
+                "charge.payment_failed",
+                "ch_fail_previous_day",
+                customer_name="Ygor de Campos Garay",
+                email="ninjasapo35@gmail.com",
+                document="12345678900",
+                created_at=(now - timedelta(hours=24)).isoformat(),
+                amount=54000,
+                card_last4="1111",
+                brand="visa",
+                holder="YGOR DE CAMPOS GARAY",
+            ))
+            paid = engine.handle_event(event(
+                "charge.paid",
+                "ch_paid_major_rubens_vaz",
+                customer_name="Ygor de Campos Garay",
+                email="ninjasapo35@gmail.com",
+                document="12345678900",
+                created_at=now.isoformat(),
+                amount=48600,
+                card_last4="2222",
+                brand="mastercard",
+                holder="YGOR DE CAMPOS GARAY",
+            ))
+
+            self.assertTrue(paid.alert)
+            reasons = " ".join(paid.reasons).lower()
+            self.assertIn("falha recente", reasons)
+            self.assertIn("48h", reasons)
+            self.assertIn("cartões diferentes", reasons)
+
     def test_clean_paid_charge_does_not_trigger_alert(self):
         with tempfile.NamedTemporaryFile() as db:
             engine = RiskEngine(db.name)
             result = engine.handle_event(event("charge.paid", "ch_clean"))
             self.assertFalse(result.alert)
             self.assertEqual(result.score, 0)
+
+    def test_same_day_card_prefix_in_different_identity_is_advisory_only(self):
+        with tempfile.NamedTemporaryFile() as db:
+            checker = FakeHistoryChecker(CustomerHistoryResult(True, "document", "valid_purchase", None))
+            engine = RiskEngine(db.name, history_checker=checker)
+            now = datetime(2026, 7, 13, 21, 58, tzinfo=timezone.utc)
+            engine.handle_event(event(
+                "charge.paid",
+                "ch_prior_same_bin",
+                customer_name="Cliente Um",
+                email="cliente.um@example.com",
+                document="11111111111",
+                holder="CLIENTE UM",
+                holder_document="11111111111",
+                created_at=(now - timedelta(minutes=20)).isoformat(),
+                brand="Amex",
+                card_first6="374769",
+                card_last4="9973",
+            ))
+
+            result = engine.handle_event(event(
+                "charge.paid",
+                "ch_current_same_bin",
+                customer_name="Cliente Dois",
+                email="cliente.dois@example.com",
+                document="22222222222",
+                holder="CLIENTE DOIS",
+                holder_document="22222222222",
+                created_at=now.isoformat(),
+                brand="Amex",
+                card_first6="374769",
+                card_last4="7435",
+            ))
+
+            self.assertFalse(result.alert)
+            self.assertEqual(result.score, 0)
+            self.assertIn("mesmos 6 primeiros dígitos", " ".join(result.reasons).lower())
+            self.assertIn("não bloqueia sozinho", " ".join(result.reasons).lower())
+
+    def test_same_day_exact_card_data_in_different_identity_increases_score(self):
+        with tempfile.NamedTemporaryFile() as db:
+            checker = FakeHistoryChecker(CustomerHistoryResult(True, "document", "valid_purchase", None))
+            engine = RiskEngine(db.name, history_checker=checker)
+            now = datetime(2026, 7, 13, 21, 58, tzinfo=timezone.utc)
+            engine.handle_event(event(
+                "charge.paid",
+                "ch_prior_same_card_data",
+                customer_name="Cliente Um",
+                email="cliente.um@example.com",
+                document="11111111111",
+                holder="CLIENTE UM",
+                holder_document="11111111111",
+                created_at=(now - timedelta(minutes=20)).isoformat(),
+                brand="Amex",
+                card_first6="374769",
+                card_last4="7435",
+                card_exp_month="09",
+                card_exp_year="2030",
+            ))
+
+            result = engine.handle_event(event(
+                "charge.paid",
+                "ch_current_same_card_data",
+                customer_name="Cliente Dois",
+                email="cliente.dois@example.com",
+                document="22222222222",
+                holder="CLIENTE DOIS",
+                holder_document="22222222222",
+                created_at=now.isoformat(),
+                brand="Amex",
+                card_first6="374769",
+                card_last4="7435",
+                card_exp_month="09",
+                card_exp_year="2030",
+            ))
+
+            self.assertTrue(result.alert)
+            self.assertEqual(result.score, 50)
+            reasons = " ".join(result.reasons).lower()
+            self.assertIn("dados do cartão", reasons)
+            self.assertIn("vencimento", reasons)
+            self.assertIn("outro cadastro", reasons)
+
+    def test_exact_card_data_in_different_identity_increases_score_on_any_day(self):
+        with tempfile.NamedTemporaryFile() as db:
+            checker = FakeHistoryChecker(CustomerHistoryResult(True, "document", "valid_purchase", None))
+            engine = RiskEngine(db.name, history_checker=checker)
+            now = datetime(2026, 7, 13, 21, 58, tzinfo=timezone.utc)
+            engine.handle_event(event(
+                "charge.paid",
+                "ch_prior_same_card_data_previous_day",
+                customer_name="Cliente Um",
+                email="cliente.um@example.com",
+                document="11111111111",
+                holder="CLIENTE UM",
+                holder_document="11111111111",
+                created_at=(now - timedelta(days=10)).isoformat(),
+                brand="Amex",
+                card_first6="374769",
+                card_last4="7435",
+                card_exp_month="09",
+                card_exp_year="2030",
+            ))
+
+            result = engine.handle_event(event(
+                "charge.paid",
+                "ch_current_same_card_data_any_day",
+                customer_name="Cliente Dois",
+                email="cliente.dois@example.com",
+                document="22222222222",
+                holder="CLIENTE DOIS",
+                holder_document="22222222222",
+                created_at=now.isoformat(),
+                brand="Amex",
+                card_first6="374769",
+                card_last4="7435",
+                card_exp_month="09",
+                card_exp_year="2030",
+            ))
+
+            self.assertTrue(result.alert)
+            self.assertEqual(result.score, 50)
+            self.assertIn("dados do cartão", " ".join(result.reasons).lower())
+
+    def test_first_purchase_alert_includes_same_day_card_prefix_advisory(self):
+        with tempfile.NamedTemporaryFile() as db:
+            checker = FakeHistoryChecker(CustomerHistoryResult(False, None, "not_found", None))
+            engine = RiskEngine(db.name, history_checker=checker)
+            now = datetime(2026, 7, 13, 21, 58, tzinfo=timezone.utc)
+            engine.handle_event(event(
+                "charge.paid",
+                "ch_prior_same_prefix_first_purchase",
+                customer_name="Cliente Um",
+                email="cliente.um@example.com",
+                document="11111111111",
+                holder="CLIENTE UM",
+                holder_document="11111111111",
+                created_at=(now - timedelta(minutes=20)).isoformat(),
+                brand="Amex",
+                card_first6="374769",
+                card_last4="9973",
+            ))
+
+            result = engine.handle_event(event(
+                "charge.paid",
+                "ch_current_same_prefix_first_purchase",
+                customer_name="Cliente Dois",
+                email="cliente.dois@example.com",
+                document="22222222222",
+                holder="CLIENTE DOIS",
+                holder_document="22222222222",
+                created_at=now.isoformat(),
+                brand="Amex",
+                card_first6="374769",
+                card_last4="7435",
+            ))
+
+            self.assertTrue(result.first_purchase_alert)
+            alert = format_first_purchase_alert(result)
+            self.assertIn("Avisos operacionais", alert)
+            self.assertIn("mesmos 6 primeiros dígitos", alert.lower())
+            self.assertIn("não bloqueia sozinho", alert.lower())
 
     def test_clean_paid_card_without_mogo_history_triggers_first_purchase_alert(self):
         with tempfile.NamedTemporaryFile() as db:
@@ -228,7 +662,78 @@ class PagarmeFraudTests(unittest.TestCase):
             self.assertIn("• Agendamento: 31/05/2026 14:30", alert)
             self.assertIn("• Endereço de entrega: Rua Dias Ferreira, 123, Apto 401 - Leblon - Rio de Janeiro/RJ", alert)
 
-    def test_first_purchase_pickup_below_280_does_not_alert(self):
+    def test_first_purchase_alert_includes_order_context_when_modality_is_unknown(self):
+        with tempfile.NamedTemporaryFile() as db:
+            checker = FakeHistoryChecker(CustomerHistoryResult(
+                False,
+                None,
+                "not_found",
+                None,
+                None,
+                0,
+                MogoOrderSummary(
+                    order_number="039102",
+                    status="Pendente",
+                    customer_name="Mario Francisco de Souza Andrade",
+                    delivery_date="09/07/2026",
+                    delivery_time="15:00",
+                    address="Rua Visconde de Pirajá, 500",
+                    neighborhood="Ipanema - Rio de Janeiro/RJ",
+                    amount="230,00",
+                ),
+            ))
+            engine = RiskEngine(db.name, history_checker=checker)
+            result = engine.handle_event(event(
+                "charge.paid",
+                "ch_first_purchase_unknown_modality",
+                customer_name="Mario Francisco de Souza Andrade",
+                amount=23000,
+                brand="Mastercard",
+                card_last4="1635",
+                holder="MARIO FRANCISCO DE SOUZA ANDRADE",
+            ))
+
+            alert = format_first_purchase_alert(result)
+
+            self.assertIn("PRIMEIRA COMPRA — CONFERIR ANTES DE ENTREGAR", alert)
+            self.assertIn("• Modalidade: Entrega", alert)
+            self.assertIn("• Agendamento: 09/07/2026 15:00", alert)
+            self.assertIn("• Endereço de entrega: Rua Visconde de Pirajá, 500 - Ipanema - Rio de Janeiro/RJ", alert)
+
+    def test_first_purchase_alert_does_not_hide_order_context_when_modality_is_missing(self):
+        with tempfile.NamedTemporaryFile() as db:
+            checker = FakeHistoryChecker(CustomerHistoryResult(
+                False,
+                None,
+                "not_found",
+                None,
+                None,
+                0,
+                MogoOrderSummary(
+                    order_number="039103",
+                    status="Pendente",
+                    customer_name="Cliente Sem Modalidade",
+                    delivery_date="09/07/2026",
+                    delivery_time="15:00",
+                    amount="230,00",
+                ),
+            ))
+            engine = RiskEngine(db.name, history_checker=checker)
+            result = engine.handle_event(event(
+                "charge.paid",
+                "ch_first_purchase_missing_modality",
+                customer_name="Cliente Sem Modalidade",
+                amount=23000,
+            ))
+
+            alert = format_first_purchase_alert(result)
+
+            self.assertIn("PRIMEIRA COMPRA — CONFERIR ANTES DE ENTREGAR", alert)
+            self.assertIn("• Modalidade: não localizada no alerta", alert)
+            self.assertIn("• Agendamento: 09/07/2026 15:00", alert)
+            self.assertIn("• Endereço de entrega: não localizado no alerta", alert)
+
+    def test_first_purchase_pickup_alerts_any_value(self):
         with tempfile.NamedTemporaryFile() as db:
             checker = FakeHistoryChecker(CustomerHistoryResult(
                 False,
@@ -242,20 +747,20 @@ class PagarmeFraudTests(unittest.TestCase):
                     status="Pendente",
                     customer_name="Cliente Retirada",
                     fulfillment="Retirada na loja",
-                    amount="279,99",
+                    amount="1,00",
                 ),
             ))
             engine = RiskEngine(db.name, history_checker=checker)
             result = engine.handle_event(event(
                 "charge.paid",
-                "ch_first_purchase_pickup_low_value",
+                "ch_first_purchase_pickup_any_value",
                 customer_name="Cliente Retirada",
-                amount=27999,
+                amount=100,
                 holder="CLIENTE RETIRADA",
             ))
 
             self.assertFalse(result.alert)
-            self.assertFalse(result.first_purchase_alert)
+            self.assertTrue(result.first_purchase_alert)
 
     def test_first_purchase_pickup_at_280_still_alerts(self):
         with tempfile.NamedTemporaryFile() as db:
@@ -286,7 +791,7 @@ class PagarmeFraudTests(unittest.TestCase):
             self.assertFalse(result.alert)
             self.assertTrue(result.first_purchase_alert)
 
-    def test_first_purchase_special_delivery_neighborhood_alerts_only_above_700(self):
+    def test_first_purchase_special_delivery_neighborhood_alerts_any_value(self):
         with tempfile.NamedTemporaryFile() as db:
             checker = FakeHistoryChecker(CustomerHistoryResult(
                 False,
@@ -302,30 +807,31 @@ class PagarmeFraudTests(unittest.TestCase):
                     fulfillment="P/Entregar (Motoboy)",
                     address="Rua Senador Vergueiro, 238, apto 203",
                     neighborhood="Flamengo - Rio de Janeiro/RJ",
-                    amount="700,00",
+                    amount="1,00",
                 ),
             ))
             engine = RiskEngine(db.name, history_checker=checker)
             at_threshold = engine.handle_event(event(
                 "charge.paid",
-                "ch_first_purchase_flamengo_700",
+                "ch_first_purchase_flamengo_1",
                 customer_name="Cliente Flamengo",
-                amount=70000,
+                amount=100,
                 holder="CLIENTE FLAMENGO",
             ))
-            above_threshold = engine.handle_event(event(
+            second_value = engine.handle_event(event(
                 "charge.paid",
-                "ch_first_purchase_flamengo_701",
+                "ch_first_purchase_flamengo_2",
                 customer_name="Cliente Flamengo Maior",
-                document="701",
-                amount=70100,
+                document="2",
+                amount=200,
+                card_last4="2222",
                 holder="CLIENTE FLAMENGO MAIOR",
             ))
 
             self.assertFalse(at_threshold.alert)
-            self.assertFalse(at_threshold.first_purchase_alert)
-            self.assertFalse(above_threshold.alert)
-            self.assertTrue(above_threshold.first_purchase_alert)
+            self.assertTrue(at_threshold.first_purchase_alert)
+            self.assertFalse(second_value.alert)
+            self.assertTrue(second_value.first_purchase_alert)
 
     def test_first_purchase_outside_zona_sul_delivery_alerts_any_value(self):
         with tempfile.NamedTemporaryFile() as db:
@@ -390,6 +896,103 @@ class PagarmeFraudTests(unittest.TestCase):
             self.assertFalse(result.first_purchase_alert)
             self.assertEqual(50, result.score)
             self.assertIn("endereço com fraude anterior", " ".join(result.reasons).lower())
+
+    def test_major_rubens_vaz_hotlist_triggers_strong_antifraud_alert(self):
+        with tempfile.NamedTemporaryFile() as db:
+            checker = FakeHistoryChecker(CustomerHistoryResult(
+                False,
+                None,
+                "not_found",
+                None,
+                None,
+                0,
+                MogoOrderSummary(
+                    order_number="047286",
+                    status="Pendente",
+                    customer_name="Patrick Pereira Monnerat",
+                    fulfillment="P/Entregar (Motoboy)",
+                    address="Rua Major Rúbens Vaz, 127, casa",
+                    neighborhood="Gávea - Rio de Janeiro/RJ",
+                    amount="486,00",
+                ),
+            ))
+            engine = RiskEngine(db.name, history_checker=checker)
+            result = engine.handle_event(event(
+                "charge.paid",
+                "ch_major_rubens_vaz",
+                customer_name="Patrick Pereira Monnerat",
+                amount=48600,
+                holder="PATRICK PEREIRA MONNERAT",
+            ))
+
+            self.assertTrue(result.alert)
+            self.assertFalse(result.first_purchase_alert)
+            self.assertGreaterEqual(result.score, 50)
+            self.assertIn("major rubens vaz", " ".join(result.reasons).lower())
+
+    def test_praca_santos_dumont_hotlist_triggers_strong_antifraud_alert(self):
+        with tempfile.NamedTemporaryFile() as db:
+            checker = FakeHistoryChecker(CustomerHistoryResult(
+                False,
+                None,
+                "not_found",
+                None,
+                None,
+                0,
+                MogoOrderSummary(
+                    order_number="050000",
+                    status="Pendente",
+                    customer_name="Cliente Novo",
+                    fulfillment="P/Entregar (Motoboy)",
+                    address="Praça Santos Dumont, nº 55",
+                    neighborhood="Gávea - Rio de Janeiro/RJ",
+                    amount="333,00",
+                ),
+            ))
+            engine = RiskEngine(db.name, history_checker=checker)
+            result = engine.handle_event(event(
+                "charge.paid",
+                "ch_praca_santos_dumont",
+                customer_name="Cliente Novo",
+                amount=33300,
+                holder="CLIENTE NOVO",
+            ))
+
+            self.assertTrue(result.alert)
+            self.assertFalse(result.first_purchase_alert)
+            self.assertGreaterEqual(result.score, 50)
+            reasons = " ".join(result.reasons).lower()
+            self.assertIn("endereço com fraude anterior", reasons)
+            self.assertIn("santos dumont", reasons)
+
+    def test_known_fraud_billing_address_triggers_even_without_mogo_operational_match(self):
+        with tempfile.NamedTemporaryFile() as db:
+            checker = FakeHistoryChecker(CustomerHistoryResult(False, None, "not_found"))
+            engine = RiskEngine(db.name, history_checker=checker)
+            result = engine.handle_event(event(
+                "charge.paid",
+                "ch_patrick_major_rubens_vaz_billing",
+                customer_name="patrick pereira monnerat",
+                email="patrickferreiratrindade09@gmail.com",
+                document="03784628656",
+                amount=52020,
+                brand="Amex",
+                card_last4="0537",
+                holder="PATRICK P MONNERAT",
+                billing_address={
+                    "line_1": "127, Rua Major Rúbens Vaz, Gávea",
+                    "line_2": "casa",
+                    "city": "Rio De Janeiro",
+                    "state": "RJ",
+                    "zip_code": "22470070",
+                },
+            ))
+
+            self.assertTrue(result.alert)
+            self.assertFalse(result.first_purchase_alert)
+            self.assertGreaterEqual(result.score, 50)
+            self.assertIn("endereço com fraude anterior", " ".join(result.reasons).lower())
+            self.assertIn("major rubens vaz", " ".join(result.reasons).lower())
 
     def test_first_purchase_value_cutoffs_do_not_suppress_antifraud_alert(self):
         with tempfile.NamedTemporaryFile() as db:
@@ -526,6 +1129,98 @@ class PagarmeFraudTests(unittest.TestCase):
             self.assertFalse(result.first_purchase_alert)
             self.assertEqual("pagarme_prior_charge", result.customer_history.matched_by)
             self.assertNotIn("cpf do cliente diferente", " ".join(result.reasons).lower())
+
+    def test_cancelled_first_pagarme_charge_does_not_suppress_first_purchase_alert(self):
+        with tempfile.NamedTemporaryFile() as db:
+            checker = FakeHistoryChecker(CustomerHistoryResult(False, None, "not_found"))
+            engine = RiskEngine(db.name, history_checker=checker)
+            now = datetime.now(timezone.utc)
+            engine.handle_event(event(
+                "charge.paid",
+                "ch_cancelled_first_purchase",
+                customer_name="Talita Gomes Ferreira",
+                email="talita@example.com",
+                document="12345678900",
+                amount=23700,
+                created_at=(now - timedelta(hours=2)).isoformat(),
+            ))
+            engine.handle_event(event(
+                "order.canceled",
+                "or_cancelled_first_purchase",
+                customer_name="Talita Gomes Ferreira",
+                email="talita@example.com",
+                document="12345678900",
+                amount=23700,
+                status="canceled",
+                created_at=(now - timedelta(hours=1)).isoformat(),
+            ))
+
+            result = engine.handle_event(event(
+                "charge.paid",
+                "ch_second_attempt_after_cancel",
+                customer_name="Talita Gomes Ferreira",
+                email="talita@example.com",
+                document="12345678900",
+                amount=23700,
+                created_at=now.isoformat(),
+            ))
+
+            self.assertTrue(result.first_purchase_alert)
+
+    def test_manually_cancelled_pagarme_charge_does_not_suppress_first_purchase_alert(self):
+        with tempfile.NamedTemporaryFile() as db:
+            checker = FakeHistoryChecker(CustomerHistoryResult(False, None, "not_found"))
+            engine = RiskEngine(db.name, history_checker=checker)
+            now = datetime.now(timezone.utc)
+            engine.handle_event(event(
+                "charge.paid",
+                "ch_manually_cancelled_first_purchase",
+                customer_name="Patrick Pessoa",
+                email="patrick@example.com",
+                document="12345678900",
+                amount=23940,
+                created_at=(now - timedelta(hours=2)).isoformat(),
+            ))
+            with engine._connect() as conn:
+                conn.execute(
+                    """
+                    CREATE TABLE antifraud_reviews (
+                        charge_id TEXT PRIMARY KEY,
+                        decision TEXT NOT NULL,
+                        reviewed_at TEXT NOT NULL,
+                        reviewed_by TEXT,
+                        note TEXT
+                    )
+                    """
+                )
+                conn.execute(
+                    """
+                    INSERT INTO antifraud_reviews (
+                        charge_id, decision, reviewed_at, reviewed_by, note
+                    ) VALUES (?, ?, ?, ?, ?)
+                    """,
+                    (
+                        "ch_manually_cancelled_first_purchase",
+                        "canceled",
+                        (now - timedelta(hours=1)).isoformat(),
+                        "joao",
+                        "venda cancelada pelo Zao",
+                    ),
+                )
+
+            result = engine.handle_event(event(
+                "charge.paid",
+                "ch_second_attempt_after_manual_cancel",
+                customer_name="Patrick Pessoa",
+                email="patrick@example.com",
+                document="12345678900",
+                amount=23940,
+                created_at=now.isoformat(),
+            ))
+
+            self.assertTrue(result.first_purchase_alert)
+            self.assertFalse(result.customer_history.has_prior_valid_purchase)
+            self.assertEqual("not_found", result.customer_history.status)
 
     def test_card_holder_document_missing_triggers_operational_alert(self):
         with tempfile.NamedTemporaryFile() as db:
@@ -881,6 +1576,7 @@ class PagarmeFraudTests(unittest.TestCase):
 
             self.assertIn("🚨🚨🚨 ATENÇÃO: JÁ CONSTA EM LISTA DE FRAUDADORES ANTERIORES 🚨🚨🚨", alert)
             self.assertIn("HISTÓRICO ANTERIOR DE CHARGEBACK/FRAUDE", alert)
+            self.assertIn("NÃO VENDER / NÃO LIBERAR", alert)
             self.assertLess(
                 alert.index("JÁ CONSTA EM LISTA DE FRAUDADORES ANTERIORES"),
                 alert.index("Status operacional: SEGURAR / NÃO ENTREGAR"),

@@ -2,7 +2,7 @@
 name: antifraude-pagarme
 description: "Use quando o usuario pedir para analisar, ajustar, consultar, revisar ou operar antifraude Pagar.me, alertas de fraude, chargeback, lista quente, historico Mogo ou pendencias de revisao antifraude."
 metadata:
-  version: "1.7"
+  version: "2.0"
   created: "2026-05-28"
   maintainer: "Joao Mayrinck - CEO Cake & Co"
   related_scripts:
@@ -46,7 +46,11 @@ O antifraude e operacional: segura entrega para verificacao humana. Nao cancela,
 - `Analise Cadastro Clientes` do Mogo tambem conta como historico valido quando tiver primeiro/ultimo pedido e total de pedidos ou delivery maior que zero; nesse caso, telefone/nome desse cadastro pode derrubar alerta fraco de titular ou email diferente.
 - Compra Pagar.me paga anterior do mesmo cliente conta como fallback de cliente conhecido quando o export local do Mogo estiver atrasado; isso evita falso positivo operacional por historico Mogo defasado, mas nao suprime lista quente ou identidade em fraude confirmada.
 - CPF/documento do titular ausente ou diferente e sinal operacional, mas pode ser suprimido por historico Mogo confiavel.
+- Divergencia entre CPF/comprador e titular do pagamento so deve gerar pedido padrao de autorizacao quando for primeira compra ou quando nao houver historico confiavel. Cliente recorrente com historico bom no Mogo nao deve receber burocracia extra so por titular diferente, salvo outro sinal forte.
 - Titular/cartao/lista quente por titular sozinho nao deve bloquear entrega sem ancoragem na identidade do cliente.
+- Mesmo dia BRT + outro cadastro + mesma bandeira + mesmos 6 primeiros digitos do cartao gera apenas aviso operacional quando os demais dados nao fecharem.
+- Outro cadastro + mesma bandeira + mesmos 6 primeiros digitos + mesmos 4 ultimos digitos + mesmo vencimento do cartao, em qualquer data do historico local, e sinal forte: soma score 50.
+- Nunca expor numero completo do cartao; usar esses dados apenas para fingerprint interno e alerta operacional.
 
 ## Alerta de primeira compra
 
@@ -59,6 +63,15 @@ Disparar quando:
 - cobranca de cartao estiver paga/aprovada;
 - o antifraude nao tiver alerta (`score < 50`);
 - apos aguardar `PAGARME_ALERT_DELAY_SECONDS` (padrao 60s), o Mogo nao localizar historico confiavel de compra anterior por CPF, telefone, email, nome, nome+endereco ou cadastro valido.
+
+Cortes de valor da regra de primeira compra:
+
+- retirada na loja: nao disparar abaixo de R$ 280,00; disparar a partir de R$ 280,00;
+- entrega nos bairros Ipanema, Leblon, Gavea, Jardim Botanico, Humaita, Botafogo, Lagoa, Flamengo e Laranjeiras: disparar somente acima de R$ 700,00;
+- entrega nos demais bairros identificados como fora da Zona Sul: disparar em qualquer valor;
+- entrega ou modalidade nao localizada: nao disparar abaixo de R$ 400,00; disparar a partir de R$ 400,00.
+
+Esses cortes pertencem apenas ao alerta operacional de primeira compra. Eles nao suprimem alerta antifraude, lista quente, chargeback, CPF/documento divergente, falha recente ou outro sinal forte.
 
 Modelo operacional para retirada:
 
@@ -103,6 +116,27 @@ Para entrega, o bloco `Pedido` deve incluir tambem:
 
 Essas linhas devem aparecer no bloco principal do pedido, nao apenas dentro de `Histórico Mogo`, para a equipe conseguir agir sem procurar informacao no corpo do alerta.
 
+## Multiplas compras aprovadas no mesmo dia
+
+A contagem usa o dia BRT e a identidade normalizada do cliente. Somente cobrancas pagas/aprovadas contam; cancelamentos e estornos deixam de valer. O mesmo `charge_id` nao pode duplicar a sequencia.
+
+- Cliente sem compra valida antes do inicio do dia: a primeira compra segue as regras normais; da segunda em diante, cada compra no mesmo dia gera `ALERTA MUITO CRITICO — RECOMPRA NO DIA DA PRIMEIRA COMPRA`, com status `SEGURAR / NAO ENTREGAR`.
+- Cliente com compra valida anterior ao inicio do dia: da segunda compra aprovada do dia em diante, enviar `AVISO INFORMATIVO — CLIENTE COM MAIS DE UMA COMPRA NO DIA`. Esse aviso nao aumenta score, nao segura entrega e nao entra na fila antifraude.
+- Os dois textos mostram a sequencia, horarios e valores das compras aprovadas no dia.
+- Prioridade de entrega: antifraude tradicional; recompra critica no dia da estreia; alerta comum de primeira compra; aviso informativo de cliente antigo.
+- A regra de recompra critica expira na virada do dia BRT. No dia seguinte, quem estreou ontem e cliente antigo para esta regra.
+
+## Cadastros possivelmente relacionados
+
+Os alertas de fraude e primeira compra podem incluir ate tres cadastros anteriores como contexto exclusivamente informativo.
+
+- Endereco: exigir rua, numero e complemento/apartamento iguais apos normalizacao. Apartamentos diferentes nao correspondem.
+- Titular forte: nome completo do titular compativel com outro cadastro quando o titular divergir do comprador.
+- Titular parcial: nome ou sobrenome relevante so aparece quando endereco, telefone ou email tambem confirmar a relacao.
+- Exibir, quando disponivel: motivo, nome, telefone, email, documento, endereco, ultima compra valida, valor e quantidade de compras.
+- O bloco nao altera score, nao cria alerta sozinho e nao muda a decisao operacional.
+- Falha no enriquecimento nunca impede o alerta principal.
+
 ## Rotina diaria de pendencias antifraude
 
 O relatorio diario de antifraude usa a fila ja gravada pelo webhook, nao recalcula Mogo por padrao. Nao confundir com outras pendencias diarias da operacao.
@@ -110,6 +144,8 @@ O relatorio diario de antifraude usa a fila ja gravada pelo webhook, nao recalcu
 - Tabela de alertas: `antifraud_alerts`
 - Tabela de decisoes: `antifraud_reviews`
 - Agenda atual: todos os dias as 20:32 BRT
+- O relatorio deve trazer todos os alertas sem decisao dentro da janela configurada; `PAGARME_PENDING_REVIEW_LIMIT=0` significa sem limite e e o padrao.
+- Cada item do relatorio deve exibir `Acionado: DD/MM/AAAA HH:MM` em BRT, usando `antifraud_alerts.alerted_at`.
 - Comando do cron:
 
 ```bash

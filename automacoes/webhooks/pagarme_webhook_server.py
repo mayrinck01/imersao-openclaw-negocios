@@ -18,7 +18,7 @@ from pathlib import Path
 from urllib.parse import parse_qs, urlparse
 from urllib import request
 
-from pagarme_fraud import CompositeCustomerHistoryChecker, LiveMogoOperationalOrderChecker, LocalMogoHistoryChecker, RiskEngine, extract_charge, format_alert, format_first_purchase_alert
+from pagarme_fraud import CompositeCustomerHistoryChecker, LiveMogoOperationalOrderChecker, LocalMogoHistoryChecker, RiskEngine, extract_charge, format_alert, format_first_purchase_alert, format_same_day_repeat_alert, format_same_day_repeat_notice
 
 HOST = os.environ.get("PAGARME_WEBHOOK_HOST", "127.0.0.1")
 PORT = int(os.environ.get("PAGARME_WEBHOOK_PORT", "3060"))
@@ -40,8 +40,8 @@ EVOLUTION_ENV_FILE = os.environ.get("PAGARME_ALERT_EVOLUTION_ENV_FILE", "/opt/ca
 MOGO_REPORTS_ROOT = os.environ.get("PAGARME_MOGO_REPORTS_ROOT", "/root/workspaces/cake-brain/relatorios/Mogo")
 ALERT_DELAY_SECONDS = int(os.environ.get("PAGARME_ALERT_DELAY_SECONDS", "60"))
 PENDING_REVIEW_DAYS = int(os.environ.get("PAGARME_PENDING_REVIEW_DAYS", "14"))
-PENDING_REVIEW_LIMIT = int(os.environ.get("PAGARME_PENDING_REVIEW_LIMIT", "50"))
-REVIEW_DECISIONS = {"fraud", "not_fraud"}
+PENDING_REVIEW_LIMIT = int(os.environ.get("PAGARME_PENDING_REVIEW_LIMIT", "0"))
+REVIEW_DECISIONS = {"fraud", "not_fraud", "canceled"}
 
 
 def _format_brl(cents: int) -> str:
@@ -268,21 +268,26 @@ def pending_antifraud_reviews(
 ) -> list[dict]:
     _ensure_review_tables(engine)
     cutoff = ((now or datetime.now(timezone.utc)).astimezone(timezone.utc) - timedelta(days=max(1, int(days)))).isoformat()
+    try:
+        limit_int = int(limit)
+    except (TypeError, ValueError):
+        limit_int = PENDING_REVIEW_LIMIT
+    sql = """
+        SELECT a.charge_id, a.alerted_at, a.score, a.customer_name, a.amount,
+               a.order_number, a.delivery_date, a.delivery_time, a.address, a.reasons_json
+        FROM antifraud_alerts a
+        LEFT JOIN antifraud_reviews r ON r.charge_id = a.charge_id
+        WHERE r.charge_id IS NULL
+          AND a.alerted_at >= ?
+        ORDER BY a.alerted_at DESC
+    """
+    params: list[object] = [cutoff]
+    if limit_int > 0:
+        sql += " LIMIT ?"
+        params.append(limit_int)
     with engine._connect() as conn:
         conn.row_factory = None
-        rows = list(conn.execute(
-            """
-            SELECT a.charge_id, a.alerted_at, a.score, a.customer_name, a.amount,
-                   a.order_number, a.delivery_date, a.delivery_time, a.address, a.reasons_json
-            FROM antifraud_alerts a
-            LEFT JOIN antifraud_reviews r ON r.charge_id = a.charge_id
-            WHERE r.charge_id IS NULL
-              AND a.alerted_at >= ?
-            ORDER BY a.alerted_at DESC
-            LIMIT ?
-            """,
-            (cutoff, max(1, int(limit))),
-        ))
+        rows = list(conn.execute(sql, params))
 
     pending = []
     for row in rows:
@@ -330,7 +335,16 @@ def mark_antifraud_review(
         )
 
 
-def _format_brt_datetime(value: datetime) -> str:
+def _format_brt_datetime(value: datetime | str | None) -> str:
+    if value is None:
+        return ""
+    if isinstance(value, str):
+        try:
+            value = datetime.fromisoformat(value.replace("Z", "+00:00"))
+        except ValueError:
+            return value
+    if value.tzinfo is None:
+        value = value.replace(tzinfo=timezone.utc)
     return value.astimezone(timezone(timedelta(hours=-3))).strftime("%d/%m/%Y %H:%M")
 
 
@@ -355,9 +369,11 @@ def format_pending_review_report(items: list[dict], now: datetime | None = None)
         order = f"pedido #{item['order_number']}" if item.get("order_number") else f"charge {item['charge_id']}"
         reasons = item.get("reasons") or []
         reason_text = "; ".join(reasons[:2]) if reasons else "motivo não detalhado"
+        alerted_at = _format_brt_datetime(item.get("alerted_at")) or "não localizado"
         lines.extend([
             f"{index}. {item.get('customer_name') or '-'} — {_format_brl(int(item.get('amount') or 0))} — score {item.get('score')}",
             f"   {order} — {schedule}",
+            f"   Acionado: {alerted_at}",
             f"   Endereço: {item.get('address') or 'não localizado'}",
             f"   Motivo: {reason_text}",
             f"   ID: {item['charge_id']}",
@@ -474,6 +490,8 @@ def _describe_whatsapp_target(target: str) -> str:
 
 
 def _send_telegram_message(message: str) -> bool:
+    if not TELEGRAM_TARGET.strip():
+        return True
     return _run_quiet([
         "openclaw",
         "message",
@@ -487,10 +505,10 @@ def _send_telegram_message(message: str) -> bool:
     ])
 
 
-def deliver_alert(message: str) -> dict[str, bool]:
-    telegram_ok = _send_telegram_message(message)
-
-    email_ok = _run_quiet([
+def _send_email_message(subject: str, message: str) -> bool:
+    if not EMAIL_TO.strip() or not EMAIL_ACCOUNT.strip():
+        return True
+    return _run_quiet([
         "gog",
         "gmail",
         "send",
@@ -499,11 +517,16 @@ def deliver_alert(message: str) -> dict[str, bool]:
         "--to",
         EMAIL_TO,
         "--subject",
-        "Alerta antifraude Pagar.me — confirmar antes de entregar",
+        subject,
         "--body-file",
         "-",
         "--no-input",
     ], input_text=message)
+
+
+def _send_whatsapp_targets(message: str, failure_intro: str, failure_footer: str = "") -> bool:
+    if not WHATSAPP_TARGETS:
+        return True
 
     direct_targets = [target for target in WHATSAPP_TARGETS if not _is_group_target(target)]
     group_targets = [target for target in WHATSAPP_TARGETS if _is_group_target(target)]
@@ -517,52 +540,58 @@ def deliver_alert(message: str) -> dict[str, bool]:
     failed_targets = [target for target, ok in whatsapp_results if not ok]
     if failed_targets:
         failed_list = "\n".join(f"• {_describe_whatsapp_target(target)}" for target in failed_targets)
-        _send_telegram_message(
-            "ALERTA ANTIFRAUDE — falha parcial no WhatsApp interno.\n\n"
-            "O alerta principal foi gerado, mas estes destinos falharam na Evolution:\n"
-            f"{failed_list}\n\n"
-            "Regra atual: número direto entregue segura a operação; grupo é tentativa secundária até a Evolution voltar a enviar grupos com estabilidade."
-        )
+        notice = f"{failure_intro}\n{failed_list}"
+        if failure_footer:
+            notice = f"{notice}\n\n{failure_footer}"
+        _send_telegram_message(notice)
+
+    return whatsapp_ok
+
+
+def deliver_alert(message: str) -> dict[str, bool]:
+    telegram_ok = _send_telegram_message(message)
+    email_ok = _send_email_message("Alerta antifraude Pagar.me — confirmar antes de entregar", message)
+    whatsapp_ok = _send_whatsapp_targets(
+        message,
+        "ALERTA ANTIFRAUDE — falha parcial no WhatsApp interno.\n\n"
+        "O alerta principal foi gerado, mas estes destinos falharam na Evolution:",
+        "Regra atual: número direto entregue segura a operação; grupo é tentativa secundária até a Evolution voltar a enviar grupos com estabilidade.",
+    )
 
     return {"telegram": telegram_ok, "email": email_ok, "whatsapp": whatsapp_ok}
 
 
 def deliver_first_purchase_alert(message: str) -> dict[str, bool]:
     telegram_ok = _send_telegram_message(message)
+    email_ok = _send_email_message("Alerta primeira compra Pagar.me — conferir antes de liberar", message)
+    whatsapp_ok = _send_whatsapp_targets(
+        message,
+        "ALERTA PRIMEIRA COMPRA — falha parcial no WhatsApp interno.\n\n"
+        "O alerta principal foi gerado, mas estes destinos falharam na Evolution:",
+    )
 
-    email_ok = _run_quiet([
-        "gog",
-        "gmail",
-        "send",
-        "--account",
-        EMAIL_ACCOUNT,
-        "--to",
-        EMAIL_TO,
-        "--subject",
-        "Alerta primeira compra Pagar.me — conferir antes de liberar",
-        "--body-file",
-        "-",
-        "--no-input",
-    ], input_text=message)
+    return {"telegram": telegram_ok, "email": email_ok, "whatsapp": whatsapp_ok}
 
-    direct_targets = [target for target in WHATSAPP_TARGETS if not _is_group_target(target)]
-    group_targets = [target for target in WHATSAPP_TARGETS if _is_group_target(target)]
-    ordered_targets = direct_targets + group_targets
-    whatsapp_results = [(target, _post_evolution_text(target, message)) for target in ordered_targets]
-    required_results = [(target, ok) for target, ok in whatsapp_results if not _is_group_target(target)]
-    if not required_results:
-        required_results = whatsapp_results
-    whatsapp_ok = bool(required_results) and all(ok for _, ok in required_results)
 
-    failed_targets = [target for target, ok in whatsapp_results if not ok]
-    if failed_targets:
-        failed_list = "\n".join(f"• {_describe_whatsapp_target(target)}" for target in failed_targets)
-        _send_telegram_message(
-            "ALERTA PRIMEIRA COMPRA — falha parcial no WhatsApp interno.\n\n"
-            "O alerta principal foi gerado, mas estes destinos falharam na Evolution:\n"
-            f"{failed_list}"
-        )
+def deliver_same_day_repeat_alert(message: str) -> dict[str, bool]:
+    telegram_ok = _send_telegram_message(message)
+    email_ok = _send_email_message("Alerta muito crítico — recompra no dia da primeira compra", message)
+    whatsapp_ok = _send_whatsapp_targets(
+        message,
+        "ALERTA DE RECOMPRA NO DIA DA PRIMEIRA COMPRA — falha parcial no WhatsApp interno.\n\n"
+        "O alerta principal foi gerado, mas estes destinos falharam na Evolution:",
+    )
+    return {"telegram": telegram_ok, "email": email_ok, "whatsapp": whatsapp_ok}
 
+
+def deliver_same_day_repeat_notice(message: str) -> dict[str, bool]:
+    telegram_ok = _send_telegram_message(message)
+    email_ok = _send_email_message("Aviso informativo — múltiplas compras no mesmo dia", message)
+    whatsapp_ok = _send_whatsapp_targets(
+        message,
+        "AVISO DE MÚLTIPLAS COMPRAS NO DIA — falha parcial no WhatsApp interno.\n\n"
+        "O aviso principal foi gerado, mas estes destinos falharam na Evolution:",
+    )
     return {"telegram": telegram_ok, "email": email_ok, "whatsapp": whatsapp_ok}
 
 
@@ -579,6 +608,8 @@ def process_webhook_payload(
     engine: RiskEngine,
     deliver_alert_func=deliver_alert,
     deliver_first_purchase_alert_func=deliver_first_purchase_alert,
+    deliver_same_day_repeat_alert_func=deliver_same_day_repeat_alert,
+    deliver_same_day_repeat_notice_func=deliver_same_day_repeat_notice,
     delay_seconds: int = ALERT_DELAY_SECONDS,
     sleep_func=time.sleep,
 ) -> dict:
@@ -587,14 +618,31 @@ def process_webhook_payload(
 
     result = engine.handle_event(payload)
     delivery = {"telegram": False, "email": False, "whatsapp": False}
+    repeat = getattr(result, "same_day_repeat", None)
+    repeat_alert = False
+    repeat_notice = False
     if result.alert:
         alert_message = format_alert(result)
         record_antifraud_alert(engine, result)
         delivery = deliver_alert_func(alert_message)
+    elif repeat and repeat.kind == "critical_first_day":
+        delivery = deliver_same_day_repeat_alert_func(format_same_day_repeat_alert(result))
+        repeat_alert = True
     elif result.first_purchase_alert:
         first_purchase_message = format_first_purchase_alert(result)
         delivery = deliver_first_purchase_alert_func(first_purchase_message)
-    return {"ok": True, "alert": result.alert, "first_purchase_alert": result.first_purchase_alert, "score": result.score, "delivery": delivery}
+    elif repeat and repeat.kind == "informational_returning":
+        delivery = deliver_same_day_repeat_notice_func(format_same_day_repeat_notice(result))
+        repeat_notice = True
+    return {
+        "ok": True,
+        "alert": result.alert,
+        "first_purchase_alert": result.first_purchase_alert,
+        "same_day_repeat_alert": repeat_alert,
+        "same_day_repeat_notice": repeat_notice,
+        "score": result.score,
+        "delivery": delivery,
+    }
 
 
 def process_webhook_payload_background(payload: dict, engine: RiskEngine) -> None:
@@ -690,7 +738,7 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--note", default="", help="optional review note")
     parser.add_argument("--reviewed-by", default="bigdog", help="review author")
     parser.add_argument("--days", type=int, default=PENDING_REVIEW_DAYS, help="lookback window for pending review report")
-    parser.add_argument("--limit", type=int, default=PENDING_REVIEW_LIMIT, help="maximum pending items to include")
+    parser.add_argument("--limit", type=int, default=PENDING_REVIEW_LIMIT, help="maximum pending items to include (0 = all)")
     parser.add_argument("--backfill-recent", action="store_true", help="recompute recent alerts before sending the review report")
     args = parser.parse_args(argv)
 

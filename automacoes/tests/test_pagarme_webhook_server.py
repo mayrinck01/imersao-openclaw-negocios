@@ -1,4 +1,5 @@
 import unittest
+import json
 import sys
 import tempfile
 from types import SimpleNamespace
@@ -122,6 +123,92 @@ class PagarmeWebhookDeliveryTests(unittest.TestCase):
         self.assertFalse(response["alert"])
         self.assertTrue(response["first_purchase_alert"])
 
+    def test_critical_repeat_is_delivered_before_first_purchase_alert(self):
+        payload = pagarme_event("charge.paid", "ch_repeat_critical")
+        charge = server.extract_charge(payload)
+        repeat = SimpleNamespace(
+            kind="critical_first_day",
+            sequence=2,
+            purchases=(
+                SimpleNamespace(charge_id="ch_repeat_first", created_at=charge.created_at - timedelta(hours=1), amount=11700),
+                SimpleNamespace(charge_id=charge.charge_id, created_at=charge.created_at, amount=charge.amount),
+            ),
+        )
+        engine = FakeEngine(SimpleNamespace(
+            alert=False, first_purchase_alert=True, same_day_repeat=repeat,
+            score=0, charge=charge,
+            customer_history=CustomerHistoryResult(False, None, "not_found", None),
+        ))
+        critical, first_purchase = [], []
+
+        response = server.process_webhook_payload(
+            payload, engine,
+            deliver_first_purchase_alert_func=first_purchase.append,
+            deliver_same_day_repeat_alert_func=critical.append,
+            delay_seconds=0,
+        )
+
+        self.assertEqual(1, len(critical))
+        self.assertEqual([], first_purchase)
+        self.assertTrue(response["same_day_repeat_alert"])
+
+    def test_returning_repeat_delivers_informational_notice(self):
+        payload = pagarme_event("charge.paid", "ch_repeat_info")
+        charge = server.extract_charge(payload)
+        repeat = SimpleNamespace(
+            kind="informational_returning",
+            sequence=2,
+            purchases=(
+                SimpleNamespace(charge_id="ch_info_first", created_at=charge.created_at - timedelta(hours=1), amount=11700),
+                SimpleNamespace(charge_id=charge.charge_id, created_at=charge.created_at, amount=charge.amount),
+            ),
+        )
+        engine = FakeEngine(SimpleNamespace(
+            alert=False, first_purchase_alert=False, same_day_repeat=repeat,
+            score=0, charge=charge,
+            customer_history=CustomerHistoryResult(True, "document", "valid_purchase", None),
+        ))
+        notices = []
+
+        response = server.process_webhook_payload(
+            payload, engine,
+            deliver_same_day_repeat_notice_func=notices.append,
+            delay_seconds=0,
+        )
+
+        self.assertEqual(1, len(notices))
+        self.assertIn("NÃO SEGURA ENTREGA", notices[0])
+        self.assertTrue(response["same_day_repeat_notice"])
+
+    def test_antifraud_alert_has_priority_over_repeat_delivery(self):
+        payload = pagarme_event("charge.paid", "ch_repeat_with_fraud")
+        charge = server.extract_charge(payload)
+        repeat = SimpleNamespace(
+            kind="critical_first_day", sequence=2,
+            purchases=(SimpleNamespace(charge_id=charge.charge_id, created_at=charge.created_at, amount=charge.amount),),
+        )
+        engine = FakeEngine(SimpleNamespace(
+            alert=True, first_purchase_alert=False, same_day_repeat=repeat,
+            score=50, reasons=["sinal forte"], charge=charge,
+            customer_history=CustomerHistoryResult(False, None, "not_found", None),
+        ))
+        antifraud, critical = [], []
+        original_record = server.record_antifraud_alert
+        server.record_antifraud_alert = lambda *_args, **_kwargs: None
+        try:
+            response = server.process_webhook_payload(
+                payload, engine,
+                deliver_alert_func=antifraud.append,
+                deliver_same_day_repeat_alert_func=critical.append,
+                delay_seconds=0,
+            )
+        finally:
+            server.record_antifraud_alert = original_record
+
+        self.assertEqual(1, len(antifraud))
+        self.assertEqual([], critical)
+        self.assertTrue(response["alert"])
+
     def test_manual_antifraud_checks_returns_latest_paid_match_with_score(self):
         with tempfile.NamedTemporaryFile() as db:
             checker = FakeHistoryChecker(CustomerHistoryResult(
@@ -192,7 +279,7 @@ class PagarmeWebhookDeliveryTests(unittest.TestCase):
                 deliver_alert_func=lambda message: {"telegram": True, "email": False, "whatsapp": False},
                 delay_seconds=0,
             )
-            pending = server.pending_antifraud_reviews(engine, days=2)
+            pending = server.pending_antifraud_reviews(engine, days=2, now=now)
 
             self.assertTrue(response["alert"])
             self.assertEqual(1, len(pending))
@@ -219,6 +306,28 @@ class PagarmeWebhookDeliveryTests(unittest.TestCase):
             )
 
             server.mark_antifraud_review(engine, "ch_reviewed", "not_fraud", reviewed_by="test")
+
+            self.assertEqual([], server.pending_antifraud_reviews(engine, days=2))
+
+    def test_mark_antifraud_review_accepts_canceled_decision(self):
+        with tempfile.NamedTemporaryFile() as db:
+            checker = FakeHistoryChecker(CustomerHistoryResult(False, None, "not_found", None))
+            engine = RiskEngine(db.name, history_checker=checker, hotlist=FraudHotlist.empty())
+            now = datetime.now(timezone.utc)
+            engine.handle_event(pagarme_event(
+                "charge.payment_failed",
+                "ch_canceled_failed",
+                created_at=(now - timedelta(minutes=5)).isoformat(),
+                card_last4="1111",
+            ))
+            server.process_webhook_payload(
+                pagarme_event("charge.paid", "ch_canceled_review", created_at=now.isoformat(), card_last4="2222"),
+                engine,
+                deliver_alert_func=lambda message: {"telegram": True, "email": False, "whatsapp": False},
+                delay_seconds=0,
+            )
+
+            server.mark_antifraud_review(engine, "ch_canceled_review", "canceled", reviewed_by="test")
 
             self.assertEqual([], server.pending_antifraud_reviews(engine, days=2))
 
@@ -283,7 +392,43 @@ class PagarmeWebhookDeliveryTests(unittest.TestCase):
         self.assertIn("R$ 153,00", report)
         self.assertIn("pedido #008749", report)
         self.assertIn("27/05/2026 17:30", report)
+        self.assertIn("Acionado: 27/05/2026 11:01", report)
         self.assertIn("Titular diferente do nome do cliente", report)
+
+    def test_pending_antifraud_reviews_returns_all_pending_by_default(self):
+        with tempfile.NamedTemporaryFile() as db:
+            engine = RiskEngine(db.name, history_checker=FakeHistoryChecker(CustomerHistoryResult(False, None, "not_found", None)), hotlist=FraudHotlist.empty())
+            now = datetime(2026, 5, 27, 20, 0, tzinfo=timezone.utc)
+            server._ensure_review_tables(engine)
+            with engine._connect() as conn:
+                for index in range(51):
+                    conn.execute(
+                        """
+                        INSERT INTO antifraud_alerts (
+                            charge_id, alerted_at, score, customer_name, amount, order_number,
+                            delivery_date, delivery_time, address, reasons_json, alert_text
+                        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                        """,
+                        (
+                            f"ch_all_pending_{index}",
+                            (now - timedelta(minutes=index)).isoformat(),
+                            50,
+                            f"Cliente {index}",
+                            10000 + index,
+                            f"05176{index}",
+                            "",
+                            "",
+                            "",
+                            json.dumps(["teste"], ensure_ascii=False),
+                            "alerta",
+                        ),
+                    )
+
+            pending = server.pending_antifraud_reviews(engine, days=2, now=now)
+
+            self.assertEqual(51, len(pending))
+            self.assertEqual("ch_all_pending_0", pending[0]["charge_id"])
+            self.assertEqual("ch_all_pending_50", pending[-1]["charge_id"])
 
     def test_send_pending_review_cli_uses_review_engine(self):
         calls = []
@@ -367,6 +512,50 @@ class PagarmeWebhookDeliveryTests(unittest.TestCase):
             if "--channel" in args and args[args.index("--channel") + 1] == "whatsapp"
         ]
         self.assertEqual([], whatsapp_cli_calls)
+
+    def test_deliver_alert_can_route_only_to_telegram(self):
+        calls = []
+        evolution_calls = []
+        original_run_quiet = server._run_quiet
+        original_post_evolution_text = getattr(server, "_post_evolution_text", None)
+        original_telegram_target = server.TELEGRAM_TARGET
+        original_email_to = server.EMAIL_TO
+        original_whatsapp_targets = getattr(server, "WHATSAPP_TARGETS", None)
+        server.TELEGRAM_TARGET = "-1004325979163"
+        server.EMAIL_TO = ""
+        server.WHATSAPP_TARGETS = []
+
+        def fake_run_quiet(args, input_text=None, timeout=20):
+            calls.append((args, input_text, timeout))
+            return True
+
+        def fake_post_evolution_text(target, message, timeout=None):
+            evolution_calls.append((target, message))
+            return True
+
+        server._run_quiet = fake_run_quiet
+        server._post_evolution_text = fake_post_evolution_text
+        try:
+            result = server.deliver_alert("mensagem teste")
+        finally:
+            server._run_quiet = original_run_quiet
+            if original_post_evolution_text is None:
+                delattr(server, "_post_evolution_text")
+            else:
+                server._post_evolution_text = original_post_evolution_text
+            server.TELEGRAM_TARGET = original_telegram_target
+            server.EMAIL_TO = original_email_to
+            if original_whatsapp_targets is None:
+                delattr(server, "WHATSAPP_TARGETS")
+            else:
+                server.WHATSAPP_TARGETS = original_whatsapp_targets
+
+        self.assertEqual({"telegram": True, "email": True, "whatsapp": True}, result)
+        self.assertEqual([], evolution_calls)
+        self.assertEqual(1, len(calls))
+        args = calls[0][0]
+        self.assertEqual("telegram", args[args.index("--channel") + 1])
+        self.assertEqual("-1004325979163", args[args.index("--target") + 1])
 
     def test_deliver_alert_treats_group_failure_as_partial_when_direct_number_succeeds(self):
         telegram_messages = []

@@ -18,24 +18,14 @@ from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any, Protocol
 
-WINDOW_MINUTES = 60
+WINDOW_MINUTES = 48 * 60
+WINDOW_LABEL = "48h"
 ALERT_THRESHOLD = 50
-FIRST_PURCHASE_PICKUP_ALERT_MIN_BRL = 280.0
-FIRST_PURCHASE_DELIVERY_ALERT_MIN_BRL = 400.0
-FIRST_PURCHASE_SPECIAL_DELIVERY_ALERT_ABOVE_BRL = 700.0
-FIRST_PURCHASE_SPECIAL_DELIVERY_NEIGHBORHOODS = {
-    "ipanema",
-    "leblon",
-    "gavea",
-    "jardim botanico",
-    "humaita",
-    "botafogo",
-    "lagoa",
-    "flamengo",
-    "laranjeiras",
-}
 KNOWN_FRAUD_DELIVERY_ADDRESSES = (
     ("euclides da cunha", "106", "Rua Euclides da Cunha, 106"),
+    ("major rubens vaz", "122", "Rua Major Rubens Vaz, 122"),
+    ("major rubens vaz", "127", "Rua Major Rubens Vaz, 127"),
+    ("santos dumont", "55", "Praça Santos Dumont, 55"),
 )
 DEFAULT_HOTLIST_PATH = Path(__file__).resolve().parents[1] / "data" / "pagarme_fraud_hotlist.json"
 
@@ -224,15 +214,79 @@ def _order_address_key(order: "MogoOrderSummary" | None) -> str:
     return normalize_text(" ".join(part for part in (order.address, order.neighborhood) if part))
 
 
+def _related_address_key(order: "MogoOrderSummary" | None) -> str:
+    if not order or not order.address:
+        return ""
+    value = f" {normalize_text(order.address)} "
+    replacements = {
+        " r ": " rua ", " av ": " avenida ", " ap ": " apto ",
+        " apartamento ": " apto ", " n ": " ", " numero ": " ",
+    }
+    for source, target in replacements.items():
+        value = value.replace(source, target)
+    return re.sub(r"\s+", " ", value).strip()
+
+
 def _known_fraud_delivery_address(order: "MogoOrderSummary" | None) -> str:
     if order is None:
         return ""
     address = normalize_text(order.address)
     tokens = set(address.split())
+    return _known_fraud_address_label(address, tokens)
+
+
+def _known_fraud_address_label(address: str, tokens: set[str] | None = None) -> str:
+    address = normalize_text(address)
+    tokens = tokens or set(address.split())
     for street, number, label in KNOWN_FRAUD_DELIVERY_ADDRESSES:
         if street in address and number in tokens:
             return label
     return ""
+
+
+def _format_pagarme_card_billing_address(card: dict[str, Any]) -> str:
+    address = card.get("billing_address") or {}
+    if not isinstance(address, dict):
+        return ""
+    parts = [
+        str(address.get("line_1") or ""),
+        str(address.get("line_2") or ""),
+        str(address.get("city") or ""),
+        str(address.get("state") or ""),
+        str(address.get("zip_code") or ""),
+    ]
+    return " ".join(part for part in parts if part)
+
+
+def _extract_card_first_six_from_raw(raw: dict[str, Any]) -> str:
+    data = raw.get("data") or {}
+    if not isinstance(data, dict):
+        return ""
+    tx = data.get("last_transaction") or {}
+    if not isinstance(tx, dict):
+        return ""
+    card = tx.get("card") or {}
+    if not isinstance(card, dict):
+        return ""
+    return only_digits(str(card.get("first_six_digits") or ""))
+
+
+def _extract_card_identity_from_raw(raw: dict[str, Any]) -> tuple[str, str, str, str]:
+    data = raw.get("data") or {}
+    if not isinstance(data, dict):
+        return ("", "", "", "")
+    tx = data.get("last_transaction") or {}
+    if not isinstance(tx, dict):
+        return ("", "", "", "")
+    card = tx.get("card") or {}
+    if not isinstance(card, dict):
+        return ("", "", "", "")
+    return (
+        only_digits(str(card.get("first_six_digits") or "")),
+        only_digits(str(card.get("last_four_digits") or "")),
+        only_digits(str(card.get("exp_month") or "")),
+        only_digits(str(card.get("exp_year") or "")),
+    )
 
 
 def _names_share_meaningful_part(left: str | None, right: str | None) -> bool:
@@ -266,6 +320,7 @@ class ChargeEvent:
     card_last4: str
     holder_name: str
     holder_document: str
+    card_billing_address: str
     acquirer_message: str
     acquirer_return_code: str
     payment_method: str
@@ -323,6 +378,20 @@ class MogoOrderSummary:
 
 
 @dataclass(frozen=True)
+class RelatedCustomerProfile:
+    match_kind: str
+    match_reason: str
+    name: str = ""
+    phone: str = ""
+    email: str = ""
+    document: str = ""
+    address: str = ""
+    last_purchase_date: str = ""
+    last_purchase_amount: str = ""
+    valid_purchase_count: int = 0
+
+
+@dataclass(frozen=True)
 class CustomerHistoryResult:
     has_prior_valid_purchase: bool
     matched_by: str | None
@@ -331,6 +400,7 @@ class CustomerHistoryResult:
     order: MogoOrderSummary | None = None
     valid_purchase_count: int = 0
     operational_order: MogoOrderSummary | None = None
+    related_profiles: tuple[RelatedCustomerProfile, ...] = ()
 
 
 class CustomerHistoryChecker(Protocol):
@@ -360,9 +430,10 @@ class CompositeCustomerHistoryChecker:
                     result.order,
                     result.valid_purchase_count,
                     merged.operational_order or result.operational_order,
+                    result.related_profiles or merged.related_profiles,
                 )
             elif result.status == "error" and not merged.has_prior_valid_purchase and merged.status != "error":
-                merged = CustomerHistoryResult(False, None, "error", result.error, None, 0, merged.operational_order or result.operational_order)
+                merged = CustomerHistoryResult(False, None, "error", result.error, None, 0, merged.operational_order or result.operational_order, result.related_profiles or merged.related_profiles)
 
             if result.operational_order and not merged.operational_order:
                 merged = CustomerHistoryResult(
@@ -373,6 +444,13 @@ class CompositeCustomerHistoryChecker:
                     merged.order,
                     merged.valid_purchase_count,
                     result.operational_order,
+                    merged.related_profiles or result.related_profiles,
+                )
+            elif result.related_profiles and not merged.related_profiles:
+                merged = CustomerHistoryResult(
+                    merged.has_prior_valid_purchase, merged.matched_by, merged.status,
+                    merged.error, merged.order, merged.valid_purchase_count,
+                    merged.operational_order, result.related_profiles,
                 )
         return merged
 
@@ -476,31 +554,97 @@ class LocalMogoHistoryChecker:
             return CustomerHistoryResult(False, None, "error", exc.__class__.__name__)
 
         operational_order = self._find_operational_order(charge)
+        related_profiles = self._find_related_profiles(charge, operational_order)
         name_address_order = self._find_valid_purchase_by_name_and_address(charge, operational_order)
         if name_address_order:
-            return CustomerHistoryResult(True, "name_address", "valid_purchase", None, name_address_order, 1, operational_order)
+            return CustomerHistoryResult(True, "name_address", "valid_purchase", None, name_address_order, 1, operational_order, related_profiles)
 
         document = only_digits(charge.customer_document)
         if document and document in self._documents:
-            return CustomerHistoryResult(True, "document", "valid_purchase", None, self._document_orders.get(document), self._valid_count(self._document_order_ids, document), operational_order)
+            return CustomerHistoryResult(True, "document", "valid_purchase", None, self._document_orders.get(document), self._valid_count(self._document_order_ids, document), operational_order, related_profiles)
 
         email = normalize_text(charge.customer_email)
         if email and email in self._emails:
-            return CustomerHistoryResult(True, "email", "valid_purchase", None, self._email_orders.get(email), self._valid_count(self._email_order_ids, email), operational_order)
+            return CustomerHistoryResult(True, "email", "valid_purchase", None, self._email_orders.get(email), self._valid_count(self._email_order_ids, email), operational_order, related_profiles)
 
         phone = only_digits(charge.customer_phone)
         if phone:
             for indexed in self._phones:
                 if phone == indexed or phone.endswith(indexed) or indexed.endswith(phone):
-                    return CustomerHistoryResult(True, "phone", "valid_purchase", None, self._phone_orders.get(indexed), self._valid_count(self._phone_order_ids, indexed), operational_order)
+                    return CustomerHistoryResult(True, "phone", "valid_purchase", None, self._phone_orders.get(indexed), self._valid_count(self._phone_order_ids, indexed), operational_order, related_profiles)
 
         name = normalize_text(charge.customer_name)
         if name:
             for indexed_name in self._names:
                 if names_compatible(name, indexed_name):
-                    return CustomerHistoryResult(True, "name", "valid_purchase", None, self._name_orders.get(indexed_name), self._valid_count(self._name_order_ids, indexed_name), operational_order)
+                    return CustomerHistoryResult(True, "name", "valid_purchase", None, self._name_orders.get(indexed_name), self._valid_count(self._name_order_ids, indexed_name), operational_order, related_profiles)
 
-        return CustomerHistoryResult(False, None, "not_found", None, None, 0, operational_order)
+        return CustomerHistoryResult(False, None, "not_found", None, None, 0, operational_order, related_profiles)
+
+    def _find_related_profiles(
+        self,
+        charge: ChargeEvent,
+        operational_order: MogoOrderSummary | None,
+    ) -> tuple[RelatedCustomerProfile, ...]:
+        current_address = _related_address_key(operational_order)
+        holder_mismatch = bool(charge.holder_name and not names_compatible(charge.customer_name, charge.holder_name))
+        profiles: list[tuple[int, RelatedCustomerProfile]] = []
+        seen: set[str] = set()
+        for order in self._valid_orders:
+            identity = only_digits(order.document) or normalize_text(order.email) or only_digits(order.phone) or normalize_text(order.customer_name)
+            if not identity or identity in seen:
+                continue
+            if (
+                (only_digits(charge.customer_document) and only_digits(charge.customer_document) == only_digits(order.document))
+                or (normalize_text(charge.customer_email) and normalize_text(charge.customer_email) == normalize_text(order.email))
+                or names_compatible(charge.customer_name, order.customer_name)
+            ):
+                continue
+            address_match = bool(current_address and current_address == _related_address_key(order))
+            strong_holder = bool(holder_mismatch and names_compatible(charge.holder_name, order.customer_name))
+            holder_tokens = set(_meaningful_name_tokens(charge.holder_name))
+            order_tokens = set(_meaningful_name_tokens(order.customer_name))
+            phone_match = bool(
+                only_digits(charge.customer_phone)
+                and only_digits(order.phone)
+                and (
+                    only_digits(charge.customer_phone).endswith(only_digits(order.phone))
+                    or only_digits(order.phone).endswith(only_digits(charge.customer_phone))
+                )
+            )
+            email_match = bool(
+                normalize_text(charge.customer_email)
+                and normalize_text(charge.customer_email) == normalize_text(order.email)
+            )
+            partial_holder = bool(
+                holder_mismatch and holder_tokens & order_tokens
+                and (address_match or phone_match or email_match)
+            )
+            if strong_holder:
+                kind, reason, priority = "strong_holder_name", "correspondência forte pelo titular", 3
+            elif partial_holder:
+                kind, reason, priority = "partial_holder_confirmed", "possível relação pelo titular com confirmação adicional", 2
+            elif address_match:
+                kind, reason, priority = "exact_address", "endereço completo igual", 2
+            else:
+                continue
+            count_key = normalize_text(order.customer_name)
+            count = self._valid_count(self._name_order_ids, count_key) or 1
+            profiles.append((priority, RelatedCustomerProfile(
+                match_kind=kind,
+                match_reason=reason,
+                name=order.customer_name,
+                phone=order.phone,
+                email=order.email,
+                document=order.document,
+                address=" - ".join(part for part in (order.address, order.neighborhood) if part),
+                last_purchase_date=order.date,
+                last_purchase_amount=order.amount,
+                valid_purchase_count=count,
+            )))
+            seen.add(identity)
+        profiles.sort(key=lambda item: item[0], reverse=True)
+        return tuple(profile for _, profile in profiles[:3])
 
     def _find_valid_purchase_by_name_and_address(self, charge: ChargeEvent, operational_order: MogoOrderSummary | None) -> MogoOrderSummary | None:
         current_address = _order_address_key(operational_order)
@@ -768,6 +912,20 @@ class LiveMogoOperationalOrderChecker:
 
 
 @dataclass(frozen=True)
+class SameDayPurchase:
+    charge_id: str
+    created_at: datetime
+    amount: int
+
+
+@dataclass(frozen=True)
+class SameDayRepeatContext:
+    kind: str
+    sequence: int
+    purchases: tuple[SameDayPurchase, ...]
+
+
+@dataclass(frozen=True)
 class RiskResult:
     alert: bool
     score: int
@@ -775,6 +933,7 @@ class RiskResult:
     charge: ChargeEvent
     customer_history: CustomerHistoryResult | None = None
     first_purchase_alert: bool = False
+    same_day_repeat: SameDayRepeatContext | None = None
 
 
 def extract_charge(payload: dict[str, Any]) -> ChargeEvent:
@@ -797,6 +956,7 @@ def extract_charge(payload: dict[str, Any]) -> ChargeEvent:
         card_last4=str(card.get("last_four_digits") or ""),
         holder_name=str(card.get("holder_name") or ""),
         holder_document=str(card.get("holder_document") or ""),
+        card_billing_address=_format_pagarme_card_billing_address(card),
         acquirer_message=str(tx.get("acquirer_message") or ""),
         acquirer_return_code=str(tx.get("acquirer_return_code") or ""),
         payment_method=str(data.get("payment_method") or tx.get("payment_method") or ""),
@@ -852,7 +1012,8 @@ class RiskEngine:
         score, reasons, history = self._score_paid_charge(charge)
         antifraud_alert = score >= ALERT_THRESHOLD
         first_purchase_alert = self._should_alert_first_purchase(charge, history, antifraud_alert)
-        return RiskResult(antifraud_alert, score, reasons, charge, history, first_purchase_alert)
+        same_day_repeat = self._same_day_repeat_context(charge, history)
+        return RiskResult(antifraud_alert, score, reasons, charge, history, first_purchase_alert, same_day_repeat)
 
     def _store(self, charge: ChargeEvent) -> None:
         with self._connect() as conn:
@@ -900,6 +1061,167 @@ class RiskEngine:
                 )
             )
 
+    def _same_day_repeat_context(
+        self,
+        charge: ChargeEvent,
+        history: CustomerHistoryResult,
+    ) -> SameDayRepeatContext | None:
+        if not charge.identity_key:
+            return None
+        brt = timezone(timedelta(hours=-3))
+        local_date = charge.created_at.astimezone(brt).date()
+        day_start = datetime(local_date.year, local_date.month, local_date.day, tzinfo=brt).astimezone(timezone.utc)
+        with self._connect() as conn:
+            conn.row_factory = sqlite3.Row
+            try:
+                rows = list(conn.execute(
+                    """
+                    SELECT e.charge_id, e.event_type, e.status, e.created_at, e.amount,
+                           e.customer_name, COALESCE(r.decision, '') AS review_decision
+                    FROM charge_events e
+                    LEFT JOIN antifraud_reviews r ON r.charge_id = e.charge_id
+                    WHERE e.identity_key = ?
+                      AND e.charge_id != ?
+                      AND e.created_at < ?
+                    ORDER BY e.created_at ASC
+                    """,
+                    (charge.identity_key, charge.charge_id, charge.created_at.isoformat()),
+                ))
+            except sqlite3.OperationalError:
+                rows = list(conn.execute(
+                    """
+                    SELECT charge_id, event_type, status, created_at, amount, customer_name,
+                           '' AS review_decision
+                    FROM charge_events
+                    WHERE identity_key = ?
+                      AND charge_id != ?
+                      AND created_at < ?
+                    ORDER BY created_at ASC
+                    """,
+                    (charge.identity_key, charge.charge_id, charge.created_at.isoformat()),
+                ))
+
+        valid_prior = self._valid_prior_paid_rows(rows)
+        paid_today = [row for row in valid_prior if _parse_dt(row["created_at"]) >= day_start]
+        if not paid_today:
+            return None
+
+        paid_before_today = any(_parse_dt(row["created_at"]) < day_start for row in valid_prior)
+        external_history_before_today = self._history_predates_local_day(history, local_date)
+        kind = (
+            "informational_returning"
+            if paid_before_today or external_history_before_today
+            else "critical_first_day"
+        )
+        purchases = tuple(
+            SameDayPurchase(
+                charge_id=str(row["charge_id"] or ""),
+                created_at=_parse_dt(row["created_at"]),
+                amount=int(row["amount"] or 0),
+            )
+            for row in paid_today
+        ) + (SameDayPurchase(charge.charge_id, charge.created_at, charge.amount),)
+        return SameDayRepeatContext(kind, len(purchases), purchases)
+
+    def _history_predates_local_day(
+        self,
+        history: CustomerHistoryResult,
+        local_date,
+    ) -> bool:
+        if not history.has_prior_valid_purchase:
+            return False
+        order_date = (history.order.date if history.order else "").strip()
+        if not order_date:
+            return history.matched_by != "pagarme_prior_charge"
+        candidates = (order_date, order_date[:10])
+        for candidate in candidates:
+            try:
+                parsed = datetime.fromisoformat(candidate.replace("Z", "+00:00"))
+                return parsed.date() < local_date
+            except ValueError:
+                pass
+            try:
+                return datetime.strptime(candidate, "%d/%m/%Y").date() < local_date
+            except ValueError:
+                pass
+        return history.matched_by != "pagarme_prior_charge"
+
+    def _same_day_card_prefix_matches(self, charge: ChargeEvent) -> list[sqlite3.Row]:
+        first_six = _extract_card_first_six_from_raw(charge.raw)
+        if not charge.is_card or not first_six or not normalize_text(charge.card_brand):
+            return []
+
+        brt = timezone(timedelta(hours=-3))
+        local_date = charge.created_at.astimezone(brt).date()
+        start = datetime(local_date.year, local_date.month, local_date.day, tzinfo=brt).astimezone(timezone.utc)
+        end = start + timedelta(days=1)
+        with self._connect() as conn:
+            conn.row_factory = sqlite3.Row
+            rows = list(
+                conn.execute(
+                    """
+                    SELECT charge_id, event_type, status, created_at, identity_key,
+                           customer_name, card_brand, card_last4, raw_json
+                    FROM charge_events
+                    WHERE charge_id != ?
+                      AND identity_key != ?
+                      AND created_at >= ?
+                      AND created_at < ?
+                      AND card_brand != ''
+                    ORDER BY created_at DESC
+                    """,
+                    (charge.charge_id, charge.identity_key, start.isoformat(), end.isoformat()),
+                )
+            )
+
+        matches: list[sqlite3.Row] = []
+        for row in rows:
+            if normalize_text(str(row["card_brand"] or "")) != normalize_text(charge.card_brand):
+                continue
+            try:
+                raw = json.loads(str(row["raw_json"] or "{}"))
+            except json.JSONDecodeError:
+                continue
+            if _extract_card_first_six_from_raw(raw) == first_six:
+                matches.append(row)
+        return matches
+
+    def _exact_card_matches(self, charge: ChargeEvent) -> list[sqlite3.Row]:
+        charge_card = _extract_card_identity_from_raw(charge.raw)
+        if not charge.is_card or not normalize_text(charge.card_brand):
+            return []
+        if not all(charge_card):
+            return []
+
+        with self._connect() as conn:
+            conn.row_factory = sqlite3.Row
+            rows = list(
+                conn.execute(
+                    """
+                    SELECT charge_id, event_type, status, created_at, identity_key,
+                           customer_name, card_brand, card_last4, raw_json
+                    FROM charge_events
+                    WHERE charge_id != ?
+                      AND identity_key != ?
+                      AND card_brand != ''
+                    ORDER BY created_at DESC
+                    """,
+                    (charge.charge_id, charge.identity_key),
+                )
+            )
+
+        matches: list[sqlite3.Row] = []
+        for row in rows:
+            if normalize_text(str(row["card_brand"] or "")) != normalize_text(charge.card_brand):
+                continue
+            try:
+                raw = json.loads(str(row["raw_json"] or "{}"))
+            except json.JSONDecodeError:
+                continue
+            if _extract_card_identity_from_raw(raw) == charge_card:
+                matches.append(row)
+        return matches
+
     def _customer_history(self, charge: ChargeEvent) -> CustomerHistoryResult:
         try:
             history = self.history_checker.lookup(charge)
@@ -915,23 +1237,41 @@ class RiskEngine:
             return None
         with self._connect() as conn:
             conn.row_factory = sqlite3.Row
-            rows = list(
-                conn.execute(
-                    """
-                    SELECT charge_id, created_at, amount, customer_name
-                    FROM charge_events
-                    WHERE identity_key = ?
-                      AND charge_id != ?
-                      AND (event_type = 'charge.paid' OR status = 'paid')
-                      AND created_at < ?
-                    ORDER BY created_at DESC
-                    """,
-                    (charge.identity_key, charge.charge_id, charge.created_at.isoformat()),
+            try:
+                rows = list(
+                    conn.execute(
+                        """
+                        SELECT e.charge_id, e.event_type, e.status, e.created_at, e.amount, e.customer_name,
+                               COALESCE(r.decision, '') AS review_decision
+                        FROM charge_events e
+                        LEFT JOIN antifraud_reviews r ON r.charge_id = e.charge_id
+                        WHERE e.identity_key = ?
+                          AND e.charge_id != ?
+                          AND e.created_at < ?
+                        ORDER BY e.created_at ASC
+                        """,
+                        (charge.identity_key, charge.charge_id, charge.created_at.isoformat()),
+                    )
                 )
-            )
-        if not rows:
+            except sqlite3.OperationalError:
+                rows = list(
+                    conn.execute(
+                        """
+                        SELECT charge_id, event_type, status, created_at, amount, customer_name,
+                               '' AS review_decision
+                        FROM charge_events
+                        WHERE identity_key = ?
+                          AND charge_id != ?
+                          AND created_at < ?
+                        ORDER BY created_at ASC
+                        """,
+                        (charge.identity_key, charge.charge_id, charge.created_at.isoformat()),
+                    )
+                )
+        valid_paid_rows = self._valid_prior_paid_rows(rows)
+        if not valid_paid_rows:
             return None
-        latest = rows[0]
+        latest = valid_paid_rows[-1]
         return CustomerHistoryResult(
             True,
             "pagarme_prior_charge",
@@ -945,9 +1285,46 @@ class RiskEngine:
                 amount=str(latest["amount"] or ""),
                 origin="Pagar.me",
             ),
-            len(rows),
+            len(valid_paid_rows),
             operational_order,
         )
+
+    def _valid_prior_paid_rows(self, rows: list[sqlite3.Row]) -> list[sqlite3.Row]:
+        valid_paid_rows: list[sqlite3.Row] = []
+        for row in rows:
+            if self._is_reversal_history_row(row):
+                self._remove_latest_reversed_paid_row(valid_paid_rows, row)
+            elif self._is_paid_history_row(row):
+                valid_paid_rows.append(row)
+        return valid_paid_rows
+
+    def _remove_latest_reversed_paid_row(self, valid_paid_rows: list[sqlite3.Row], reversal_row: sqlite3.Row) -> None:
+        reversal_amount = int(reversal_row["amount"] or 0)
+        for index in range(len(valid_paid_rows) - 1, -1, -1):
+            paid_amount = int(valid_paid_rows[index]["amount"] or 0)
+            if reversal_amount == 0 or paid_amount == reversal_amount:
+                del valid_paid_rows[index]
+                return
+
+    def _is_paid_history_row(self, row: sqlite3.Row) -> bool:
+        return str(row["event_type"] or "") == "charge.paid" or normalize_text(str(row["status"] or "")) == "paid"
+
+    def _is_reversal_history_row(self, row: sqlite3.Row) -> bool:
+        review_decision = normalize_text(str(row["review_decision"] or ""))
+        if review_decision == "canceled":
+            return True
+        event_type = normalize_text(str(row["event_type"] or "")).replace(" ", ".")
+        status = normalize_text(str(row["status"] or ""))
+        reversal_events = {
+            "order.canceled",
+            "order.cancelled",
+            "charge.canceled",
+            "charge.cancelled",
+            "charge.refunded",
+            "charge.refund_succeeded",
+        }
+        reversal_statuses = {"canceled", "cancelled", "refunded", "voided", "estornado", "cancelado"}
+        return event_type in reversal_events or status in reversal_statuses
 
     def _should_alert_first_purchase(
         self,
@@ -963,7 +1340,7 @@ class RiskEngine:
             return False
         if history.has_prior_valid_purchase:
             return False
-        return _first_purchase_value_requires_alert(charge, _context_order(history))
+        return True
 
     def _history_can_suppress_alerts(self, charge: ChargeEvent, history: CustomerHistoryResult) -> bool:
         if not history.has_prior_valid_purchase:
@@ -1004,11 +1381,34 @@ class RiskEngine:
             detail = f": {history.error}" if history.error else ""
             operational_reasons.append(f"Histórico Mogo não validado{detail}")
 
+        exact_card_matches = self._exact_card_matches(charge)
+        if exact_card_matches:
+            identities = {str(row["identity_key"] or "") for row in exact_card_matches}
+            count = len({identity for identity in identities if identity})
+            suffix = f" ({count} cadastro(s) distinto(s))" if count else ""
+            strong_score += 50
+            strong_reasons.append(
+                "Dados do cartão, bandeira e vencimento iguais em outro cadastro"
+                f"{suffix}"
+            )
+
+        same_day_prefix_matches = [] if exact_card_matches else self._same_day_card_prefix_matches(charge)
+        if same_day_prefix_matches:
+            identities = {str(row["identity_key"] or "") for row in same_day_prefix_matches}
+            count = len({identity for identity in identities if identity})
+            suffix = f" ({count} cadastro(s) distinto(s))" if count else ""
+            operational_reasons.append(
+                "Aviso operacional: mesmos 6 primeiros dígitos e bandeira do cartão "
+                f"já apareceram hoje em outro cadastro{suffix}; sinal auxiliar, não bloqueia sozinho"
+            )
+
         if self.hotlist.matches(charge):
             hotlist_score += 50
             hotlist_reasons.append("Dado em lista quente de chargeback/fraude")
 
         known_fraud_address = _known_fraud_delivery_address(_context_order(history))
+        if not known_fraud_address:
+            known_fraud_address = _known_fraud_address_label(charge.card_billing_address)
         if known_fraud_address:
             strong_score += 50
             strong_reasons.append(f"Endereço com fraude anterior: {known_fraud_address}")
@@ -1029,11 +1429,11 @@ class RiskEngine:
 
         if failed and not suppress_checkout_retry:
             strong_score += 50
-            strong_reasons.append(f"Falha recente antes de pagamento aprovado ({len(failed)} em {WINDOW_MINUTES} min)")
+            strong_reasons.append(f"Falha recente antes de pagamento aprovado ({len(failed)} em {WINDOW_LABEL})")
 
         if len(cards) >= 2 and not suppress_checkout_retry:
             strong_score += 50
-            strong_reasons.append(f"2+ cartões diferentes no mesmo cliente/documento/email em {WINDOW_MINUTES} min")
+            strong_reasons.append(f"2+ cartões diferentes no mesmo cliente/documento/email em {WINDOW_LABEL}")
 
         failed_amounts = [int(row["amount"] or 0) for row in failed]
         if failed_amounts and max(failed_amounts) > charge.amount and not suppress_checkout_retry:
@@ -1183,37 +1583,6 @@ def _context_order(history: CustomerHistoryResult | None) -> MogoOrderSummary | 
     return history.operational_order or history.order
 
 
-def _first_purchase_amount_brl(charge: ChargeEvent, order: MogoOrderSummary | None) -> float | None:
-    if charge.amount > 0:
-        return charge.amount / 100
-    if order:
-        return _parse_brlish_number(order.amount)
-    return None
-
-
-def _special_first_purchase_delivery_neighborhood(order: MogoOrderSummary | None) -> bool:
-    if not order or not order.neighborhood:
-        return False
-    neighborhood = normalize_text(order.neighborhood.split("-", 1)[0])
-    return neighborhood in FIRST_PURCHASE_SPECIAL_DELIVERY_NEIGHBORHOODS
-
-
-def _first_purchase_value_requires_alert(charge: ChargeEvent, order: MogoOrderSummary | None) -> bool:
-    amount = _first_purchase_amount_brl(charge, order)
-    if amount is None:
-        return True
-
-    modality = _order_modality(order)
-    if modality == "Retirada":
-        return amount >= FIRST_PURCHASE_PICKUP_ALERT_MIN_BRL
-    if modality == "Entrega":
-        if _special_first_purchase_delivery_neighborhood(order):
-            return amount > FIRST_PURCHASE_SPECIAL_DELIVERY_ALERT_ABOVE_BRL
-        if order and order.neighborhood:
-            return True
-    return amount >= FIRST_PURCHASE_DELIVERY_ALERT_MIN_BRL
-
-
 def _order_modality(order: MogoOrderSummary | None) -> str:
     if not order:
         return "não localizada no alerta"
@@ -1287,6 +1656,26 @@ def _mogo_order_lines(history: CustomerHistoryResult | None) -> list[str]:
     return lines
 
 
+def _related_profiles_lines(history: CustomerHistoryResult | None) -> list[str]:
+    profiles = tuple(getattr(history, "related_profiles", ()) or ())[:3]
+    if not profiles:
+        return []
+    lines = ["Cadastros possivelmente relacionados"]
+    for index, profile in enumerate(profiles, start=1):
+        lines.extend([
+            f"• Cadastro {index}: {profile.match_reason}",
+            f"  Nome: {profile.name or '-'}",
+            f"  Telefone: {profile.phone or '-'}",
+            f"  Email: {profile.email or '-'}",
+            f"  Documento: {profile.document or '-'}",
+            f"  Endereço: {profile.address or '-'}",
+            f"  Última compra válida: {profile.last_purchase_date or '-'} — {profile.last_purchase_amount or '-'}",
+            f"  Compras válidas: {profile.valid_purchase_count}",
+        ])
+    lines.append("• Informação auxiliar: não altera score nem decisão operacional.")
+    return lines
+
+
 def format_alert(result: RiskResult) -> str:
     charge = result.charge
     history = result.customer_history
@@ -1297,7 +1686,7 @@ def format_alert(result: RiskResult) -> str:
         "",
         *([
             "🚨🚨🚨 ATENÇÃO: JÁ CONSTA EM LISTA DE FRAUDADORES ANTERIORES 🚨🚨🚨",
-            "⚠️ HISTÓRICO ANTERIOR DE CHARGEBACK/FRAUDE — NÃO LIBERAR SEM VALIDAÇÃO",
+            "⚠️ HISTÓRICO ANTERIOR DE CHARGEBACK/FRAUDE — NÃO VENDER / NÃO LIBERAR SEM AUTORIZAÇÃO EXPRESSA DO ZÃO",
             "",
         ] if _has_hotlist_reason(result.reasons) else []),
         _mogo_order_header(history),
@@ -1315,6 +1704,7 @@ def format_alert(result: RiskResult) -> str:
         *_mogo_customer_lines(history, charge),
         "",
         *_mogo_order_lines(history),
+        *(["", *_related_profiles_lines(history)] if _related_profiles_lines(history) else []),
         "",
         "Pagamento Pagar.me",
         f"• Cliente Pagar.me: {charge.customer_name or '-'}",
@@ -1329,9 +1719,65 @@ def format_alert(result: RiskResult) -> str:
         "Motivos do alerta",
         reasons,
         "",
-        "Ação: falar com o cliente antes de liberar entrega. Não acusar fraude.",
+        (
+            "Ação: NÃO VENDER / NÃO LIBERAR sem autorização expressa do Zão. Não acusar fraude."
+            if _has_hotlist_reason(result.reasons)
+            else "Ação: falar com o cliente antes de liberar entrega. Não acusar fraude."
+        ),
     ]
     return "\n".join(lines)
+
+
+def _same_day_purchase_lines(context: SameDayRepeatContext) -> list[str]:
+    brt = timezone(timedelta(hours=-3))
+    return [
+        f"• {index}ª compra — {purchase.created_at.astimezone(brt).strftime('%H:%M')} — {_format_brl(purchase.amount)}"
+        for index, purchase in enumerate(context.purchases, start=1)
+    ]
+
+
+def format_same_day_repeat_alert(result: RiskResult) -> str:
+    context = result.same_day_repeat
+    if context is None:
+        raise ValueError("same-day repeat context is required")
+    charge = result.charge
+    return "\n".join([
+        "🚨🚨 ALERTA MUITO CRÍTICO — RECOMPRA NO DIA DA PRIMEIRA COMPRA",
+        "",
+        "Status operacional: SEGURAR / NÃO ENTREGAR",
+        "",
+        f"• Cliente: {charge.customer_name or '-'}",
+        f"• Data: {charge.created_at.astimezone(timezone(timedelta(hours=-3))).strftime('%d/%m/%Y')}",
+        f"• Compra atual: {context.sequence}ª compra aprovada no dia",
+        "• Situação: a primeira compra da vida ocorreu hoje e o cliente voltou a comprar no mesmo dia",
+        "",
+        "Compras aprovadas hoje",
+        *_same_day_purchase_lines(context),
+        "",
+        "Ação: conferir todas as compras com o cliente antes de liberar. Não acusar fraude.",
+    ])
+
+
+def format_same_day_repeat_notice(result: RiskResult) -> str:
+    context = result.same_day_repeat
+    if context is None:
+        raise ValueError("same-day repeat context is required")
+    charge = result.charge
+    return "\n".join([
+        "ℹ️ AVISO INFORMATIVO — CLIENTE COM MAIS DE UMA COMPRA NO DIA",
+        "",
+        "Status operacional: NÃO SEGURA ENTREGA",
+        "",
+        f"• Cliente: {charge.customer_name or '-'}",
+        f"• Data: {charge.created_at.astimezone(timezone(timedelta(hours=-3))).strftime('%d/%m/%Y')}",
+        f"• Compra atual: {context.sequence}ª compra aprovada no dia",
+        "• Situação: cliente antigo com múltiplas compras no mesmo dia",
+        "",
+        "Compras aprovadas hoje",
+        *_same_day_purchase_lines(context),
+        "",
+        "Ação: aviso para conferência rápida de possível duplicidade ou erro do cliente. Não bloqueia a entrega.",
+    ])
 
 
 def format_first_purchase_alert(result: RiskResult) -> str:
@@ -1341,22 +1787,30 @@ def format_first_purchase_alert(result: RiskResult) -> str:
     modality = _order_modality(order)
     is_pickup = modality == "Retirada"
     header_action = "CONFERIR NA RETIRADA" if is_pickup else "CONFERIR ANTES DE ENTREGAR"
-    address_line = "não aplicável — retirada na loja" if is_pickup else (_format_order_address(order) if order else "não localizado no alerta")
+    raw_address_line = _format_order_address(order) if order else ""
+    address_line = "não aplicável — retirada na loja" if is_pickup else (raw_address_line or "não localizado no alerta")
     customer_name = (order.customer_name if order and order.customer_name else charge.customer_name) or "-"
     order_lines = [
         f"• Cliente: {customer_name}",
         f"• Modalidade: {modality}",
     ]
-    if modality == "Entrega":
-        order_lines.extend([
-            f"• Agendamento: {_order_schedule(order)}",
-            f"• Endereço de entrega: {address_line or 'não localizado no alerta'}",
-        ])
+    if not is_pickup:
+        order_lines.append(f"• Agendamento: {_order_schedule(order)}")
+        order_lines.append(f"• Endereço de entrega: {address_line}")
     order_lines.extend([
         f"• Valor: {_format_brl(charge.amount)}",
         "• Pagamento: cartão online aprovado",
         "• Antifraude Pagar.me: sem alerta",
     ])
+    advisory_reasons = list(getattr(result, "reasons", []) or [])
+    advisory_lines = (
+        [
+            "",
+            "Avisos operacionais",
+            *[f"• {reason}" for reason in advisory_reasons],
+        ]
+        if advisory_reasons else []
+    )
     lines = [
         f"🟡 PRIMEIRA COMPRA — {header_action}",
         "",
@@ -1376,11 +1830,13 @@ def format_first_purchase_alert(result: RiskResult) -> str:
         "• Email: não localizado em compra anterior",
         "• Nome: não localizado em compra anterior confiável",
         f"• Endereço: {address_line}",
+        *(["", *_related_profiles_lines(history)] if _related_profiles_lines(history) else []),
         "",
         "Resumo",
         "• Situação: possível primeira compra",
         "• Risco: baixo/médio",
         "• Motivo: pedido aprovado sem histórico confiável no Mogo",
+        *advisory_lines,
         "",
         "Ação da equipe",
         "• Conferir documento do comprador na retirada." if is_pickup else "• Conferir documento do comprador antes de liberar.",
