@@ -1676,6 +1676,19 @@ def _related_profiles_lines(history: CustomerHistoryResult | None) -> list[str]:
     return lines
 
 
+def _first_purchase_history_address(history: CustomerHistoryResult | None, is_pickup: bool) -> str:
+    if is_pickup:
+        return "não aplicável — retirada na loja"
+    profiles = tuple(getattr(history, "related_profiles", ()) or ())
+    exact_address_profile = next(
+        (profile for profile in profiles if profile.match_kind == "exact_address"),
+        None,
+    )
+    if exact_address_profile and exact_address_profile.name:
+        return f"localizado o mesmo endereço no cadastro do cliente {exact_address_profile.name}"
+    return "não localizado em compra anterior"
+
+
 def format_alert(result: RiskResult) -> str:
     charge = result.charge
     history = result.customer_history
@@ -1829,7 +1842,7 @@ def format_first_purchase_alert(result: RiskResult) -> str:
         "• Telefone: não localizado em compra anterior",
         "• Email: não localizado em compra anterior",
         "• Nome: não localizado em compra anterior confiável",
-        f"• Endereço: {address_line}",
+        f"• Endereço: {_first_purchase_history_address(history, is_pickup)}",
         *(["", *_related_profiles_lines(history)] if _related_profiles_lines(history) else []),
         "",
         "Resumo",

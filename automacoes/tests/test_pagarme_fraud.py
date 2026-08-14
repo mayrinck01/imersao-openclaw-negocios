@@ -166,6 +166,7 @@ class PagarmeFraudTests(unittest.TestCase):
             self.assertIn("maria@example.com", text)
             self.assertIn("não altera score nem decisão operacional", text)
         self.assertEqual(50, fraud_result.score)
+        self.assertIn("• Endereço: localizado o mesmo endereço no cadastro do cliente Maria Antiga", first_text)
 
     def test_second_lifetime_purchase_same_brt_day_is_critical(self):
         with tempfile.NamedTemporaryFile() as db:
@@ -661,6 +662,8 @@ class PagarmeFraudTests(unittest.TestCase):
             self.assertIn("• Modalidade: Entrega", alert)
             self.assertIn("• Agendamento: 31/05/2026 14:30", alert)
             self.assertIn("• Endereço de entrega: Rua Dias Ferreira, 123, Apto 401 - Leblon - Rio de Janeiro/RJ", alert)
+            self.assertIn("• Endereço: não localizado em compra anterior", alert)
+            self.assertNotIn("• Endereço: Rua Dias Ferreira", alert)
 
     def test_first_purchase_alert_includes_order_context_when_modality_is_unknown(self):
         with tempfile.NamedTemporaryFile() as db:
