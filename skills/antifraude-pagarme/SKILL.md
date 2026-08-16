@@ -131,7 +131,8 @@ A contagem usa o dia BRT e a identidade normalizada do cliente. Somente cobranca
 Os alertas de fraude e primeira compra podem incluir ate tres cadastros anteriores como contexto exclusivamente informativo.
 
 - Endereco: exigir rua, numero e complemento/apartamento iguais apos normalizacao. Apartamentos diferentes nao correspondem.
-- Titular forte: nome completo do titular compativel com outro cadastro quando o titular divergir do comprador.
+- Nome do titular sozinho nunca cria nem aparece como relacionamento, mesmo quando o nome completo for igual ao de outro cadastro.
+- Documento do titular: CPF/documento exato do titular igual ao documento de outro cadastro confirma o relacionamento.
 - Titular parcial: nome ou sobrenome relevante so aparece quando endereco, telefone ou email tambem confirmar a relacao.
 - Exibir, quando disponivel: motivo, nome, telefone, email, documento, endereco, ultima compra valida, valor e quantidade de compras.
 - O bloco nao altera score, nao cria alerta sozinho e nao muda a decisao operacional.

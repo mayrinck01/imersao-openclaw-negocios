@@ -601,7 +601,11 @@ class LocalMogoHistoryChecker:
             ):
                 continue
             address_match = bool(current_address and current_address == _related_address_key(order))
-            strong_holder = bool(holder_mismatch and names_compatible(charge.holder_name, order.customer_name))
+            holder_document_match = bool(
+                only_digits(charge.holder_document)
+                and only_digits(order.document)
+                and only_digits(charge.holder_document) == only_digits(order.document)
+            )
             holder_tokens = set(_meaningful_name_tokens(charge.holder_name))
             order_tokens = set(_meaningful_name_tokens(order.customer_name))
             phone_match = bool(
@@ -620,8 +624,8 @@ class LocalMogoHistoryChecker:
                 holder_mismatch and holder_tokens & order_tokens
                 and (address_match or phone_match or email_match)
             )
-            if strong_holder:
-                kind, reason, priority = "strong_holder_name", "correspondência forte pelo titular", 3
+            if holder_document_match:
+                kind, reason, priority = "holder_document", "documento do titular igual", 4
             elif partial_holder:
                 kind, reason, priority = "partial_holder_confirmed", "possível relação pelo titular com confirmação adicional", 2
             elif address_match:

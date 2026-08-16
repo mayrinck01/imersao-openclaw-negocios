@@ -94,7 +94,7 @@ class PagarmeFraudTests(unittest.TestCase):
 
         self.assertEqual((), result.related_profiles)
 
-    def test_related_profile_full_cardholder_name_is_strong(self):
+    def test_related_profile_full_cardholder_name_alone_is_ignored(self):
         checker = LocalMogoHistoryChecker("/nonexistent")
         checker._loaded = True
         checker._valid_orders = [MogoOrderSummary(
@@ -107,7 +107,23 @@ class PagarmeFraudTests(unittest.TestCase):
             holder="CARLOS PEREIRA LIMA",
         )))
 
-        self.assertEqual("strong_holder_name", result.related_profiles[0].match_kind)
+        self.assertEqual((), result.related_profiles)
+
+    def test_related_profile_holder_document_match_is_confirmed(self):
+        checker = LocalMogoHistoryChecker("/nonexistent")
+        checker._loaded = True
+        checker._valid_orders = [MogoOrderSummary(
+            customer_name="Carlos Pereira Lima", email="carlos@example.com",
+            document="11122233344", date="01/08/2026", amount="180,00",
+        )]
+
+        result = checker.lookup(extract_charge(event(
+            "charge.paid", "ch_holder_document_related", customer_name="Ana Souza",
+            email="ana@example.com", document="99988877766", holder="CARLOS PEREIRA LIMA",
+            holder_document="11122233344",
+        )))
+
+        self.assertEqual("holder_document", result.related_profiles[0].match_kind)
 
     def test_related_profile_holder_surname_alone_without_confirmation_is_ignored(self):
         checker = LocalMogoHistoryChecker("/nonexistent")
