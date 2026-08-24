@@ -1349,26 +1349,23 @@ class RiskEngine:
     def _history_can_suppress_alerts(self, charge: ChargeEvent, history: CustomerHistoryResult) -> bool:
         if not history.has_prior_valid_purchase:
             return False
-        if history.matched_by == "name_address":
-            return True
-        if history.matched_by in {"document", "email", "phone"}:
-            return True
-        if history.matched_by == "pagarme_prior_charge":
-            return True
-        if history.matched_by == "name" and history.valid_purchase_count >= 2:
-            return True
-        has_stronger_identity = bool(
-            only_digits(charge.customer_document)
-            or normalize_text(charge.customer_email)
-            or only_digits(charge.customer_phone)
-        )
-        return not has_stronger_identity
+        if history.status != "valid_purchase":
+            return False
+        return history.matched_by in {
+            "document",
+            "email",
+            "phone",
+            "pagarme_prior_charge",
+            "name_address",
+        }
 
     def _score_paid_charge(self, charge: ChargeEvent) -> tuple[int, list[str], CustomerHistoryResult]:
         hotlist_score = 0
+        fraud_exception_score = 0
         strong_score = 0
         weak_score = 0
         hotlist_reasons: list[str] = []
+        fraud_exception_reasons: list[str] = []
         strong_reasons: list[str] = []
         weak_reasons: list[str] = []
         operational_reasons: list[str] = []
@@ -1414,8 +1411,8 @@ class RiskEngine:
         if not known_fraud_address:
             known_fraud_address = _known_fraud_address_label(charge.card_billing_address)
         if known_fraud_address:
-            strong_score += 50
-            strong_reasons.append(f"Endereço com fraude anterior: {known_fraud_address}")
+            fraud_exception_score += 50
+            fraud_exception_reasons.append(f"Endereço com fraude anterior: {known_fraud_address}")
 
         customer_document = only_digits(charge.customer_document)
         holder_document = only_digits(charge.holder_document)
@@ -1451,11 +1448,11 @@ class RiskEngine:
                 weak_score += 20
                 weak_reasons.append("Email pouco compatível com o nome do cliente")
 
-        if history.matched_by == "name_address" and not strong_score:
-            return hotlist_score, hotlist_reasons + operational_reasons, history
+        if history.matched_by == "name_address" and suppress_weak and not strong_score:
+            return hotlist_score + fraud_exception_score, hotlist_reasons + fraud_exception_reasons + operational_reasons, history
         if suppress_weak:
-            return hotlist_score + strong_score, hotlist_reasons + strong_reasons + operational_reasons, history
-        return hotlist_score + strong_score + weak_score, hotlist_reasons + strong_reasons + weak_reasons + operational_reasons, history
+            return hotlist_score + fraud_exception_score, hotlist_reasons + fraud_exception_reasons + operational_reasons, history
+        return hotlist_score + fraud_exception_score + strong_score + weak_score, hotlist_reasons + fraud_exception_reasons + strong_reasons + weak_reasons + operational_reasons, history
 
 
 def _format_mogo_context(history: CustomerHistoryResult | None) -> str:
@@ -1560,10 +1557,12 @@ def _has_hotlist_reason(reasons: list[str]) -> bool:
 
 
 def _mogo_order_header(history: CustomerHistoryResult | None) -> str:
+    if not history or history.status != "valid_purchase" or not history.has_prior_valid_purchase:
+        return "🧾 HISTÓRICO MOGO: não localizado"
     order = history.order if history else None
     if order and order.order_number:
         return f"🧾 HISTÓRICO MOGO: pedido #{order.order_number}"
-    return "🧾 HISTÓRICO MOGO: não localizado"
+    return "🧾 HISTÓRICO MOGO: localizado"
 
 
 def _mogo_customer_lines(history: CustomerHistoryResult | None, charge: ChargeEvent) -> list[str]:

@@ -431,7 +431,7 @@ class PagarmeFraudTests(unittest.TestCase):
             self.assertIn("mesmos 6 primeiros dígitos", " ".join(result.reasons).lower())
             self.assertIn("não bloqueia sozinho", " ".join(result.reasons).lower())
 
-    def test_same_day_exact_card_data_in_different_identity_increases_score(self):
+    def test_same_day_exact_card_data_does_not_alert_customer_with_prior_valid_purchase(self):
         with tempfile.NamedTemporaryFile() as db:
             checker = FakeHistoryChecker(CustomerHistoryResult(True, "document", "valid_purchase", None))
             engine = RiskEngine(db.name, history_checker=checker)
@@ -468,14 +468,12 @@ class PagarmeFraudTests(unittest.TestCase):
                 card_exp_year="2030",
             ))
 
-            self.assertTrue(result.alert)
-            self.assertEqual(result.score, 50)
+            self.assertFalse(result.alert)
+            self.assertEqual(result.score, 0)
             reasons = " ".join(result.reasons).lower()
-            self.assertIn("dados do cartão", reasons)
-            self.assertIn("vencimento", reasons)
-            self.assertIn("outro cadastro", reasons)
+            self.assertNotIn("dados do cartão", reasons)
 
-    def test_exact_card_data_in_different_identity_increases_score_on_any_day(self):
+    def test_exact_card_data_on_another_day_does_not_alert_customer_with_prior_valid_purchase(self):
         with tempfile.NamedTemporaryFile() as db:
             checker = FakeHistoryChecker(CustomerHistoryResult(True, "document", "valid_purchase", None))
             engine = RiskEngine(db.name, history_checker=checker)
@@ -512,9 +510,9 @@ class PagarmeFraudTests(unittest.TestCase):
                 card_exp_year="2030",
             ))
 
-            self.assertTrue(result.alert)
-            self.assertEqual(result.score, 50)
-            self.assertIn("dados do cartão", " ".join(result.reasons).lower())
+            self.assertFalse(result.alert)
+            self.assertEqual(result.score, 0)
+            self.assertNotIn("dados do cartão", " ".join(result.reasons).lower())
 
     def test_first_purchase_alert_includes_same_day_card_prefix_advisory(self):
         with tempfile.NamedTemporaryFile() as db:
@@ -1102,7 +1100,7 @@ class PagarmeFraudTests(unittest.TestCase):
             self.assertIn("• Documento do titular do cartão: final 8744", alert)
             self.assertNotIn("• Documento Pagar.me:", alert)
 
-    def test_mogo_prior_valid_purchase_suppresses_card_holder_document_mismatch_alert(self):
+    def test_name_only_mogo_history_does_not_suppress_card_holder_document_mismatch_alert(self):
         with tempfile.NamedTemporaryFile() as db:
             checker = FakeHistoryChecker(CustomerHistoryResult(True, "name", "valid_purchase", None, valid_purchase_count=2))
             engine = RiskEngine(db.name, history_checker=checker)
@@ -1113,9 +1111,9 @@ class PagarmeFraudTests(unittest.TestCase):
                 holder_document="98765432100",
             ))
 
-            self.assertFalse(result.alert)
-            self.assertEqual(0, result.score)
-            self.assertNotIn("cpf do cliente diferente", " ".join(result.reasons).lower())
+            self.assertTrue(result.alert)
+            self.assertEqual(50, result.score)
+            self.assertIn("cpf do cliente diferente", " ".join(result.reasons).lower())
 
     def test_prior_paid_pagarme_charge_suppresses_holder_document_mismatch_when_mogo_export_lags(self):
         with tempfile.NamedTemporaryFile() as db:
@@ -1361,7 +1359,212 @@ class PagarmeFraudTests(unittest.TestCase):
             self.assertIn("falha recente", reasons)
             self.assertIn("cartões diferentes", reasons)
 
-    def test_recurrent_name_only_mogo_customer_suppresses_weak_identity_alerts(self):
+    def test_prior_valid_purchase_suppresses_exact_card_reuse_in_another_customer(self):
+        with tempfile.NamedTemporaryFile() as db:
+            checker = FakeHistoryChecker(CustomerHistoryResult(
+                True,
+                "document",
+                "valid_purchase",
+                None,
+                valid_purchase_count=1,
+            ))
+            engine = RiskEngine(db.name, history_checker=checker)
+            engine.handle_event(event(
+                "charge.paid",
+                "ch_other_customer_same_card",
+                customer_name="Outro Cliente",
+                email="outro@example.com",
+                document="99988877766",
+                holder="OUTRO CLIENTE",
+            ))
+
+            result = engine.handle_event(event(
+                "charge.paid",
+                "ch_returning_same_card",
+                customer_name="Cliente Recorrente",
+                email="recorrente@example.com",
+                document="11122233344",
+                holder="CLIENTE RECORRENTE",
+            ))
+
+            self.assertFalse(result.alert)
+            self.assertEqual(0, result.score)
+            self.assertNotIn("cartão", " ".join(result.reasons).lower())
+
+    def test_name_only_history_does_not_suppress_exact_card_reuse(self):
+        with tempfile.NamedTemporaryFile() as db:
+            checker = FakeHistoryChecker(CustomerHistoryResult(
+                True,
+                "name",
+                "valid_purchase",
+                None,
+                valid_purchase_count=2,
+            ))
+            engine = RiskEngine(db.name, history_checker=checker)
+            engine.handle_event(event(
+                "charge.paid",
+                "ch_name_match_other_customer_same_card",
+                customer_name="Outro Cliente",
+                email="outro@example.com",
+                document="99988877766",
+                holder="OUTRO CLIENTE",
+            ))
+
+            result = engine.handle_event(event(
+                "charge.paid",
+                "ch_name_match_returning_same_card",
+                customer_name="Cliente Recorrente",
+                email="recorrente@example.com",
+                document="11122233344",
+                holder="CLIENTE RECORRENTE",
+            ))
+
+            self.assertTrue(result.alert)
+            self.assertGreaterEqual(result.score, 50)
+            self.assertIn("dados do cartão", " ".join(result.reasons).lower())
+
+    def test_error_history_flagged_as_prior_purchase_does_not_suppress_exact_card_reuse(self):
+        with tempfile.NamedTemporaryFile() as db:
+            checker = FakeHistoryChecker(CustomerHistoryResult(
+                True,
+                "document",
+                "error",
+                "timeout",
+                valid_purchase_count=1,
+            ))
+            engine = RiskEngine(db.name, history_checker=checker)
+            engine.handle_event(event(
+                "charge.paid",
+                "ch_error_history_other_customer_same_card",
+                customer_name="Outro Cliente",
+                email="outro@example.com",
+                document="99988877766",
+                holder="OUTRO CLIENTE",
+            ))
+
+            result = engine.handle_event(event(
+                "charge.paid",
+                "ch_error_history_returning_same_card",
+                customer_name="Cliente Recorrente",
+                email="recorrente@example.com",
+                document="11122233344",
+                holder="CLIENTE RECORRENTE",
+            ))
+
+            self.assertTrue(result.alert)
+            self.assertEqual(50, result.score)
+            reasons = " ".join(result.reasons).lower()
+            self.assertIn("dados do cartão", reasons)
+            self.assertIn("histórico mogo não validado", reasons)
+
+    def test_untrusted_name_address_history_does_not_suppress_weak_only_alert(self):
+        histories = (
+            CustomerHistoryResult(True, "name_address", "error", "timeout"),
+            CustomerHistoryResult(False, "name_address", "valid_purchase", None),
+        )
+        for index, history in enumerate(histories):
+            with self.subTest(history=history), tempfile.NamedTemporaryFile() as db:
+                checker = FakeHistoryChecker(history)
+                engine = RiskEngine(db.name, history_checker=checker, hotlist=FraudHotlist.empty())
+
+                result = engine.handle_event(event(
+                    "charge.paid",
+                    f"ch_untrusted_name_address_weak_{index}",
+                    customer_name="Patricia Bernardo",
+                    email="contato@example.com",
+                    holder="Natalia Nascimento Andrade",
+                ))
+
+                self.assertTrue(result.alert)
+                self.assertGreaterEqual(result.score, 50)
+                self.assertIn("titular diferente", " ".join(result.reasons).lower())
+
+    def test_history_without_match_kind_does_not_suppress_exact_card_reuse_without_identity_fields(self):
+        with tempfile.NamedTemporaryFile() as db:
+            checker = FakeHistoryChecker(CustomerHistoryResult(
+                True,
+                None,
+                "valid_purchase",
+                None,
+                valid_purchase_count=1,
+            ))
+            engine = RiskEngine(db.name, history_checker=checker)
+            engine.handle_event(event(
+                "charge.paid",
+                "ch_no_match_kind_other_customer_same_card",
+                customer_name="Outro Cliente",
+                email="",
+                document="",
+                holder="OUTRO CLIENTE",
+            ))
+
+            result = engine.handle_event(event(
+                "charge.paid",
+                "ch_no_match_kind_returning_same_card",
+                customer_name="Cliente Recorrente",
+                email="",
+                document="",
+                holder="CLIENTE RECORRENTE",
+            ))
+
+            self.assertTrue(result.alert)
+            self.assertGreaterEqual(result.score, 50)
+            self.assertIn("dados do cartão", " ".join(result.reasons).lower())
+
+    def test_unknown_match_kind_does_not_suppress_exact_card_reuse_without_identity_fields(self):
+        with tempfile.NamedTemporaryFile() as db:
+            checker = FakeHistoryChecker(CustomerHistoryResult(
+                True,
+                "legacy_customer_id",
+                "valid_purchase",
+                None,
+                valid_purchase_count=1,
+            ))
+            engine = RiskEngine(db.name, history_checker=checker)
+            engine.handle_event(event(
+                "charge.paid",
+                "ch_unknown_match_other_customer_same_card",
+                customer_name="Outro Cliente",
+                email="",
+                document="",
+                holder="OUTRO CLIENTE",
+            ))
+
+            result = engine.handle_event(event(
+                "charge.paid",
+                "ch_unknown_match_returning_same_card",
+                customer_name="Cliente Recorrente",
+                email="",
+                document="",
+                holder="CLIENTE RECORRENTE",
+            ))
+
+            self.assertTrue(result.alert)
+            self.assertGreaterEqual(result.score, 50)
+            self.assertIn("dados do cartão", " ".join(result.reasons).lower())
+
+    def test_prior_valid_purchase_does_not_suppress_known_fraud_address(self):
+        with tempfile.NamedTemporaryFile() as db:
+            checker = FakeHistoryChecker(CustomerHistoryResult(
+                True,
+                "document",
+                "valid_purchase",
+                None,
+                valid_purchase_count=1,
+                operational_order=MogoOrderSummary(
+                    address="Rua Major Rubens Vaz, 122",
+                    neighborhood="Gávea - Rio de Janeiro/RJ",
+                ),
+            ))
+            engine = RiskEngine(db.name, history_checker=checker)
+
+            result = engine.handle_event(event("charge.paid", "ch_returning_fraud_address"))
+
+            self.assertTrue(result.alert)
+            self.assertEqual(50, result.score)
+            self.assertIn("endereço com fraude anterior", " ".join(result.reasons).lower())
+
+    def test_recurrent_name_only_mogo_customer_does_not_suppress_weak_identity_alerts(self):
         with tempfile.NamedTemporaryFile() as db:
             checker = FakeHistoryChecker(CustomerHistoryResult(
                 True,
@@ -1380,11 +1583,10 @@ class PagarmeFraudTests(unittest.TestCase):
                 holder="MARIA QUINTERO",
             ))
 
-            self.assertFalse(result.alert)
-            self.assertEqual(result.score, 0)
+            self.assertTrue(result.alert)
+            self.assertGreaterEqual(result.score, 50)
             reasons = " ".join(result.reasons).lower()
-            self.assertNotIn("titular diferente", reasons)
-            self.assertNotIn("email pouco compatível", reasons)
+            self.assertIn("titular diferente", reasons)
 
     def test_name_address_mogo_match_suppresses_card_holder_document_alert(self):
         with tempfile.NamedTemporaryFile() as db:
@@ -1426,7 +1628,7 @@ class PagarmeFraudTests(unittest.TestCase):
             self.assertNotIn("cpf do cliente diferente", reasons)
             self.assertNotIn("titular diferente", reasons)
 
-    def test_single_mogo_purchase_suppresses_checkout_retry_alerts(self):
+    def test_single_name_only_mogo_purchase_does_not_suppress_checkout_retry_alerts(self):
         with tempfile.NamedTemporaryFile() as db:
             checker = FakeHistoryChecker(CustomerHistoryResult(
                 True,
@@ -1458,11 +1660,11 @@ class PagarmeFraudTests(unittest.TestCase):
                 brand="mastercard",
             ))
 
-            self.assertFalse(result.alert)
-            self.assertEqual(result.score, 0)
+            self.assertTrue(result.alert)
+            self.assertGreaterEqual(result.score, 50)
             reasons = " ".join(result.reasons).lower()
-            self.assertNotIn("falha recente", reasons)
-            self.assertNotIn("cartões diferentes", reasons)
+            self.assertIn("falha recente", reasons)
+            self.assertIn("cartões diferentes", reasons)
 
     def test_mogo_prior_valid_purchase_suppresses_multiple_cards_alert(self):
         with tempfile.NamedTemporaryFile() as db:
@@ -1691,6 +1893,66 @@ class PagarmeFraudTests(unittest.TestCase):
             self.assertIn("Pagamento Pagar.me", alert)
             self.assertIn("Motivos do alerta", alert)
             self.assertIn("• Dado em lista quente", alert)
+
+    def test_alert_header_says_mogo_history_found_without_order_number(self):
+        with tempfile.NamedTemporaryFile() as db:
+            checker = FakeHistoryChecker(CustomerHistoryResult(
+                True,
+                "document",
+                "valid_purchase",
+                None,
+                MogoOrderSummary(customer_name="Cliente Recorrente"),
+                valid_purchase_count=1,
+            ))
+            hotlist = FraudHotlist.from_customer_documents(["123"])
+            engine = RiskEngine(db.name, history_checker=checker, hotlist=hotlist)
+            result = engine.handle_event(event("charge.paid", "ch_history_without_order_number"))
+
+            alert = format_alert(result)
+
+            self.assertIn("HISTÓRICO MOGO: localizado", alert)
+            self.assertNotIn("HISTÓRICO MOGO: não localizado", alert)
+
+    def test_alert_header_does_not_say_mogo_history_found_for_error_flagged_as_prior_purchase(self):
+        with tempfile.NamedTemporaryFile() as db:
+            checker = FakeHistoryChecker(CustomerHistoryResult(
+                True,
+                "document",
+                "error",
+                "timeout",
+                MogoOrderSummary(customer_name="Cliente Recorrente"),
+                valid_purchase_count=1,
+            ))
+            hotlist = FraudHotlist.from_customer_documents(["123"])
+            engine = RiskEngine(db.name, history_checker=checker, hotlist=hotlist)
+            result = engine.handle_event(event("charge.paid", "ch_error_history_without_order_number"))
+
+            alert = format_alert(result)
+
+            self.assertIn("HISTÓRICO MOGO: não localizado", alert)
+            self.assertNotIn("HISTÓRICO MOGO: localizado", alert)
+
+    def test_alert_header_does_not_announce_order_number_for_error_history(self):
+        with tempfile.NamedTemporaryFile() as db:
+            checker = FakeHistoryChecker(CustomerHistoryResult(
+                True,
+                "document",
+                "error",
+                "timeout",
+                MogoOrderSummary(
+                    order_number="039999",
+                    customer_name="Cliente Recorrente",
+                ),
+                valid_purchase_count=1,
+            ))
+            hotlist = FraudHotlist.from_customer_documents(["123"])
+            engine = RiskEngine(db.name, history_checker=checker, hotlist=hotlist)
+            result = engine.handle_event(event("charge.paid", "ch_error_history_with_order_number"))
+
+            alert = format_alert(result)
+
+            self.assertIn("HISTÓRICO MOGO: não localizado", alert)
+            self.assertNotIn("HISTÓRICO MOGO: pedido #039999", alert)
 
     def test_alert_says_mogo_order_not_found_when_no_context(self):
         with tempfile.NamedTemporaryFile() as db:
