@@ -211,7 +211,11 @@ def customer_name_part_in_email_or_holder(customer_name: str | None, email: str 
 def _order_address_key(order: "MogoOrderSummary" | None) -> str:
     if order is None:
         return ""
-    return normalize_text(" ".join(part for part in (order.address, order.neighborhood) if part))
+    address = _related_address_key(order)
+    address = re.sub(r"\bid contato ifood\b.*$", "", address).strip()
+    value = " ".join(part for part in (address, normalize_text(order.neighborhood)) if part)
+    value = re.sub(r"(?<=[a-z])(?=\d)|(?<=\d)(?=[a-z])", " ", value)
+    return re.sub(r"\s+", " ", value).strip()
 
 
 def _related_address_key(order: "MogoOrderSummary" | None) -> str:
@@ -452,6 +456,23 @@ class CompositeCustomerHistoryChecker:
                     merged.error, merged.order, merged.valid_purchase_count,
                     merged.operational_order, result.related_profiles,
                 )
+        if merged.operational_order and not merged.has_prior_valid_purchase:
+            for checker in self.checkers:
+                lookup_with_order = getattr(checker, "lookup_with_operational_order", None)
+                if not callable(lookup_with_order):
+                    continue
+                result = lookup_with_order(charge, merged.operational_order)
+                if result.has_prior_valid_purchase:
+                    return CustomerHistoryResult(
+                        True,
+                        result.matched_by,
+                        result.status,
+                        result.error,
+                        result.order,
+                        result.valid_purchase_count,
+                        merged.operational_order,
+                        result.related_profiles or merged.related_profiles,
+                    )
         return merged
 
 
@@ -548,12 +569,19 @@ class LocalMogoHistoryChecker:
         self._operational_orders: list[MogoOrderSummary] = []
 
     def lookup(self, charge: ChargeEvent) -> CustomerHistoryResult:
+        return self.lookup_with_operational_order(charge, None)
+
+    def lookup_with_operational_order(
+        self,
+        charge: ChargeEvent,
+        operational_order: MogoOrderSummary | None,
+    ) -> CustomerHistoryResult:
         try:
             self._load_once()
         except Exception as exc:
             return CustomerHistoryResult(False, None, "error", exc.__class__.__name__)
 
-        operational_order = self._find_operational_order(charge)
+        operational_order = operational_order or self._find_operational_order(charge)
         related_profiles = self._find_related_profiles(charge, operational_order)
         name_address_order = self._find_valid_purchase_by_name_and_address(charge, operational_order)
         if name_address_order:
@@ -669,7 +697,7 @@ class LocalMogoHistoryChecker:
             self._loaded = True
             return
 
-        for path in self.reports_root.rglob("*.json"):
+        for path in self._history_json_paths():
             try:
                 payload = json.loads(path.read_text(encoding="utf-8", errors="replace"))
             except Exception:
@@ -683,6 +711,33 @@ class LocalMogoHistoryChecker:
             for row in self._iter_xlsx_rows(path):
                 self._index_operational_row(row)
         self._loaded = True
+
+    def _history_json_paths(self) -> list[Path]:
+        consolidated = (
+            self.reports_root
+            / "Pedidos Entregues Historico"
+            / "pedidos-entregues-historico.json"
+        )
+        if not consolidated.exists():
+            return list(self.reports_root.rglob("*.json"))
+
+        paths = [consolidated]
+        for folder, limit in (
+            ("Pendentes", 10),
+            ("Na Entrega", 10),
+            ("Pedidos Entregues", 10),
+            ("Analise Cadastro Clientes", 3),
+        ):
+            candidate = self.reports_root / folder
+            if candidate.exists():
+                paths.extend(
+                    sorted(
+                        candidate.glob("*.json"),
+                        key=lambda path: path.stat().st_mtime,
+                        reverse=True,
+                    )[:limit]
+                )
+        return paths
 
     def _operational_xlsx_paths(self) -> list[Path]:
         folders = ("Pendentes", "Na Entrega", "Pedidos Entregues")

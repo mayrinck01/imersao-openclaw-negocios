@@ -4,7 +4,7 @@ import unittest
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
-from automacoes.webhooks.pagarme_fraud import CustomerHistoryResult, FraudHotlist, LocalMogoHistoryChecker, MogoOrderSummary, RelatedCustomerProfile, RiskEngine, extract_charge, format_alert, format_first_purchase_alert, format_same_day_repeat_alert, format_same_day_repeat_notice, names_compatible, normalized_sha256
+from automacoes.webhooks.pagarme_fraud import CompositeCustomerHistoryChecker, CustomerHistoryResult, FraudHotlist, LocalMogoHistoryChecker, MogoOrderSummary, RelatedCustomerProfile, RiskEngine, extract_charge, format_alert, format_first_purchase_alert, format_same_day_repeat_alert, format_same_day_repeat_notice, names_compatible, normalized_sha256
 
 
 class FakeHistoryChecker:
@@ -2309,6 +2309,109 @@ class PagarmeFraudTests(unittest.TestCase):
             self.assertEqual(result.matched_by, "name_address")
             self.assertEqual(result.order.order_number, "008715")
             self.assertEqual(result.operational_order.order_number, "008749")
+
+    def test_consolidated_delivered_history_matches_ifood_name_and_address(self):
+        with tempfile.TemporaryDirectory() as root:
+            history = Path(root) / "Pedidos Entregues Historico"
+            history.mkdir(parents=True)
+            (history / "pedidos-entregues-historico.json").write_text(json.dumps({
+                "metadata": {"record_count": 1},
+                "records": [{
+                    "NumeroPedido": "056408",
+                    "StatusEntrega": "Finalizado",
+                    "StatusPago": "Sim",
+                    "NomeCliente": "Mayra Campos Souza",
+                    "Logradouro": "Rua Assunção",
+                    "Numero": "105",
+                    "Complemento": "Casa 05 apto 301",
+                    "Bairro": "Botafogo",
+                    "Cidade": "Rio de Janeiro",
+                    "Estado": "RJ",
+                    "OrigemPedido": "iFood",
+                }],
+            }), encoding="utf-8")
+            pending = Path(root) / "Pendentes"
+            pending.mkdir(parents=True)
+            (pending / "pedido.json").write_text(json.dumps({
+                "registros": [{
+                    "NumeroPedido": "061000",
+                    "StatusEntrega": "Pendente",
+                    "NomeCliente": "Mayra campos",
+                    "Logradouro": "Rua Assunção",
+                    "Numero": "105",
+                    "Complemento": "Casa05 apto 301",
+                    "Bairro": "Botafogo",
+                    "Cidade": "Rio de Janeiro",
+                    "Estado": "RJ",
+                    "ValorFinal": "230,00",
+                }]
+            }), encoding="utf-8")
+
+            result = LocalMogoHistoryChecker(root).lookup(extract_charge(event(
+                "charge.paid", "ch_mayra_ifood_history", customer_name="Mayra campos",
+                email="mayra@example.com", document="12816380726",
+            )))
+
+            self.assertTrue(result.has_prior_valid_purchase)
+            self.assertEqual("name_address", result.matched_by)
+            self.assertEqual("056408", result.order.order_number)
+
+    def test_consolidated_history_prevents_scanning_unrelated_report_folders(self):
+        with tempfile.TemporaryDirectory() as root:
+            history = Path(root) / "Pedidos Entregues Historico"
+            history.mkdir(parents=True)
+            (history / "pedidos-entregues-historico.json").write_text(json.dumps({
+                "records": [{
+                    "NumeroPedido": "1", "StatusEntrega": "Entregue", "StatusPago": "Sim",
+                    "NomeCliente": "Cliente do Consolidado",
+                }]
+            }), encoding="utf-8")
+            unrelated = Path(root) / "Relatorio Pesado Irrelevante"
+            unrelated.mkdir(parents=True)
+            (unrelated / "dados.json").write_text(json.dumps({
+                "registros": [{
+                    "NumeroPedido": "2", "StatusEntrega": "Entregue",
+                    "NomeCliente": "Cliente Fora do Consolidado",
+                }]
+            }), encoding="utf-8")
+
+            result = LocalMogoHistoryChecker(root).lookup(extract_charge(event(
+                "charge.paid", "ch_skip_unrelated", customer_name="Cliente Fora do Consolidado",
+                email="fora@example.com", document="",
+            )))
+
+            self.assertFalse(result.has_prior_valid_purchase)
+
+    def test_composite_rechecks_local_history_with_live_operational_address(self):
+        with tempfile.TemporaryDirectory() as root:
+            history = Path(root) / "Pedidos Entregues Historico"
+            history.mkdir(parents=True)
+            (history / "pedidos-entregues-historico.json").write_text(json.dumps({
+                "records": [{
+                    "NumeroPedido": "056408", "StatusEntrega": "Entregue", "StatusPago": "Sim",
+                    "NomeCliente": "Mayra Campos Souza", "Logradouro": "R. Assunção",
+                    "Numero": "105", "Complemento": "Casa 05 apto 301 ID Contato Ifood: 89259566", "Bairro": "Botafogo",
+                }]
+            }), encoding="utf-8")
+
+            live = FakeHistoryChecker(CustomerHistoryResult(
+                False, None, "not_found", None, None, 0,
+                MogoOrderSummary(
+                    order_number="061052", customer_name="Mayra campos",
+                    address="Rua Assunção, 105, Casa05 apto 301", neighborhood="Botafogo",
+                ),
+            ))
+            checker = CompositeCustomerHistoryChecker(LocalMogoHistoryChecker(root), live)
+
+            result = checker.lookup(extract_charge(event(
+                "charge.paid", "ch_composite_mayra", customer_name="Mayra campos",
+                email="mayra@example.com", document="12816380726",
+            )))
+
+            self.assertTrue(result.has_prior_valid_purchase)
+            self.assertEqual("name_address", result.matched_by)
+            self.assertEqual("056408", result.order.order_number)
+            self.assertEqual("061052", result.operational_order.order_number)
 
     def test_local_mogo_history_checker_ignores_non_paid_purchase_status(self):
         with tempfile.TemporaryDirectory() as root:
