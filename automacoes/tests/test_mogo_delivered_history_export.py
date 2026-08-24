@@ -5,10 +5,12 @@ from datetime import date
 from pathlib import Path
 
 from automacoes.scripts.mogo_delivered_history_export import (
+    DEFAULT_START,
     atomic_write_export,
     compact_record,
     fetch_period,
     paid_and_delivered,
+    record_key,
 )
 
 
@@ -32,6 +34,9 @@ class FakeSession:
 
 
 class MogoDeliveredHistoryExportTests(unittest.TestCase):
+    def test_default_start_matches_mogo_go_live_year(self):
+        self.assertEqual(date(2024, 1, 1), DEFAULT_START)
+
     def test_paid_and_delivered_requires_both_conditions(self):
         self.assertTrue(paid_and_delivered({"StatusEntrega": "Finalizado", "StatusPago": "Sim"}))
         self.assertFalse(paid_and_delivered({"StatusEntrega": "Finalizado", "StatusPago": "Não"}))
@@ -90,6 +95,12 @@ class MogoDeliveredHistoryExportTests(unittest.TestCase):
         self.assertEqual("Mayra Campos Souza", compact["NomeCliente"])
         self.assertEqual("Rua Assunção", compact["Logradouro"])
         self.assertNotIn("MapProperties", compact)
+
+    def test_record_key_prefers_internal_id_when_visible_order_number_repeats(self):
+        first = {"Id": 27901, "NumeroPedido": "025149"}
+        second = {"Id": 138646, "NumeroPedido": "025149"}
+
+        self.assertNotEqual(record_key(first), record_key(second))
 
 
 if __name__ == "__main__":

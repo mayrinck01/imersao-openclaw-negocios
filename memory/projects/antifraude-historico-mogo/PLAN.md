@@ -65,7 +65,8 @@ Disponibilizar ao antifraude um JSON consolidado de todos os pedidos pagos e efe
 
 - Decisão aprovada pelo Zão: histórico desde o início, atualização a cada cinco dias.
 - Causa raiz confirmada: XLSX de Pedidos Entregues era usado apenas como contexto operacional e não como histórico válido.
-- Carga inicial: 34.782 pedidos pagos e entregues, de 2021 a 24/08/2026; arquivo compacto de 27.366.408 bytes.
+- Carga corrigida: 37.359 pedidos pagos e entregues, todos com ID interno único, com `DataPedido` entre 2024 e 24/08/2026.
+- Auditoria: o aparente registro de 2021 era um pedido feito em 28/09/2024 cuja `DataEntrega` legada veio incorretamente como 28/09/2021. A deduplicação passou a usar o ID interno porque o Mogo reutiliza números visíveis de pedido; foram encontradas 2.577 colisões nesses números.
 - Caso real: pedido atual `061052` cruzado com iFood `056408` por `name_address`.
-- Verificação: 118 testes aprovados, compilação e `git diff --check` aprovados, endpoint `/health` saudável.
+- Verificação: 120 testes aprovados, compilação e `git diff --check` aprovados, endpoint `/health` saudável.
 - Timer ativo; próxima execução em 29/08/2026.

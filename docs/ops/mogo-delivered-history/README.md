@@ -2,7 +2,7 @@
 
 ## Objetivo
 
-Gerar uma fonte JSON consolidada de pedidos pagos e entregues desde 01/01/1996 até o dia atual. O primeiro registro real disponível é identificado na própria carga.
+Gerar uma fonte JSON consolidada de pedidos pagos e entregues desde 01/01/2024, início do uso do Mogo pela Cake, até o dia atual.
 
 ## Arquivo
 

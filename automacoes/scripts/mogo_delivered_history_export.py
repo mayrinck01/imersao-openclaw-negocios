@@ -12,7 +12,7 @@ from pathlib import Path
 from typing import Any
 
 
-DEFAULT_START = date(1996, 1, 1)
+DEFAULT_START = date(2024, 1, 1)
 DEFAULT_OUTPUT = Path(
     "/root/workspaces/cake-brain/relatorios/Mogo/"
     "Pedidos Entregues Historico/pedidos-entregues-historico.json"
@@ -49,6 +49,13 @@ def paid_and_delivered(row: dict[str, Any]) -> bool:
 
 def compact_record(row: dict[str, Any]) -> dict[str, Any]:
     return {field: row[field] for field in COMPACT_FIELDS if row.get(field) not in (None, "")}
+
+
+def record_key(row: dict[str, Any]) -> str:
+    internal_id = str(row.get("Id") or "").strip()
+    if internal_id:
+        return f"id:{internal_id}"
+    return "row:" + json.dumps(row, ensure_ascii=False, sort_keys=True)
 
 
 def fetch_period(
@@ -111,10 +118,7 @@ def fetch_all(session: Any, mogo_url: str, start: date, end: date) -> list[dict[
     records: dict[str, dict[str, Any]] = {}
     for period_start, period_end in _year_periods(start, end):
         for row in fetch_period(session, mogo_url, period_start, period_end):
-            key = str(row.get("NumeroPedido") or row.get("ID") or "").strip()
-            if not key:
-                key = json.dumps(row, ensure_ascii=False, sort_keys=True)
-            records[key] = row
+            records[record_key(row)] = row
         print(f"Período {period_start}..{period_end}: acumulado {len(records)}")
     return sorted(records.values(), key=lambda row: str(row.get("NumeroPedido") or row.get("ID") or ""))
 
