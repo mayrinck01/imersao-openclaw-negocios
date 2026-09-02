@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """
 BigDog — Mogo "Pendentes" Report
-Roda todo dia às 00:01 BRT.
+Roda todo dia às 08:08 BRT.
 Gera resumo de pedidos agendados (status Pendente) por data/hora e envia por email.
+Envia ao Cake Atendimento um alerta dos pedidos com data operacional vencida.
 """
 
 import sys, os, json
@@ -10,17 +11,18 @@ from datetime import datetime
 from collections import defaultdict
 import openpyxl
 from openpyxl.styles import Font, PatternFill, Alignment
-from mogo_excel import order_columns_by_first_record, format_currency_cells
+from mogo_excel import excel_safe_value, order_columns_by_records, format_currency_cells
 from filter_pt import month_year_pt, pt_columns, pt_title
 sys.path.insert(0, os.path.dirname(__file__))
 from gog_mail import send_gmail
 from mogo_login import mogo_login, MOGO_URL
 from mogo_pendentes_alerts import (
+    CAKE_ATENDIMENTO_GROUP,
     build_overdue_alert_message,
     build_pending_email_body,
     build_pending_email_subject,
     overdue_pending_orders,
-    send_telegram_alert,
+    send_whatsapp_group_alerts,
     sort_pending_orders,
 )
 
@@ -83,7 +85,7 @@ for p in pedidos:
 
 pedidos_atrasados = overdue_pending_orders(pedidos, today=hoje_date)
 if pedidos_atrasados:
-    print(f"ALERTA: {len(pedidos_atrasados)} pendente(s) com entrega vencida")
+    print(f"ALERTA: {len(pedidos_atrasados)} pendente(s) com data vencida")
 
 # Salvar Excel
 COLUNAS = [
@@ -100,7 +102,7 @@ COLUNAS = [
 ]
 
 
-COLUNAS = order_columns_by_first_record(pedidos[0] if pedidos else {}, COLUNAS)
+COLUNAS = order_columns_by_records(pedidos, COLUNAS)
 
 pasta = '/root/workspaces/cake-brain/relatorios/Mogo/Pendentes'
 os.makedirs(pasta, exist_ok=True)
@@ -120,7 +122,7 @@ for c, (_, header) in enumerate(COLUNAS, 1):
 
 for r_idx, pedido in enumerate(pedidos, 2):
     for c_idx, (col_name, _) in enumerate(COLUNAS, 1):
-        ws.cell(row=r_idx, column=c_idx, value=pedido.get(col_name, ''))
+        ws.cell(row=r_idx, column=c_idx, value=excel_safe_value(pedido.get(col_name, '')))
 
 format_currency_cells(wb)
 wb.save(xlsx_path)
@@ -157,8 +159,14 @@ else:
 
 if pedidos_atrasados:
     alert = build_overdue_alert_message(pedidos_atrasados, today_label=hoje_br)
-    telegram_res = send_telegram_alert(alert)
-    if telegram_res.returncode == 0:
-        print("✅ Alerta Telegram enviado para pendentes atrasados")
-    else:
-        print(f"ERRO Telegram alerta atrasados: {telegram_res.stderr[:200]}")
+    whatsapp_results = send_whatsapp_group_alerts(
+        alert,
+        targets=[CAKE_ATENDIMENTO_GROUP],
+    )
+    whatsapp_ok = [result for result in whatsapp_results if result.get("ok")]
+    whatsapp_failed = [result for result in whatsapp_results if not result.get("ok")]
+    if whatsapp_ok:
+        print(f"✅ Alerta WhatsApp enviado para {len(whatsapp_ok)} grupo(s) operacional(is)")
+    if whatsapp_failed:
+        failed_targets = ", ".join(str(result.get("target")) for result in whatsapp_failed)
+        print(f"AVISO WhatsApp grupos não entregues: {failed_targets}")

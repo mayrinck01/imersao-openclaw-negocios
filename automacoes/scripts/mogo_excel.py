@@ -3,6 +3,7 @@
 Helpers para exportação XLSX dos relatórios Mogo.
 """
 
+import json
 import re
 
 # Regex para detectar valores em formato monetário brasileiro: "1.234,56" ou "0,00"
@@ -44,24 +45,48 @@ def format_currency_cells(wb) -> int:
     return converted
 
 
+def excel_safe_value(value):
+    """Converte valores estruturados da API em texto aceito pelo openpyxl."""
+    if value is None:
+        return ""
+    if isinstance(value, (dict, list, tuple)):
+        return json.dumps(value, ensure_ascii=False, separators=(",", ":"), sort_keys=True)
+    return value
+
+
 def order_columns_by_first_record(first_record, columns):
     """
-    Reordena COLUNAS para seguir a ordem exata do primeiro registro retornado pela API.
+    Resolve as colunas pela ordem exata do primeiro registro retornado pela API.
 
     - `first_record`: dict do primeiro item retornado pelo relatório
-    - `columns`: lista de tuplas (chave, header)
+    - `columns`: mapa de nomes conhecidos como lista de tuplas (chave, header)
 
-    Colunas conhecidas seguem a ordem do dict original.
-    Colunas extras definidas manualmente, mas ausentes no registro, ficam no final,
-    preservando a ordem relativa original.
+    A resposta do Mogo define quais colunas existem e em que ordem aparecem.
+    A lista manual serve apenas para dar nomes amigáveis às chaves conhecidas.
+    Chaves novas usam o próprio nome técnico para nunca serem descartadas.
     """
-    if not first_record or not isinstance(first_record, dict):
+    return order_columns_by_records([first_record], columns)
+
+
+def order_columns_by_records(records, columns):
+    """Resolve a união ordenada das chaves reais presentes em todos os registros.
+
+    A ordem é a primeira ocorrência de cada chave ao percorrer as linhas. Assim,
+    campos condicionais que só aparecem depois da primeira linha também entram no
+    Excel, sem permitir perda silenciosa de coluna.
+    """
+    headers_by_key = dict(columns)
+    ordered_keys = []
+    seen = set()
+    for record in records or []:
+        if not isinstance(record, dict):
+            continue
+        for key in record.keys():
+            if key in seen:
+                continue
+            seen.add(key)
+            ordered_keys.append(key)
+
+    if not ordered_keys:
         return columns
-
-    order_index = {key: idx for idx, key in enumerate(first_record.keys())}
-
-    known = [col for col in columns if col[0] in order_index]
-    unknown = [col for col in columns if col[0] not in order_index]
-
-    known.sort(key=lambda col: order_index[col[0]])
-    return known + unknown
+    return [(key, headers_by_key.get(key, key)) for key in ordered_keys]

@@ -14,7 +14,7 @@ import sys, os, subprocess, json, re
 from datetime import datetime, timedelta
 import openpyxl
 from openpyxl.styles import Font, PatternFill, Alignment
-from mogo_excel import order_columns_by_first_record, format_currency_cells
+from mogo_excel import excel_safe_value, order_columns_by_records, format_currency_cells
 from filter_pt import month_year_pt, pt_columns, pt_title
 sys.path.insert(0, os.path.dirname(__file__))
 from mogo_login import mogo_login, MOGO_URL
@@ -118,7 +118,7 @@ COLUNAS = [
 ]
 
 
-COLUNAS = order_columns_by_first_record(pedidos[0] if pedidos else {}, COLUNAS)
+COLUNAS = order_columns_by_records(pedidos, COLUNAS)
 
 pasta = '/root/workspaces/cake-brain/relatorios/Mogo/Pedidos Entregues'
 os.makedirs(pasta, exist_ok=True)
@@ -144,7 +144,7 @@ for r_idx, pedido in enumerate(pedidos, 2):
             val = extrair_foody(pedido.get('SincronizadoFoodyDelivery', ''))
         else:
             val = pedido.get(col_name, '') or ''
-        ws.cell(row=r_idx, column=c_idx, value=val)
+        ws.cell(row=r_idx, column=c_idx, value=excel_safe_value(val))
 
 # Ajustar largura das colunas
 larguras = [12, 12, 14, 14, 30, 14, 22, 20, 35, 18, 6, 8, 10, 14, 18]
