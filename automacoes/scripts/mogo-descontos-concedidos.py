@@ -16,13 +16,14 @@ Campos: A0=Atendente, A1=Cliente, A2=Desconto, A3=Data, A4=Hora,
 """
 
 import sys, os, subprocess, json, calendar
-from datetime import datetime
+from datetime import datetime, timedelta
 import openpyxl
 from openpyxl.styles import Font, PatternFill, Alignment
-from mogo_excel import order_columns_by_first_record, format_currency_cells
+from mogo_excel import order_columns_by_records, format_currency_cells
 from filter_pt import month_year_pt, pt_columns, pt_title
 sys.path.insert(0, os.path.dirname(__file__))
 from mogo_login import mogo_login, MOGO_URL
+from mogo_report_integrity import fetch_daily_snapshots
 
 op_token = open('/root/.openclaw/credentials/1password-token.txt').read().strip()
 env = os.environ.copy()
@@ -43,42 +44,20 @@ mes_nome = month_year_pt(datetime(ano_ant, mes_ant, 1))
 
 print(f"Descontos Concedidos: {data_ini} a {data_fim}...")
 
-filtro = f"Atendente{{|DataDe{{{data_ini}|OrigemPedido{{|DataAte{{{data_fim}|MotivoDesconto{{"
-
-# Buscar total
-r_test = session.get(f"{MOGO_URL}/relatorios/BuscaDadosRelatorioDinamico", params={
-    'idGeradorRelatorios': '0', 'codRelatorio': '45',
-    'filtro': filtro,
-    'gridparamns': json.dumps({"Searching": True, "RecordsCount": 1, "PageIndex": 0, "SortingName": "", "SortingOrder": "ASC"}),
-    'colunas': '[]', 'dbNameFranquia': ''
-}, timeout=30)
-total_records = int(r_test.json().get('records', 0))
-print(f"Total de registros: {total_records}")
-
-# Buscar em lotes
-todos_registros = []
-lote = 2000
-pagina = 0
-
-while True:
+def buscar_dia(data, page_size):
+    filtro = f"Atendente{{|DataDe{{{data}|OrigemPedido{{|DataAte{{{data}|MotivoDesconto{{"
     r = session.get(f"{MOGO_URL}/relatorios/BuscaDadosRelatorioDinamico", params={
-        'idGeradorRelatorios': '0', 'codRelatorio': '45',
-        'filtro': filtro,
-        'gridparamns': json.dumps({
-            "Searching": True, "RecordsCount": lote,
-            "PageIndex": pagina, "SortingName": "", "SortingOrder": "ASC"
-        }),
+        'idGeradorRelatorios': '0', 'codRelatorio': '45', 'filtro': filtro,
+        'gridparamns': json.dumps({'Searching': True, 'RecordsCount': page_size,
+            'PageIndex': 0, 'SortingName': '', 'SortingOrder': 'ASC'}),
         'colunas': '[]', 'dbNameFranquia': ''
-    }, timeout=60)
+    }, timeout=90)
+    r.raise_for_status(); payload = r.json()
+    return int(payload.get('records', 0)), payload.get('rows') or []
 
-    rows = r.json().get('rows') or []
-    todos_registros.extend(rows)
-    print(f"  Lote {pagina+1}: {len(rows)} registros (total: {len(todos_registros)})")
-
-    if len(rows) < lote or len(todos_registros) >= total_records:
-        break
-    pagina += 1
-
+inicio = datetime(ano_ant, mes_ant, 1).date()
+fim = datetime(ano_ant, mes_ant, ultimo_dia).date()
+todos_registros = fetch_daily_snapshots(inicio, fim, buscar_dia, limit=2000)
 print(f"Total carregado: {len(todos_registros)}")
 
 if not todos_registros:
@@ -107,7 +86,7 @@ COLUNAS = [
 ]
 
 
-COLUNAS = order_columns_by_first_record(todos_registros[0] if todos_registros else {}, COLUNAS)
+COLUNAS = order_columns_by_records(todos_registros, COLUNAS)
 
 pasta = '/root/workspaces/cake-brain/relatorios/Mogo/Descontos Concedidos'
 os.makedirs(pasta, exist_ok=True)
@@ -164,6 +143,8 @@ with open(json_path, 'w', encoding='utf-8') as f:
 print(f"JSON salvo: {json_path}")
 
 # ── Enviar email ───────────────────────────────────────────────────────────────
+if os.environ.get("MOGO_SKIP_EMAIL") == "1":
+    sys.exit(0)
 corpo = f"🏷️ Descontos Concedidos — {mes_nome}\n"
 corpo += "=" * 50 + "\n\n"
 corpo += f"📅 Período: {data_ini} a {data_fim}\n"

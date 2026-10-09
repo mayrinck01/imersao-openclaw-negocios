@@ -13,14 +13,19 @@ Endpoint: GET /relatorios/BuscaDadosRelatorioDinamico
   idGeradorRelatorios=0, codRelatorio=58
 """
 
+import argparse
 import sys, os, subprocess, json, calendar, time
 from datetime import datetime, timedelta
 import openpyxl
 from openpyxl.styles import Font, PatternFill, Alignment
-from mogo_excel import order_columns_by_first_record, format_currency_cells
+from mogo_excel import order_columns_by_records, format_currency_cells
 from filter_pt import month_year_pt, pt_columns, pt_title
 sys.path.insert(0, os.path.dirname(__file__))
 from mogo_login import mogo_login, MOGO_URL
+
+parser = argparse.ArgumentParser()
+parser.add_argument("--no-email", action="store_true", help="Gera arquivos sem enviar email")
+args = parser.parse_args()
 
 op_token = open('/root/.openclaw/credentials/1password-token.txt').read().strip()
 env = os.environ.copy()
@@ -47,9 +52,10 @@ print(f"Faturamento Detalhado: {data_ini} a {data_fim}...")
 # O relatório mensal inteiro em lotes de 5000 pode estourar timeout do Mogo.
 todos_registros = []
 cursor = primeiro
+falhas = []
 
 while cursor <= ultimo:
-    fim_semana = min(cursor + timedelta(days=6), ultimo)
+    fim_semana = cursor
     data_ini_semana = cursor.strftime('%d/%m/%Y')
     data_fim_semana = fim_semana.strftime('%d/%m/%Y')
 
@@ -64,6 +70,8 @@ while cursor <= ultimo:
 
     pagina = 0
     lote = 2000
+    total_dia_carregado = 0
+    total_semana = 0
 
     while True:
         tentativa = 0
@@ -90,6 +98,7 @@ while cursor <= ultimo:
             except Exception as e:
                 if tentativa >= 3:
                     print(f"  ERRO {data_ini_semana}–{data_fim_semana} lote {pagina+1}: {e}")
+                    falhas.append(f"{data_ini_semana}–{data_fim_semana} lote {pagina+1}: {e}")
                     rows = []
                     d = {}
                     break
@@ -97,7 +106,11 @@ while cursor <= ultimo:
                 time.sleep(2 * tentativa)
 
         todos_registros.extend(rows)
+        total_dia_carregado += len(rows)
         total_semana = int(d.get('records', 0) or 0)
+        if total_semana > lote:
+            falhas.append(f"{data_ini_semana}: excede limite diário seguro: {total_semana} > {lote}")
+            break
         print(
             f"  {data_ini_semana}–{data_fim_semana} lote {pagina+1}: "
             f"{len(rows)} registros (acumulado: {len(todos_registros)} | total semana: {total_semana})"
@@ -107,9 +120,18 @@ while cursor <= ultimo:
             break
         pagina += 1
 
+    if total_dia_carregado != total_semana:
+        falhas.append(f"{data_ini_semana}: contagem diária divergente API={total_semana}, linhas={total_dia_carregado}")
+
     cursor = fim_semana + timedelta(days=1)
 
 print(f"Total carregado: {len(todos_registros)}")
+
+if falhas:
+    print("Falhas parciais detectadas; relatório não será enviado como OK.")
+    for falha in falhas:
+        print(f"  FALHA: {falha}")
+    sys.exit(1)
 
 if not todos_registros:
     print("Nenhum registro encontrado.")
@@ -128,19 +150,24 @@ total_fmt = f"R$ {total_valor:,.2f}".replace(',','X').replace('.', ',').replace(
 
 # ── Salvar Excel ───────────────────────────────────────────────────────────────
 COLUNAS = [
-    ('dt',      'Data'),
-    ('hr',      'Hora'),
-    ('sem',     'Dia da Semana'),
-    ('val',     'Valor'),
-    ('tp',      'Pagamento'),
-    ('func',    'Funcionário'),
-    ('cliente', 'Cliente'),
-    ('origem',  'Origem'),
-    ('turn',    'Turno'),
+    ('dt',        'Data'),
+    ('emis',      'Emissão'),
+    ('receb',     'Recebimento'),
+    ('hr',        'Hora'),
+    ('sem',       'Dia da Semana'),
+    ('val',       'Valor'),
+    ('func',      'Funcionário'),
+    ('tp',        'Pagamento'),
+    ('bandeira',  'Bandeira'),
+    ('cliente',   'Cliente'),
+    ('origem',    'Tipo Pedido'),
+    ('turn',      'Turno'),
+    ('caixa',     'Caixa'),
+    ('caixaAbre', 'Data Caixa'),
 ]
 
 
-COLUNAS = order_columns_by_first_record(todos_registros[0] if todos_registros else {}, COLUNAS)
+COLUNAS = order_columns_by_records(todos_registros, COLUNAS)
 
 pasta = '/root/workspaces/cake-brain/relatorios/Mogo/Faturamento Detalhado'
 os.makedirs(pasta, exist_ok=True)
@@ -183,6 +210,10 @@ print(f"JSON salvo: {json_path}")
 
 # ── Enviar email ───────────────────────────────────────────────────────────────
 mes_nome = month_year_pt(datetime(ano_ant, mes_ant, 1))
+
+if args.no_email:
+    print("Email pulado (--no-email).")
+    sys.exit(0)
 
 corpo = f"📊 Faturamento Detalhado — {mes_nome}\n"
 corpo += "=" * 50 + "\n\n"

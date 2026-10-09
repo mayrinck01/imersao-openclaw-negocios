@@ -19,7 +19,7 @@ import sys, os, subprocess, json, calendar
 from datetime import datetime
 import openpyxl
 from openpyxl.styles import Font, PatternFill, Alignment
-from mogo_excel import order_columns_by_first_record, format_currency_cells
+from mogo_excel import order_columns_by_records, format_currency_cells
 from filter_pt import month_year_pt, pt_columns, pt_title
 sys.path.insert(0, os.path.dirname(__file__))
 from mogo_login import mogo_login, MOGO_URL
@@ -108,7 +108,7 @@ COLUNAS = [
 ]
 
 
-COLUNAS = order_columns_by_first_record(registros[0] if registros else {}, COLUNAS)
+COLUNAS = order_columns_by_records(registros, COLUNAS)
 
 pasta = '/root/workspaces/cake-brain/relatorios/Mogo/Vendas Sintetico'
 os.makedirs(pasta, exist_ok=True)
@@ -166,6 +166,8 @@ with open(json_path, 'w', encoding='utf-8') as f:
 print(f"JSON salvo: {json_path}")
 
 # ── Enviar email ───────────────────────────────────────────────────────────────
+if os.environ.get("MOGO_SKIP_EMAIL") == "1":
+    sys.exit(0)
 corpo = f"📊 Vendas Sintético — {mes_nome}\n"
 corpo += "=" * 50 + "\n\n"
 corpo += f"📅 Período: {data_ini} a {data_fim} (Filtro Data: Pedido)\n"

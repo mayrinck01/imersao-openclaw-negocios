@@ -6,10 +6,14 @@ from pathlib import Path
 SCRIPTS_DIR = Path(__file__).resolve().parents[1] / "scripts"
 sys.path.insert(0, str(SCRIPTS_DIR))
 
-from mogo_excel import excel_safe_value, order_columns_by_first_record, order_columns_by_records
+from mogo_excel import br_currency_to_float, excel_safe_value, is_br_currency, order_columns_by_first_record, order_columns_by_records
 
 
 class MogoExcelRealColumnsTests(unittest.TestCase):
+    def test_negative_currency_with_space_after_sign_is_numeric(self):
+        self.assertTrue(is_br_currency("- 50,00"))
+        self.assertEqual(-50.0, br_currency_to_float("- 50,00"))
+
     def test_uses_exact_api_keys_and_keeps_unknown_columns(self):
         api_record = {
             "emis": "01/07/2026",

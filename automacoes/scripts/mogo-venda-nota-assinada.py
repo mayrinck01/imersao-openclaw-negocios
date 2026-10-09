@@ -16,7 +16,7 @@ from pathlib import Path
 sys.path.insert(0, '/root/workspaces/cake-brain/automacoes/scripts')
 from mogo_login import mogo_login, MOGO_URL
 from filter_pt import month_year_pt
-from mogo_excel import format_currency_cells
+from mogo_excel import format_currency_cells, order_columns_by_records
 
 parser = argparse.ArgumentParser()
 parser.add_argument('mes', nargs='?', type=int, default=None)
@@ -147,6 +147,7 @@ COLUNAS = [
     ('Itens', 'Itens'),
     ('IsService', 'IsService'),
 ]
+
 
 wb = openpyxl.Workbook()
 ws = wb.active

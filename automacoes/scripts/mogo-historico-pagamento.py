@@ -21,7 +21,7 @@ import sys, os, subprocess, json, calendar
 from datetime import datetime, timedelta
 import openpyxl
 from openpyxl.styles import Font, PatternFill, Alignment
-from mogo_excel import order_columns_by_first_record, format_currency_cells
+from mogo_excel import order_columns_by_records, format_currency_cells
 from filter_pt import month_year_pt
 sys.path.insert(0, os.path.dirname(__file__))
 from mogo_login import mogo_login, MOGO_URL
@@ -46,10 +46,11 @@ mes_nome = month_year_pt(primeiro)
 print(f"Histórico de Pagamento: {primeiro.strftime('%d/%m/%Y')} a {ultimo.strftime('%d/%m/%Y')}...")
 
 todos_registros = []
+falhas = []
 cursor = primeiro
 
 while cursor <= ultimo:
-    fim_semana = min(cursor + timedelta(days=6), ultimo)
+    fim_semana = cursor
     data_ini_str = cursor.strftime('%d/%m/%Y')
     data_fim_str = fim_semana.strftime('%d/%m/%Y')
 
@@ -82,6 +83,8 @@ while cursor <= ultimo:
             todos_registros.extend(rows)
             total_carregado_semana += len(rows)
             total_semana = int(d.get('records', 0))
+            if total_semana > lote:
+                raise RuntimeError(f"{data_ini_str}: excede limite diário seguro: {total_semana} > {lote}")
             print(f"  {data_ini_str}–{data_fim_str} lote {pagina+1}: {len(rows)} | acumulado semana: {total_carregado_semana} | total semana: {total_semana}")
 
             if len(rows) < lote or (total_semana and total_carregado_semana >= total_semana):
@@ -89,12 +92,19 @@ while cursor <= ultimo:
             pagina += 1
 
         except Exception as e:
-            print(f"  ERRO semana {data_ini_str}: {e}")
+            print(f"  ERRO dia {data_ini_str}: {e}")
+            falhas.append(f"{data_ini_str}: {e}")
             break
+
+    if total_carregado_semana != total_semana:
+        falhas.append(f"{data_ini_str}: contagem diária divergente API={total_semana}, linhas={total_carregado_semana}")
 
     cursor = fim_semana + timedelta(days=1)
 
 print(f"Total carregado: {len(todos_registros)}")
+
+if falhas:
+    raise RuntimeError("; ".join(falhas))
 
 if not todos_registros:
     print("Nenhum dado encontrado.")
@@ -133,7 +143,7 @@ COLUNAS = [
 ]
 
 
-COLUNAS = order_columns_by_first_record(todos_registros[0] if todos_registros else {}, COLUNAS)
+COLUNAS = order_columns_by_records(todos_registros, COLUNAS)
 
 pasta = '/root/workspaces/cake-brain/relatorios/Mogo/Historico Pagamento'
 os.makedirs(pasta, exist_ok=True)
@@ -175,6 +185,8 @@ with open(json_path, 'w', encoding='utf-8') as f:
 print(f"JSON salvo: {json_path}")
 
 # ── Enviar email ───────────────────────────────────────────────────────────────
+if os.environ.get("MOGO_SKIP_EMAIL") == "1":
+    sys.exit(0)
 corpo = f"💳 Histórico de Pagamento — {mes_nome}\n"
 corpo += "=" * 50 + "\n\n"
 corpo += f"📅 Período: {primeiro.strftime('%d/%m/%Y')} a {ultimo.strftime('%d/%m/%Y')} (Tipo Data: Pedido)\n"

@@ -23,6 +23,7 @@ from mogo_excel import order_columns_by_records, format_currency_cells
 from filter_pt import month_year_pt
 sys.path.insert(0, os.path.dirname(__file__))
 from mogo_login import mogo_login, MOGO_URL
+from mogo_report_integrity import validate_service_fee_against_sales
 from mogo_taxa_servico_pagination import (
     fetch_by_day,
     parse_decimal_br,
@@ -81,28 +82,73 @@ if not todos_registros:
     print("Nenhum dado encontrado.")
     sys.exit(0)
 
-# Calcular total
-total_taxa = sum(parse_decimal_br(reg.get('A2')) for reg in todos_registros)
+# Validar o líquido contra os itens de origem mesa/comanda do Vendas Analítico.
+def buscar_vendas_dia(data, page_size):
+    filtro = f"TipoFiltroData{{1|DataDe{{{data}|DataAte{{{data}"
+    r = session.get(f"{MOGO_URL}/relatorios/BuscaDadosRelatorioDinamico", params={
+        'idGeradorRelatorios': '0', 'codRelatorio': '3', 'filtro': filtro,
+        'gridparamns': json.dumps({'Searching': True, 'RecordsCount': page_size,
+            'PageIndex': 0, 'SortingName': '', 'SortingOrder': 'ASC'}),
+        'colunas': '[]', 'dbNameFranquia': ''
+    }, timeout=90)
+    r.raise_for_status(); payload = r.json()
+    return int(payload.get('records', 0)), payload.get('rows') or []
+
+
+def carregar_vendas_mesa_comanda():
+    vendas = fetch_by_day(inicio, fim, buscar_vendas_dia, page_size=lote)
+    return sum(
+        parse_decimal_br(r.get('valTota')) for r in vendas
+        if str(r.get('OrigemPedido') or '').strip().lower().startswith(('mesa', 'comanda'))
+    )
+
+# Calcular total líquido e taxa.
+total_liquido = sum(parse_decimal_br(reg.get('A2')) for reg in todos_registros)
+total_taxa = sum(parse_decimal_br(reg.get('A1')) for reg in todos_registros)
+vendas_mesa_comanda = carregar_vendas_mesa_comanda()
+integridade = validate_service_fee_against_sales(total_liquido, vendas_mesa_comanda)
+if not integridade['ok']:
+    print(f"DIVERGÊNCIA de R$ {integridade['difference']}: repetindo Taxa de Serviço uma vez...")
+    todos_registros = fetch_by_day(inicio, fim, buscar_dia, page_size=lote)
+    total_liquido = sum(parse_decimal_br(reg.get('A2')) for reg in todos_registros)
+    total_taxa = sum(parse_decimal_br(reg.get('A1')) for reg in todos_registros)
+    integridade = validate_service_fee_against_sales(total_liquido, vendas_mesa_comanda)
+suspect_marker = f"/root/workspaces/cake-brain/relatorios/Mogo/Taxa Servico/{mes_ref}.suspeito.json"
+if not integridade['ok']:
+    os.makedirs(os.path.dirname(suspect_marker), exist_ok=True)
+    with open(suspect_marker, 'w', encoding='utf-8') as marker:
+        json.dump({
+            'status': 'suspeito', 'periodo': {'de': data_ini, 'ate': data_fim},
+            'tentativas': 2, 'total_liquido_taxa_servico': str(total_liquido),
+            'total_vendas_analitico_mesa_comanda': str(vendas_mesa_comanda),
+            'diferenca': str(integridade['difference']), 'tolerancia': '1.00'
+        }, marker, ensure_ascii=False, indent=2)
+    raise RuntimeError(
+        f"relatório suspeito após nova tentativa: Taxa Serviço={total_liquido}; "
+        f"Vendas Analítico mesa/comanda={vendas_mesa_comanda}; diferença={integridade['difference']}"
+    )
+if os.path.exists(suspect_marker):
+    os.remove(suspect_marker)
+
 def fmt(v):
     return f"R$ {v:,.2f}".replace(',','X').replace('.', ',').replace('X','.')
 
 # ── Salvar Excel ───────────────────────────────────────────────────────────────
 COLUNAS = [
-    ('A0',  'Funcionário'),
-    ('A1',  'Taxa %'),
-    ('A2',  'Total Taxa'),
     ('A3',  'Produto'),
-    ('A4',  'Comanda'),
-    ('A5',  'Nº Pedido'),
-    ('A6',  'Data'),
-    ('A7',  'Hora'),
-    ('A8',  'Quantidade'),
-    ('A9',  'Tipo'),
+    ('A0',  'Funcionário'),
+    ('A1',  'Taxa de Serviço'),
+    ('A2',  'Liquido (Recebido - Taxa)'),
+    ('A4',  'Combo'),
+    ('A5',  'Num. Ped.'),
+    ('A6',  'Data Ped.'),
+    ('A7',  'Comanda'),
+    ('A8',  'Mesa'),
+    ('A9',  'Tipo Pedido'),
     ('A10', 'Turno'),
 ]
 
 
-COLUNAS = order_columns_by_records(todos_registros, COLUNAS)
 
 pasta = '/root/workspaces/cake-brain/relatorios/Mogo/Taxa Servico'
 os.makedirs(pasta, exist_ok=True)
@@ -134,17 +180,17 @@ print(f"Excel salvo: {xlsx_path}")
 # ── Salvar JSON ────────────────────────────────────────────────────────────────
 registros_nomeados = [
     {
-        'data':        r.get('A6',''),
-        'hora':        r.get('A7',''),
-        'num_pedido':  r.get('A5',''),
-        'produto':     r.get('A3',''),
-        'qtde':        r.get('A8',''),
-        'taxa_pct':    r.get('A1',''),
-        'total_taxa':  r.get('A2',''),
+        'produto': r.get('A3',''),
         'funcionario': r.get('A0',''),
-        'comanda':     r.get('A4',''),
-        'tipo':        r.get('A9',''),
-        'turno':       r.get('A10',''),
+        'taxa_servico': float(parse_decimal_br(r.get('A1'))),
+        'liquido_recebido_menos_taxa': float(parse_decimal_br(r.get('A2'))),
+        'combo': r.get('A4',''),
+        'num_pedido': r.get('A5',''),
+        'data_pedido': r.get('A6',''),
+        'comanda': r.get('A7',''),
+        'mesa': r.get('A8',''),
+        'tipo_pedido': r.get('A9',''),
+        'turno': r.get('A10',''),
     }
     for r in todos_registros
 ]
@@ -153,7 +199,12 @@ with open(json_path, 'w', encoding='utf-8') as f:
     json.dump({
         "periodo": {"de": data_ini, "ate": data_fim},
         "total_registros": len(todos_registros),
-        "total_taxa": fmt(total_taxa),
+        "total_taxa_servico": fmt(total_taxa),
+        "total_liquido": fmt(total_liquido),
+        "validacao_vendas_analitico": {
+            "status": "ok", "total_mesa_comanda": fmt(vendas_mesa_comanda),
+            "diferenca": fmt(integridade["difference"]), "tolerancia": "R$ 1,00"
+        },
         "registros": registros_nomeados
     }, f, ensure_ascii=False, indent=2)
 print(f"JSON salvo: {json_path}")
@@ -163,7 +214,9 @@ corpo = f"🔍 Taxa de Serviço — {mes_nome}\n"
 corpo += "=" * 50 + "\n\n"
 corpo += f"📅 Período: {data_ini} a {data_fim}\n"
 corpo += f"📦 Total de registros: {len(todos_registros)}\n"
-corpo += f"💰 Total de taxa: {fmt(total_taxa)}\n\n"
+corpo += f"💰 Total líquido: {fmt(total_liquido)}\n"
+corpo += f"💰 Taxa de serviço: {fmt(total_taxa)}\n"
+corpo += f"✅ Validação Vendas Analítico: diferença {fmt(integridade['difference'])}\n\n"
 corpo += "(BigDog 🐕)"
 
 cmd = [
@@ -172,7 +225,7 @@ cmd = [
     f'--account cakebigdog@gmail.com '
     f'--client cakebigdog '
     f'--to joao@cakeco.com.br '
-    f'--subject "🔍 Mogo Taxa de Serviço — {mes_nome} — {fmt(total_taxa)}" '
+    f'--subject "🔍 Mogo Taxa de Serviço — {mes_nome} — {fmt(total_liquido)}" '
     f'--body "{corpo}" '
     f'--attach "{xlsx_path}" '
     f'--attach "{json_path}"'

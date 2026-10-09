@@ -7,7 +7,7 @@ import json
 import re
 
 # Regex para detectar valores em formato monetário brasileiro: "1.234,56" ou "0,00"
-_BR_CURRENCY_RE = re.compile(r'^-?\d{1,3}(\.\d{3})*,\d{2}$')
+_BR_CURRENCY_RE = re.compile(r"^-?\s*\d{1,3}(\.\d{3})*,\d{2}$")
 
 # Formato de moeda aplicado nas células (número com 2 casas decimais)
 CURRENCY_FORMAT = '#,##0.00'
@@ -22,7 +22,7 @@ def is_br_currency(value) -> bool:
 
 def br_currency_to_float(value: str) -> float:
     """Converte string BR '1.234,56' → float 1234.56."""
-    return float(value.strip().replace('.', '').replace(',', '.'))
+    return float(value.strip().replace(' ', '').replace('.', '').replace(',', '.'))
 
 
 def format_currency_cells(wb) -> int:
